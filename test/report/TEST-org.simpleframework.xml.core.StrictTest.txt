@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.237 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -64,15 +64,52 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.237 sec
    </Object>
 </Root><object>
    <integer>123</integer>
+   <name>test</name>
 </object><object>
    <integer>123</integer>
+   <name>test</name>
 </object>
 <object ID="0">
    <integer>123</integer>
+   <name ID="1">test</name>
 </object><Object ID="0">
    <Integer>123</Integer>
+   <Name ID="1">test</Name>
 </Object>------------- ---------------- ---------------
+------------- Standard Error -----------------
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(required=true, data=false, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.StrictTest$NamedStrictObject.name for class org.simpleframework.xml.core.StrictTest$NamedStrictObject at line -1
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:651)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:468)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
+	at org.simpleframework.xml.core.StrictTest.testNamedStrictMissingName(StrictTest.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+------------- ---------------- ---------------
 
-Testcase: testStrict took 0.218 sec
-Testcase: testNamedStrict took 0.013 sec
-Testcase: testDirectory took 0 sec
+Testcase: testStrict took 0.245 sec
+Testcase: testNamedStrict took 0.018 sec
+Testcase: testNamedStrictMissingName took 0.013 sec
+Testcase: testDirectory took 0.001 sec

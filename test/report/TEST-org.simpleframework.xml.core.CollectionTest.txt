@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.583 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.711 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -101,51 +101,51 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.583 sec
    </List>
 </Test><test name="example">
    <list class="java.util.HashSet">
-      <entry id="3">
-         <text>three</text>
+      <entry id="2">
+         <text>two</text>
       </entry>
       <entry id="1">
          <text>one</text>
       </entry>
-      <entry id="2">
-         <text>two</text>
+      <entry id="3">
+         <text>three</text>
       </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
-      <entry id="3">
-         <text>three</text>
+      <entry id="2">
+         <text>two</text>
       </entry>
       <entry id="1">
          <text>one</text>
       </entry>
-      <entry id="2">
-         <text>two</text>
+      <entry id="3">
+         <text>three</text>
       </entry>
    </list>
 </test>
 <test ID="0" name="example">
    <list class="java.util.HashSet" ID="1">
-      <entry ID="2" id="3">
-         <text ID="3">three</text>
+      <entry ID="2" id="2">
+         <text ID="3">two</text>
       </entry>
       <entry ID="4" id="1">
          <text ID="5">one</text>
       </entry>
-      <entry ID="6" id="2">
-         <text ID="7">two</text>
+      <entry ID="6" id="3">
+         <text ID="7">three</text>
       </entry>
    </list>
 </test><Test ID="0" name="example">
    <List class="java.util.HashSet" ID="1">
-      <Entry ID="2" id="3">
-         <Text ID="3">three</Text>
+      <Entry ID="2" id="2">
+         <Text ID="3">two</Text>
       </Entry>
       <Entry ID="4" id="1">
          <Text ID="5">one</Text>
       </Entry>
-      <Entry ID="6" id="2">
-         <Text ID="7">two</Text>
+      <Entry ID="6" id="3">
+         <Text ID="7">three</Text>
       </Entry>
    </List>
 </Test><test name="example">
@@ -447,27 +447,27 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.583 sec
 ------------- Standard Error -----------------
 <test name="example">
    <list class="java.util.HashSet">
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
-         <text>one</text>
-         <description>this is an extended entry</description>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
+         <text>two</text>
+         <description>this is the second one</description>
       </entry>
       <entry id="3">
          <text>three</text>
       </entry>
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
-         <text>two</text>
-         <description>this is the second one</description>
-      </entry>
-   </list>
-</test><test name="example">
-   <list class="java.util.HashSet">
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
       </entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.HashSet">
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
+      </entry>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
+         <text>one</text>
+         <description>this is an extended entry</description>
       </entry>
       <entry id="3">
          <text>three</text>
@@ -487,10 +487,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.583 sec
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testSetToSortedSet(CollectionTest.java:744)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -522,10 +522,10 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testListToSet(CollectionTest.java:756)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -556,10 +556,10 @@ org.simpleframework.xml.core.InstantiationException: Type is not a collection cl
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testInvalidList(CollectionTest.java:769)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -591,10 +591,10 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testUnknownCollectionList(CollectionTest.java:781)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -627,10 +627,10 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testAbstractList(CollectionTest.java:793)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -662,10 +662,10 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.Hashta
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testNotACollection(CollectionTest.java:805)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -693,7 +693,7 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.strategy.TreeStrategy.getClass(TreeStrategy.java:271)
 	at org.simpleframework.xml.strategy.TreeStrategy.getValue(TreeStrategy.java:183)
 	at org.simpleframework.xml.strategy.TreeStrategy.getElement(TreeStrategy.java:122)
-	at org.simpleframework.xml.core.Source.getOverride(Source.java:356)
+	at org.simpleframework.xml.core.Source.getOverride(Source.java:391)
 	at org.simpleframework.xml.core.Factory.getConversion(Factory.java:162)
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:115)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
@@ -708,10 +708,10 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CollectionTest.testMissingCollection(CollectionTest.java:817)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -731,24 +731,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.13 sec
-Testcase: testSortedSet took 0.096 sec
-Testcase: testList took 0.029 sec
-Testcase: testHashSet took 0.035 sec
-Testcase: testTreeSet took 0.031 sec
-Testcase: testArrayList took 0.041 sec
-Testcase: testSortedSetToSet took 0.005 sec
-Testcase: testExtendedEntry took 0.012 sec
-Testcase: testTypeFromFieldList took 0.046 sec
-Testcase: testTypeFromMethodList took 0.054 sec
-Testcase: testPrimitiveCollection took 0.022 sec
-Testcase: testCompositeCollection took 0.028 sec
-Testcase: testPrimitiveDefaultCollection took 0.01 sec
-Testcase: testSetToSortedSet took 0.011 sec
-Testcase: testListToSet took 0.002 sec
-Testcase: testInvalidList took 0.003 sec
+Testcase: testSet took 0.133 sec
+Testcase: testSortedSet took 0.111 sec
+Testcase: testList took 0.027 sec
+Testcase: testHashSet took 0.038 sec
+Testcase: testTreeSet took 0.029 sec
+Testcase: testArrayList took 0.023 sec
+Testcase: testSortedSetToSet took 0.004 sec
+Testcase: testExtendedEntry took 0.009 sec
+Testcase: testTypeFromFieldList took 0.039 sec
+Testcase: testTypeFromMethodList took 0.065 sec
+Testcase: testPrimitiveCollection took 0.156 sec
+Testcase: testCompositeCollection took 0.025 sec
+Testcase: testPrimitiveDefaultCollection took 0.018 sec
+Testcase: testSetToSortedSet took 0.006 sec
+Testcase: testListToSet took 0.001 sec
+Testcase: testInvalidList took 0.002 sec
 Testcase: testUnknownCollectionList took 0.002 sec
 Testcase: testAbstractList took 0.001 sec
 Testcase: testNotACollection took 0.002 sec
-Testcase: testMissingCollection took 0.002 sec
+Testcase: testMissingCollection took 0.003 sec
 Testcase: testDirectory took 0 sec

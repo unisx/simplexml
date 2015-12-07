@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.488 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.491 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -41,10 +41,10 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.EmptyTest.testRequiredEmpty(EmptyTest.java:113)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -72,10 +72,10 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.EmptyTest.testRequiredEmptyMethod(EmptyTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -103,10 +103,10 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.EmptyTest.testRequiredBlank(EmptyTest.java:137)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -134,10 +134,10 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.EmptyTest.testOptionalEmpty(EmptyTest.java:149)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -157,13 +157,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.132 sec
-Testcase: testRequiredEmptyMethod took 0.008 sec
+Testcase: testRequiredEmpty took 0.136 sec
+Testcase: testRequiredEmptyMethod took 0.007 sec
 Testcase: testRequiredBlank took 0.003 sec
 Testcase: testOptionalEmpty took 0.003 sec
-Testcase: testOptionalBlank took 0.004 sec
-Testcase: testEmptyCollection took 0.088 sec
-Testcase: testRequiredEmptyAttribute took 0.007 sec
+Testcase: testOptionalBlank took 0.002 sec
+Testcase: testEmptyCollection took 0.094 sec
+Testcase: testRequiredEmptyAttribute took 0.01 sec
 Testcase: testOptionalEmptyAttribute took 0.001 sec
-Testcase: testDefaultedAttribute took 0.231 sec
+Testcase: testDefaultedAttribute took 0.225 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineListWithDataTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
 ------------- Standard Output ---------------
 <listWithDataExample>
    <string><![CDATA[A]]></string>
@@ -47,6 +47,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
    <Entry string="C" ID="3"><![CDATA[3]]></Entry>
 </MapWithDataExample>------------- ---------------- ---------------
 
-Testcase: testListWithData took 0.2 sec
-Testcase: testMapWithData took 0.048 sec
+Testcase: testListWithData took 0.246 sec
+Testcase: testMapWithData took 0.062 sec
 Testcase: testDirectory took 0 sec

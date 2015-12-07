@@ -29,6 +29,7 @@ import org.simpleframework.xml.strategy.Strategy;
 import org.simpleframework.xml.stream.CamelCaseStyle;
 import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.HyphenStyle;
+import org.simpleframework.xml.stream.NodeAdapterBuilder;
 import org.simpleframework.xml.stream.Style;
 import org.w3c.dom.CDATASection;
 import org.w3c.dom.Document;
@@ -98,6 +99,11 @@ public class ValidationTestCase extends XMLTestCase {
         OutputStream domFile = new FileOutputStream(domDestination);
         OutputStream asciiFile = new FileOutputStream(asciiDestination);
         Writer asciiOut = new OutputStreamWriter(asciiFile, "iso-8859-1");
+        
+        /*
+         * This DOM document is the result of serializing the object in to a 
+         * string. The document can then be used to validate serialization.
+         */
         Document doc = builder.parse(new InputSource(new StringReader(text)));   
         
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -107,7 +113,9 @@ public class ValidationTestCase extends XMLTestCase {
         domFile.close();      
         asciiFile.close();
         
+        out.read(type.getClass(), NodeAdapterBuilder.read(doc));
         out.validate(type.getClass(), text);
+        out.validate(type.getClass(), NodeAdapterBuilder.read(doc));
        
         File hyphenFile = new File(directory, type.getClass().getSimpleName() + ".hyphen.xml");
         Strategy strategy = new CycleStrategy("ID", "REFERER");

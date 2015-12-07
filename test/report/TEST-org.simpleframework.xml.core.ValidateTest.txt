@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.152 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.215 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version at line -1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:888)
@@ -15,11 +15,11 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:707)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:683)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:866)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:846)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:826)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:807)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:724)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1044)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1024)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1004)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:938)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:842)
 	at org.simpleframework.xml.core.ValidateTest.testVersionMissing(ValidateTest.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -50,11 +50,11 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:707)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:683)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:866)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:846)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:826)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:807)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:724)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1044)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1024)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1004)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:938)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:842)
 	at org.simpleframework.xml.core.ValidateTest.testNameMissing(ValidateTest.java:99)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -79,11 +79,11 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:707)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:683)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:866)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:846)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:826)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:807)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:724)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1044)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1024)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1004)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:938)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:842)
 	at org.simpleframework.xml.core.ValidateTest.testExtraElement(ValidateTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -102,8 +102,8 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testVersionMissing took 0.133 sec
-Testcase: testNameMissing took 0.005 sec
-Testcase: testTextMissing took 0.003 sec
+Testcase: testVersionMissing took 0.168 sec
+Testcase: testNameMissing took 0.006 sec
+Testcase: testTextMissing took 0.004 sec
 Testcase: testExtraElement took 0.005 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

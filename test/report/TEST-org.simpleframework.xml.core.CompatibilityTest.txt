@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CompatibilityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.182 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.181 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'address' does not exist at line -1
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:545)
@@ -10,10 +10,10 @@ org.simpleframework.xml.core.ElementException: Element 'address' does not exist 
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CompatibilityTest.testCompatibility(CompatibilityTest.java:234)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -40,10 +40,10 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CompatibilityTest.testCompatibility(CompatibilityTest.java:243)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -70,10 +70,10 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.CompatibilityTest.testCompatibility(CompatibilityTest.java:279)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -93,4 +93,4 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testCompatibility took 0.179 sec
+Testcase: testCompatibility took 0.175 sec

@@ -23,7 +23,7 @@ package org.simpleframework.xml.stream;
  * elements within an element. This allows the input node object to
  * become a self contained iterator for an element and its children.
  * Each child taken from the input node object, is itself an input
- * node, and can be used to exlpore its sub elements without having
+ * node, and can be used to explore its sub elements without having
  * any affect on its outer elements.
  *
  * @author Niall Gallagher

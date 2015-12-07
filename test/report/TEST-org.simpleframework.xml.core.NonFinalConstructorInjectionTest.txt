@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NonFinalConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.214 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.207 sec
 ------------- Standard Output ---------------
 <nonFinalExample>
    <name>A</name>
@@ -16,5 +16,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.214 sec
    <Value ID="2">a</Value>
 </NonFinalExample>------------- ---------------- ---------------
 
-Testcase: testNonFinal took 0.208 sec
+Testcase: testNonFinal took 0.201 sec
 Testcase: testDirectory took 0 sec
