@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.343 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.313 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -270,7 +270,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.343 sec
    </Map>
 </PrimitiveMap>------------- ---------------- ---------------
 
-Testcase: testEntryMap took 1.125 sec
-Testcase: testComplexMap took 0.157 sec
-Testcase: testPrimitiveMap took 0.046 sec
+Testcase: testEntryMap took 0.735 sec
+Testcase: testComplexMap took 0.515 sec
+Testcase: testPrimitiveMap took 0.063 sec
 Testcase: testDirectory took 0 sec

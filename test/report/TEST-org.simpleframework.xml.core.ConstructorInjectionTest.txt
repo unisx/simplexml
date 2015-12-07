@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.61 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -71,8 +71,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.61 sec
    </Array>
 </ArrayExample>------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.25 sec
+Testcase: testConstructor took 0.235 sec
 Testcase: testPartialConstructor took 0.047 sec
-Testcase: testBareConstructor took 0.031 sec
-Testcase: testArrayExample took 0.282 sec
+Testcase: testBareConstructor took 0.015 sec
+Testcase: testArrayExample took 0.047 sec
 Testcase: testDirectory took 0 sec

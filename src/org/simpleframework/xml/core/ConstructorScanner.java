@@ -22,6 +22,7 @@ package org.simpleframework.xml.core;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,10 +105,13 @@ class ConstructorScanner {
    private void scan(Class type) throws Exception {
       Constructor[] array = type.getDeclaredConstructors();
       
+      if(!isInstantiable(type)) {
+          throw new ConstructorException("Can not construct inner %s", type);
+      }
       for(Constructor factory: array){
          Index index = new Index(type);
          
-         if(!type.isPrimitive()) {
+         if(!type.isPrimitive()) {             
             scan(factory, index);
          }
       } 
@@ -235,5 +239,24 @@ class ConstructorScanner {
       if(expect != parameter.getType()) {
          throw new MethodException("Method types do not match for '%s' in %s", name, type);
       }
+   }
+   
+   /**
+    * This is used to determine if the class is an inner class. If
+    * the class is a inner class and not static then this returns
+    * false. Only static inner classes can be instantiated using
+    * reflection as they do not require a "this" argument.
+    * 
+    * @param type this is the class that is to be evaluated
+    * 
+    * @return this returns true if the class is a static inner
+    */
+   private boolean isInstantiable(Class type) {
+       int modifiers = type.getModifiers();
+       
+       if(Modifier.isStatic(modifiers)) {
+           return true;
+       }
+       return !type.isMemberClass();       
    }
 }

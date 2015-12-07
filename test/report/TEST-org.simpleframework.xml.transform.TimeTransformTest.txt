@@ -1,49 +1,49 @@
 Testsuite: org.simpleframework.xml.transform.TimeTransformTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.359 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 ------------- Standard Output ---------------
-<timeExample attribute="2009-11-25 17:13:17.943 GMT">
-   <element class="java.sql.Time">2009-11-25 17:13:17.943 GMT</element>
-   <time>2009-11-25 17:13:17.943 GMT</time>
+<timeExample attribute="2009-12-16 12:31:02.235 GMT">
+   <element class="java.sql.Time">2009-12-16 12:31:02.235 GMT</element>
+   <time>2009-12-16 12:31:02.235 GMT</time>
    <list class="java.util.ArrayList">
-      <time>2009-11-25 17:13:17.943 GMT</time>
-      <time>2009-11-25 17:13:17.943 GMT</time>
+      <time>2009-12-16 12:31:02.235 GMT</time>
+      <time>2009-12-16 12:31:02.235 GMT</time>
    </list>
    <array length="1">
-      <time>2009-11-25 17:13:17.943 GMT</time>
+      <time>2009-12-16 12:31:02.235 GMT</time>
    </array>
-</timeExample><timeExample attribute="2009-11-25 17:13:17.943 GMT">
-   <element class="java.sql.Time">2009-11-25 17:13:17.943 GMT</element>
-   <time>2009-11-25 17:13:17.943 GMT</time>
+</timeExample><timeExample attribute="2009-12-16 12:31:02.235 GMT">
+   <element class="java.sql.Time">2009-12-16 12:31:02.235 GMT</element>
+   <time>2009-12-16 12:31:02.235 GMT</time>
    <list class="java.util.ArrayList">
-      <time>2009-11-25 17:13:17.943 GMT</time>
-      <time>2009-11-25 17:13:17.943 GMT</time>
+      <time>2009-12-16 12:31:02.235 GMT</time>
+      <time>2009-12-16 12:31:02.235 GMT</time>
    </list>
    <array length="1">
-      <time>2009-11-25 17:13:17.943 GMT</time>
+      <time>2009-12-16 12:31:02.235 GMT</time>
    </array>
 </timeExample>
-<time-example ID="0" attribute="2009-11-25 17:13:17.943 GMT">
-   <element class="java.sql.Time" ID="1">2009-11-25 17:13:17.943 GMT</element>
-   <time ID="2">2009-11-25 17:13:17.943 GMT</time>
+<time-example ID="0" attribute="2009-12-16 12:31:02.235 GMT">
+   <element class="java.sql.Time" ID="1">2009-12-16 12:31:02.235 GMT</element>
+   <time ID="2">2009-12-16 12:31:02.235 GMT</time>
    <list class="java.util.ArrayList" ID="3">
-      <time ID="4">2009-11-25 17:13:17.943 GMT</time>
-      <time ID="5">2009-11-25 17:13:17.943 GMT</time>
+      <time ID="4">2009-12-16 12:31:02.235 GMT</time>
+      <time ID="5">2009-12-16 12:31:02.235 GMT</time>
    </list>
    <array length="1" ID="6">
-      <time ID="7">2009-11-25 17:13:17.943 GMT</time>
+      <time ID="7">2009-12-16 12:31:02.235 GMT</time>
    </array>
-</time-example><TimeExample ID="0" attribute="2009-11-25 17:13:17.943 GMT">
-   <Element class="java.sql.Time" ID="1">2009-11-25 17:13:17.943 GMT</Element>
-   <Time ID="2">2009-11-25 17:13:17.943 GMT</Time>
+</time-example><TimeExample ID="0" attribute="2009-12-16 12:31:02.235 GMT">
+   <Element class="java.sql.Time" ID="1">2009-12-16 12:31:02.235 GMT</Element>
+   <Time ID="2">2009-12-16 12:31:02.235 GMT</Time>
    <List class="java.util.ArrayList" ID="3">
-      <Time ID="4">2009-11-25 17:13:17.943 GMT</Time>
-      <Time ID="5">2009-11-25 17:13:17.943 GMT</Time>
+      <Time ID="4">2009-12-16 12:31:02.235 GMT</Time>
+      <Time ID="5">2009-12-16 12:31:02.235 GMT</Time>
    </List>
    <Array length="1" ID="6">
-      <Time ID="7">2009-11-25 17:13:17.943 GMT</Time>
+      <Time ID="7">2009-12-16 12:31:02.235 GMT</Time>
    </Array>
 </TimeExample>------------- ---------------- ---------------
 
-Testcase: testTime took 0.016 sec
-Testcase: testPersistence took 0.328 sec
+Testcase: testTime took 0.015 sec
+Testcase: testPersistence took 0.282 sec
 Testcase: testDirectory took 0 sec
