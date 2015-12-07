@@ -73,6 +73,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.129 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testLinkedHashMapOrder took 0 sec
-Testcase: testSerializationOrder took 0.125 sec
+Testcase: testLinkedHashMapOrder took 0.001 sec
+Testcase: testSerializationOrder took 0.126 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithExtraSectionTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.087 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.09 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'contact-details' does not have a match in class org.simpleframework.xml.core.PathWithExtraSectionTest$PathSectionIndexExample at line 12
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:527)
@@ -33,6 +33,6 @@ org.simpleframework.xml.core.ElementException: Element 'contact-details' does no
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testExtraSection took 0.079 sec
+Testcase: testExtraSection took 0.08 sec
 Testcase: testExtraSectionWithNonStrict took 0.006 sec
 Testcase: testDirectory took 0 sec

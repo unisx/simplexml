@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNotRequiredTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.124 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.126 sec
 ------------- Standard Output ---------------
 <animalFarm>
    <dog>
@@ -38,5 +38,5 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.124 sec
 ------------- ---------------- ---------------
 
 Testcase: testOptionalEntry took 0.112 sec
-Testcase: testOptionalMissingEntry took 0.011 sec
+Testcase: testOptionalMissingEntry took 0.01 sec
 Testcase: testDirectory took 0 sec

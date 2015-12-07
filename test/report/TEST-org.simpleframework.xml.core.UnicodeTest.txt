@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.467 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.464 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -2775,8 +2775,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.467 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.217 sec
-Testcase: testWriteUnicode took 0.172 sec
+Testcase: testUnicode took 0.213 sec
+Testcase: testWriteUnicode took 0.173 sec
 Testcase: testUnicodeFromByteStream took 0.067 sec
 Testcase: testIncorrectEncoding took 0.009 sec
 Testcase: testDirectory took 0 sec

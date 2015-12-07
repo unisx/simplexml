@@ -11,4 +11,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.102 sec
 </wrapperExample>
 ------------- ---------------- ---------------
 
-Testcase: testWrapper took 0.1 sec
+Testcase: testWrapper took 0.101 sec

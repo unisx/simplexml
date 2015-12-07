@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.161 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.165 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -211,8 +211,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.161 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.118 sec
+Testcase: testExampleCollection took 0.121 sec
 Testcase: testExampleInlineCollection took 0.018 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.009 sec
-Testcase: testExamplePrimitiveCollection took 0.012 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.01 sec
+Testcase: testExamplePrimitiveCollection took 0.013 sec
 Testcase: testDirectory took 0 sec

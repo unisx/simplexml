@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.151 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.155 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -141,9 +141,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.151 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testResolver took 0.112 sec
+Testcase: testResolver took 0.115 sec
 Testcase: testCache took 0.023 sec
 Testcase: testNoResolution took 0.003 sec
 Testcase: testNonGreedyMatch took 0.003 sec
-Testcase: testResolverCache took 0.008 sec
+Testcase: testResolverCache took 0.009 sec
 Testcase: testDirectory took 0 sec

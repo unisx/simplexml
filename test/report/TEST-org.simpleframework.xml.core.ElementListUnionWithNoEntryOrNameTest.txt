@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ElementListUnionWithNoEntryOrNameTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.108 sec
 ------------- Standard Output ---------------
 <exampleWithNoNameOrEntry>
    <a>11</a>
@@ -36,5 +36,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExample took 0.107 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testExample took 0.106 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.AnnotationCycleStrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.136 sec
 ------------- Standard Output ---------------
 <entryListExample id="0">
    <entry id="1">
@@ -19,5 +19,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
    <primary id="4" name="PRIMARY" value="primary"/>
 </entryListExample>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.124 sec
-Testcase: testDirectory took 0 sec
+Testcase: testCycle took 0.133 sec
+Testcase: testDirectory took 0.001 sec

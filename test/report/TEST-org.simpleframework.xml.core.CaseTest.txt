@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.143 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.145 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -148,5 +148,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.143 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testCase took 0.141 sec
+Testcase: testCase took 0.142 sec
 Testcase: testDirectory took 0 sec

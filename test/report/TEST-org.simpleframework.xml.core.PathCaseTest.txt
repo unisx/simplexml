@@ -60,4 +60,4 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'SomePath[1]/A[1]' 
 
 Testcase: testNoStyle took 0.094 sec
 Testcase: testStyle took 0.007 sec
-Testcase: testOtherStyle took 0.006 sec
+Testcase: testOtherStyle took 0.005 sec

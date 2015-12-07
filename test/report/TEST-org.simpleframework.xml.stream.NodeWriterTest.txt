@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.NodeWriterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.024 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.023 sec
 ------------- Standard Output ---------------
 <root id="test" name="testRoot">
    <child-of-root name="child of root">

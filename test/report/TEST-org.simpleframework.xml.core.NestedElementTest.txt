@@ -74,5 +74,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.135 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testNestedExample took 0.133 sec
+Testcase: testNestedExample took 0.134 sec
 Testcase: testDirectory took 0 sec

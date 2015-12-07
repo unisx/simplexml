@@ -38,5 +38,5 @@ org.simpleframework.xml.core.ElementException: Ordered element 'a/b/c' missing f
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testIvalidOrderWithText took 0.063 sec
+Testcase: testIvalidOrderWithText took 0.062 sec
 Testcase: testDirectory took 0.001 sec

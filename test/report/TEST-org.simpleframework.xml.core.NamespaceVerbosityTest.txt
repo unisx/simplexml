@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceVerbosityTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.101 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.102 sec
 ------------- Standard Output ---------------
 <a xmlns:x="http://domain/x" xmlns:y="http://domain/y">
    <x:b>b</x:b>

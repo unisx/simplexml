@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ContextualCallbackTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.101 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.102 sec
 ------------- Standard Output ---------------
 <root number="9999" flag="false">
    <value>default</value>

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PullParserStackOverflowTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.086 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.088 sec
 ------------- Standard Error -----------------
 javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,39]
 Message: Content is not allowed in prolog.
@@ -96,7 +96,7 @@ Message: The element type "level" must be terminated by the matching end-tag "</
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testBrokenStart took 0.027 sec
+Testcase: testBrokenStart took 0.029 sec
 Testcase: testBrokenStartButComplete took 0.002 sec
-Testcase: testBrokenElementButComplete took 0.052 sec
+Testcase: testBrokenElementButComplete took 0.053 sec
 Testcase: testDirectory took 0.002 sec

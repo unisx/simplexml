@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathConstructorAmbiguityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.09 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.088 sec
 ------------- Standard Output ---------------
 <test1 iri="a">
    <resource iri="b"/>

@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.core.NoAnnotationsRequiredTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 15.058 sec
 ------------- Standard Output ---------------
-<primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2"><stringValue>text</stringValue><dateValue>2013-02-18 20:52:10.648 EST</dateValue><byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray><byteArrayArray length="2"><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte></byteArrayArray><stringArray length="3"><string>A</string><string>B</string><string>C</string></stringArray><doubleToString class="java.util.HashMap"><entry double="12.0">TWELVE</entry><entry double="1.0">ONE</entry></doubleToString></primitiveEntry><primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2"><stringValue>text</stringValue><dateValue>2013-02-18 20:52:10.648 EST</dateValue><byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray><byteArrayArray length="2"><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte></byteArrayArray><stringArray length="3"><string>A</string><string>B</string><string>C</string></stringArray><doubleToString class="java.util.HashMap"><entry double="12.0">TWELVE</entry><entry double="1.0">ONE</entry></doubleToString></primitiveEntry>
+<primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2"><stringValue>text</stringValue><dateValue>2013-07-08 21:30:14.748 EST</dateValue><byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray><byteArrayArray length="2"><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte></byteArrayArray><stringArray length="3"><string>A</string><string>B</string><string>C</string></stringArray><doubleToString class="java.util.HashMap"><entry double="12.0">TWELVE</entry><entry double="1.0">ONE</entry></doubleToString></primitiveEntry><primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2"><stringValue>text</stringValue><dateValue>2013-07-08 21:30:14.748 EST</dateValue><byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray><byteArrayArray length="2"><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte></byteArrayArray><stringArray length="3"><string>A</string><string>B</string><string>C</string></stringArray><doubleToString class="java.util.HashMap"><entry double="12.0">TWELVE</entry><entry double="1.0">ONE</entry></doubleToString></primitiveEntry>
 <primitive-entry ID="0">
    <!-- java.lang.Boolean -->
    <boolean-value ID="1">false</boolean-value>
@@ -20,7 +20,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <!-- java.lang.String -->
    <string-value ID="8">text</string-value>
    <!-- java.util.Date -->
-   <date-value ID="9">2013-02-18 20:52:10.648 EST</date-value>
+   <date-value ID="9">2013-07-08 21:30:14.748 EST</date-value>
    <!-- [B -->
    <byte-array length="9" ID="10">1, 2, 3, 4, 5, 6, 7, 8, 9</byte-array>
    <!-- [[B -->
@@ -75,7 +75,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <!-- java.lang.String -->
    <StringValue ID="8">text</StringValue>
    <!-- java.util.Date -->
-   <DateValue ID="9">2013-02-18 20:52:10.648 EST</DateValue>
+   <DateValue ID="9">2013-07-08 21:30:14.748 EST</DateValue>
    <!-- [B -->
    <ByteArray length="9" ID="10">1, 2, 3, 4, 5, 6, 7, 8, 9</ByteArray>
    <!-- [[B -->
@@ -121,7 +121,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <longValue>102</longValue>
    <doubleValue>34.2</doubleValue>
    <stringValue>text</stringValue>
-   <dateValue>2013-02-18 20:52:13.689 EST</dateValue>
+   <dateValue>2013-07-08 21:30:29.725 EST</dateValue>
    <byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray>
    <byteArrayArray length="2">
       <byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte>
@@ -151,7 +151,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <longValue>102</longValue>
    <doubleValue>34.2</doubleValue>
    <stringValue>text</stringValue>
-   <dateValue>2013-02-18 20:52:13.689 EST</dateValue>
+   <dateValue>2013-07-08 21:30:29.725 EST</dateValue>
    <byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray>
    <byteArrayArray length="2">
       <byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte>
@@ -191,7 +191,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <!-- java.lang.String -->
    <string-value ID="8">text</string-value>
    <!-- java.util.Date -->
-   <date-value ID="9">2013-02-18 20:52:13.689 EST</date-value>
+   <date-value ID="9">2013-07-08 21:30:29.725 EST</date-value>
    <!-- [B -->
    <byte-array length="9" ID="10">1, 2, 3, 4, 5, 6, 7, 8, 9</byte-array>
    <!-- [[B -->
@@ -246,7 +246,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <!-- java.lang.String -->
    <StringValue ID="8">text</StringValue>
    <!-- java.util.Date -->
-   <DateValue ID="9">2013-02-18 20:52:13.689 EST</DateValue>
+   <DateValue ID="9">2013-07-08 21:30:29.725 EST</DateValue>
    <!-- [B -->
    <ByteArray length="9" ID="10">1, 2, 3, 4, 5, 6, 7, 8, 9</ByteArray>
    <!-- [[B -->
@@ -285,7 +285,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2">
    <stringValue>text</stringValue>
-   <dateValue>2013-02-18 20:52:13.710 EST</dateValue>
+   <dateValue>2013-07-08 21:30:29.745 EST</dateValue>
    <byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray>
    <byteArrayArray length="2">
       <byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte>
@@ -302,7 +302,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    </doubleToString>
 </primitiveEntry><primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2">
    <stringValue>text</stringValue>
-   <dateValue>2013-02-18 20:52:13.710 EST</dateValue>
+   <dateValue>2013-07-08 21:30:29.745 EST</dateValue>
    <byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray>
    <byteArrayArray length="2">
       <byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte>
@@ -336,7 +336,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <!-- java.lang.String -->
    <string-value ID="8">text</string-value>
    <!-- java.util.Date -->
-   <date-value ID="9">2013-02-18 20:52:13.710 EST</date-value>
+   <date-value ID="9">2013-07-08 21:30:29.745 EST</date-value>
    <!-- [B -->
    <byte-array length="9" ID="10">1, 2, 3, 4, 5, 6, 7, 8, 9</byte-array>
    <!-- [[B -->
@@ -391,7 +391,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
    <!-- java.lang.String -->
    <StringValue ID="8">text</StringValue>
    <!-- java.util.Date -->
-   <DateValue ID="9">2013-02-18 20:52:13.710 EST</DateValue>
+   <DateValue ID="9">2013-07-08 21:30:29.745 EST</DateValue>
    <!-- [B -->
    <ByteArray length="9" ID="10">1, 2, 3, 4, 5, 6, 7, 8, 9</ByteArray>
    <!-- [[B -->
@@ -521,22 +521,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 3.123 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-<primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2"><stringValue>text</stringValue><dateValue>2013-02-18 20:52:10.648 EST</dateValue><byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray><byteArrayArray length="2"><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte></byteArrayArray><stringArray length="3"><string>A</string><string>B</string><string>C</string></stringArray><doubleToString class="java.util.HashMap"><entry double="12.0">TWELVE</entry><entry double="1.0">ONE</entry></doubleToString></primitiveEntry>
-AaztAAVzcgBFb3JnLnNpbXBsZWZyYW1ld29yay54bWwuY29yZS5Ob0Fubm90YXRpb25zUmVxdWlyZWRUZXN0JFByaW1pdGl2ZUVudHJ5pGXxQrW78F8CAA1aAAxib29sZWFuVmFsdWVCAAlieXRlVmFsdWVEAAtkb3VibGVWYWx1ZUYACmZsb2F0VmFsdWVJAAhpbnRWYWx1ZUoACWxvbmdWYWx1ZVMACnNob3J0VmFsdWVbAAlieXRlQXJyYXl0AAJbQlsADmJ5dGVBcnJheUFycmF5dAADW1tCTAAJZGF0ZVZhbHVldAAQTGphdmEvdXRpbC9EYXRlO0wADmRvdWJsZVRvU3RyaW5ndAAPTGphdmEvdXRpbC9NYXA7WwALc3RyaW5nQXJyYXl0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAALc3RyaW5nVmFsdWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAAGQEEZmZmZmZpCuq8bAAGP0QAAAAAAAABmAE51cgACW0Ks8xf4BghU4AIAAHhwAAAACQECAwQFBgcICXVyAANbW0JL/RkVZ2fbNwIAAHhwAAAAAnVxAH4ACAAAAAkBAgMEBQYHCAl1cQB+AAgAAAAJAQIDBAUGBwgJc3IADmphdmEudXRpbC5EYXRlaGqBAUtZdBkDAAB4cHcIAAABPOy3v5h4c3IAEWphdmEudXRpbC5IYXNoTWFwBQfawcMWYNEDAAJGAApsb2FkRmFjdG9ySQAJdGhyZXNob2xkeHA/QAAAAAAADHcIAAAAEAAAAAJzcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa/sEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHBAKAAAAAAAAHQABlRXRUxWRXNxAH4AEj/wAAAAAAAAdAADT05FeHVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAAN0AAFBdAABQnQAAUN0AAR0ZXh0
-Time for writing XML: 243 1 per 0.243
-Time for writing BINARY: 115 1 per 0.115
-Time for writing XML: 161 1 per 0.161
-Time for writing BINARY: 127 1 per 0.127
-Time for reading XML: 724 1 per 0.724
-Time for reading BINARY: 244 1 per 0.244
-Time for reading XML: 219 1 per 0.219
-Time for reading BINARY: 97 1 per 0.097
-Time for reading XML: 176 1 per 0.176
-Time for reading BINARY: 65 1 per 0.065
+<primitiveEntry booleanValue="false" byteValue="6" shortValue="78" intValue="102353" floatValue="93.342" longValue="102" doubleValue="34.2"><stringValue>text</stringValue><dateValue>2013-07-08 21:30:14.748 EST</dateValue><byteArray length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byteArray><byteArrayArray length="2"><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte><byte length="9">1, 2, 3, 4, 5, 6, 7, 8, 9</byte></byteArrayArray><stringArray length="3"><string>A</string><string>B</string><string>C</string></stringArray><doubleToString class="java.util.HashMap"><entry double="12.0">TWELVE</entry><entry double="1.0">ONE</entry></doubleToString></primitiveEntry>
+AaztAAVzcgBFb3JnLnNpbXBsZWZyYW1ld29yay54bWwuY29yZS5Ob0Fubm90YXRpb25zUmVxdWlyZWRUZXN0JFByaW1pdGl2ZUVudHJ5pGXxQrW78F8CAA1aAAxib29sZWFuVmFsdWVCAAlieXRlVmFsdWVEAAtkb3VibGVWYWx1ZUYACmZsb2F0VmFsdWVJAAhpbnRWYWx1ZUoACWxvbmdWYWx1ZVMACnNob3J0VmFsdWVbAAlieXRlQXJyYXl0AAJbQlsADmJ5dGVBcnJheUFycmF5dAADW1tCTAAJZGF0ZVZhbHVldAAQTGphdmEvdXRpbC9EYXRlO0wADmRvdWJsZVRvU3RyaW5ndAAPTGphdmEvdXRpbC9NYXA7WwALc3RyaW5nQXJyYXl0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAALc3RyaW5nVmFsdWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAAGQEEZmZmZmZpCuq8bAAGP0QAAAAAAAABmAE51cgACW0Ks8xf4BghU4AIAAHhwAAAACQECAwQFBgcICXVyAANbW0JL/RkVZ2fbNwIAAHhwAAAAAnVxAH4ACAAAAAkBAgMEBQYHCAl1cQB+AAgAAAAJAQIDBAUGBwgJc3IADmphdmEudXRpbC5EYXRlaGqBAUtZdBkDAAB4cHcIAAABP74L2Fx4c3IAEWphdmEudXRpbC5IYXNoTWFwBQfawcMWYNEDAAJGAApsb2FkRmFjdG9ySQAJdGhyZXNob2xkeHA/QAAAAAAADHcIAAAAEAAAAAJzcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa/sEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHBAKAAAAAAAAHQABlRXRUxWRXNxAH4AEj/wAAAAAAAAdAADT05FeHVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAAN0AAFBdAABQnQAAUN0AAR0ZXh0
+Time for writing XML: 543 1 per 0.0543
+Time for writing BINARY: 1236 1 per 0.1236
+Time for writing XML: 592 1 per 0.0592
+Time for writing BINARY: 1201 1 per 0.1201
+Time for reading XML: 2061 1 per 0.2061
+Time for reading BINARY: 3680 1 per 0.368
+Time for reading XML: 687 1 per 0.0687
+Time for reading BINARY: 507 1 per 0.0507
+Time for reading XML: 683 1 per 0.0683
+Time for reading BINARY: 503 1 per 0.0503
 ------------- ---------------- ---------------
 
-Testcase: testPerformance took 3.053 sec
-Testcase: testType took 0.02 sec
-Testcase: testTypeVerbose took 0.019 sec
-Testcase: testSerialization took 0.028 sec
+Testcase: testPerformance took 14.988 sec
+Testcase: testType took 0.021 sec
+Testcase: testTypeVerbose took 0.02 sec
+Testcase: testSerialization took 0.027 sec
 Testcase: testDirectory took 0 sec

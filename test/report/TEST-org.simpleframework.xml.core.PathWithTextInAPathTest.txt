@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextInAPathTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.076 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.075 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework.xml.Text(data=false, empty=, required=true) on field 'a' private java.lang.String org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithElement.a used with elements in class org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithElement
 	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:376)
@@ -86,5 +86,5 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 ------------- ---------------- ---------------
 
 Testcase: testInvalidText took 0.068 sec
-Testcase: testInvalidTextWithCrossingPath took 0.004 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testInvalidTextWithCrossingPath took 0.005 sec
+Testcase: testDirectory took 0 sec

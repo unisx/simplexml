@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.DictionaryTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.116 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.118 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -72,5 +72,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.116 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testDictionary took 0.114 sec
+Testcase: testDictionary took 0.115 sec
 Testcase: testDirectory took 0 sec

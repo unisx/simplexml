@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapWithValueAttributeTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.189 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.193 sec
 ------------- Standard Output ---------------
 <mapWithValueTextExample id="0">
    <entry key="d">3.0</entry>
@@ -359,9 +359,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.189 sec
    </entry>
 </mapWithCompositeValueAndElementKeyExample>------------- ---------------- ---------------
 
-Testcase: testPrimitiveTextMap took 0.102 sec
+Testcase: testPrimitiveTextMap took 0.106 sec
 Testcase: testPrimitiveElementMap took 0.016 sec
 Testcase: testPrimitiveAttributeMap took 0.01 sec
 Testcase: testCompositeValueMap took 0.036 sec
-Testcase: testCompositeValueAndElementKeyMap took 0.021 sec
+Testcase: testCompositeValueAndElementKeyMap took 0.022 sec
 Testcase: testDirectory took 0 sec

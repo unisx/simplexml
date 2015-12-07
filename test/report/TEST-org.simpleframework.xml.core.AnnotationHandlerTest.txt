@@ -11,4 +11,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.024 sec
 @org.simpleframework.xml.ElementArray(entry=, name=, data=false, empty=true, required=true)
 ------------- ---------------- ---------------
 
-Testcase: testHandler took 0.023 sec
+Testcase: testHandler took 0.022 sec

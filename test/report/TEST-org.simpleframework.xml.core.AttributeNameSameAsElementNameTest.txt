@@ -33,4 +33,4 @@ org.simpleframework.xml.core.AttributeException: Value for @org.simpleframework.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testSame took 0.073 sec
+Testcase: testSame took 0.072 sec

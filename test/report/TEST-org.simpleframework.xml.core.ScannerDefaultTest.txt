@@ -31,6 +31,6 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testNonMatchingAnnotationExample took 0.048 sec
-Testcase: testDuplicateExample took 0.009 sec
-Testcase: testScanner took 0.004 sec
+Testcase: testNonMatchingAnnotationExample took 0.049 sec
+Testcase: testDuplicateExample took 0.01 sec
+Testcase: testScanner took 0.003 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.14 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.141 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -108,7 +108,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.14 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.112 sec
+Testcase: testPrimitiveMap took 0.113 sec
 Testcase: testPrimitiveAttributeMap took 0.011 sec
-Testcase: testPrimitiveAttributeValueMap took 0.012 sec
+Testcase: testPrimitiveAttributeValueMap took 0.013 sec
 Testcase: testDirectory took 0.002 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MetadataSerializationTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.081 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.082 sec
 ------------- Standard Output ---------------
 <a>
    <setOfB class="java.util.HashSet">
@@ -12,4 +12,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.081 sec
 ------------- ---------------- ---------------
 
 Testcase: testWriteA took 0.079 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

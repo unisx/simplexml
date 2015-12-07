@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorScannerTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.097 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.098 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Annotations do not match for 'a[1]/b[1]/c[1]' in class org.simpleframework.xml.core.ConstructorScannerTest$ClashBetweenElementAndText
 	at org.simpleframework.xml.core.SignatureScanner.validate(SignatureScanner.java:308)
@@ -12,7 +12,7 @@ org.simpleframework.xml.core.ConstructorException: Annotations do not match for 
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:139)
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:126)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:73)
-	at org.simpleframework.xml.core.ConstructorScannerTest.testClashOnElementByPath(ConstructorScannerTest.java:88)
+	at org.simpleframework.xml.core.ConstructorScannerTest.testClashOnElementByPath(ConstructorScannerTest.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -39,7 +39,7 @@ org.simpleframework.xml.core.ConstructorException: Annotations do not match for 
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:139)
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:126)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:73)
-	at org.simpleframework.xml.core.ConstructorScannerTest.testClashOnElementUnionByPath(ConstructorScannerTest.java:100)
+	at org.simpleframework.xml.core.ConstructorScannerTest.testClashOnElementUnionByPath(ConstructorScannerTest.java:99)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -63,7 +63,7 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'a[1]/b[1]/x[1]' is
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:142)
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:126)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:73)
-	at org.simpleframework.xml.core.ConstructorScannerTest.testClashInText(ConstructorScannerTest.java:112)
+	at org.simpleframework.xml.core.ConstructorScannerTest.testClashInText(ConstructorScannerTest.java:111)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -87,7 +87,7 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'path[1]/a[1]' is a
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:142)
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:126)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:73)
-	at org.simpleframework.xml.core.ConstructorScannerTest.testSameNameAndAnnotationWithPath(ConstructorScannerTest.java:138)
+	at org.simpleframework.xml.core.ConstructorScannerTest.testSameNameAndAnnotationWithPath(ConstructorScannerTest.java:137)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -106,13 +106,13 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'path[1]/a[1]' is a
 public org.simpleframework.xml.core.ScannerCreatorTest$Example1(java.lang.String,java.lang.String)
 ------------- ---------------- ---------------
 
-Testcase: testElementWithPath took 0.039 sec
-Testcase: testClashOnElementByPath took 0.004 sec
-Testcase: testClashOnElementUnionByPath took 0.01 sec
+Testcase: testElementWithPath took 0.041 sec
+Testcase: testClashOnElementByPath took 0.005 sec
+Testcase: testClashOnElementUnionByPath took 0.011 sec
 Testcase: testClashInText took 0.004 sec
 Testcase: testSameNameWithPath took 0.005 sec
 Testcase: testSameNameAndAnnotationWithPath took 0.003 sec
 Testcase: testSameNameWithDifferentPath took 0.002 sec
-Testcase: testUnion took 0.003 sec
+Testcase: testUnion took 0.002 sec
 Testcase: testUnionBigPermutation took 0.008 sec
 Testcase: testScanner took 0.014 sec

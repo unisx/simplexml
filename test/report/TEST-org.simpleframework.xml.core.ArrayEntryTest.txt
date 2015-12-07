@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.124 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.126 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="3">
@@ -117,6 +117,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.124 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.111 sec
-Testcase: testExamplePrimitiveArray took 0.01 sec
+Testcase: testExampleArray took 0.113 sec
+Testcase: testExamplePrimitiveArray took 0.009 sec
 Testcase: testDirectory took 0 sec

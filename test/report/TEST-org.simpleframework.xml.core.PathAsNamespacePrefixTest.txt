@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathAsNamespacePrefixTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.153 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.154 sec
 ------------- Standard Output ---------------
 <p:pathWithPrefix xmlns:p="http://www.x.com/y">
    <x>
@@ -150,7 +150,7 @@ org.simpleframework.xml.core.ElementException: Namespace prefix 'p' in class org
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testPathWithPrefix took 0.119 sec
-Testcase: testPathWithPrefixOufOfScope took 0.007 sec
-Testcase: testBringPrefixInScope took 0.023 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testPathWithPrefix took 0.121 sec
+Testcase: testPathWithPrefixOufOfScope took 0.008 sec
+Testcase: testBringPrefixInScope took 0.024 sec
+Testcase: testDirectory took 0 sec

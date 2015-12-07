@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.Test1_ReplaceTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.097 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.099 sec
 ------------- Standard Output ---------------
 <test1A>
    <type>A</type>
@@ -8,4 +8,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.097 sec
 
 ------------- ---------------- ---------------
 
-Testcase: testReplace took 0.095 sec
+Testcase: testReplace took 0.096 sec

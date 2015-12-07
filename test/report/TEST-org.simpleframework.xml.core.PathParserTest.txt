@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathParserTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.028 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.027 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Path '//' in class org.simpleframework.xml.core.PathParserTest references document root
 	at org.simpleframework.xml.core.PathParser.path(PathParser.java:425)
@@ -324,7 +324,7 @@ Testcase: testStyledPath took 0.005 sec
 Testcase: testStyledPathWithPrefixes took 0 sec
 Testcase: testEmptyPath took 0.001 sec
 Testcase: testAttributePath took 0.002 sec
-Testcase: testSimplePath took 0.001 sec
+Testcase: testSimplePath took 0 sec
 Testcase: testPathPrefix took 0 sec
 Testcase: testAttribute took 0 sec
 Testcase: testIndex took 0.001 sec

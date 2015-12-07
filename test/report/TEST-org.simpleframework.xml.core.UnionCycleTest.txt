@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionCycleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.111 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.123 sec
 ------------- Standard Output ---------------
 <shapeExample id="0">
    <circle id="1">
@@ -30,5 +30,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.111 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testUnionCycle took 0.108 sec
+Testcase: testUnionCycle took 0.12 sec
 Testcase: testDirectory took 0 sec

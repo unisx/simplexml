@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MultiElementMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.133 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.138 sec
 ------------- Standard Output ---------------
 <properties>
    <entry>
@@ -104,5 +104,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.133 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testProperties took 0.13 sec
+Testcase: testProperties took 0.135 sec
 Testcase: testDirectory took 0 sec

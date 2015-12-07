@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithScatteredElementsTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.122 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <messages>
@@ -102,6 +102,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.122 sec
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testScattering took 0.118 sec
-Testcase: testConflictScattering took 0.002 sec
+Testcase: testScattering took 0.123 sec
+Testcase: testConflictScattering took 0.003 sec
 Testcase: testDirectory took 0 sec

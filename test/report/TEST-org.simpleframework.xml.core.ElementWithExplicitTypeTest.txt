@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ElementWithExplicitTypeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.176 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.167 sec
 ------------- Standard Output ---------------
 <example>
    <string>str</string>
@@ -122,7 +122,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.176 sec
 ------------- ---------------- ---------------
 
 Testcase: testExplicitType took 0.114 sec
-Testcase: testExplicitUnionType took 0.015 sec
-Testcase: testExplicitHierarchyType took 0.023 sec
-Testcase: testExplicitIncorrectHierarchyType took 0.019 sec
+Testcase: testExplicitUnionType took 0.014 sec
+Testcase: testExplicitHierarchyType took 0.019 sec
+Testcase: testExplicitIncorrectHierarchyType took 0.018 sec
 Testcase: testDirectory took 0 sec

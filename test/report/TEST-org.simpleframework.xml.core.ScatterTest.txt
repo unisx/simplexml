@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScatterTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.211 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.215 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -254,9 +254,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.211 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.151 sec
+Testcase: testList took 0.153 sec
 Testcase: testPrimitiveList took 0.024 sec
 Testcase: testInlineNamedList took 0.018 sec
-Testcase: testSimpleList took 0.008 sec
-Testcase: testSimplePrimitiveList took 0.006 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testSimpleList took 0.009 sec
+Testcase: testSimplePrimitiveList took 0.008 sec
+Testcase: testDirectory took 0 sec

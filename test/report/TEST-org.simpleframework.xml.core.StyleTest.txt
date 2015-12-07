@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StyleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.225 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.223 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">

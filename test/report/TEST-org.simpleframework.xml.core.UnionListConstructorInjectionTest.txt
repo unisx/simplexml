@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.16 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.204 sec
 ------------- Standard Output ---------------
 <accessControl>
    <user>
@@ -172,5 +172,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.16 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testListInjection took 0.157 sec
+Testcase: testListInjection took 0.201 sec
 Testcase: testDirectory took 0 sec

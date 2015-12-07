@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithMixedOrdreringTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.118 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.122 sec
 ------------- Standard Output ---------------
 <person>
    <name>
@@ -62,5 +62,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.118 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testMixedOrdering took 0.115 sec
+Testcase: testMixedOrdering took 0.119 sec
 Testcase: testDirectory took 0 sec

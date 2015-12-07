@@ -993,9 +993,9 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.172 sec
-Testcase: testPrimitiveErasure took 0.028 sec
+Testcase: testErasure took 0.171 sec
+Testcase: testPrimitiveErasure took 0.029 sec
 Testcase: testEnumErasure took 0.028 sec
 Testcase: testErasureWithMapAttributeIllegalExample took 0.004 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.044 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.045 sec
+Testcase: testDirectory took 0 sec

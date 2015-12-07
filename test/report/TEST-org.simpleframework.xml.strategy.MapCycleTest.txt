@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.176 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.177 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -354,7 +354,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.176 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.122 sec
+Testcase: testEntryMap took 0.124 sec
 Testcase: testComplexMap took 0.033 sec
-Testcase: testPrimitiveMap took 0.018 sec
+Testcase: testPrimitiveMap took 0.017 sec
 Testcase: testDirectory took 0 sec
