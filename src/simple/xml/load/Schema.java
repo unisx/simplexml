@@ -21,6 +21,7 @@
 package simple.xml.load;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 
 /**
  * The <code>Schema</code> object is used to track which fields within
@@ -66,6 +67,11 @@ final class Schema {
    private Method complete;
 
    /**
+    * This is the table used to maintain attributes by the source.
+    */ 
+   private Map table;
+
+   /**
     * Constructor for the <code>Schema</code> object. This is used 
     * to wrap the element and attribute XML annotations scanned from
     * a class schema. The schema tracks all fields visited so that
@@ -73,13 +79,14 @@ final class Schema {
     * 
     * @param schema this contains all labels scanned from the class
     */
-   public Schema(Scanner schema) {
+   public Schema(Scanner schema, Map table) {
       this.attributes = schema.getAttributes();
       this.elements = schema.getElements();
       this.validate = schema.getValidate();      
       this.complete = schema.getComplete();
       this.commit = schema.getCommit();      
       this.persist = schema.getPersist();
+      this.table = table;
    }
    
    /**
@@ -117,7 +124,11 @@ final class Schema {
     */
    public void commit(Object source) throws Exception {
       if(commit != null) {           
-         commit.invoke(source);           
+         if(isContextual(commit)) {              
+            commit.invoke(source, table);           
+         } else {
+            commit.invoke(source);                 
+         }
       }      
    }
 
@@ -133,8 +144,12 @@ final class Schema {
     * @throws Exception thrown if the validation process failed
     */
    public void validate(Object source) throws Exception {
-      if(validate != null) {            
-         validate.invoke(source);           
+      if(validate != null) {   
+         if(isContextual(validate)) {         
+            validate.invoke(source, table);           
+         } else {
+            validate.invoke(source);                 
+         }            
       }         
    }
    
@@ -151,7 +166,11 @@ final class Schema {
     */
    public void persist(Object source) throws Exception {
       if(persist != null) {           
-         persist.invoke(source);           
+         if(isContextual(persist)) {              
+            persist.invoke(source, table);           
+         } else {
+            persist.invoke(source);                 
+         }            
       }         
    }
    
@@ -168,7 +187,29 @@ final class Schema {
     */
    public void complete(Object source) throws Exception {
       if(complete != null) {           
-         complete.invoke(source);           
+         if(isContextual(complete)) {              
+            complete.invoke(source, table);           
+         } else {
+            complete.invoke(source);                 
+         }            
       }         
+   }
+
+   /**
+    * This is used to determine whether the annotated method takes a
+    * contextual object. If the method takes a <code>Map</code> then
+    * this returns true, otherwise it returns false.
+    *
+    * @param method this is the method to check the parameters of
+    *
+    * @return this returns true if the method takes a map object
+    */ 
+   private boolean isContextual(Method method) throws Exception {
+      Class[] list = method.getParameterTypes();
+
+      if(list.length == 1) {
+         return Map.class.equals(list[0]);                 
+      }      
+      return false;
    }
 }

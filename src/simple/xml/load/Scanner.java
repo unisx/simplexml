@@ -172,7 +172,7 @@ final class Scanner {
     * inheritance heirarchy. This means that a field annotation can 
     * be overridden an may not have values assigned to them.  
     * 
-    * @param source the class to extract fields and annotations from
+    * @param type the class to extract fields and annotations from
     */
    private void scan(Class type) {
       Class real = type;

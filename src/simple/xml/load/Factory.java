@@ -27,21 +27,21 @@ import org.w3c.dom.Node;
 /**
  * The <code>Factory</code> object provides a base class for factories 
  * used to produce field values from DOM elements. The goal of this 
- * type of factory is to make use of a <code>class</code> attribute to 
- * determine the type of the field value. The attributes must be 
+ * type of factory is to make use of the <code>Strategy</code> object
+ * to determine the type of the field value. The strategy class must be 
  * assignable to the field class type, that is, it must extend it or
- * implement it if it represents an interface. If the attribute does
- * not exist then the subclass implementation determines the type.
+ * implement it if it represents an interface. If the strategy class is
+ * null then the subclass implementation determines the type.
  * 
  * @author Niall Gallagher
  */
 abstract class Factory {
    
-   /**   
-    * This is the attribute that is used to determine the real type.
+   /**
+    * This is the source object used for the serialization process.
     */
-   private static final String TYPE = "class";
-
+   protected Source source;
+   
    /**
     * This is the field type that the class must be assignable to.
     */
@@ -53,17 +53,21 @@ abstract class Factory {
     * the actual type for. The actual type must be assignable to the
     * field type to insure that any instance can be set. 
     * 
-    * @param type this is the field type to determine the value for
+    * @param source the contextual object used by the persister
+    * @param field this is the field type to determine the value of
     */
-   protected Factory(Class field) {
+   protected Factory(Source source, Class field) {
+      this.source = source;           
       this.field = field;           
    }
 
    /**
     * This is used to get a possible override from the provided node.
     * If the node provided is an element then this checks for a  
-    * specific attribute is searched for within the element. If this
-    * attribute is present then it is used as the override type.
+    * specific class override using the <code>Strategy</code> object.
+    * If the strategy cannot resolve a class then this will return 
+    * null. If the resolved class is not assignable to the field 
+    * then this will thrown an exception.
     * 
     * @param node this is the node used to search for the override
     * 
@@ -77,10 +81,11 @@ abstract class Factory {
 
    /**
     * This is used to get a possible override from the provided node.
-    * If the element provided has a <code>class</code> attribute then
-    * that attributes value is used to determine the override type
-    * for the field. If the override type is not assignable then this
-    * will throw ann exception. 
+    * If the node provided is an element then this checks for a  
+    * specific class override using the <code>Strategy</code> object.
+    * If the strategy cannot resolve a class then this will return 
+    * null. If the resolved class is not assignable to the field 
+    * then this will thrown an exception.
     * 
     * @param node this is the element used to extract the override
     * 
@@ -101,33 +106,29 @@ abstract class Factory {
    
    /**
     * This method is used to set the override class within an element.
-    * Implementations of this method can choose to add either a special
-    * attribute or a child element to describe the type that should
-    * be used as the override for the deserialized field.
+    * This delegates to the <code>Strategy</code> implementation, which
+    * depending on the implementation may add an attribute of a child
+    * element to describe the type of the object provided to this.
     * 
-    * @param type this is the class of the field type being serialized
+    * @param field this is the class of the field type being serialized
     * @param node the DOM element that is to be given the details
+    *
+    * @throws Exception thrown if an error occurs within the strategy
     */
-   public void setOverride(Class type, Element node) throws Exception {
-      if(!isPrimitive(type)) {           
-         node.setAttribute(TYPE, type.getName());
-      }         
+   public void setOverride(Class field, Object value, Element node) throws Exception {
+      Class type = value.getClass();
+      
+      if(!isPrimitive(type)) {
+         source.setOverride(field, value, node);
+      }
    }
 
    /**
-    * This performs the conversion from the element node to a type. If
-    * there is a <code>class</code> attribute present in the element
-    * then that class is loaded from the context class loader.
-    * <pre>
-    * 
-    *    &lt;lement class="demo.Example"&lt;
-    *       &lt;property&gt;test&lt;/property&gt;
-    *    &lt;/element&gt;
-    *    
-    * </pre>
-    * For example the attribute value <code>demo.Example</code> would 
-    * be used as the converted type. This class would be loaded from
-    * the context class loader using <code>Class.forName</code>.
+    * This performs the conversion from the element node to a type. This
+    * is where the <code>Strategy</code> object is consulted and asked
+    * for a class that will represent the provided DOM element. This will,
+    * depending on the strategy implementation, make use of attributes
+    * and/or elements to determine the type for the field.
     * 
     * @param node this is the element used to extract the override
     * 
@@ -136,13 +137,7 @@ abstract class Factory {
     * @throws Exception thrown if the override class cannot be loaded    
     */ 
    public Class getConversion(Element node) throws Exception {
-      String name = node.getAttribute(TYPE);
-   
-      if(name != null && name.length() > 0) {
-         node.removeAttribute(TYPE);              
-         return Class.forName(name);              
-      }      
-      return null;
+      return source.getOverride(field, node);
    }
 
    /**
@@ -178,13 +173,13 @@ abstract class Factory {
       }              
       return !Modifier.isInterface(modifiers);
    }      
-
+   
    /**
     * This method is used to determine whether the field type is a
-    * primitive type. This check is required to ensure that this does
-    * not add a "class" attribute to the element. Addition of this
-    * is done if the field type is different from the object type
-    * which can happen to primitives as they are wrapped in objects.
+    * primitive type. This check is required to ensure that primitive
+    * elements do not consult the <code>Strategy</code> object for 
+    * the field class. This improves the performance of serialization
+    * and also ensures that the XML serialization is transparent.
     * 
     * @param type the type checked to determine if it is primitive
     * 
@@ -213,5 +208,5 @@ abstract class Factory {
          return true;              
       }
       return type.isPrimitive();
-   } 
+   }    
 }           

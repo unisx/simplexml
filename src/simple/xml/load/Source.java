@@ -68,24 +68,31 @@ final class Source {
     * This is used to replace variables within the XML source.
     */
    private TemplateEngine engine;
-   
+  
    /**
     * This is used as a factory for creating DOM element objects.
     */
-   private Document root;
+   private Document source;
+   
+   /**
+    * This is the strategy used to resolve the element classes.
+    */
+   private Strategy strategy;
+   
+   /**
+    * This is the filter used by this object for templating.
+    */ 
+   private Filter filter;
 
    /**
-    * Constructor for the <code>Source</code> object. This is used to
-    * maintain a context during the serialization process. It holds 
-    * the <code>Document</code> and <code>Filter</code> used in the
-    * serialization process. The same source instance is used for 
-    * each XML element evaluated in a the serialization process.   
-    * 
-    * @param root this is the document object used in serialization
+    * This is the root element for the specified source document.
     */
-   public Source(Document root) {
-      this(root, new HashMap());           
-   }
+   private Element root;
+
+   /**
+    * This is used to store the source context attribute values.
+    */ 
+   private Map table;
    
    /**
     * Constructor for the <code>Source</code> object. This is used to
@@ -94,28 +101,57 @@ final class Source {
     * serialization process. The same source instance is used for 
     * each XML element evaluated in a the serialization process. 
     * 
-    * @param root this is the document object used in serialization
-    * @param data this is used to provide mappings for the filter
-    */
-   public Source(Document root, Map data) {
-      this(root, new PlatformFilter(data));           
-   }
-   
-   /**
-    * Constructor for the <code>Source</code> object. This is used to
-    * maintain a context during the serialization process. It holds 
-    * the <code>Document</code> and <code>Filter</code> used in the
-    * serialization process. The same source instance is used for 
-    * each XML element evaluated in a the serialization process. 
-    * 
-    * @param root this is the document object used in serialization
-    * @param data this is used for replacing template variables
+    * @param source this is the document object used in serialization
+    * @param strategy this is used to resolve the classes used   
+    * @param data this is used for replacing the template variables
     */       
-   public Source(Document root, Filter data) {
-      this.engine = new TemplateEngine(data);           
-      this.root = root;
-   }        
+   public Source(Document source, Strategy strategy, Filter data) {
+      this.filter = new TemplateFilter(this, data);           
+      this.engine = new TemplateEngine(filter);           
+      this.table = new HashMap();
+      this.strategy = strategy;
+      this.source = source;
+   }   
 
+   /**
+    * This is used to acquire the attribute mapped to the specified
+    * key. In order for this to return a value it must have been
+    * previously placed into the context as it is empty by default.
+    * 
+    * @param key this is the name of the attribute to retrieve
+    *
+    * @return this returns the value mapped to the specified key
+    */     
+   public Object getAttribute(Object key) {
+      return table.get(key);
+   }
+   
+   /**
+    * This method is used to acquire the <code>Document</code> used as
+    * the source of the deserialization process. This is used so that
+    * the elements created can be appended to the document when the
+    * serialization process has completed.
+    * 
+    * @return this returns the source document used by this source
+    */
+   public Document getDocument() {
+      return source;           
+   }
+
+   /**
+    * This is used to return the root element for the source object
+    * during the deserialization process. This will return the root
+    * element for the document used by this source context object.
+    *
+    * @return this returns the root element for the source document
+    */
+   public Element getRootElement() {
+      if(root == null) {
+         root = source.getDocumentElement();              
+      }
+      return root;           
+   }
+   
    /**
     * This is used to create <code>Element</code> objects that can
     * be used to build a document when serializing an object. The
@@ -127,9 +163,57 @@ final class Source {
     * @return returns an element from the document being created
     */
    public Element getElement(String name) {
-      return root.createElement(name);           
+      Element node = source.createElement(name);
+      
+      if(root == null) {
+         root = node;
+      }
+      return node;
    }
+   
+   /**
+    * This is used to resolve and load a class for the given element.
+    * The class should be of the same type or a subclass of the class
+    * specified. It can be resolved using the details within the
+    * provided DOM element, if the details used do not represent any
+    * serializable values they should be removed so as not to disrupt
+    * the deserialization process. For example the default strategy
+    * removes all "class" attributes from the given elements.
+    * 
+    * @param type this is the type of the root element expected
+    * @param node this is the element used to resolve an override
+    * 
+    * @return returns the class that should be used for the object
+    * 
+    * @throws Exception thrown if the class cannot be resolved  
+    */
+   public Class getOverride(Class type, Element node) throws Exception {
+      if(node == root) {
+         return strategy.readRoot(type, node, table);
+      }           
+      return strategy.readElement(type, node, table);
+   } 
 
+   /**    
+    * This is used to attach elements or attributes to the given 
+    * element during the serialization process. This method allows
+    * the strategy to augment the XML document so that it can be
+    * deserialized using a similar strategy. For example the 
+    * default strategy adds a "class" attribute to the element.
+    * 
+    * @param type this is the field type for the associated value 
+    * @param value this is the instance variable being serialized
+    * @param node this is the element used to represent the value
+    * 
+    * @throws Exception thrown if the details cannot be set
+    */
+   public void setOverride(Class type, Object value, Element node) throws Exception {
+      if(node == root) {
+         strategy.writeRoot(type, value, node, table);              
+      }           
+      strategy.writeElement(type, value, node, table);
+   }
+   
    /**
     * This creates a <code>Schema</code> object that can be used to
     * examine the fields within the XML class schema. The schema
@@ -160,10 +244,10 @@ final class Source {
       Scanner schema = cache.get(type);
       
       if(schema == null) {
-         schema = new Scanner(type);
-         cache.put(type, schema);
+         schema = new Scanner(type);             
+         cache.cache(type, schema);
       }
-      return new Schema(schema);
+      return new Schema(schema, table);
    }
 
    /**

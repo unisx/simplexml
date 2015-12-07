@@ -85,7 +85,7 @@ final class CompositeList implements Converter {
     * @param entry the entry type to be stored within the list
     */    
    public CompositeList(Source root, Class type, Class entry) {
-      this.factory = new CollectionFactory(type); 
+      this.factory = new CollectionFactory(root, type); 
       this.root = new Traverser(root);      
       this.entry = entry;
    }

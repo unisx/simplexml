@@ -78,7 +78,7 @@ final class Composite implements Converter {
     * @param type this is the XML schema class to use
     */
    public Composite(Source root, Class type) {
-      this.factory = new ObjectFactory(type);           
+      this.factory = new ObjectFactory(root, type);           
       this.root = root;
    }
 
@@ -439,11 +439,9 @@ final class Composite implements Converter {
       if(value != null) {
          String name = label.getName();
          Element next = root.getElement(name);
-         Class type = value.getClass();
+         Class type = label.getType();
         
-         if(type != label.getType()) {
-            factory.setOverride(type, next);
-         }
+         factory.setOverride(type, value, next);
          label.getConverter(root).write(value, next);
          node.appendChild(next);
       }

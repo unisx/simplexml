@@ -44,8 +44,8 @@ final class PrimitiveFactory extends Factory {
     * 
     * @param field this is the field type to be instantiated
     */
-   public PrimitiveFactory(Class field) {
-      super(field);           
+   public PrimitiveFactory(Source root, Class field) {
+      super(root, field);           
    }
         
    /**

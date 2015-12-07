@@ -38,19 +38,21 @@ final class ObjectFactory extends Factory {
     * Constructor for the <code>ObjectFactory</code> class. This is
     * given the field class that this should create object instances
     * of. If the field type is abstract then the DOM node must have
-    * the <code>class</code> attribute to specify the override.
-    * 
-    * @param field this is the field type of the object
+    * sufficient information for the <code>Strategy</code> object to
+    * resolve the implementation class to be instantiated.
+    *
+    * @param source the contextual object used by the persister 
+    * @param field this is the field type of the object 
     */
-   public ObjectFactory(Class field) {
-      super(field);           
+   public ObjectFactory(Source source, Class field) {
+      super(source, field);           
    }        
 
    /**
     * This method will instantiate an object of the field type, or if
-    * there is a <code>class</code> attribute in the DOM element, an
-    * object of the override type. If the resulting type is abstract
-    * or an interface then this method will throw an exception.
+    * the <code>Strategy</code> object can resolve a class from the
+    * DOM element then this is used instead. If the resulting type is
+    * abstract or an interface then this method throws an exception.
     * 
     * @param node this is the node to check for the override
     * 

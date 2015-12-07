@@ -23,10 +23,10 @@ package simple.xml.load;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * The <code>SchemaCache</code> is used to cache schema objects so 
- * that the overhead of reflectively interrogating each class is not
- * required each time an object of the class type is serialized or
- * deserialized. This is esentially a typedef for the generic type.
+ * The <code>SchemaCache</code> is used to cache schema objects. It 
+ * is used so the overhead of reflectively interrogating each class 
+ * is not required each time an instance of that class is serialized 
+ * or deserialized. This acts as a typedef for the generic type.
  * 
  * @author Niall Gallagher
  */
@@ -40,5 +40,20 @@ final class ScannerCache extends ConcurrentHashMap<Class, Scanner> {
     */
    public ScannerCache() {
       super();
+   }
+
+   /**
+    * This method will cache the provided scanner object using the
+    * provided class object. Once cached the scanner object can be
+    * used to create <code>Schema</code> objects that are required
+    * for the serialization and deserialization process.
+    *
+    * @param type this is the class the scanner is mapped to
+    * @param schema this is the scanner object that is cached
+    *
+    * @return this is the scanner instance that has been cached
+    */ 
+   public Scanner cache(Class type, Scanner schema) {
+      return put(type, schema);
    }
 }

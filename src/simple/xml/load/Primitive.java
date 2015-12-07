@@ -49,7 +49,7 @@ import org.w3c.dom.Node;
  *
  * @author Niall Gallagher
  *
- * @see simple.util.filter.Filter
+ * @see simple.xml.filter.Filter
  */ 
 final class Primitive implements Converter {
 
@@ -73,7 +73,7 @@ final class Primitive implements Converter {
     * @param type this is the type of primitive this represents
     */ 
    public Primitive(Source root, Class type) {
-      this.factory = new PrimitiveFactory(type);           
+      this.factory = new PrimitiveFactory(root, type);           
       this.root = root;           
    }
 

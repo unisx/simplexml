@@ -55,18 +55,6 @@ final class Traverser {
    }        
    
    /**
-    * Constructor for the <code>Traverser</code> object. This creates
-    * a traverser using the supplied document and filter objects. This
-    * is a convinience constructor that creates the source object.
-    * 
-    * @param root this is the root DOM document object used
-    * @param filter this is the filter used to replace variables
-    */
-   public Traverser(Document root, Filter filter) {
-      this(new Source(root, filter));
-   }
-   
-   /**
     * This <code>read</code> method is used to deserialize an object 
     * from the provided DOM element. The class provided acts as the
     * XML schema definition used to control the deserialization. If
@@ -133,9 +121,12 @@ final class Traverser {
     * @throws Exception thrown if there is a problem serializing
     */
    private Element write(Object source, String name) throws Exception {
-      Element node = root.getElement(name);      
+      Element node = root.getElement(name);            
       Class type = source.getClass();
-      
+     
+      if(node != null) {
+         root.setOverride(type, source, node);
+      }                         
       getComposite(type).write(source, node);
       return node;
    }

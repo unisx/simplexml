@@ -70,18 +70,7 @@ final class TemplateEngine extends Template {
     * used to create a parsing buffer, which can be used to replace
     * filter variable names with their corrosponding values.
     * 
-    * @param filter this is the filter used to provide replacements 
-    */ 
-   public TemplateEngine() {
-      this(new HashMap());           
-   }
-   
-   /**
-    * Constructor for the <code>TemplateEngine</code> object. This is 
-    * used to create a parsing buffer, which can be used to replace
-    * filter variable names with their corrosponding values.
-    * 
-    * @param filter this is the filter used to provide replacements 
+    * @param map this is the filter used to provide replacements 
     */ 
    public TemplateEngine(Map map) {
       this(new PlatformFilter(map));           

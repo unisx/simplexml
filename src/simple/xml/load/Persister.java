@@ -83,6 +83,11 @@ public class Persister implements Serializer {
    private DocumentBuilder builder;
 
    /**
+    * This is the strategy object used to load and resolve classes.
+    */ 
+   private Strategy strategy;
+   
+   /**
     * This filter is used to replace variables within templates.
     */
    private Filter filter;
@@ -104,10 +109,10 @@ public class Persister implements Serializer {
     * that template variables will be replaced firstly with mappings
     * from within the provided map, followed by system properties. 
     * 
-    * @param data this is the map that contains the overrides
+    * @param filter this is the map that contains the overrides
     */
-   public Persister(Map data) {
-      this(new PlatformFilter(data));           
+   public Persister(Map filter) {
+      this(new PlatformFilter(filter));           
    }
         
    /**
@@ -119,8 +124,57 @@ public class Persister implements Serializer {
     * @param filter the filter used to replace template variables
     */
    public Persister(Filter filter) {
+      this(new DefaultStrategy(), filter);
+   }      
+
+    /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use a strategy object. 
+    * This persister will use the provided <code>Strategy</code> to
+    * intercept the XML elements in order to read and write persisent
+    * data, such as the class name or version of the document.
+    * 
+    * @param strategy this is the strategy used to resolve classes
+    */
+   public Persister(Strategy strategy) {
+      this(strategy, new HashMap());
+   }     
+
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use a platform filter
+    * object using the overrides within the provided map. This means
+    * that template variables will be replaced firstly with mappings
+    * from within the provided map, followed by system properties. 
+    * <p>
+    * This persister will use the provided <code>Strategy</code> to
+    * intercept the XML elements in order to read and write persisent
+    * data, such as the class name or version of the document.
+    * 
+    * @param strategy this is the strategy used to resolve classes 
+    * @param data this is the map that contains the overrides
+    */
+   public Persister(Strategy strategy, Map data) {
+      this(strategy, new PlatformFilter(data));           
+   }
+        
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use the provided filter.
+    * This persister will replace all variables encountered when
+    * deserializing an object with mappings found in the filter.
+    * <p>
+    * This persister will use the provided <code>Strategy</code> to
+    * intercept the XML elements in order to read and write persisent
+    * data, such as the class name or version of the document.
+    * 
+    * @param strategy this is the strategy used to resolve classes 
+    * @param filter the filter used to replace template variables
+    */
+   public Persister(Strategy strategy, Filter filter) {
+      this.strategy = strategy;           
       this.filter = filter;           
-   }        
+   }     
    
    /**
     * This <code>read</code> method will read the contents of the XML
@@ -249,8 +303,45 @@ public class Persister implements Serializer {
     * @throws Exception if the object cannot be fully deserialized
     */
    public Object read(Class type, Document source) throws Exception {
-      Traverser traverser = new Traverser(source, filter);
-      Element node = source.getDocumentElement();
+      return read(type, source, filter);
+   }
+
+   /**
+    * This <code>read</code> method will read the contents of the DOM
+    * document provided and convert it to an object of the specified
+    * type. If the DOM document cannot be deserialized or there is a
+    * problem building the object graph an exception is thrown. The
+    * object graph deserialized is returned.
+    * 
+    * @param type this is the XML schema class to be deserialized
+    * @param source the document the object is deserialized from
+    * @param filter this is the filter used by the templating engine
+    * 
+    * @return the object deserialized from the DOM document given
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   private Object read(Class type, Document source, Filter filter) throws Exception {
+      return read(type, new Source(source, strategy, filter));
+   }                      
+           
+   /**
+    * This <code>read</code> method will read the contents of the DOM
+    * document provided and convert it to an object of the specified
+    * type. If the DOM document cannot be deserialized or there is a
+    * problem building the object graph an exception is thrown. The
+    * object graph deserialized is returned.
+    * 
+    * @param type this is the XML schema class to be deserialized
+    * @param source the contextual object used for derserialization 
+    * 
+    * @return the object deserialized from the DOM document given
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   private Object read(Class type, Source source) throws Exception {
+      Traverser traverser = new Traverser(source);
+      Element node = source.getRootElement();
       
       return traverser.read(node, type);
    }
@@ -294,13 +385,54 @@ public class Persister implements Serializer {
     * @throws Exception if the schema for the object is not valid
     */
    public Document write(Object source, Document root) throws Exception {
-      Traverser traverser = new Traverser(root, filter);
-      Element node = traverser.write(source);
+      return write(source, root, filter);
+   }
 
+   /**
+    * This <code>write</code> method will traverse the provided object
+    * checking for field annotations in order to compose the XML data.
+    * This uses the <code>getClass</code> method on the object to
+    * determine the class file that will be used to compose the schema.
+    * If there is no <code>Root</code> annotation for the class then
+    * this will throw an exception. The root annotation is the only
+    * annotation required for an object to be serialized.  
+    * 
+    * @param source this is the object that is to be serialized
+    * @param root this is where the serialized XML is written to
+    * @param filter this is the filter object used for templating
+    * 
+    * @return this returns the DOM containing the serialized XML
+    * 
+    * @throws Exception if the schema for the object is not valid
+    */   
+   private Document write(Object source, Document root, Filter filter) throws Exception {   
+      return write(source, new Source(root, strategy, filter));
+   }
+
+   /**
+    * This <code>write</code> method will traverse the provided object
+    * checking for field annotations in order to compose the XML data.
+    * This uses the <code>getClass</code> method on the object to
+    * determine the class file that will be used to compose the schema.
+    * If there is no <code>Root</code> annotation for the class then
+    * this will throw an exception. The root annotation is the only
+    * annotation required for an object to be serialized.  
+    * 
+    * @param source this is the object that is to be serialized
+    * @param root this is a contextual object used for serialization
+    * 
+    * @return this returns the DOM containing the serialized XML
+    * 
+    * @throws Exception if the schema for the object is not valid
+    */     
+   private Document write(Object source, Source root) throws Exception {   
+      Traverser traverser = new Traverser(root);
+      Element node = traverser.write(source);
+      
       if(node != null) {
-         root.appendChild(node);
+         root.getDocument().appendChild(node);
       }
-      return root;
+      return root.getDocument();
    }
    
    /**

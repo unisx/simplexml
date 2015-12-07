@@ -29,10 +29,10 @@ import org.w3c.dom.Node;
 /**
  * The <code>CollectionFactory</code> is used to create collection
  * instances that are compatible with the field type. This performs
- * resolution of the collection class by firstly checking the DOM
- * element for a <code>class</code> attribute. If the attribute 
- * exists its value acts as the fully qualified class name for the
- * collection to be instantiated.  
+ * resolution of the collection class by firstly consulting the
+ * specified <code>Strategy</code> implementation. If the strategy
+ * cannot resolve the collection class then this will select a type
+ * from the Java Collections framework, if a compatible one exists.
  * 
  * @author Niall Gallagher
  */ 
@@ -45,16 +45,15 @@ final class CollectionFactory extends Factory {
     * 
     * @param field this is the class for the owning object
     */
-   public CollectionFactory(Class field) {
-      super(field);           
+   public CollectionFactory(Source root, Class field) {
+      super(root, field);           
    }        
 
    /**
-    * Creates the collection to use. If there is a <code>class</code>
-    * attribute then this is used to represent the fully qualified 
-    * class name of the collection type to be instantiated. If not 
-    * and the type is abstract then the type is choosen from one of
-    * the types within the Java Collections framework.
+    * Creates the collection to use. The <code>Strategy</code> object
+    * is consulted for the collection class, if one is not resolved
+    * by the strategy implementation or if the collection resolved is
+    * abstract then the Java Collections framework is consulted.
     * 
     * @param node this is the DOM node representing the list
     * 
