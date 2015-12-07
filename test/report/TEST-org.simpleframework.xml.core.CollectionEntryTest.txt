@@ -145,6 +145,6 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.3 sec
 
 Testcase: testExampleCollection took 0.216 sec
 Testcase: testExampleInlineCollection took 0.028 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.02 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.018 sec
 Testcase: testExamplePrimitiveCollection took 0.026 sec
 Testcase: testDirectory took 0 sec

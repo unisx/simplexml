@@ -32,14 +32,14 @@ package org.simpleframework.xml.convert;
 public class Registry {
    
    /**
+    * This is used to bind converter types to serializable types.
+    */
+   private final RegistryBinder binder;
+   
+   /**
     * This is used to cache the converters based on object types.
     */
    private final ConverterCache cache;
-   
-   /**
-    * This is used to instantiate and cache the converter objects.
-    */
-   private final Repository store;
    
    /**
     * Constructor for the <code>Registry</code> object. This is used
@@ -48,8 +48,8 @@ public class Registry {
     * converters are instantiated once and cached for reuse.
     */
    public Registry() {
+      this.binder = new RegistryBinder();
       this.cache = new ConverterCache();
-      this.store = new Repository();
    }
    
    /**
@@ -82,7 +82,7 @@ public class Registry {
     * @return this returns the converter instance for the type
     */
    private Converter create(Class type) throws Exception {
-      Converter converter = store.lookup(type);
+      Converter converter = binder.lookup(type);
       
       if(converter != null) {
          cache.cache(type, converter);
@@ -100,7 +100,7 @@ public class Registry {
     * @param converter this is the converter class to be used
     */
    public void bind(Class type, Class converter) throws Exception {
-      store.bind(type, converter);
+      binder.bind(type, converter);
    }
    
    /**

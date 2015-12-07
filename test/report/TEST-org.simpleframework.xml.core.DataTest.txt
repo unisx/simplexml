@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DataTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.229 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
@@ -112,5 +112,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
    </QueryList>
 </Scrape>------------- ---------------- ---------------
 
-Testcase: testDataFromByteStream took 0.218 sec
+Testcase: testDataFromByteStream took 0.222 sec
 Testcase: testDirectory took 0 sec

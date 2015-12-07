@@ -70,5 +70,5 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' missing f
 ------------- ---------------- ---------------
 
 Testcase: testRedundantElementOrder took 0.088 sec
-Testcase: testRedundantAttributeOrder took 0.006 sec
+Testcase: testRedundantAttributeOrder took 0.007 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultEmptyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.228 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.243 sec
 ------------- Standard Output ---------------
 <defaultExample name="test">
    <stringList class="java.util.ArrayList"/>
@@ -31,5 +31,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.228 sec
    <text>example text</text>
 </defaultExample>------------- ---------------- ---------------
 
-Testcase: testDefaults took 0.222 sec
+Testcase: testDefaults took 0.237 sec
 Testcase: testDirectory took 0 sec

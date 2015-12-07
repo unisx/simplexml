@@ -16,6 +16,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.078 sec
 </jsp:root>
 ------------- ---------------- ---------------
 
-Testcase: testInputNode took 0.053 sec
-Testcase: testOutputNode took 0.02 sec
+Testcase: testInputNode took 0.051 sec
+Testcase: testOutputNode took 0.021 sec
 Testcase: testDirectory took 0 sec

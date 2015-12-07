@@ -1,5 +1,5 @@
 /*
- * Repository.java January 2010
+ * RegistryBinder.java January 2010
  *
  * Copyright (C) 2010, Niall Gallagher <niallg@users.sf.net>
  *
@@ -19,7 +19,7 @@
 package org.simpleframework.xml.convert;
 
 /**
- * The <code>Repository</code> object is used acquire converters
+ * The <code>RegistryBinder</code> object is used acquire converters
  * using a binding between a type and its converter. All converters
  * instantiated are cached internally to ensure that the overhead
  * of acquiring a converter is reduced. Converters are created on
@@ -29,7 +29,7 @@ package org.simpleframework.xml.convert;
  * 
  * @see org.simpleframework.xml.convert.Registry
  */
-class Repository {
+class RegistryBinder {
    
    /**
     * This is used to instantiate and cache the converter objects.
@@ -42,19 +42,19 @@ class Repository {
    private final ClassCache cache;
    
    /**
-    * Constructor for the <code>Repository</code> object. This is used
-    * to create a registry between classes and the converters that
-    * should be used to serialize and deserialize the instances. All
-    * converters are instantiated once and cached for reuse.
+    * Constructor for the <code>RegistryBinder</code> object. This 
+    * is used to create bindings between classes and the converters 
+    * that should be used to serialize and deserialize the instances. 
+    * All converters are instantiated once and cached for reuse.
     */
-   public Repository() {
+   public RegistryBinder() {
       this.factory = new ConverterFactory();
       this.cache = new ClassCache();
    }
    
    /**
     * This is used to acquire a <code>Converter</code> instance from
-    * the registry. All instances are cache to reduce the overhead
+    * this binder. All instances are cached to reduce the overhead
     * of lookups during the serialization process. Converters are
     * lazily instantiated and so are only created if demanded.
     * 
@@ -73,7 +73,7 @@ class Repository {
    
    /**
     * This is used to acquire a <code>Converter</code> instance from
-    * the registry. All instances are cached to reduce the overhead
+    * this binder. All instances are cached to reduce the overhead
     * of lookups during the serialization process. Converters are
     * lazily instantiated and so are only created if demanded.
     * 

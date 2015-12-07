@@ -570,10 +570,13 @@ class Composite implements Converter {
     
       if(object == null) {     
          Position line = node.getPosition();
-         Class type = source.getClass();
+         Class expect = type.getType();
          
+         if(source != null) {
+            expect = source.getClass();
+         }
          if(label.isRequired() && revision.isEqual()) {              
-            throw new ValueRequiredException("Empty value for %s in %s at %s", label, type, line);
+            throw new ValueRequiredException("Empty value for %s in %s at %s", label, expect, line);
          }
       } else {
          if(object != label.getEmpty(context)) {      

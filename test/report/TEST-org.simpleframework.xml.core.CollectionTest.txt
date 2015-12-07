@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.509 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.529 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -477,7 +477,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.509 sec
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:122)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -512,7 +512,7 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:122)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -546,7 +546,7 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 org.simpleframework.xml.core.InstantiationException: Type is not a collection class java.lang.String
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:97)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -581,7 +581,7 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.CollectionFactory.getConversion(CollectionFactory.java:145)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:94)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -617,7 +617,7 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:116)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:91)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -652,7 +652,7 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.Hashta
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:122)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -698,7 +698,7 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:115)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:623)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:626)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:550)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
@@ -732,23 +732,23 @@ java.lang.ClassNotFoundException: example.MyCollection
 ------------- ---------------- ---------------
 
 Testcase: testSet took 0.127 sec
-Testcase: testSortedSet took 0.093 sec
-Testcase: testList took 0.028 sec
-Testcase: testHashSet took 0.036 sec
-Testcase: testTreeSet took 0.025 sec
-Testcase: testArrayList took 0.022 sec
+Testcase: testSortedSet took 0.095 sec
+Testcase: testList took 0.031 sec
+Testcase: testHashSet took 0.038 sec
+Testcase: testTreeSet took 0.028 sec
+Testcase: testArrayList took 0.024 sec
 Testcase: testSortedSetToSet took 0.004 sec
-Testcase: testExtendedEntry took 0.009 sec
-Testcase: testTypeFromFieldList took 0.032 sec
-Testcase: testTypeFromMethodList took 0.048 sec
-Testcase: testPrimitiveCollection took 0.021 sec
+Testcase: testExtendedEntry took 0.011 sec
+Testcase: testTypeFromFieldList took 0.034 sec
+Testcase: testTypeFromMethodList took 0.05 sec
+Testcase: testPrimitiveCollection took 0.022 sec
 Testcase: testCompositeCollection took 0.023 sec
 Testcase: testPrimitiveDefaultCollection took 0.01 sec
 Testcase: testSetToSortedSet took 0.005 sec
-Testcase: testListToSet took 0.002 sec
+Testcase: testListToSet took 0.003 sec
 Testcase: testInvalidList took 0.003 sec
 Testcase: testUnknownCollectionList took 0.002 sec
 Testcase: testAbstractList took 0.002 sec
 Testcase: testNotACollection took 0.002 sec
 Testcase: testMissingCollection took 0.003 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

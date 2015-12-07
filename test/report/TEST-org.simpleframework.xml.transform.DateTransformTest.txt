@@ -1,55 +1,55 @@
 Testsuite: org.simpleframework.xml.transform.DateTransformTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.506 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.529 sec
 ------------- Standard Output ---------------
-<dateExample attribute="2010-01-30 16:53:34.384 GMT">
+<dateExample attribute="2010-02-01 20:56:10.441 GMT">
    <array length="1">
-      <date>2010-01-30 16:53:34.384 GMT</date>
+      <date>2010-02-01 20:56:10.441 GMT</date>
    </array>
-   <element>2010-01-30 16:53:34.384 GMT</element>
+   <element>2010-02-01 20:56:10.441 GMT</element>
    <list class="java.util.ArrayList">
-      <date>2010-01-30 16:53:34.384 GMT</date>
-      <date>2010-01-30 16:53:34.384 GMT</date>
+      <date>2010-02-01 20:56:10.441 GMT</date>
+      <date>2010-02-01 20:56:10.441 GMT</date>
    </list>
-</dateExample><dateExample attribute="2010-01-30 16:53:34.384 GMT">
+</dateExample><dateExample attribute="2010-02-01 20:56:10.441 GMT">
    <array length="1">
-      <date>2010-01-30 16:53:34.384 GMT</date>
+      <date>2010-02-01 20:56:10.441 GMT</date>
    </array>
-   <element>2010-01-30 16:53:34.384 GMT</element>
+   <element>2010-02-01 20:56:10.441 GMT</element>
    <list class="java.util.ArrayList">
-      <date>2010-01-30 16:53:34.384 GMT</date>
-      <date>2010-01-30 16:53:34.384 GMT</date>
+      <date>2010-02-01 20:56:10.441 GMT</date>
+      <date>2010-02-01 20:56:10.441 GMT</date>
    </list>
 </dateExample>
-<date-example ID="0" attribute="2010-01-30 16:53:34.384 GMT">
+<date-example ID="0" attribute="2010-02-01 20:56:10.441 GMT">
    <array length="1" ID="1">
-      <date ID="2">2010-01-30 16:53:34.384 GMT</date>
+      <date ID="2">2010-02-01 20:56:10.441 GMT</date>
    </array>
-   <element ID="3">2010-01-30 16:53:34.384 GMT</element>
+   <element ID="3">2010-02-01 20:56:10.441 GMT</element>
    <list class="java.util.ArrayList" ID="4">
-      <date ID="5">2010-01-30 16:53:34.384 GMT</date>
-      <date ID="6">2010-01-30 16:53:34.384 GMT</date>
+      <date ID="5">2010-02-01 20:56:10.441 GMT</date>
+      <date ID="6">2010-02-01 20:56:10.441 GMT</date>
    </list>
-</date-example><DateExample ID="0" attribute="2010-01-30 16:53:34.384 GMT">
+</date-example><DateExample ID="0" attribute="2010-02-01 20:56:10.441 GMT">
    <Array length="1" ID="1">
-      <Date ID="2">2010-01-30 16:53:34.384 GMT</Date>
+      <Date ID="2">2010-02-01 20:56:10.441 GMT</Date>
    </Array>
-   <Element ID="3">2010-01-30 16:53:34.384 GMT</Element>
+   <Element ID="3">2010-02-01 20:56:10.441 GMT</Element>
    <List class="java.util.ArrayList" ID="4">
-      <Date ID="5">2010-01-30 16:53:34.384 GMT</Date>
-      <Date ID="6">2010-01-30 16:53:34.384 GMT</Date>
+      <Date ID="5">2010-02-01 20:56:10.441 GMT</Date>
+      <Date ID="6">2010-02-01 20:56:10.441 GMT</Date>
    </List>
-</DateExample><dateExample id="0" attribute="2010-01-30 16:53:34.620 GMT">
+</DateExample><dateExample id="0" attribute="2010-02-01 20:56:10.690 GMT">
    <array length="1" id="1">
-      <date id="2">2010-01-30 16:53:34.620 GMT</date>
+      <date id="2">2010-02-01 20:56:10.690 GMT</date>
    </array>
    <element reference="2"/>
    <list class="java.util.ArrayList" id="3">
       <date reference="2"/>
       <date reference="2"/>
    </list>
-</dateExample><dateExample id="0" attribute="2010-01-30 16:53:34.620 GMT">
+</dateExample><dateExample id="0" attribute="2010-02-01 20:56:10.690 GMT">
    <array length="1" id="1">
-      <date id="2">2010-01-30 16:53:34.620 GMT</date>
+      <date id="2">2010-02-01 20:56:10.690 GMT</date>
    </array>
    <element reference="2"/>
    <list class="java.util.ArrayList" id="3">
@@ -57,18 +57,18 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.506 sec
       <date reference="2"/>
    </list>
 </dateExample>
-<date-example ID="0" attribute="2010-01-30 16:53:34.620 GMT">
+<date-example ID="0" attribute="2010-02-01 20:56:10.690 GMT">
    <array length="1" ID="1">
-      <date ID="2">2010-01-30 16:53:34.620 GMT</date>
+      <date ID="2">2010-02-01 20:56:10.690 GMT</date>
    </array>
    <element REFERER="2"/>
    <list class="java.util.ArrayList" ID="3">
       <date REFERER="2"/>
       <date REFERER="2"/>
    </list>
-</date-example><DateExample ID="0" attribute="2010-01-30 16:53:34.620 GMT">
+</date-example><DateExample ID="0" attribute="2010-02-01 20:56:10.690 GMT">
    <Array length="1" ID="1">
-      <Date ID="2">2010-01-30 16:53:34.620 GMT</Date>
+      <Date ID="2">2010-02-01 20:56:10.690 GMT</Date>
    </Array>
    <Element REFERER="2"/>
    <List class="java.util.ArrayList" ID="3">
@@ -78,6 +78,6 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.506 sec
 </DateExample>------------- ---------------- ---------------
 
 Testcase: testDate took 0.016 sec
-Testcase: testPersistence took 0.235 sec
-Testcase: testCyclicPersistence took 0.248 sec
+Testcase: testPersistence took 0.25 sec
+Testcase: testCyclicPersistence took 0.257 sec
 Testcase: testDirectory took 0.001 sec
