@@ -132,10 +132,10 @@ final class CompositeList implements Converter {
       for(Object item : list) {
          Class type = item.getClass();
 
-         if(!type.isAssignableFrom(entry)) {
+         if(!entry.isAssignableFrom(type)) {
             throw new RuntimeException("Type does not match list entry");                     
          }
-         Element next = root.write(item);
+         Element next = root.write(item, entry);
          node.appendChild(next);
       }
    }

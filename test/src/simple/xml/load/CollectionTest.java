@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.SortedSet;
 import java.util.Set;
 
+import org.w3c.dom.Document;
 import junit.framework.TestCase;
 import simple.xml.Attribute;
 import simple.xml.Element;
@@ -125,6 +126,24 @@ public class CollectionTest extends TestCase {
    "      </entry>\n"+
    "   </list>\n"+
    "</test>";  
+
+   public static final String EXTENDED_ENTRY_LIST = 
+   "<?xml version=\"1.0\"?>\n"+
+   "<test name='example'>\n"+
+   "   <list>\n"+   
+   "      <extended-entry id='1' class='simple.xml.load.CollectionTest$ExtendedEntry'>\n"+
+   "         <text>one</text>  \n\r"+
+   "         <description>this is an extended entry</description>\n\r"+
+   "      </extended-entry>\n\r"+
+   "      <extended-entry id='2' class='simple.xml.load.CollectionTest$ExtendedEntry'>\n"+
+   "         <text>two</text>  \n\r"+
+   "         <description>this is the second one</description>\n"+
+   "      </extended-entry>\n"+
+   "      <entry id='3'>\n"+
+   "         <text>three</text>  \n\r"+
+   "      </entry>\n"+
+   "   </list>\n"+
+   "</test>";     
    
    @Root(name="entry")
    public static class Entry implements Comparable {
@@ -138,6 +157,13 @@ public class CollectionTest extends TestCase {
       public int compareTo(Object entry) {
          return id - ((Entry)entry).id;              
       }   
+   }
+
+   @Root(name="extended-entry")
+   public static class ExtendedEntry extends Entry {
+
+      @Element(name="description")
+      private String description;           
    }
 
    @Root(name="test")
@@ -348,6 +374,48 @@ public class CollectionTest extends TestCase {
       assertEquals(two, 1);
       assertEquals(three, 1);
    }  
+
+   public void testExtendedEntry() throws Exception {    
+      EntrySet set = (EntrySet) serializer.read(EntrySet.class, EXTENDED_ENTRY_LIST);
+      int one = 0;
+      int two = 0;
+      int three = 0;
+      
+      for(Entry entry : set) {
+         if(entry.id == 1 && entry.text.equals("one")) {              
+            one++;
+         }
+         if(entry.id == 2 && entry.text.equals("two")) {              
+            two++;
+         }
+         if(entry.id == 3 && entry.text.equals("three")) {              
+            three++;
+         }
+      }         
+      assertEquals(one, 1);
+      assertEquals(two, 1);
+      assertEquals(three, 1);
+
+      Document doc = serializer.write(set, System.err);
+      EntrySet other = (EntrySet) serializer.read(EntrySet.class, doc);
+
+      for(Entry entry : set) {
+         if(entry.id == 1 && entry.text.equals("one")) {              
+            one++;
+         }
+         if(entry.id == 2 && entry.text.equals("two")) {              
+            two++;
+         }
+         if(entry.id == 3 && entry.text.equals("three")) {              
+            three++;
+         }
+      }         
+      assertEquals(one, 2);
+      assertEquals(two, 2);
+      assertEquals(three, 2);
+
+      serializer.write(other, System.err);      
+   }    
 
    public void testSetToSortedSet() throws Exception {    
       boolean success = false;

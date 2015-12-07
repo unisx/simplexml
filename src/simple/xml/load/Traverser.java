@@ -70,6 +70,29 @@ final class Traverser {
     * @throws Exception if the XML schema does not match the DOM
     */
    public Object read(Node node, Class type) throws Exception {
+      Composite factory = getComposite(type);           
+      Object value = factory.read(node);
+
+      return read(node, value);
+   }
+
+   /**
+    * This <code>read</code> method is used to deserialize an object 
+    * from the provided DOM element. The class provided acts as the
+    * XML schema definition used to control the deserialization. If
+    * the XML schema does not have a <code>Root</code> annotation 
+    * this throws an exception. Also if the root annotation name is
+    * not the same as the DOM element name an exception is thrown.  
+    * 
+    * @param node this is the node that is to be deserialized
+    * @param value this is the XML schema object to be used
+    * 
+    * @return an object deserialized from the DOM element 
+    * 
+    * @throws Exception if the XML schema does not match the DOM
+    */ 
+   private Object read(Node node, Object value) throws Exception {
+      Class type = value.getClass();           
       Root label = getRoot(type);
 
       if(label == null) {
@@ -80,7 +103,7 @@ final class Traverser {
       if(!label.name().equals(name)) {
          throw new RootException("Annotation %s does not match XML element %s", label, name);              
       } 
-      return getComposite(type).read(node);       
+      return value;
    }
 
    /**
@@ -97,13 +120,31 @@ final class Traverser {
     * @throws Exception thrown if there is a problem serializing
     */
    public Element write(Object source) throws Exception {
-      Class type = source.getClass();
+      Class type = source.getClass();      
+      return write(source, type);
+   }
+   /**
+    * This <code>write</code> method is used to convert the provided
+    * object to a DOM element. This creates an <code>Element</code> 
+    * from the <code>Source</code> object provided. Once this root
+    * DOM element is created it is populated with the fields of the
+    * source object in accordance with the XML schema class.  
+    * 
+    * @param source this is the object to be serialized to a DOM
+    * @param expect this is the class that is expected to be written
+    * 
+    * @return returns a DOM element representing the object
+    * 
+    * @throws Exception thrown if there is a problem serializing
+    */
+   public Element write(Object source, Class expect) throws Exception {
+      Class type = source.getClass();      
       Root label = getRoot(type);
 
       if(label == null) {
          throw new RootException("No root annotation defined for %s", type.getName());              
       }
-      return write(source, label.name());
+      return write(source, expect, label.name());
    }
    
    /**
@@ -114,18 +155,19 @@ final class Traverser {
     * source object in accordance with the XML schema class.  
     * 
     * @param source this is the object to be serialized to a DOM
+    * @param expect this is the class that is expected to be written
     * @param name this is the name of the root element 
     * 
     * @return returns a DOM element representing the object
     * 
     * @throws Exception thrown if there is a problem serializing
     */
-   private Element write(Object source, String name) throws Exception {
-      Element node = root.getElement(name);            
+   private Element write(Object source, Class expect, String name) throws Exception {
+      Element node = root.getElement(name); 
       Class type = source.getClass();
      
       if(node != null) {
-         root.setOverride(type, source, node);
+         root.setOverride(expect, source, node);
       }                         
       getComposite(type).write(source, node);
       return node;

@@ -106,7 +106,7 @@ final class DefaultStrategy implements Strategy {
       String name = node.getAttribute(label);
       
       if(name != null && name.length() > 0) {
-         node.removeAttribute(name);              
+         node.removeAttribute(label);              
          return Class.forName(name);              
       }      
       return null;             
