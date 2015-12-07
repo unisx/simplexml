@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.ArrayTest
-Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 3.828 sec
+Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 1.281 sec
 ------------- Standard Output ---------------
 <root>
    <array length="100">
@@ -551,21 +551,21 @@ Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 3.828 sec
    </array>
 </root><root>
    <array length="5">
-      <object>
+      <entry>
          <text value="entry one"/>
-      </object>
-      <object>
+      </entry>
+      <entry>
          <text value="entry two"/>
-      </object>
-      <object>
+      </entry>
+      <entry>
          <text value="entry three"/>
-      </object>
-      <object>
+      </entry>
+      <entry>
          <text value="entry four"/>
-      </object>
-      <object>
+      </entry>
+      <entry>
          <text value="entry five"/>
-      </object>
+      </entry>
    </array>
 </root><root>
    <array length="5">
@@ -604,15 +604,15 @@ Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 3.828 sec
    </array>
 </root>------------- ---------------- ---------------
 
-Testcase: testExample took 1.203 sec
-Testcase: testBadExample took 0.016 sec
-Testcase: testWriteArray took 2.125 sec
-Testcase: testPrimitive took 0.078 sec
-Testcase: testDefaultPrimitive took 0.047 sec
-Testcase: testPrimitiveNull took 0.047 sec
-Testcase: testParentComposite took 0.032 sec
-Testcase: testDefaultComposite took 0.046 sec
-Testcase: testParentCompositeNull took 0.032 sec
-Testcase: testCharacter took 0.047 sec
-Testcase: testDifferentArray took 0.031 sec
+Testcase: testExample took 0.359 sec
+Testcase: testBadExample took 0 sec
+Testcase: testWriteArray took 0.75 sec
+Testcase: testPrimitive took 0.016 sec
+Testcase: testDefaultPrimitive took 0.015 sec
+Testcase: testPrimitiveNull took 0.016 sec
+Testcase: testParentComposite took 0.016 sec
+Testcase: testDefaultComposite took 0.015 sec
+Testcase: testParentCompositeNull took 0 sec
+Testcase: testCharacter took 0.016 sec
+Testcase: testDifferentArray took 0 sec
 Testcase: testDirectory took 0 sec

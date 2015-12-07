@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.InlineTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.688 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -27,8 +27,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.688 sec
    <string>test</string>
 </simplePrimitiveInlineList>------------- ---------------- ---------------
 
-Testcase: testList took 1.5 sec
-Testcase: testPrimitiveList took 0.062 sec
-Testcase: testSimpleList took 0.031 sec
-Testcase: testSimplePrimitiveList took 0.063 sec
+Testcase: testList took 0.468 sec
+Testcase: testPrimitiveList took 0.031 sec
+Testcase: testSimpleList took 0.016 sec
+Testcase: testSimplePrimitiveList took 0.016 sec
 Testcase: testDirectory took 0 sec

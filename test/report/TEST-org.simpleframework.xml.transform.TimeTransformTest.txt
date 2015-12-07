@@ -1,18 +1,18 @@
 Testsuite: org.simpleframework.xml.transform.TimeTransformTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.218 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Output ---------------
-<timeExample attribute="2007-08-14 21:30:38.937 BST">
-   <element class="java.sql.Time">2007-08-14 21:30:38.937 BST</element>
-   <time>2007-08-14 21:30:38.937 BST</time>
+<timeExample attribute="2007-11-04 20:08:54.421 GMT">
+   <element class="java.sql.Time">2007-11-04 20:08:54.421 GMT</element>
+   <time>2007-11-04 20:08:54.421 GMT</time>
    <list class="java.util.ArrayList">
-      <object>2007-08-14 21:30:38.937 BST</object>
-      <object>2007-08-14 21:30:38.937 BST</object>
+      <entry>2007-11-04 20:08:54.421 GMT</entry>
+      <entry>2007-11-04 20:08:54.421 GMT</entry>
    </list>
    <array length="1">
-      <object>2007-08-14 21:30:38.937 BST</object>
+      <entry>2007-11-04 20:08:54.421 GMT</entry>
    </array>
 </timeExample>------------- ---------------- ---------------
 
-Testcase: testTime took 0.063 sec
-Testcase: testPersistence took 1.094 sec
+Testcase: testTime took 0.031 sec
+Testcase: testPersistence took 0.375 sec
 Testcase: testDirectory took 0 sec

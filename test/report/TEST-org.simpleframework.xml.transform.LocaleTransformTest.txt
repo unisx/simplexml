@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.transform.LocaleTransformTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.094 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.015 sec
 
-Testcase: testLocale took 0.078 sec
+Testcase: testLocale took 0.015 sec

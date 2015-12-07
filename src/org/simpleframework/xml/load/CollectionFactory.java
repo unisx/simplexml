@@ -51,19 +51,22 @@ class CollectionFactory extends Factory {
    
    /**
     * Creates a collection that is determined from the field type. 
-    * This is used for the <code>ElementInlineList</code> to get a
+    * This is used for the <code>ElementList</code> to get a
     * collection that does not have any overrides. This must be
     * done as the inline list does not contain an outer element.
     * 
     * @return a type which is used to instantiate the collection     
     */
    public Object getInstance() throws Exception {
-      Class type = getConversion(field);   
-      
-      if(type != null) {
-         return type.newInstance();
+      Class type = field;
+
+      if(!isInstantiable(type)) {
+         type = getConversion(field);   
       }
-      return null;
+      if(!isCollection(type)) {
+         throw new InstantiationException("Type is not a collection %s", field);
+      }
+      return type.newInstance();
    }
    
    /**
@@ -100,8 +103,6 @@ class CollectionFactory extends Factory {
     * @param type the type used to instantiate the collection
     * 
     * @return this returns a compatible collection instance 
-    * 
-    * @throws Exception if the collection cannot be instantiated
     */
    public Type getInstance(Type type) throws Exception {
       Class real = type.getType();

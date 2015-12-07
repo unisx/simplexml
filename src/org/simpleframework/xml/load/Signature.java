@@ -28,12 +28,17 @@ import java.beans.Introspector;
  * The <code>Signature</code> object is used to determine the details
  * to use for an annotated field or method using both the field an
  * annotation details. This allows defaults to be picked up from the
- * method or field type if thay have not been explicitly overridden
+ * method or field type if that have not been explicitly overridden
  * in the annotation. 
  * 
  * @author Niall Gallagher
  */
 class Signature {
+   
+   /**
+    * This is the name of the default name for a composite object.
+    */
+   private static final String DEFAULT_NAME = "entry";
    
    /**
     * This is the actual annotation from the specified contact.
@@ -94,33 +99,33 @@ class Signature {
    }
 
    /**
-    * This method is used to get the parent name of a label using 
+    * This method is used to get the entry name of a label using 
     * the type of the label. This ensures that if there is no
-    * parent XML element name declared by the annotation that a
+    * entry XML element name declared by the annotation that a
     * suitable name can be calculated from the annotated type.
     * 
-    * @return this returns a suitable XML parent element name
+    * @return this returns a suitable XML entry element name
     */
-   public String getParent() throws Exception {
+   public String getEntry() throws Exception {
       Class type = getDependant();
 
       if(!Factory.isPrimitive(type)) {
-         type = Object.class;
+         return DEFAULT_NAME;  // default needed to represent possible composite null
       }
-      return getParent(type);
+      return getEntry(type);
    }
    
    /**
-    * This method is used to get the parent name of a label using 
+    * This method is used to get the entry name of a label using 
     * the type of the label. This ensures that if there is no
-    * parent XML element name declared by the annotation that a
+    * entry XML element name declared by the annotation that a
     * suitable name can be calculated from the annotated type.
     * 
     * @param type this is the type to get the 
     * 
-    * @return this returns a suitable XML parent element name
+    * @return this returns a suitable XML entry element name
     */
-   private String getParent(Class type) throws Exception {          
+   private String getEntry(Class type) throws Exception {          
       String name = type.getSimpleName();
       
       if(type.isPrimitive()) {
@@ -162,7 +167,7 @@ class Signature {
     */
    private String getName(Class type) throws Exception {      
       if(isPrimitive(type)) {
-         name = label.getParent();         
+         name = label.getEntry();         
       } else {
          name = getRoot();
       }
