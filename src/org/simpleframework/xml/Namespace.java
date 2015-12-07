@@ -69,7 +69,7 @@ public @interface Namespace {
     * a URI as this is a well know universally unique identifier. 
     * It can be anything unique, but typically should be a unique
     * URI reference. If left as the empty string then this will
-    * signify that the anonymous nanmespace will be used.
+    * signify that the anonymous namespace will be used.
     *
     * @return this returns the reference used by this namespace    
     */         

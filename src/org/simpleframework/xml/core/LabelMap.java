@@ -39,7 +39,7 @@ class LabelMap extends LinkedHashMap<String, Label> implements Iterable<Label> {
    /**
     * This is the scanner object that represents the scanner used.
     */        
-   private Scanner source;
+   private final Scanner source;
         
    /**
     * Constructor for the <code>LabelMap</code> object is used to 

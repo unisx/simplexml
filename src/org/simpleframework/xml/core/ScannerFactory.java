@@ -61,11 +61,11 @@ class ScannerFactory {
     * @throws Exception if the class contains an illegal schema 
     */ 
    public Scanner getInstance(Class type) throws Exception {
-      Scanner schema = cache.fetch(type);
+      Scanner schema = cache.get(type);
       
       if(schema == null) {
          schema = new Scanner(type);             
-         cache.cache(type, schema);
+         cache.put(type, schema);
       }
       return schema;
    }

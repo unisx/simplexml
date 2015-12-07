@@ -20,8 +20,8 @@
 
 package org.simpleframework.xml.core;
 
-import org.simpleframework.xml.util.WeakCache;
 import java.lang.reflect.Constructor;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * The <code>ConstructorCache</code> object is a typed hash map used
@@ -34,7 +34,7 @@ import java.lang.reflect.Constructor;
  * 
  * @see org.simpleframework.xml.core.PrimitiveFactory
  */
-class ConstructorCache extends WeakCache<Class, Constructor> {
+class ConstructorCache extends ConcurrentHashMap<Class, Constructor> {
    
    /**
     * Constructor for the <code>ConstructorCache</code> object. It

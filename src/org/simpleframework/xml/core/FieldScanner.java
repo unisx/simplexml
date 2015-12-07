@@ -49,11 +49,6 @@ class FieldScanner extends ContactList {
    private final Hierarchy hierarchy;
    
    /**
-    * This is the class that is being scanned for annotations.
-    */
-   private final Class type;
-   
-   /**
     * Constructor for the <code>FieldScanner</code> object. This is
     * used to perform a scan on the specified class in order to find
     * all fields that are labeled with an XML annotation.
@@ -62,7 +57,6 @@ class FieldScanner extends ContactList {
     */
    public FieldScanner(Class type) {
       this.hierarchy = new Hierarchy(type);
-      this.type = type;
       this.scan(type);
    }
    

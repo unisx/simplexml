@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayTest
-Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.332 sec
+Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 0.974 sec
 ------------- Standard Output ---------------
 <root>
    <array length="100">
@@ -1163,17 +1163,17 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.332 sec
    </Array>
 </Root>------------- ---------------- ---------------
 
-Testcase: testExample took 0.18 sec
+Testcase: testExample took 0.123 sec
 Testcase: testBadExample took 0.004 sec
-Testcase: testWriteArray took 0.927 sec
-Testcase: testPrimitive took 0.018 sec
-Testcase: testPrimitiveInteger took 0.013 sec
-Testcase: testPrimitiveMultidimensionalInteger took 0.014 sec
-Testcase: testDefaultPrimitive took 0.02 sec
-Testcase: testPrimitiveNull took 0.053 sec
-Testcase: testParentComposite took 0.014 sec
+Testcase: testWriteArray took 0.681 sec
+Testcase: testPrimitive took 0.013 sec
+Testcase: testPrimitiveInteger took 0.011 sec
+Testcase: testPrimitiveMultidimensionalInteger took 0.013 sec
+Testcase: testDefaultPrimitive took 0.036 sec
+Testcase: testPrimitiveNull took 0.01 sec
+Testcase: testParentComposite took 0.015 sec
 Testcase: testDefaultComposite took 0.013 sec
-Testcase: testParentCompositeNull took 0.025 sec
-Testcase: testCharacter took 0.012 sec
-Testcase: testDifferentArray took 0.02 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testParentCompositeNull took 0.016 sec
+Testcase: testCharacter took 0.011 sec
+Testcase: testDifferentArray took 0.015 sec
+Testcase: testDirectory took 0.001 sec

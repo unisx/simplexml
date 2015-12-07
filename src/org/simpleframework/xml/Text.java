@@ -58,7 +58,7 @@ public @interface Text {
    /**
     * This is used to provide a default value for the text data if
     * the annotated field or method is null. This ensures the the
-    * serialzation process writes the text data with a value even
+    * serialization process writes the text data with a value even
     * if the value is null, and allows deserialization to determine
     * whether the value within the object was null or not.
     * 
@@ -78,7 +78,7 @@ public @interface Text {
    
    /**
     * Determines whether the text value is required within the XML
-    * document. Any field marked as not required mayl not have its
+    * document. Any field marked as not required may not have its
     * value set when the object is deserialized. If an object is to
     * be serialized only a null attribute will not appear in XML.
     * 

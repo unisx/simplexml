@@ -38,47 +38,47 @@ class ClassSchema implements Schema {
    /**
     * This is the scanner that is used to acquire the constructor.
     */
-   private Creator factory;
+   private final Creator factory;
    
    /**
     * This is the decorator associated with this schema object.
     */
-   private Decorator decorator;
+   private final Decorator decorator;
 
    /**
     * Contains a map of all attributes present within the schema.
     */
-   private LabelMap attributes;
+   private final LabelMap attributes;
    
    /**
     * Contains a map of all elements present within the schema.
     */
-   private LabelMap elements;
+   private final LabelMap elements;
    
    /**
     * This is the version annotation for the XML class schema.
     */
-   private Version revision;
+   private final Version revision;
    
    /**
     * This is the pointer to the schema class replace method.
     */
-   private Caller caller;
+   private final Caller caller;
    
    /**
     * This is the version label used to read the version attribute.
     */
-   private Label version;
+   private final Label version;
    
    /**
     * This is used to represent a text value within the schema.
     */
-   private Label text;
+   private final Label text;
    
    /**
     * This is used to specify whether the type is a primitive class.
     */
-   private boolean primitive;
+   private final boolean primitive;
 
    /**
     * Constructor for the <code>Schema</code> object. This is used 

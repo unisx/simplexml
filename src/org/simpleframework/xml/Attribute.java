@@ -53,7 +53,7 @@ public @interface Attribute {
    /**
     * This is used to provide a default value for the attribute if
     * the annotated field or method is null. This ensures the the
-    * serialzation process writes the attribute with a value even
+    * serialization process writes the attribute with a value even
     * if the value is null, and allows deserialization to determine
     * whether the value within the object was null or not.
     * 

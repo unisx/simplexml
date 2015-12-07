@@ -41,7 +41,7 @@ class InputStack extends ArrayList<InputNode> {
     * elements that have been read from the source XML document.
     */         
    public InputStack() {
-      super();
+      super(6);
    }
 
    /**

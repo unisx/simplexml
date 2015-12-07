@@ -240,7 +240,7 @@ class NodeWriter {
     * @param node this is the node that is to have its name written
     */   
    public void writeName(OutputNode node) throws Exception {
-      String prefix = node.getPrefix();
+      String prefix = node.getPrefix(false);
       String name = node.getName();
       
       if(name != null) {
@@ -283,7 +283,7 @@ class NodeWriter {
          writer.writeText(value, mode);
       }
       String name = node.getName();
-      String prefix = node.getPrefix();
+      String prefix = node.getPrefix(false);
       
       if(name != null) {
          writer.writeEnd(name, prefix);
@@ -304,7 +304,7 @@ class NodeWriter {
       for(String name : map) {
          OutputNode entry = map.get(name);
          String value = entry.getValue();
-         String prefix = entry.getPrefix();
+         String prefix = entry.getPrefix(false);
          
          writer.writeAttribute(name, value, prefix);
       }

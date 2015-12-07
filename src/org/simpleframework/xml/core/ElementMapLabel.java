@@ -20,8 +20,6 @@
 
 package org.simpleframework.xml.core;
 
-import java.util.LinkedHashMap;
-
 import org.simpleframework.xml.ElementMap;
 import org.simpleframework.xml.stream.Style;
 

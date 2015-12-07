@@ -69,6 +69,11 @@ class CacheLabel implements Label {
    private final String name;
    
    /**
+    * This is the label the this cache is wrapping the values for.
+    */
+   private final Label label;
+   
+   /**
     * This is used to represent whether the data is written as data. 
     */
    private final boolean data;
@@ -92,11 +97,6 @@ class CacheLabel implements Label {
     * This is used to determine whether the entity is inline or not. 
     */
    private final boolean inline;
-   
-   /**
-    * This is the label the this cache is wrapping the values for.
-    */
-   private final Label label;
    
    /**
     * Constructor for the <code>CacheLabel</code> object. This is used

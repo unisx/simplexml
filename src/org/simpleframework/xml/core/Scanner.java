@@ -23,8 +23,6 @@ package org.simpleframework.xml.core;
 import java.beans.Introspector;
 import java.lang.annotation.Annotation;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;

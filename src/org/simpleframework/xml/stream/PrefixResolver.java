@@ -127,10 +127,14 @@ class PrefixResolver extends LinkedHashMap<String, String> implements NamespaceM
     * @return this will return the prefix that is is scope
     */
    public String get(String reference) {
-      String prefix = super.get(reference);
-
-      if(prefix != null) {
-         return prefix;
+      int size = size();
+      
+      if(size > 0) {
+         String prefix = super.get(reference);
+   
+         if(prefix != null) {
+            return prefix;
+         }    
       }
       return resolve(reference);
    }

@@ -87,6 +87,20 @@ class OutputDocument implements OutputNode {
    public String getPrefix() {
       return null;
    }
+   
+   /**
+    * The default for the <code>OutputDocument</code> is null as it
+    * does not require a namespace. A null prefix is always used by
+    * the document as it represents a virtual node that does not
+    * exist and will not form any part of the resulting XML.
+    *
+    * @param inherit if there is no explicit prefix then inherit
+    *
+    * @return this returns a null prefix for the output document
+    */  
+   public String getPrefix(boolean inherit) {
+      return null;
+   }
   
    /**
     * This is used to acquire the reference that has been set on

@@ -473,7 +473,7 @@ class Formatter {
     *
     * @param ch this is the character that is to be converted
     *
-    * @return this is the symbol chatacter that has been resolved
+    * @return this is the symbol character that has been resolved
     */ 
    private char[] symbol(char ch) {
       switch(ch) {

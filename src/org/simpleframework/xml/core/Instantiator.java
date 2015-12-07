@@ -87,7 +87,7 @@ class Instantiator {
     * @return this returns an instance of the specific class type
     */ 
    public Object getObject(Class type) throws Exception {
-      Constructor method = cache.fetch(type);
+      Constructor method = cache.get(type);
       
       if(method == null) {
          method = type.getDeclaredConstructor();      
@@ -95,7 +95,7 @@ class Instantiator {
          if(!method.isAccessible()) {
             method.setAccessible(true);              
          }
-         cache.cache(type, method);
+         cache.put(type, method);
       }
       return method.newInstance();   
    }

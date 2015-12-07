@@ -97,12 +97,25 @@ public interface OutputNode extends Node {
    public String getPrefix();
    
    /**
+    * This is used to acquire the prefix for this output node. If
+    * the output node is an element then this will search its parent
+    * nodes until the prefix that is currently in scope is found. 
+    * If however this node is an attribute then the hierarchy of 
+    * nodes is not searched as attributes to not inherit namespaces.
+    *
+    * @param inherit if there is no explicit prefix then inherit
+    *
+    * @return this returns the prefix associated with this node
+    */  
+   public String getPrefix(boolean inherit);
+   
+   /**
     * This is used to acquire the namespace URI reference associated
     * with this node. Although it is recommended that the namespace
     * reference is a URI it does not have to be, it can be any unique
     * identifier that can be used to distinguish the qualified names.
     *
-    * @return this returns the nanmespace URI reference for this
+    * @return this returns the namespace URI reference for this
     */
    public String getReference();
   

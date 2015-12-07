@@ -20,8 +20,6 @@
 
 package org.simpleframework.xml.core;
 
-import java.util.ArrayList;
-
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.stream.Style;
 

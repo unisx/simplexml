@@ -148,7 +148,7 @@ abstract class ParameterContact<T extends Annotation> implements Contact {
     *
     * @return this provides the annotation associated with this
     */
-   public <T extends Annotation> T getAnnotation(Class<T> type) {
+   public <A extends Annotation> A getAnnotation(Class<A> type) {
       return null;
    }
    

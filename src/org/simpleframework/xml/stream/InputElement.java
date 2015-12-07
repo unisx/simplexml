@@ -38,22 +38,22 @@ class InputElement implements InputNode {
    /**
     * This is the XML element that this node provides access to.
     */         
-   private StartElement element;
+   private final StartElement element;
    
    /**
     * This contains all the attributes associated with the element.
     */ 
-   private InputNodeMap map;
+   private final InputNodeMap map;
 
    /**
     * This is the node reader that reads from the XML document.
     */ 
-   private NodeReader reader;
+   private final NodeReader reader;
    
    /**
     * This is the parent node for this XML input element node.
     */
-   private InputNode parent;
+   private final InputNode parent;
  
    /**
     * Constructor for the <code>InputElement</code> object. This 

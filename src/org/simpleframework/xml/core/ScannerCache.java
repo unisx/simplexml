@@ -20,7 +20,7 @@
 
 package org.simpleframework.xml.core;
 
-import org.simpleframework.xml.util.WeakCache;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * The <code>ScannerCache</code> is used to cache schema objects. It 
@@ -30,7 +30,7 @@ import org.simpleframework.xml.util.WeakCache;
  * 
  * @author Niall Gallagher
  */
-class ScannerCache extends WeakCache<Class, Scanner> {
+class ScannerCache extends ConcurrentHashMap<Class, Scanner> {
 
    /**
     * Constructor for the <code>ScannerCache</code> object. This is

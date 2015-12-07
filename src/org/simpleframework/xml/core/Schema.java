@@ -20,8 +20,6 @@
 
 package org.simpleframework.xml.core;
 
-import java.util.Set;
-
 import org.simpleframework.xml.Version;
 
 /**
