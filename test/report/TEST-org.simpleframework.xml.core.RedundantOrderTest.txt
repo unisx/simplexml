@@ -1,14 +1,15 @@
 Testsuite: org.simpleframework.xml.core.RedundantOrderTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.094 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.093 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Ordered element 'c' missing for class org.simpleframework.xml.core.RedundantOrderTest$ElementEntry
 	at org.simpleframework.xml.core.Scanner.validateElements(Scanner.java:407)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:368)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:100)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:63)
-	at org.simpleframework.xml.core.Factory.getScanner(Factory.java:161)
-	at org.simpleframework.xml.core.Factory.getName(Factory.java:178)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:67)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:161)
+	at org.simpleframework.xml.core.Support.getName(Support.java:223)
+	at org.simpleframework.xml.core.Source.getName(Source.java:196)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:262)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:185)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:168)
@@ -38,9 +39,10 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' missing f
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:369)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:100)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:63)
-	at org.simpleframework.xml.core.Factory.getScanner(Factory.java:161)
-	at org.simpleframework.xml.core.Factory.getName(Factory.java:178)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:67)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:161)
+	at org.simpleframework.xml.core.Support.getName(Support.java:223)
+	at org.simpleframework.xml.core.Source.getName(Source.java:196)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:262)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:185)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:168)
@@ -67,6 +69,6 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' missing f
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRedundantElementOrder took 0.08 sec
+Testcase: testRedundantElementOrder took 0.081 sec
 Testcase: testRedundantAttributeOrder took 0.006 sec
 Testcase: testDirectory took 0 sec

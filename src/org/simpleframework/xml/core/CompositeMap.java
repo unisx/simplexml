@@ -136,7 +136,7 @@ class CompositeMap implements Converter {
     * 
     * @return this returns the item to attach to the object contact
     */
-   private Object read(InputNode node, Object result) throws Exception {
+   public Object read(InputNode node, Object result) throws Exception {
       Map map = (Map) result;                 
       
       while(true) {
@@ -187,7 +187,7 @@ class CompositeMap implements Converter {
     * object element must match that root element name.
     * 
     * @param node this is the XML element that is to be validate
-    * @param result this is the map object that is to be populated
+    * @param type this is the type to validate the input node against
     * 
     * @return true if the element matches the XML schema class given 
     */

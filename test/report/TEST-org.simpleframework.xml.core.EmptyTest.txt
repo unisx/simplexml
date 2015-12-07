@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.478 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.435 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -32,7 +32,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.478 sec
 </Test>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:442)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:441)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -61,7 +61,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=) on method 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredMethodElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:442)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:441)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -90,7 +90,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:442)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:441)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -119,7 +119,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:442)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:441)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -149,13 +149,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.139 sec
-Testcase: testRequiredEmptyMethod took 0.008 sec
+Testcase: testRequiredEmpty took 0.113 sec
+Testcase: testRequiredEmptyMethod took 0.007 sec
 Testcase: testRequiredBlank took 0.001 sec
-Testcase: testOptionalEmpty took 0.002 sec
-Testcase: testOptionalBlank took 0.003 sec
-Testcase: testEmptyCollection took 0.086 sec
-Testcase: testRequiredEmptyAttribute took 0.013 sec
-Testcase: testOptionalEmptyAttribute took 0.003 sec
-Testcase: testDefaultedAttribute took 0.21 sec
+Testcase: testOptionalEmpty took 0.003 sec
+Testcase: testOptionalBlank took 0.002 sec
+Testcase: testEmptyCollection took 0.076 sec
+Testcase: testRequiredEmptyAttribute took 0.008 sec
+Testcase: testOptionalEmptyAttribute took 0.001 sec
+Testcase: testDefaultedAttribute took 0.214 sec
 Testcase: testDirectory took 0 sec

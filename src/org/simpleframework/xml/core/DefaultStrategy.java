@@ -20,10 +20,11 @@
 
 package org.simpleframework.xml.core;
 
-import org.simpleframework.xml.stream.Node;
-import org.simpleframework.xml.stream.NodeMap;
 import java.lang.reflect.Array;
 import java.util.Map;
+
+import org.simpleframework.xml.stream.Node;
+import org.simpleframework.xml.stream.NodeMap;
 
 /**
  * The <code>DefaultStrategy</code> object is used by the persister if
@@ -49,14 +50,19 @@ class DefaultStrategy implements Strategy {
    private static final String LABEL = "class";
    
    /**
+    * This is used to cache the constructors for the given types.
+    */
+   private final Instantiator factory;
+   
+   /**
     * This is the attribute that is used to determine an array size.
     */
-   private String length;
+   private final String length;
    
    /**   
     * This is the attribute that is used to determine the real type.
     */   
-   private String label;
+   private final String label;
    
    /**
     * Constructor for the <code>DefaultStrategy</code> object. This 
@@ -78,6 +84,7 @@ class DefaultStrategy implements Strategy {
     * @param length this is used to determine the array length
     */
    public DefaultStrategy(String label, String length) {
+      this.factory = new Instantiator();
       this.length = length;
       this.label = label;         
    }
@@ -122,10 +129,10 @@ class DefaultStrategy implements Strategy {
       if(field.isArray()) {
          return getArray(type, node);   
       }
-      if(field != type) {
-         return new ClassType(type);
+      if(field == type) {
+         return null;
       }
-      return null;
+      return factory.getType(type);
    }
    
    /**
@@ -150,7 +157,7 @@ class DefaultStrategy implements Strategy {
          String value = entry.getValue();
          size = Integer.parseInt(value);
       }      
-      return new ArrayType(type, size);
+      return factory.getType(type, size);
    }
    
    /**
@@ -254,7 +261,7 @@ class DefaultStrategy implements Strategy {
     * requirements dictate. Typically the thread context class loader
     * can handle all serialization requirements.
     * 
-    * @param name this is the name of the class that is to be loaded
+    * @param type this is the name of the class that is to be loaded
     * 
     * @return this returns the class that has been loaded by this
     */

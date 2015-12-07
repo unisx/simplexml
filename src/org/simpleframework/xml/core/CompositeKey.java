@@ -40,6 +40,11 @@ import org.simpleframework.xml.stream.Style;
 class CompositeKey implements Converter {
    
    /**
+    * This is the context used to support the serialization process.
+    */
+   private final Context context;
+   
+   /**
     * This is the traverser used to read and write the composite key.
     */
    private final Traverser root;
@@ -72,6 +77,7 @@ class CompositeKey implements Converter {
    public CompositeKey(Context context, Entry entry, Class type) throws Exception {
       this.root = new Traverser(context);
       this.style = context.getStyle();
+      this.context = context;
       this.entry = entry;
       this.type = type;
    }
@@ -91,12 +97,27 @@ class CompositeKey implements Converter {
       String name = entry.getKey();
       
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       }
       if(entry.isAttribute()) {
          throw new ElementException("Can not have %s as an attribute at %s", type, line);
       }
       return read(node, name);
+   }
+   
+   /**
+    * This method is used to read the key value from the node. The 
+    * value read from the node is resolved using the template filter.
+    * If the key value can not be found according to the annotation
+    * attributes then null is assumed and returned.
+    * 
+    * @param node this is the node to read the key value from
+    * @param value this is the value to deserialize in to
+    * 
+    * @return this returns the value deserialized from the node
+    */ 
+   public Object read(InputNode node, Object value) throws Exception { 
+      return read(node);
    }
    
    /**
@@ -140,7 +161,7 @@ class CompositeKey implements Converter {
       String name = entry.getKey();
       
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       }
       if(entry.isAttribute()) {
          throw new ElementException("Can not have %s as an attribute at %s", type, line);
@@ -188,7 +209,7 @@ class CompositeKey implements Converter {
          throw new ElementException("Can not have %s as an attribute", type);
       }
       if(key == null) {
-         key = Factory.getName(type);
+         key = context.getName(type);
       }      
       String name = style.getElement(key);
       

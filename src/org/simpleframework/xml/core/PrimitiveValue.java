@@ -56,6 +56,11 @@ class PrimitiveValue implements Converter {
    private final PrimitiveFactory factory;
    
    /**
+    * This is the context used to support the serialization process.
+    */
+   private final Context context;
+   
+   /**
     * The primitive converter used to read the value from the node.
     */
    private final Primitive root;
@@ -88,6 +93,7 @@ class PrimitiveValue implements Converter {
       this.factory = new PrimitiveFactory(context, type);
       this.root = new Primitive(context, type);
       this.style = context.getStyle();
+      this.context = context;
       this.entry = entry;
       this.type = type;
    }
@@ -106,12 +112,27 @@ class PrimitiveValue implements Converter {
       String name = entry.getValue();
       
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       }
       if(entry.isInline()) {
          return root.read(node);
       }
       return read(node, name);
+   }
+   
+   /**
+    * This method is used to read the value value from the node. The 
+    * value read from the node is resolved using the template filter.
+    * If the value value can not be found according to the annotation
+    * attributes then an exception is thrown.
+    * 
+    * @param node this is the node to read the value object from
+    * @param value this is the value to deserialize in to
+    * 
+    * @return this returns the value deserialized from the node
+    */ 
+   public Object read(InputNode node, Object value) throws Exception {
+      return read(node);
    }
    
    /**
@@ -149,7 +170,7 @@ class PrimitiveValue implements Converter {
       String name = entry.getValue();
       
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       }
       return validate(node, name);
    }
@@ -191,7 +212,7 @@ class PrimitiveValue implements Converter {
       String name = entry.getValue();
       
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       } 
       write(node, item, name);
    }
@@ -221,7 +242,7 @@ class PrimitiveValue implements Converter {
    
    /**
     * This is used to determine whether the specified value has been
-    * overriden by the strategy. If the item has been overridden
+    * overridden by the strategy. If the item has been overridden
     * then no more serialization is require for that value, this is
     * effectively telling the serialization process to stop writing.
     * 
@@ -230,8 +251,8 @@ class PrimitiveValue implements Converter {
     * 
     * @return returns true if the strategy overrides the object
     */
-   private boolean isOverridden(OutputNode node, Object item) throws Exception{
-      return factory.setOverride(type, item, node);
+   private boolean isOverridden(OutputNode node, Object value) throws Exception{
+      return factory.setOverride(type, value, node);
    }
 
 }

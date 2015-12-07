@@ -254,6 +254,19 @@ class Pointer implements Label {
    }
    
    /**
+    * This is used to determine if the label is a collection. If the
+    * label represents a collection then any original assignment to
+    * the field or method can be written to without the need to 
+    * create a new collection. This allows obscure collections to be
+    * used and also allows initial entries to be maintained.
+    * 
+    * @return true if the label represents a collection value
+    */
+   public boolean isCollection() {
+      return label.isCollection();
+   }
+   
+   /**
     * Determines whether the XML attribute or element is required. 
     * This ensures that if an XML element is missing from a document
     * that deserialization can continue. Also, in the process of
@@ -378,7 +391,7 @@ class Pointer implements Label {
        * used for repeat reads of scattered XML elements.
        * 
        * @param node this is the node to write the data to
-       * @param source this is the source object to be written
+       * @param value this is the source object to be written
        */
       public void write(OutputNode node, Object value) throws Exception {
          write(node, value);

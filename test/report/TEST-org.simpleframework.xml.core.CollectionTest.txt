@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.532 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.473 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -101,51 +101,51 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.532 sec
    </List>
 </Test><test name="example">
    <list class="java.util.HashSet">
-      <entry id="1">
-         <text>one</text>
-      </entry>
       <entry id="2">
          <text>two</text>
       </entry>
       <entry id="3">
          <text>three</text>
+      </entry>
+      <entry id="1">
+         <text>one</text>
       </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
-      <entry id="1">
-         <text>one</text>
-      </entry>
       <entry id="2">
          <text>two</text>
       </entry>
       <entry id="3">
          <text>three</text>
+      </entry>
+      <entry id="1">
+         <text>one</text>
       </entry>
    </list>
 </test>
 <test ID="0" name="example">
    <list class="java.util.HashSet" ID="1">
-      <entry ID="2" id="1">
-         <text ID="3">one</text>
+      <entry ID="2" id="2">
+         <text ID="3">two</text>
       </entry>
-      <entry ID="4" id="2">
-         <text ID="5">two</text>
+      <entry ID="4" id="3">
+         <text ID="5">three</text>
       </entry>
-      <entry ID="6" id="3">
-         <text ID="7">three</text>
+      <entry ID="6" id="1">
+         <text ID="7">one</text>
       </entry>
    </list>
 </test><Test ID="0" name="example">
    <List class="java.util.HashSet" ID="1">
-      <Entry ID="2" id="1">
-         <Text ID="3">one</Text>
+      <Entry ID="2" id="2">
+         <Text ID="3">two</Text>
       </Entry>
-      <Entry ID="4" id="2">
-         <Text ID="5">two</Text>
+      <Entry ID="4" id="3">
+         <Text ID="5">three</Text>
       </Entry>
-      <Entry ID="6" id="3">
-         <Text ID="7">three</Text>
+      <Entry ID="6" id="1">
+         <Text ID="7">one</Text>
       </Entry>
    </List>
 </Test><test name="example">
@@ -447,9 +447,6 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.532 sec
 ------------- Standard Error -----------------
 <test name="example">
    <list class="java.util.HashSet">
-      <entry id="3">
-         <text>three</text>
-      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
@@ -457,27 +454,31 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.532 sec
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
+      </entry>
+      <entry id="3">
+         <text>three</text>
       </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
-         <text>two</text>
-         <description>this is the second one</description>
-      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
       </entry>
       <entry id="3">
          <text>three</text>
+      </entry>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
+         <text>two</text>
+         <description>this is the second one</description>
       </entry>
    </list>
 </test>org.simpleframework.xml.core.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:106)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:84)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -509,7 +510,8 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:106)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:84)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -540,7 +542,8 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 org.simpleframework.xml.core.InstantiationException: Type is not a collection class java.lang.String
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:93)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -572,7 +575,8 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.CollectionFactory.getConversion(CollectionFactory.java:141)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:90)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -605,7 +609,8 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:112)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -637,7 +642,8 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.Hashta
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:106)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:84)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -672,15 +678,16 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:316)
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:280)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
-	at org.simpleframework.xml.core.DefaultStrategy.getClass(DefaultStrategy.java:267)
-	at org.simpleframework.xml.core.DefaultStrategy.getType(DefaultStrategy.java:180)
-	at org.simpleframework.xml.core.DefaultStrategy.getElement(DefaultStrategy.java:120)
-	at org.simpleframework.xml.core.Source.getOverride(Source.java:287)
+	at org.simpleframework.xml.core.DefaultStrategy.getClass(DefaultStrategy.java:274)
+	at org.simpleframework.xml.core.DefaultStrategy.getType(DefaultStrategy.java:187)
+	at org.simpleframework.xml.core.DefaultStrategy.getElement(DefaultStrategy.java:127)
+	at org.simpleframework.xml.core.Source.getOverride(Source.java:316)
 	at org.simpleframework.xml.core.Factory.getConversion(Factory.java:144)
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:100)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:84)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:435)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:477)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:434)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:415)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
@@ -710,24 +717,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.12 sec
-Testcase: testSortedSet took 0.081 sec
-Testcase: testList took 0.022 sec
-Testcase: testHashSet took 0.02 sec
-Testcase: testTreeSet took 0.019 sec
-Testcase: testArrayList took 0.015 sec
+Testcase: testSet took 0.118 sec
+Testcase: testSortedSet took 0.087 sec
+Testcase: testList took 0.027 sec
+Testcase: testHashSet took 0.03 sec
+Testcase: testTreeSet took 0.023 sec
+Testcase: testArrayList took 0.021 sec
 Testcase: testSortedSetToSet took 0.003 sec
-Testcase: testExtendedEntry took 0.007 sec
-Testcase: testTypeFromFieldList took 0.034 sec
-Testcase: testTypeFromMethodList took 0.021 sec
-Testcase: testPrimitiveCollection took 0.015 sec
-Testcase: testCompositeCollection took 0.138 sec
-Testcase: testPrimitiveDefaultCollection took 0.009 sec
+Testcase: testExtendedEntry took 0.008 sec
+Testcase: testTypeFromFieldList took 0.036 sec
+Testcase: testTypeFromMethodList took 0.025 sec
+Testcase: testPrimitiveCollection took 0.016 sec
+Testcase: testCompositeCollection took 0.041 sec
+Testcase: testPrimitiveDefaultCollection took 0.01 sec
 Testcase: testSetToSortedSet took 0.004 sec
-Testcase: testListToSet took 0.002 sec
+Testcase: testListToSet took 0.001 sec
 Testcase: testInvalidList took 0.002 sec
 Testcase: testUnknownCollectionList took 0.002 sec
-Testcase: testAbstractList took 0.001 sec
+Testcase: testAbstractList took 0.002 sec
 Testcase: testNotACollection took 0.001 sec
-Testcase: testMissingCollection took 0.003 sec
+Testcase: testMissingCollection took 0.001 sec
 Testcase: testDirectory took 0 sec

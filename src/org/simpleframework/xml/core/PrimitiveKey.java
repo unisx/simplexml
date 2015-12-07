@@ -55,9 +55,14 @@ class PrimitiveKey implements Converter {
    private final PrimitiveFactory factory;
    
    /**
+    * This is the context used to support the serialization process.
+    */
+   private final Context context;
+   
+   /**
     * The primitive converter used to read the key from the node.
     */
-   private final Primitive primitive;
+   private final Primitive root;
    
    /**
     * This is the style used to style the XML elements for the key.
@@ -85,8 +90,9 @@ class PrimitiveKey implements Converter {
     */
    public PrimitiveKey(Context context, Entry entry, Class type) {
       this.factory = new PrimitiveFactory(context, type);
-      this.primitive = new Primitive(context, type);      
+      this.root = new Primitive(context, type);      
       this.style = context.getStyle();
+      this.context = context;
       this.entry = entry;
       this.type = type;
    }
@@ -105,13 +111,28 @@ class PrimitiveKey implements Converter {
       String name = entry.getKey();
            
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       }
       if(!entry.isAttribute()) {         
          return readElement(node, name);
       }
       return readAttribute(node, name);
    }  
+   
+   /**
+    * This method is used to read the key value from the node. The 
+    * value read from the node is resolved using the template filter.
+    * If the key value can not be found according to the annotation
+    * attributes then an exception is thrown.
+    * 
+    * @param node this is the node to read the key value from
+    * @param value this is the value to deserialize in to
+    * 
+    * @return this returns the value deserialized from the node
+    */   
+   public Object read(InputNode node, Object value) throws Exception {
+      return read(node);
+   }
    
    /**
     * This method is used to read the key value from the node. The 
@@ -131,7 +152,7 @@ class PrimitiveKey implements Converter {
       if(child == null) {
          return null;
       }
-      return primitive.read(child);
+      return root.read(child);
    }
    
    /**
@@ -152,7 +173,7 @@ class PrimitiveKey implements Converter {
       if(child == null) {
          return null;
       }     
-      return primitive.read(child);     
+      return root.read(child);     
    }
    
    /**
@@ -169,7 +190,7 @@ class PrimitiveKey implements Converter {
       String name = entry.getKey();
            
       if(name == null) {
-         name = Factory.getName(type);
+         name = context.getName(type);
       }
       if(!entry.isAttribute()) {         
          return validateElement(node, name);
@@ -195,7 +216,7 @@ class PrimitiveKey implements Converter {
       if(child == null) {
          return true;
       }
-      return primitive.validate(child);
+      return root.validate(child);
    }
    
    /**
@@ -216,7 +237,7 @@ class PrimitiveKey implements Converter {
       if(child == null) {
          return true;
       }     
-      return primitive.validate(child);     
+      return root.validate(child);     
    }
 
    /**
@@ -248,14 +269,14 @@ class PrimitiveKey implements Converter {
       String key = entry.getKey();
       
       if(key == null) {
-         key = Factory.getName(type);
+         key = context.getName(type);
       }    
       String name = style.getElement(key);
       OutputNode child = node.getChild(name);  
       
       if(item != null) {
          if(!isOverridden(child, item)) {
-            primitive.write(child, item);
+            root.write(child, item);
          }
       }
    }
@@ -273,7 +294,7 @@ class PrimitiveKey implements Converter {
       String key = entry.getKey();  
       
       if(key == null) {
-         key = Factory.getName(type);
+         key = context.getName(type);
       }     
       String name = style.getAttribute(key);
       
@@ -293,7 +314,7 @@ class PrimitiveKey implements Converter {
     * 
     * @return returns true if the strategy overrides the object
     */
-   private boolean isOverridden(OutputNode node, Object item) throws Exception{
-      return factory.setOverride(type, item, node);
+   private boolean isOverridden(OutputNode node, Object value) throws Exception{
+      return factory.setOverride(type, value, node);
    }
 }

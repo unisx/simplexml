@@ -431,8 +431,7 @@ class Composite implements Converter {
     * @throws Exception thrown if the contact could not be deserialized
     */
    private Object read(InputNode node, Object source, Label label) throws Exception {    
-      Converter reader = label.getConverter(context);      
-      Object object = reader.read(node);
+      Object object = readObject(node, source, label);
     
       if(object == null) {     
          Position line = node.getPosition();
@@ -447,7 +446,36 @@ class Composite implements Converter {
          }
       }
       return object;
-   }   
+   }  
+   
+   /**
+    * This <code>readObject</code> method is used to perform the
+    * deserialization of the XML in to any original value. If there
+    * is no original value then this will do a read and instantiate
+    * a new value to deserialize in to. Reading in to the original
+    * ensures that existing lists or maps can be read in to.
+    * 
+    * @param node this is the node that contains the contact value
+    * @param source the source object to assign the contact value to
+    * @param label this is the label used to create the converter
+    * 
+    * @return this returns the original value deserialized in to
+    * 
+    * @throws Exception thrown if the contact could not be deserialized
+    */
+   private Object readObject(InputNode node, Object source, Label label) throws Exception {    
+      Converter reader = label.getConverter(context);   
+      
+      if(label.isCollection()) {
+         Contact contact = label.getContact();
+         Object original = contact.get(source);
+         
+         if(original != null) {
+            return reader.read(node, original);
+         }
+      }
+      return reader.read(node);
+   }
 
    /**
     * This method checks to see if there are any <code>Label</code>
@@ -517,7 +545,7 @@ class Composite implements Converter {
     * The annotation missing is reported in the exception.
     * 
     * @param node the XML element contact values are validated from
-    * @param source the object whose contacts are to be validated
+    * @param type this is the type to validate against the input node
     */
    private boolean validate(InputNode node, Class type) throws Exception {
       Schema schema = context.getSchema(type);
@@ -639,7 +667,6 @@ class Composite implements Converter {
     * fails validation then an exception is thrown to report the issue.
     * 
     * @param node this is the node that contains the contact value
-    * @param source the source object to assign the contact value to
     * @param map this is the map that contains the label objects
     * 
     * @throws Exception thrown if the the label object does not exist
@@ -695,8 +722,8 @@ class Composite implements Converter {
     * class annotations. If there is a required label that remains it 
     * is reported within the exception thrown.
     * 
-    * @param map this is the map to check for remaining labels
-    * @param source this is the object that has been deserialized 
+    * @param node this is the node that contains the composite data
+    * @param map this contains the converters to perform validation
     * 
     * @throws Exception thrown if an XML property was not declared
     */

@@ -1,5 +1,5 @@
 /*
- * ClassType.java January 2007
+ * Instance.java January 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -20,10 +20,8 @@
 
 package org.simpleframework.xml.core;
 
-import java.lang.reflect.Constructor;
-
 /**
- * The <code>ClassType</code> is an implementation of the type that
+ * The <code>Instance</code> is an implementation of the type that
  * is used to instantiate an object using its default no argument
  * constructor. This will simply ensure that the constructor is an
  * accessible method before invoking the types new instance method.
@@ -32,32 +30,28 @@ import java.lang.reflect.Constructor;
  * 
  * @see org.simpleframework.xml.core.DefaultStrategy
  */
-class ClassType implements Type {
+class Instance implements Type {
    
    /**
     * Caches the constructors used to convert composite types.
-    * 
-    * @see org.simpleframework.xml.core.Composite
     */
-   private static ConstructorCache cache;
-
-   static {
-      cache = new ConstructorCache();           
-   }
+   private final Instantiator factory;
    
    /**
     * This is the type that this object is used to represent.
     */
-   private Class type;
+   private final Class type;
 
    /**
-    * Constructor for the <code>ClassType</code> object. This is
+    * Constructor for the <code>Instance</code> object. This is
     * used to create a type object that can be used to instantiate
     * and object with that objects default no argument constructor.
     * 
+    * @param factory this is the constructor cache for this type
     * @param type this is the type of object that is created
     */
-   public ClassType(Class type) {
+   public Instance(Instantiator factory, Class type) {
+      this.factory = factory;
       this.type = type;
    }        
    
@@ -82,17 +76,7 @@ class ClassType implements Type {
     * @return this returns an instance of the specifiec class type
     */ 
    public Object getInstance(Class type) throws Exception {
-      Constructor method = cache.fetch(type);
-      
-      if(method == null) {
-         method = type.getDeclaredConstructor();      
-
-         if(!method.isAccessible()) {
-            method.setAccessible(true);              
-         }
-         cache.cache(type, method);
-      }
-      return method.newInstance();   
+      return factory.getInstance(type);  
    }
    
    /**
