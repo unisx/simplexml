@@ -100,6 +100,7 @@ final class Composite implements Converter {
    public Object read(Node node) throws Exception {
       Object source = factory.getInstance(node);      
       read(node, source);
+      process(source);
       return source;
    }
    
@@ -166,7 +167,7 @@ final class Composite implements Converter {
       for(int i = 0; i < list.getLength(); i++) {
          readAttribute(list.item(i), source, map);
       }  
-      readCheck(map, source);
+      validate(map, source);
    }
 
    /**
@@ -196,7 +197,7 @@ final class Composite implements Converter {
          if(next instanceof Element)
             readElement(next, source, map);
       } 
-      readCheck(map, source);
+      validate(map, source);
    }
    
    /**
@@ -247,7 +248,6 @@ final class Composite implements Converter {
       read(node, source, label);
    }
    
-   
    /**
     * This <code>read</code> method is used to perform deserialization
     * of the provided node object using a delegate converter. This is
@@ -283,7 +283,7 @@ final class Composite implements Converter {
     * 
     * @throws Exception thrown if an XML property was not declared
     */
-   private void readCheck(LabelMap map, Object source) throws Exception {
+   private void validate(LabelMap map, Object source) throws Exception {
       Class type = source.getClass();
       String name = type.getName();
       
@@ -292,6 +292,39 @@ final class Composite implements Converter {
             throw new FieldRequiredException("Unable to satisfy %s for %s", label,  name);
          }
       }      
+   }
+   
+   /**
+    * This is used to perform post processing of a deserialized object
+    * so that validation can be performed. Callbacks to the object are
+    * performed if the object implements this <code>Persistable</code>
+    * interface. The <code>validate</code> method is invoked first
+    * followed by the <code>commit</code> method. 
+    * 
+    * @param source this is the object that has been deserialized
+    * 
+    * @throws Exception if the deserialized object throws an exception
+    */
+   private void process(Object source) throws Exception {
+      if(source instanceof Persistable) {
+         process((Persistable)source);
+      }
+   }
+   
+   /**
+    * This is used to perform post processing of a deserialized object
+    * so that validation can be performed. Callbacks to the object are
+    * performed if the object implements this <code>Persistable</code>
+    * interface. The <code>validate</code> method is invoked first
+    * followed by the <code>commit</code> method. 
+    * 
+    * @param source this is the object that has been deserialized
+    * 
+    * @throws Exception if the deserialized object throws an exception
+    */
+   private void process(Persistable source) throws Exception {
+      source.validate();
+      source.commit();
    }
    
    /**
