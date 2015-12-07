@@ -103,7 +103,7 @@ class Instance implements Type {
     */
    public Class getType() {
       return type;
-   }   
+   }
    
    /**
     * This method always returns false for the default type. This

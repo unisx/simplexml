@@ -103,7 +103,7 @@ class Composite implements Converter {
     * @return this returns the fully deserialized object graph
     */
    public Object read(InputNode node) throws Exception {
-      Type type = factory.getInstance(node);
+      Type type = factory.getInstance(node); 
       Object source = type.getInstance();
       
       if(!type.isReference()) {         
@@ -371,8 +371,8 @@ class Composite implements Converter {
     */
    private void validate(InputNode node, LabelMap map, Object source) throws Exception {
       Position line = node.getPosition();
-      Class type = source.getClass();
-      
+      Class type = source.getClass();      
+
       for(Label label : map) {
          if(label.isRequired()) {
             throw new ValueRequiredException("Unable to satisfy %s for %s at %s", label, type, line);

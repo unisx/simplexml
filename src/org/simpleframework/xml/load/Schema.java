@@ -69,7 +69,7 @@ class Schema {
     * @param schema this contains all labels scanned from the class
     * @param session this is the session map for the persister
     */
-   public Schema(Scanner schema, Session session) {      
+   public Schema(Scanner schema, Session session) {   
       this.attributes = schema.getAttributes();
       this.elements = schema.getElements();
       this.conduit = schema.getConduit();

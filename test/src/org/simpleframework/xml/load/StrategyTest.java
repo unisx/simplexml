@@ -123,6 +123,7 @@ public class StrategyTest extends TestCase {
       public Object getInstance(Object value) throws Exception {
          return value;
       }
+      
        public boolean isReference() {
           return false;
        }

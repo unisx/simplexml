@@ -20,7 +20,7 @@
 
 package org.simpleframework.xml.graph;
 
-import java.util.WeakHashMap;
+import org.simpleframework.xml.util.WeakCache;
 
 /**
  * The <code>ReadState</code> object is used to store all graphs that
@@ -33,9 +33,9 @@ import java.util.WeakHashMap;
  * 
  * @author Niall Gallagher
  * 
- * @see org.simpleframework.xml.graph.ReadGraph
+ * @see org.simpleframework.xml.util.WeakCache
  */
-class ReadState extends WeakHashMap<Object, ReadGraph>{
+class ReadState extends WeakCache<Object, ReadGraph>{
    
    /** 
     * This is the contract that specifies the attributes to use.
@@ -64,13 +64,76 @@ class ReadState extends WeakHashMap<Object, ReadGraph>{
     * 
     * @return returns a graph used for reading the XML document
     */
-   public ReadGraph find(Object map) {
-      ReadGraph read = get(map);
+   public ReadGraph find(Object map) throws Exception {
+      ReadGraph read = fetch(map);
+      
+      if(read != null) {
+         return read;
+      }
+      return create(map);
+   }
+   
+   /**
+    * This will acquire the graph using the specified session map. If
+    * a graph does not already exist mapped to the given session then
+    * one will be created and stored with the key provided. Once the
+    * specified key is garbage collected then so is the graph object.
+    * 
+    * @param map this is typically the persistence session map used 
+    * 
+    * @return returns a graph used for reading the XML document
+    */
+   private ReadGraph create(Object map) throws Exception {
+      ClassLoader loader = getClassLoader();
+      
+      if(loader == null) {
+         loader = getCallerClassLoader();
+      }
+      return create(map, loader);
+   }
+   
+   /**
+    * This will acquire the graph using the specified session map. If
+    * a graph does not already exist mapped to the given session then
+    * one will be created and stored with the key provided. Once the
+    * specified key is garbage collected then so is the graph object.
+    * 
+    * @param map this is typically the persistence session map used 
+    * @param loader this is the class loader used by the read state
+    * 
+    * @return returns a graph used for reading the XML document
+    */
+   private ReadGraph create(Object map, ClassLoader loader) throws Exception {
+      ReadGraph read = fetch(map);
       
       if(read == null) {
-         read = new ReadGraph(contract);
-         put(map, read);
+         read = new ReadGraph(contract, loader);
+         cache(map, read);
       }
       return read;
+   }   
+   
+   /**
+    * This is used to acquire the caller class loader for this object.
+    * Typically this is only used if the thread context class loader
+    * is set to null. This ensures that there is at least some class
+    * loader available to the strategy to load the class.
+    * 
+    * @return this returns the loader that loaded this class     
+    */
+   private ClassLoader getCallerClassLoader() {
+      return getClass().getClassLoader();
+   }
+   
+   /**
+    * This is used to acquire the thread context class loader. This
+    * is the default class loader used by the cycle strategy. When
+    * using the thread context class loader the caller can switch the
+    * class loader in use, which allows class loading customization.
+    * 
+    * @return this returns the loader used by the calling thread
+    */
+   private static ClassLoader getClassLoader() {
+      return Thread.currentThread().getContextClassLoader();
    }
 }

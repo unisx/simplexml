@@ -38,7 +38,7 @@ package org.simpleframework.xml.load;
  * @see org.simpleframework.xml.load.Strategy
  */
 public interface Type {
-   
+
    /**
     * This is used to determine if the type is a reference type.
     * A reference type is a type that does not require any XML

@@ -121,6 +121,5 @@ class ArrayType implements Type {
     */
    public boolean isReference() {
       return false;
-   }
-   
+   }   
 }

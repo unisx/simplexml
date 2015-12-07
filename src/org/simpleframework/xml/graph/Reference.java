@@ -105,7 +105,7 @@ class Reference implements Type {
    public Class getType() {
       return type;
    }
-
+   
    /**
     * This always returns true for this object. This indicates to
     * the deserialization process that there should be not further

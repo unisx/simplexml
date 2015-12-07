@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.328 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.969 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -57,11 +57,11 @@ org.simpleframework.xml.transform.TransformException: Transform of interface jav
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.TextTest.testNonPrimitive(TextTest.java:231)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -70,13 +70,21 @@ org.simpleframework.xml.transform.TransformException: Transform of interface jav
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
+	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testText took 1.141 sec
-Testcase: testData took 0.047 sec
-Testcase: testDuplicate took 0.032 sec
-Testcase: testIllegalElement took 0.015 sec
-Testcase: testEmpty took 0.016 sec
-Testcase: testOptional took 0.047 sec
-Testcase: testNonPrimitive took 0.015 sec
+Testcase: testText took 1.469 sec
+Testcase: testData took 0.125 sec
+Testcase: testDuplicate took 0.015 sec
+Testcase: testIllegalElement took 0.016 sec
+Testcase: testEmpty took 0 sec
+Testcase: testOptional took 0.062 sec
+Testcase: testNonPrimitive took 0.094 sec
 Testcase: testDirectory took 0 sec

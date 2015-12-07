@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.CollectionTest
-Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.828 sec
+Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 2.406 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -30,11 +30,11 @@ Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.828 sec
       <entry id="3">
          <text>three</text>
       </entry>
-      <entry id="1">
-         <text>one</text>
-      </entry>
       <entry id="2">
          <text>two</text>
+      </entry>
+      <entry id="1">
+         <text>one</text>
       </entry>
    </list>
 </test><test name="example">
@@ -115,6 +115,10 @@ Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.828 sec
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
+      <extended-entry class="org.simpleframework.xml.load.CollectionTest$ExtendedEntry" id="2">
+         <description>this is the second one</description>
+         <text>two</text>
+      </extended-entry>
       <extended-entry class="org.simpleframework.xml.load.CollectionTest$ExtendedEntry" id="1">
          <description>this is an extended entry</description>
          <text>one</text>
@@ -122,10 +126,6 @@ Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.828 sec
       <entry id="3">
          <text>three</text>
       </entry>
-      <extended-entry class="org.simpleframework.xml.load.CollectionTest$ExtendedEntry" id="2">
-         <description>this is the second one</description>
-         <text>two</text>
-      </extended-entry>
    </list>
 </test>org.simpleframework.xml.load.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
 	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:86)
@@ -138,11 +138,11 @@ Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.828 sec
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testSetToSortedSet(CollectionTest.java:685)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -156,8 +156,9 @@ Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 1.828 sec
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:297)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:672)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Type class java.util.ArrayList is not compatible with interface java.util.Set
 	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:86)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:80)
@@ -169,11 +170,11 @@ org.simpleframework.xml.load.InstantiationException: Type class java.util.ArrayL
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testListToSet(CollectionTest.java:697)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -187,8 +188,9 @@ org.simpleframework.xml.load.InstantiationException: Type class java.util.ArrayL
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:297)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:672)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Type is not a collection class java.lang.String
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:89)
 	at org.simpleframework.xml.load.CompositeList.read(CompositeList.java:104)
@@ -199,11 +201,11 @@ org.simpleframework.xml.load.InstantiationException: Type is not a collection cl
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testInvalidList(CollectionTest.java:710)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -217,9 +219,9 @@ org.simpleframework.xml.load.InstantiationException: Type is not a collection cl
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:297)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:672)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:567)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Cannot instantiate class org.simpleframework.xml.load.CollectionTest$UnknownCollection
 	at org.simpleframework.xml.load.CollectionFactory.getConversion(CollectionFactory.java:139)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:86)
@@ -231,11 +233,11 @@ org.simpleframework.xml.load.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testUnknownCollectionList(CollectionTest.java:722)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -249,8 +251,9 @@ org.simpleframework.xml.load.InstantiationException: Cannot instantiate class or
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:297)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:672)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Cannot instantiate class org.simpleframework.xml.load.CollectionTest$AbstractList
 	at org.simpleframework.xml.load.CollectionFactory.getConversion(CollectionFactory.java:139)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:110)
@@ -263,11 +266,11 @@ org.simpleframework.xml.load.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testAbstractList(CollectionTest.java:734)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -281,7 +284,9 @@ org.simpleframework.xml.load.InstantiationException: Cannot instantiate class or
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:297)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Type class java.util.Hashtable is not compatible with interface java.util.List
 	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:86)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:80)
@@ -293,11 +298,11 @@ org.simpleframework.xml.load.InstantiationException: Type class java.util.Hashta
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testNotACollection(CollectionTest.java:746)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -311,11 +316,17 @@ org.simpleframework.xml.load.InstantiationException: Type class java.util.Hashta
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:297)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:672)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 java.lang.ClassNotFoundException: example.MyCollection
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Class.java:164)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:200)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:188)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:268)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at org.simpleframework.xml.load.DefaultStrategy.getClass(DefaultStrategy.java:267)
 	at org.simpleframework.xml.load.DefaultStrategy.getType(DefaultStrategy.java:180)
 	at org.simpleframework.xml.load.DefaultStrategy.getElement(DefaultStrategy.java:120)
 	at org.simpleframework.xml.load.Source.getOverride(Source.java:136)
@@ -330,11 +341,11 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
 	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
 	at org.simpleframework.xml.load.CollectionTest.testMissingCollection(CollectionTest.java:758)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -344,25 +355,32 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
 	at junit.framework.TestResult.runProtected(TestResult.java:124)
+	at junit.framework.TestResult.run(TestResult.java:109)
+	at junit.framework.TestCase.run(TestCase.java:118)
+	at junit.framework.TestSuite.runTest(TestSuite.java:208)
+	at junit.framework.TestSuite.run(TestSuite.java:203)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.75 sec
-Testcase: testSortedSet took 0.578 sec
-Testcase: testList took 0.016 sec
-Testcase: testHashSet took 0.031 sec
-Testcase: testTreeSet took 0.031 sec
-Testcase: testArrayList took 0.031 sec
+Testcase: testSet took 1.203 sec
+Testcase: testSortedSet took 0.266 sec
+Testcase: testList took 0.047 sec
+Testcase: testHashSet took 0.047 sec
+Testcase: testTreeSet took 0.062 sec
+Testcase: testArrayList took 0.047 sec
 Testcase: testSortedSetToSet took 0 sec
-Testcase: testExtendedEntry took 0.016 sec
-Testcase: testTypeFromFieldList took 0.062 sec
-Testcase: testTypeFromMethodList took 0.125 sec
-Testcase: testPrimitiveCollection took 0.032 sec
-Testcase: testPrimitiveDefaultCollection took 0.031 sec
-Testcase: testSetToSortedSet took 0.047 sec
-Testcase: testListToSet took 0.015 sec
+Testcase: testExtendedEntry took 0.032 sec
+Testcase: testTypeFromFieldList took 0.047 sec
+Testcase: testTypeFromMethodList took 0.156 sec
+Testcase: testPrimitiveCollection took 0.047 sec
+Testcase: testPrimitiveDefaultCollection took 0.047 sec
+Testcase: testSetToSortedSet took 0 sec
+Testcase: testListToSet took 0.016 sec
 Testcase: testInvalidList took 0 sec
-Testcase: testUnknownCollectionList took 0 sec
-Testcase: testAbstractList took 0 sec
+Testcase: testUnknownCollectionList took 0.016 sec
+Testcase: testAbstractList took 0.015 sec
 Testcase: testNotACollection took 0.016 sec
 Testcase: testMissingCollection took 0 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.016 sec
