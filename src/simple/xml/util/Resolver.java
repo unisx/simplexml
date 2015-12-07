@@ -20,9 +20,9 @@
  
 package simple.xml.util;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.AbstractSet;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -258,13 +258,29 @@ public class Resolver<M extends Match> extends AbstractSet<M> {
     * 
     * @author Niall Gallagher
     */ 
-   private class Cache extends HashMap<String, M> {
+   private class Cache extends LinkedHashMap<String, M> {
 
       /**
        * By default only 1K of resolved matches will be cached.
        */            
       private static final int MAX_ENTRIES = 1024;                   
 
+      /**
+       * Represents the load capacity for this cache object.
+       */ 
+      private static final float INITIAL_CAPACITY = 0.75f;
+
+      /**
+       * Constructor for the <code>Cache</code> object. This is a
+       * constructor that creates the linked hash map such that 
+       * it will purge the entries that are oldest within the map.
+       *
+       * @param capacity this is the capacity of the cache object
+       */ 
+      public Cache() {      
+         super(MAX_ENTRIES, INITIAL_CAPACITY, false);              
+      }
+      
       /**
        * This is used to remove the eldest entry from the LRU cache.
        * The eldest entry is removed from the cache if the size of
@@ -274,6 +290,7 @@ public class Resolver<M extends Match> extends AbstractSet<M> {
        *
        * @return this returns true if the entry should be removed
        */ 
+      @Override
       public boolean removeEldestEntry(Map.Entry entry) {
          return size() > MAX_ENTRIES;                                    
       } 

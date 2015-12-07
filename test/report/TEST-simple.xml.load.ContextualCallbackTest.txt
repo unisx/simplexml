@@ -6,4 +6,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.129 sec
 </root>------------- ---------------- ---------------
 
 Testcase: testReadCallbacks took 0.122 sec
-Testcase: testWriteCallbacks took 0.007 sec
+Testcase: testWriteCallbacks took 0.006 sec

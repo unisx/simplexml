@@ -23,8 +23,9 @@ public class ResolverTest extends ValidationTestCase {
    "      <match pattern='*.html' value='text/html'/>\n"+
    "      <match pattern='*.jpg' value='image/jpeg'/>\n"+
    "      <match pattern='/images/*' value='image/jpeg'/>\n"+
+   "      <match pattern='/log/**' value='text/plain'/>\n"+
    "      <match pattern='*.exe' value='application/octetstream'/>\n"+
-   "      <match pattern='*.txt' value='text/plain'/>\n"+
+   "      <match pattern='**.txt' value='text/plain'/>\n"+
    "      <match pattern='/html/*' value='text/html'/>\n"+
    "   </list>\n"+
    "</test>";  
@@ -54,6 +55,10 @@ public class ResolverTest extends ValidationTestCase {
       @Attribute(name="name")
       private String name;
 
+      private ContentResolver() {
+         this.list = new Resolver<ContentType>();              
+      }
+
       public Iterator<ContentType> iterator() {
          return list.iterator();
       }
@@ -80,13 +85,13 @@ public class ResolverTest extends ValidationTestCase {
    public void testResolver() throws Exception {    
       ContentResolver resolver = (ContentResolver) serializer.read(ContentResolver.class, LIST);
 
-      assertEquals(6, resolver.size());
+      assertEquals(7, resolver.size());
       assertEquals("image/jpeg", resolver.resolve("image.jpg").value);
       assertEquals("text/plain", resolver.resolve("README.txt").value);
       assertEquals("text/html", resolver.resolve("/index.html").value);
       assertEquals("text/html", resolver.resolve("/html/image.jpg").value);
       assertEquals("text/plain", resolver.resolve("/images/README.txt").value);
-      assertEquals("image/jpeg", resolver.resolve("/images/image.JPEG").value);
+      assertEquals("text/plain", resolver.resolve("/log/access.log").value);
       
       validate(resolver, serializer);
    }
@@ -94,7 +99,7 @@ public class ResolverTest extends ValidationTestCase {
    public void testCache() throws Exception {    
       ContentResolver resolver = (ContentResolver) serializer.read(ContentResolver.class, LIST);
 
-      assertEquals(6, resolver.size());
+      assertEquals(7, resolver.size());
       assertEquals("image/jpeg", resolver.resolve("image.jpg").value);
       assertEquals("text/plain", resolver.resolve("README.txt").value);
       
@@ -125,7 +130,7 @@ public class ResolverTest extends ValidationTestCase {
    public void testNoResolution() throws Exception {
       ContentResolver resolver = (ContentResolver) serializer.read(ContentResolver.class, LIST);
 
-      assertEquals(6, resolver.size());
+      assertEquals(7, resolver.size());
       assertEquals("text/plain", resolver.resolve("README.txt").value);
       assertEquals(null, resolver.resolve("README"));           
    }
@@ -133,11 +138,20 @@ public class ResolverTest extends ValidationTestCase {
    public void testNonGreedyMatch() throws Exception {
       ContentResolver resolver = (ContentResolver) serializer.read(ContentResolver.class, LIST);
 
-      assertEquals(6, resolver.size());
-      resolver.add(new ContentType("/*?/html/*", "text/html"));
-      
       assertEquals(7, resolver.size());
+      resolver.add(new ContentType("/*?/html/*", "text/html"));
+      assertEquals(8, resolver.size());
       assertEquals(null, resolver.resolve("/a/b/html/index.jsp"));
       assertEquals("text/html", resolver.resolve("/a/html/index.jsp").value);
+   }
+
+   public void testResolverCache() throws Exception {
+      ContentResolver resolver = new ContentResolver();           
+
+      for(int i = 0; i <= 2000; i++) {
+         resolver.add(new ContentType(String.valueOf(i), String.valueOf(i)));          
+      }
+      assertEquals(resolver.resolve("1").value, "1");
+      assertEquals(resolver.resolve("2000").value, "2000");
    }
 }
