@@ -23,12 +23,10 @@ import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
 
-import org.simpleframework.xml.Default;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.NamespaceList;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Root;
-import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>ClassScanner</code> performs the reflective inspection
@@ -52,11 +50,6 @@ class ClassScanner  {
     * This is the scanner that is used to acquire the constructors.
     */
    private ConstructorScanner scanner;
-   
-   /**
-    * This is the namespace associated with the scanned class.
-    */
-   private Namespace namespace;
    
    /**
     * This function acts as a pointer to the types commit process.
@@ -89,32 +82,33 @@ class ClassScanner  {
    private Function resolve;
    
    /**
-    * This is used to determine if there is a default type for this.
+    * This object contains various support functions for the class.
     */
-   private Default access;
+   private Support support;
    
    /**
-    * This is the optional order annotation for the scanned class.
-    */
-   private Order order;
-
-   /**
-    * This is the optional root annotation for the scanned class.
+    * This is the root annotation that has been scanned from the type.
     */
    private Root root;
+   
+   /**
+    * This is the order annotation that has been scanned from the type.
+    */
+   private Order order;
    
    /**
     * Constructor for the <code>ClassScanner</code> object. This is 
     * used to scan the provided class for annotations that are used 
     * to build a schema for an XML file to follow. 
     * 
-    * @param type this is the type that is scanned for a schema
-    * @param format this is the format used to style the XML
+    * @param detail this contains the details for the class scanned
+    * @param support this contains various support functions
     */
-   public ClassScanner(Class type, Format format) throws Exception { 
-      this.scanner = new ConstructorScanner(type, format);
+   public ClassScanner(Detail detail, Support support) throws Exception { 
+      this.scanner = new ConstructorScanner(detail, support);
       this.decorator = new NamespaceDecorator();
-      this.scan(type);
+      this.support = support;
+      this.scan(detail);
    }      
 
    /**
@@ -164,19 +158,7 @@ class ClassScanner  {
    public Decorator getDecorator() {
       return decorator;
    }
-  
-   /**
-    * This is used to provide the <code>Default</code> annotation
-    * that holds the default access type to use for the class. This
-    * is important in determining how the serializer will deal with
-    * methods or fields in the class that do not have annotations.
-    * 
-    * @return this returns the default annotation for access type
-    */
-   public Default getDefault() {
-      return access;
-   }
-   
+
    /**
     * This returns the order annotation used to determine the order
     * of serialization of attributes and elements. The order is a
@@ -278,23 +260,6 @@ class ClassScanner  {
    public Function getResolve() {
       return resolve;
    }
-   
-   /**
-    * This method is used to determine whether strict mappings are
-    * required. Strict mapping means that all labels in the class
-    * schema must match the XML elements and attributes in the
-    * source XML document. When strict mapping is disabled, then
-    * XML elements and attributes that do not exist in the schema
-    * class will be ignored without breaking the parser.
-    *
-    * @return true if strict parsing is enabled, false otherwise
-    */ 
-   public boolean isStrict() {
-      if(root != null) {
-         return root.strict();              
-      }              
-      return true;
-   }
   
    /**
     * Scan the fields and methods such that the given class is scanned 
@@ -303,137 +268,56 @@ class ClassScanner  {
     * fields and methods from higher up the inheritance hierarchy. This
     * means that annotated details can be overridden.
     * 
-    * @param type the class to extract method and class annotations
+    * @param detail contains the methods and fields to be examined
     */   
-   private void scan(Class type) throws Exception {
-      Class real = type;
+   private void scan(Detail detail) throws Exception {
+      Class type = detail.getType();
       
       while(type != null) {
-         global(type);
-         scan(real, type);
-         type = type.getSuperclass();
+         Detail value = support.getDetail(type);
+
+         namespace(value);
+         method(value);
+         definition(value);
+         type = value.getSuper();
       }      
-      process(real); 
+      commit(detail); 
    }
    
    /**
-    * This is used to acquire the annotations that apply globally to 
-    * the scanned class. Global annotations are annotations that
-    * are applied to the class, such annotations will be used to
-    * determine characteristics for the fields and methods of the
-    * class, which the serializer uses in the serialization process.  
+    * This method is used to extract the <code>Root</code> annotation
+    * and the <code>Order</code> annotation from the detail provided.
+    * These annotation are taken from the first definition encountered
+    * from the most specialized class up through the base classes.
+    * 
+    * @param detail this detail object used to acquire the annotations
+    */
+   private void definition(Detail detail) throws Exception {
+      if(root == null) {
+         root = detail.getRoot();
+      }
+      if(order == null) {
+         order = detail.getOrder();
+      }
+   }
+   
+   /**
+    * This is used to acquire the namespace annotations that apply to 
+    * the scanned class. Namespace annotations are added only if they
+    * have not already been extracted from a more specialized class.
+    * When scanned all the namespace definitions are used to qualify
+    * the XML that is produced from serializing the class.
     * 
     * @param type this is the type to extract the annotations from
     */
-   private void global(Class type) throws Exception {
-      Annotation[] list = type.getDeclaredAnnotations();
+   private void namespace(Detail detail) throws Exception {
+      NamespaceList scope = detail.getNamespaceList();
+      Namespace namespace = detail.getNamespace();
       
-      for(Annotation label : list) {
-         if(label instanceof Namespace) {
-            namespace(label);
-         }
-         if(label instanceof NamespaceList) {
-            scope(label);
-         }
-         if(label instanceof Root) {
-            root(label);
-         }
-         if(label instanceof Order) {
-            order(label);
-         }
-         if(label instanceof Default) {
-            access(label);
-         }
+      if(namespace != null) {
+         decorator.add(namespace);
       }
-   }
-
-   /**
-    * This is used to scan the specified class for methods so that
-    * the persister callback annotations can be collected. These
-    * annotations help object implementations to validate the data
-    * that is injected into the instance during deserialization.
-    * 
-    * @param real this is the actual type of the scanned class 
-    * @param type this is a type from within the class hierarchy
-    * 
-    * @throws Exception thrown if the class schema is invalid
-    */
-   private void scan(Class real, Class type) throws Exception {
-      Method[] method = type.getDeclaredMethods();
-
-      for(int i = 0; i < method.length; i++) {         
-         scan(method[i]);              
-      }     
-   }
-
-   /**
-    * This is used to set the optional <code>Root</code> annotation for
-    * the class. The root can only be set once, so if a supertype also
-    * has a root annotation define it must be ignored. 
-    *
-    * @param label this is the label used to define the root
-    */    
-   private void root(Annotation label) {
-      if(root == null) {
-         root = (Root)label;
-      }
-   }
-   
-   /**
-    * This is used to set the optional <code>Order</code> annotation for
-    * the class. The order can only be set once, so if a supertype also
-    * has a order annotation define it must be ignored. 
-    * 
-    * @param label this is the label used to define the order
-    */
-   private void order(Annotation label) {
-      if(order == null) {
-         order = (Order)label;
-      }
-   }
-   
-   /**
-    * This is used to set the optional <code>Default</code> annotation for
-    * the class. The default can only be set once, so if a supertype also
-    * has a default annotation define it must be ignored. 
-    * 
-    * @param label this is the label used to define the defaults
-    */
-   private void access(Annotation label) {
-      if(access == null) {
-         access = (Default)label;
-      }
-   }
-   
-   /**
-    * This is use to scan for <code>Namespace</code> annotations on
-    * the class. Once a namespace has been located then it is used
-    * to populate the internal namespace decorator. This can then be
-    * used to decorate any output node that requires it.
-    * 
-    * @param label this XML annotation to scan for namespaces
-    */
-   private void namespace(Annotation label) {
-      if(label != null) {
-         namespace = (Namespace)label;
-         
-         if(namespace != null) {
-            decorator.add(namespace);
-         }
-      }
-   }
-   
-   /**
-    * This is use to scan for <code>NamespaceList</code> annotations 
-    * on the class. Once a namespace list has been located then it is 
-    * used to populate the internal namespace decorator. This can then 
-    * be used to decorate any output node that requires it.
-    * 
-    * @param label the XML annotation to scan for namespace lists
-    */
-   private void scope(Annotation label) {
-      if(label != null) {
-         NamespaceList scope = (NamespaceList)label;
+      if(scope != null) {
          Namespace[] list = scope.value();
          
          for(Namespace name : list) {
@@ -443,17 +327,35 @@ class ClassScanner  {
    }
    
    /**
-    * This is used to scan the specified object to extract the fields
-    * and methods that are to be used in the serialization process.
-    * This will acquire all fields and getter setter pairs that have
-    * been annotated with the XML annotations.
-    *
-    * @param type this is the object type that is to be scanned
-    */  
-   private void process(Class type) {
+    * This is used to set the primary namespace for nodes that will
+    * be decorated by the namespace decorator. If no namespace is set
+    * using this method then this decorator will leave the namespace
+    * reference unchanged and only add namespaces for scoping.
+    * 
+    * @param detail the detail object that contains the namespace
+    */
+   private void commit(Detail detail) {
+      Namespace namespace = detail.getNamespace();
+      
       if(namespace != null) {
          decorator.set(namespace);
       }
+   }
+
+   /**
+    * This is used to scan the specified class for methods so that
+    * the persister callback annotations can be collected. These
+    * annotations help object implementations to validate the data
+    * that is injected into the instance during deserialization.
+    * 
+    * @param detail this is a detail from within the class hierarchy
+    */
+   private void method(Detail detail) throws Exception {
+      List<MethodDetail> list = detail.getMethods();
+
+      for(MethodDetail entry : list) {
+         method(entry);              
+      }     
    }
    
    /**
@@ -462,10 +364,11 @@ class ClassScanner  {
     * method is stored so that it can be invoked by the persister
     * during the serialization and deserialization process.
     * 
-    * @param method this is the method to scan for callback methods
+    * @param detail the method to scan for callback annotations
     */
-   private void scan(Method method) {
-      Annotation[] list = method.getDeclaredAnnotations();
+   private void method(MethodDetail detail) {
+      Annotation[] list = detail.getAnnotations();
+      Method method = detail.getMethod();
       
       for(Annotation label : list) {
          if(label instanceof Commit) {           

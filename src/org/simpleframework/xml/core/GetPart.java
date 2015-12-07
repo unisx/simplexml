@@ -134,6 +134,17 @@ class GetPart implements MethodPart {
    }
    
    /**
+    * This is the class that declares the contact. The declaring
+    * class is where the method represented has been defined. This
+    * will typically be a class rather than an interface.
+    * 
+    * @return this returns the class the part is declared within
+    */
+   public Class getDeclaringClass() {
+      return method.getDeclaringClass();
+   }
+   
+   /**
     * This is used to acquire the annotation that was used to label
     * the method this represents. This acts as a means to match the
     * set method with the get method using an annotation comparison.

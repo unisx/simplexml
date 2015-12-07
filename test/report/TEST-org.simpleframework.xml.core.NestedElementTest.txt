@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NestedElementTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.137 sec
 ------------- Standard Output ---------------
 <nestedElementExample>
    <contact-info>
@@ -53,7 +53,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </contact-info>
 </nested-element-example>>>>>> ELEMENT=[element nested-element-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.NestedElementTest$NestedElementExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <NestedElementExample ID="0">
    <ContactInfo>
       <Phone areaCode="61">
@@ -71,8 +71,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </ContactInfo>
 </NestedElementExample>>>>>> ELEMENT=[element NestedElementExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.NestedElementTest$NestedElementExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testNestedExample took 0.312 sec
+Testcase: testNestedExample took 0.135 sec
 Testcase: testDirectory took 0 sec

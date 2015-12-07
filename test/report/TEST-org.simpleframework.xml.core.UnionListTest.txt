@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.199 sec
 ------------- Standard Output ---------------
 <inlineListExample>
    <xx>
@@ -62,7 +62,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </xx>
 </inline-list-example>>>>>> ELEMENT=[element inline-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTest$InlineListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <InlineListExample ID="0">
    <!-- org.simpleframework.xml.core.UnionListTest$X -->
    <Xx ID="1">
@@ -91,7 +91,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </Xx>
 </InlineListExample>>>>>> ELEMENT=[element InlineListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTest$InlineListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <listExample>
    <xList class="java.util.ArrayList">
       <xx>
@@ -127,7 +127,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </x-list>
 </list-example>>>>>> ELEMENT=[element list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTest$ListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ListExample ID="0">
    <!-- java.util.List -->
    <XList class="java.util.ArrayList" ID="1">
@@ -144,7 +144,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </XList>
 </ListExample>>>>>> ELEMENT=[element ListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTest$ListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <listExample>
    <yList class="java.util.ArrayList">
       <yy>
@@ -180,7 +180,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </y-list>
 </list-example>>>>>> ELEMENT=[element list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTest$ListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ListExample ID="0">
    <!-- java.util.List -->
    <YList class="java.util.ArrayList" ID="1">
@@ -197,10 +197,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </YList>
 </ListExample>>>>>> ELEMENT=[element ListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTest$ListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.25 sec
-Testcase: testXList took 0.031 sec
-Testcase: testYList took 0.031 sec
-Testcase: testDirectory took 0 sec
+Testcase: testInlineList took 0.155 sec
+Testcase: testXList took 0.023 sec
+Testcase: testYList took 0.018 sec
+Testcase: testDirectory took 0.001 sec

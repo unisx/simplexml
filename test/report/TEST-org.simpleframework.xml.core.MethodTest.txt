@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.181 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -35,7 +35,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <short ID="7">120</short>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Test ID="0">
    <!-- java.lang.Boolean -->
    <Boolean ID="1">true</Boolean>
@@ -53,7 +53,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <Short ID="7">120</Short>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <test>
    <boolean>true</boolean>
    <byte>16</byte>
@@ -88,7 +88,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <short ID="7">120</short>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Test ID="0">
    <!-- java.lang.Boolean -->
    <Boolean ID="1">true</Boolean>
@@ -106,7 +106,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <Short ID="7">120</Short>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
@@ -141,7 +141,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <short-value ID="7">120</short-value>
 </implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ImplicitMethodNameExample ID="0">
    <!-- java.lang.Boolean -->
    <BooleanValue ID="1">true</BooleanValue>
@@ -159,7 +159,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <ShortValue ID="7">120</ShortValue>
 </ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
@@ -194,7 +194,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <short-value ID="7">120</short-value>
 </implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ImplicitMethodNameExample ID="0">
    <!-- java.lang.Boolean -->
    <BooleanValue ID="1">true</BooleanValue>
@@ -212,9 +212,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
    <ShortValue ID="7">120</ShortValue>
 </ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.374 sec
-Testcase: testImplicitMethodNameExample took 0.078 sec
+Testcase: testExplicitMethodNameExample took 0.133 sec
+Testcase: testImplicitMethodNameExample took 0.046 sec
 Testcase: testDirectory took 0 sec

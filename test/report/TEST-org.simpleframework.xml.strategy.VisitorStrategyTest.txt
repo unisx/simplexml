@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.VisitorStrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
 ------------- Standard Output ---------------
 <visitorExample>
    <!-- java.util.ArrayList -->
@@ -79,7 +79,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
    </map>
 </visitor-example>>>>>> ELEMENT=[element visitor-example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.VisitorStrategyTest$VisitorExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <VisitorExample ID="0">
    <!-- java.util.List -->
    <Items class="java.util.ArrayList" ID="1">
@@ -105,8 +105,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
    </Map>
 </VisitorExample>>>>>> ELEMENT=[element VisitorExample]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.VisitorStrategyTest$VisitorExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testStrategy took 0.234 sec
+Testcase: testStrategy took 0.125 sec
 Testcase: testDirectory took 0 sec

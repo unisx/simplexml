@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionExampleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.114 sec
 
-Testcase: testUnionConstruction took 0.187 sec
-Testcase: testSubtypeInjection took 0 sec
-Testcase: testWithoutPath took 0.016 sec
-Testcase: testWithoutPathUsingUnion took 0.015 sec
+Testcase: testUnionConstruction took 0.092 sec
+Testcase: testSubtypeInjection took 0.005 sec
+Testcase: testWithoutPath took 0.006 sec
+Testcase: testWithoutPathUsingUnion took 0.007 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.148 sec
 ------------- Standard Output ---------------
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
@@ -26,7 +26,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </list>
 </default-text-list>>>>>> ELEMENT=[element default-text-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultTest$DefaultTextList]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <DefaultTextList ID="0" version="ONE">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -39,7 +39,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </List>
 </DefaultTextList>>>>>> ELEMENT=[element DefaultTextList]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultTest$DefaultTextList]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
       <textEntry name="a" version="ONE">Example 1</textEntry>
@@ -65,7 +65,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </list>
 </default-text-list>>>>>> ELEMENT=[element default-text-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultTest$DefaultTextList]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <DefaultTextList ID="0" version="ONE">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -78,8 +78,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
    </List>
 </DefaultTextList>>>>>> ELEMENT=[element DefaultTextList]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultTest$DefaultTextList]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.312 sec
+Testcase: testList took 0.145 sec
 Testcase: testDirectory took 0 sec

@@ -21,12 +21,8 @@ package org.simpleframework.xml.core;
 import java.lang.annotation.Annotation;
 import java.util.List;
 
-import org.simpleframework.xml.Default;
-import org.simpleframework.xml.DefaultType;
 import org.simpleframework.xml.Order;
-import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Version;
-import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>ObjectScanner</code> performs the reflective inspection
@@ -60,49 +56,29 @@ class ObjectScanner implements Scanner {
    private Structure structure;
    
    /**
-    * This is the default access type to be used for this scanner.
+    * This object contains various support functions for the class.
     */
-   private DefaultType access;
+   private Support support;
    
    /**
-    * This is the name of the class as taken from the root class.
+    * This contains the details for the class that is being scanned.
     */
-   private String name;
-   
-   /**
-    * This is the type that is being scanned by this scanner.
-    */
-   private Class type;
-   
-   /**
-    * This is used to determine if the defaults are required.
-    */
-   private boolean required;
+   private Detail detail;
    
    /**
     * Constructor for the <code>ObjectScanner</code> object. This is 
     * used to scan the provided class for annotations that are used 
     * to build a schema for an XML file to follow. 
     * 
-    * @param type this is the type that is scanned for a schema
+    * @param detail this contains the details for the class scanned
+    * @param support this contains various support functions
     */
-   public ObjectScanner(Class type) throws Exception {  
-      this(type, new Format());
-   }
-   
-   /**
-    * Constructor for the <code>ObjectScanner</code> object. This is 
-    * used to scan the provided class for annotations that are used 
-    * to build a schema for an XML file to follow. 
-    * 
-    * @param type this is the type that is scanned for a schema
-    * @param format this is used to format the elements and attributes
-    */
-   public ObjectScanner(Class type, Format format) throws Exception {  
-      this.scanner = new ClassScanner(type, format);
-      this.builder = new StructureBuilder(this, type, format); 
-      this.type = type;
-      this.scan(type);
+   public ObjectScanner(Detail detail, Support support) throws Exception {  
+      this.scanner = new ClassScanner(detail, support);
+      this.builder = new StructureBuilder(this, detail, support); 
+      this.support = support;
+      this.detail = detail;
+      this.scan(detail);
    }      
    
    /**
@@ -160,7 +136,7 @@ class ObjectScanner implements Scanner {
     * @return this is the type that this creator will represent
     */
    public Class getType() {
-      return type;
+      return detail.getType();
    }
    
    /**
@@ -262,7 +238,7 @@ class ObjectScanner implements Scanner {
     * @return this returns the name of the object being scanned
     */
    public String getName() {
-      return name;
+      return detail.getName();
    }
 
    /**
@@ -378,7 +354,7 @@ class ObjectScanner implements Scanner {
     * @return true if strict parsing is enabled, false otherwise
     */ 
    public boolean isStrict() {
-      return scanner.isStrict();
+      return detail.isStrict();
    }
    
    /**
@@ -387,31 +363,14 @@ class ObjectScanner implements Scanner {
     * This will acquire all fields and getter setter pairs that have
     * been annotated with the XML annotations.
     *
-    * @param type this is the object type that is to be scanned
+    * @param detail this contains the details for the class scanned
     */  
-   private void scan(Class type) throws Exception {
-      root(type);
-      order(type);
-      access(type);
-      field(type);
-      method(type);
-      validate(type);
-      commit(type);
-   }
-   
-   /**
-    * Once the scanner has completed extracting the annotations and
-    * validating the resulting structure this is called to complete 
-    * the process. This will build a <code>Structure</code> object and
-    * clean up any data structures no longer required by the scanner.
-    * 
-    * @param type this is the type that this scanner has scanned
-    */
-   private void commit(Class type) throws Exception {
-      if(structure == null) {
-         structure = builder.build(type);
-      }
-      builder = null;
+   private void scan(Detail detail) throws Exception {
+      order(detail);
+      field(detail);
+      method(detail);
+      validate(detail);
+      commit(detail);
    }
    
    /**
@@ -420,10 +379,29 @@ class ObjectScanner implements Scanner {
     * acts as an override to the order provided by the declaration of
     * the types within the object.  
     * 
-    * @param type this is the type to be scanned for the order
+    * @param detail this contains the details for the class scanned
     */
-   private void order(Class<?> type) throws Exception {
+   private void order(Detail detail) throws Exception {
+      Class type = detail.getType();
+      
       builder.assemble(type);
+   }
+   
+   /**
+    * Once the scanner has completed extracting the annotations and
+    * validating the resulting structure this is called to complete 
+    * the process. This will build a <code>Structure</code> object and
+    * clean up any data structures no longer required by the scanner.
+    * 
+    * @param detail this contains the details for the class scanned
+    */
+   private void commit(Detail detail) throws Exception {
+      Class type = detail.getType();
+      
+      if(structure == null) {
+         structure = builder.build(type);
+      }
+      builder = null;
    }
    
    /**
@@ -431,68 +409,13 @@ class ObjectScanner implements Scanner {
     * If a <code>Text</code> annotation has been used with elements
     * then validation will fail and an exception will be thrown. 
     * 
-    * @param type this is the object type that is being scanned
-    * 
-    * @throws Exception if text and element annotations are present
+    * @param detail this contains the details for the class scanned
     */
-   private void validate(Class type) throws Exception {
+   private void validate(Detail detail) throws Exception {
+      Class type = detail.getType();
+      
       builder.commit(type);
       builder.validate(type);
-   }
-  
-   /**
-    * This is used to acquire the optional <code>Root</code> from the
-    * specified class. The root annotation provides information as
-    * to how the object is to be parsed as well as other information
-    * such as the name of the object if it is to be serialized.
-    *
-    * @param type this is the type of the class to be inspected
-    */    
-   private void root(Class<?> type) {
-      String real = type.getSimpleName();
-      Root root = scanner.getRoot();
-      String text = real;
-
-      if(root != null) {
-         text = root.name();
-
-         if(isEmpty(text)) {
-            text = Reflector.getName(real);
-         }      
-         name = text.intern();      
-      }
-   }
-   
-   /**
-    * This is used to determine the access type for the class. The
-    * access type is specified by the <code>DefaultType</code>
-    * enumeration. Setting a default access tells this scanner to
-    * synthesize an XML annotation for all fields or methods that
-    * do not have associated annotations. 
-    * 
-    * @param type this is the type to acquire the default type for
-    */
-   private void access(Class<?> type) {
-      Default holder = scanner.getDefault();
-      
-      if(holder != null) {
-         required = holder.required();
-         access = holder.value();
-      }
-   }
-   
-   /**
-    * This method is used to determine if a root annotation value is
-    * an empty value. Rather than determining if a string is empty
-    * be comparing it to an empty string this method allows for the
-    * value an empty string represents to be changed in future.
-    * 
-    * @param value this is the value to determine if it is empty
-    * 
-    * @return true if the string value specified is an empty value
-    */
-   private boolean isEmpty(String value) {
-      return value.length() == 0;
    }
   
    /**
@@ -500,10 +423,11 @@ class ObjectScanner implements Scanner {
     * within the specified class. The field contacts are added to
     * either the attributes or elements map depending on annotation.
     * 
-    * @param type this is the object type that is to be scanned
+    * @param detail this contains the details for the class scanned
     */    
-   private void field(Class type) throws Exception {
-      ContactList list = new FieldScanner(type, access, required);
+   private void field(Detail detail) throws Exception {
+      Class type = detail.getType();
+      ContactList list = support.getFields(type);
       
       for(Contact contact : list) {
          Annotation label = contact.getAnnotation();
@@ -519,10 +443,11 @@ class ObjectScanner implements Scanner {
     * within the specified class. The field contacts are added to
     * either the attributes or elements map depending on annotation.
     * 
-    * @param type this is the object type that is to be scanned
+    * @param detail this contains the details for the class scanned
     */ 
-   private void method(Class type) throws Exception {
-      ContactList list = new MethodScanner(type, access, required);
+   private void method(Detail detail) throws Exception {
+      Class type = detail.getType();
+      ContactList list = support.getMethods(type);
       
       for(Contact contact : list) {
          Annotation label = contact.getAnnotation();

@@ -24,18 +24,19 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.DefaultType;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementArray;
 import org.simpleframework.xml.ElementList;
+import org.simpleframework.xml.ElementListUnion;
 import org.simpleframework.xml.ElementMap;
+import org.simpleframework.xml.ElementMapUnion;
+import org.simpleframework.xml.ElementUnion;
 import org.simpleframework.xml.Text;
 import org.simpleframework.xml.Transient;
-import org.simpleframework.xml.ElementUnion;
-import org.simpleframework.xml.ElementListUnion;
-import org.simpleframework.xml.ElementMapUnion;
 import org.simpleframework.xml.Version;
 
 /**
@@ -68,14 +69,9 @@ class MethodScanner extends ContactList {
    private final MethodPartFactory factory;
    
    /**
-    * This is used to acquire the hierarchy for the class scanned.
+    * This object contains various support functions for the class.
     */
-   private final Hierarchy hierarchy;
-   
-   /**
-    * This is the default access type to be used for this scanner.
-    */
-   private final DefaultType access;
+   private final Support support;
    
    /**
     * This is used to collect all the set methods from the object.
@@ -86,61 +82,28 @@ class MethodScanner extends ContactList {
     * This is used to collect all the get methods from the object.
     */
    private final PartMap read;
-   
+
    /**
-    * This is the type of the object that is being scanned.
+    * This contains the details for the class that is being scanned.
     */
-   private final Class type;
-   
-   /**
-    * Constructor for the <code>MethodScanner</code> object. This is
-    * used to create an object that will scan the specified class
-    * such that all bean property methods can be paired under the
-    * XML annotation specified within the class.
-    * 
-    * @param type this is the type that is to be scanned for methods
-    * 
-    * @throws Exception thrown if there was a problem scanning
-    */
-   public MethodScanner(Class type) throws Exception {
-      this(type, null);
-   }
-   
+   private final Detail detail;
+      
    /**
     * Constructor for the <code>MethodScanner</code> object. This is
     * used to create an object that will scan the specified class
     * such that all bean property methods can be paired under the
     * XML annotation specified within the class.
     * 
-    * @param type this is the type that is to be scanned for methods
-    * @param access this is the access type for default values
-    * 
-    * @throws Exception thrown if there was a problem scanning
+    * @param detail this contains the details for the class scanned
+    * @param support this contains various support functions
     */
-   public MethodScanner(Class type, DefaultType access) throws Exception {
-      this(type, access, true);
-   }
-   
-   /**
-    * Constructor for the <code>MethodScanner</code> object. This is
-    * used to create an object that will scan the specified class
-    * such that all bean property methods can be paired under the
-    * XML annotation specified within the class.
-    * 
-    * @param type this is the type that is to be scanned for methods
-    * @param access this is the access type for default values
-    * @param required used to determine if defaults are required
-    * 
-    * @throws Exception thrown if there was a problem scanning
-    */
-   public MethodScanner(Class type, DefaultType access, boolean required) throws Exception {
-      this.factory = new MethodPartFactory(required);
-      this.hierarchy = new Hierarchy(type);
+   public MethodScanner(Detail detail, Support support) throws Exception {
+      this.factory = new MethodPartFactory(detail);
       this.write = new PartMap();
       this.read = new PartMap();
-      this.access = access;
-      this.type = type;
-      this.scan(type);
+      this.support = support;
+      this.detail = detail;
+      this.scan(detail);
    }
    
    /**
@@ -149,19 +112,35 @@ class MethodScanner extends ContactList {
     * a method is annotated it is converted to a contact so that
     * it can be used during serialization and deserialization.
     * 
-    * @param type this is the type to be scanned for methods
-    * 
-    * @throws Exception thrown if the object schema is invalid
+    * @param detail this contains the details for the class scanned
     */
-   private void scan(Class type) throws Exception {
-      for(Class next : hierarchy) {
-         scan(next, access);
+   private void scan(Detail detail) throws Exception {
+      DefaultType access = detail.getAccess();
+      Class base = detail.getSuper();
+
+      if(base != null) {
+         extend(base);
       }
-      for(Class next : hierarchy) {
-         scan(next, type);
-      } 
+      extract(detail, access);
+      extract(detail);
       build();
       validate();
+   }
+   
+   /**
+    * This method is used to extend the provided class. Extending a
+    * class in this way basically means that the fields that have
+    * been scanned in the specific class will be added to this. Doing
+    * this improves the performance of classes within a hierarchy.
+    * 
+    * @param base the class to inherit scanned fields from
+    */
+   private void extend(Class base) throws Exception {
+      ContactList list = support.getMethods(base);
+      
+      for(Contact contact : list) {
+         process((MethodContact)contact);
+      }
    }
    
    /**
@@ -170,36 +149,19 @@ class MethodScanner extends ContactList {
     * an XML element and can be used as a <code>Contact</code> for
     * an entity within the object.
     * 
-    * @param real this is the actual type of the object scanned
-    * @param type this is one of the super classes for the object
-    * 
-    * @throws Exception thrown if the class schema is invalid
+    * @param detail this is one of the super classes for the object
     */
-   private void scan(Class type, Class real) throws Exception {
-      Method[] list = type.getDeclaredMethods();
+   private void extract(Detail detail) throws Exception {
+      List<MethodDetail> methods = detail.getMethods();
 
-      for(Method method : list) {
-         scan(method);              
+      for(MethodDetail entry: methods) {
+         Annotation[] list = entry.getAnnotations();
+         Method method = entry.getMethod();
+         
+         for(Annotation label : list) {
+            scan(method, label, list);             
+         }
       }     
-   }
-   
-   /**
-    * This is used to scan all annotations within the given method.
-    * Each annotation is checked against the set of supported XML
-    * annotations. If the annotation is one of the XML annotations
-    * then the method is considered for acceptance as either a
-    * get method or a set method for the annotated property.
-    * 
-    * @param method the method to be scanned for XML annotations
-    * 
-    * @throws Exception if the method is not a Java Bean method
-    */
-   private void scan(Method method) throws Exception {
-      Annotation[] list = method.getDeclaredAnnotations();
-      
-      for(Annotation label : list) {
-         scan(method, label, list);                       
-      }  
    }
    
    /**
@@ -208,15 +170,16 @@ class MethodScanner extends ContactList {
     * should have a default XML annotation then it is added to the
     * list of contacts to be used to form the class schema.
     * 
-    * @param type this is the type to have its methods scanned
+    * @param detail this is the detail to have its methods scanned
     * @param access this is the default access type for the class
     */
-   private void scan(Class type, DefaultType access) throws Exception {
-      Method[] methods = type.getDeclaredMethods();
+   private void extract(Detail detail, DefaultType access) throws Exception {
+      List<MethodDetail> methods = detail.getMethods();
 
       if(access == PROPERTY) {
-         for(Method method : methods) {
-            Annotation[] list = method.getDeclaredAnnotations();
+         for(MethodDetail entry : methods) {
+            Annotation[] list = entry.getAnnotations();
+            Method method = entry.getMethod();
             Class value = factory.getType(method);
             
             if(value != null) {
@@ -235,8 +198,6 @@ class MethodScanner extends ContactList {
     * @param method the method that the annotation comes from
     * @param label the annotation used to model the XML schema
     * @param list this is the list of annotations on the method
-    * 
-    * @throws Exception if there is more than one text annotation
     */ 
    private void scan(Method method, Annotation label, Annotation[] list) throws Exception {
       if(label instanceof Attribute) {
@@ -345,6 +306,25 @@ class MethodScanner extends ContactList {
    }
    
    /**
+    * This is used to process a method from a super class. Processing
+    * the inherited method involves extracting out the individual
+    * parts of the method an initializing the internal state of this
+    * scanner. If method is overridden it overwrites the parts.
+    * 
+    * @param contact this is a method inherited from a super class
+    */
+   private void process(MethodContact contact) {
+      MethodPart get = contact.getRead();
+      MethodPart set = contact.getWrite();
+      String name = get.getName();
+      
+      if(set != null) {
+         write.put(name, set);
+      }
+      read.put(name,  get);
+   }
+   
+   /**
     * This method is used to remove a particular method from the list
     * of contacts. If the <code>Transient</code> annotation is used
     * by any method then this method must be removed from the schema.
@@ -393,8 +373,6 @@ class MethodScanner extends ContactList {
     * names must match exactly, meaning that the case and value of
     * the strings must be identical. Also in order for this to succeed
     * the types for the methods and the annotation must also match.
-    *  
-    * @throws Exception thrown if there is a problem matching methods
     */
    private void build() throws Exception {
       for(String name : read) {
@@ -414,9 +392,7 @@ class MethodScanner extends ContactList {
     * the types for the methods and the annotation must also match.
     * 
     * @param read this is a get method that has been extracted
-    * @param name this is the Java Bean methods name to be matched   
-    *  
-    * @throws Exception thrown if there is a problem matching methods
+    * @param name this is the Java Bean methods name to be matched
     */
    private void build(MethodPart read, String name) throws Exception {      
       MethodPart match = write.take(name);
@@ -424,7 +400,7 @@ class MethodScanner extends ContactList {
       if(match != null) {
          build(read, match);
       } else {
-         build(read); // read only
+         build(read); 
       }
    }   
    
@@ -434,9 +410,7 @@ class MethodScanner extends ContactList {
     * by the class schema. So, read only methods can be used in a 
     * fully serializable and deserializable object.
     * 
-    * @param read this is the part to add as a read only contact      
-    *  
-    * @throws Exception thrown if there is a problem matching methods
+    * @param read this is the part to add as a read only contact
     */
    private void build(MethodPart read) throws Exception {
       add(new MethodContact(read));
@@ -450,16 +424,14 @@ class MethodScanner extends ContactList {
     * the types for the methods and the annotation must also match.
     * 
     * @param read this is a get method that has been extracted
-    * @param write this is the write method to compare details with      
-    *  
-    * @throws Exception thrown if there is a problem matching methods
+    * @param write this is the write method to compare details with    
     */
    private void build(MethodPart read, MethodPart write) throws Exception {
       Annotation label = read.getAnnotation();
       String name = read.getName();
       
       if(!write.getAnnotation().equals(label)) {
-         throw new MethodException("Annotations do not match for '%s' in %s", name, type);
+         throw new MethodException("Annotations do not match for '%s' in %s", name, detail);
       }
       Class type = read.getType();
       
@@ -474,8 +446,6 @@ class MethodScanner extends ContactList {
     * have been matched with a set method. This ensures that there
     * is not a set method within the object that does not have a
     * match, therefore violating the contract of a property.
-    * 
-    * @throws Exception thrown if there is a unmatched set method
     */
    private void validate() throws Exception {
       for(String name : write) {
@@ -495,15 +465,13 @@ class MethodScanner extends ContactList {
     * 
     * @param write this is a get method that has been extracted
     * @param name this is the Java Bean methods name to be matched 
-    * 
-    * @throws Exception thrown if there is a unmatched set method
     */
    private void validate(MethodPart write, String name) throws Exception {      
       MethodPart match = read.take(name);     
       Method method = write.getMethod();      
          
       if(match == null) {
-         throw new MethodException("No matching get method for %s in %s", method, type);
+         throw new MethodException("No matching get method for %s in %s", method, detail);
       }      
    }
    

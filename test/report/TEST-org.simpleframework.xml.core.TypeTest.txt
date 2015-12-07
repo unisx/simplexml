@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -85,7 +85,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </object>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
@@ -127,7 +127,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </Object>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <test>
    <primitive>
       <boolean>true</boolean>
@@ -212,7 +212,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </object>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
@@ -254,8 +254,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </Object>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.343 sec
+Testcase: testPrimitive took 0.168 sec
 Testcase: testDirectory took 0 sec

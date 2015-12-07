@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.RegistryMatcherTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.088 sec
 
-Testcase: testMatcher took 0.156 sec
+Testcase: testMatcher took 0.085 sec
 Testcase: testDirectory took 0 sec

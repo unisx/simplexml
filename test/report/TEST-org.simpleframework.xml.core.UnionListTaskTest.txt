@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListTaskTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.162 sec
 ------------- Standard Output ---------------
 <task name="setup">
    <delete>
@@ -55,7 +55,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
    </move>
 </task>>>>>> ELEMENT=[element task]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTaskTest$Task]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Task ID="0" name="setup">
    <!-- org.simpleframework.xml.core.UnionListTaskTest$Delete -->
    <Delete ID="1">
@@ -76,8 +76,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
    </Move>
 </Task>>>>>> ELEMENT=[element Task]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListTaskTest$Task]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testUnion took 0.281 sec
+Testcase: testUnion took 0.159 sec
 Testcase: testDirectory took 0 sec

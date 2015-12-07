@@ -156,6 +156,17 @@ class FieldContact implements Contact {
    }
    
    /**
+    * This is the class that declares the contact. The declaring
+    * class is where the field represented been defined. This will
+    * typically be a class rather than an interface.
+    * 
+    * @return this returns the class the contact is declared within
+    */
+   public Class getDeclaringClass() {
+      return field.getDeclaringClass();
+   }
+   
+   /**
     * This is used to acquire the name of the field. This will return
     * the name of the field which can then be used to determine the 
     * XML attribute or element the contact represents. This ensures

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OriginalTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.164 sec
 ------------- Standard Output ---------------
 <exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
@@ -11,12 +11,12 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    </list>
    <map class="java.util.concurrent.ConcurrentHashMap">
       <entry>
-         <string>b</string>
-         <double>2.0</double>
-      </entry>
-      <entry>
          <string>a</string>
          <double>1.0</double>
+      </entry>
+      <entry>
+         <string>b</string>
+         <double>2.0</double>
       </entry>
       <entry>
          <string>c</string>
@@ -33,10 +33,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <root:listEntry name="c" value="3"/>
    <root:listEntry name="d" value="4"/>
    <mapEntry>
-      <double>7.0</double>
-      <root:entry name="an original name" value="an original value"/>
-   </mapEntry>
-   <mapEntry>
       <double>1.0</double>
       <root:entry name="a" value="1"/>
    </mapEntry>
@@ -47,6 +43,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <mapEntry>
       <double>2.0</double>
       <root:entry name="b" value="2"/>
+   </mapEntry>
+   <mapEntry>
+      <double>7.0</double>
+      <root:entry name="an original name" value="an original value"/>
    </mapEntry>
 </exampleWithOriginals><exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
@@ -58,12 +58,12 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    </list>
    <map class="java.util.concurrent.ConcurrentHashMap">
       <entry>
-         <string>b</string>
-         <double>2.0</double>
-      </entry>
-      <entry>
          <string>a</string>
          <double>1.0</double>
+      </entry>
+      <entry>
+         <string>b</string>
+         <double>2.0</double>
       </entry>
       <entry>
          <string>c</string>
@@ -80,10 +80,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <root:listEntry name="c" value="3"/>
    <root:listEntry name="d" value="4"/>
    <mapEntry>
-      <double>7.0</double>
-      <root:entry name="an original name" value="an original value"/>
-   </mapEntry>
-   <mapEntry>
       <double>1.0</double>
       <root:entry name="a" value="1"/>
    </mapEntry>
@@ -94,6 +90,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <mapEntry>
       <double>2.0</double>
       <root:entry name="b" value="2"/>
+   </mapEntry>
+   <mapEntry>
+      <double>7.0</double>
+      <root:entry name="an original name" value="an original value"/>
    </mapEntry>
 </exampleWithOriginals><exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
@@ -105,12 +105,12 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    </list>
    <map class="java.util.concurrent.ConcurrentHashMap">
       <entry>
-         <string>b</string>
-         <double>2.0</double>
-      </entry>
-      <entry>
          <string>a</string>
          <double>1.0</double>
+      </entry>
+      <entry>
+         <string>b</string>
+         <double>2.0</double>
       </entry>
       <entry>
          <string>c</string>
@@ -127,10 +127,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <root:listEntry name="c" value="3"/>
    <root:listEntry name="d" value="4"/>
    <mapEntry>
-      <double>7.0</double>
-      <root:entry name="an original name" value="an original value"/>
-   </mapEntry>
-   <mapEntry>
       <double>1.0</double>
       <root:entry name="a" value="1"/>
    </mapEntry>
@@ -141,6 +137,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <mapEntry>
       <double>2.0</double>
       <root:entry name="b" value="2"/>
+   </mapEntry>
+   <mapEntry>
+      <double>7.0</double>
+      <root:entry name="an original name" value="an original value"/>
    </mapEntry>
 </exampleWithOriginals>
 <example-with-originals ID="0" xmlns:root="http://domain/entry">
@@ -161,15 +161,15 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <map class="java.util.concurrent.ConcurrentHashMap" ID="7">
       <entry>
          <!-- java.lang.String -->
-         <string ID="8">b</string>
+         <string ID="8">a</string>
          <!-- java.lang.Double -->
-         <double ID="9">2.0</double>
+         <double ID="9">1.0</double>
       </entry>
       <entry>
          <!-- java.lang.String -->
-         <string ID="10">a</string>
+         <string ID="10">b</string>
          <!-- java.lang.Double -->
-         <double ID="11">1.0</double>
+         <double ID="11">2.0</double>
       </entry>
       <entry>
          <!-- java.lang.String -->
@@ -196,31 +196,31 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <root:list-entry ID="20" name="d" value="4"/>
    <map-entry>
       <!-- java.lang.Double -->
-      <double ID="21">7.0</double>
+      <double ID="21">1.0</double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:entry ID="22" name="an original name" value="an original value"/>
+      <root:entry ID="22" name="a" value="1"/>
    </map-entry>
    <map-entry>
       <!-- java.lang.Double -->
-      <double ID="23">1.0</double>
+      <double ID="23">3.0</double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:entry ID="24" name="a" value="1"/>
+      <root:entry ID="24" name="c" value="3"/>
    </map-entry>
    <map-entry>
       <!-- java.lang.Double -->
-      <double ID="25">3.0</double>
+      <double ID="25">2.0</double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:entry ID="26" name="c" value="3"/>
+      <root:entry ID="26" name="b" value="2"/>
    </map-entry>
    <map-entry>
       <!-- java.lang.Double -->
-      <double ID="27">2.0</double>
+      <double ID="27">7.0</double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:entry ID="28" name="b" value="2"/>
+      <root:entry ID="28" name="an original name" value="an original value"/>
    </map-entry>
 </example-with-originals>>>>>> ELEMENT=[element example-with-originals]
 >>>>> TYPE=[class org.simpleframework.xml.core.OriginalTest$ExampleWithOriginals]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ExampleWithOriginals ID="0" xmlns:root="http://domain/entry">
    <!-- java.util.Collection -->
    <List class="java.util.concurrent.CopyOnWriteArrayList" ID="1">
@@ -239,15 +239,15 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <Map class="java.util.concurrent.ConcurrentHashMap" ID="7">
       <Entry>
          <!-- java.lang.String -->
-         <String ID="8">b</String>
+         <String ID="8">a</String>
          <!-- java.lang.Double -->
-         <double ID="9">2.0</double>
+         <double ID="9">1.0</double>
       </Entry>
       <Entry>
          <!-- java.lang.String -->
-         <String ID="10">a</String>
+         <String ID="10">b</String>
          <!-- java.lang.Double -->
-         <double ID="11">1.0</double>
+         <double ID="11">2.0</double>
       </Entry>
       <Entry>
          <!-- java.lang.String -->
@@ -274,33 +274,33 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <root:ListEntry ID="20" name="d" value="4"/>
    <MapEntry>
       <!-- java.lang.Double -->
-      <Double ID="21">7.0</Double>
+      <Double ID="21">1.0</Double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:Entry ID="22" name="an original name" value="an original value"/>
+      <root:Entry ID="22" name="a" value="1"/>
    </MapEntry>
    <MapEntry>
       <!-- java.lang.Double -->
-      <Double ID="23">1.0</Double>
+      <Double ID="23">3.0</Double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:Entry ID="24" name="a" value="1"/>
+      <root:Entry ID="24" name="c" value="3"/>
    </MapEntry>
    <MapEntry>
       <!-- java.lang.Double -->
-      <Double ID="25">3.0</Double>
+      <Double ID="25">2.0</Double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:Entry ID="26" name="c" value="3"/>
+      <root:Entry ID="26" name="b" value="2"/>
    </MapEntry>
    <MapEntry>
       <!-- java.lang.Double -->
-      <Double ID="27">2.0</Double>
+      <Double ID="27">7.0</Double>
       <!-- org.simpleframework.xml.core.OriginalTest$Entry -->
-      <root:Entry ID="28" name="b" value="2"/>
+      <root:Entry ID="28" name="an original name" value="an original value"/>
    </MapEntry>
 </ExampleWithOriginals>>>>>> ELEMENT=[element ExampleWithOriginals]
 >>>>> TYPE=[class org.simpleframework.xml.core.OriginalTest$ExampleWithOriginals]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testOriginals took 0.281 sec
+Testcase: testOriginals took 0.161 sec
 Testcase: testA took 0 sec
 Testcase: testDirectory took 0 sec

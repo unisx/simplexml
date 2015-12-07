@@ -8,7 +8,7 @@
       <property name="jar.path" value="jar"/>
       <property name="test.path" value="test"/>
       <property name="lib.path" value="lib"/>
-      <property name="version" value="2.6.7"/>
+      <property name="version" value="2.6.8"/>
    </target>
 
    <target name="clean" depends="layout">

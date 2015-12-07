@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ListCycleTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.178 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one class="java.util.ArrayList" id="1">
@@ -61,7 +61,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    <example REFERER="0"/>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$ListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Root ID="0">
    <!-- java.util.List -->
    <One class="java.util.ArrayList" ID="1">
@@ -91,7 +91,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    <Example REFERER="0"/>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$ListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <inlineListExample id="0">
    <text id="1" value="entry one"/>
    <text id="2" value="entry two"/>
@@ -122,7 +122,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    <example REFERER="0"/>
 </inline-list-example>>>>>> ELEMENT=[element inline-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$InlineListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <InlineListExample ID="0">
    <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
    <Text ID="1" value="entry one"/>
@@ -138,7 +138,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    <Example REFERER="0"/>
 </InlineListExample>>>>>> ELEMENT=[element InlineListExample]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$InlineListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <inlinePrimitiveListExample id="0">
    <string id="1"><![CDATA[entry one]]></string>
    <string id="2"><![CDATA[entry two]]></string>
@@ -169,7 +169,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    <example REFERER="0"/>
 </inline-primitive-list-example>>>>>> ELEMENT=[element inline-primitive-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$InlinePrimitiveListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <InlinePrimitiveListExample ID="0">
    <!-- java.lang.String -->
    <String ID="1"><![CDATA[entry one]]></String>
@@ -185,7 +185,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    <Example REFERER="0"/>
 </InlinePrimitiveListExample>>>>>> ELEMENT=[element InlinePrimitiveListExample]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$InlinePrimitiveListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <root id="0">
    <list class="java.util.ArrayList" id="1">
       <value id="2">
@@ -210,7 +210,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$NestedListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Root ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -222,11 +222,11 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ListCycleTest$NestedListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.25 sec
-Testcase: testInlineList took 0.031 sec
-Testcase: testInlinePrimitiveList took 0.031 sec
-Testcase: testNestedExample took 0.016 sec
+Testcase: testCycle took 0.129 sec
+Testcase: testInlineList took 0.019 sec
+Testcase: testInlinePrimitiveList took 0.014 sec
+Testcase: testNestedExample took 0.013 sec
 Testcase: testDirectory took 0 sec

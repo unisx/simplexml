@@ -18,8 +18,13 @@
 
 package org.simpleframework.xml.core;
 
+import static java.util.Collections.emptyList;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -32,9 +37,11 @@ import org.simpleframework.xml.ElementUnion;
 import org.simpleframework.xml.Text;
 import org.simpleframework.xml.Version;
 import org.simpleframework.xml.stream.Format;
+import org.simpleframework.xml.util.Cache;
+import org.simpleframework.xml.util.ConcurrentCache;
 
 /**
- * The <code>LabelFactory</code> object is used to create instances of
+ * The <code>LabelExtractor</code> object is used to create instances of
  * the <code>Label</code> object that can be used to convert an XML
  * node into a Java object. Each label created requires the contact it
  * represents and the XML annotation it is marked with.  
@@ -46,24 +53,30 @@ import org.simpleframework.xml.stream.Format;
  * 
  * @author Niall Gallagher
  */
-final class LabelFactory {
+class LabelExtractor {
 
    /**
-    * Creates a <code>Label</code> using the provided contact and XML
-    * annotation. The label produced contains all information related
-    * to an object member. It knows the name of the XML entity, as
-    * well as whether it is required. Once created the converter can
-    * transform an XML node into Java object and vice versa.
-    * 
-    * @param contact this is contact that the label is produced for
-    * @param label represents the XML annotation for the contact
-    * @param format this is the format used to style the labels
-    * 
-    * @return returns the label instantiated for the field
+    * This is used to cache the list of labels that have been created.
     */
-   public static Label getInstance(Contact contact, Annotation label, Format format) throws Exception {
-      return getInstance(contact, label, null, format);
-   } 
+   private final Cache<LabelGroup> cache;
+  
+   /**
+    * Contains the format that is associated with the serializer.
+    */
+   private final Format format;
+   
+   /**
+    * Constructor for the <code>LabelExtractor</code> object. This
+    * creates an extractor that will extract labels for a specific
+    * contact. Labels are cached within the extractor so that they 
+    * can be looked up without having to rebuild it each time.
+    * 
+    * @param format this is the format used by the serializer
+    */
+   public LabelExtractor(Format format) {
+      this.cache = new ConcurrentCache<LabelGroup>();
+      this.format = format;
+   }
    
    /**
     * Creates a <code>Label</code> using the provided contact and XML
@@ -74,19 +87,166 @@ final class LabelFactory {
     * 
     * @param contact this is contact that the label is produced for
     * @param label represents the XML annotation for the contact
-    * @param entry this is the entry annotation for this label
-    * @param format this is the format used to style the labels
     * 
-    * @return returns the label instantiated for the field
+    * @return returns the label instantiated for the contact
     */
-   public static Label getInstance(Contact contact, Annotation label, Annotation entry, Format format) throws Exception {
-      Label value = getLabel(contact, label, entry, format);
+   public Label getLabel(Contact contact, Annotation label) throws Exception {
+      Object key = getKey(contact, label);
+      LabelGroup list = getGroup(contact, label, key);
+      
+      if(list != null) {
+         return list.getPrimary();
+      }
+      return null;
+   } 
+   
+   /**
+    * Creates a <code>List</code> using the provided contact and XML
+    * annotation. The labels produced contain all information related
+    * to an object member. It knows the name of the XML entity, as
+    * well as whether it is required. Once created the converter can
+    * transform an XML node into Java object and vice versa.
+    * 
+    * @param contact this is contact that the label is produced for
+    * @param label represents the XML annotation for the contact
+    * 
+    * @return returns the list of labels associated with the contact
+    */
+   public List<Label> getList(Contact contact, Annotation label) throws Exception {
+      Object key = getKey(contact, label);
+      LabelGroup list = getGroup(contact, label, key);
+      
+      if(list != null) {
+         return list.getList();
+      }
+      return emptyList();
+   }
+
+   /**
+    * Creates a <code>LabelGroup</code> using the provided contact and
+    * annotation. The labels produced contain all information related
+    * to an object member. It knows the name of the XML entity, as
+    * well as whether it is required. Once created the converter can
+    * transform an XML node into Java object and vice versa.
+    * 
+    * @param contact this is contact that the label is produced for
+    * @param label represents the XML annotation for the contact
+    * @param key this is the key that uniquely represents the contact
+    * 
+    * @return returns the list of labels associated with the contact
+    */
+   private LabelGroup getGroup(Contact contact, Annotation label, Object key) throws Exception {
+      LabelGroup value = cache.fetch(key);
       
       if(value == null) {
-         return value;
-      }      
-      return new CacheLabel(value);
-   } 
+         LabelGroup list = getLabels(contact, label);
+         
+         if(list != null) {
+            cache.cache(key, list);
+         }
+         return list;
+      }
+      return value;
+   }
+   
+   /**
+    * Creates a <code>LabelGroup</code> using the provided contact and
+    * annotation. The labels produced contain all information related
+    * to an object member. It knows the name of the XML entity, as
+    * well as whether it is required. Once created the converter can
+    * transform an XML node into Java object and vice versa.
+    * 
+    * @param contact this is contact that the label is produced for
+    * @param label represents the XML annotation for the contact
+    * 
+    * @return returns the list of labels associated with the contact
+    */
+   private LabelGroup getLabels(Contact contact, Annotation label) throws Exception {
+      if(label instanceof ElementUnion) {
+         return getUnion(contact, label);
+      }
+      if(label instanceof ElementListUnion) {
+         return getUnion(contact, label);
+      }
+      if(label instanceof ElementMapUnion) {
+         return getUnion(contact, label);
+      }
+      return getSingle(contact, label);
+   }
+   
+   /**
+    * Creates a <code>LabelGroup</code> using the provided contact and
+    * annotation. The labels produced contain all information related
+    * to an object member. It knows the name of the XML entity, as
+    * well as whether it is required. Once created the converter can
+    * transform an XML node into Java object and vice versa.
+    * 
+    * @param contact this is contact that the label is produced for
+    * @param label represents the XML annotation for the contact
+    * 
+    * @return returns the list of labels associated with the contact
+    */
+   private LabelGroup getSingle(Contact contact, Annotation label) throws Exception {
+      Label value = getLabel(contact, label, null);
+      
+      if(value != null) {
+         value = new CacheLabel(value);
+      }
+      return new LabelGroup(value);
+   }
+   
+   /**
+    * Creates a <code>LabelGroup</code> using the provided contact and
+    * annotation. The labels produced contain all information related
+    * to an object member. It knows the name of the XML entity, as
+    * well as whether it is required. Once created the converter can
+    * transform an XML node into Java object and vice versa.
+    * 
+    * @param contact this is contact that the label is produced for
+    * @param label represents the XML annotation for the contact
+    * 
+    * @return returns the list of labels associated with the contact
+    */
+   private LabelGroup getUnion(Contact contact, Annotation label) throws Exception {
+      Annotation[] list = getAnnotations(label);
+      
+      if(list.length > 0) {
+         List<Label> labels = new LinkedList<Label>();
+      
+         for(Annotation value : list) {
+            Label entry = getLabel(contact, label, value);
+            
+            if(entry != null) {
+               entry = new CacheLabel(entry);
+            }
+            labels.add(entry);
+         }
+         return new LabelGroup(labels);
+      }
+      return null;
+   }
+   
+   /**
+    * This is used to extract the individual annotations associated
+    * with the union annotation provided. If the annotation does
+    * not represent a union then this will return null.
+    * 
+    * @param label this is the annotation to extract from
+    * 
+    * @return this returns an array of annotations from the union
+    */
+   private Annotation[] getAnnotations(Annotation label) throws Exception {
+      Class union = label.annotationType();
+      Method[] list = union.getDeclaredMethods();
+      
+      if(list.length > 0) {
+         Method method = list[0];
+         Object value = method.invoke(label);
+      
+         return (Annotation[])value;
+      }
+      return new Annotation[0];
+   }
    
    /**
     * Creates a <code>Label</code> using the provided contact and XML
@@ -98,11 +258,10 @@ final class LabelFactory {
     * @param contact this is contact that the label is produced for
     * @param label represents the XML annotation for the contact
     * @param entry this is the annotation used for the entries
-    * @param format this is the format used to style the labels
     * 
     * @return returns the label instantiated for the field
     */
-   private static Label getLabel(Contact contact, Annotation label, Annotation entry, Format format) throws Exception {     
+   private Label getLabel(Contact contact, Annotation label, Annotation entry) throws Exception {     
       Constructor factory = getConstructor(label);    
       
       if(entry != null) {
@@ -111,6 +270,21 @@ final class LabelFactory {
       return (Label)factory.newInstance(contact, label, format);
    }
     
+   /**
+    * This is used to create a key to uniquely identify a label that
+    * is associated with a contact. A key contains the contact type,
+    * the declaring class, the name, and the annotation type. This will
+    * uniquely identify the label within the class.
+    * 
+    * @param contact this is contact that the label is produced for
+    * @param label represents the XML annotation for the contact
+    * 
+    * @return this returns the key associated with the label
+    */
+   private Object getKey(Contact contact, Annotation label) {
+      return new LabelKey(contact, label);
+   }
+   
     /**
      * Creates a constructor that can be used to instantiate the label
      * used to represent the specified annotation. The constructor
@@ -121,7 +295,7 @@ final class LabelFactory {
      * 
      * @return returns a constructor for instantiating the label 
      */
-    private static Constructor getConstructor(Annotation label) throws Exception {
+    private Constructor getConstructor(Annotation label) throws Exception {
        LabelBuilder builder = getBuilder(label);
        Constructor factory = builder.getConstructor();
        
@@ -141,7 +315,7 @@ final class LabelFactory {
      * 
      * @return this returns the entry used to create a constructor
      */
-    private static LabelBuilder getBuilder(Annotation label) throws Exception{   
+    private LabelBuilder getBuilder(Annotation label) throws Exception{   
        if(label instanceof Element) {
           return new LabelBuilder(ElementLabel.class, Element.class);
        }

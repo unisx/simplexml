@@ -19,11 +19,8 @@
 package org.simpleframework.xml.core;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>ConstructorScanner</code> object is used to scan all 
@@ -56,23 +53,24 @@ class ConstructorScanner {
    private Signature primary;
    
    /**
-    * This is the format used to style the parameters extracted.
+    * This object contains various support functions for the class.
     */
-   private Format format;
+   private Support support;
    
    /**
     * Constructor for the <code>ConstructorScanner</code> object. 
-    * This is used to scan the specified class for constructors that
+    * This is used to scan the specified detail for constructors that
     * can be used to instantiate the class. Only constructors that
     * have all parameters annotated will be considered.
     * 
-    * @param type this is the type that is to be scanned
+    * @param detail this contains the details for the class scanned
+    * @param support this contains various support functions
     */
-   public ConstructorScanner(Class type, Format format) throws Exception {
+   public ConstructorScanner(Detail detail, Support support) throws Exception {
       this.signatures = new ArrayList<Signature>();
       this.registry = new ParameterMap();
-      this.format = format;
-      this.scan(type);
+      this.support = support;
+      this.scan(detail);
    }
    
    /**
@@ -115,16 +113,16 @@ class ConstructorScanner {
     * can be used to instantiate the class. Only constructors that
     * have all parameters annotated will be considered.
     * 
-    * @param type this is the type that is to be scanned
+    * @param detail this is the class detail that is to be scanned
     */
-   private void scan(Class type) throws Exception {
-      Constructor[] array = type.getDeclaredConstructors();
+   private void scan(Detail detail) throws Exception {
+      Constructor[] array = detail.getConstructors();
       
-      if(!isInstantiable(type)) {
-         throw new ConstructorException("Can not construct inner %s", type);
+      if(!detail.isInstantiable()) {
+         throw new ConstructorException("Can not construct inner %s", detail);
       }
       for(Constructor factory: array){
-         if(!type.isPrimitive()) { 
+         if(!detail.isPrimitive()) { 
             scan(factory);
          }
       } 
@@ -138,7 +136,7 @@ class ConstructorScanner {
     * @param factory the constructor to scan for parameters
     */
    private void scan(Constructor factory) throws Exception {
-      SignatureScanner scanner = new SignatureScanner(factory, registry, format);
+      SignatureScanner scanner = new SignatureScanner(factory, registry, support);
 
       if(scanner.isValid()) {
          List<Signature> list = scanner.getSignatures();
@@ -148,28 +146,9 @@ class ConstructorScanner {
                
             if(size == 0) {
                primary = signature;
-               }
-            signatures.add(signature);
             }
+            signatures.add(signature);
+         }
       }
-   }
-   
-   /**
-    * This is used to determine if the class is an inner class. If
-    * the class is a inner class and not static then this returns
-    * false. Only static inner classes can be instantiated using
-    * reflection as they do not require a "this" argument.
-    * 
-    * @param type this is the class that is to be evaluated
-    * 
-    * @return this returns true if the class is a static inner
-    */
-   private boolean isInstantiable(Class type) {
-      int modifiers = type.getModifiers();
-       
-      if(Modifier.isStatic(modifiers)) {
-         return true;
-      }
-      return !type.isMemberClass();       
    }
 }

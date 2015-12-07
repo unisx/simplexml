@@ -51,21 +51,11 @@ class MethodPartFactory {
     * is used to create method parts based on the method signature 
     * and the XML annotation is uses. The created part can be used to
     * either set or get values depending on its type.
-    */
-   public MethodPartFactory() {
-      this(true);
-   }
-   
-   /**
-    * Constructor for the <code>MethodPartFactory</code> object. This
-    * is used to create method parts based on the method signature 
-    * and the XML annotation is uses. The created part can be used to
-    * either set or get values depending on its type.
     * 
-    * @param required used to determine if defaults are required
+    * @param detail this contains details for the annotated class
     */
-   public MethodPartFactory(boolean required) {
-      this.factory = new AnnotationFactory(required);
+   public MethodPartFactory(Detail detail) {
+      this.factory = new AnnotationFactory(detail);
    }
    
    /**
@@ -80,8 +70,6 @@ class MethodPartFactory {
     * @param list this is the list of annotations on the method
     * 
     * @return this is the method part object for the method
-    * 
-    * @throws Exception if Java Bean conventions are not followed
     */
    public MethodPart getInstance(Method method, Annotation[] list) throws Exception {
       Annotation label = getAnnotation(method);
@@ -105,8 +93,6 @@ class MethodPartFactory {
     * @param list this is the list of annotations on the method
     * 
     * @return this is the method part object for the method
-    * 
-    * @throws Exception if Java Bean conventions are not followed
     */
    public MethodPart getInstance(Method method, Annotation label, Annotation[] list) throws Exception {
       MethodName name = getName(method, label);
@@ -130,8 +116,6 @@ class MethodPartFactory {
     * @param label this is the annotation associated with the method
     * 
     * @return this is the method name object for the method
-    * 
-    * @throws Exception if Java Bean conventions are not followed
     */
    private MethodName getName(Method method, Annotation label) throws Exception {
       MethodType type = getMethodType(method);
@@ -186,8 +170,6 @@ class MethodPartFactory {
     * @param method this is the method to extract the annotation for
     * 
     * @return an XML annotation or null if the method is not suitable
-    * 
-    * @throws Exception thrown if the annotation could not be created
     */
    private Annotation getAnnotation(Method method) throws Exception {
       Class type = getType(method);
@@ -207,8 +189,6 @@ class MethodPartFactory {
     * @param method this is the method to acquire the type for
     * 
     * @return this returns the type associated with the method
-    * 
-    * @throws Exception thrown if the method type can not be found
     */
    public Class getType(Method method) throws Exception {
       MethodType type = getMethodType(method);
@@ -234,8 +214,6 @@ class MethodPartFactory {
     * @param method this is the method to get the parameter type for
     * 
     * @return this returns the parameter type associated with it
-    * 
-    * @throws Exception if the parameter type can not be found
     */
    private Class getParameterType(Method method) throws Exception {
       Class[] list = method.getParameterTypes();
@@ -255,8 +233,6 @@ class MethodPartFactory {
     * @param method this is the method to get the return type for
     * 
     * @return this returns the return type associated with it
-    * 
-    * @throws Exception if the return type can not be found
     */
    private Class getReturnType(Method method) throws Exception {
       Class[] list = method.getParameterTypes();
@@ -278,8 +254,6 @@ class MethodPartFactory {
     * @param type this is the method type to acquire the name for    
     * 
     * @return this is the method name object for the method
-    * 
-    * @throws Exception if Java Bean conventions are not followed
     */
    private MethodName getRead(Method method, MethodType type) throws Exception {
       Class[] list = method.getParameterTypes();
@@ -307,8 +281,6 @@ class MethodPartFactory {
     * @param type this is the method type to acquire the name for    
     * 
     * @return this is the method name object for the method
-    * 
-    * @throws Exception if Java Bean conventions are not followed
     */
    private MethodName getWrite(Method method, MethodType type) throws Exception {
       Class[] list = method.getParameterTypes();

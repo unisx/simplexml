@@ -47,20 +47,20 @@ class PrimitiveScanner implements Scanner {
    private final Section section;
    
    /**
-    * This is the type that this primitive scanner will represent.
+    * This contains the details for the class that is being scanned.
     */
-   private final Class type;
+   private final Detail detail;
    
    /**
     * Constructor for the <code>PrimitiveScanner</code> object. This 
     * is used to represent primitives or other types that do not have
     * and XML annotations present.      
     * 
-    * @param type this is the type of primitive to be represented
+    * @param detail this contains the details for the class scanned
     */
-   public PrimitiveScanner(Class type) {
+   public PrimitiveScanner(Detail detail) {
       this.section = new EmptySection(this);
-      this.type = type;
+      this.detail = detail;
    }
    
    /**
@@ -118,7 +118,7 @@ class PrimitiveScanner implements Scanner {
     * @return this is the type that this creator will represent
     */
    public Class getType() {
-      return type;
+      return detail.getType();
    }
    
    /**

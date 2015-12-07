@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionStyleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.208 sec
 ------------- Standard Output ---------------
 <UnionListExample>
    <IntegerField>
@@ -78,7 +78,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </string-entry>
 </union-list-example>>>>>> ELEMENT=[element union-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <UnionListExample ID="0">
    <!-- org.simpleframework.xml.core.UnionStyleTest$IntegerEntry -->
    <IntegerField ID="1">
@@ -107,7 +107,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </StringEntry>
 </UnionListExample>>>>>> ELEMENT=[element UnionListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <union-list-example>
    <integer-field>
       <number>777</number>
@@ -185,7 +185,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </string-entry>
 </union-list-example>>>>>> ELEMENT=[element union-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <UnionListExample ID="0">
    <!-- org.simpleframework.xml.core.UnionStyleTest$IntegerEntry -->
    <IntegerField ID="1">
@@ -214,9 +214,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
    </StringEntry>
 </UnionListExample>>>>>> ELEMENT=[element UnionListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testCamelCaseStyle took 0.296 sec
-Testcase: testHyphenStyle took 0.047 sec
+Testcase: testCamelCaseStyle took 0.163 sec
+Testcase: testHyphenStyle took 0.042 sec
 Testcase: testDirectory took 0 sec

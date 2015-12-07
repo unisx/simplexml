@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.12 sec
 ------------- Standard Output ---------------
 <enumMapExample>
    <numbers>
@@ -86,7 +86,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    </numbers>
 </enum-map-example>>>>>> ELEMENT=[element enum-map-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.EnumMapTest$EnumMapExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <EnumMapExample ID="0">
    <!-- java.util.EnumMap -->
    <Numbers ID="1">
@@ -111,8 +111,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    </Numbers>
 </EnumMapExample>>>>>> ELEMENT=[element EnumMapExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.EnumMapTest$EnumMapExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testEnumMap took 0.296 sec
+Testcase: testEnumMap took 0.119 sec
 Testcase: testDirectory took 0 sec

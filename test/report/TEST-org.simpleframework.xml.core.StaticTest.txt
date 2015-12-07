@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StaticTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.149 sec
 ------------- Standard Output ---------------
 <document title="Secret Document" xmlns="http://www.domain.com/document">
    <user:author xmlns:user="http://www.domain.com/user">Niall Gallagher</user:author>
@@ -76,7 +76,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    </section>
 </document>>>>>> ELEMENT=[element document]
 >>>>> TYPE=[class org.simpleframework.xml.core.StaticTest$Document]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
    <!-- java.lang.String -->
    <user:Author ID="1" xmlns:user="http://www.domain.com/user">Niall Gallagher</user:Author>
@@ -106,8 +106,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
    </Section>
 </Document>>>>>> ELEMENT=[element Document]
 >>>>> TYPE=[class org.simpleframework.xml.core.StaticTest$Document]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testStatic took 0.312 sec
+Testcase: testStatic took 0.146 sec
 Testcase: testDirectory took 0 sec

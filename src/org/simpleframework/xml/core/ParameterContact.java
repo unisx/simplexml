@@ -44,6 +44,11 @@ abstract class ParameterContact<T extends Annotation> implements Contact {
    protected final Constructor factory;
    
    /**
+    * This represents the class that this parameter was declared in.
+    */
+   protected final Class owner;
+   
+   /**
     * This is the index of the parameter within the constructor.
     */
    protected final int index;
@@ -65,6 +70,7 @@ abstract class ParameterContact<T extends Annotation> implements Contact {
     */
    public ParameterContact(T label, Constructor factory, int index) {
       this.labels = factory.getParameterAnnotations()[index];
+      this.owner = factory.getDeclaringClass();
       this.factory = factory;
       this.index = index;
       this.label = label;
@@ -114,6 +120,17 @@ abstract class ParameterContact<T extends Annotation> implements Contact {
     */
    public Class[] getDependents() {
       return Reflector.getParameterDependents(factory, index);
+   }
+   
+   /**
+    * This is the class that declares the contact. The declaring
+    * class is where the parameter has been defined. Typically
+    * this will not be a class rather than an interface.
+    * 
+    * @return the class this parameter is declared within
+    */
+   public Class getDeclaringClass() {
+      return owner;
    }
    
    /**

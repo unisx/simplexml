@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PerformanceTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 8.276 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -184,7 +184,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">{no.override}</Constant>
@@ -250,7 +250,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
@@ -473,7 +473,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">some constant</Constant>
@@ -539,7 +539,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <root number="1234" flag="true">
    <constant>some constant</constant>
    <name>some name</name>
@@ -762,7 +762,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">${no.override}</Constant>
@@ -828,7 +828,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <root number="1234" flag="true">
    <constant>${no.override}</constant>
    <name>${example.name}</name>
@@ -1035,7 +1035,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">&gt;&gt;&lt;&lt;</Constant>
@@ -1097,7 +1097,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <root number="1234" flag="true">
    <constant>&gt;&gt;&lt;&lt;</constant>
    <name>{example.name}</name>
@@ -1135,9 +1135,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 13.775 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-class org.xmlpull.mxp1.MXParserCachingStrings
-SIMPLE TOOK 2574ms
-JAVA TOOK 1466ms
+class com.sun.xml.internal.stream.events.StartElementEvent
+SIMPLE TOOK 1941ms
+JAVA TOOK 2281ms
 SIMPLE --->><root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
@@ -1178,15 +1178,15 @@ SIMPLE --->><root number="1234" flag="true">
       </entry>
    </list>
 </root>
-Took '2215' ms to process 10000 documents
-Took '2043' ms to process 10000 documents with templates
-Took '2106' ms to process 10000 documents with an empty filter
-Took '2948' ms to write 10000 documents
+Took '915' ms to process 10000 documents
+Took '966' ms to process 10000 documents with templates
+Took '846' ms to process 10000 documents with an empty filter
+Took '1064' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testCompareToOtherSerializers took 4.243 sec
-Testcase: testBasicDocument took 2.293 sec
-Testcase: testTemplateDocument took 2.075 sec
-Testcase: testEmptyFilter took 2.168 sec
-Testcase: testBasicWrite took 2.98 sec
+Testcase: testCompareToOtherSerializers took 4.367 sec
+Testcase: testBasicDocument took 0.961 sec
+Testcase: testTemplateDocument took 0.994 sec
+Testcase: testEmptyFilter took 0.869 sec
+Testcase: testBasicWrite took 1.081 sec
 Testcase: testDirectory took 0 sec

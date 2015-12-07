@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionMatchParametersTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.108 sec
 
-Testcase: testMatch took 0.172 sec
-Testcase: testMatchWithNull took 0.015 sec
+Testcase: testMatch took 0.1 sec
+Testcase: testMatchWithNull took 0.007 sec

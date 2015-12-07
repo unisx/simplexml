@@ -1,10 +1,10 @@
 Testsuite: org.simpleframework.xml.core.ExceptionTest
-Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
+Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0.106 sec
 
-Testcase: testValid took 0.156 sec
-Testcase: testNoAttribute took 0 sec
-Testcase: testNoElement took 0 sec
-Testcase: testExtraAttribute took 0 sec
-Testcase: testExtraElement took 0 sec
-Testcase: testMissingElement took 0.015 sec
-Testcase: testMissingAttribute took 0 sec
+Testcase: testValid took 0.088 sec
+Testcase: testNoAttribute took 0.004 sec
+Testcase: testNoElement took 0.001 sec
+Testcase: testExtraAttribute took 0.003 sec
+Testcase: testExtraElement took 0.002 sec
+Testcase: testMissingElement took 0.005 sec
+Testcase: testMissingAttribute took 0.001 sec

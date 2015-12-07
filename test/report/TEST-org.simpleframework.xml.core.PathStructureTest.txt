@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathStructureTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.173 sec
 ------------- Standard Output ---------------
 some
 fifth
@@ -119,7 +119,7 @@ tenth
    <ninth ID="10">The ninth element</ninth>
 </example-assembled-type>>>>>> ELEMENT=[element example-assembled-type]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathStructureTest$ExampleAssembledType]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ExampleAssembledType ID="0" f="This is f" g="This is g">
    <Some>
       <Path a="This is a" d="This is d" e="This is e" h="This is h"/>
@@ -155,7 +155,7 @@ tenth
    <Ninth ID="10">The ninth element</Ninth>
 </ExampleAssembledType>>>>>> ELEMENT=[element ExampleAssembledType]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathStructureTest$ExampleAssembledType]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <ExampleAssembledType f="This is f" g="This is g">
@@ -183,6 +183,6 @@ tenth
    <Ninth>The ninth element</Ninth>
 </ExampleAssembledType>------------- ---------------- ---------------
 
-Testcase: testOrder took 0.094 sec
-Testcase: testSerialization took 0.187 sec
+Testcase: testOrder took 0.065 sec
+Testcase: testSerialization took 0.106 sec
 Testcase: testDirectory took 0 sec

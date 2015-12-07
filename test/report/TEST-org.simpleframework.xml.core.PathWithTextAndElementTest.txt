@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextAndElementTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.131 sec
 ------------- Standard Output ---------------
 <pathWithTextAndElementExample>
    <some>
@@ -20,7 +20,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
    </some>
 </path-with-text-and-element-example>>>>>> ELEMENT=[element path-with-text-and-element-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTextAndElementTest$PathWithTextAndElementExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <PathWithTextAndElementExample ID="0">
    <Some>
       <Path name="A">T</Path>
@@ -29,8 +29,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
    </Some>
 </PathWithTextAndElementExample>>>>>> ELEMENT=[element PathWithTextAndElementExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTextAndElementTest$PathWithTextAndElementExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testTextWithPath took 0.234 sec
+Testcase: testTextWithPath took 0.129 sec
 Testcase: testDirectory took 0 sec

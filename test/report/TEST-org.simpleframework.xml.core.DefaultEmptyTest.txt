@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultEmptyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.132 sec
 ------------- Standard Output ---------------
 <defaultExample name="test">
    <stringList class="java.util.ArrayList"/>
@@ -28,7 +28,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
    <text ID="4">some text</text>
 </default-example>>>>>> ELEMENT=[element default-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultEmptyTest$DefaultExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <DefaultExample ID="0" name="test">
    <!-- java.util.List -->
    <StringList class="java.util.ArrayList" ID="1"/>
@@ -40,10 +40,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
    <Text ID="4">some text</Text>
 </DefaultExample>>>>>> ELEMENT=[element DefaultExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultEmptyTest$DefaultExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <defaultExample name="name">
    <text>example text</text>
 </defaultExample>------------- ---------------- ---------------
 
-Testcase: testDefaults took 0.234 sec
+Testcase: testDefaults took 0.13 sec
 Testcase: testDirectory took 0 sec

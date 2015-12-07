@@ -45,32 +45,61 @@ import org.simpleframework.xml.stream.Format;
  * 
  * @author Niall Gallagher
  */
-final class ParameterFactory {
+class ParameterFactory {
 
+   /**
+    * This format contains the style which is used to create names.
+    */
+   private final Format format;
+   
+   /**
+    * Constructor for the <code>ParameterFactory</code> object. This 
+    * factory is used for creating parameters within a constructor.
+    * Parameters can be annotated in the same way as methods or
+    * fields, this object is used to create such parameters.
+    * 
+    * @param support this contains various support functions
+    */
+   public ParameterFactory(Support support) {
+      this.format = support.getFormat();
+   }
+   
    /**
     * Creates a <code>Parameter</code> using the provided constructor
     * and the XML annotation. The parameter produced contains all 
     * information related to the constructor parameter. It knows the 
     * name of the XML entity, as well as the type. 
     * 
-    * @param method this is the constructor the parameter exists in
+    * @param factory this is the constructor the parameter exists in
     * @param label represents the XML annotation for the contact
-    * @param format this is the format used to style the parameters
     * @param index the index of the parameter in the constructor
     * 
     * @return returns the parameter instantiated for the field
     */
-   public static Parameter getInstance(Constructor method, Annotation label, Format format, int index) throws Exception {   
-      return getInstance(method, label, null, format, index);
+   public Parameter getInstance(Constructor factory, Annotation label, int index) throws Exception {   
+      return getInstance(factory, label, null, index);
    }
    
-   public static Parameter getInstance(Constructor method, Annotation label, Annotation entry, Format format, int index) throws Exception {   
-      Constructor factory = getConstructor(label);    
+   /**
+    * Creates a <code>Parameter</code> using the provided constructor
+    * and the XML annotation. The parameter produced contains all 
+    * information related to the constructor parameter. It knows the 
+    * name of the XML entity, as well as the type. 
+    * 
+    * @param factory this is the constructor the parameter exists in
+    * @param label represents the XML annotation for the contact
+    * @param entry this is the entry annotation for the parameter
+    * @param index the index of the parameter in the constructor
+    * 
+    * @return returns the parameter instantiated for the field
+    */
+   public Parameter getInstance(Constructor factory, Annotation label, Annotation entry, int index) throws Exception {   
+      Constructor builder = getConstructor(label);    
       
       if(entry != null) {
-         return (Parameter)factory.newInstance(method, label, entry, format, index);
+         return (Parameter)builder.newInstance(factory, label, entry, format, index);
       }
-      return (Parameter)factory.newInstance(method, label, format, index);
+      return (Parameter)builder.newInstance(factory, label, format, index);
    }
     
     /**
@@ -85,7 +114,7 @@ final class ParameterFactory {
      * 
      * @throws Exception thrown if the annotation is not supported
      */
-    private static Constructor getConstructor(Annotation label) throws Exception {
+    private Constructor getConstructor(Annotation label) throws Exception {
       ParameterBuilder builder = getBuilder(label);
       Constructor factory = builder.getConstructor();
       
@@ -105,7 +134,7 @@ final class ParameterFactory {
      * 
      * @return this returns the entry used to create a constructor
      */
-    private static ParameterBuilder getBuilder(Annotation label) throws Exception{      
+    private ParameterBuilder getBuilder(Annotation label) throws Exception{      
        if(label instanceof Element) {
           return new ParameterBuilder(ElementParameter.class, Element.class);
        }

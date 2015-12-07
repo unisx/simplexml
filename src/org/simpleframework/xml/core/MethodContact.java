@@ -54,6 +54,11 @@ class MethodContact implements Contact {
    private Class[] items;
    
    /**
+    * This represents the declaring class for this method.
+    */
+   private Class owner;
+   
+   /**
     * This is the dependent type as taken from the get method.
     */
    private Class item;
@@ -90,6 +95,7 @@ class MethodContact implements Contact {
     * @param set this forms the get method for the object 
     */ 
    public MethodContact(MethodPart get, MethodPart set) {
+      this.owner = get.getDeclaringClass();
       this.label = get.getAnnotation();   
       this.items = get.getDependents();
       this.item = get.getDependent();
@@ -109,6 +115,28 @@ class MethodContact implements Contact {
     */
    public boolean isReadOnly() {
       return set == null;
+   }
+   
+   /**
+    * This returns the get part of the method. Acquiring separate
+    * parts of the method ensures that method parts can be inherited
+    * easily between types as overriding either part of a property.
+    * 
+    * @return this returns the get part of the method contact
+    */
+   public MethodPart getRead() {
+      return get;
+   }
+   
+   /**
+    * This returns the set part of the method. Acquiring separate
+    * parts of the method ensures that method parts can be inherited
+    * easily between types as overriding either part of a property.
+    * 
+    * @return this returns the set part of the method contact
+    */
+   public MethodPart getWrite() {
+      return set;
    }
    
    /**
@@ -177,6 +205,17 @@ class MethodContact implements Contact {
    public Class[] getDependents() {
       return items;
    } 
+   
+   /**
+    * This is the class that declares the contact. The declaring
+    * class is where the method represented has been defined. This 
+    * will typically be a class rather than an interface.
+    * 
+    * @return this returns the class the contact is declared within
+    */
+   public Class getDeclaringClass() {
+      return owner;
+   }
    
    /**
     * This is used to acquire the name of the method. This returns
