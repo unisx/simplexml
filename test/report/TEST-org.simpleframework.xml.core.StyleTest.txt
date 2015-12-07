@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StyleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -104,7 +104,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
       </URLItem>
    </URLMap>
 </Example>
-<!-- org.simpleframework.xml.core.StyleTest$CaseExample --><example ID="0" version="1.0" name="example" URL="http://domain.com/">
+<example ID="0" version="1.0" name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.StyleTest$TextEntry -->
@@ -185,7 +185,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
          <URL-item ID="30">http://b.com/</URL-item>
       </URL-item>
    </URL-map>
-</example><!-- org.simpleframework.xml.core.StyleTest$CaseExample --><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.StyleTest$TextEntry -->
@@ -369,7 +369,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
       </URL-item>
    </URL-map>
 </example>
-<!-- org.simpleframework.xml.core.StyleTest$CaseExample --><example ID="0" version="1.0" name="example" URL="http://domain.com/">
+<example ID="0" version="1.0" name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.StyleTest$TextEntry -->
@@ -450,7 +450,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
          <URL-item ID="30">http://b.com/</URL-item>
       </URL-item>
    </URL-map>
-</example><!-- org.simpleframework.xml.core.StyleTest$CaseExample --><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.StyleTest$TextEntry -->
@@ -586,5 +586,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.419 sec
    </URL-map>
 </example>------------- ---------------- ---------------
 
-Testcase: testCase took 0.413 sec
+Testcase: testCase took 0.389 sec
 Testcase: testDirectory took 0 sec

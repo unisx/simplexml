@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScatterTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.387 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -18,7 +18,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <text name="b" version="TWO">Example 2</text>
    <text name="c" version="THREE">Example 3</text>
 </test>
-<!-- org.simpleframework.xml.core.ScatterTest$InlineTextList --><test ID="0" version="ONE">
+<test ID="0" version="ONE">
    <!-- java.lang.String -->
    <message ID="1">Some example message</message>
    <!-- java.lang.Double -->
@@ -33,7 +33,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <text ID="6" name="b" version="TWO">Example 2</text>
    <!-- org.simpleframework.xml.core.ScatterTest$TextEntry -->
    <text ID="7" name="c" version="THREE">Example 3</text>
-</test><!-- org.simpleframework.xml.core.ScatterTest$InlineTextList --><Test ID="0" version="ONE">
+</test><Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- java.lang.Double -->
@@ -65,7 +65,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <text name="b" version="TWO">Example 2</text>
    <text name="c" version="THREE">Example 3</text>
 </test>
-<!-- org.simpleframework.xml.core.ScatterTest$InlineTextList --><test ID="0" version="ONE">
+<test ID="0" version="ONE">
    <!-- java.lang.String -->
    <message ID="1">Some example message</message>
    <!-- java.lang.Double -->
@@ -80,7 +80,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <text ID="6" name="b" version="TWO">Example 2</text>
    <!-- org.simpleframework.xml.core.ScatterTest$TextEntry -->
    <text ID="7" name="c" version="THREE">Example 3</text>
-</test><!-- org.simpleframework.xml.core.ScatterTest$InlineTextList --><Test ID="0" version="ONE">
+</test><Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- java.lang.Double -->
@@ -106,7 +106,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <string>Example 2</string>
    <string>Example 3</string>
 </test>
-<!-- org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList --><test ID="0" version="ONE">
+<test ID="0" version="ONE">
    <!-- java.lang.String -->
    <message ID="1">Some example message</message>
    <!-- java.lang.String -->
@@ -115,7 +115,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <string ID="3">Example 2</string>
    <!-- java.lang.String -->
    <string ID="4">Example 3</string>
-</test><!-- org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList --><Test ID="0" version="ONE">
+</test><Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- java.lang.String -->
@@ -135,7 +135,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <string>Example 2</string>
    <string>Example 3</string>
 </test>
-<!-- org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList --><test ID="0" version="ONE">
+<test ID="0" version="ONE">
    <!-- java.lang.String -->
    <message ID="1">Some example message</message>
    <!-- java.lang.String -->
@@ -144,7 +144,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <string ID="3">Example 2</string>
    <!-- java.lang.String -->
    <string ID="4">Example 3</string>
-</test><!-- org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList --><Test ID="0" version="ONE">
+</test><Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- java.lang.String -->
@@ -166,7 +166,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <exclude file="5.txt" name="5"/>
    <exclude file="2.txt" name="2"/>
 </test>
-<!-- org.simpleframework.xml.core.ScatterTest$InlineNamedList --><test ID="0" version="ONE">
+<test ID="0" version="ONE">
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
    <include ID="1" file="4.txt" name="4"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
@@ -177,7 +177,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
    <exclude ID="4" file="5.txt" name="5"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
    <exclude ID="5" file="2.txt" name="2"/>
-</test><!-- org.simpleframework.xml.core.ScatterTest$InlineNamedList --><Test ID="0" version="ONE">
+</test><Test ID="0" version="ONE">
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
    <Include ID="1" file="4.txt" name="4"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
@@ -193,10 +193,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
 </simpleInlineList><simpleInlineList>
    <simpleEntry content="test"/>
 </simpleInlineList>
-<!-- org.simpleframework.xml.core.ScatterTest$SimpleInlineList --><simple-inline-list ID="0">
+<simple-inline-list ID="0">
    <!-- org.simpleframework.xml.core.ScatterTest$SimpleEntry -->
    <simple-entry ID="1" content="test"/>
-</simple-inline-list><!-- org.simpleframework.xml.core.ScatterTest$SimpleInlineList --><SimpleInlineList ID="0">
+</simple-inline-list><SimpleInlineList ID="0">
    <!-- org.simpleframework.xml.core.ScatterTest$SimpleEntry -->
    <SimpleEntry ID="1" content="test"/>
 </SimpleInlineList><simplePrimitiveInlineList>
@@ -204,17 +204,17 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.418 sec
 </simplePrimitiveInlineList><simplePrimitiveInlineList>
    <string>test</string>
 </simplePrimitiveInlineList>
-<!-- org.simpleframework.xml.core.ScatterTest$SimplePrimitiveInlineList --><simple-primitive-inline-list ID="0">
+<simple-primitive-inline-list ID="0">
    <!-- java.lang.String -->
    <string ID="1">test</string>
-</simple-primitive-inline-list><!-- org.simpleframework.xml.core.ScatterTest$SimplePrimitiveInlineList --><SimplePrimitiveInlineList ID="0">
+</simple-primitive-inline-list><SimplePrimitiveInlineList ID="0">
    <!-- java.lang.String -->
    <String ID="1">test</String>
 </SimplePrimitiveInlineList>------------- ---------------- ---------------
 
-Testcase: testList took 0.299 sec
-Testcase: testPrimitiveList took 0.047 sec
-Testcase: testInlineNamedList took 0.034 sec
+Testcase: testList took 0.275 sec
+Testcase: testPrimitiveList took 0.04 sec
+Testcase: testInlineNamedList took 0.031 sec
 Testcase: testSimpleList took 0.016 sec
-Testcase: testSimplePrimitiveList took 0.013 sec
-Testcase: testDirectory took 0 sec
+Testcase: testSimplePrimitiveList took 0.015 sec
+Testcase: testDirectory took 0.002 sec

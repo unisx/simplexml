@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.241 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
 ------------- Standard Output ---------------
 <enumMapExample>
    <numbers>
@@ -62,7 +62,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.241 sec
       </entry>
    </numbers>
 </enumMapExample>
-<!-- org.simpleframework.xml.core.EnumMapTest$EnumMapExample --><enum-map-example ID="0">
+<enum-map-example ID="0">
    <!-- java.util.EnumMap -->
    <numbers ID="1">
       <entry>
@@ -84,7 +84,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.241 sec
          <string ID="7">3</string>
       </entry>
    </numbers>
-</enum-map-example><!-- org.simpleframework.xml.core.EnumMapTest$EnumMapExample --><EnumMapExample ID="0">
+</enum-map-example><EnumMapExample ID="0">
    <!-- java.util.EnumMap -->
    <Numbers ID="1">
       <Entry>
@@ -108,5 +108,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.241 sec
    </Numbers>
 </EnumMapExample>------------- ---------------- ---------------
 
-Testcase: testEnumMap took 0.234 sec
+Testcase: testEnumMap took 0.231 sec
 Testcase: testDirectory took 0 sec

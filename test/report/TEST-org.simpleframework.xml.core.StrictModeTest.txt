@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictModeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.269 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.245 sec
 ------------- Standard Output ---------------
 <exampleObjectWithAddress version="1.0">
    <integer>123</integer>
@@ -16,7 +16,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.269 sec
    </address>
    <name>test</name>
 </exampleObjectWithAddress>
-<!-- org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress --><example-object-with-address ID="0" version="1.0">
+<example-object-with-address ID="0" version="1.0">
    <integer>123</integer>
    <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
    <address ID="1">
@@ -27,7 +27,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.269 sec
    </address>
    <!-- java.lang.String -->
    <name ID="4">test</name>
-</example-object-with-address><!-- org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress --><ExampleObjectWithAddress ID="0" version="1.0">
+</example-object-with-address><ExampleObjectWithAddress ID="0" version="1.0">
    <Integer>123</Integer>
    <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
    <Address ID="1">
@@ -181,8 +181,8 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testStrictMode took 0.136 sec
-Testcase: testNonStrictMode took 0.112 sec
+Testcase: testStrictMode took 0.129 sec
+Testcase: testNonStrictMode took 0.098 sec
 Testcase: testNonStrictModeMissingName took 0.004 sec
-Testcase: testValidation took 0.006 sec
+Testcase: testValidation took 0.008 sec
 Testcase: testDirectory took 0 sec

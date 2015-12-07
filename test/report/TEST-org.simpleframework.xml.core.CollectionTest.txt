@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -26,7 +26,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </entry>
    </list>
 </test>
-<!-- org.simpleframework.xml.core.CollectionTest$EntrySortedSet --><test ID="0" name="example">
+<test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <list class="java.util.TreeSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -45,7 +45,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><!-- org.simpleframework.xml.core.CollectionTest$EntrySortedSet --><Test ID="0" name="example">
+</test><Test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <List class="java.util.TreeSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -89,7 +89,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </entry>
    </list>
 </test>
-<!-- org.simpleframework.xml.core.CollectionTest$EntryList --><test ID="0" name="example">
+<test ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -108,7 +108,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><!-- org.simpleframework.xml.core.CollectionTest$EntryList --><Test ID="0" name="example">
+</test><Test ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -132,11 +132,11 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       <entry id="2">
          <text>two</text>
       </entry>
-      <entry id="3">
-         <text>three</text>
-      </entry>
       <entry id="1">
          <text>one</text>
+      </entry>
+      <entry id="3">
+         <text>three</text>
       </entry>
    </list>
 </test><test name="example">
@@ -144,15 +144,15 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       <entry id="2">
          <text>two</text>
       </entry>
-      <entry id="3">
-         <text>three</text>
-      </entry>
       <entry id="1">
          <text>one</text>
       </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
    </list>
 </test>
-<!-- org.simpleframework.xml.core.CollectionTest$EntrySet --><test ID="0" name="example">
+<test ID="0" name="example">
    <!-- java.util.Set -->
    <list class="java.util.HashSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -161,17 +161,17 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="3">two</text>
       </entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <entry ID="4" id="3">
+      <entry ID="4" id="1">
          <!-- java.lang.String -->
-         <text ID="5">three</text>
+         <text ID="5">one</text>
       </entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <entry ID="6" id="1">
+      <entry ID="6" id="3">
          <!-- java.lang.String -->
-         <text ID="7">one</text>
+         <text ID="7">three</text>
       </entry>
    </list>
-</test><!-- org.simpleframework.xml.core.CollectionTest$EntrySet --><Test ID="0" name="example">
+</test><Test ID="0" name="example">
    <!-- java.util.Set -->
    <List class="java.util.HashSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -180,14 +180,14 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <Text ID="3">two</Text>
       </Entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <Entry ID="4" id="3">
+      <Entry ID="4" id="1">
          <!-- java.lang.String -->
-         <Text ID="5">three</Text>
+         <Text ID="5">one</Text>
       </Entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <Entry ID="6" id="1">
+      <Entry ID="6" id="3">
          <!-- java.lang.String -->
-         <Text ID="7">one</Text>
+         <Text ID="7">three</Text>
       </Entry>
    </List>
 </Test><test name="example">
@@ -215,7 +215,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </entry>
    </list>
 </test>
-<!-- org.simpleframework.xml.core.CollectionTest$EntrySortedSet --><test ID="0" name="example">
+<test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <list class="java.util.TreeSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -234,7 +234,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><!-- org.simpleframework.xml.core.CollectionTest$EntrySortedSet --><Test ID="0" name="example">
+</test><Test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <List class="java.util.TreeSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -278,7 +278,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </entry>
    </list>
 </test>
-<!-- org.simpleframework.xml.core.CollectionTest$EntryList --><test ID="0" name="example">
+<test ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -297,7 +297,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><!-- org.simpleframework.xml.core.CollectionTest$EntryList --><Test ID="0" name="example">
+</test><Test ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -341,7 +341,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </entry>
    </list>
 </typeFromFieldList>
-<!-- org.simpleframework.xml.core.CollectionTest$TypeFromFieldList --><type-from-field-list ID="0" name="example">
+<type-from-field-list ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -360,7 +360,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</type-from-field-list><!-- org.simpleframework.xml.core.CollectionTest$TypeFromFieldList --><TypeFromFieldList ID="0" name="example">
+</type-from-field-list><TypeFromFieldList ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -404,7 +404,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </entry>
    </list>
 </typeFromMethodList>
-<!-- org.simpleframework.xml.core.CollectionTest$TypeFromMethodList --><type-from-method-list ID="0" name="example">
+<type-from-method-list ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -423,7 +423,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</type-from-method-list><!-- org.simpleframework.xml.core.CollectionTest$TypeFromMethodList --><TypeFromMethodList ID="0" name="example">
+</type-from-method-list><TypeFromMethodList ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -455,7 +455,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       <text>three</text>
    </list>
 </primitiveCollection>
-<!-- org.simpleframework.xml.core.CollectionTest$PrimitiveCollection --><primitive-collection ID="0" name="example">
+<primitive-collection ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -465,7 +465,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       <!-- java.lang.String -->
       <text ID="4">three</text>
    </list>
-</primitive-collection><!-- org.simpleframework.xml.core.CollectionTest$PrimitiveCollection --><PrimitiveCollection ID="0" name="example">
+</primitive-collection><PrimitiveCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -500,7 +500,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       </text>
    </list>
 </compositeCollection>
-<!-- org.simpleframework.xml.core.CollectionTest$CompositeCollection --><composite-collection ID="0" name="example">
+<composite-collection ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -519,7 +519,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text ID="7">three</text>
       </text>
    </list>
-</composite-collection><!-- org.simpleframework.xml.core.CollectionTest$CompositeCollection --><CompositeCollection ID="0" name="example">
+</composite-collection><CompositeCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -551,7 +551,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       <string>three</string>
    </list>
 </primitiveDefaultCollection>
-<!-- org.simpleframework.xml.core.CollectionTest$PrimitiveDefaultCollection --><primitive-default-collection ID="0" name="example">
+<primitive-default-collection ID="0" name="example">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -561,7 +561,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
       <!-- java.lang.String -->
       <string ID="4">three</string>
    </list>
-</primitive-default-collection><!-- org.simpleframework.xml.core.CollectionTest$PrimitiveDefaultCollection --><PrimitiveDefaultCollection ID="0" name="example">
+</primitive-default-collection><PrimitiveDefaultCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -579,22 +579,22 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.615 sec
          <text>one</text>
          <description>this is an extended entry</description>
       </entry>
-      <entry id="3">
-         <text>three</text>
-      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
+      </entry>
+      <entry id="3">
+         <text>three</text>
       </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
+      <entry id="3">
+         <text>three</text>
+      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
-      </entry>
-      <entry id="3">
-         <text>three</text>
       </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
@@ -859,24 +859,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.135 sec
-Testcase: testSortedSet took 0.127 sec
-Testcase: testList took 0.031 sec
-Testcase: testHashSet took 0.041 sec
-Testcase: testTreeSet took 0.034 sec
-Testcase: testArrayList took 0.03 sec
+Testcase: testSet took 0.133 sec
+Testcase: testSortedSet took 0.102 sec
+Testcase: testList took 0.029 sec
+Testcase: testHashSet took 0.034 sec
+Testcase: testTreeSet took 0.032 sec
+Testcase: testArrayList took 0.026 sec
 Testcase: testSortedSetToSet took 0.004 sec
-Testcase: testExtendedEntry took 0.011 sec
-Testcase: testTypeFromFieldList took 0.041 sec
-Testcase: testTypeFromMethodList took 0.058 sec
-Testcase: testPrimitiveCollection took 0.019 sec
+Testcase: testExtendedEntry took 0.01 sec
+Testcase: testTypeFromFieldList took 0.057 sec
+Testcase: testTypeFromMethodList took 0.038 sec
+Testcase: testPrimitiveCollection took 0.017 sec
 Testcase: testCompositeCollection took 0.033 sec
-Testcase: testPrimitiveDefaultCollection took 0.018 sec
+Testcase: testPrimitiveDefaultCollection took 0.011 sec
 Testcase: testSetToSortedSet took 0.006 sec
-Testcase: testListToSet took 0.001 sec
+Testcase: testListToSet took 0.003 sec
 Testcase: testInvalidList took 0.001 sec
 Testcase: testUnknownCollectionList took 0.002 sec
-Testcase: testAbstractList took 0.002 sec
+Testcase: testAbstractList took 0.001 sec
 Testcase: testNotACollection took 0.002 sec
 Testcase: testMissingCollection took 0.002 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

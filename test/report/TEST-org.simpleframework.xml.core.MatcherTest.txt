@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MatcherTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.21 sec
 ------------- Standard Output ---------------
 <foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
    <value>12345</value>
@@ -8,13 +8,13 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
 </foo:example><foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
    <value>12345</value>
 </foo:example>
-<!-- org.simpleframework.xml.core.MatcherTest$Example --><foo:example ID="0" attr="9999" xmlns:foo="http://www.domain.com/value">
+<foo:example ID="0" attr="9999" xmlns:foo="http://www.domain.com/value">
    <!-- java.lang.Integer -->
    <value ID="1">1</value>
-</foo:example><!-- org.simpleframework.xml.core.MatcherTest$Example --><foo:Example ID="0" attr="9999" xmlns:foo="http://www.domain.com/value">
+</foo:example><foo:Example ID="0" attr="9999" xmlns:foo="http://www.domain.com/value">
    <!-- java.lang.Integer -->
    <Value ID="1">1</Value>
 </foo:Example>------------- ---------------- ---------------
 
-Testcase: testMatcher took 0.25 sec
+Testcase: testMatcher took 0.203 sec
 Testcase: testDirectory took 0 sec

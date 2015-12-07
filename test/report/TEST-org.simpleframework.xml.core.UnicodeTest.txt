@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -260,7 +260,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
       </unicode>
    </list>
 </example>
-<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+<example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -474,7 +474,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+</example><Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -947,7 +947,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
       </unicode>
    </list>
 </example>
-<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+<example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -1161,7 +1161,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+</example><Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -1634,7 +1634,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
       </unicode>
    </list>
 </example>
-<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+<example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -1848,7 +1848,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+</example><Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -2321,7 +2321,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
       </unicode>
    </list>
 </example>
-<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+<example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -2535,7 +2535,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+</example><Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -2751,8 +2751,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
    </List>
 </Example>------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.395 sec
-Testcase: testWriteUnicode took 0.234 sec
+Testcase: testUnicode took 0.367 sec
+Testcase: testWriteUnicode took 0.212 sec
 Testcase: testUnicodeFromByteStream took 0.073 sec
-Testcase: testIncorrectEncoding took 0.006 sec
+Testcase: testIncorrectEncoding took 0.007 sec
 Testcase: testDirectory took 0 sec

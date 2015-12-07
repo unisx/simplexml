@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.PrimitiveArrayTransformTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
 ------------- Standard Output ---------------
 <integerArrayExample attribute="1, 2, 3, 4">
    <element length="4">1, 2, 3, 4</element>
@@ -45,7 +45,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
       <nonPrimitive/>
    </testArray>
 </integerArrayExample>
-<!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><integer-array-example ID="0" attribute="1, 2, 3, 4">
+<integer-array-example ID="0" attribute="1, 2, 3, 4">
    <!-- [I -->
    <element length="4" ID="1">1, 2, 3, 4</element>
    <!-- java.util.List -->
@@ -68,7 +68,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
    <test-array length="1" ID="9">
       <non-primitive/>
    </test-array>
-</integer-array-example><!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
+</integer-array-example><IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
    <!-- [I -->
    <Element length="4" ID="1">1, 2, 3, 4</Element>
    <!-- java.util.List -->
@@ -112,7 +112,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
       <nonPrimitive/>
    </testArray>
 </integerArrayExample>
-<!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><integer-array-example ID="0">
+<integer-array-example ID="0">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1"/>
    <!-- [[I -->
@@ -127,7 +127,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
    <test-array length="1" ID="5">
       <non-primitive/>
    </test-array>
-</integer-array-example><!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><IntegerArrayExample ID="0">
+</integer-array-example><IntegerArrayExample ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1"/>
    <!-- [[I -->
@@ -171,7 +171,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
       <nonPrimitive/>
    </testArray>
 </integerArrayExample>
-<!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><integer-array-example ID="0" attribute="1, 2, 3, 4">
+<integer-array-example ID="0" attribute="1, 2, 3, 4">
    <!-- [I -->
    <element length="4" ID="1">1, 2, 3, 4</element>
    <!-- java.util.List -->
@@ -194,7 +194,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
    <test-array length="1" ID="6">
       <non-primitive/>
    </test-array>
-</integer-array-example><!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
+</integer-array-example><IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
    <!-- [I -->
    <Element length="4" ID="1">1, 2, 3, 4</Element>
    <!-- java.util.List -->
@@ -238,7 +238,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
       <nonPrimitive/>
    </testArray>
 </integerArrayExample>
-<!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><integer-array-example ID="0">
+<integer-array-example ID="0">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1"/>
    <!-- [[I -->
@@ -253,7 +253,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
    <test-array length="1" ID="5">
       <non-primitive/>
    </test-array>
-</integer-array-example><!-- org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample --><IntegerArrayExample ID="0">
+</integer-array-example><IntegerArrayExample ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1"/>
    <!-- [[I -->
@@ -270,8 +270,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.693 sec
    </TestArray>
 </IntegerArrayExample>------------- ---------------- ---------------
 
-Testcase: testRead took 0.004 sec
-Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.28 sec
-Testcase: testCyclicPersistence took 0.401 sec
+Testcase: testRead took 0.003 sec
+Testcase: testWrite took 0.001 sec
+Testcase: testPersistence took 0.263 sec
+Testcase: testCyclicPersistence took 0.394 sec
 Testcase: testDirectory took 0 sec

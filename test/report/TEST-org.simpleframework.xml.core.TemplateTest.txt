@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TemplateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.246 sec
 ------------- Standard Output ---------------
 <test name="test">
    <config class="java.util.ArrayList">
@@ -24,7 +24,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
       <name>Niall Gallagher</name>
    </details>
 </test>
-<!-- org.simpleframework.xml.core.TemplateTest$Example --><test ID="0" name="test">
+<test ID="0" name="test">
    <!-- java.util.List -->
    <config class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.TemplateTest$Variable -->
@@ -43,7 +43,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
       <!-- java.lang.String -->
       <name ID="8">Niall Gallagher</name>
    </details>
-</test><!-- org.simpleframework.xml.core.TemplateTest$Example --><Test ID="0" name="test">
+</test><Test ID="0" name="test">
    <!-- java.util.List -->
    <Config class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.TemplateTest$Variable -->
@@ -64,5 +64,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
    </Details>
 </Test>------------- ---------------- ---------------
 
-Testcase: testTemplate took 0.258 sec
+Testcase: testTemplate took 0.24 sec
 Testcase: testDirectory took 0 sec

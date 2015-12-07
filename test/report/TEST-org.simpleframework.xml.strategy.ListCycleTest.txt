@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ListCycleTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one class="java.util.ArrayList" id="1">
@@ -32,7 +32,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    </three>
    <example ref="0"/>
 </root>
-<!-- org.simpleframework.xml.strategy.ListCycleTest$ListExample --><root ID="0">
+<root ID="0">
    <!-- java.util.List -->
    <one class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
@@ -59,7 +59,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    </three>
    <!-- org.simpleframework.xml.strategy.ListCycleTest$ListExample -->
    <example REFERER="0"/>
-</root><!-- org.simpleframework.xml.strategy.ListCycleTest$ListExample --><Root ID="0">
+</root><Root ID="0">
    <!-- java.util.List -->
    <One class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
@@ -101,7 +101,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    <text id="5" value="entry five"/>
    <example ref="0"/>
 </inlineListExample>
-<!-- org.simpleframework.xml.strategy.ListCycleTest$InlineListExample --><inline-list-example ID="0">
+<inline-list-example ID="0">
    <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
    <text ID="1" value="entry one"/>
    <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
@@ -114,7 +114,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    <text ID="5" value="entry five"/>
    <!-- org.simpleframework.xml.strategy.ListCycleTest$InlineListExample -->
    <example REFERER="0"/>
-</inline-list-example><!-- org.simpleframework.xml.strategy.ListCycleTest$InlineListExample --><InlineListExample ID="0">
+</inline-list-example><InlineListExample ID="0">
    <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
    <Text ID="1" value="entry one"/>
    <!-- org.simpleframework.xml.strategy.ListCycleTest$Entry -->
@@ -142,7 +142,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    <string id="5"><![CDATA[entry five]]></string>
    <example ref="0"/>
 </inlinePrimitiveListExample>
-<!-- org.simpleframework.xml.strategy.ListCycleTest$InlinePrimitiveListExample --><inline-primitive-list-example ID="0">
+<inline-primitive-list-example ID="0">
    <!-- java.lang.String -->
    <string ID="1"><![CDATA[entry one]]></string>
    <!-- java.lang.String -->
@@ -155,7 +155,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    <string ID="5"><![CDATA[entry five]]></string>
    <!-- org.simpleframework.xml.strategy.ListCycleTest$InlinePrimitiveListExample -->
    <example REFERER="0"/>
-</inline-primitive-list-example><!-- org.simpleframework.xml.strategy.ListCycleTest$InlinePrimitiveListExample --><InlinePrimitiveListExample ID="0">
+</inline-primitive-list-example><InlinePrimitiveListExample ID="0">
    <!-- java.lang.String -->
    <String ID="1"><![CDATA[entry one]]></String>
    <!-- java.lang.String -->
@@ -181,7 +181,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
       </value>
    </list>
 </root>
-<!-- org.simpleframework.xml.strategy.ListCycleTest$NestedListExample --><root ID="0">
+<root ID="0">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.strategy.ListCycleTest$Value -->
@@ -190,7 +190,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
          <list class="java.util.ArrayList" REFERER="1"/>
       </value>
    </list>
-</root><!-- org.simpleframework.xml.strategy.ListCycleTest$NestedListExample --><Root ID="0">
+</root><Root ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.strategy.ListCycleTest$Value -->
@@ -201,8 +201,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
    </List>
 </Root>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.273 sec
-Testcase: testInlineList took 0.036 sec
-Testcase: testInlinePrimitiveList took 0.042 sec
-Testcase: testNestedExample took 0.023 sec
+Testcase: testCycle took 0.234 sec
+Testcase: testInlineList took 0.033 sec
+Testcase: testInlinePrimitiveList took 0.035 sec
+Testcase: testNestedExample took 0.017 sec
 Testcase: testDirectory took 0 sec

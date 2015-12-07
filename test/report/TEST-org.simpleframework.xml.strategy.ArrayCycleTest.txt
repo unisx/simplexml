@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ArrayCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one length="5" id="1">
@@ -32,7 +32,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
    </three>
    <example ref="0"/>
 </root>
-<!-- org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Entry; -->
    <one length="5" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Entry -->
@@ -59,7 +59,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
    </three>
    <!-- org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample -->
    <example REFERER="0"/>
-</root><!-- org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Entry; -->
    <One length="5" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Entry -->
@@ -123,7 +123,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
       </entry>
    </array>
 </root>
-<!-- org.simpleframework.xml.strategy.ArrayCycleTest$NestedArrayCycleExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Value; -->
    <array length="2" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value -->
@@ -152,7 +152,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
          </list>
       </entry>
    </array>
-</root><!-- org.simpleframework.xml.strategy.ArrayCycleTest$NestedArrayCycleExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Value; -->
    <Array length="2" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value -->
@@ -194,7 +194,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
       </entry>
    </list>
 </value>
-<!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value --><value ID="0">
+<value ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Value; -->
    <list length="1" class="org.simpleframework.xml.strategy.ArrayCycleTest$ElementValue" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value -->
@@ -203,7 +203,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
          <element ID="3">Example text</element>
       </entry>
    </list>
-</value><!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value --><Value ID="0">
+</value><Value ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Value; -->
    <List length="1" class="org.simpleframework.xml.strategy.ArrayCycleTest$ElementValue" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value -->
@@ -214,7 +214,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
    </List>
 </Value>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.243 sec
+Testcase: testCycle took 0.236 sec
 Testcase: testNestedExample took 0.064 sec
-Testcase: testPromotion took 0.021 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPromotion took 0.018 sec
+Testcase: testDirectory took 0.001 sec

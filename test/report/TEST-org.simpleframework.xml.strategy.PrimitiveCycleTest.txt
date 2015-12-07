@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
 ------------- Standard Output ---------------
 <test id="0">
    <primitive id="1">
@@ -44,7 +44,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
       <Enum id="11">TWO</Enum>
    </object>
 </test>
-<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveCycleEntry --><test ID="0">
+<test ID="0">
    <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveEntry -->
    <primitive ID="1">
       <boolean>true</boolean>
@@ -76,7 +76,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
       <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveCycleEntry --><Test ID="0">
+</test><Test ID="0">
    <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
@@ -117,14 +117,14 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
    <b reference="1"/>
    <c reference="1"/>
 </stringReferenceExample>
-<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><string-reference-example ID="0">
+<string-reference-example ID="0">
    <!-- java.lang.String -->
    <a ID="1">a</a>
    <!-- java.lang.String -->
    <b REFERER="1"/>
    <!-- java.lang.String -->
    <c REFERER="1"/>
-</string-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><StringReferenceExample ID="0">
+</string-reference-example><StringReferenceExample ID="0">
    <!-- java.lang.String -->
    <A ID="1">a</A>
    <!-- java.lang.String -->
@@ -140,14 +140,14 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
    <b id="2">b</b>
    <c reference="1"/>
 </stringReferenceExample>
-<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><string-reference-example ID="0">
+<string-reference-example ID="0">
    <!-- java.lang.String -->
    <a ID="1">a</a>
    <!-- java.lang.String -->
    <b ID="2">b</b>
    <!-- java.lang.String -->
    <c REFERER="1"/>
-</string-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><StringReferenceExample ID="0">
+</string-reference-example><StringReferenceExample ID="0">
    <!-- java.lang.String -->
    <A ID="1">a</A>
    <!-- java.lang.String -->
@@ -163,14 +163,14 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
    <b id="2">1</b>
    <c id="3">1</c>
 </integerReferenceExample>
-<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><integer-reference-example ID="0">
+<integer-reference-example ID="0">
    <!-- java.lang.Integer -->
    <a ID="1">1</a>
    <!-- java.lang.Integer -->
    <b ID="2">1</b>
    <!-- java.lang.Integer -->
    <c ID="3">1</c>
-</integer-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><IntegerReferenceExample ID="0">
+</integer-reference-example><IntegerReferenceExample ID="0">
    <!-- java.lang.Integer -->
    <A ID="1">1</A>
    <!-- java.lang.Integer -->
@@ -186,14 +186,14 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
    <b reference="1"/>
    <c id="2">1</c>
 </integerReferenceExample>
-<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><integer-reference-example ID="0">
+<integer-reference-example ID="0">
    <!-- java.lang.Integer -->
    <a ID="1">1</a>
    <!-- java.lang.Integer -->
    <b REFERER="1"/>
    <!-- java.lang.Integer -->
    <c ID="2">1</c>
-</integer-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><IntegerReferenceExample ID="0">
+</integer-reference-example><IntegerReferenceExample ID="0">
    <!-- java.lang.Integer -->
    <A ID="1">1</A>
    <!-- java.lang.Integer -->
@@ -202,6 +202,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
    <C ID="2">1</C>
 </IntegerReferenceExample>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.748 sec
-Testcase: testPrimitiveReference took 0.459 sec
+Testcase: testPrimitive took 0.683 sec
+Testcase: testPrimitiveReference took 0.358 sec
 Testcase: testDirectory took 0.001 sec

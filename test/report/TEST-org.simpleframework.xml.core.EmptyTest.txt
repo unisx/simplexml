@@ -1,27 +1,27 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.472 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
 </test><test>
    <empty class="java.util.ArrayList"/>
 </test>
-<!-- org.simpleframework.xml.core.EmptyTest$EmptyCollection --><test ID="0">
+<test ID="0">
    <!-- java.util.Collection -->
    <empty class="java.util.ArrayList" ID="1"/>
-</test><!-- org.simpleframework.xml.core.EmptyTest$EmptyCollection --><Test ID="0">
+</test><Test ID="0">
    <!-- java.util.Collection -->
    <Empty class="java.util.ArrayList" ID="1"/>
 </Test><test/><test/>
-<!-- org.simpleframework.xml.core.EmptyTest$EmptyCollection --><test ID="0"/><!-- org.simpleframework.xml.core.EmptyTest$EmptyCollection --><Test ID="0"/><test name="John Doe" address="NULL">
+<test ID="0"/><Test ID="0"/><test name="John Doe" address="NULL">
    <description>Some description</description>
 </test><test name="John Doe" address="NULL">
    <description>Some description</description>
 </test>
-<!-- org.simpleframework.xml.core.EmptyTest$DefaultedAttribute --><test ID="0" name="John Doe" address="NULL">
+<test ID="0" name="John Doe" address="NULL">
    <!-- java.lang.String -->
    <description ID="1">Some description</description>
-</test><!-- org.simpleframework.xml.core.EmptyTest$DefaultedAttribute --><Test ID="0" name="John Doe" address="NULL">
+</test><Test ID="0" name="John Doe" address="NULL">
    <!-- java.lang.String -->
    <Description ID="1">Some description</Description>
 </Test><test name="NULL" address="NULL">
@@ -29,10 +29,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
 </test><test name="NULL" address="NULL">
    <description>Some description</description>
 </test>
-<!-- org.simpleframework.xml.core.EmptyTest$DefaultedAttribute --><test ID="0" name="NULL" address="NULL">
+<test ID="0" name="NULL" address="NULL">
    <!-- java.lang.String -->
    <description ID="1">Some description</description>
-</test><!-- org.simpleframework.xml.core.EmptyTest$DefaultedAttribute --><Test ID="0" name="NULL" address="NULL">
+</test><Test ID="0" name="NULL" address="NULL">
    <!-- java.lang.String -->
    <Description ID="1">Some description</Description>
 </Test>------------- ---------------- ---------------
@@ -163,13 +163,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.126 sec
-Testcase: testRequiredEmptyMethod took 0.007 sec
+Testcase: testRequiredEmpty took 0.125 sec
+Testcase: testRequiredEmptyMethod took 0.006 sec
 Testcase: testRequiredBlank took 0.003 sec
-Testcase: testOptionalEmpty took 0.003 sec
-Testcase: testOptionalBlank took 0.002 sec
-Testcase: testEmptyCollection took 0.1 sec
-Testcase: testRequiredEmptyAttribute took 0.007 sec
-Testcase: testOptionalEmptyAttribute took 0.002 sec
-Testcase: testDefaultedAttribute took 0.234 sec
-Testcase: testDirectory took 0 sec
+Testcase: testOptionalEmpty took 0.002 sec
+Testcase: testOptionalBlank took 0.001 sec
+Testcase: testEmptyCollection took 0.091 sec
+Testcase: testRequiredEmptyAttribute took 0.008 sec
+Testcase: testOptionalEmptyAttribute took 0.001 sec
+Testcase: testDefaultedAttribute took 0.225 sec
+Testcase: testDirectory took 0.001 sec

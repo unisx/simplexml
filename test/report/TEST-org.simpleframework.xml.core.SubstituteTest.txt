@@ -1,15 +1,15 @@
 Testsuite: org.simpleframework.xml.core.SubstituteTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.311 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 ------------- Standard Output ---------------
 <substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
 </substituteExample>
-<!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><substitute-example ID="0">
+<substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</substitute>
-</substitute-example><!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><SubstituteExample ID="0">
+</substitute-example><SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</Substitute>
 </SubstituteExample><substituteExample>
@@ -17,10 +17,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.311 sec
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
 </substituteExample>
-<!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><substitute-example ID="0">
+<substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</substitute>
-</substitute-example><!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><SubstituteExample ID="0">
+</substitute-example><SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</Substitute>
 </SubstituteExample><substituteExample>
@@ -28,10 +28,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.311 sec
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
 </substituteExample>
-<!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><substitute-example ID="0">
+<substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
-</substitute-example><!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><SubstituteExample ID="0">
+</substitute-example><SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</Substitute>
 </SubstituteExample><substituteExample>
@@ -39,14 +39,14 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.311 sec
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
 </substituteExample>
-<!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><substitute-example ID="0">
+<substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
-</substitute-example><!-- org.simpleframework.xml.core.SubstituteTest$SubstituteExample --><SubstituteExample ID="0">
+</substitute-example><SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</Substitute>
 </SubstituteExample>------------- ---------------- ---------------
 
-Testcase: testReplace took 0.257 sec
-Testcase: testResolve took 0.047 sec
+Testcase: testReplace took 0.23 sec
+Testcase: testResolve took 0.044 sec
 Testcase: testDirectory took 0 sec

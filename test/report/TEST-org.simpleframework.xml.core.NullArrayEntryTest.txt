@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NullArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="5">
@@ -44,7 +44,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
       </substitute>
    </list>
 </exampleArray>
-<!-- org.simpleframework.xml.core.NullArrayEntryTest$ExampleArray --><example-array ID="0">
+<example-array ID="0">
    <!-- [Lorg.simpleframework.xml.core.NullArrayEntryTest$Entry; -->
    <list length="5" ID="1">
       <!-- org.simpleframework.xml.core.NullArrayEntryTest$Entry -->
@@ -65,7 +65,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
          <text ID="7">e</text>
       </substitute>
    </list>
-</example-array><!-- org.simpleframework.xml.core.NullArrayEntryTest$ExampleArray --><ExampleArray ID="0">
+</example-array><ExampleArray ID="0">
    <!-- [Lorg.simpleframework.xml.core.NullArrayEntryTest$Entry; -->
    <List length="5" ID="1">
       <!-- org.simpleframework.xml.core.NullArrayEntryTest$Entry -->
@@ -117,7 +117,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
       <substitute>f</substitute>
    </list>
 </examplePrimitiveArray>
-<!-- org.simpleframework.xml.core.NullArrayEntryTest$ExamplePrimitiveArray --><example-primitive-array ID="0">
+<example-primitive-array ID="0">
    <!-- [Ljava.lang.String; -->
    <list length="7" ID="1">
       <!-- java.lang.String -->
@@ -132,7 +132,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
       <!-- java.lang.String -->
       <substitute ID="5">f</substitute>
    </list>
-</example-primitive-array><!-- org.simpleframework.xml.core.NullArrayEntryTest$ExamplePrimitiveArray --><ExamplePrimitiveArray ID="0">
+</example-primitive-array><ExamplePrimitiveArray ID="0">
    <!-- [Ljava.lang.String; -->
    <List length="7" ID="1">
       <!-- java.lang.String -->
@@ -149,6 +149,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
    </List>
 </ExamplePrimitiveArray>------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.229 sec
-Testcase: testExamplePrimitiveArray took 0.028 sec
+Testcase: testExampleArray took 0.228 sec
+Testcase: testExamplePrimitiveArray took 0.02 sec
 Testcase: testDirectory took 0 sec

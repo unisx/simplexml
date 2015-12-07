@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -18,7 +18,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <long>1234567</long>
    <short>120</short>
 </test>
-<!-- org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample --><test ID="0">
+<test ID="0">
    <boolean>true</boolean>
    <byte>16</byte>
    <double>1234567.89</double>
@@ -26,7 +26,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <int>1234</int>
    <long>1234567</long>
    <short>120</short>
-</test><!-- org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample --><Test ID="0">
+</test><Test ID="0">
    <Boolean>true</Boolean>
    <Byte>16</Byte>
    <Double>1234567.89</Double>
@@ -51,7 +51,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <long>1234567</long>
    <short>120</short>
 </test>
-<!-- org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample --><test ID="0">
+<test ID="0">
    <boolean>true</boolean>
    <byte>16</byte>
    <double>1234567.89</double>
@@ -59,7 +59,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <int>1234</int>
    <long>1234567</long>
    <short>120</short>
-</test><!-- org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample --><Test ID="0">
+</test><Test ID="0">
    <Boolean>true</Boolean>
    <Byte>16</Byte>
    <Double>1234567.89</Double>
@@ -84,7 +84,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <longValue>1234567</longValue>
    <shortValue>120</shortValue>
 </implicitMethodNameExample>
-<!-- org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample --><implicit-method-name-example ID="0">
+<implicit-method-name-example ID="0">
    <boolean-value>true</boolean-value>
    <byte-value>16</byte-value>
    <double-value>1234567.89</double-value>
@@ -92,7 +92,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <int-value>1234</int-value>
    <long-value>1234567</long-value>
    <short-value>120</short-value>
-</implicit-method-name-example><!-- org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample --><ImplicitMethodNameExample ID="0">
+</implicit-method-name-example><ImplicitMethodNameExample ID="0">
    <BooleanValue>true</BooleanValue>
    <ByteValue>16</ByteValue>
    <DoubleValue>1234567.89</DoubleValue>
@@ -117,7 +117,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <longValue>1234567</longValue>
    <shortValue>120</shortValue>
 </implicitMethodNameExample>
-<!-- org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample --><implicit-method-name-example ID="0">
+<implicit-method-name-example ID="0">
    <boolean-value>true</boolean-value>
    <byte-value>16</byte-value>
    <double-value>1234567.89</double-value>
@@ -125,7 +125,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <int-value>1234</int-value>
    <long-value>1234567</long-value>
    <short-value>120</short-value>
-</implicit-method-name-example><!-- org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample --><ImplicitMethodNameExample ID="0">
+</implicit-method-name-example><ImplicitMethodNameExample ID="0">
    <BooleanValue>true</BooleanValue>
    <ByteValue>16</ByteValue>
    <DoubleValue>1234567.89</DoubleValue>
@@ -135,6 +135,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.349 sec
    <ShortValue>120</ShortValue>
 </ImplicitMethodNameExample>------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.257 sec
-Testcase: testImplicitMethodNameExample took 0.082 sec
+Testcase: testExplicitMethodNameExample took 0.258 sec
+Testcase: testImplicitMethodNameExample took 0.076 sec
 Testcase: testDirectory took 0 sec

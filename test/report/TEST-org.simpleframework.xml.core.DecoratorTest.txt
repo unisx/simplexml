@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DecoratorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.357 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.317 sec
 ------------- Standard Output ---------------
 <friendList>
    <list type="list">
@@ -60,7 +60,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.357 sec
       </friend>
    </list>
 </friendList>
-<!-- org.simpleframework.xml.core.DecoratorTest$FriendList --><friend-list ID="0">
+<friend-list ID="0">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.DecoratorTest$Friend -->
@@ -108,7 +108,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.357 sec
          </messages>
       </friend>
    </list>
-</friend-list><!-- org.simpleframework.xml.core.DecoratorTest$FriendList --><FriendList ID="0">
+</friend-list><FriendList ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.DecoratorTest$Friend -->
@@ -158,5 +158,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.357 sec
    </List>
 </FriendList>------------- ---------------- ---------------
 
-Testcase: testDecorator took 0.351 sec
+Testcase: testDecorator took 0.312 sec
 Testcase: testDirectory took 0 sec

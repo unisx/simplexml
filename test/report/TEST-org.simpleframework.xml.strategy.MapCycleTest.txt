@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.34 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -44,7 +44,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
       </entry>
    </map>
 </entryMap>
-<!-- org.simpleframework.xml.strategy.MapCycleTest$EntryMap --><entry-map ID="0">
+<entry-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry key="d">
@@ -74,7 +74,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
          </map-entry>
       </entry>
    </map>
-</entry-map><!-- org.simpleframework.xml.strategy.MapCycleTest$EntryMap --><EntryMap ID="0">
+</entry-map><EntryMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry key="d">
@@ -165,7 +165,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.strategy.MapCycleTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -212,7 +212,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
          </map-entry>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.strategy.MapCycleTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -290,7 +290,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
       </entry>
    </map>
 </primitiveMap>
-<!-- org.simpleframework.xml.strategy.MapCycleTest$PrimitiveMap --><primitive-map ID="0">
+<primitive-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -312,7 +312,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
          <double ID="6">4.0</double>
       </entry>
    </map>
-</primitive-map><!-- org.simpleframework.xml.strategy.MapCycleTest$PrimitiveMap --><PrimitiveMap ID="0">
+</primitive-map><PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -336,7 +336,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
    </Map>
 </PrimitiveMap>------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.252 sec
-Testcase: testComplexMap took 0.149 sec
-Testcase: testPrimitiveMap took 0.04 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testEntryMap took 0.237 sec
+Testcase: testComplexMap took 0.059 sec
+Testcase: testPrimitiveMap took 0.037 sec
+Testcase: testDirectory took 0 sec

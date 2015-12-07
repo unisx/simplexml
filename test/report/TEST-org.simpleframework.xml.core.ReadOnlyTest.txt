@@ -1,6 +1,6 @@
 Testsuite: org.simpleframework.xml.core.ReadOnlyTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.152 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.146 sec
 
-Testcase: testReadOnlyField took 0.134 sec
-Testcase: testReadOnlyMethod took 0.007 sec
-Testcase: testIllegalReadOnlyMethod took 0.006 sec
+Testcase: testReadOnlyField took 0.131 sec
+Testcase: testReadOnlyMethod took 0.005 sec
+Testcase: testIllegalReadOnlyMethod took 0.005 sec

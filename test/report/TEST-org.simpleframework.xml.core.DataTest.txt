@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DataTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.302 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.232 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
@@ -56,7 +56,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.302 sec
       </query>
    </query-list>
 </scrape>
-<!-- org.simpleframework.xml.core.DataTest$Scrape --><scrape ID="0" section="one" address="http://localhost:9090/">
+<scrape ID="0" section="one" address="http://localhost:9090/">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <query-list ID="1">
       <!-- org.simpleframework.xml.core.DataTest$Query -->
@@ -88,7 +88,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.302 sec
          ]]></data>
       </query>
    </query-list>
-</scrape><!-- org.simpleframework.xml.core.DataTest$Scrape --><Scrape ID="0" section="one" address="http://localhost:9090/">
+</scrape><Scrape ID="0" section="one" address="http://localhost:9090/">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <QueryList ID="1">
       <!-- org.simpleframework.xml.core.DataTest$Query -->
@@ -122,5 +122,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.302 sec
    </QueryList>
 </Scrape>------------- ---------------- ---------------
 
-Testcase: testDataFromByteStream took 0.291 sec
+Testcase: testDataFromByteStream took 0.226 sec
 Testcase: testDirectory took 0 sec

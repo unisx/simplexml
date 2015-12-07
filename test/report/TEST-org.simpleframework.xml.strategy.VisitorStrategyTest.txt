@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.strategy.VisitorStrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
-<orderItem>
+<visitorExample>
    <!-- java.util.ArrayList -->
    <class:items xmlns:class="http://util.java/ArrayList">
       <string>A</string>
@@ -18,8 +18,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
          <string>ONE</string>
       </entry>
    </class:map>
-</orderItem>
-<orderItem>
+</visitorExample>
+<visitorExample>
    <!-- java.util.ArrayList -->
    <class:items xmlns:class="http://util.java/ArrayList">
       <string>A</string>
@@ -36,7 +36,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
          <string>ONE</string>
       </entry>
    </class:map>
-</orderItem><orderItem>
+</visitorExample><visitorExample>
    <!-- java.util.ArrayList -->
    <class:items xmlns:class="http://util.java/ArrayList">
       <string>A</string>
@@ -53,8 +53,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
          <string>ONE</string>
       </entry>
    </class:map>
-</orderItem>
-<!-- org.simpleframework.xml.strategy.VisitorStrategyTest$OrderItem --><order-item ID="0">
+</visitorExample>
+<visitor-example ID="0">
    <!-- java.util.List -->
    <items class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -77,7 +77,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
          <string ID="8">ONE</string>
       </entry>
    </map>
-</order-item><!-- org.simpleframework.xml.strategy.VisitorStrategyTest$OrderItem --><OrderItem ID="0">
+</visitor-example><VisitorExample ID="0">
    <!-- java.util.List -->
    <Items class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -100,7 +100,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
          <string ID="8">ONE</string>
       </Entry>
    </Map>
-</OrderItem>------------- ---------------- ---------------
+</VisitorExample>------------- ---------------- ---------------
 
-Testcase: testStrategy took 0.267 sec
+Testcase: testStrategy took 0.244 sec
 Testcase: testDirectory took 0 sec

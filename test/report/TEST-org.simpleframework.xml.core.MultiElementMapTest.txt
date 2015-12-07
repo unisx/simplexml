@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MultiElementMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
 ------------- Standard Output ---------------
 <properties>
    <entry>
@@ -40,7 +40,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
       </value>
    </entry>
 </properties>
-<!-- org.simpleframework.xml.core.MultiElementMapTest$Properties --><properties ID="0">
+<properties ID="0">
    <entry>
       <!-- java.lang.String -->
       <key ID="1">int-value</key>
@@ -68,7 +68,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
          <string ID="9">hello world</string>
       </value>
    </entry>
-</properties><!-- org.simpleframework.xml.core.MultiElementMapTest$Properties --><Properties ID="0">
+</properties><Properties ID="0">
    <Entry>
       <!-- java.lang.String -->
       <Key ID="1">int-value</Key>
@@ -98,5 +98,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
    </Entry>
 </Properties>------------- ---------------- ---------------
 
-Testcase: testProperties took 0.252 sec
+Testcase: testProperties took 0.244 sec
 Testcase: testDirectory took 0 sec

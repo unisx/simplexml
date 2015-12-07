@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -14,7 +14,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
       <entry name="c" version="THREE"><![CDATA[Example 3]]></entry>
    </array>
 </test>
-<!-- org.simpleframework.xml.core.TextTest$TextList --><test ID="0">
+<test ID="0">
    <!-- [Lorg.simpleframework.xml.core.TextTest$TextEntry; -->
    <array length="3" ID="1">
       <!-- org.simpleframework.xml.core.TextTest$TextEntry -->
@@ -24,7 +24,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
       <!-- org.simpleframework.xml.core.TextTest$TextEntry -->
       <entry ID="4" name="c" version="THREE"><![CDATA[Example 3]]></entry>
    </array>
-</test><!-- org.simpleframework.xml.core.TextTest$TextList --><Test ID="0">
+</test><Test ID="0">
    <!-- [Lorg.simpleframework.xml.core.TextTest$TextEntry; -->
    <Array length="3" ID="1">
       <!-- org.simpleframework.xml.core.TextTest$TextEntry -->
@@ -47,7 +47,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
       <entry name="c" version="THREE"><![CDATA[Example 3]]></entry>
    </array>
 </test>
-<!-- org.simpleframework.xml.core.TextTest$TextList --><test ID="0">
+<test ID="0">
    <!-- [Lorg.simpleframework.xml.core.TextTest$TextEntry; -->
    <array length="3" ID="1">
       <!-- org.simpleframework.xml.core.TextTest$TextEntry -->
@@ -57,7 +57,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
       <!-- org.simpleframework.xml.core.TextTest$TextEntry -->
       <entry ID="4" name="c" version="THREE"><![CDATA[Example 3]]></entry>
    </array>
-</test><!-- org.simpleframework.xml.core.TextTest$TextList --><Test ID="0">
+</test><Test ID="0">
    <!-- [Lorg.simpleframework.xml.core.TextTest$TextEntry; -->
    <Array length="3" ID="1">
       <!-- org.simpleframework.xml.core.TextTest$TextEntry -->
@@ -80,13 +80,13 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
       </element> 
    
 ]]></text>
-<!-- org.simpleframework.xml.core.TextTest$TextEntry --><text ID="0" name="a" version="ONE"><![CDATA[
+<text ID="0" name="a" version="ONE"><![CDATA[
     
       <element> 
          <data>This is hidden</data>
       </element> 
    
-]]></text><!-- org.simpleframework.xml.core.TextTest$TextEntry --><Text ID="0" name="a" version="ONE"><![CDATA[
+]]></text><Text ID="0" name="a" version="ONE"><![CDATA[
     
       <element> 
          <data>This is hidden</data>
@@ -105,21 +105,21 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
       </element> 
    
 ]]></text>
-<!-- org.simpleframework.xml.core.TextTest$TextEntry --><text ID="0" name="a" version="ONE"><![CDATA[
+<text ID="0" name="a" version="ONE"><![CDATA[
     
       <element> 
          <data>This is hidden</data>
       </element> 
    
-]]></text><!-- org.simpleframework.xml.core.TextTest$TextEntry --><Text ID="0" name="a" version="ONE"><![CDATA[
+]]></text><Text ID="0" name="a" version="ONE"><![CDATA[
     
       <element> 
          <data>This is hidden</data>
       </element> 
    
 ]]></Text><text name="a" version="ONE"/><text name="a" version="ONE"/>
-<!-- org.simpleframework.xml.core.TextTest$OptionalTextEntry --><text ID="0" name="a" version="ONE"/><!-- org.simpleframework.xml.core.TextTest$OptionalTextEntry --><Text ID="0" name="a" version="ONE"/><text name="a" version="ONE"/><text name="a" version="ONE"/>
-<!-- org.simpleframework.xml.core.TextTest$OptionalTextEntry --><text ID="0" name="a" version="ONE"/><!-- org.simpleframework.xml.core.TextTest$OptionalTextEntry --><Text ID="0" name="a" version="ONE"/>------------- ---------------- ---------------
+<text ID="0" name="a" version="ONE"/><Text ID="0" name="a" version="ONE"/><text name="a" version="ONE"/><text name="a" version="ONE"/>
+<text ID="0" name="a" version="ONE"/><Text ID="0" name="a" version="ONE"/>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent field 'list' private java.util.List org.simpleframework.xml.core.TextTest$NonPrimitiveTextEntry.list
 	at org.simpleframework.xml.core.TextLabel.getConverter(TextLabel.java:105)
@@ -156,11 +156,11 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.26 sec
-Testcase: testData took 0.034 sec
-Testcase: testDuplicate took 0.002 sec
+Testcase: testText took 0.233 sec
+Testcase: testData took 0.027 sec
+Testcase: testDuplicate took 0.003 sec
 Testcase: testIllegalElement took 0.004 sec
 Testcase: testEmpty took 0.006 sec
-Testcase: testOptional took 0.025 sec
+Testcase: testOptional took 0.029 sec
 Testcase: testNonPrimitive took 0.003 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

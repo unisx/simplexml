@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -26,7 +26,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
       </substitute>
    </list>
 </exampleCollection>
-<!-- org.simpleframework.xml.core.CollectionEntryTest$ExampleCollection --><example-collection ID="0">
+<example-collection ID="0">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
@@ -45,7 +45,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
          <text ID="7">three</text>
       </substitute>
    </list>
-</example-collection><!-- org.simpleframework.xml.core.CollectionEntryTest$ExampleCollection --><ExampleCollection ID="0">
+</example-collection><ExampleCollection ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
@@ -85,7 +85,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
       <text>three</text>
    </substitute>
 </exampleInlineCollection>
-<!-- org.simpleframework.xml.core.CollectionEntryTest$ExampleInlineCollection --><example-inline-collection ID="0">
+<example-inline-collection ID="0">
    <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
    <substitute ID="1" id="1">
       <!-- java.lang.String -->
@@ -101,7 +101,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
       <!-- java.lang.String -->
       <text ID="6">three</text>
    </substitute>
-</example-inline-collection><!-- org.simpleframework.xml.core.CollectionEntryTest$ExampleInlineCollection --><ExampleInlineCollection ID="0">
+</example-inline-collection><ExampleInlineCollection ID="0">
    <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
    <Substitute ID="1" id="1">
       <!-- java.lang.String -->
@@ -128,7 +128,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
    <substitute>c</substitute>
    <substitute>d</substitute>
 </examplePrimitiveInlineCollection>
-<!-- org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveInlineCollection --><example-primitive-inline-collection ID="0">
+<example-primitive-inline-collection ID="0">
    <!-- java.lang.String -->
    <substitute ID="1">a</substitute>
    <!-- java.lang.String -->
@@ -137,7 +137,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
    <substitute ID="3">c</substitute>
    <!-- java.lang.String -->
    <substitute ID="4">d</substitute>
-</example-primitive-inline-collection><!-- org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveInlineCollection --><ExamplePrimitiveInlineCollection ID="0">
+</example-primitive-inline-collection><ExamplePrimitiveInlineCollection ID="0">
    <!-- java.lang.String -->
    <Substitute ID="1">a</Substitute>
    <!-- java.lang.String -->
@@ -161,7 +161,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
       <substitute>d</substitute>
    </list>
 </examplePrimitiveCollection>
-<!-- org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveCollection --><example-primitive-collection ID="0">
+<example-primitive-collection ID="0">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- java.lang.Character -->
@@ -173,7 +173,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
       <!-- java.lang.Character -->
       <substitute ID="5">d</substitute>
    </list>
-</example-primitive-collection><!-- org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveCollection --><ExamplePrimitiveCollection ID="0">
+</example-primitive-collection><ExamplePrimitiveCollection ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- java.lang.Character -->
@@ -187,8 +187,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
    </List>
 </ExamplePrimitiveCollection>------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.276 sec
-Testcase: testExampleInlineCollection took 0.03 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.021 sec
-Testcase: testExamplePrimitiveCollection took 0.03 sec
-Testcase: testDirectory took 0 sec
+Testcase: testExampleCollection took 0.236 sec
+Testcase: testExampleInlineCollection took 0.029 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.015 sec
+Testcase: testExamplePrimitiveCollection took 0.031 sec
+Testcase: testDirectory took 0.001 sec

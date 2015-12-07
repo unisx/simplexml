@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StaticTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.363 sec
 ------------- Standard Output ---------------
 <document title="Secret Document" xmlns="http://www.domain.com/document">
    <user:author xmlns:user="http://www.domain.com/user">Niall Gallagher</user:author>
@@ -47,7 +47,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
       <para:paragraph>Third and final paragraph</para:paragraph>
    </section>
 </document>
-<!-- org.simpleframework.xml.core.StaticTest$Document --><document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
+<document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
    <!-- java.lang.String -->
    <user:author ID="1" xmlns:user="http://www.domain.com/user">Niall Gallagher</user:author>
    <!-- java.lang.String -->
@@ -74,7 +74,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
       <!-- org.simpleframework.xml.core.StaticTest$Paragraph -->
       <para:paragraph ID="12">Third and final paragraph</para:paragraph>
    </section>
-</document><!-- org.simpleframework.xml.core.StaticTest$Document --><Document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
+</document><Document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
    <!-- java.lang.String -->
    <user:Author ID="1" xmlns:user="http://www.domain.com/user">Niall Gallagher</user:Author>
    <!-- java.lang.String -->
@@ -103,5 +103,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    </Section>
 </Document>------------- ---------------- ---------------
 
-Testcase: testStatic took 0.289 sec
+Testcase: testStatic took 0.353 sec
 Testcase: testDirectory took 0 sec

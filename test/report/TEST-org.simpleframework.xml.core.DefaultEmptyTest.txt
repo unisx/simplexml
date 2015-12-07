@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultEmptyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.278 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.248 sec
 ------------- Standard Output ---------------
 <defaultExample name="test">
    <stringList class="java.util.ArrayList"/>
@@ -17,7 +17,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.278 sec
    <stringArray length="0"/>
    <text>some text</text>
 </defaultExample>
-<!-- org.simpleframework.xml.core.DefaultEmptyTest$DefaultExample --><default-example ID="0" name="test">
+<default-example ID="0" name="test">
    <!-- java.util.List -->
    <string-list class="java.util.ArrayList" ID="1"/>
    <!-- java.util.Map -->
@@ -26,7 +26,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.278 sec
    <string-array length="0" ID="3"/>
    <!-- java.lang.String -->
    <text ID="4">some text</text>
-</default-example><!-- org.simpleframework.xml.core.DefaultEmptyTest$DefaultExample --><DefaultExample ID="0" name="test">
+</default-example><DefaultExample ID="0" name="test">
    <!-- java.util.List -->
    <StringList class="java.util.ArrayList" ID="1"/>
    <!-- java.util.Map -->
@@ -39,5 +39,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.278 sec
    <text>example text</text>
 </defaultExample>------------- ---------------- ---------------
 
-Testcase: testDefaults took 0.272 sec
+Testcase: testDefaults took 0.242 sec
 Testcase: testDirectory took 0 sec

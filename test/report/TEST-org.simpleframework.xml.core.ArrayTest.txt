@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayTest
-Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
+Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.25 sec
 ------------- Standard Output ---------------
 <root>
    <array length="100">
@@ -208,7 +208,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <entry value="index 99"/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$ArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <array length="100" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -412,7 +412,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
       <entry ID="101" value="index 99"/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$ArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="100" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -823,7 +823,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <entry value="index 99"/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$ArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <array length="100" ID="1">
       <entry/>
@@ -977,7 +977,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
       <entry ID="51" value="index 99"/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$ArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="100" ID="1">
       <Entry/>
@@ -1148,7 +1148,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text>entry five</text>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Ljava.lang.String; -->
    <array length="5" ID="1">
       <!-- java.lang.String -->
@@ -1162,7 +1162,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- java.lang.String -->
       <text ID="6">entry five</text>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
       <!-- java.lang.String -->
@@ -1193,7 +1193,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text>5</text>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample --><root ID="0">
+<root ID="0">
    <!-- [I -->
    <array length="5" ID="1">
       <text>1</text>
@@ -1202,7 +1202,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text>4</text>
       <text>5</text>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [I -->
    <Array length="5" ID="1">
       <Text>1</Text>
@@ -1228,7 +1228,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text length="6">5, 10, 15, 20, 25, 30</text>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$PrimitiveMultidimensionalIntegerArrayExample --><root ID="0">
+<root ID="0">
    <!-- [[I -->
    <array length="5" ID="1">
       <!-- [I -->
@@ -1242,7 +1242,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- [I -->
       <text length="6" ID="6">5, 10, 15, 20, 25, 30</text>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$PrimitiveMultidimensionalIntegerArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [[I -->
    <Array length="5" ID="1">
       <!-- [I -->
@@ -1273,7 +1273,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <string>entry five</string>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$DefaultPrimitiveArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Ljava.lang.String; -->
    <array length="5" ID="1">
       <!-- java.lang.String -->
@@ -1287,7 +1287,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- java.lang.String -->
       <string ID="6">entry five</string>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$DefaultPrimitiveArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
       <!-- java.lang.String -->
@@ -1318,7 +1318,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Ljava.lang.String; -->
    <array length="5" ID="1">
       <text/>
@@ -1329,7 +1329,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text/>
       <text/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
       <Text/>
@@ -1357,7 +1357,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <entry value="entry five"/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <array length="5" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -1371,7 +1371,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
       <entry ID="6" value="entry five"/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="5" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -1402,7 +1402,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <text value="entry five"/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$DefaultCompositeArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <array length="5" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -1416,7 +1416,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
       <text ID="6" value="entry five"/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$DefaultCompositeArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="5" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -1447,7 +1447,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <entry value="entry five"/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <array length="5" ID="1">
       <entry/>
@@ -1458,7 +1458,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
       <entry ID="3" value="entry five"/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="5" ID="1">
       <Entry/>
@@ -1486,7 +1486,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <char>e</char>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$CharacterArrayExample --><root ID="0">
+<root ID="0">
    <!-- [C -->
    <array length="5" ID="1">
       <char>a</char>
@@ -1495,7 +1495,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <char>d</char>
       <char>e</char>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$CharacterArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [C -->
    <Array length="5" ID="1">
       <Char>a</Char>
@@ -1523,7 +1523,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="three"/>
    </array>
 </root>
-<!-- org.simpleframework.xml.core.ArrayTest$DifferentArrayExample --><root ID="0">
+<root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <array length="6" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -1536,7 +1536,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
       <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" ID="4" value="three"/>
    </array>
-</root><!-- org.simpleframework.xml.core.ArrayTest$DifferentArrayExample --><Root ID="0">
+</root><Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="6" ID="1">
       <!-- org.simpleframework.xml.core.ArrayTest$Text -->
@@ -1551,17 +1551,17 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.562 sec
    </Array>
 </Root>------------- ---------------- ---------------
 
-Testcase: testExample took 0.135 sec
-Testcase: testBadExample took 0.005 sec
-Testcase: testWriteArray took 1.053 sec
-Testcase: testPrimitive took 0.025 sec
-Testcase: testPrimitiveInteger took 0.028 sec
-Testcase: testPrimitiveMultidimensionalInteger took 0.065 sec
-Testcase: testDefaultPrimitive took 0.013 sec
-Testcase: testPrimitiveNull took 0.014 sec
-Testcase: testParentComposite took 0.065 sec
-Testcase: testDefaultComposite took 0.018 sec
-Testcase: testParentCompositeNull took 0.024 sec
-Testcase: testCharacter took 0.091 sec
-Testcase: testDifferentArray took 0.016 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testExample took 0.126 sec
+Testcase: testBadExample took 0.004 sec
+Testcase: testWriteArray took 0.897 sec
+Testcase: testPrimitive took 0.019 sec
+Testcase: testPrimitiveInteger took 0.017 sec
+Testcase: testPrimitiveMultidimensionalInteger took 0.021 sec
+Testcase: testDefaultPrimitive took 0.014 sec
+Testcase: testPrimitiveNull took 0.045 sec
+Testcase: testParentComposite took 0.022 sec
+Testcase: testDefaultComposite took 0.024 sec
+Testcase: testParentCompositeNull took 0.025 sec
+Testcase: testCharacter took 0.013 sec
+Testcase: testDifferentArray took 0.013 sec
+Testcase: testDirectory took 0 sec

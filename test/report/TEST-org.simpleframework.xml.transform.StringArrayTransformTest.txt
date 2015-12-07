@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.StringArrayTransformTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.241 sec
 ------------- Standard Output ---------------
 <stringArrayExample attribute="one, two, three, four">
    <element length="4">one, two, three, four</element>
@@ -20,7 +20,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
       <string length="4">one, two, three, four</string>
    </array>
 </stringArrayExample>
-<!-- org.simpleframework.xml.transform.StringArrayTransformTest$StringArrayExample --><string-array-example ID="0" attribute="one, two, three, four">
+<string-array-example ID="0" attribute="one, two, three, four">
    <!-- [Ljava.lang.String; -->
    <element length="4" ID="1">one, two, three, four</element>
    <!-- java.util.List -->
@@ -35,7 +35,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
       <!-- [Ljava.lang.String; -->
       <string length="4" ID="6">one, two, three, four</string>
    </array>
-</string-array-example><!-- org.simpleframework.xml.transform.StringArrayTransformTest$StringArrayExample --><StringArrayExample ID="0" attribute="one, two, three, four">
+</string-array-example><StringArrayExample ID="0" attribute="one, two, three, four">
    <!-- [Ljava.lang.String; -->
    <Element length="4" ID="1">one, two, three, four</Element>
    <!-- java.util.List -->
@@ -64,7 +64,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
 </stringArrayExample>
 ------------- ---------------- ---------------
 
-Testcase: testRead took 0.003 sec
+Testcase: testRead took 0.004 sec
 Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.231 sec
+Testcase: testPersistence took 0.229 sec
 Testcase: testDirectory took 0.001 sec

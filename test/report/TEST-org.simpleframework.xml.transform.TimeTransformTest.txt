@@ -1,63 +1,63 @@
 Testsuite: org.simpleframework.xml.transform.TimeTransformTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
 ------------- Standard Output ---------------
-<timeExample attribute="2010-02-20 20:36:36.816 GMT">
-   <element class="java.sql.Time">2010-02-20 20:36:36.816 GMT</element>
-   <time>2010-02-20 20:36:36.816 GMT</time>
+<timeExample attribute="2010-02-24 18:44:28.920 GMT">
+   <element class="java.sql.Time">2010-02-24 18:44:28.920 GMT</element>
+   <time>2010-02-24 18:44:28.920 GMT</time>
    <list class="java.util.ArrayList">
-      <time>2010-02-20 20:36:36.816 GMT</time>
-      <time>2010-02-20 20:36:36.816 GMT</time>
+      <time>2010-02-24 18:44:28.920 GMT</time>
+      <time>2010-02-24 18:44:28.920 GMT</time>
    </list>
    <array length="1">
-      <time>2010-02-20 20:36:36.816 GMT</time>
+      <time>2010-02-24 18:44:28.920 GMT</time>
    </array>
-</timeExample><timeExample attribute="2010-02-20 20:36:36.816 GMT">
-   <element class="java.sql.Time">2010-02-20 20:36:36.816 GMT</element>
-   <time>2010-02-20 20:36:36.816 GMT</time>
+</timeExample><timeExample attribute="2010-02-24 18:44:28.920 GMT">
+   <element class="java.sql.Time">2010-02-24 18:44:28.920 GMT</element>
+   <time>2010-02-24 18:44:28.920 GMT</time>
    <list class="java.util.ArrayList">
-      <time>2010-02-20 20:36:36.816 GMT</time>
-      <time>2010-02-20 20:36:36.816 GMT</time>
+      <time>2010-02-24 18:44:28.920 GMT</time>
+      <time>2010-02-24 18:44:28.920 GMT</time>
    </list>
    <array length="1">
-      <time>2010-02-20 20:36:36.816 GMT</time>
+      <time>2010-02-24 18:44:28.920 GMT</time>
    </array>
 </timeExample>
-<!-- org.simpleframework.xml.transform.TimeTransformTest$TimeExample --><time-example ID="0" attribute="2010-02-20 20:36:36.816 GMT">
+<time-example ID="0" attribute="2010-02-24 18:44:28.920 GMT">
    <!-- java.util.Date -->
-   <element class="java.sql.Time" ID="1">2010-02-20 20:36:36.816 GMT</element>
+   <element class="java.sql.Time" ID="1">2010-02-24 18:44:28.920 GMT</element>
    <!-- java.sql.Time -->
-   <time ID="2">2010-02-20 20:36:36.816 GMT</time>
+   <time ID="2">2010-02-24 18:44:28.920 GMT</time>
    <!-- java.util.Collection -->
    <list class="java.util.ArrayList" ID="3">
       <!-- java.sql.Time -->
-      <time ID="4">2010-02-20 20:36:36.816 GMT</time>
+      <time ID="4">2010-02-24 18:44:28.920 GMT</time>
       <!-- java.sql.Time -->
-      <time ID="5">2010-02-20 20:36:36.816 GMT</time>
+      <time ID="5">2010-02-24 18:44:28.920 GMT</time>
    </list>
    <!-- [Ljava.sql.Time; -->
    <array length="1" ID="6">
       <!-- java.sql.Time -->
-      <time ID="7">2010-02-20 20:36:36.816 GMT</time>
+      <time ID="7">2010-02-24 18:44:28.920 GMT</time>
    </array>
-</time-example><!-- org.simpleframework.xml.transform.TimeTransformTest$TimeExample --><TimeExample ID="0" attribute="2010-02-20 20:36:36.816 GMT">
+</time-example><TimeExample ID="0" attribute="2010-02-24 18:44:28.920 GMT">
    <!-- java.util.Date -->
-   <Element class="java.sql.Time" ID="1">2010-02-20 20:36:36.816 GMT</Element>
+   <Element class="java.sql.Time" ID="1">2010-02-24 18:44:28.920 GMT</Element>
    <!-- java.sql.Time -->
-   <Time ID="2">2010-02-20 20:36:36.816 GMT</Time>
+   <Time ID="2">2010-02-24 18:44:28.920 GMT</Time>
    <!-- java.util.Collection -->
    <List class="java.util.ArrayList" ID="3">
       <!-- java.sql.Time -->
-      <Time ID="4">2010-02-20 20:36:36.816 GMT</Time>
+      <Time ID="4">2010-02-24 18:44:28.920 GMT</Time>
       <!-- java.sql.Time -->
-      <Time ID="5">2010-02-20 20:36:36.816 GMT</Time>
+      <Time ID="5">2010-02-24 18:44:28.920 GMT</Time>
    </List>
    <!-- [Ljava.sql.Time; -->
    <Array length="1" ID="6">
       <!-- java.sql.Time -->
-      <Time ID="7">2010-02-20 20:36:36.816 GMT</Time>
+      <Time ID="7">2010-02-24 18:44:28.920 GMT</Time>
    </Array>
 </TimeExample>------------- ---------------- ---------------
 
 Testcase: testTime took 0.016 sec
-Testcase: testPersistence took 0.265 sec
+Testcase: testPersistence took 0.261 sec
 Testcase: testDirectory took 0 sec

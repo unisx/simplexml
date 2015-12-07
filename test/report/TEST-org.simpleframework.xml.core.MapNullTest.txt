@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -22,7 +22,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -36,7 +36,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <map-entry/>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -71,7 +71,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -85,7 +85,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <map-entry/>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -120,7 +120,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -134,7 +134,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          </map-entry>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -169,7 +169,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -183,7 +183,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          </map-entry>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -212,7 +212,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </table>
 </primitiveMap>
-<!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><primitive-map ID="0">
+<primitive-map ID="0">
    <!-- java.util.Map -->
    <table class="java.util.HashMap" ID="1">
       <entry>
@@ -221,7 +221,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <big-decimal/>
       </entry>
    </table>
-</primitive-map><!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><PrimitiveMap ID="0">
+</primitive-map><PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -245,7 +245,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </table>
 </primitiveMap>
-<!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><primitive-map ID="0">
+<primitive-map ID="0">
    <!-- java.util.Map -->
    <table class="java.util.HashMap" ID="1">
       <entry>
@@ -254,7 +254,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <big-decimal/>
       </entry>
    </table>
-</primitive-map><!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><PrimitiveMap ID="0">
+</primitive-map><PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -278,7 +278,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </table>
 </primitiveMap>
-<!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><primitive-map ID="0">
+<primitive-map ID="0">
    <!-- java.util.Map -->
    <table class="java.util.HashMap" ID="1">
       <entry>
@@ -287,7 +287,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <big-decimal ID="2">4</big-decimal>
       </entry>
    </table>
-</primitive-map><!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><PrimitiveMap ID="0">
+</primitive-map><PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -311,7 +311,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </table>
 </primitiveMap>
-<!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><primitive-map ID="0">
+<primitive-map ID="0">
    <!-- java.util.Map -->
    <table class="java.util.HashMap" ID="1">
       <entry>
@@ -320,7 +320,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <big-decimal ID="2">4</big-decimal>
       </entry>
    </table>
-</primitive-map><!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><PrimitiveMap ID="0">
+</primitive-map><PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -368,7 +368,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </table>
 </primitiveMap>
-<!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><primitive-map ID="0">
+<primitive-map ID="0">
    <!-- java.util.Map -->
    <table class="java.util.HashMap" ID="1">
       <entry>
@@ -394,7 +394,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <big-decimal ID="7">2</big-decimal>
       </entry>
    </table>
-</primitive-map><!-- org.simpleframework.xml.core.MapNullTest$PrimitiveMap --><PrimitiveMap ID="0">
+</primitive-map><PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -495,7 +495,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -551,7 +551,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <map-entry/>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -682,7 +682,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
       </entry>
    </map>
 </complexMap>
-<!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><complex-map ID="0">
+<complex-map ID="0">
    <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
@@ -738,7 +738,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
          <map-entry/>
       </entry>
    </map>
-</complex-map><!-- org.simpleframework.xml.core.MapNullTest$ComplexMap --><ComplexMap ID="0">
+</complex-map><ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -796,13 +796,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
    </Map>
 </ComplexMap>------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.24 sec
-Testcase: testEmptyCompositeBlankValue took 0.026 sec
-Testcase: testEmptyCompositeKey took 0.031 sec
-Testcase: testEmptyCompositeBlankKey took 0.029 sec
-Testcase: testEmptyPrimitiveValue took 0.023 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.04 sec
+Testcase: testEmptyCompositeValue took 0.242 sec
+Testcase: testEmptyCompositeBlankValue took 0.028 sec
+Testcase: testEmptyCompositeKey took 0.03 sec
+Testcase: testEmptyCompositeBlankKey took 0.027 sec
+Testcase: testEmptyPrimitiveValue took 0.022 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.019 sec
 Testcase: testEmptyPrimitiveKey took 0.023 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.016 sec
-Testcase: testNullValue took 0.13 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.036 sec
+Testcase: testNullValue took 0.106 sec
+Testcase: testDirectory took 0 sec

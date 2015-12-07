@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.252 sec
 ------------- Standard Output ---------------
 <per:person age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
    <jb:job tax:salary="10" experience="12" xmlns:jb="http://www.domain.com/job">
@@ -35,7 +35,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
    <name>John Doe</name>
    <value>Person</value>
 </per:person>
-<!-- org.simpleframework.xml.core.NamespaceTest$Person --><per:person ID="0" age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
+<per:person ID="0" age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
    <!-- org.simpleframework.xml.core.NamespaceTest$Profession -->
    <jb:job ID="1" tax:salary="10" experience="12" xmlns:jb="http://www.domain.com/job">
       <!-- java.lang.String -->
@@ -53,7 +53,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
    <name ID="6">John Doe</name>
    <!-- java.lang.String -->
    <value ID="7">Person</value>
-</per:person><!-- org.simpleframework.xml.core.NamespaceTest$Person --><per:Person ID="0" age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
+</per:person><per:Person ID="0" age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
    <!-- org.simpleframework.xml.core.NamespaceTest$Profession -->
    <jb:Job ID="1" tax:salary="10" experience="12" xmlns:jb="http://www.domain.com/job">
       <!-- java.lang.String -->
@@ -73,5 +73,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
    <Value ID="7">Person</Value>
 </per:Person>------------- ---------------- ---------------
 
-Testcase: testNamespace took 0.249 sec
+Testcase: testNamespace took 0.246 sec
 Testcase: testDirectory took 0 sec

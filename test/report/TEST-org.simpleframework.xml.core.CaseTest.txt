@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -54,7 +54,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
       <Text>example 6</Text>
    </TextEntry>
 </Example>
-<!-- org.simpleframework.xml.core.CaseTest$CaseExample --><example ID="0" version="1.0" name="example" URL="http://domain.com/">
+<example ID="0" version="1.0" name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CaseTest$TextEntry -->
@@ -97,7 +97,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
       <!-- java.lang.String -->
       <text ID="17">example 6</text>
    </text-entry>
-</example><!-- org.simpleframework.xml.core.CaseTest$CaseExample --><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CaseTest$TextEntry -->
@@ -142,5 +142,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
    </TextEntry>
 </Example>------------- ---------------- ---------------
 
-Testcase: testCase took 0.282 sec
+Testcase: testCase took 0.262 sec
 Testcase: testDirectory took 0 sec

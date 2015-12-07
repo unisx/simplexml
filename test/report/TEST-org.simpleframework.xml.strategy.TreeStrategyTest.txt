@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.TreeStrategyTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -119,7 +119,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
       </entry>
    </list>
 </root>
-<!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><root ID="0" number="1234" flag="true">
+<root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <constant ID="1">{no.override}</constant>
    <!-- java.lang.String -->
@@ -182,7 +182,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><Root ID="0" number="1234" flag="true">
+</root><Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">{no.override}</Constant>
    <!-- java.lang.String -->
@@ -402,7 +402,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
       </entry>
    </list>
 </root>
-<!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><root ID="0" number="1234" flag="true">
+<root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <constant ID="1">some constant</constant>
    <!-- java.lang.String -->
@@ -465,7 +465,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><Root ID="0" number="1234" flag="true">
+</root><Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">some constant</Constant>
    <!-- java.lang.String -->
@@ -685,7 +685,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
       </entry>
    </list>
 </root>
-<!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><root ID="0" number="1234" flag="true">
+<root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <constant ID="1">${no.override}</constant>
    <!-- java.lang.String -->
@@ -748,7 +748,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><Root ID="0" number="1234" flag="true">
+</root><Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">${no.override}</Constant>
    <!-- java.lang.String -->
@@ -956,7 +956,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
       </entry>
    </list>
 </root>
-<!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><root ID="0" number="1234" flag="true">
+<root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <constant ID="1">&gt;&gt;&lt;&lt;</constant>
    <!-- java.lang.String -->
@@ -1015,7 +1015,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><!-- org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry --><Root ID="0" number="1234" flag="true">
+</root><Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">&gt;&gt;&lt;&lt;</Constant>
    <!-- java.lang.String -->
@@ -1111,14 +1111,14 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 13.63 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-Took '3805' ms to process 10000 documents
-Took '3464' ms to process 10000 documents with templates
-Took '3354' ms to process 10000 documents with an empty filter
-Took '2582' ms to write 10000 documents
+Took '3515' ms to process 10000 documents
+Took '3323' ms to process 10000 documents with templates
+Took '3225' ms to process 10000 documents with an empty filter
+Took '2439' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testBasicDocument took 4.093 sec
-Testcase: testTemplateDocument took 3.51 sec
-Testcase: testEmptyFilter took 3.393 sec
-Testcase: testBasicWrite took 2.62 sec
+Testcase: testBasicDocument took 3.783 sec
+Testcase: testTemplateDocument took 3.362 sec
+Testcase: testEmptyFilter took 3.263 sec
+Testcase: testBasicWrite took 2.494 sec
 Testcase: testDirectory took 0 sec

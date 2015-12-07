@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -44,7 +44,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
       <Enum>TWO</Enum>
    </object>
 </test>
-<!-- org.simpleframework.xml.core.TypeTest$Entry --><test ID="0">
+<test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <primitive ID="1">
       <boolean>true</boolean>
@@ -76,7 +76,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
       <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><!-- org.simpleframework.xml.core.TypeTest$Entry --><Test ID="0">
+</test><Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
@@ -151,7 +151,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
       <Enum>TWO</Enum>
    </object>
 </test>
-<!-- org.simpleframework.xml.core.TypeTest$Entry --><test ID="0">
+<test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <primitive ID="1">
       <boolean>true</boolean>
@@ -183,7 +183,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
       <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><!-- org.simpleframework.xml.core.TypeTest$Entry --><Test ID="0">
+</test><Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
@@ -217,5 +217,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
    </Object>
 </Test>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.311 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testPrimitive took 0.3 sec
+Testcase: testDirectory took 0 sec

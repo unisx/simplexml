@@ -1,15 +1,15 @@
 Testsuite: org.simpleframework.xml.core.RootTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.27 sec
 ------------- Standard Output ---------------
 <rootExample version="1">
    <text>Some text example</text>
 </rootExample><rootExample version="1">
    <text>Some text example</text>
 </rootExample>
-<!-- org.simpleframework.xml.core.RootTest$RootExample --><root-example ID="0" version="1">
+<root-example ID="0" version="1">
    <!-- java.lang.String -->
    <text ID="1">Some text example</text>
-</root-example><!-- org.simpleframework.xml.core.RootTest$RootExample --><RootExample ID="0" version="1">
+</root-example><RootExample ID="0" version="1">
    <!-- java.lang.String -->
    <Text ID="1">Some text example</Text>
 </RootExample><extendedRootExample version="1">
@@ -17,10 +17,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 </extendedRootExample><extendedRootExample version="1">
    <text>Some text example</text>
 </extendedRootExample>
-<!-- org.simpleframework.xml.core.RootTest$ExtendedRootExample --><extended-root-example ID="0" version="1">
+<extended-root-example ID="0" version="1">
    <!-- java.lang.String -->
    <text ID="1">Some text example</text>
-</extended-root-example><!-- org.simpleframework.xml.core.RootTest$ExtendedRootExample --><ExtendedRootExample ID="0" version="1">
+</extended-root-example><ExtendedRootExample ID="0" version="1">
    <!-- java.lang.String -->
    <Text ID="1">Some text example</Text>
 </ExtendedRootExample><extendedRootExample version="1">
@@ -28,10 +28,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 </extendedRootExample><extendedRootExample version="1">
    <text>Some text example</text>
 </extendedRootExample>
-<!-- org.simpleframework.xml.core.RootTest$ExtendedRootExample --><extended-root-example ID="0" version="1">
+<extended-root-example ID="0" version="1">
    <!-- java.lang.String -->
    <text ID="1">Some text example</text>
-</extended-root-example><!-- org.simpleframework.xml.core.RootTest$ExtendedRootExample --><ExtendedRootExample ID="0" version="1">
+</extended-root-example><ExtendedRootExample ID="0" version="1">
    <!-- java.lang.String -->
    <Text ID="1">Some text example</Text>
 </ExtendedRootExample><extendedOverriddenRootExample version="1">
@@ -39,10 +39,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 </extendedOverriddenRootExample><extendedOverriddenRootExample version="1">
    <text>Some text example</text>
 </extendedOverriddenRootExample>
-<!-- org.simpleframework.xml.core.RootTest$ExtendedOverriddenRootExample --><extended-overridden-root-example ID="0" version="1">
+<extended-overridden-root-example ID="0" version="1">
    <!-- java.lang.String -->
    <text ID="1">Some text example</text>
-</extended-overridden-root-example><!-- org.simpleframework.xml.core.RootTest$ExtendedOverriddenRootExample --><ExtendedOverriddenRootExample ID="0" version="1">
+</extended-overridden-root-example><ExtendedOverriddenRootExample ID="0" version="1">
    <!-- java.lang.String -->
    <Text ID="1">Some text example</Text>
 </ExtendedOverriddenRootExample><explicitOverride version="1">
@@ -50,13 +50,13 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 </explicitOverride><explicitOverride version="1">
    <text>Some text example</text>
 </explicitOverride>
-<!-- org.simpleframework.xml.core.RootTest$ExtendedExplicitlyOverriddenRootExample --><explicit-override ID="0" version="1">
+<explicit-override ID="0" version="1">
    <!-- java.lang.String -->
    <text ID="1">Some text example</text>
-</explicit-override><!-- org.simpleframework.xml.core.RootTest$ExtendedExplicitlyOverriddenRootExample --><ExplicitOverride ID="0" version="1">
+</explicit-override><ExplicitOverride ID="0" version="1">
    <!-- java.lang.String -->
    <Text ID="1">Some text example</Text>
 </ExplicitOverride>------------- ---------------- ---------------
 
-Testcase: testRoot took 0.29 sec
+Testcase: testRoot took 0.263 sec
 Testcase: testDirectory took 0 sec
