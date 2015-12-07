@@ -3,10 +3,10 @@
 
    <target name="layout">
       <property name="source" value="src"/>
-      <property name="javadoc" value="doc/javadoc"/>
+      <property name="javadoc" value="javadoc"/>
       <property name="build" value="build"/>
       <property name="jar" value="jar"/>
-      <property file="build.properties"/>
+      <property name="version" value="0.8.1"/>
    </target>
 
    <target name="clean" depends="layout">
@@ -29,5 +29,10 @@
       <mkdir dir="${javadoc}"/>
       <javadoc sourcepath="${source}" packagenames="simple.*" destdir="${javadoc}" private="false"/>
       <delete dir="${build}"/>
+   </target>
+
+   <target name="all">
+      <antcall target="build"/>
+      <antcall target="javadoc"/>
    </target>
 </project>

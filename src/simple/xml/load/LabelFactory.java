@@ -40,7 +40,7 @@ import simple.xml.Attribute;
  * 
  * @author Niall Gallagher
  */
-public class LabelFactory {
+final class LabelFactory {
 
    /**
     * Creates a <code>Label</code> using the provided field and XML
