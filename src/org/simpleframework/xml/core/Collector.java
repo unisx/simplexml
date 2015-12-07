@@ -105,18 +105,20 @@ class Collector implements Criteria {
     * using the name of the label. This allows for repeat reads as
     * the variable can be used to acquire the labels converter.
     * 
-    * @param label this is the label used to create the pointer
+    * @param label this is the label used to create the variable
     * @param value this is the value of the object to be read
     */
    public void set(Label label, Object value) throws Exception {
-      Variable pointer = new Variable(label, value);
+      Variable variable = new Variable(label, value);
 
       if(label != null) {
          String name = label.getName(context);
-         String plain = label.getName();
+         String real = label.getName();
          
-         registry.put(plain, pointer);
-         registry.put(name, pointer);
+         if(!registry.containsKey(name)) {
+            registry.put(real, variable);
+            registry.put(name, variable);
+         }
       }
    }
    

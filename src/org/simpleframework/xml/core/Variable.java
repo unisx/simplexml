@@ -41,12 +41,12 @@ class Variable implements Label {
    /**
     * This is the object that has been deserialized from the XML.
     */
-   private Object value;
+   private final Object value;
    
    /**
     * This contains the details for the annotated field or method.
     */
-   private Label label;
+   private final Label label;
    
    /**
     * Constructor for the <code>Variable</code> object. This is used

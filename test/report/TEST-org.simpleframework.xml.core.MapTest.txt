@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapTest
-Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.572 sec
+Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.684 sec
 ------------- Standard Output ---------------
 <entryMap>
    <map class="java.util.HashMap">
@@ -1102,14 +1102,14 @@ Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.572 sec
    </Fields>
 </Index>------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.223 sec
-Testcase: testStringMap took 0.026 sec
-Testcase: testComplexMap took 0.068 sec
-Testcase: testPrimitiveMap took 0.029 sec
+Testcase: testEntryMap took 0.261 sec
+Testcase: testStringMap took 0.035 sec
+Testcase: testComplexMap took 0.076 sec
+Testcase: testPrimitiveMap took 0.039 sec
 Testcase: testPrimitiveValueOverrideMap took 0.024 sec
-Testcase: testPrimitiveValueKeyOverrideMap took 0.024 sec
-Testcase: testComplexValueKeyOverrideMap took 0.059 sec
-Testcase: testPrimitiveInlineMap took 0.019 sec
-Testcase: testNullValue took 0.054 sec
-Testcase: testIndexExample took 0.037 sec
+Testcase: testPrimitiveValueKeyOverrideMap took 0.036 sec
+Testcase: testComplexValueKeyOverrideMap took 0.065 sec
+Testcase: testPrimitiveInlineMap took 0.022 sec
+Testcase: testNullValue took 0.067 sec
+Testcase: testIndexExample took 0.044 sec
 Testcase: testDirectory took 0 sec

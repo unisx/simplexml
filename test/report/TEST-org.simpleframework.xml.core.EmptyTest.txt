@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.449 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.518 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -36,7 +36,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -67,7 +67,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -98,7 +98,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -129,7 +129,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -157,13 +157,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.119 sec
-Testcase: testRequiredEmptyMethod took 0.007 sec
-Testcase: testRequiredBlank took 0.001 sec
-Testcase: testOptionalEmpty took 0.003 sec
+Testcase: testRequiredEmpty took 0.134 sec
+Testcase: testRequiredEmptyMethod took 0.008 sec
+Testcase: testRequiredBlank took 0.002 sec
+Testcase: testOptionalEmpty took 0.002 sec
 Testcase: testOptionalBlank took 0.001 sec
-Testcase: testEmptyCollection took 0.082 sec
-Testcase: testRequiredEmptyAttribute took 0.007 sec
+Testcase: testEmptyCollection took 0.098 sec
+Testcase: testRequiredEmptyAttribute took 0.008 sec
 Testcase: testOptionalEmptyAttribute took 0.001 sec
-Testcase: testDefaultedAttribute took 0.217 sec
+Testcase: testDefaultedAttribute took 0.249 sec
 Testcase: testDirectory took 0 sec

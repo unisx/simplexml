@@ -71,7 +71,7 @@ class Composite implements Converter {
    /**
     * This is used to store objects so that they can be read again.
     */
-   private final Criteria store;
+   private final Criteria criteria;
    
    /**
     * This is the current revision of this composite converter.
@@ -100,7 +100,7 @@ class Composite implements Converter {
    public Composite(Context context, Class type) {
       this.factory = new ObjectFactory(context, type);  
       this.primitive = new Primitive(context, type);
-      this.store = new Collector(context);
+      this.criteria = new Collector(context);
       this.revision = new Revision();
       this.context = context;
       this.type = type;
@@ -156,7 +156,7 @@ class Composite implements Converter {
       Caller caller = schema.getCaller();
       
       read(node, source, schema); 
-      store.commit(source);
+      criteria.commit(source);
       caller.validate(source);
       caller.commit(source);
       
@@ -214,20 +214,23 @@ class Composite implements Converter {
       
       if(creator.isDefault()) {
          return readDefault(node, schema, value);
+      } else {
+         read(node, null, schema);
       }
-      return readComplex(node, schema, value);
+      return readConstructor(node, schema, value);
    }
    
    /**
-    * This <code>read</code> method performs deserialization of the XML
-    * schema class type by traversing the contacts and instantiating them
-    * using details from the provided XML element. Because this will
+    * This <code>readDefault</code> method performs deserialization of the 
+    * XM schema class type by traversing the contacts and instantiating 
+    * them using details from the provided XML element. Because this will
     * convert a non-primitive value it delegates to other converters to
     * perform deserialization of lists and primitives.
     * <p>
-    * If any of the required contacts are not present within the provided
-    * XML element this will terminate deserialization and throw an
-    * exception. The annotation missing is reported in the exception.
+    * This takes the approach that the object is instantiated first and
+    * then the annotated fields and methods are deserialized from the XML
+    * elements and attributes. When all the details have be deserialized
+    * they are set on the internal contacts of the object.
     * 
     * @param node the XML element contact values are deserialized from
     * @param schema this is the schema for the class to be deserialized
@@ -241,21 +244,22 @@ class Composite implements Converter {
       if(value != null) {
          value.setInstance(source);
          read(node, source, schema);
-         store.commit(source);  
+         criteria.commit(source);  
       }
       return source;
    }
    
    /**
-    * This <code>read</code> method performs deserialization of the XML
-    * schema class type by traversing the contacts and instantiating them
-    * using details from the provided XML element. Because this will
+    * This <code>readConstructor</code> method performs deserialization of 
+    * the XML schema class type by traversing the contacts and creating 
+    * them using details from the provided XML element. Because this will
     * convert a non-primitive value it delegates to other converters to
     * perform deserialization of lists and primitives.
     * <p>
-    * If any of the required contacts are not present within the provided
-    * XML element this will terminate deserialization and throw an
-    * exception. The annotation missing is reported in the exception.
+    * This takes the approach of reading the XML elements and attributes
+    * before instantiating the object. Instantiation is performed using a
+    * declared constructor. The parameters for the constructor are taken
+    * from the deserialized objects.
     * 
     * @param node the XML element contact values are deserialized from
     * @param schema this is the schema for the class to be deserialized
@@ -263,17 +267,13 @@ class Composite implements Converter {
     * 
     * @return this returns the fully deserialized object graph
     */
-   private Object readComplex(InputNode node, Schema schema, Instance value) throws Exception {
+   private Object readConstructor(InputNode node, Schema schema, Instance value) throws Exception {
       Creator creator = schema.getCreator();
-      
-      if(schema != null) {
-         read(node, null, schema);
-      }
-      Object source = creator.getInstance(store);
+      Object source = creator.getInstance(criteria);
       
       if(value != null) {
          value.setInstance(source);
-         store.commit(source); 
+         criteria.commit(source); 
       }
       return source;
    }
@@ -377,7 +377,7 @@ class Composite implements Converter {
             Double start = revision.getDefault();
             Double expected = version.revision();
             
-            store.set(label, start);
+            criteria.set(label, start);
             revision.compare(expected, start);
          }
       }
@@ -534,7 +534,7 @@ class Composite implements Converter {
       Label label = map.take(name);      
 
       if(label == null) {
-         label = store.get(name);
+         label = criteria.get(name);
       }
       if(label == null) {
          Position line = node.getPosition();
@@ -575,7 +575,7 @@ class Composite implements Converter {
          }
       } else {
          if(object != label.getEmpty(context)) {      
-            store.set(label, object);
+            criteria.set(label, object);
          }
       }
       return object;
@@ -601,11 +601,11 @@ class Composite implements Converter {
       String name = label.getName(context);
       
       if(label.isCollection()) {
-         Variable pointer = store.get(name);
+         Variable variable = criteria.get(name);
          Contact contact = label.getContact();
          
-         if(pointer != null) {
-            Object value = pointer.getValue();
+         if(variable != null) {
+            Object value = variable.getValue();
 
             return reader.read(node, value);
          } else {
@@ -648,7 +648,7 @@ class Composite implements Converter {
          Object value = label.getEmpty(context);
          
          if(value != null) {
-            store.set(label, value);
+            criteria.set(label, value);
          }
       }      
    }
@@ -823,7 +823,7 @@ class Composite implements Converter {
       Label label = map.take(name);      
 
       if(label == null) {
-         label = store.get(name);
+         label = criteria.get(name);
       }
       if(label == null) {
          Position line = node.getPosition();
@@ -858,7 +858,7 @@ class Composite implements Converter {
       if(valid == false) {     
         throw new PersistenceException("Invalid value for %s in %s at %s", label, type, line);
       }
-      store.set(label, null);
+      criteria.set(label, null);
    }
 
    /**

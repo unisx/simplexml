@@ -3,13 +3,14 @@ package org.simpleframework.xml.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import junit.framework.TestCase;
-
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
+import org.simpleframework.xml.ValidationTestCase;
 
-public class StackOverflowTest extends TestCase {
+public class StackOverflowTest extends ValidationTestCase {
+   
+   private static final int ITERATIONS = 5000;
    
    private static final String NEW_BENEFIT = 
    "<newBenefit>"+
@@ -60,22 +61,25 @@ public class StackOverflowTest extends TestCase {
       Persister persister = new Persister();
       builder.append("<delivery>");
       
-      for(int i = 0; i < 50000; i++) {
-         double value = (Math.random() * 10.0);
+      boolean isNewBenefit = true;
+      for(int i = 0; i < ITERATIONS; i++) {
          String text = null;
-         
-         if(value % 2 == 0) {
+
+         if(isNewBenefit) {
             text = NEW_BENEFIT;
          } else {
             text = BENEFIT_MUTATION;
          }
+         isNewBenefit = !isNewBenefit ;
          builder.append(text);
       }
       builder.append("</delivery>");
       
       Delivery delivery = persister.read(Delivery.class, builder.toString());
       
-      assertEquals(delivery.listBenefitMutation.size() + delivery.listNewBenefit.size(), 50000);
+      assertEquals(delivery.listBenefitMutation.size() + delivery.listNewBenefit.size(), ITERATIONS);
+      
+      validate(persister, delivery);
    }
    
 

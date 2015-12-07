@@ -1,11 +1,11 @@
 Testsuite: org.simpleframework.xml.core.CompatibilityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.173 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.3 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'address' does not exist at line -1
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:543)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -35,7 +35,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:646)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -65,7 +65,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:646)
 	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:435)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:349)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -93,4 +93,4 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testCompatibility took 0.17 sec
+Testcase: testCompatibility took 0.289 sec

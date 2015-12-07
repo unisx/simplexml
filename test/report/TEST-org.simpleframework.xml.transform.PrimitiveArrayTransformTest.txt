@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.PrimitiveArrayTransformTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.67 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.752 sec
 ------------- Standard Output ---------------
 <integerArrayExample attribute="1, 2, 3, 4">
    <element length="4">1, 2, 3, 4</element>
@@ -214,8 +214,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.67 sec
    </TestArray>
 </IntegerArrayExample>------------- ---------------- ---------------
 
-Testcase: testRead took 0.005 sec
-Testcase: testWrite took 0.001 sec
-Testcase: testPersistence took 0.249 sec
-Testcase: testCyclicPersistence took 0.408 sec
+Testcase: testRead took 0.004 sec
+Testcase: testWrite took 0 sec
+Testcase: testPersistence took 0.294 sec
+Testcase: testCyclicPersistence took 0.447 sec
 Testcase: testDirectory took 0 sec

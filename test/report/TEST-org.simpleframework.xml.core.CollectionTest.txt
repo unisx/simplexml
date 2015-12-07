@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.49 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.975 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -447,30 +447,30 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.49 sec
 ------------- Standard Error -----------------
 <test name="example">
    <list class="java.util.HashSet">
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
+         <text>one</text>
+         <description>this is an extended entry</description>
+      </entry>
       <entry id="3">
          <text>three</text>
       </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
-      </entry>
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
-         <text>one</text>
-         <description>this is an extended entry</description>
       </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
+         <text>two</text>
+         <description>this is the second one</description>
+      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
       </entry>
       <entry id="3">
          <text>three</text>
-      </entry>
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
-         <text>two</text>
-         <description>this is the second one</description>
       </entry>
    </list>
 </test>org.simpleframework.xml.core.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
@@ -482,7 +482,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.49 sec
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -517,7 +517,7 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -551,7 +551,7 @@ org.simpleframework.xml.core.InstantiationException: Type is not a collection cl
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -586,7 +586,7 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -622,7 +622,7 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -657,7 +657,7 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.Hashta
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -703,7 +703,7 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:548)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:464)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:243)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
@@ -731,24 +731,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.124 sec
-Testcase: testSortedSet took 0.09 sec
-Testcase: testList took 0.028 sec
-Testcase: testHashSet took 0.031 sec
-Testcase: testTreeSet took 0.024 sec
-Testcase: testArrayList took 0.022 sec
-Testcase: testSortedSetToSet took 0.005 sec
-Testcase: testExtendedEntry took 0.008 sec
-Testcase: testTypeFromFieldList took 0.034 sec
-Testcase: testTypeFromMethodList took 0.026 sec
-Testcase: testPrimitiveCollection took 0.038 sec
-Testcase: testCompositeCollection took 0.02 sec
-Testcase: testPrimitiveDefaultCollection took 0.01 sec
-Testcase: testSetToSortedSet took 0.004 sec
+Testcase: testSet took 0.245 sec
+Testcase: testSortedSet took 0.245 sec
+Testcase: testList took 0.06 sec
+Testcase: testHashSet took 0.054 sec
+Testcase: testTreeSet took 0.04 sec
+Testcase: testArrayList took 0.033 sec
+Testcase: testSortedSetToSet took 0.006 sec
+Testcase: testExtendedEntry took 0.026 sec
+Testcase: testTypeFromFieldList took 0.055 sec
+Testcase: testTypeFromMethodList took 0.072 sec
+Testcase: testPrimitiveCollection took 0.031 sec
+Testcase: testCompositeCollection took 0.039 sec
+Testcase: testPrimitiveDefaultCollection took 0.019 sec
+Testcase: testSetToSortedSet took 0.006 sec
 Testcase: testListToSet took 0.002 sec
-Testcase: testInvalidList took 0.002 sec
-Testcase: testUnknownCollectionList took 0.002 sec
-Testcase: testAbstractList took 0.002 sec
+Testcase: testInvalidList took 0.004 sec
+Testcase: testUnknownCollectionList took 0.004 sec
+Testcase: testAbstractList took 0.006 sec
 Testcase: testNotACollection took 0.002 sec
-Testcase: testMissingCollection took 0.002 sec
+Testcase: testMissingCollection took 0.005 sec
 Testcase: testDirectory took 0 sec

@@ -1,14 +1,14 @@
 package org.simpleframework.xml.core;
 
-import junit.framework.TestCase;
-
+import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
+import org.simpleframework.xml.ValidationTestCase;
 
-public class EnumArrayTest extends TestCase {
+public class EnumArrayTest extends ValidationTestCase {
    
    private static final String SOURCE =
-   "<example>"+
+   "<example size='3'>"+
    "  <array>ONE,TWO,FOUR</array>"+
    "</example>";
    
@@ -25,8 +25,16 @@ public class EnumArrayTest extends TestCase {
       @Element(name="array")
       private final Number[] array;
       
-      public NumberArray(@Element(name="array") Number[] array) {
+      private final int size;
+      
+      public NumberArray(@Element(name="array") Number[] array, @Attribute(name="size") int size) {
          this.array = array;
+         this.size = size;
+      }
+      
+      @Attribute(name="size")
+      public int getLength() {
+         return size;
       }
    }
    
@@ -38,6 +46,10 @@ public class EnumArrayTest extends TestCase {
       assertEquals(array.array[0], Number.ONE);
       assertEquals(array.array[1], Number.TWO);
       assertEquals(array.array[2], Number.FOUR);
+      assertEquals(array.getLength(), array.size);
+      assertEquals(array.array.length, array.size);
+      
+      validate(persister, array);
    }
 
 }
