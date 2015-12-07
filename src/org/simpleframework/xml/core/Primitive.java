@@ -201,7 +201,7 @@ class Primitive implements Converter {
    private Object readElement(InputNode node, Instance value) throws Exception {
       Object result = read(node, field);
       
-      if(result != null) {
+      if(value != null) {
          value.setInstance(result);
       }
       return result;

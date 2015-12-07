@@ -38,14 +38,19 @@ class ClassCreator implements Creator {
    private final List<Builder> list;
    
    /**
-    * This is used to acquire a parameter by the parameter name.
-    */
-   private final ParameterMap map;
-   
-   /**
     * This represents the default no argument constructor used.
     */
    private final Builder primary;
+   
+   /**
+    * This is used to acquire a parameter by the parameter name.
+    */
+   private final ClassMap map;
+   
+   /**
+    * This is the type this builder creates instances of.
+    */
+   private final Class type;
    
    /**
     * Constructor for the <code>ClassCreator</code> object. This is
@@ -56,7 +61,8 @@ class ClassCreator implements Creator {
     * @param map this contains all parameters for each constructor
     * @param primary this is the default no argument constructor
     */
-   public ClassCreator(List<Builder> list, ParameterMap map, Builder primary) {
+   public ClassCreator(List<Builder> list, ClassMap map, Builder primary) {
+      this.type = map.getType();
       this.primary = primary;
       this.list = list;
       this.map = map;
@@ -98,7 +104,7 @@ class ClassCreator implements Creator {
       Builder builder = getBuilder(criteria);
       
       if(builder == null) {
-         throw new PersistenceException("Could not find a constructor");
+         throw new PersistenceException("Constructor not matched for %s", type);
       }
       return builder.getInstance(criteria);
    }

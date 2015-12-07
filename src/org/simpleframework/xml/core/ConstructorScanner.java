@@ -52,14 +52,14 @@ class ConstructorScanner {
    private List<Builder> done;
    
    /**
-    * This is used to acquire a parameter by the parameter name.
-    */
-   private ParameterMap all;
-   
-   /**
     * This represents the default no argument constructor used.
     */
    private Builder primary;
+   
+   /**
+    * This is used to acquire a parameter by the parameter name.
+    */
+   private ClassMap table;
    
    /**
     * This is the type that is scanner for annotated constructors.
@@ -76,7 +76,7 @@ class ConstructorScanner {
     */
    public ConstructorScanner(Class type) throws Exception {
       this.done = new ArrayList<Builder>();
-      this.all = new ParameterMap();
+      this.table = new ClassMap(type);
       this.type = type;
       this.scan(type);
    }
@@ -91,7 +91,7 @@ class ConstructorScanner {
     * @return this returns the creator for the class object
     */
    public Creator getCreator() {
-      return new ClassCreator(done, all, primary);
+      return new ClassCreator(done, table, primary);
    }
    
    /**
@@ -105,7 +105,7 @@ class ConstructorScanner {
       Constructor[] array = type.getDeclaredConstructors();
       
       for(Constructor factory: array){
-         ParameterMap map = new ParameterMap();
+         ClassMap map = new ClassMap(type);
          
          if(!factory.isAccessible()) {
             factory.setAccessible(true);
@@ -123,7 +123,7 @@ class ConstructorScanner {
     * @param factory this is the constructor that is to be scanned
     * @param map this is the parameter map that contains parameters
     */
-   private void scan(Constructor factory, ParameterMap map) throws Exception {
+   private void scan(Constructor factory, ClassMap map) throws Exception {
       Annotation[][] labels = factory.getParameterAnnotations();
       Class[] types = factory.getParameterTypes();
 
@@ -137,7 +137,7 @@ class ConstructorScanner {
                if(map.containsKey(name)) {
                   throw new PersistenceException("Parameter '%s' is a duplicate in %s", name, factory);
                }
-               all.put(name, value);
+               table.put(name, value);
                map.put(name, value);
             }
          }
@@ -155,7 +155,7 @@ class ConstructorScanner {
     * @param factory this is the constructor that is to be scanned
     * @param map this is the parameter map that contains parameters
     */
-   private void build(Constructor factory, ParameterMap map) throws Exception {
+   private void build(Constructor factory, ClassMap map) throws Exception {
       Builder builder = new Builder(factory, map);
       
       if(builder.isDefault()) {
@@ -209,7 +209,7 @@ class ConstructorScanner {
       Parameter value = ParameterFactory.getInstance(factory, label, index);
       String name = value.getName(); 
       
-      if(all.containsKey(name)) {
+      if(table.containsKey(name)) {
          validate(value, name);
       }
       return value;
@@ -225,7 +225,7 @@ class ConstructorScanner {
     * @param name this is the name of the parameter to validate
     */
    private void validate(Parameter parameter, String name) throws Exception {
-      Parameter other = all.get(name);
+      Parameter other = table.get(name);
       Annotation label = other.getAnnotation();
       
       if(!parameter.getAnnotation().equals(label)) {

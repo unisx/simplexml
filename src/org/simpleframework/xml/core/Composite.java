@@ -1074,12 +1074,13 @@ class Composite implements Converter {
       if(label != null) {
          Contact contact = label.getContact();
          Object value = contact.get(source);
+         Class type = source.getClass();
           
          if(value == null) {
             value = label.getEmpty(context);
          }
          if(value == null && label.isRequired()) {
-            throw new TextException("Value for %s is null", label);
+            throw new TextException("Value for %s is null for %s", label, type);
          }
          writeText(node, value, label); 
       }         

@@ -40,14 +40,14 @@ class Builder {
    private final Constructor factory;
    
    /**
-    * This is the map that contains the parameters to be used.
-    */
-   private final ParameterMap map;
-   
-   /**
     * This is the list of parameters in the order of declaration. 
     */
    private final Parameter[] list;
+   
+   /**
+    * This is the map that contains the parameters to be used.
+    */
+   private final ClassMap map;
 
    /**
     * Constructor for the <code>Builder</code> object. This is used
@@ -58,7 +58,7 @@ class Builder {
     * @param factory this is the factory used for instantiation
     * @param map this is the map of parameters that are declared
     */
-   public Builder(Constructor factory, ParameterMap map) {
+   public Builder(Constructor factory, ClassMap map) {
       this.list = map.list();
       this.factory = factory;
       this.map = map;

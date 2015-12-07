@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.IndentTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.22 sec
 ------------- Standard Output ---------------
 <contact id="some id">
      <details>
@@ -41,6 +41,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.272 sec
    </Details>
 </Contact>------------- ---------------- ---------------
 
-Testcase: testIndent took 0.232 sec
-Testcase: testNoIndent took 0.027 sec
+Testcase: testIndent took 0.191 sec
+Testcase: testNoIndent took 0.025 sec
 Testcase: testDirectory took 0 sec

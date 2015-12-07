@@ -1,5 +1,5 @@
 /*
- * ParameterMap.java April 2009
+ * ClassMap.java April 2009
  *
  * Copyright (C) 2009, Niall Gallagher <niallg@users.sf.net>
  *
@@ -23,7 +23,7 @@ package org.simpleframework.xml.core;
 import java.util.LinkedHashMap;
 
 /**
- * The <code>ParameterMap</code> object is used to represent a map
+ * The <code>ClassMap</code> object is used to represent a map
  * of parameters iterable in declaration order. This is used so
  * that parameters can be acquired by name for validation. It is
  * also used to create an array of <code>Parameter</code> objects
@@ -32,7 +32,7 @@ import java.util.LinkedHashMap;
  * 
  * @author Niall Gallagher
  */
-class ParameterMap extends LinkedHashMap<String, Parameter> {
+class ClassMap extends LinkedHashMap<String, Parameter> {
     
    /**
     * This represents a blank array of parameter objects.
@@ -40,13 +40,21 @@ class ParameterMap extends LinkedHashMap<String, Parameter> {
    private final Parameter[] blank;
    
    /**
-    * Constructor for the <code>ParameterMap</code> object. This
+    * This is the type that the parameters are created for.
+    */
+   private final Class type;
+   
+   /**
+    * Constructor for the <code>ClassMap</code> object. This
     * is used to create a hash map that can be used to acquire
     * parameters by name. It also provides the parameters in
-    * declaration order within a for each loop;
+    * declaration order within a for each loop.
+    * 
+    * @param type this is the type the map is created for
     */
-   public ParameterMap() {
+   public ClassMap(Class type) {
       this.blank = new Parameter[]{};
+      this.type = type;
    }
     
    /**
@@ -59,5 +67,15 @@ class ParameterMap extends LinkedHashMap<String, Parameter> {
     */
    public Parameter[] list() {
       return values().toArray(blank);
+   }
+ 
+   /**
+    * This is the type that this class map represents. It can be 
+    * used to determine where the parameters stored are declared.
+    * 
+    * @return returns the type that the parameters are created for
+    */
+   public Class getType() {
+      return type;
    }
 }

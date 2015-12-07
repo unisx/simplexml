@@ -53,6 +53,11 @@ class NodeWriter {
     * Contains the set of as yet uncommitted elements blocks.
     */ 
    private final Set active;
+   
+   /**
+    * This determines if we expand the namespace prefixes.
+    */
+   private final boolean verbose;
 
    /**
     * Constructor for the <code>NodeWriter</code> object. This will
@@ -76,11 +81,25 @@ class NodeWriter {
     * @param format this is used to format the generated document
     */ 
    public NodeWriter(Writer result, Format format) {
-      this.writer = new Formatter(result, format);
-      this.active = new HashSet();
-      this.stack = new OutputStack(active);           
+      this(result, format, false);
    }  
    
+   /**
+    * Constructor for the <code>NodeWriter</code> object. This will
+    * create the object that is used to control an output elements
+    * access to the generated XML document. This keeps a stack of
+    * active and uncommitted elements.
+    *
+    * @param result this is the output for the resulting document
+    * @param format this is used to format the generated document
+    * @param verbose this determines if we expand the namespaces
+    */ 
+   private NodeWriter(Writer result, Format format, boolean verbose) {
+      this.writer = new Formatter(result, format);
+      this.active = new HashSet();
+      this.stack = new OutputStack(active);    
+      this.verbose = verbose;
+   }  
    /**
     * This is used to acquire the root output node for the document.
     * This will create an empty node that can be used to generate
@@ -240,7 +259,7 @@ class NodeWriter {
     * @param node this is the node that is to have its name written
     */   
    public void writeName(OutputNode node) throws Exception {
-      String prefix = node.getPrefix(false);
+      String prefix = node.getPrefix(verbose);
       String name = node.getName();
       
       if(name != null) {
@@ -283,7 +302,7 @@ class NodeWriter {
          writer.writeText(value, mode);
       }
       String name = node.getName();
-      String prefix = node.getPrefix(false);
+      String prefix = node.getPrefix(verbose);
       
       if(name != null) {
          writer.writeEnd(name, prefix);
@@ -304,7 +323,7 @@ class NodeWriter {
       for(String name : map) {
          OutputNode entry = map.get(name);
          String value = entry.getValue();
-         String prefix = entry.getPrefix(false);
+         String prefix = entry.getPrefix(verbose);
          
          writer.writeAttribute(name, value, prefix);
       }
