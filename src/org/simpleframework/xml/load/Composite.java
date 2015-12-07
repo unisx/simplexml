@@ -61,16 +61,16 @@ class Composite implements Converter {
     * This factory creates instances of the deserialized object.
     */
    private final ObjectFactory factory;
-
-   /**
-    * This is the source object for the instance of serialization.
-    */
-   private final Source root;
    
    /**
     * This is used to store objects so that they can be read again.
     */
-   private final History store;
+   private final Collector store;
+   
+   /**
+    * This is the source object for the instance of serialization.
+    */
+   private final Source root;
    
    /**
     * This is the type that this composite produces instances of.
@@ -88,7 +88,7 @@ class Composite implements Converter {
     */
    public Composite(Source root, Class type) {
       this.factory = new ObjectFactory(root, type);  
-      this.store = new History(root);
+      this.store = new Collector();
       this.root = root;
       this.type = type;
    }
@@ -138,6 +138,7 @@ class Composite implements Converter {
       Schema schema = root.getSchema(source);
       
       read(node, source, schema);
+      store.commit(source);
       schema.validate(source);
       schema.commit(source);
       
@@ -159,9 +160,8 @@ class Composite implements Converter {
     * @return this returns a replacement for the deserialized object
     */
    private Object readResolve(InputNode node, Object source, Schema schema) throws Exception {
-      Position line = node.getPosition();
-
       if(source != null) {
+         Position line = node.getPosition();
          Object value = schema.resolve(source);
          Class real = value.getClass();
       
@@ -316,16 +316,16 @@ class Composite implements Converter {
     * @throws Exception thrown if the the label object does not exist
     */
    private void readElement(InputNode node, Object source, LabelMap map) throws Exception {
-      Position line = node.getPosition();
       String name = node.getName();
       Label label = map.take(name);      
 
       if(label == null) {
-         Converter repeat = store.get(name);
+         label = store.get(name);
+      }
+      if(label == null) {
+         Position line = node.getPosition();
          
-         if(repeat != null) {
-            repeat.read(node);
-         } else if(map.isStrict()) {              
+         if(map.isStrict()) {              
             throw new ElementException("Element '%s' does not exist at %s", name, line);
          } else {
             node.skip();                 
@@ -350,8 +350,7 @@ class Composite implements Converter {
     * @throws Exception thrown if the contact could not be deserialized
     */
    private void read(InputNode node, Object source, Label label) throws Exception {    
-      Converter reader = label.getConverter(root);
-      Contact contact = label.getContact();      
+      Converter reader = label.getConverter(root);      
       Object object = reader.read(node);
     
       if(object == null) {     
@@ -361,9 +360,10 @@ class Composite implements Converter {
          if(label.isRequired()) {              
             throw new ValueRequiredException("Empty value for %s in %s at %s", label, type, line);
          }
-      } else if(object != label.getEmpty()) {
-         contact.set(source, object); 
-         store.save(label, object);
+      } else {
+         if(object != label.getEmpty()) {      
+            store.put(label, object);
+         }
       }         
    }
    
@@ -380,9 +380,9 @@ class Composite implements Converter {
     * 
     * @throws Exception thrown if an XML property was not declared
     */
-   private void validate(InputNode node, LabelMap map, Object source) throws Exception {
+   private void validate(InputNode node, LabelMap map, Object source) throws Exception {     
       Position line = node.getPosition();
-      Class type = source.getClass();      
+      Class type = source.getClass();
 
       for(Label label : map) {
          if(label.isRequired()) {
@@ -497,6 +497,7 @@ class Composite implements Converter {
          }
       }         
    }
+   
    /**
     * The <code>replace</code> method is used to replace an object
     * before it is serialized. This is used so that an object can give

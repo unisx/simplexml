@@ -1,7 +1,7 @@
 /*
- * CacheLabel.java July 2007
+ * Pointer.java December 2007
  *
- * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
+ * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -20,105 +20,57 @@
 
 package org.simpleframework.xml.load;
 
+import org.simpleframework.xml.stream.InputNode;
+import org.simpleframework.xml.stream.OutputNode;
+import org.simpleframework.xml.stream.Position;
+
 /**
- * The <code>CacheLabel</code> object is used to acquire details from an
- * inner label object so that details can be retrieved repeatedly without
- * the need to perform any logic for extracting the values. This ensures
- * that a class XML schema requires only initial processing the first
- * time the class XML schema is required. 
+ * The <code>Pointer</code> object is used to represent a pointer to 
+ * a method or field of a deserialized object. It contains the value
+ * for the field or method as well as the details from the annotation.
+ * This is used by the <code>Collector</code> to populate an object
+ * once all the values for that object have been collected. 
  * 
  * @author Niall Gallagher
+ * 
+ * @see org.simpleframework.xml.load.Collector
  */
-class CacheLabel implements Label {
-
-   /**
-    * This is the contact used to set and get the value for the node.
-    */
-   private final Contact contact;
+class Pointer implements Label {
    
    /**
-    * This is used to represent the dependent class to be used.
+    * This is the object that has been deserialized from the XML.
     */
-   private final Class depend;
+   private Object value;
    
    /**
-    * This is used to represent the label class that this will use.
+    * This contains the details for the annotated field or method.
     */
-   private final Class type;
+   private Label label;
    
    /**
-    * This is used to represent the empty string for the label.
-    */
-   private final String empty;
-   
-   /**
-    * This is used to represent the name of the entry item use.
-    */
-   private final String entry;
-   
-   /**
-    * This is used to represent the name of the annotated element.
-    */
-   private final String name;
-   
-   /**
-    * This is used to represent the name override for the annotation.
-    */
-   private final String override;
-   
-   /**
-    * This is used to represent whether the data is written as data. 
-    */
-   private final boolean data;
-   
-   /**
-    * This is used to represent whether the entity is required or not.
-    */
-   private final boolean required;
-   
-   /**
-    * This is used to determine whether the entity is inline or not. 
-    */
-   private final boolean inline;
-   
-   /**
-    * This is the label the this cache is wrapping the values for.
-    */
-   private final Label label;
-   
-   /**
-    * Constructor for the <code>CacheLabel</code> object. This is used
-    * to create a <code>Label</code> that acquires details from another
-    * label in such a way that any logic involved in acquiring details
-    * is performed only once.
+    * Constructor for the <code>Pointer</code> object. This is used
+    * to create an object that holds a deserialized value, as well as
+    * the details of the annotated method or field it is to be set to.
+    * This allows the value to be repeatedly deserialized.
     * 
-    * @param label this is the label to acquire the details from  
+    * @param label this is the label for the field or method used
+    * @param value the deserialized object for the method or field
     */
-   public CacheLabel(Label label) throws Exception {  
-      this.contact = label.getContact();
-      this.depend = label.getDependant();
-      this.required = label.isRequired();
-      this.override = label.getOverride();
-      this.inline = label.isInline();
-      this.type = label.getType();
-      this.empty = label.getEmpty();
-      this.entry = label.getEntry();
-      this.name = label.getName();
-      this.data = label.isData();
+   public Pointer(Label label, Object value) {
       this.label = label;
+      this.value = value;
    }
    
    /**
-    * This is used to acquire the contact object for this label. The 
-    * contact retrieved can be used to set any object or primitive that
-    * has been deserialized, and can also be used to acquire values to
-    * be serialized in the case of object persistence. All contacts 
-    * that are retrieved from this method will be accessible. 
+    * This is used to acquire the value associated with the pointer.
+    * Once fully deserialized the value is used to set the value for 
+    * a field or method of the object. This value can be repeatedly
+    * read if the <code>Converter</code> is acquired a second time.
     * 
-    * @return returns the field that this label is representing
+    * @return this returns the value that has been deserialized
     */
-   public Contact getContact() {
-      return contact;
+   public Object getValue() {
+      return value;
    }
    
    /**
@@ -132,7 +84,25 @@ class CacheLabel implements Label {
     * @return this returns an object that is used for conversion
     */
    public Converter getConverter(Source root) throws Exception {
-      return label.getConverter(root);
+      Converter reader = label.getConverter(root);
+      
+      if(reader instanceof Adapter) {
+         return reader;
+      }
+      return new Adapter(reader, value);
+   }
+   
+   /**
+    * This is used to acquire the contact object for this label. The 
+    * contact retrieved can be used to set any object or primitive that
+    * has been deserialized, and can also be used to acquire values to
+    * be serialized in the case of object persistence. All contacts 
+    * that are retrieved from this method will be accessible. 
+    * 
+    * @return returns the field that this label is representing
+    */
+   public Contact getContact() {
+      return label.getContact();
    }
    
    /**
@@ -145,7 +115,7 @@ class CacheLabel implements Label {
     * @return this is the type that the annotation depends on
     */
    public Class getDependant() throws Exception {
-      return depend;
+      return label.getDependant();
    }
    
    /**
@@ -157,7 +127,7 @@ class CacheLabel implements Label {
     * @return this returns the string to use for default values
     */
    public String getEmpty() {
-      return empty;
+      return label.getEmpty();
    }
    
    /**
@@ -169,7 +139,7 @@ class CacheLabel implements Label {
     * @return this returns the name of the XML entry element used 
     */
    public String getEntry() throws Exception {
-      return entry;
+      return label.getEntry();
    }
    
    /**
@@ -182,7 +152,7 @@ class CacheLabel implements Label {
     * @return returns the name that is used for the XML property
     */
    public String getName() throws Exception {
-      return name;
+      return label.getName();
    }
    
    /**
@@ -195,7 +165,7 @@ class CacheLabel implements Label {
     * @return returns the name of the annotation for the contact
     */
    public String getOverride() {
-      return override;
+      return label.getOverride();
    }
    
    /**
@@ -209,7 +179,7 @@ class CacheLabel implements Label {
     * @return this returns the type of the field class
     */
    public Class getType() {
-      return type;
+      return label.getType();
    }
    
    /**
@@ -221,7 +191,7 @@ class CacheLabel implements Label {
     * @return this returns true if the element requires CDATA
     */
    public boolean isData() {
-      return data;
+      return label.isData();
    }
    
    /**
@@ -234,7 +204,7 @@ class CacheLabel implements Label {
     * @return this returns true if the annotation is inline
     */
    public boolean isInline() {
-      return inline;
+      return label.isInline();
    }
    
    /**
@@ -247,7 +217,7 @@ class CacheLabel implements Label {
     * @return true if the label represents a some required data
     */
    public boolean isRequired() {
-      return required;
+      return label.isRequired();
    }
    
    /**
@@ -261,5 +231,89 @@ class CacheLabel implements Label {
     */
    public String toString() {
       return label.toString();
+   }
+   
+   /**
+    * The <code>Adapter</code> object is used to call the repeater
+    * with the original deserialized object. Using this object the
+    * converter interface can be used to perform repeat reads for
+    * the object. This must be given a <code>Repeater</code> in 
+    * order to invoke the repeat read method.
+    * 
+    * @author Niall Gallagher
+    */
+   private class Adapter implements Repeater {
+      
+      /**
+       * This is the converter object used to perform a repeat read.
+       */
+      private final Converter reader;
+      
+      /**
+       * This is the originally deserialized object value to use.
+       */
+      private final Object value;
+      
+      /**
+       * Constructor for the <code>Adapter</code> object. This will
+       * create an adapter between the converter an repeater such
+       * that the reads will read from the XML to the original.
+       * 
+       * @param reader this is the converter object to be used      
+       * @param value this is the originally deserialized object
+       */
+      public Adapter(Converter reader, Object value) {
+         this.reader = reader;
+         this.value = value;
+      }
+      
+      /**
+       * This <code>read</code> method will perform a read using the
+       * provided object with the repeater. Reading with this method
+       * ensures that any additional XML elements within the source
+       * will be added to the value.
+       * 
+       *  @param node this is the node that contains the extra data
+       *  
+       *  @return this will return the original deserialized object
+       */
+      public Object read(InputNode node)throws Exception {
+         return read(node, value);
+      }
+      
+      /**
+       * This <code>read</code> method will perform a read using the
+       * provided object with the repeater. Reading with this method
+       * ensures that any additional XML elements within the source
+       * will be added to the value.
+       * 
+       *  @param node this is the node that contains the extra data
+       *  
+       *  @return this will return the original deserialized object
+       */
+      public Object read(InputNode node, Object value) throws Exception {
+         Position line = node.getPosition();
+         String name = node.getName();         
+         
+         if(reader instanceof Repeater) {
+            Repeater repeat = (Repeater) reader;
+            
+            return repeat.read(node, value);
+         }
+         throw new PersistenceException("Element '%s' declared twice at %s", name, line);
+      }
+      
+      /**
+       * This <code>write</code> method acts like any other write
+       * in that it passes on the node and source object to write.
+       * Typically this will not be used as the repeater object is
+       * used for repeat reads of scattered XML elements.
+       * 
+       * @param node this is the node to write the data to
+       * @param source this is the source object to be written
+       */
+      public void write(OutputNode node, Object value) throws Exception {
+         write(node, value);
+      }
    }
 }
