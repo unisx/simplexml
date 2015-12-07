@@ -21,7 +21,7 @@ public class PrimitiveArrayTest extends TestCase {
    
    public void testZero() throws Exception {
       Context context = new Source(new TreeStrategy(), new Support(), new DefaultStyle());
-      PrimitiveArray primitive = new PrimitiveArray(context, String[].class, String.class, "entry");
+      PrimitiveArray primitive = new PrimitiveArray(context, new ClassType(String[].class), new ClassType(String.class), "entry");
       InputNode node = NodeBuilder.read(new StringReader(ZERO));
       Object value = primitive.read(node);
       
@@ -34,7 +34,7 @@ public class PrimitiveArrayTest extends TestCase {
    
    public void testTwo() throws Exception {
       Context context = new Source(new TreeStrategy(), new Support(), new DefaultStyle());
-      PrimitiveArray primitive = new PrimitiveArray(context, String[].class, String.class, "entry");
+      PrimitiveArray primitive = new PrimitiveArray(context, new ClassType(String[].class), new ClassType(String.class), "entry");
       InputNode node = NodeBuilder.read(new StringReader(TWO));
       Object value = primitive.read(node);
       

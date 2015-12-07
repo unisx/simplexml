@@ -3,19 +3,17 @@
  *
  * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General 
- * Public License along with this library; if not, write to the 
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330, 
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.strategy;
@@ -67,7 +65,7 @@ public interface Strategy {
     * the version of the package for example "some.package.v2". This 
     * must return null if a type cannot be resolved.  
     *  
-    * @param field this is the type of the root element expected
+    * @param type this is the type of the root element expected
     * @param node this is the node map used to resolve an override
     * @param map this is used to maintain contextual information
     * 
@@ -75,7 +73,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Value getRoot(Class field, NodeMap<InputNode> node, Map map) throws Exception;
+   public Value getRoot(Type type, NodeMap<InputNode> node, Map map) throws Exception;
 
    /**
     * This is used to resolve and load a class for the given element.
@@ -86,7 +84,7 @@ public interface Strategy {
     * the deserialization process. For example the default strategy
     * removes all "class" attributes from the given node map.
     * 
-    * @param field this is the type of the root element expected
+    * @param type this is the type of the root element expected
     * @param node this is the node map used to resolve an override
     * @param map this is used to maintain contextual information
     * 
@@ -94,7 +92,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Value getElement(Class field, NodeMap<InputNode> node, Map map) throws Exception;
+   public Value getElement(Type type, NodeMap<InputNode> node, Map map) throws Exception;
 
    /**
     * This is used to attach attributes values to the given node
@@ -105,7 +103,7 @@ public interface Strategy {
     * The root element is a special element in that it can add
     * details regarding the code base location or version to use. 
     *  
-    * @param field this is the declared class for the field used
+    * @param type this is the declared class for the field used
     * @param value this is the instance variable being serialized
     * @param node this is the node map used to represent the value
     * @param map this is used to maintain contextual information
@@ -114,7 +112,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public boolean setRoot(Class field, Object value, NodeMap<OutputNode> node, Map map) throws Exception;
+   public boolean setRoot(Type type, Object value, NodeMap<OutputNode> node, Map map) throws Exception;
 
    /**
     * This is used to attach attribute values to the given node
@@ -123,7 +121,7 @@ public interface Strategy {
     * deserialized using a similar strategy. For example the 
     * default strategy adds a "class" attribute to the node map.
     *  
-    * @param field this is the declared class for the field used
+    * @param type this is the declared class for the field used
     * @param value this is the instance variable being serialized
     * @param node this is the node map used to represent the value
     * @param map this is used to maintain contextual information
@@ -132,6 +130,6 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public boolean setElement(Class field, Object value, NodeMap<OutputNode> node, Map map) throws Exception;
+   public boolean setElement(Type type, Object value, NodeMap<OutputNode> node, Map map) throws Exception;
 
 }

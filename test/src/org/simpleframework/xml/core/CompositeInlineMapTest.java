@@ -144,7 +144,7 @@ public class CompositeInlineMapTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      CompositeInlineMap value = new CompositeInlineMap(source, entry, Map.class);
+      CompositeInlineMap value = new CompositeInlineMap(source, entry, new ClassType(Map.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       Map exampleMap = new HashMap();
       
@@ -170,7 +170,7 @@ public class CompositeInlineMapTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      CompositeInlineMap value = new CompositeInlineMap(source, entry, Map.class);
+      CompositeInlineMap value = new CompositeInlineMap(source, entry, new ClassType(Map.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       Map exampleMap = new HashMap();
       
@@ -196,7 +196,7 @@ public class CompositeInlineMapTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      CompositeInlineMap value = new CompositeInlineMap(source, entry, Map.class);
+      CompositeInlineMap value = new CompositeInlineMap(source, entry, new ClassType(Map.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       Map exampleMap = new HashMap();
       

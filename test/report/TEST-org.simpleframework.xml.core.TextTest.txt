@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.625 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -105,23 +105,23 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.625 sec
 <text ID="0" name="a" version="ONE"/><Text ID="0" name="a" version="ONE"/><text name="a" version="ONE"/><text name="a" version="ONE"/>
 <text ID="0" name="a" version="ONE"/><Text ID="0" name="a" version="ONE"/>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent interface java.util.List
+org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent field 'list' private java.util.List org.simpleframework.xml.core.TextTest$NonPrimitiveTextEntry.list
 	at org.simpleframework.xml.core.TextLabel.getConverter(TextLabel.java:105)
-	at org.simpleframework.xml.core.CacheLabel.getConverter(CacheLabel.java:162)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:600)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:567)
-	at org.simpleframework.xml.core.Composite.readText(Composite.java:486)
+	at org.simpleframework.xml.core.CacheLabel.getConverter(CacheLabel.java:161)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
+	at org.simpleframework.xml.core.Composite.readText(Composite.java:488)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:348)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:246)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:186)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:134)
-	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:546)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:528)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:509)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:491)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:412)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:507)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:489)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
 	at org.simpleframework.xml.core.TextTest.testNonPrimitive(TextTest.java:228)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -135,16 +135,16 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.281 sec
-Testcase: testData took 0.172 sec
-Testcase: testDuplicate took 0 sec
-Testcase: testIllegalElement took 0 sec
-Testcase: testEmpty took 0.015 sec
-Testcase: testOptional took 1.141 sec
-Testcase: testNonPrimitive took 0 sec
+Testcase: testText took 0.231 sec
+Testcase: testData took 0.03 sec
+Testcase: testDuplicate took 0.003 sec
+Testcase: testIllegalElement took 0.004 sec
+Testcase: testEmpty took 0.006 sec
+Testcase: testOptional took 0.03 sec
+Testcase: testNonPrimitive took 0.003 sec
 Testcase: testDirectory took 0 sec

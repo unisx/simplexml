@@ -3,19 +3,17 @@
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.strategy;
@@ -87,23 +85,23 @@ class ReadGraph extends HashMap {
     * specified by the <code>NodeMap</code> to be used to discover
     * exactly which node in the object graph the element represents.
     * 
-    * @param field the type of the field or method in the instance
+    * @param type the type of the field or method in the instance
     * @param node this is the XML element to be deserialized
     * 
     * @return this is used to return the type to acquire the value
     */
-   public Value getElement(Class field, NodeMap node) throws Exception {
+   public Value getElement(Type type, NodeMap node) throws Exception {
       Node entry = node.remove(label);
-      Class type = field;
+      Class expect = type.getType();
       
-      if(field.isArray()) {
-         type = field.getComponentType();
+      if(expect.isArray()) {
+         expect = expect.getComponentType();
       }
       if(entry != null) {      
          String name = entry.getValue();
-         type = loader.loadClass(name);
+         expect = loader.loadClass(name);
       }  
-      return getInstance(field, type, node); 
+      return getInstance(type, expect, node); 
    }
    
    /**
@@ -112,24 +110,24 @@ class ReadGraph extends HashMap {
     * specified by the <code>NodeMap</code> to be used to discover
     * exactly which node in the object graph the element represents.
     * 
-    * @param field the type of the field or method in the instance
+    * @param type the type of the field or method in the instance
     * @param real this is the overridden type from the XML element
     * @param node this is the XML element to be deserialized
     * 
     * @return this is used to return the type to acquire the value
     */
-   private Value getInstance(Class field, Class real, NodeMap node) throws Exception {      
+   private Value getInstance(Type type, Class real, NodeMap node) throws Exception {      
       Node entry = node.remove(mark);
       
       if(entry == null) {
-         return getReference(field, real, node);
+         return getReference(type, real, node);
       }      
       String key = entry.getValue();
       
       if(containsKey(key)) {
          throw new CycleException("Element '%s' already exists", key);
       }
-      return getValue(field, real, node, key);
+      return getValue(type, real, node, key);
    }
    
    /**
@@ -138,17 +136,17 @@ class ReadGraph extends HashMap {
     * specified by the <code>NodeMap</code> to be used to discover
     * exactly which node in the object graph the element represents.
     * 
-    * @param field the type of the field or method in the instance
+    * @param type the type of the field or method in the instance
     * @param real this is the overridden type from the XML element
     * @param node this is the XML element to be deserialized    
     * 
     * @return this is used to return the type to acquire the value
     */ 
-   private Value getReference(Class field, Class real, NodeMap node) throws Exception {
+   private Value getReference(Type type, Class real, NodeMap node) throws Exception {
       Node entry = node.remove(refer);
       
       if(entry == null) {
-         return getValue(field, real, node);
+         return getValue(type, real, node);
       }
       String key = entry.getValue();
       Object value = get(key); 
@@ -165,15 +163,17 @@ class ReadGraph extends HashMap {
     * added to the graph of created instances if the XML element has
     * an identification attribute, this allows cycles to be completed.
     *
-    * @param field the type of the field or method in the instance
+    * @param type the type of the field or method in the instance
     * @param real this is the overridden type from the XML element
     * @param node this is the XML element to be deserialized    
     * 
     * @return this is used to return the type to acquire the value
     */
-   private Value getValue(Class field, Class real, NodeMap node) throws Exception {      
-      if(field.isArray()) {
-         return getArray(field, real, node);
+   private Value getValue(Type type, Class real, NodeMap node) throws Exception {      
+      Class expect = type.getType();
+      
+      if(expect.isArray()) {
+         return getArray(type, real, node);
       }
       return new ObjectValue(real);
    }
@@ -184,20 +184,20 @@ class ReadGraph extends HashMap {
     * added to the graph of created instances if the XML element has
     * an identification attribute, this allows cycles to be completed.
     *
-    * @param field the type of the field or method in the instance
+    * @param type the type of the field or method in the instance
     * @param real this is the overridden type from the XML element
     * @param node this is the XML element to be deserialized
     * @param key the key the instance is known as in the graph    
     * 
     * @return this is used to return the type to acquire the value
     */
-   private Value getValue(Class field, Class real, NodeMap node, String key) throws Exception {
-      Value type = getValue(field, real, node);
+   private Value getValue(Type type, Class real, NodeMap node, String key) throws Exception {
+      Value value = getValue(type, real, node);
       
       if(key != null) {
-         return new Allocate(type, this, key);
+         return new Allocate(value, this, key);
       }
-      return type;      
+      return value;      
    }
    
    /**
@@ -206,13 +206,13 @@ class ReadGraph extends HashMap {
     * added to the graph of created instances if the XML element has
     * an identification attribute, this allows cycles to be completed.
     *
-    * @param field the type of the field or method in the instance
+    * @param type the type of the field or method in the instance
     * @param real this is the overridden type from the XML element
     * @param node this is the XML element to be deserialized  
     * 
     * @return this is used to return the type to acquire the value
     */  
-   private Value getArray(Class field, Class real, NodeMap node) throws Exception {
+   private Value getArray(Type type, Class real, NodeMap node) throws Exception {
       Node entry = node.remove(length);
       int size = 0;
       

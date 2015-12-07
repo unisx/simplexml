@@ -3,27 +3,26 @@
  *
  * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General 
- * Public License along with this library; if not, write to the 
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330, 
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.strategy;
 
-import org.simpleframework.xml.stream.Node;
-import org.simpleframework.xml.stream.NodeMap;
 import java.lang.reflect.Array;
 import java.util.Map;
+
+import org.simpleframework.xml.stream.Node;
+import org.simpleframework.xml.stream.NodeMap;
 
 /**
  * The <code>TreeStrategy</code> object is used to provide a simple
@@ -92,7 +91,7 @@ public class TreeStrategy implements Strategy {
     * element then its value is used to resolve the class to use.
     * If no such attribute exists on the element this returns null.
     * 
-    * @param field this is the type of the XML element expected
+    * @param type this is the type of the XML element expected
     * @param node this is the element used to resolve an override
     * @param map this is used to maintain contextual information
     * 
@@ -100,8 +99,8 @@ public class TreeStrategy implements Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Value getRoot(Class field, NodeMap node, Map map) throws Exception {
-      return getElement(field, node, map);
+   public Value getRoot(Type type, NodeMap node, Map map) throws Exception {
+      return getElement(type, node, map);
    }  
    
    /**
@@ -111,7 +110,7 @@ public class TreeStrategy implements Strategy {
     * element then its value is used to resolve the class to use.
     * If no such attribute exists on the element this returns null.
     * 
-    * @param field this is the type of the XML element expected
+    * @param type this is the type of the XML element expected
     * @param node this is the element used to resolve an override
     * @param map this is used to maintain contextual information
     * 
@@ -119,14 +118,15 @@ public class TreeStrategy implements Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Value getElement(Class field, NodeMap node, Map map) throws Exception {
-      Class type = getValue(field, node);
+   public Value getElement(Type type, NodeMap node, Map map) throws Exception {
+      Class actual = getValue(type, node);
+      Class expect = type.getType();
       
-      if(field.isArray()) {
-         return getArray(type, node);   
+      if(expect.isArray()) {
+         return getArray(actual, node);   
       }
-      if(field != type) {
-         return new ObjectValue(type);
+      if(expect != actual) {
+         return new ObjectValue(actual);
       }
       return null;
    }
@@ -164,25 +164,25 @@ public class TreeStrategy implements Strategy {
     * If no such attribute exists the specified field is returned,
     * or if the field type is an array then the component type.
     * 
-    * @param field this is the type of the XML element expected
+    * @param type this is the type of the XML element expected
     * @param node this is the element used to resolve an override
     * 
     * @return returns the class that should be used for the object
     * 
     * @throws Exception thrown if the class cannot be resolved
     */   
-   private Class getValue(Class field, NodeMap node) throws Exception {      
+   private Class getValue(Type type, NodeMap node) throws Exception {      
       Node entry = node.remove(label);      
-      Class type = field;
+      Class expect = type.getType();
       
-      if(field.isArray()) {
-         type = field.getComponentType();
+      if(expect.isArray()) {
+         expect = expect.getComponentType();
       }
       if(entry != null) {
          String name = entry.getValue();
-         type = getClass(name);
+         expect = getClass(name);
       }    
-      return type;
+      return expect;
    }     
    
    /**
@@ -192,15 +192,15 @@ public class TreeStrategy implements Strategy {
     * name for the object provided. This will only be invoked
     * if the object class is different from the field class.
     *  
-    * @param field this is the declared class for the field used
+    * @param type this is the declared class for the field used
     * @param value this is the instance variable being serialized
     * @param node this is the element used to represent the value
     * @param map this is used to maintain contextual information
     * 
     * @return this returns true if serialization is complete
     */
-   public boolean setRoot(Class field, Object value, NodeMap node, Map map){
-      return setElement(field, value, node, map);
+   public boolean setRoot(Type type, Object value, NodeMap node, Map map){
+      return setElement(type, value, node, map);
    }   
    
    /**
@@ -210,21 +210,22 @@ public class TreeStrategy implements Strategy {
     * name for the object provided. This will only be invoked
     * if the object class is different from the field class.
     *
-    * @param field this is the declared class for the field used
+    * @param type this is the declared class for the field used
     * @param value this is the instance variable being serialized
     * @param node this is the element used to represent the value
     * @param map this is used to maintain contextual information
     * 
     * @return this returns true if serialization is complete
     */   
-   public boolean setElement(Class field, Object value, NodeMap node, Map map){
-      Class type = value.getClass();
-      Class real = type;
+   public boolean setElement(Type type, Object value, NodeMap node, Map map){
+      Class actual = value.getClass();
+      Class expect = type.getType();
+      Class real = actual;
       
-      if(type.isArray()) {
-         real = setArray(field, value, node);
+      if(actual.isArray()) {
+         real = setArray(expect, value, node);
       }
-      if(type != field) {
+      if(actual != expect) {
          node.put(label, real.getName());
       }       
       return false;

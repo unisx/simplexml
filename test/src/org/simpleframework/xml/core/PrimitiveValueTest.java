@@ -142,7 +142,7 @@ public class PrimitiveValueTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveValue value = new PrimitiveValue(source, entry, String.class);
+      PrimitiveValue value = new PrimitiveValue(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("inlineString"), "example");
@@ -165,7 +165,7 @@ public class PrimitiveValueTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveValue value = new PrimitiveValue(source, entry, String.class);
+      PrimitiveValue value = new PrimitiveValue(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("notInlineString"), "example");
@@ -188,7 +188,7 @@ public class PrimitiveValueTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveValue value = new PrimitiveValue(source, entry, String.class);
+      PrimitiveValue value = new PrimitiveValue(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("noAttributeString"), "example");
@@ -211,7 +211,7 @@ public class PrimitiveValueTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveValue value = new PrimitiveValue(source, entry, String.class);
+      PrimitiveValue value = new PrimitiveValue(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("attributeNoKeyString"), "example");

@@ -142,7 +142,7 @@ public class PrimitiveKeyTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveKey value = new PrimitiveKey(source, entry, String.class);
+      PrimitiveKey value = new PrimitiveKey(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("inlineString"), "example");
@@ -165,7 +165,7 @@ public class PrimitiveKeyTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveKey value = new PrimitiveKey(source, entry, String.class);
+      PrimitiveKey value = new PrimitiveKey(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("notInlineString"), "example");
@@ -188,7 +188,7 @@ public class PrimitiveKeyTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveKey value = new PrimitiveKey(source, entry, String.class);
+      PrimitiveKey value = new PrimitiveKey(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("noAttributeString"), "example");
@@ -211,7 +211,7 @@ public class PrimitiveKeyTest extends TestCase {
       PrimitiveType type = new PrimitiveType(map);
       Contact string = type.getString();
       Entry entry = new Entry(string, map);
-      PrimitiveKey value = new PrimitiveKey(source, entry, String.class);
+      PrimitiveKey value = new PrimitiveKey(source, entry, new ClassType(String.class));
       OutputNode node = NodeBuilder.write(new PrintWriter(System.out));
       
       value.write(node.getChild("attributeNoKeyString"), "example");

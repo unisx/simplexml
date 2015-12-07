@@ -20,7 +20,7 @@ public class PrimitiveListTest extends TestCase {
    
    public void testTwo() throws Exception {
       Context context = new Source(new TreeStrategy(), new Support(), new DefaultStyle());
-      PrimitiveList primitive = new PrimitiveList(context, List.class, String.class, "entry");
+      PrimitiveList primitive = new PrimitiveList(context, new ClassType(List.class), new ClassType(String.class), "entry");
       InputNode node = NodeBuilder.read(new StringReader(TWO));
       Object value = primitive.read(node);
       

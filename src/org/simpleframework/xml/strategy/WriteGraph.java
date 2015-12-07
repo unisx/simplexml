@@ -3,33 +3,32 @@
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.strategy;
 
-import org.simpleframework.xml.stream.NodeMap;
-import java.util.IdentityHashMap;
 import java.lang.reflect.Array;
+import java.util.IdentityHashMap;
+
+import org.simpleframework.xml.stream.NodeMap;
 
 /**
  * The <code>WriteGraph</code> object is used to build the graph that
  * is used to represent the serialized object and its references. The
  * graph is stored in an <code>IdentityHashMap</code> which will 
  * store the objects in such a way that this graph object can tell if
- * it has allready been written to the XML document. If an object has
+ * it has already been written to the XML document. If an object has
  * already been written to the XML document an reference attribute
  * is added to the element representing the object and serialization
  * of that object is complete, that is, no more elements are written.
@@ -85,20 +84,21 @@ class WriteGraph extends IdentityHashMap<Object, String> {
     * inserted and this returns true, if not, then this will write
     * a unique identity marker attribute and return false.
     * 
-    * @param field this is the type of the object to be serialized
+    * @param type this is the type of the object to be serialized
     * @param value this is the instance that is to be serialized    
     * @param node this is the node that contains the attributes
     * 
     * @return returns true if the element has been fully written
     */
-   public boolean setElement(Class field, Object value, NodeMap node){
-      Class type = value.getClass();
-      Class real = type;
+   public boolean setElement(Type type, Object value, NodeMap node){
+      Class actual = value.getClass();
+      Class expect = type.getType();
+      Class real = actual;
       
-      if(type.isArray()) {
-         real = setArray(type, value, node);
+      if(actual.isArray()) {
+         real = setArray(actual, value, node);
       }
-      if(type != field) {
+      if(actual != expect) {
          node.put(label, real.getName());
       }       
       return setReference(value, node);

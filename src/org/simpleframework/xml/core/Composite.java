@@ -3,24 +3,23 @@
  *
  * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General 
- * Public License along with this library; if not, write to the 
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330, 
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.core;
 
 import org.simpleframework.xml.Version;
+import org.simpleframework.xml.strategy.Type;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.NodeMap;
 import org.simpleframework.xml.stream.OutputNode;
@@ -76,7 +75,7 @@ class Composite implements Converter {
    /**
     * This is the current revision of this composite converter.
     */
-   private final Revision revision;
+   private final Revision revision; 
    
    /**
     * This is the source object for the instance of serialization.
@@ -86,7 +85,7 @@ class Composite implements Converter {
    /**
     * This is the type that this composite produces instances of.
     */
-   private final Class type;
+   private final Type type;
         
    /**
     * Constructor for the <code>Composite</code> object. This creates 
@@ -95,9 +94,9 @@ class Composite implements Converter {
     * be given to the instance in order to perform deserialization.
     *  
     * @param context the source object used to perform serialization
-    * @param type this is the XML schema class to use
+    * @param type this is the XML schema type to use for this
     */
-   public Composite(Context context, Class type) {
+   public Composite(Context context, Type type) {
       this.factory = new ObjectFactory(context, type);  
       this.primitive = new Primitive(context, type);
       this.criteria = new Collector(context);
@@ -318,10 +317,11 @@ class Composite implements Converter {
       if(source != null) {
          Position line = node.getPosition();
          Object value = caller.resolve(source);
+         Class expect = type.getType();
          Class real = value.getClass();
       
-         if(!type.isAssignableFrom(real)) {
-            throw new ElementException("Type %s does not match %s at %s", real, type, line);              
+         if(!expect.isAssignableFrom(real)) {
+            throw new ElementException("Type %s does not match %s at %s", real, expect, line);              
          }
          return value;
       }
@@ -364,6 +364,7 @@ class Composite implements Converter {
     */
    private void readVersion(InputNode node, Object source, Schema schema) throws Exception {
       Label label = schema.getVersion();
+      Class expect = type.getType();
       
       if(label != null) {
          String name = label.getName();
@@ -373,7 +374,7 @@ class Composite implements Converter {
          if(value != null) {
             readVersion(value, source, label);
          } else {
-            Version version = context.getVersion(type);
+            Version version = context.getVersion(expect);
             Double start = revision.getDefault();
             Double expected = version.revision();
             
@@ -397,13 +398,14 @@ class Composite implements Converter {
     */
    private void readVersion(InputNode node, Object source, Label label) throws Exception {
       Object value = read(node, source, label);
+      Class expect = type.getType();
      
       if(value != null) {
-         Version version = context.getVersion(type);
-         Double expected = version.revision();
+         Version version = context.getVersion(expect);
+         Double actual = version.revision();
          
          if(!value.equals(revision)) {
-            revision.compare(expected, value);
+            revision.compare(actual, value);
          }
       } 
    }
@@ -636,14 +638,14 @@ class Composite implements Converter {
     */
    private void validate(InputNode node, LabelMap map, Object source) throws Exception {     
       Position line = node.getPosition();
-      Class real = type;
+      Class expect = type.getType();
       
       if(source != null) {
-         real = source.getClass();
+         expect = source.getClass();
       }
       for(Label label : map) {
          if(label.isRequired() && revision.isEqual()) {
-            throw new ValueRequiredException("Unable to satisfy %s for %s at %s", label, real, line);
+            throw new ValueRequiredException("Unable to satisfy %s for %s at %s", label, expect, line);
          }
          Object value = label.getEmpty(context);
          
@@ -853,10 +855,11 @@ class Composite implements Converter {
    private void validate(InputNode node, Label label) throws Exception {    
       Converter reader = label.getConverter(context);      
       Position line = node.getPosition();
+      Class expect = type.getType();
       boolean valid = reader.validate(node);
     
       if(valid == false) {     
-        throw new PersistenceException("Invalid value for %s in %s at %s", label, type, line);
+        throw new PersistenceException("Invalid value for %s in %s at %s", label, expect, line);
       }
       criteria.set(label, null);
    }
@@ -1128,9 +1131,10 @@ class Composite implements Converter {
       if(value != null) {
          String name = label.getName(context);
          OutputNode next = node.getChild(name);
-         Class type = label.getType();         
+         Type contact = label.getContact(); 
+         Class type = contact.getType();
 
-         if(label.isInline() || !isOverridden(next, value, type)) {
+         if(label.isInline() || !isOverridden(next, value, contact)) {
             Converter convert = label.getConverter(context);
             boolean data = label.isData();
             
@@ -1213,7 +1217,7 @@ class Composite implements Converter {
     * 
     * @return returns true if the strategy overrides the object
     */
-   private boolean isOverridden(OutputNode node, Object value, Class type) throws Exception{
+   private boolean isOverridden(OutputNode node, Object value, Type type) throws Exception{
       return factory.setOverride(type, value, node);
    }
 }

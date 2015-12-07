@@ -3,25 +3,24 @@
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General
- * Public License along with this library; if not, write to the
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330,
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.strategy;
 
-import org.simpleframework.xml.stream.NodeMap;
 import java.util.Map;
+
+import org.simpleframework.xml.stream.NodeMap;
 
 /**
  * The <code>CycleStrategy</code> represents a strategy that is used
@@ -156,14 +155,14 @@ public class CycleStrategy implements Strategy {
     * the attributes used to describe the objects identity, or in
     * the case of an existing object it contains an object reference.
     * 
-    * @param field the method or field in the deserialized object
+    * @param type the method or field in the deserialized object
     * @param node this is the XML element attributes to read
     * @param map this is the session map used for deserialization
     * 
     * @return this returns an instance to insert into the object 
     */
-   public Value getRoot(Class field, NodeMap node, Map map) throws Exception {
-      return getElement(field, node, map);
+   public Value getRoot(Type type, NodeMap node, Map map) throws Exception {
+      return getElement(type, node, map);
    }  
    
    /**
@@ -174,17 +173,17 @@ public class CycleStrategy implements Strategy {
     * the attributes used to describe the objects identity, or in
     * the case of an existing object it contains an object reference.
     * 
-    * @param field the method or field in the deserialized object
+    * @param type the method or field in the deserialized object
     * @param node this is the XML element attributes to read
     * @param map this is the session map used for deserialization
     * 
     * @return this returns an instance to insert into the object 
     */
-   public Value getElement(Class field, NodeMap node, Map map) throws Exception {
+   public Value getElement(Type type, NodeMap node, Map map) throws Exception {
       ReadGraph graph = read.find(map);
       
       if(graph != null) {
-         return graph.getElement(field, node);
+         return graph.getElement(type, node);
       }
       return null;
    }
@@ -197,15 +196,15 @@ public class CycleStrategy implements Strategy {
     * the reference to that object. This allows all cycles within the
     * graph to be serialized so that they can be fully deserialized. 
     * 
-    * @param field the type of the field or method in the object
+    * @param type the type of the field or method in the object
     * @param value this is the actual object that is to be written
     * @param node this is the XML element attribute map to use
     * @param map this is the session map used for the serialization
     * 
     * @return returns true if the object has been fully serialized
     */
-   public boolean setRoot(Class field, Object value, NodeMap node, Map map){
-      return setElement(field, value, node, map);
+   public boolean setRoot(Type type, Object value, NodeMap node, Map map){
+      return setElement(type, value, node, map);
    }  
    
    /**
@@ -216,18 +215,18 @@ public class CycleStrategy implements Strategy {
     * the reference to that object. This allows all cycles within the
     * graph to be serialized so that they can be fully deserialized. 
     * 
-    * @param field the type of the field or method in the object
+    * @param type the type of the field or method in the object
     * @param value this is the actual object that is to be written
     * @param node this is the XML element attribute map to use
     * @param map this is the session map used for the serialization
     * 
     * @return returns true if the object has been fully serialized
     */
-   public boolean setElement(Class field, Object value, NodeMap node, Map map){
+   public boolean setElement(Type type, Object value, NodeMap node, Map map){
       WriteGraph graph = write.find(map);
       
       if(graph != null) {
-         return graph.setElement(field, value, node);
+         return graph.setElement(type, value, node);
       }
       return false;
    }

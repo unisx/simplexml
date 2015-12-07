@@ -22,7 +22,7 @@ public class PrimitiveTest extends TestCase {
    
    public void testPrimitive() throws Exception {
       Context context = new Source(new TreeStrategy(), new Support(), new DefaultStyle());
-      Primitive primitive = new Primitive(context, String.class);
+      Primitive primitive = new Primitive(context, new ClassType(String.class));
       InputNode node = NodeBuilder.read(new StringReader(SOURCE));
       Object value = primitive.read(node);
       
@@ -35,7 +35,7 @@ public class PrimitiveTest extends TestCase {
    
    public void testPrimitiveCycle() throws Exception {
       Context context = new Source(new CycleStrategy(), new Support(), new DefaultStyle());
-      Primitive primitive = new Primitive(context, String.class);
+      Primitive primitive = new Primitive(context, new ClassType(String.class));
       InputNode node = NodeBuilder.read(new StringReader(CYCLE_1));
       Object value = primitive.read(node);
       

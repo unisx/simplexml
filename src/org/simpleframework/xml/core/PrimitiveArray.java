@@ -3,25 +3,24 @@
  *
  * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
  *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
- * GNU Lesser General Public License for more details.
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * You should have received a copy of the GNU Lesser General 
- * Public License along with this library; if not, write to the 
- * Free Software Foundation, Inc., 59 Temple Place, Suite 330, 
- * Boston, MA  02111-1307  USA
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+ * implied. See the License for the specific language governing 
+ * permissions and limitations under the License.
  */
 
 package org.simpleframework.xml.core;
 
 import java.lang.reflect.Array;
 
+import org.simpleframework.xml.strategy.Type;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
 import org.simpleframework.xml.stream.Position;
@@ -73,7 +72,7 @@ class PrimitiveArray implements Converter {
    /**
     * This is the type of object that will be held in the list.
     */
-   private final Class entry;
+   private final Type entry;
    
    /**
     * Constructor for the <code>PrimitiveArray</code> object. This is
@@ -82,19 +81,19 @@ class PrimitiveArray implements Converter {
     * elements and will be the same length as the number of elements.
     *
     * @param context this is the context object used for serialization
-    * @param field this is the actual field type from the schema
+    * @param type this is the actual field type from the schema
     * @param entry the entry type to be stored within the array
     * @param parent this is the name to wrap the array element with     
     */    
-   public PrimitiveArray(Context context, Class field, Class entry, String parent) {
-      this.factory = new ArrayFactory(context, field); 
-      this.root = new Primitive(context, entry, null);          
+   public PrimitiveArray(Context context, Type type, Type entry, String parent) {
+      this.factory = new ArrayFactory(context, type); 
+      this.root = new Primitive(context, entry);          
       this.parent = parent;
       this.entry = entry;
    }
 
    /**
-    * This <code>read</code> method wll read the XML element list from
+    * This <code>read</code> method will read the XML element list from
     * the provided node and deserialize its children as entry types.
     * This will deserialize each entry type as a primitive value. In
     * order to do this the parent string provided forms the element.
@@ -142,7 +141,7 @@ class PrimitiveArray implements Converter {
    }    
    
    /**
-    * This <code>validate</code> method wll validate the XML element list 
+    * This <code>validate</code> method will validate the XML element list 
     * from the provided node and validate its children as entry types.
     * This will validate each entry type as a primitive value. In order 
     * to do this the parent string provided forms the element.

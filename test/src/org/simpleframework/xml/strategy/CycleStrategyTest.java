@@ -1,15 +1,12 @@
 package org.simpleframework.xml.strategy;
 
 import java.io.StringReader;
+import java.lang.annotation.Annotation;
 import java.util.HashMap;
 import java.util.Map;
 
 import junit.framework.TestCase;
 
-import org.simpleframework.xml.strategy.Contract;
-import org.simpleframework.xml.strategy.CycleStrategy;
-import org.simpleframework.xml.strategy.ReadGraph;
-import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.NodeBuilder;
 import org.simpleframework.xml.stream.NodeMap;
@@ -25,13 +22,26 @@ public class CycleStrategyTest extends TestCase {
    private static final String REFERENCE =
    "<array reference='1' class='java.lang.String'/>";
    
+   private static class Entry implements Type {     
+      private final Class type;    
+      public Entry(Class type) {
+         this.type = type;
+      }
+      public <T extends Annotation> T getAnnotation(Class<T> type) {
+         return null;
+      }
+      public Class getType() {
+         return type;
+      }
+   }
+   
    public void testArray() throws Exception {
       Map map = new HashMap();
       StringReader reader = new StringReader(ARRAY);
       CycleStrategy strategy = new CycleStrategy();
       InputNode event = NodeBuilder.read(reader);
       NodeMap attributes = event.getAttributes();
-      Value value = strategy.getElement(String[].class, attributes, map);
+      Value value = strategy.getElement(new Entry(String[].class), attributes, map);
       
       assertEquals(12, value.getLength());
       assertEquals(null, value.getValue());
@@ -45,7 +55,7 @@ public class CycleStrategyTest extends TestCase {
       CycleStrategy strategy = new CycleStrategy();
       InputNode event = NodeBuilder.read(reader);
       NodeMap attributes = event.getAttributes();
-      Value value = strategy.getElement(String.class, attributes, map);
+      Value value = strategy.getElement(new Entry(String.class), attributes, map);
       
       assertEquals(0, value.getLength());
       assertEquals(null, value.getValue());
@@ -64,7 +74,7 @@ public class CycleStrategyTest extends TestCase {
       graph.put("2", "second text");
       graph.put("3", "third text");
       
-      Value value = graph.getElement(String.class, attributes);
+      Value value = graph.getElement(new Entry(String.class), attributes);
       
       assertEquals(0, value.getLength());
       assertEquals("first text", value.getValue());

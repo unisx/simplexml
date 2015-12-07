@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MultiElementMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.241 sec
 ------------- Standard Output ---------------
 <properties>
    <entry>
@@ -80,5 +80,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
    </Entry>
 </Properties>------------- ---------------- ---------------
 
-Testcase: testProperties took 0.281 sec
+Testcase: testProperties took 0.237 sec
 Testcase: testDirectory took 0 sec

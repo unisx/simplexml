@@ -1,25 +1,25 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.632 sec
 ------------- Standard Output ---------------
 <example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
-         <text>Ἀ�?χιμήδης</text>
+         <text>Ἀρχιμήδης</text>
       </unicode>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
          <text>Tor Åge Bringsværd</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text>심�?�하</text>
+         <text>심은하</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
          <text>Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text>�?�설�?�</text>
+         <text>이설희</text>
       </unicode>
       <unicode origin="India (Hindi)" name="Madhuri Dixit">
-         <text>माध�?री दिछित</text>
+         <text>माधुरी दिछित</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
          <text>Johann Strauß</text>
@@ -37,10 +37,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Sinéad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text>نصرت �?تح علی خان</text>
+         <text>نصرت فتح علی خان</text>
       </unicode>
       <unicode origin="Greece" name="Giorgos Dalaras">
-         <text>Γιώ�?γος �?ταλά�?ας</text>
+         <text>Γιώργος Νταλάρας</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
          <text>Søren Kierkegård</text>
@@ -55,19 +55,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኢትዮጵያ</text>
       </unicode>
       <unicode origin="Israel" name="Yehoram Gaon">
-         <text>יהור�? ג�?ון</text>
+         <text>יהורם גאון</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
          <text>Olga Tañón</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>久�?田    利伸</text>
+         <text>久保田    利伸</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wałęsa</text>
       </unicode>
       <unicode origin="Thailand" name="Thongchai McIntai">
-         <text>ธงไชย �?ม็คอินไตย์</text>
+         <text>ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
          <text>Camille Saint-Saëns</text>
@@ -91,19 +91,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>안성기</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text>王�?�</text>
+         <text>王菲</text>
       </unicode>
       <unicode origin="Russia" name="Boris Grebenshchikov">
-         <text>Бори�? Гребенщиков</text>
+         <text>Борис Гребенщиков</text>
       </unicode>
       <unicode origin="Australia" name="Nicole Kidman">
          <text>Nicole Kidman</text>
       </unicode>
       <unicode origin="Japan" name="HAYASHIBARA Megumi">
-         <text>林原 �?�??�?�</text>
+         <text>林原 めぐみ</text>
       </unicode>
       <unicode origin="Rep. of China" name="Ang Lee">
-         <text>�?�安</text>
+         <text>李安</text>
       </unicode>
       <unicode origin="Egypt" name="Om Kolthoum">
          <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -115,13 +115,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኤርትራ</text>
       </unicode>
       <unicode origin="Egypt" name="Abdel Halim Hafez">
-         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text>ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
          <text>François Truffaut</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text>章�?怡</text>
+         <text>章子怡</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
          <text>Björk Guðmundsdóttir</text>
@@ -136,13 +136,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?????????</text>
       </unicode>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
-         <text>Tor �ge Bringsv�rd</text>
+         <text>Tor �ge Bringsv�rd</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
          <text>???</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
-         <text>S�ren Hauch-Fausb�ll</text>
+         <text>S�ren Hauch-Fausb�ll</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
          <text>???</text>
@@ -151,19 +151,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?????? ?????</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
-         <text>Johann Strau�</text>
+         <text>Johann Strau�</text>
       </unicode>
       <unicode origin="Rep. of China" name="Hsu Chi">
          <text>??</text>
       </unicode>
       <unicode origin="Canada" name="Celine Dion">
-         <text>C�line Dion</text>
+         <text>C�line Dion</text>
       </unicode>
       <unicode origin="France" name="Mylene Demongeot">
-         <text>Myl�ne Demongeot</text>
+         <text>Myl�ne Demongeot</text>
       </unicode>
       <unicode origin="Ireland" name="Sinead O&apos;Connor">
-         <text>Sin�ad O&apos;Connor</text>
+         <text>Sin�ad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
          <text>???? ??? ??? ???</text>
@@ -172,10 +172,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>??????? ????????</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
-         <text>S�ren Kierkeg�rd</text>
+         <text>S�ren Kierkeg�rd</text>
       </unicode>
       <unicode origin="France" name="Jean Reno">
-         <text>Jean R�no</text>
+         <text>Jean R�no</text>
       </unicode>
       <unicode origin="Japan" name="Tex Texin">
          <text>??? ????</text>
@@ -187,10 +187,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ????</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
-         <text>Olga Ta��n</text>
+         <text>Olga Ta��n</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>???� � ??</text>
+         <text>???� � ??</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wa??sa</text>
@@ -199,16 +199,16 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ???????????</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
-         <text>Camille Saint-Sa�ns</text>
+         <text>Camille Saint-Sa�ns</text>
       </unicode>
       <unicode origin="U.S.A." name="Brad Pitt">
          <text>Brad Pitt</text>
       </unicode>
       <unicode origin="Italy" name="Fabrizio DeAndre">
-         <text>Fabrizio De Andr�</text>
+         <text>Fabrizio De Andr�</text>
       </unicode>
       <unicode origin="Germany" name="Walter Schultheiss">
-         <text>Walter Schulthei�</text>
+         <text>Walter Schulthei�</text>
       </unicode>
       <unicode origin="Russia" name="Mikhail Gorbachev">
          <text>?????? ????????</text>
@@ -238,7 +238,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?? ?????</text>
       </unicode>
       <unicode origin="Germany" name="Rudi Voeller">
-         <text>Rudi V�ller</text>
+         <text>Rudi V�ller</text>
       </unicode>
       <unicode origin="Eritrea" name="Berhane Zeray">
          <text>????</text>
@@ -247,38 +247,38 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????????? ????</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
-         <text>Fran�ois Truffaut</text>
+         <text>Fran�ois Truffaut</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
          <text>???</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
-         <text>Bj�rk Gu�mundsd�ttir</text>
+         <text>Bj�rk Gu?mundsd�ttir</text>
       </unicode>
       <unicode origin="France" name="Gerard Depardieu">
-         <text>G�rard Depardieu</text>
+         <text>G�rard Depardieu</text>
       </unicode>
    </list>
 </example>
 <example ID="0">
    <list ID="1">
       <unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
-         <text ID="3">Ἀ�?χιμήδης</text>
+         <text ID="3">Ἀρχιμήδης</text>
       </unicode>
       <unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
          <text ID="5">Tor Åge Bringsværd</text>
       </unicode>
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text ID="7">심�?�하</text>
+         <text ID="7">심은하</text>
       </unicode>
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text ID="11">�?�설�?�</text>
+         <text ID="11">이설희</text>
       </unicode>
       <unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
-         <text ID="13">माध�?री दिछित</text>
+         <text ID="13">माधुरी दिछित</text>
       </unicode>
       <unicode ID="14" origin="Austria" name="Johann Strauss">
          <text ID="15">Johann Strauß</text>
@@ -296,10 +296,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text ID="25">نصرت �?تح علی خان</text>
+         <text ID="25">نصرت فتح علی خان</text>
       </unicode>
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <text ID="27">Γιώ�?γος �?ταλά�?ας</text>
+         <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <text ID="29">Søren Kierkegård</text>
@@ -314,19 +314,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <text ID="37">יהור�? ג�?ון</text>
+         <text ID="37">יהורם גאון</text>
       </unicode>
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <text ID="39">Olga Tañón</text>
       </unicode>
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <text ID="41">久�?田    利伸</text>
+         <text ID="41">久保田    利伸</text>
       </unicode>
       <unicode ID="42" origin="Poland" name="Lech Walesa">
          <text ID="43">Lech Wałęsa</text>
       </unicode>
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <text ID="45">ธงไชย �?ม็คอินไตย์</text>
+         <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
          <text ID="47">Camille Saint-Saëns</text>
@@ -350,19 +350,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="59">안성기</text>
       </unicode>
       <unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text ID="61">王�?�</text>
+         <text ID="61">王菲</text>
       </unicode>
       <unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
-         <text ID="63">Бори�? Гребенщиков</text>
+         <text ID="63">Борис Гребенщиков</text>
       </unicode>
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
          <text ID="65">Nicole Kidman</text>
       </unicode>
       <unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
-         <text ID="67">林原 �?�??�?�</text>
+         <text ID="67">林原 めぐみ</text>
       </unicode>
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <text ID="69">�?�安</text>
+         <text ID="69">李安</text>
       </unicode>
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -374,13 +374,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="75">ኤርትራ</text>
       </unicode>
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode ID="78" origin="France" name="Francois Truffaut">
          <text ID="79">François Truffaut</text>
       </unicode>
       <unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text ID="81">章�?怡</text>
+         <text ID="81">章子怡</text>
       </unicode>
       <unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
          <text ID="83">Björk Guðmundsdóttir</text>
@@ -392,22 +392,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
 </example><Example ID="0">
    <List ID="1">
       <Unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
-         <Text ID="3">Ἀ�?χιμήδης</Text>
+         <Text ID="3">Ἀρχιμήδης</Text>
       </Unicode>
       <Unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
          <Text ID="5">Tor Åge Bringsværd</Text>
       </Unicode>
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <Text ID="7">심�?�하</Text>
+         <Text ID="7">심은하</Text>
       </Unicode>
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
       <Unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <Text ID="11">�?�설�?�</Text>
+         <Text ID="11">이설희</Text>
       </Unicode>
       <Unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
-         <Text ID="13">माध�?री दिछित</Text>
+         <Text ID="13">माधुरी दिछित</Text>
       </Unicode>
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
          <Text ID="15">Johann Strauß</Text>
@@ -425,10 +425,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <Text ID="25">نصرت �?تح علی خان</Text>
+         <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <Text ID="27">Γιώ�?γος �?ταλά�?ας</Text>
+         <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <Text ID="29">Søren Kierkegård</Text>
@@ -443,19 +443,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <Text ID="37">יהור�? ג�?ון</Text>
+         <Text ID="37">יהורם גאון</Text>
       </Unicode>
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <Text ID="41">久�?田    利伸</Text>
+         <Text ID="41">久保田    利伸</Text>
       </Unicode>
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <Text ID="45">ธงไชย �?ม็คอินไตย์</Text>
+         <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
          <Text ID="47">Camille Saint-Saëns</Text>
@@ -479,19 +479,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="59">안성기</Text>
       </Unicode>
       <Unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <Text ID="61">王�?�</Text>
+         <Text ID="61">王菲</Text>
       </Unicode>
       <Unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
-         <Text ID="63">Бори�? Гребенщиков</Text>
+         <Text ID="63">Борис Гребенщиков</Text>
       </Unicode>
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
       <Unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
-         <Text ID="67">林原 �?�??�?�</Text>
+         <Text ID="67">林原 めぐみ</Text>
       </Unicode>
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <Text ID="69">�?�安</Text>
+         <Text ID="69">李安</Text>
       </Unicode>
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
@@ -503,13 +503,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <Text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
+         <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
       <Unicode ID="78" origin="France" name="Francois Truffaut">
          <Text ID="79">François Truffaut</Text>
       </Unicode>
       <Unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <Text ID="81">章�?怡</Text>
+         <Text ID="81">章子怡</Text>
       </Unicode>
       <Unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
          <Text ID="83">Björk Guðmundsdóttir</Text>
@@ -521,22 +521,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
 </Example><example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
-         <text>Ἀ�?χιμήδης</text>
+         <text>Ἀρχιμήδης</text>
       </unicode>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
          <text>Tor Åge Bringsværd</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text>심�?�하</text>
+         <text>심은하</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
          <text>Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text>�?�설�?�</text>
+         <text>이설희</text>
       </unicode>
       <unicode origin="India (Hindi)" name="Madhuri Dixit">
-         <text>माध�?री दिछित</text>
+         <text>माधुरी दिछित</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
          <text>Johann Strauß</text>
@@ -554,10 +554,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Sinéad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text>نصرت �?تح علی خان</text>
+         <text>نصرت فتح علی خان</text>
       </unicode>
       <unicode origin="Greece" name="Giorgos Dalaras">
-         <text>Γιώ�?γος �?ταλά�?ας</text>
+         <text>Γιώργος Νταλάρας</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
          <text>Søren Kierkegård</text>
@@ -572,19 +572,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኢትዮጵያ</text>
       </unicode>
       <unicode origin="Israel" name="Yehoram Gaon">
-         <text>יהור�? ג�?ון</text>
+         <text>יהורם גאון</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
          <text>Olga Tañón</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>久�?田    利伸</text>
+         <text>久保田    利伸</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wałęsa</text>
       </unicode>
       <unicode origin="Thailand" name="Thongchai McIntai">
-         <text>ธงไชย �?ม็คอินไตย์</text>
+         <text>ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
          <text>Camille Saint-Saëns</text>
@@ -608,19 +608,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>안성기</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text>王�?�</text>
+         <text>王菲</text>
       </unicode>
       <unicode origin="Russia" name="Boris Grebenshchikov">
-         <text>Бори�? Гребенщиков</text>
+         <text>Борис Гребенщиков</text>
       </unicode>
       <unicode origin="Australia" name="Nicole Kidman">
          <text>Nicole Kidman</text>
       </unicode>
       <unicode origin="Japan" name="HAYASHIBARA Megumi">
-         <text>林原 �?�??�?�</text>
+         <text>林原 めぐみ</text>
       </unicode>
       <unicode origin="Rep. of China" name="Ang Lee">
-         <text>�?�安</text>
+         <text>李安</text>
       </unicode>
       <unicode origin="Egypt" name="Om Kolthoum">
          <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -632,13 +632,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኤርትራ</text>
       </unicode>
       <unicode origin="Egypt" name="Abdel Halim Hafez">
-         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text>ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
          <text>François Truffaut</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text>章�?怡</text>
+         <text>章子怡</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
          <text>Björk Guðmundsdóttir</text>
@@ -653,13 +653,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?????????</text>
       </unicode>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
-         <text>Tor �ge Bringsv�rd</text>
+         <text>Tor �ge Bringsv�rd</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
          <text>???</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
-         <text>S�ren Hauch-Fausb�ll</text>
+         <text>S�ren Hauch-Fausb�ll</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
          <text>???</text>
@@ -668,19 +668,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?????? ?????</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
-         <text>Johann Strau�</text>
+         <text>Johann Strau�</text>
       </unicode>
       <unicode origin="Rep. of China" name="Hsu Chi">
          <text>??</text>
       </unicode>
       <unicode origin="Canada" name="Celine Dion">
-         <text>C�line Dion</text>
+         <text>C�line Dion</text>
       </unicode>
       <unicode origin="France" name="Mylene Demongeot">
-         <text>Myl�ne Demongeot</text>
+         <text>Myl�ne Demongeot</text>
       </unicode>
       <unicode origin="Ireland" name="Sinead O&apos;Connor">
-         <text>Sin�ad O&apos;Connor</text>
+         <text>Sin�ad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
          <text>???? ??? ??? ???</text>
@@ -689,10 +689,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>??????? ????????</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
-         <text>S�ren Kierkeg�rd</text>
+         <text>S�ren Kierkeg�rd</text>
       </unicode>
       <unicode origin="France" name="Jean Reno">
-         <text>Jean R�no</text>
+         <text>Jean R�no</text>
       </unicode>
       <unicode origin="Japan" name="Tex Texin">
          <text>??? ????</text>
@@ -704,10 +704,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ????</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
-         <text>Olga Ta��n</text>
+         <text>Olga Ta��n</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>???� � ??</text>
+         <text>???� � ??</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wa??sa</text>
@@ -716,16 +716,16 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ???????????</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
-         <text>Camille Saint-Sa�ns</text>
+         <text>Camille Saint-Sa�ns</text>
       </unicode>
       <unicode origin="U.S.A." name="Brad Pitt">
          <text>Brad Pitt</text>
       </unicode>
       <unicode origin="Italy" name="Fabrizio DeAndre">
-         <text>Fabrizio De Andr�</text>
+         <text>Fabrizio De Andr�</text>
       </unicode>
       <unicode origin="Germany" name="Walter Schultheiss">
-         <text>Walter Schulthei�</text>
+         <text>Walter Schulthei�</text>
       </unicode>
       <unicode origin="Russia" name="Mikhail Gorbachev">
          <text>?????? ????????</text>
@@ -755,7 +755,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?? ?????</text>
       </unicode>
       <unicode origin="Germany" name="Rudi Voeller">
-         <text>Rudi V�ller</text>
+         <text>Rudi V�ller</text>
       </unicode>
       <unicode origin="Eritrea" name="Berhane Zeray">
          <text>????</text>
@@ -764,38 +764,38 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????????? ????</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
-         <text>Fran�ois Truffaut</text>
+         <text>Fran�ois Truffaut</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
          <text>???</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
-         <text>Bj�rk Gu�mundsd�ttir</text>
+         <text>Bj�rk Gu?mundsd�ttir</text>
       </unicode>
       <unicode origin="France" name="Gerard Depardieu">
-         <text>G�rard Depardieu</text>
+         <text>G�rard Depardieu</text>
       </unicode>
    </list>
 </example>
 <example ID="0">
    <list ID="1">
       <unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
-         <text ID="3">Ἀ�?χιμήδης</text>
+         <text ID="3">Ἀρχιμήδης</text>
       </unicode>
       <unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
          <text ID="5">Tor Åge Bringsværd</text>
       </unicode>
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text ID="7">심�?�하</text>
+         <text ID="7">심은하</text>
       </unicode>
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text ID="11">�?�설�?�</text>
+         <text ID="11">이설희</text>
       </unicode>
       <unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
-         <text ID="13">माध�?री दिछित</text>
+         <text ID="13">माधुरी दिछित</text>
       </unicode>
       <unicode ID="14" origin="Austria" name="Johann Strauss">
          <text ID="15">Johann Strauß</text>
@@ -813,10 +813,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text ID="25">نصرت �?تح علی خان</text>
+         <text ID="25">نصرت فتح علی خان</text>
       </unicode>
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <text ID="27">Γιώ�?γος �?ταλά�?ας</text>
+         <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <text ID="29">Søren Kierkegård</text>
@@ -831,19 +831,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <text ID="37">יהור�? ג�?ון</text>
+         <text ID="37">יהורם גאון</text>
       </unicode>
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <text ID="39">Olga Tañón</text>
       </unicode>
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <text ID="41">久�?田    利伸</text>
+         <text ID="41">久保田    利伸</text>
       </unicode>
       <unicode ID="42" origin="Poland" name="Lech Walesa">
          <text ID="43">Lech Wałęsa</text>
       </unicode>
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <text ID="45">ธงไชย �?ม็คอินไตย์</text>
+         <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
          <text ID="47">Camille Saint-Saëns</text>
@@ -867,19 +867,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="59">안성기</text>
       </unicode>
       <unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text ID="61">王�?�</text>
+         <text ID="61">王菲</text>
       </unicode>
       <unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
-         <text ID="63">Бори�? Гребенщиков</text>
+         <text ID="63">Борис Гребенщиков</text>
       </unicode>
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
          <text ID="65">Nicole Kidman</text>
       </unicode>
       <unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
-         <text ID="67">林原 �?�??�?�</text>
+         <text ID="67">林原 めぐみ</text>
       </unicode>
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <text ID="69">�?�安</text>
+         <text ID="69">李安</text>
       </unicode>
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -891,13 +891,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="75">ኤርትራ</text>
       </unicode>
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode ID="78" origin="France" name="Francois Truffaut">
          <text ID="79">François Truffaut</text>
       </unicode>
       <unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text ID="81">章�?怡</text>
+         <text ID="81">章子怡</text>
       </unicode>
       <unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
          <text ID="83">Björk Guðmundsdóttir</text>
@@ -909,22 +909,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
 </example><Example ID="0">
    <List ID="1">
       <Unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
-         <Text ID="3">Ἀ�?χιμήδης</Text>
+         <Text ID="3">Ἀρχιμήδης</Text>
       </Unicode>
       <Unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
          <Text ID="5">Tor Åge Bringsværd</Text>
       </Unicode>
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <Text ID="7">심�?�하</Text>
+         <Text ID="7">심은하</Text>
       </Unicode>
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
       <Unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <Text ID="11">�?�설�?�</Text>
+         <Text ID="11">이설희</Text>
       </Unicode>
       <Unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
-         <Text ID="13">माध�?री दिछित</Text>
+         <Text ID="13">माधुरी दिछित</Text>
       </Unicode>
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
          <Text ID="15">Johann Strauß</Text>
@@ -942,10 +942,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <Text ID="25">نصرت �?تح علی خان</Text>
+         <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <Text ID="27">Γιώ�?γος �?ταλά�?ας</Text>
+         <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <Text ID="29">Søren Kierkegård</Text>
@@ -960,19 +960,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <Text ID="37">יהור�? ג�?ון</Text>
+         <Text ID="37">יהורם גאון</Text>
       </Unicode>
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <Text ID="41">久�?田    利伸</Text>
+         <Text ID="41">久保田    利伸</Text>
       </Unicode>
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <Text ID="45">ธงไชย �?ม็คอินไตย์</Text>
+         <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
          <Text ID="47">Camille Saint-Saëns</Text>
@@ -996,19 +996,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="59">안성기</Text>
       </Unicode>
       <Unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <Text ID="61">王�?�</Text>
+         <Text ID="61">王菲</Text>
       </Unicode>
       <Unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
-         <Text ID="63">Бори�? Гребенщиков</Text>
+         <Text ID="63">Борис Гребенщиков</Text>
       </Unicode>
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
       <Unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
-         <Text ID="67">林原 �?�??�?�</Text>
+         <Text ID="67">林原 めぐみ</Text>
       </Unicode>
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <Text ID="69">�?�安</Text>
+         <Text ID="69">李安</Text>
       </Unicode>
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
@@ -1020,13 +1020,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <Text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
+         <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
       <Unicode ID="78" origin="France" name="Francois Truffaut">
          <Text ID="79">François Truffaut</Text>
       </Unicode>
       <Unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <Text ID="81">章�?怡</Text>
+         <Text ID="81">章子怡</Text>
       </Unicode>
       <Unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
          <Text ID="83">Björk Guðmundsdóttir</Text>
@@ -1041,19 +1041,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Tor Åge Bringsværd</text>
       </unicode>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
-         <text>Ἀ�?χιμήδης</text>
+         <text>Ἀρχιμήδης</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text>심�?�하</text>
+         <text>심은하</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
          <text>Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode origin="India (Hindi)" name="Madhuri Dixit">
-         <text>माध�?री दिछित</text>
+         <text>माधुरी दिछित</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text>�?�설�?�</text>
+         <text>이설희</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
          <text>Johann Strauß</text>
@@ -1071,10 +1071,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Sinéad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text>نصرت �?تح علی خان</text>
+         <text>نصرت فتح علی خان</text>
       </unicode>
       <unicode origin="Greece" name="Giorgos Dalaras">
-         <text>Γιώ�?γος �?ταλά�?ας</text>
+         <text>Γιώργος Νταλάρας</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
          <text>Søren Kierkegård</text>
@@ -1089,19 +1089,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኢትዮጵያ</text>
       </unicode>
       <unicode origin="Israel" name="Yehoram Gaon">
-         <text>יהור�? ג�?ון</text>
+         <text>יהורם גאון</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
          <text>Olga Tañón</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>久�?田    利伸</text>
+         <text>久保田    利伸</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wałęsa</text>
       </unicode>
       <unicode origin="Thailand" name="Thongchai McIntai">
-         <text>ธงไชย �?ม็คอินไตย์</text>
+         <text>ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
          <text>Camille Saint-Saëns</text>
@@ -1122,22 +1122,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Михаил Горбачёв</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text>王�?�</text>
+         <text>王菲</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="AHN Sung-Gi">
          <text>안성기</text>
       </unicode>
       <unicode origin="Japan" name="HAYASHIBARA Megumi">
-         <text>林原 �?�??�?�</text>
+         <text>林原 めぐみ</text>
       </unicode>
       <unicode origin="Australia" name="Nicole Kidman">
          <text>Nicole Kidman</text>
       </unicode>
       <unicode origin="Russia" name="Boris Grebenshchikov">
-         <text>Бори�? Гребенщиков</text>
+         <text>Борис Гребенщиков</text>
       </unicode>
       <unicode origin="Rep. of China" name="Ang Lee">
-         <text>�?�安</text>
+         <text>李安</text>
       </unicode>
       <unicode origin="Egypt" name="Om Kolthoum">
          <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -1149,7 +1149,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኤርትራ</text>
       </unicode>
       <unicode origin="Egypt" name="Abdel Halim Hafez">
-         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text>ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
          <text>François Truffaut</text>
@@ -1158,7 +1158,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Björk Guðmundsdóttir</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text>章�?怡</text>
+         <text>章子怡</text>
       </unicode>
       <unicode origin="France" name="Gerard Depardieu">
          <text>Gérard Depardieu</text>
@@ -1167,7 +1167,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
 </example><example>
    <list>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
-         <text>Tor �ge Bringsv�rd</text>
+         <text>Tor �ge Bringsv�rd</text>
       </unicode>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
          <text>?????????</text>
@@ -1176,7 +1176,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>???</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
-         <text>S�ren Hauch-Fausb�ll</text>
+         <text>S�ren Hauch-Fausb�ll</text>
       </unicode>
       <unicode origin="India (Hindi)" name="Madhuri Dixit">
          <text>?????? ?????</text>
@@ -1185,19 +1185,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>???</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
-         <text>Johann Strau�</text>
+         <text>Johann Strau�</text>
       </unicode>
       <unicode origin="Canada" name="Celine Dion">
-         <text>C�line Dion</text>
+         <text>C�line Dion</text>
       </unicode>
       <unicode origin="Rep. of China" name="Hsu Chi">
          <text>??</text>
       </unicode>
       <unicode origin="France" name="Mylene Demongeot">
-         <text>Myl�ne Demongeot</text>
+         <text>Myl�ne Demongeot</text>
       </unicode>
       <unicode origin="Ireland" name="Sinead O&apos;Connor">
-         <text>Sin�ad O&apos;Connor</text>
+         <text>Sin�ad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
          <text>???? ??? ??? ???</text>
@@ -1206,10 +1206,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>??????? ????????</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
-         <text>S�ren Kierkeg�rd</text>
+         <text>S�ren Kierkeg�rd</text>
       </unicode>
       <unicode origin="France" name="Jean Reno">
-         <text>Jean R�no</text>
+         <text>Jean R�no</text>
       </unicode>
       <unicode origin="Japan" name="Tex Texin">
          <text>??? ????</text>
@@ -1221,10 +1221,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ????</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
-         <text>Olga Ta��n</text>
+         <text>Olga Ta��n</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>???� � ??</text>
+         <text>???� � ??</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wa??sa</text>
@@ -1233,16 +1233,16 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ???????????</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
-         <text>Camille Saint-Sa�ns</text>
+         <text>Camille Saint-Sa�ns</text>
       </unicode>
       <unicode origin="U.S.A." name="Brad Pitt">
          <text>Brad Pitt</text>
       </unicode>
       <unicode origin="Italy" name="Fabrizio DeAndre">
-         <text>Fabrizio De Andr�</text>
+         <text>Fabrizio De Andr�</text>
       </unicode>
       <unicode origin="Germany" name="Walter Schultheiss">
-         <text>Walter Schulthei�</text>
+         <text>Walter Schulthei�</text>
       </unicode>
       <unicode origin="Japan" name="Mori Ogai">
          <text>???</text>
@@ -1272,7 +1272,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?? ?????</text>
       </unicode>
       <unicode origin="Germany" name="Rudi Voeller">
-         <text>Rudi V�ller</text>
+         <text>Rudi V�ller</text>
       </unicode>
       <unicode origin="Eritrea" name="Berhane Zeray">
          <text>????</text>
@@ -1281,16 +1281,16 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????????? ????</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
-         <text>Fran�ois Truffaut</text>
+         <text>Fran�ois Truffaut</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
-         <text>Bj�rk Gu�mundsd�ttir</text>
+         <text>Bj�rk Gu?mundsd�ttir</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
          <text>???</text>
       </unicode>
       <unicode origin="France" name="Gerard Depardieu">
-         <text>G�rard Depardieu</text>
+         <text>G�rard Depardieu</text>
       </unicode>
    </list>
 </example>
@@ -1300,19 +1300,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="3">Tor Åge Bringsværd</text>
       </unicode>
       <unicode ID="4" origin="Syracuse (Sicily)" name="Archimedes">
-         <text ID="5">Ἀ�?χιμήδης</text>
+         <text ID="5">Ἀρχιμήδης</text>
       </unicode>
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text ID="7">심�?�하</text>
+         <text ID="7">심은하</text>
       </unicode>
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode ID="10" origin="India (Hindi)" name="Madhuri Dixit">
-         <text ID="11">माध�?री दिछित</text>
+         <text ID="11">माधुरी दिछित</text>
       </unicode>
       <unicode ID="12" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text ID="13">�?�설�?�</text>
+         <text ID="13">이설희</text>
       </unicode>
       <unicode ID="14" origin="Austria" name="Johann Strauss">
          <text ID="15">Johann Strauß</text>
@@ -1330,10 +1330,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text ID="25">نصرت �?تح علی خان</text>
+         <text ID="25">نصرت فتح علی خان</text>
       </unicode>
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <text ID="27">Γιώ�?γος �?ταλά�?ας</text>
+         <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <text ID="29">Søren Kierkegård</text>
@@ -1348,19 +1348,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <text ID="37">יהור�? ג�?ון</text>
+         <text ID="37">יהורם גאון</text>
       </unicode>
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <text ID="39">Olga Tañón</text>
       </unicode>
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <text ID="41">久�?田    利伸</text>
+         <text ID="41">久保田    利伸</text>
       </unicode>
       <unicode ID="42" origin="Poland" name="Lech Walesa">
          <text ID="43">Lech Wałęsa</text>
       </unicode>
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <text ID="45">ธงไชย �?ม็คอินไตย์</text>
+         <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
          <text ID="47">Camille Saint-Saëns</text>
@@ -1381,22 +1381,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="57">Михаил Горбачёв</text>
       </unicode>
       <unicode ID="58" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text ID="59">王�?�</text>
+         <text ID="59">王菲</text>
       </unicode>
       <unicode ID="60" origin="Rep. of Korea" name="AHN Sung-Gi">
          <text ID="61">안성기</text>
       </unicode>
       <unicode ID="62" origin="Japan" name="HAYASHIBARA Megumi">
-         <text ID="63">林原 �?�??�?�</text>
+         <text ID="63">林原 めぐみ</text>
       </unicode>
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
          <text ID="65">Nicole Kidman</text>
       </unicode>
       <unicode ID="66" origin="Russia" name="Boris Grebenshchikov">
-         <text ID="67">Бори�? Гребенщиков</text>
+         <text ID="67">Борис Гребенщиков</text>
       </unicode>
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <text ID="69">�?�安</text>
+         <text ID="69">李安</text>
       </unicode>
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -1408,7 +1408,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="75">ኤርትራ</text>
       </unicode>
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode ID="78" origin="France" name="Francois Truffaut">
          <text ID="79">François Truffaut</text>
@@ -1417,7 +1417,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="81">Björk Guðmundsdóttir</text>
       </unicode>
       <unicode ID="82" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text ID="83">章�?怡</text>
+         <text ID="83">章子怡</text>
       </unicode>
       <unicode ID="84" origin="France" name="Gerard Depardieu">
          <text ID="85">Gérard Depardieu</text>
@@ -1429,19 +1429,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="3">Tor Åge Bringsværd</Text>
       </Unicode>
       <Unicode ID="4" origin="Syracuse (Sicily)" name="Archimedes">
-         <Text ID="5">Ἀ�?χιμήδης</Text>
+         <Text ID="5">Ἀρχιμήδης</Text>
       </Unicode>
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <Text ID="7">심�?�하</Text>
+         <Text ID="7">심은하</Text>
       </Unicode>
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
       <Unicode ID="10" origin="India (Hindi)" name="Madhuri Dixit">
-         <Text ID="11">माध�?री दिछित</Text>
+         <Text ID="11">माधुरी दिछित</Text>
       </Unicode>
       <Unicode ID="12" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <Text ID="13">�?�설�?�</Text>
+         <Text ID="13">이설희</Text>
       </Unicode>
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
          <Text ID="15">Johann Strauß</Text>
@@ -1459,10 +1459,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <Text ID="25">نصرت �?تح علی خان</Text>
+         <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <Text ID="27">Γιώ�?γος �?ταλά�?ας</Text>
+         <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <Text ID="29">Søren Kierkegård</Text>
@@ -1477,19 +1477,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <Text ID="37">יהור�? ג�?ון</Text>
+         <Text ID="37">יהורם גאון</Text>
       </Unicode>
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <Text ID="41">久�?田    利伸</Text>
+         <Text ID="41">久保田    利伸</Text>
       </Unicode>
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <Text ID="45">ธงไชย �?ม็คอินไตย์</Text>
+         <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
          <Text ID="47">Camille Saint-Saëns</Text>
@@ -1510,22 +1510,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="57">Михаил Горбачёв</Text>
       </Unicode>
       <Unicode ID="58" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <Text ID="59">王�?�</Text>
+         <Text ID="59">王菲</Text>
       </Unicode>
       <Unicode ID="60" origin="Rep. of Korea" name="AHN Sung-Gi">
          <Text ID="61">안성기</Text>
       </Unicode>
       <Unicode ID="62" origin="Japan" name="HAYASHIBARA Megumi">
-         <Text ID="63">林原 �?�??�?�</Text>
+         <Text ID="63">林原 めぐみ</Text>
       </Unicode>
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
       <Unicode ID="66" origin="Russia" name="Boris Grebenshchikov">
-         <Text ID="67">Бори�? Гребенщиков</Text>
+         <Text ID="67">Борис Гребенщиков</Text>
       </Unicode>
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <Text ID="69">�?�安</Text>
+         <Text ID="69">李安</Text>
       </Unicode>
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
@@ -1537,7 +1537,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <Text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
+         <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
       <Unicode ID="78" origin="France" name="Francois Truffaut">
          <Text ID="79">François Truffaut</Text>
@@ -1546,7 +1546,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="81">Björk Guðmundsdóttir</Text>
       </Unicode>
       <Unicode ID="82" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <Text ID="83">章�?怡</Text>
+         <Text ID="83">章子怡</Text>
       </Unicode>
       <Unicode ID="84" origin="France" name="Gerard Depardieu">
          <Text ID="85">Gérard Depardieu</Text>
@@ -1555,22 +1555,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
 </Example><example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
-         <text>Ἀ�?χιμήδης</text>
+         <text>Ἀρχιμήδης</text>
       </unicode>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
          <text>Tor Åge Bringsværd</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text>심�?�하</text>
+         <text>심은하</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
          <text>Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text>�?�설�?�</text>
+         <text>이설희</text>
       </unicode>
       <unicode origin="India (Hindi)" name="Madhuri Dixit">
-         <text>माध�?री दिछित</text>
+         <text>माधुरी दिछित</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
          <text>Johann Strauß</text>
@@ -1588,10 +1588,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>Sinéad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text>نصرت �?تح علی خان</text>
+         <text>نصرت فتح علی خان</text>
       </unicode>
       <unicode origin="Greece" name="Giorgos Dalaras">
-         <text>Γιώ�?γος �?ταλά�?ας</text>
+         <text>Γιώργος Νταλάρας</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
          <text>Søren Kierkegård</text>
@@ -1606,19 +1606,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኢትዮጵያ</text>
       </unicode>
       <unicode origin="Israel" name="Yehoram Gaon">
-         <text>יהור�? ג�?ון</text>
+         <text>יהורם גאון</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
          <text>Olga Tañón</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>久�?田    利伸</text>
+         <text>久保田    利伸</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wałęsa</text>
       </unicode>
       <unicode origin="Thailand" name="Thongchai McIntai">
-         <text>ธงไชย �?ม็คอินไตย์</text>
+         <text>ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
          <text>Camille Saint-Saëns</text>
@@ -1642,19 +1642,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>안성기</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text>王�?�</text>
+         <text>王菲</text>
       </unicode>
       <unicode origin="Russia" name="Boris Grebenshchikov">
-         <text>Бори�? Гребенщиков</text>
+         <text>Борис Гребенщиков</text>
       </unicode>
       <unicode origin="Australia" name="Nicole Kidman">
          <text>Nicole Kidman</text>
       </unicode>
       <unicode origin="Japan" name="HAYASHIBARA Megumi">
-         <text>林原 �?�??�?�</text>
+         <text>林原 めぐみ</text>
       </unicode>
       <unicode origin="Rep. of China" name="Ang Lee">
-         <text>�?�安</text>
+         <text>李安</text>
       </unicode>
       <unicode origin="Egypt" name="Om Kolthoum">
          <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -1666,13 +1666,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>ኤርትራ</text>
       </unicode>
       <unicode origin="Egypt" name="Abdel Halim Hafez">
-         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text>ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
          <text>François Truffaut</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text>章�?怡</text>
+         <text>章子怡</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
          <text>Björk Guðmundsdóttir</text>
@@ -1687,13 +1687,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?????????</text>
       </unicode>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
-         <text>Tor �ge Bringsv�rd</text>
+         <text>Tor �ge Bringsv�rd</text>
       </unicode>
       <unicode origin="Rep. of Korea" name="SHIM Eun-Ha">
          <text>???</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Hauch-Fausboll">
-         <text>S�ren Hauch-Fausb�ll</text>
+         <text>S�ren Hauch-Fausb�ll</text>
       </unicode>
       <unicode origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
          <text>???</text>
@@ -1702,19 +1702,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?????? ?????</text>
       </unicode>
       <unicode origin="Austria" name="Johann Strauss">
-         <text>Johann Strau�</text>
+         <text>Johann Strau�</text>
       </unicode>
       <unicode origin="Rep. of China" name="Hsu Chi">
          <text>??</text>
       </unicode>
       <unicode origin="Canada" name="Celine Dion">
-         <text>C�line Dion</text>
+         <text>C�line Dion</text>
       </unicode>
       <unicode origin="France" name="Mylene Demongeot">
-         <text>Myl�ne Demongeot</text>
+         <text>Myl�ne Demongeot</text>
       </unicode>
       <unicode origin="Ireland" name="Sinead O&apos;Connor">
-         <text>Sin�ad O&apos;Connor</text>
+         <text>Sin�ad O&apos;Connor</text>
       </unicode>
       <unicode origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
          <text>???? ??? ??? ???</text>
@@ -1723,10 +1723,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>??????? ????????</text>
       </unicode>
       <unicode origin="Denmark" name="Soren Kierkegaard">
-         <text>S�ren Kierkeg�rd</text>
+         <text>S�ren Kierkeg�rd</text>
       </unicode>
       <unicode origin="France" name="Jean Reno">
-         <text>Jean R�no</text>
+         <text>Jean R�no</text>
       </unicode>
       <unicode origin="Japan" name="Tex Texin">
          <text>??? ????</text>
@@ -1738,10 +1738,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ????</text>
       </unicode>
       <unicode origin="Puerto Rico" name="Olga Tanon">
-         <text>Olga Ta��n</text>
+         <text>Olga Ta��n</text>
       </unicode>
       <unicode origin="Japan" name="KUBOTA Toshinobu">
-         <text>???� � ??</text>
+         <text>???� � ??</text>
       </unicode>
       <unicode origin="Poland" name="Lech Walesa">
          <text>Lech Wa??sa</text>
@@ -1750,16 +1750,16 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????? ???????????</text>
       </unicode>
       <unicode origin="France" name="Camille Saint-Saens">
-         <text>Camille Saint-Sa�ns</text>
+         <text>Camille Saint-Sa�ns</text>
       </unicode>
       <unicode origin="U.S.A." name="Brad Pitt">
          <text>Brad Pitt</text>
       </unicode>
       <unicode origin="Italy" name="Fabrizio DeAndre">
-         <text>Fabrizio De Andr�</text>
+         <text>Fabrizio De Andr�</text>
       </unicode>
       <unicode origin="Germany" name="Walter Schultheiss">
-         <text>Walter Schulthei�</text>
+         <text>Walter Schulthei�</text>
       </unicode>
       <unicode origin="Russia" name="Mikhail Gorbachev">
          <text>?????? ????????</text>
@@ -1789,7 +1789,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>?? ?????</text>
       </unicode>
       <unicode origin="Germany" name="Rudi Voeller">
-         <text>Rudi V�ller</text>
+         <text>Rudi V�ller</text>
       </unicode>
       <unicode origin="Eritrea" name="Berhane Zeray">
          <text>????</text>
@@ -1798,38 +1798,38 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text>????????? ????</text>
       </unicode>
       <unicode origin="France" name="Francois Truffaut">
-         <text>Fran�ois Truffaut</text>
+         <text>Fran�ois Truffaut</text>
       </unicode>
       <unicode origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
          <text>???</text>
       </unicode>
       <unicode origin="Iceland" name="Bjork Gudmundsdottir">
-         <text>Bj�rk Gu�mundsd�ttir</text>
+         <text>Bj�rk Gu?mundsd�ttir</text>
       </unicode>
       <unicode origin="France" name="Gerard Depardieu">
-         <text>G�rard Depardieu</text>
+         <text>G�rard Depardieu</text>
       </unicode>
    </list>
 </example>
 <example ID="0">
    <list ID="1">
       <unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
-         <text ID="3">Ἀ�?χιμήδης</text>
+         <text ID="3">Ἀρχιμήδης</text>
       </unicode>
       <unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
          <text ID="5">Tor Åge Bringsværd</text>
       </unicode>
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <text ID="7">심�?�하</text>
+         <text ID="7">심은하</text>
       </unicode>
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
       <unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <text ID="11">�?�설�?�</text>
+         <text ID="11">이설희</text>
       </unicode>
       <unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
-         <text ID="13">माध�?री दिछित</text>
+         <text ID="13">माधुरी दिछित</text>
       </unicode>
       <unicode ID="14" origin="Austria" name="Johann Strauss">
          <text ID="15">Johann Strauß</text>
@@ -1847,10 +1847,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <text ID="25">نصرت �?تح علی خان</text>
+         <text ID="25">نصرت فتح علی خان</text>
       </unicode>
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <text ID="27">Γιώ�?γος �?ταλά�?ας</text>
+         <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <text ID="29">Søren Kierkegård</text>
@@ -1865,19 +1865,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <text ID="37">יהור�? ג�?ון</text>
+         <text ID="37">יהורם גאון</text>
       </unicode>
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <text ID="39">Olga Tañón</text>
       </unicode>
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <text ID="41">久�?田    利伸</text>
+         <text ID="41">久保田    利伸</text>
       </unicode>
       <unicode ID="42" origin="Poland" name="Lech Walesa">
          <text ID="43">Lech Wałęsa</text>
       </unicode>
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <text ID="45">ธงไชย �?ม็คอินไตย์</text>
+         <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
          <text ID="47">Camille Saint-Saëns</text>
@@ -1901,19 +1901,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="59">안성기</text>
       </unicode>
       <unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <text ID="61">王�?�</text>
+         <text ID="61">王菲</text>
       </unicode>
       <unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
-         <text ID="63">Бори�? Гребенщиков</text>
+         <text ID="63">Борис Гребенщиков</text>
       </unicode>
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
          <text ID="65">Nicole Kidman</text>
       </unicode>
       <unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
-         <text ID="67">林原 �?�??�?�</text>
+         <text ID="67">林原 めぐみ</text>
       </unicode>
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <text ID="69">�?�安</text>
+         <text ID="69">李安</text>
       </unicode>
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
@@ -1925,13 +1925,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <text ID="75">ኤርትራ</text>
       </unicode>
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+         <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
       <unicode ID="78" origin="France" name="Francois Truffaut">
          <text ID="79">François Truffaut</text>
       </unicode>
       <unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <text ID="81">章�?怡</text>
+         <text ID="81">章子怡</text>
       </unicode>
       <unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
          <text ID="83">Björk Guðmundsdóttir</text>
@@ -1943,22 +1943,22 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
 </example><Example ID="0">
    <List ID="1">
       <Unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
-         <Text ID="3">Ἀ�?χιμήδης</Text>
+         <Text ID="3">Ἀρχιμήδης</Text>
       </Unicode>
       <Unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
          <Text ID="5">Tor Åge Bringsværd</Text>
       </Unicode>
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
-         <Text ID="7">심�?�하</Text>
+         <Text ID="7">심은하</Text>
       </Unicode>
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
       <Unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
-         <Text ID="11">�?�설�?�</Text>
+         <Text ID="11">이설희</Text>
       </Unicode>
       <Unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
-         <Text ID="13">माध�?री दिछित</Text>
+         <Text ID="13">माधुरी दिछित</Text>
       </Unicode>
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
          <Text ID="15">Johann Strauß</Text>
@@ -1976,10 +1976,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
-         <Text ID="25">نصرت �?تح علی خان</Text>
+         <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
-         <Text ID="27">Γιώ�?γος �?ταλά�?ας</Text>
+         <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
          <Text ID="29">Søren Kierkegård</Text>
@@ -1994,19 +1994,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
-         <Text ID="37">יהור�? ג�?ון</Text>
+         <Text ID="37">יהורם גאון</Text>
       </Unicode>
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
-         <Text ID="41">久�?田    利伸</Text>
+         <Text ID="41">久保田    利伸</Text>
       </Unicode>
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
-         <Text ID="45">ธงไชย �?ม็คอินไตย์</Text>
+         <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
          <Text ID="47">Camille Saint-Saëns</Text>
@@ -2030,19 +2030,19 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="59">안성기</Text>
       </Unicode>
       <Unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
-         <Text ID="61">王�?�</Text>
+         <Text ID="61">王菲</Text>
       </Unicode>
       <Unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
-         <Text ID="63">Бори�? Гребенщиков</Text>
+         <Text ID="63">Борис Гребенщиков</Text>
       </Unicode>
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
       <Unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
-         <Text ID="67">林原 �?�??�?�</Text>
+         <Text ID="67">林原 めぐみ</Text>
       </Unicode>
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
-         <Text ID="69">�?�安</Text>
+         <Text ID="69">李安</Text>
       </Unicode>
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
@@ -2054,13 +2054,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
-         <Text ID="77">ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
+         <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
       <Unicode ID="78" origin="France" name="Francois Truffaut">
          <Text ID="79">François Truffaut</Text>
       </Unicode>
       <Unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
-         <Text ID="81">章�?怡</Text>
+         <Text ID="81">章子怡</Text>
       </Unicode>
       <Unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
          <Text ID="83">Björk Guðmundsdóttir</Text>
@@ -2071,8 +2071,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
    </List>
 </Example>------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.406 sec
-Testcase: testWriteUnicode took 0.234 sec
-Testcase: testUnicodeFromByteStream took 0.11 sec
-Testcase: testIncorrectEncoding took 0 sec
+Testcase: testUnicode took 0.343 sec
+Testcase: testWriteUnicode took 0.205 sec
+Testcase: testUnicodeFromByteStream took 0.071 sec
+Testcase: testIncorrectEncoding took 0.006 sec
 Testcase: testDirectory took 0 sec
