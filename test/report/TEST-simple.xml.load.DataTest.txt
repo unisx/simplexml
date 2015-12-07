@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.DataTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
@@ -30,4 +30,5 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
    </query-list>
 </scrape>------------- ---------------- ---------------
 
-Testcase: testData took 0.204 sec
+Testcase: testData took 0.203 sec
+Testcase: testDirectory took 0 sec

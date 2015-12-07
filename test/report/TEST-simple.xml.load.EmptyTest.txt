@@ -1,20 +1,28 @@
 Testsuite: simple.xml.load.EmptyTest
-Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0.172 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
+------------- Standard Output ---------------
+<test>
+   <empty class="java.util.ArrayList"/>
+</test><test/><test address="NULL" name="John Doe">
+   <description>Some description</description>
+</test><test address="NULL" name="NULL">
+   <description>Some description</description>
+</test>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(required=true, data=false, name=empty) on field 'empty' in class simple.xml.load.EmptyTest$RequiredElement at line -1
-	at simple.xml.load.Composite.read(Composite.java:313)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:352)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
-	at simple.xml.load.EmptyTest.testRequiredEmpty(EmptyTest.java:82)
+	at simple.xml.load.EmptyTest.testRequiredEmpty(EmptyTest.java:110)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -31,19 +39,19 @@ simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(requ
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(required=true, data=false, name=) on method 'empty' in class simple.xml.load.EmptyTest$RequiredMethodElement at line -1
-	at simple.xml.load.Composite.read(Composite.java:313)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:352)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
-	at simple.xml.load.EmptyTest.testRequiredEmptyMethod(EmptyTest.java:94)
+	at simple.xml.load.EmptyTest.testRequiredEmptyMethod(EmptyTest.java:122)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -60,19 +68,19 @@ simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(requ
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(required=true, data=false, name=empty) on field 'empty' in class simple.xml.load.EmptyTest$RequiredElement at line -1
-	at simple.xml.load.Composite.read(Composite.java:313)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:352)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
-	at simple.xml.load.EmptyTest.testRequiredBlank(EmptyTest.java:106)
+	at simple.xml.load.EmptyTest.testRequiredBlank(EmptyTest.java:134)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -89,19 +97,19 @@ simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(requ
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(required=true, data=false, name=empty) on field 'empty' in class simple.xml.load.EmptyTest$RequiredElement at line -1
-	at simple.xml.load.Composite.read(Composite.java:313)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:352)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
-	at simple.xml.load.EmptyTest.testOptionalEmpty(EmptyTest.java:118)
+	at simple.xml.load.EmptyTest.testOptionalEmpty(EmptyTest.java:146)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
@@ -119,10 +127,13 @@ simple.xml.load.ValueRequiredException: Empty value for @simple.xml.Element(requ
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.14 sec
+Testcase: testRequiredEmpty took 0.125 sec
 Testcase: testRequiredEmptyMethod took 0.016 sec
 Testcase: testRequiredBlank took 0 sec
 Testcase: testOptionalEmpty took 0 sec
-Testcase: testOptionalBlank took 0.016 sec
-Testcase: testRequiredEmptyAttribute took 0 sec
+Testcase: testOptionalBlank took 0 sec
+Testcase: testEmptyCollection took 0.063 sec
+Testcase: testRequiredEmptyAttribute took 0.015 sec
 Testcase: testOptionalEmptyAttribute took 0 sec
+Testcase: testDefaultedAttribute took 0.016 sec
+Testcase: testDirectory took 0 sec

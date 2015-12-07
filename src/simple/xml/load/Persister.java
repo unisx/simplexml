@@ -66,17 +66,17 @@ public class Persister implements Serializer {
    /**
     * This is the strategy object used to load and resolve classes.
     */ 
-   private Strategy strategy;
+   private final Strategy strategy;
    
    /**
     * This filter is used to replace variables within templates.
     */
-   private Filter filter;
+   private final Filter filter;
 
    /**
     * This object is used to format the the generated XML document.
     */ 
-   private Format format;
+   private final Format format;
 
    /**
     * Constructor for the <code>Persister</code> object. This is used
@@ -272,7 +272,13 @@ public class Persister implements Serializer {
     * @throws Exception if the object cannot be fully deserialized
     */
    public <T> T read(Class<? extends T> type, File source) throws Exception {
-      return (T)read(type, new FileInputStream(source));           
+      InputStream file = new FileInputStream(source);
+      
+      try {
+         return (T)read(type, file);
+      } finally {
+         file.close();          
+      }
    }
    
    /**
@@ -386,6 +392,167 @@ public class Persister implements Serializer {
    }
    
    /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * 
+    * @return the same instance provided is returned when finished  
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   public <T> T read(T value, String source) throws Exception{
+      return (T)read(value, new StringReader(source));            
+   }
+        
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   public <T> T read(T value, File source) throws Exception{
+      InputStream file = new FileInputStream(source);
+      
+      try {
+         return (T)read(value, file);
+      }finally {
+         file.close();           
+      }
+   }
+
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   public <T> T read(T value, InputStream source) throws Exception{
+      return (T)read(value, source, "utf-8");           
+   }
+   
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * @param charset this is the character set to read the XML with
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */   
+   public <T> T read(T value, InputStream source, String charset) throws Exception{
+      return (T)read(value, new InputStreamReader(source, charset));           
+   }
+
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */   
+   public <T> T read(T value, Reader source) throws Exception{
+      return (T)read(value, NodeBuilder.read(source));
+   }   
+   
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */ 
+   public <T> T read(T value, InputNode source) throws Exception {
+      return (T)read(value, source, filter);
+   }
+
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param source this provides the source of the XML document
+    * @param filter this is the filter used by the templating engine
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */ 
+   private <T> T read(T value, InputNode node, Filter filter) throws Exception {
+      return (T)read(value, node, new Source(strategy, filter));
+   }                      
+           
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and populate the object with
+    * the values deserialized. This is used as a means of injecting an
+    * object with values deserialized from an XML document. If the
+    * XML source cannot be deserialized or there is a problem building
+    * the object graph an exception is thrown.
+    * 
+    * @param value this is the object to deserialize the XML in to
+    * @param node this provides the source of the XML document
+    * @param source the contextual object used for deserialization
+    * 
+    * @return the same instance provided is returned when finished 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   private <T> T read(T value, InputNode node, Source source) throws Exception {
+      return (T)new Traverser(source).read(node, value);
+   }   
+   
+   /**
     * This <code>write</code> method will traverse the provided object
     * checking for field annotations in order to compose the XML data.
     * This uses the <code>getClass</code> method on the object to
@@ -455,7 +622,13 @@ public class Persister implements Serializer {
     * @throws Exception if the schema for the object is not valid
     */  
    public void write(Object source, File out) throws Exception {
-      write(source, new FileOutputStream(out));
+      OutputStream file = new FileOutputStream(out);
+      
+      try {
+         write(source, file);
+      }finally {
+         file.close();
+      }
    }
    
    /**

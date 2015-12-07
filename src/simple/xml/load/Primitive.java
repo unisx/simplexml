@@ -22,7 +22,6 @@ package simple.xml.load;
 
 import simple.xml.stream.InputNode;
 import simple.xml.stream.OutputNode;
-import simple.xml.stream.Position;
 
 /**
  * The <code>Primitive</code> object is used to provide serialization
@@ -52,17 +51,22 @@ import simple.xml.stream.Position;
  *
  * @see simple.xml.filter.Filter
  */ 
-final class Primitive implements Converter {
+class Primitive implements Converter {
 
    /**
     * This is used to convert the string values to primitives.
     */         
-   private PrimitiveFactory factory;
+   private final PrimitiveFactory factory;
         
    /**
     * The source object is used to perform text value filtering.
     */ 
-   private Source root;
+   private final Source root;
+   
+   /**
+    * This the value used to represent a null primitive value.
+    */
+   private final String empty;
 
    /**
     * Constructor for the <code>Primitive</code> object. This is used
@@ -72,9 +76,11 @@ final class Primitive implements Converter {
     *
     * @param root the source object used for the serialization
     * @param type this is the type of primitive this represents
+    * @param empty this is the value used to represent a null value
     */ 
-   public Primitive(Source root, Class type) {
-      this.factory = new PrimitiveFactory(root, type);           
+   public Primitive(Source root, Class type, String empty) {
+      this.factory = new PrimitiveFactory(root, type);   
+      this.empty = empty;
       this.root = root;           
    }
 
@@ -94,7 +100,10 @@ final class Primitive implements Converter {
       
       if(value == null) {
          return null;
-      } 
+      }
+      if(empty != null && value.equals(empty)) {
+         return empty;         
+      }
       String text = root.getProperty(value);
       return factory.getInstance(text);
    }      

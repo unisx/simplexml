@@ -1,13 +1,15 @@
 package simple.xml.load;
 
 import java.io.StringWriter;
+import java.util.Collection;
 
-import junit.framework.TestCase;
-import simple.xml.Element;
 import simple.xml.Attribute;
+import simple.xml.Element;
+import simple.xml.ElementList;
 import simple.xml.Root;
+import simple.xml.ValidationTestCase;
 
-public class EmptyTest extends TestCase {
+public class EmptyTest extends ValidationTestCase {
         
    private static final String EMPTY_ELEMENT =
    "<?xml version=\"1.0\"?>\n"+
@@ -24,6 +26,12 @@ public class EmptyTest extends TestCase {
    private static final String EMPTY_ATTRIBUTE =
    "<?xml version=\"1.0\"?>\n"+
    "<test attribute=''/>\n";
+   
+   private static final String DEFAULT_ATTRIBUTE =
+   "<?xml version=\"1.0\"?>\n"+
+   "<test name='John Doe' address='NULL'>\n"+
+   "  <description>Some description</description>\r\n"+
+   "</test>";
 
    @Root(name="test")
    private static class RequiredElement {
@@ -38,6 +46,13 @@ public class EmptyTest extends TestCase {
       @Element(name="empty", required=false)
       private String empty;
    }    
+   
+   @Root(name="test")
+   private static class EmptyCollection {
+      
+      @ElementList(required=false)
+      private Collection<String> empty;
+   }
    
    @Root(name="test")
    private static class RequiredMethodElement {
@@ -67,6 +82,19 @@ public class EmptyTest extends TestCase {
 
       @Attribute(name="attribute", required=false)            
       private String attribute;
+   }
+   
+   @Root(name="test")
+   private static class DefaultedAttribute {
+      
+      @Attribute(empty="NULL")
+      private String name;
+      
+      @Attribute(empty="NULL")
+      private String address;
+      
+      @Element
+      private String description;
    }
 
    private Persister persister;
@@ -127,8 +155,21 @@ public class EmptyTest extends TestCase {
       OptionalElement element = persister.read(OptionalElement.class, BLANK_ELEMENT);     
 
       assertNull(element.empty);
-   }     
+   }
+   
+   public void testEmptyCollection() throws Exception {    
+      EmptyCollection element = persister.read(EmptyCollection.class, BLANK_ELEMENT);     
 
+      assertNotNull(element.empty);   
+      assertEquals(element.empty.size(), 0);
+      
+      validate(element, persister);
+      
+      element.empty = null;
+      
+      validate(element, persister);
+   } 
+   
    public void testRequiredEmptyAttribute() throws Exception {
       RequiredAttribute entry = persister.read(RequiredAttribute.class, EMPTY_ATTRIBUTE);
 
@@ -139,5 +180,26 @@ public class EmptyTest extends TestCase {
       OptionalAttribute entry = persister.read(OptionalAttribute.class, EMPTY_ATTRIBUTE);
 
       assertEquals(entry.attribute, "");      
-   }   
+   }
+   
+   public void testDefaultedAttribute() throws Exception {
+      DefaultedAttribute entry = persister.read(DefaultedAttribute.class, DEFAULT_ATTRIBUTE);
+
+      assertEquals(entry.name, "John Doe");
+      assertEquals(entry.address, null);
+      assertEquals(entry.description, "Some description");
+      
+      validate(entry, persister);
+      
+      entry.name = null;
+      
+      StringWriter out = new StringWriter();
+      persister.write(entry, out);
+      String result = out.toString();
+      
+      assertTrue(result.indexOf("John Doe") == -1);
+      assertTrue(result.indexOf("NULL") != -1);
+      
+      validate(entry, persister);
+   } 
 }

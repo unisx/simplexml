@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.CollectionTest
-Tests run: 19, Failures: 0, Errors: 0, Time elapsed: 0.407 sec
+Tests run: 20, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -27,14 +27,14 @@ Tests run: 19, Failures: 0, Errors: 0, Time elapsed: 0.407 sec
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
+      <entry id="1">
+         <text>one</text>
+      </entry>
       <entry id="2">
          <text>two</text>
       </entry>
       <entry id="3">
          <text>three</text>
-      </entry>
-      <entry id="1">
-         <text>one</text>
       </entry>
    </list>
 </test><test name="example">
@@ -105,19 +105,16 @@ Tests run: 19, Failures: 0, Errors: 0, Time elapsed: 0.407 sec
          <description>this is an extended entry</description>
          <text>one</text>
       </extended-entry>
-      <entry id="3">
-         <text>three</text>
-      </entry>
       <extended-entry class="simple.xml.load.CollectionTest$ExtendedEntry" id="2">
          <description>this is the second one</description>
          <text>two</text>
       </extended-entry>
-   </list>
-</test><test name="example">
-   <list class="java.util.HashSet">
       <entry id="3">
          <text>three</text>
       </entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.HashSet">
       <extended-entry class="simple.xml.load.CollectionTest$ExtendedEntry" id="1">
          <description>this is an extended entry</description>
          <text>one</text>
@@ -126,22 +123,25 @@ Tests run: 19, Failures: 0, Errors: 0, Time elapsed: 0.407 sec
          <description>this is the second one</description>
          <text>two</text>
       </extended-entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
    </list>
 </test>simple.xml.load.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
 	at simple.xml.load.Factory.getOverride(Factory.java:87)
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:80)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testSetToSortedSet(CollectionTest.java:682)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -163,17 +163,17 @@ simple.xml.load.InstantiationException: Type class java.util.ArrayList is not co
 	at simple.xml.load.Factory.getOverride(Factory.java:87)
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:80)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testListToSet(CollectionTest.java:694)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -194,17 +194,17 @@ simple.xml.load.InstantiationException: Type class java.util.ArrayList is not co
 simple.xml.load.InstantiationException: Type is not a collection class java.lang.String
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:89)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testInvalidList(CollectionTest.java:707)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -226,17 +226,17 @@ simple.xml.load.InstantiationException: Cannot instantiate class simple.xml.load
 	at simple.xml.load.CollectionFactory.getConversion(CollectionFactory.java:139)
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:86)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testUnknownCollectionList(CollectionTest.java:719)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -259,17 +259,17 @@ simple.xml.load.InstantiationException: Cannot instantiate class simple.xml.load
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:110)
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:83)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testAbstractList(CollectionTest.java:731)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -291,17 +291,17 @@ simple.xml.load.InstantiationException: Type class java.util.Hashtable is not co
 	at simple.xml.load.Factory.getOverride(Factory.java:87)
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:80)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testNotACollection(CollectionTest.java:743)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -331,22 +331,22 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at java.lang.Class.forName(Class.java:164)
 	at simple.xml.load.DefaultStrategy.getType(DefaultStrategy.java:181)
 	at simple.xml.load.DefaultStrategy.getElement(DefaultStrategy.java:120)
-	at simple.xml.load.Source.getOverride(Source.java:138)
+	at simple.xml.load.Source.getOverride(Source.java:136)
 	at simple.xml.load.Factory.getConversion(Factory.java:127)
 	at simple.xml.load.Factory.getOverride(Factory.java:81)
 	at simple.xml.load.CollectionFactory.getInstance(CollectionFactory.java:80)
 	at simple.xml.load.CompositeList.read(CompositeList.java:104)
-	at simple.xml.load.Composite.read(Composite.java:306)
-	at simple.xml.load.Composite.readElement(Composite.java:285)
-	at simple.xml.load.Composite.readElements(Composite.java:205)
-	at simple.xml.load.Composite.read(Composite.java:149)
-	at simple.xml.load.Composite.read(Composite.java:126)
-	at simple.xml.load.Composite.read(Composite.java:104)
+	at simple.xml.load.Composite.read(Composite.java:345)
+	at simple.xml.load.Composite.readElement(Composite.java:324)
+	at simple.xml.load.Composite.readElements(Composite.java:244)
+	at simple.xml.load.Composite.read(Composite.java:188)
+	at simple.xml.load.Composite.read(Composite.java:134)
+	at simple.xml.load.Composite.read(Composite.java:110)
 	at simple.xml.load.Traverser.read(Traverser.java:72)
-	at simple.xml.load.Persister.read(Persister.java:385)
-	at simple.xml.load.Persister.read(Persister.java:367)
-	at simple.xml.load.Persister.read(Persister.java:348)
-	at simple.xml.load.Persister.read(Persister.java:330)
+	at simple.xml.load.Persister.read(Persister.java:391)
+	at simple.xml.load.Persister.read(Persister.java:373)
+	at simple.xml.load.Persister.read(Persister.java:354)
+	at simple.xml.load.Persister.read(Persister.java:336)
 	at simple.xml.load.Persister.read(Persister.java:257)
 	at simple.xml.load.CollectionTest.testMissingCollection(CollectionTest.java:755)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -366,18 +366,18 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.141 sec
+Testcase: testSet took 0.14 sec
 Testcase: testSortedSet took 0.062 sec
-Testcase: testList took 0 sec
-Testcase: testHashSet took 0.031 sec
-Testcase: testTreeSet took 0.016 sec
-Testcase: testArrayList took 0.016 sec
+Testcase: testList took 0.016 sec
+Testcase: testHashSet took 0.015 sec
+Testcase: testTreeSet took 0 sec
+Testcase: testArrayList took 0 sec
 Testcase: testSortedSetToSet took 0 sec
 Testcase: testExtendedEntry took 0.015 sec
 Testcase: testTypeFromFieldList took 0.016 sec
 Testcase: testTypeFromMethodList took 0.031 sec
 Testcase: testPrimitiveCollection took 0 sec
-Testcase: testPrimitiveDefaultCollection took 0.015 sec
+Testcase: testPrimitiveDefaultCollection took 0 sec
 Testcase: testSetToSortedSet took 0 sec
 Testcase: testListToSet took 0 sec
 Testcase: testInvalidList took 0 sec
@@ -385,3 +385,4 @@ Testcase: testUnknownCollectionList took 0 sec
 Testcase: testAbstractList took 0 sec
 Testcase: testNotACollection took 0 sec
 Testcase: testMissingCollection took 0 sec
+Testcase: testDirectory took 0 sec

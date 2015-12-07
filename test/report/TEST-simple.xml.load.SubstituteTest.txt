@@ -1,0 +1,16 @@
+Testsuite: simple.xml.load.SubstituteTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+------------- Standard Output ---------------
+<substituteExample>
+   <substitute class="simple.xml.load.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
+</substituteExample><substituteExample>
+   <substitute class="simple.xml.load.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
+</substituteExample><substituteExample>
+   <substitute street="Sesame Street" class="simple.xml.load.SubstituteTest$LargeSubstitute" name="John Doe" city="Metropilis">some example text</substitute>
+</substituteExample><substituteExample>
+   <substitute street="Sesame Street" class="simple.xml.load.SubstituteTest$LargeSubstitute" name="John Doe" city="Metropilis">some example text</substitute>
+</substituteExample>------------- ---------------- ---------------
+
+Testcase: testReplace took 0.203 sec
+Testcase: testResolve took 0.016 sec
+Testcase: testDirectory took 0.015 sec

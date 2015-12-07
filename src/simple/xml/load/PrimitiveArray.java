@@ -51,22 +51,22 @@ import java.lang.reflect.Array;
  * @see simple.xml.load.Primitive
  * @see simple.xml.ElementArray
  */ 
-final class PrimitiveArray implements Converter {
+class PrimitiveArray implements Converter {
 
    /**
     * This factory is used to create an array for the contact.
     */
-   private ArrayFactory factory;
+   private final ArrayFactory factory;
 
    /**
     * This performs the serialization of the primitive element.
     */ 
-   private Primitive root;
+   private final Primitive root;
       
    /**
     * This is the name that each array element is wrapped with.
     */
-   private String parent;
+   private final String parent;
 
    /**
     * Constructor for the <code>PrimitiveArray</code> object. This is
@@ -81,7 +81,7 @@ final class PrimitiveArray implements Converter {
     */    
    public PrimitiveArray(Source root, Class field, Class entry, String parent) {
       this.factory = new ArrayFactory(root, field); 
-      this.root = new Primitive(root, entry);          
+      this.root = new Primitive(root, entry, null);          
       this.parent = parent;
    }
 

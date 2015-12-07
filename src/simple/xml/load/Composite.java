@@ -55,17 +55,22 @@ import simple.xml.stream.Position;
  * 
  * @author Niall Gallagher
  */
-final class Composite implements Converter {
+class Composite implements Converter {
   
    /**
     * This factory creates instances of the deserialized object.
     */
-   private ObjectFactory factory;
+   private final ObjectFactory factory;
 
    /**
     * This is the source object for the instance of serialization.
     */
-   private Source root;
+   private final Source root;
+   
+   /**
+    * This is the type that this composite produces instances of.
+    */
+   private final Class type;
         
    /**
     * Constructor for the <code>Composite</code> object. This creates 
@@ -79,6 +84,7 @@ final class Composite implements Converter {
    public Composite(Source root, Class type) {
       this.factory = new ObjectFactory(root, type);           
       this.root = root;
+      this.type = type;
    }
 
    /**
@@ -101,7 +107,7 @@ final class Composite implements Converter {
       Object source = type.getInstance();
       
       if(!type.isReference()) {         
-         read(node, source);
+         return read(node, source);
       }
       return source;
    }
@@ -119,13 +125,46 @@ final class Composite implements Converter {
     * 
     * @param node the XML element contact values are deserialized from
     * @param source the object whose contacts are to be deserialized
+    * 
+    * @return this returns the fully deserialized object graph 
     */
-   private void read(InputNode node, Object source) throws Exception {
+   public Object read(InputNode node, Object source) throws Exception {
       Schema schema = root.getSchema(source);
       
       read(node, source, schema);
       schema.validate(source);
       schema.commit(source);
+      
+      return readResolve(node, source, schema);
+   }
+   
+   /**
+    * The <code>replace</code> method is used to determine if there is
+    * a replacement method which can be used to substitute the object
+    * deserialized. The replace method is used when an object wishes 
+    * to provide a substitute within the deserialized object graph.
+    * This acts as an equivelant to the Java Object Serialization
+    * <code>readResolve</code> method for the object deserialization.
+    * 
+    * @param node the XML element object provided as a replacement
+    * @param source this is the source object that is deserialized
+    * @param schema this object visits the objects contacts
+    * 
+    * @return this returns a replacement for the deserialized object
+    */
+   private Object readResolve(InputNode node, Object source, Schema schema) throws Exception {
+      Position line = node.getPosition();
+
+      if(source != null) {
+         Object value = schema.resolve(source);
+         Class real = value.getClass();
+      
+         if(!type.isAssignableFrom(real)) {
+            throw new ElementException("Type %s does not match %s at %s", real, type, line);              
+         }
+         return value;
+      }
+      return source;
    }
    
    /**
@@ -312,8 +351,8 @@ final class Composite implements Converter {
          if(label.isRequired()) {              
             throw new ValueRequiredException("Empty value for %s in %s at %s", label, type, line);
          }
-      } else {         
-         contact.set(source, object);
+      } else if(object != label.getEmpty()) {
+         contact.set(source, object);      
       }         
    }
    
@@ -357,7 +396,7 @@ final class Composite implements Converter {
    public void write(OutputNode node, Object source) throws Exception {
       Schema schema = root.getSchema(source);
       
-      try {
+      try {         
          schema.persist(source); 
          write(node, source, schema);
       } finally {
@@ -406,6 +445,9 @@ final class Composite implements Converter {
          Contact contact = label.getContact();         
          Object value = contact.get(source);
          
+         if(value == null) {
+            value = label.getEmpty();
+         }
          if(value == null && label.isRequired()) {
             throw new AttributeException("Value for %s is null", label);
          }
@@ -437,9 +479,37 @@ final class Composite implements Converter {
          if(value == null && label.isRequired()) {
             throw new ElementException("Value for %s is null", label);
          }
-         writeElement(node, value, label);
+         Object replace = writeReplace(value);
+         
+         if(replace != null) {
+            writeElement(node, replace, label);            
+         }
       }         
    }
+   /**
+    * The <code>replace</code> method is used to replace an object
+    * before it is serialized. This is used so that an object can give
+    * a substitute to be written to the XML document in the event that
+    * the actual object is not suitable or desired for serialization. 
+    * This acts as an equivelant to the Java Object Serialization
+    * <code>writeReplace</code> method for the object serialization.
+    * 
+    * @param source this is the source object to be serialized
+    * @param node this is the XML element to write attributes to
+    * @param schema this is used to track the referenced attributes
+    * 
+    * @return this returns the object to use as a replacement value
+    * 
+    * @throws Exception if the replacement object is not suitable
+    */
+   private Object writeReplace(Object source) throws Exception {      
+      if(source != null) {
+          Schema schema = root.getSchema(source);
+          return schema.replace(source);
+      }
+      return source;
+   }
+   
    
    /**
     * This write method is used to write the text contact from the 
@@ -460,7 +530,10 @@ final class Composite implements Converter {
       if(label != null) {
          Contact contact = label.getContact();
          Object value = contact.get(source);
-                 
+          
+         if(value == null) {
+            value = label.getEmpty();
+         }
          if(value == null && label.isRequired()) {
             throw new TextException("Value for %s is null", label);
          }
@@ -512,7 +585,7 @@ final class Composite implements Converter {
       if(value != null) {
          String name = label.getName();
          OutputNode next = node.getChild(name);
-         Class type = label.getType();
+         Class type = label.getType();         
 
          if(label.isInline() || !isOverridden(next, value, type)) {
             Converter convert = label.getConverter(root);
@@ -550,6 +623,7 @@ final class Composite implements Converter {
          node.setValue(text);        
       }
    }
+   
    
    /**
     * This is used to determine whether the specified value has been

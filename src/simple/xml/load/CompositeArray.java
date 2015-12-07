@@ -55,27 +55,27 @@ import java.lang.reflect.Array;
  * @see simple.xml.load.Traverser
  * @see simple.xml.ElementArray
  */ 
-final class CompositeArray implements Converter {
+class CompositeArray implements Converter {
 
    /**
     * This factory is used to create an array for the contact.
     */
-   private ArrayFactory factory;
+   private final ArrayFactory factory;
 
    /**
     * This performs the traversal used for object serialization.
     */ 
-   private Traverser root;
+   private final Traverser root;
 
    /**
     * This is the name to wrap each entry that is represented.
     */
-   private String parent;
+   private final String parent;
    
    /**
     * This is the entry type for elements within the array.
     */   
-   private Class entry;
+   private final Class entry;
    
    /**
     * Constructor for the <code>CompositeArray</code> object. This is

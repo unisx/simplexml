@@ -1,5 +1,5 @@
 /*
- * Syntax.java April 2007
+ * Contract.java April 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -30,7 +30,7 @@ package simple.xml.graph;
  * 
  * @see simple.xml.graph.CycleStrategy
  */
-final class Contract {
+class Contract {
              
    /**
     * This is used to specify the length of array instances.

@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.UnicodeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.39 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -391,4 +391,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.39 sec
 </example>------------- ---------------- ---------------
 
 Testcase: testUnicode took 0.265 sec
-Testcase: testWriteUnicode took 0.125 sec
+Testcase: testWriteUnicode took 0.11 sec
+Testcase: testDirectory took 0.015 sec

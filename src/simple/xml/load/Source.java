@@ -24,8 +24,6 @@ import simple.xml.stream.OutputNode;
 import simple.xml.stream.InputNode;
 import simple.xml.stream.NodeMap;
 import simple.xml.filter.Filter;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * The <code>Source</code> object acts as a contextual object that is
@@ -50,7 +48,7 @@ import java.util.Map;
  * 
  * @see simple.xml.filter.Filter
  */ 
-final class Source {
+class Source {
 
    /**
     * This is used to cache all schemas built to represent a class.

@@ -20,7 +20,6 @@
 
 package simple.xml.load;
 
-import java.lang.reflect.Method;
 import java.util.Map;
 
 /**
@@ -34,7 +33,7 @@ import java.util.Map;
  * 
  * @author Niall Gallagher
  */ 
-final class Schema {
+class Schema {
 
    /**
     * Contains a map of all attributes present within the schema.
@@ -45,26 +44,11 @@ final class Schema {
     * Contains a mpa of all elements present within the schema.
     */
    private LabelMap elements;
-
+   
    /**
-    * This is the pointer to the schema class commit method.
+    * This is the pointer to the schema class replace method.
     */
-   private Method commit;
-
-   /**
-    * This is the pointer to the schema class validation method.
-    */
-   private Method validate;
-
-   /**
-    * This is the pointer to the schema class persist method.
-    */
-   private Method persist;
-
-   /**
-    * This is the pointer to the schema class complete method.
-    */
-   private Method complete;
+   private Conduit conduit;
    
    /**
     * This is used to represent a text value within the schema.
@@ -88,10 +72,7 @@ final class Schema {
    public Schema(Scanner schema, Session session) {      
       this.attributes = schema.getAttributes();
       this.elements = schema.getElements();
-      this.validate = schema.getValidate();      
-      this.complete = schema.getComplete();
-      this.commit = schema.getCommit();      
-      this.persist = schema.getPersist();
+      this.conduit = schema.getConduit();
       this.text = schema.getText();
       this.table = session.getMap();
    }
@@ -132,6 +113,39 @@ final class Schema {
    }
    
    /**
+    * This is used to replace the serialized object with another
+    * instance, perhaps of a different type. This is useful when an
+    * XML schema class wishes the insert another object into the
+    * stream during the serialization process.
+    * 
+    * @param source the source object to invoke the method on
+    * 
+    * @return this returns the object that acts as the replacement
+    * 
+    * @throws Exception if the replacement method cannot complete
+    */
+   public Object replace(Object source) throws Exception {
+      return conduit.replace(source, table);
+   }
+   
+   /**
+    * This is used to resolve the deserialized object with another
+    * instance, perhaps of a different type. This is useful when an
+    * XML schema class acts as a reference to another XML document
+    * which needs to be loaded externally to create an object of
+    * a different type, or just to substitute the instance.
+    * 
+    * @param source the source object to invoke the method on
+    * 
+    * @return this returns the object that acts as the substitute
+    * 
+    * @throws Exception if the replacement method cannot complete
+    */
+   public Object resolve(Object source) throws Exception {
+      return conduit.resolve(source, table);
+   }
+   
+   /**
     * This method is used to invoke the provided objects commit method
     * during the deserialization process. The commit method must be
     * marked with the <code>Commit</code> annotation so that when the
@@ -143,13 +157,7 @@ final class Schema {
     * @throws Exception thrown if the commit process cannot complete
     */
    public void commit(Object source) throws Exception {
-      if(commit != null) {           
-         if(isContextual(commit)) {              
-            commit.invoke(source, table);           
-         } else {
-            commit.invoke(source);                 
-         }
-      }      
+      conduit.commit(source, table);   
    }
 
    /**
@@ -164,13 +172,7 @@ final class Schema {
     * @throws Exception thrown if the validation process failed
     */
    public void validate(Object source) throws Exception {
-      if(validate != null) {   
-         if(isContextual(validate)) {         
-            validate.invoke(source, table);           
-         } else {
-            validate.invoke(source);                 
-         }            
-      }         
+      conduit.validate(source, table);        
    }
    
    /**
@@ -185,13 +187,7 @@ final class Schema {
     * @throws Exception thrown if the object cannot be persisted
     */
    public void persist(Object source) throws Exception {
-      if(persist != null) {           
-         if(isContextual(persist)) {              
-            persist.invoke(source, table);           
-         } else {
-            persist.invoke(source);                 
-         }            
-      }         
+      conduit.persist(source, table);        
    }
    
    /**
@@ -206,30 +202,6 @@ final class Schema {
     * @throws Exception thrown if the object cannot complete
     */
    public void complete(Object source) throws Exception {
-      if(complete != null) {           
-         if(isContextual(complete)) {              
-            complete.invoke(source, table);           
-         } else {
-            complete.invoke(source);                 
-         }            
-      }         
-   }
-
-   /**
-    * This is used to determine whether the annotated method takes a
-    * contextual object. If the method takes a <code>Map</code> then
-    * this returns true, otherwise it returns false.
-    *
-    * @param method this is the method to check the parameters of
-    *
-    * @return this returns true if the method takes a map object
-    */ 
-   private boolean isContextual(Method method) throws Exception {
-      Class[] list = method.getParameterTypes();
-
-      if(list.length == 1) {
-         return Map.class.equals(list[0]);                 
-      }      
-      return false;
+      conduit.complete(source, table);
    }
 }
