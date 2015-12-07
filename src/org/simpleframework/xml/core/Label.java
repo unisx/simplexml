@@ -94,7 +94,7 @@ interface Label {
     * @return this returns the names of each of the elements
     */
    public Collection<String> getPaths() throws Exception;
-    
+   
    /**
     * This is used to provide a configured empty value used when the
     * annotated value is null. This ensures that XML can be created
@@ -170,6 +170,15 @@ interface Label {
     * @return this returns the name of the XML entry element used 
     */
    public String getEntry() throws Exception;
+   
+   /**
+    * This is the key used to represent this label. The key is used
+    * to store the parameter in hash containers. Typically the
+    * key is generated from the paths associated with the label.
+    * 
+    * @return this is the key used to represent the label
+    */
+   public Object getKey() throws Exception;
    
    /**
     * This acquires the annotation associated with this label. This

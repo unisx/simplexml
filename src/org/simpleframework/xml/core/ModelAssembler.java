@@ -60,7 +60,7 @@ class ModelAssembler {
     * This is the type this this is assembling the model for.
     */
    private final Class type;
-   
+
    /**
     * Constructor for the <code>ModelAssembler</code> object. If
     * no order has been specified for the schema class then this
@@ -71,7 +71,7 @@ class ModelAssembler {
     * @param format the format used to style order values
     */
    public ModelAssembler(ExpressionBuilder builder, Class type, Format format) throws Exception {
-      this.builder = builder;  
+      this.builder = builder;     
       this.format = format;
       this.type = type;
    }
@@ -132,7 +132,7 @@ class ModelAssembler {
             
             model.registerAttribute(name);
          } else {
-            registerAttributes(model, path);
+         registerAttributes(model, path);         
          }
       }
    }

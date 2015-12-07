@@ -69,6 +69,11 @@ class DebugLabel implements Label{
       showMethodInvocation();
       return label.getExpression();
    }
+   
+   public Object getKey() throws Exception {
+      showMethodInvocation();
+      return label.getKey();
+   }
 
    public Label getLabel(Class type) throws Exception {
       showMethodInvocation();

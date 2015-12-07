@@ -85,7 +85,7 @@ class AttributeLabel extends TemplateLabel {
       this.decorator = new Qualifier(contact);
       this.type = contact.getType();
       this.empty = label.empty();
-      this.name = label.name();    
+      this.name = label.name();      
       this.format = format;
       this.label = label; 
    }  
@@ -143,13 +143,13 @@ class AttributeLabel extends TemplateLabel {
     * checking for an override within the annotation. If it contains
     * a name then that is used, if however the annotation does not
     * specify a name the the field or method name is used instead.
-    * 
+    *
     * @return returns the name that is used for the XML property
     */
    public String getName() throws Exception {
       Style style = format.getStyle();
       String name = detail.getName();
-     
+      
       return style.getAttribute(name);
    }
    

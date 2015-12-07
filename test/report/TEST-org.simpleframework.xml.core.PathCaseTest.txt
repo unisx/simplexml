@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathCaseTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
 ------------- Standard Output ---------------
 <caseExample>
    <SomePath>
@@ -20,16 +20,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Parameter 'SomePath[1]/A[1]' is a duplicate in public org.simpleframework.xml.core.PathCaseTest$CollisionExample(java.lang.String,java.lang.String)
-	at org.simpleframework.xml.core.SignatureBuilder.create(SignatureBuilder.java:164)
-	at org.simpleframework.xml.core.SignatureBuilder.build(SignatureBuilder.java:121)
-	at org.simpleframework.xml.core.SignatureBuilder.build(SignatureBuilder.java:103)
-	at org.simpleframework.xml.core.SignatureScanner.getSignatures(SignatureScanner.java:117)
-	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:122)
-	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:106)
+	at org.simpleframework.xml.core.SignatureBuilder.create(SignatureBuilder.java:159)
+	at org.simpleframework.xml.core.SignatureBuilder.build(SignatureBuilder.java:115)
+	at org.simpleframework.xml.core.SignatureBuilder.build(SignatureBuilder.java:97)
+	at org.simpleframework.xml.core.SignatureScanner.getSignatures(SignatureScanner.java:119)
+	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:144)
+	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:128)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:75)
-	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:114)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:100)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:115)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:101)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -58,6 +58,6 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'SomePath[1]/A[1]' 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNoStyle took 0.301 sec
-Testcase: testStyle took 0.028 sec
-Testcase: testOtherStyle took 0.008 sec
+Testcase: testNoStyle took 0.27 sec
+Testcase: testStyle took 0.026 sec
+Testcase: testOtherStyle took 0.011 sec

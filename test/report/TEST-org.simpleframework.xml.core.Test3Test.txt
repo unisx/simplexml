@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.Test3Test
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.276 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.286 sec
 ------------- Standard Output ---------------
 <test3>
    <elements>
@@ -17,4 +17,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.276 sec
 
 ------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.269 sec
+Testcase: testConstructor took 0.279 sec

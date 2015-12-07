@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultAnnotationTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.372 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.356 sec
 ------------- Standard Output ---------------
 <orderItem>
    <customer id="1">
@@ -18,10 +18,10 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:399)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:163)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:488)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:361)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:524)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Source.getScanner(Source.java:271)
 	at org.simpleframework.xml.core.Source.getSchema(Source.java:317)
@@ -52,7 +52,7 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMisMatch took 0.217 sec
-Testcase: testIgnoreStatic took 0.105 sec
-Testcase: testDefault took 0.037 sec
+Testcase: testTypeMisMatch took 0.203 sec
+Testcase: testIgnoreStatic took 0.1 sec
+Testcase: testDefault took 0.039 sec
 Testcase: testDirectory took 0.002 sec

@@ -18,11 +18,13 @@
 
 package org.simpleframework.xml.core;
 
+import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 import org.simpleframework.xml.Attribute;
@@ -57,7 +59,7 @@ class SignatureScanner {
    /**
     * This is used to collect all the parameters that are extracted.
     */
-   private final Signature registry;
+   private final ParameterMap registry;
    
    /**
     * This is the constructor that is scanned for the parameters.
@@ -84,7 +86,7 @@ class SignatureScanner {
     * @param registry this is the registry used to collect parameters
     * @param format this is the format used to style parameters
     */
-   public SignatureScanner(Constructor factory, Signature registry, Format format) throws Exception {
+   public SignatureScanner(Constructor factory, ParameterMap registry, Format format) throws Exception {
       this.builder = new SignatureBuilder(factory);
       this.type = factory.getDeclaringClass();
       this.registry = registry;
@@ -192,7 +194,7 @@ class SignatureScanner {
       if(label instanceof Text) {
          return create(label, ordinal);
       }
-      return Collections.emptyList();
+      return emptyList();
    }
    
    /**
@@ -200,27 +202,27 @@ class SignatureScanner {
     * used to represent a parameter to a constructor. Each parameter
     * contains an annotation an the index it appears in.
     * 
-    * @param factory this is the constructor the parameter is in
     * @param label this is the annotation used for the parameter
     * @param ordinal this is the position the parameter appears at
     * 
     * @return this returns the parameter for the constructor
     */
    private List<Parameter> union(Annotation label, int ordinal) throws Exception {
-      Signature signature = new Signature(type);
+      Signature signature = new Signature(factory);
       Annotation[] list = extract(label);
 
       for(Annotation value : list) {
          Parameter parameter = ParameterFactory.getInstance(factory, label, value, format, ordinal);
          String path = parameter.getPath(); 
          
-         if(signature.containsKey(path)) {
+         if(signature.contains(path)) {
             throw new UnionException("Annotation name '%s' used more than once in %s for %s", path, label, type);
+         } else {
+            signature.set(path, parameter);
          }
-         signature.put(path, parameter);
-         register(parameter, path);
+         register(parameter);
       }
-      return signature.getParameters();
+      return signature.getAll();
    }
    
    /**
@@ -228,7 +230,6 @@ class SignatureScanner {
     * used to represent a parameter to a constructor. Each parameter
     * contains an annotation an the index it appears in.
     * 
-    * @param factory this is the constructor the parameter is in
     * @param label this is the annotation used for the parameter
     * @param ordinal this is the position the parameter appears at
     * 
@@ -236,12 +237,11 @@ class SignatureScanner {
     */
    private List<Parameter> create(Annotation label, int ordinal) throws Exception {
       Parameter parameter = ParameterFactory.getInstance(factory, label, format, ordinal);
-      String path = parameter.getPath(); 
       
-      if(path != null) {
-         register(parameter, path);
+      if(parameter != null) {
+         register(parameter);
       }
-      return Collections.singletonList(parameter);
+      return singletonList(parameter);
    }
    
    /**
@@ -273,13 +273,19 @@ class SignatureScanner {
     * registered parameters are registered in to a single table.
     * 
     * @param parameter this is the parameter to be registered
-    * @param path this is the path to register the parameter with
     */
-   private void register(Parameter parameter, String path) throws Exception {
+   private void register(Parameter parameter) throws Exception {
+      String path = parameter.getPath();
+      Object key = parameter.getKey();
+      
+      if(registry.containsKey(key)) {
+         validate(parameter, key);
+      }
       if(registry.containsKey(path)) {
          validate(parameter, path);
       }
       registry.put(path, parameter);
+      registry.put(key, parameter);
    }
    
    /**
@@ -289,19 +295,24 @@ class SignatureScanner {
     * consistent throughout the class.
     * 
     * @param parameter this is the parameter to be validated
-    * @param path this is the name of the parameter to validate
+    * @param key this is the key of the parameter to validate
     */
-   private void validate(Parameter parameter, String path) throws Exception {
-      Parameter other = registry.get(path);
-      Annotation label = other.getAnnotation();
+   private void validate(Parameter parameter, Object key) throws Exception {
+      Parameter other = registry.get(key);
       
-      if(!parameter.getAnnotation().equals(label)) {
+      if(parameter.isText() != other.isText()) {
+         Annotation expect = parameter.getAnnotation();
+         Annotation actual = other.getAnnotation();
+         String path = parameter.getPath();
+         
+         if(!expect.equals(actual)) {
          throw new ConstructorException("Annotations do not match for '%s' in %s", path, type);
       }
-      Class expect = other.getType();
+         Class real = other.getType();
       
-      if(expect != parameter.getType()) {
+         if(real != parameter.getType()) {
          throw new ConstructorException("Parameter types do not match for '%s' in %s", path, type);
+         }
       }
    }
 }

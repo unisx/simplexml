@@ -201,6 +201,17 @@ class Variable implements Label {
    }
    
    /**
+    * This is the key used to represent this label. The key is used
+    * to store the parameter in hash containers. Typically the
+    * key is generated from the paths associated with the label.
+    * 
+    * @return this is the key used to represent the label
+    */
+   public Object getKey() throws Exception {
+      return label.getKey();
+   }
+   
+   /**
     * This is used to either provide the entry value provided within
     * the annotation or compute a entry value. If the entry string
     * is not provided the the entry value is calculated as the type
@@ -453,7 +464,7 @@ class Variable implements Label {
             
             return repeat.read(node, value);
          }
-         throw new PersistenceException("Element '%s' declared twice at %s", name, line);
+         throw new PersistenceException("Element '%s' is already used with %s at %s", name, label, line);
       }
       
       /**

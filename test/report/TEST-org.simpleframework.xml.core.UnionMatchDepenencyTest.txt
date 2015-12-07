@@ -1,15 +1,15 @@
 Testsuite: org.simpleframework.xml.core.UnionMatchDepenencyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.235 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.299 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: No type matches class java.lang.String in @org.simpleframework.xml.ElementUnion(value=[@org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=x), @org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=y), @org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=z)]) for field 'value' private java.lang.String org.simpleframework.xml.core.UnionMatchDepenencyTest$Example.value
 	at org.simpleframework.xml.core.ElementUnionLabel.getLabel(ElementUnionLabel.java:140)
-	at org.simpleframework.xml.core.CacheLabel.getLabel(CacheLabel.java:193)
-	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1302)
-	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1194)
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1165)
-	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1042)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1019)
+	at org.simpleframework.xml.core.CacheLabel.getLabel(CacheLabel.java:199)
+	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1287)
+	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1188)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1159)
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1065)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1036)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1013)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:236)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:208)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
@@ -37,5 +37,5 @@ org.simpleframework.xml.core.UnionException: No type matches class java.lang.Str
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMatch took 0.227 sec
+Testcase: testTypeMatch took 0.288 sec
 Testcase: testDirectory took 0.002 sec

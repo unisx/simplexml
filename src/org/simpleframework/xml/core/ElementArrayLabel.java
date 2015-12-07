@@ -144,7 +144,7 @@ class ElementArrayLabel extends TemplateLabel {
       }
       return new PrimitiveArray(context, type, entry, name);            
    }
-   
+
    /**
     * This is used to provide a configured empty value used when the
     * annotated value is null. This ensures that XML can be created
@@ -173,7 +173,7 @@ class ElementArrayLabel extends TemplateLabel {
     * 
     * @return this returns the name of the XML entry element used 
     */
-   public String getEntry() throws Exception {   
+   public String getEntry() throws Exception {      
       Style style = format.getStyle();
       
       if(detail.isEmpty(entry)) {

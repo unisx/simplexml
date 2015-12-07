@@ -18,9 +18,9 @@
 
 package org.simpleframework.xml.core;
 
-import java.util.Arrays;
+import static java.util.Arrays.asList;
+
 import java.util.Collection;
-import java.util.Collections;
 
 import org.simpleframework.xml.strategy.Type;
 
@@ -36,13 +36,18 @@ import org.simpleframework.xml.strategy.Type;
 abstract class TemplateLabel implements Label {
    
    /**
+    * This is the builder that is used to generate label keys.
+    */
+   private final KeyBuilder builder;
+   
+   /**
     * Constructor for the <code>TemplateLabel</code> is used to
     * create a template for other labels. If any of the method
     * implementations are not as required or they should be
     * overridden by the subclass.
     */
    protected TemplateLabel() {
-      super();
+      this.builder = new KeyBuilder(this);
    }
    
    /**
@@ -55,7 +60,7 @@ abstract class TemplateLabel implements Label {
     * 
     * @return this returns the type represented by this class
     */
-   public Type getType(Class type){
+   public Type getType(Class type) throws Exception {
       return getContact();
    }
    
@@ -69,7 +74,7 @@ abstract class TemplateLabel implements Label {
     * 
     * @return this returns the label represented by this type
     */
-   public Label getLabel(Class type) {
+   public Label getLabel(Class type) throws Exception {
       return this;
    }
    
@@ -85,7 +90,7 @@ abstract class TemplateLabel implements Label {
       String path = getPath();
       String name = getName();
       
-      return Arrays.asList(path, name);
+      return asList(path, name);
    }
    
    /**
@@ -100,7 +105,18 @@ abstract class TemplateLabel implements Label {
    public Collection<String> getPaths() throws Exception {
       String path = getPath();
       
-      return Collections.singleton(path);
+      return asList(path);
+   }
+   
+   /**
+    * This is the key used to represent this label. The key is used
+    * to store the parameter in hash containers. Typically the
+    * key is generated from the paths associated with the label.
+    * 
+    * @return this is the key used to represent the label
+    */
+   public Object getKey() throws Exception {
+      return builder.getKey();
    }
    
    /**

@@ -97,7 +97,7 @@ class ElementMapLabel extends TemplateLabel {
       this.decorator = new Qualifier(contact);
       this.entry = new Entry(contact, label);
       this.type = contact.getType();
-      this.name = label.name();   
+      this.name = label.name();      
       this.format = format;
       this.label = label;
    }

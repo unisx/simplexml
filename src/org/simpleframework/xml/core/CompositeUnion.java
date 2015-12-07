@@ -33,7 +33,7 @@ import org.simpleframework.xml.stream.OutputNode;
  * 
  * @author Niall Gallagher
  */
-class CompositeUnion implements Repeater {
+class CompositeUnion implements Converter {
    
    /**
     * This contains the labels in the union group keyed by name.

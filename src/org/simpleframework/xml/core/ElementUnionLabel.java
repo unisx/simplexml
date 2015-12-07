@@ -42,7 +42,7 @@ import org.simpleframework.xml.stream.Format;
  * 
  * @see org.simpleframework.xml.ElementUnion
  */
-class ElementUnionLabel implements Label {
+class ElementUnionLabel extends TemplateLabel {
 
    /**
     * This is used to extract the individual unions in the group.
@@ -158,7 +158,10 @@ class ElementUnionLabel implements Label {
       if(!extractor.isValid(type)) {
          throw new UnionException("No type matches %s in %s for %s", type, union, contact);
       }
+      if(extractor.isDeclared(type)) {
       return new OverrideType(contact, type);
+   }
+      return contact;
    }
 
    /**
@@ -205,7 +208,7 @@ class ElementUnionLabel implements Label {
    public Collection<String> getPaths() throws Exception {
       return extractor.getPaths();
    }
- 
+   
    /**
     * This is used to provide a configured empty value used when the
     * annotated value is null. This ensures that XML can be created
@@ -326,17 +329,6 @@ class ElementUnionLabel implements Label {
    }  
 
    /**
-    * This method is used to determine if the label represents an
-    * attribute. This is used to style the name so that elements
-    * are styled as elements and attributes are styled as required.
-    * 
-    * @return this is used to determine if this is an attribute
-    */
-   public boolean isAttribute() {
-      return label.isAttribute();
-   }
-
-   /**
     * This is used to determine if the label is a collection. If the
     * label represents a collection then any original assignment to
     * the field or method can be written to without the need to 
@@ -385,18 +377,6 @@ class ElementUnionLabel implements Label {
     */
    public boolean isRequired() {
       return label.isRequired();
-   }
-   
-   /**
-    * This is used to determine if the label represents text. If
-    * a label represents text it typically does not have a name,
-    * instead the empty string represents the name. Also text
-    * labels can not exist with other text labels, or elements.
-    * 
-    * @return this returns true if this label represents text
-    */
-   public boolean isText() {
-      return label.isText();
    }
    
    /**

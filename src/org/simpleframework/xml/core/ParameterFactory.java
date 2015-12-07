@@ -72,20 +72,20 @@ final class ParameterFactory {
       }
       return (Parameter)factory.newInstance(method, label, format, index);
    }
-   
-   /**
-    * Creates a constructor that is used to instantiate the parameter
-    * used to represent the specified annotation. The constructor
-    * created by this method takes three arguments, a constructor, 
-    * an annotation, and the parameter index.
-    * 
-    * @param label the XML annotation representing the label
-    * 
-    * @return returns a constructor for instantiating the parameter 
-    * 
-    * @throws Exception thrown if the annotation is not supported
-    */
-   private static Constructor getConstructor(Annotation label) throws Exception {
+    
+    /**
+     * Creates a constructor that is used to instantiate the parameter
+     * used to represent the specified annotation. The constructor
+     * created by this method takes three arguments, a constructor, 
+     * an annotation, and the parameter index.
+     * 
+     * @param label the XML annotation representing the label
+     * 
+     * @return returns a constructor for instantiating the parameter 
+     * 
+     * @throws Exception thrown if the annotation is not supported
+     */
+    private static Constructor getConstructor(Annotation label) throws Exception {
       ParameterBuilder builder = getBuilder(label);
       Constructor factory = builder.getConstructor();
       
@@ -93,7 +93,7 @@ final class ParameterFactory {
          factory.setAccessible(true);
       }
       return factory;
-   }
+    }
     
     /**
      * Creates an entry that is used to select the constructor for the
@@ -145,7 +145,7 @@ final class ParameterFactory {
      * @see java.lang.reflect.Constructor
      */
     private static class ParameterBuilder {
-       
+             
        /**
         * This is the entry that is used to create the parameter.
         */

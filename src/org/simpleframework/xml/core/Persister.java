@@ -84,7 +84,7 @@ public class Persister implements Serializer {
     * This object is used to format the the generated XML document.
     */ 
    private final Format format;
-
+   
    /**
     * Constructor for the <code>Persister</code> object. This is used
     * to create a serializer object that will use an empty filter.

@@ -99,7 +99,7 @@ class GroupExtractor implements Group {
    public Set<String> getPaths() throws Exception {
       return elements.getPaths();
    }
-
+   
    /**
     * This is used to acquire a <code>LabelMap</code> containing the
     * labels available to the group. Providing a context object 
@@ -136,6 +136,19 @@ class GroupExtractor implements Group {
     * @return this returns true if a label for the type exists
     */
    public boolean isValid(Class type) {
+      return registry.resolve(type) != null;
+   }
+   
+   /**
+    * This is used to determine if a type has been declared by the
+    * annotation associated with the group. Unlike determining if
+    * the type is valid this will not consider super types.
+    * 
+    * @param type this is the type to determine if it is declared
+    * 
+    * @return this returns true if the type has been declared
+    */
+   public boolean isDeclared(Class type) {
       return registry.containsKey(type);
    }
    

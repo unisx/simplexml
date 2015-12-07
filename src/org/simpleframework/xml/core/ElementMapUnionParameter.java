@@ -68,6 +68,11 @@ class ElementMapUnionParameter extends TemplateParameter {
    private final Class type;
    
    /**
+    * This is the key used to represent this parameter object.
+    */
+   private final Object key;
+   
+   /**
     * This is the index that the parameter was declared at.
     */
    private final int index;
@@ -78,7 +83,8 @@ class ElementMapUnionParameter extends TemplateParameter {
     * determine a consistent name using the provided XML annotation.
     * 
     * @param factory this is the constructor the parameter is in
-    * @param value this is the annotation used for the parameter
+    * @param union this is union parameter associated with this
+    * @param element this is the annotation used for the parameter
     * @param format this is the format used to style the parameter
     * @param index this is the index the parameter appears at
     */
@@ -89,7 +95,19 @@ class ElementMapUnionParameter extends TemplateParameter {
       this.path = label.getPath();
       this.type = label.getType();
       this.name = label.getName();
+      this.key = label.getKey();
       this.index = index;
+   }
+   
+   /**
+    * This is the key used to represent the parameter. The key is
+    * used to store the parameter in hash containers. Unlike the
+    * path is not necessarily the path for the parameter.
+    * 
+    * @return this is the key used to represent the parameter
+    */
+   public Object getKey() {
+      return key;
    }
    
    /**
@@ -200,8 +218,6 @@ class ElementMapUnionParameter extends TemplateParameter {
     * The <code>Contact</code> represents a contact object that is
     * to be used for a label in order to extract a parameter name.
     * The parameter name is taken from the XML annotation.
-    * 
-    * @author Niall Gallagher
     */
    private static class Contact extends ParameterContact<ElementMap>  {
       
@@ -210,7 +226,7 @@ class ElementMapUnionParameter extends TemplateParameter {
        * used to create an object that acts like an adapter so that
        * the label can create a consistent name for the parameter.
        * 
-       * @param label this is the annotation for the parameter
+       * @param element this is the annotation for the parameter
        * @param factory this is the constructor the parameter is in
        * @param index this is the index for the parameter
        */

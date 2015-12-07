@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
 ------------- Standard Output ---------------
 <inlineMapExample>
    <yEntry yKey="3">
@@ -272,7 +272,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.396 sec
-Testcase: testXList took 0.054 sec
-Testcase: testYList took 0.04 sec
+Testcase: testInlineList took 0.441 sec
+Testcase: testXList took 0.068 sec
+Testcase: testYList took 0.056 sec
 Testcase: testDirectory took 0.001 sec

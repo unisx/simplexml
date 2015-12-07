@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NestedElementTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.372 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.397 sec
 ------------- Standard Output ---------------
 <nestedElementExample>
    <contact-info>
@@ -74,5 +74,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.372 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testNestedExample took 0.365 sec
+Testcase: testNestedExample took 0.388 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CompatibilityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.332 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'address' does not have a match in class org.simpleframework.xml.core.CompatibilityTest$Example_v1 at line 8
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:588)
@@ -34,7 +34,7 @@ org.simpleframework.xml.core.ElementException: Element 'address' does not have a
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.ElementList(inline=false, type=void, required=true, data=false, entry=, empty=true, name=) on field 'list' private java.util.List org.simpleframework.xml.core.CompatibilityTest$Example_v1.list for class org.simpleframework.xml.core.CompatibilityTest$Example_v1 at line 1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:708)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:705)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:510)
 	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
@@ -66,7 +66,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=) on field 'key' private java.lang.String org.simpleframework.xml.core.CompatibilityTest$Example_v2.key for class org.simpleframework.xml.core.CompatibilityTest$Example_v2 at line 1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:708)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:705)
 	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:477)
 	at org.simpleframework.xml.core.Composite.readSection(Composite.java:387)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
@@ -99,4 +99,4 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testCompatibility took 0.324 sec
+Testcase: testCompatibility took 0.291 sec

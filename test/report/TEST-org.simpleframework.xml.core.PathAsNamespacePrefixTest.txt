@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathAsNamespacePrefixTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.487 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.497 sec
 ------------- Standard Output ---------------
 <p:pathWithPrefix xmlns:p="http://www.x.com/y">
    <x>
@@ -116,15 +116,15 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.487 sec
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Namespace prefix 'p' in class org.simpleframework.xml.core.PathAsNamespacePrefixTest$PathWithPrefixOutOfScope is not in scope
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1059)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1148)
 	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1065)
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1154)
-	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1154)
-	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1154)
-	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1042)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1019)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1148)
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1065)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1148)
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1065)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1036)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1013)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:236)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:208)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
@@ -150,7 +150,7 @@ org.simpleframework.xml.core.ElementException: Namespace prefix 'p' in class org
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testPathWithPrefix took 0.397 sec
-Testcase: testPathWithPrefixOufOfScope took 0.011 sec
-Testcase: testBringPrefixInScope took 0.069 sec
+Testcase: testPathWithPrefix took 0.394 sec
+Testcase: testPathWithPrefixOufOfScope took 0.02 sec
+Testcase: testBringPrefixInScope took 0.07 sec
 Testcase: testDirectory took 0.001 sec

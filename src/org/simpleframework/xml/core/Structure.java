@@ -36,6 +36,11 @@ import org.simpleframework.xml.Version;
 class Structure {
    
    /**
+    * This is the instantiator that is used to create instances.
+    */
+   private final Instantiator factory;
+   
+   /**
     * This is the label representing the version of the class.
     */
    private final Label version;
@@ -61,16 +66,30 @@ class Structure {
     * that represents an annotated class. Once created the structure
     * is immutable and is used to build XML sections.
     * 
+    * @param factory this is used to create new object instances
     * @param model the model representing the tree of XML elements
     * @param version this is the version associated with the class
     * @param text this represents any text field or method
     * @param primitive used to determine if this is primitive
     */
-   public Structure(Model model, Label version, Label text, boolean primitive) {
+   public Structure(Instantiator factory, Model model, Label version, Label text, boolean primitive) {
       this.primitive = primitive;
+      this.factory = factory;
       this.version = version;
       this.model = model;
       this.text = text;      
+   }
+   
+   /**
+    * This is used to acquire the instantiator for the type. This is
+    * used to create object instances based on the constructors that
+    * have been annotated. If no constructors have been annotated
+    * then this can be used to create default no argument instances.
+    * 
+    * @return this instantiator responsible for creating instances
+    */
+   public Instantiator getInstantiator() {
+      return factory;
    }
    
    /**

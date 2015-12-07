@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.core.MissingArrayLengthTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.227 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
 
-Testcase: testMissingArrayLength took 0.221 sec
+Testcase: testMissingArrayLength took 0.218 sec

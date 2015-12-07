@@ -226,7 +226,7 @@ class Composite implements Converter {
     * @return this returns the fully deserialized object graph
     */
    private Object read(InputNode node, Schema schema, Instance value) throws Exception {
-      Creator creator = schema.getCreator();
+      Instantiator creator = schema.getInstantiator();
       
       if(creator.isDefault()) {
          return readDefault(node, schema, value);
@@ -284,7 +284,7 @@ class Composite implements Converter {
     * @return this returns the fully deserialized object graph
     */
    private Object readConstructor(InputNode node, Schema schema, Instance value) throws Exception {
-      Creator creator = schema.getCreator();
+      Instantiator creator = schema.getInstantiator();
       Object source = creator.getInstance(criteria);
       
       if(value != null) {
@@ -578,7 +578,7 @@ class Composite implements Converter {
       Label label = map.getLabel(path);      
 
       if(label == null) {
-         label = criteria.get(path);
+         label = criteria.resolve(path);
       }
       if(label == null) {
          Position line = node.getPosition();
@@ -611,11 +611,10 @@ class Composite implements Converter {
       Collection<String> list = label.getPaths();
       
       for(String key : list) {
-         Label union = map.getLabel(key);
-         
-         if(label.isInline()) {
-            criteria.set(union, value);
-         }
+         map.getLabel(key);
+      }
+      if(label.isInline()) {
+         criteria.set(label, value);
       }
    }
 
@@ -664,10 +663,9 @@ class Composite implements Converter {
     */
    private Object readVariable(InputNode node, Object source, Label label) throws Exception {    
       Converter reader = label.getConverter(context);   
-      String path = label.getPath();
       
       if(label.isCollection()) {
-         Variable variable = criteria.get(path);
+         Variable variable = criteria.get(label);
          Contact contact = label.getContact();
          
          if(variable != null) {
@@ -682,7 +680,6 @@ class Composite implements Converter {
                return reader.read(node, value);
             }
          }
-         
       }
       return reader.read(node);
    }
@@ -908,7 +905,7 @@ class Composite implements Converter {
       Label label = map.getLabel(path);      
 
       if(label == null) {
-         label = criteria.get(path);
+         label = criteria.resolve(path);
       }
       if(label == null) {
          Position line = node.getPosition();
@@ -939,13 +936,10 @@ class Composite implements Converter {
       Collection<String> list = label.getPaths();
       
       for(String key : list) {
-         Label union = map.getLabel(key);
-         
-         if(union != null) {
+         map.getLabel(key);
+      }
             if(label.isInline()) {
-               criteria.set(union, null);
-            }
-         }
+         criteria.set(label, null);
       }
       validate(node, label);
    }
@@ -1156,7 +1150,7 @@ class Composite implements Converter {
             String path = section.getPath(name);
             Label label = section.getElement(path);
             Class expect = context.getType(type, source);
-            Object value = criteria.get(path);
+            Object value = criteria.get(label);
             
             if(value == null) {
                if(label == null) {
@@ -1193,15 +1187,7 @@ class Composite implements Converter {
       if(replace != null) {
          writeElement(node, replace, label);            
       }
-      Collection<String> list = label.getPaths();
-      
-      for(String name : list) {
-         Label union = section.getElement(name);
-         
-         if(union != null) {
-            criteria.set(union, replace);
-         }
-      }
+      criteria.set(label, replace);
    }
    
    /**
@@ -1298,7 +1284,6 @@ class Composite implements Converter {
    private void writeElement(OutputNode node, Object value, Label label) throws Exception {
       if(value != null) {
          Class real = value.getClass();
-         /// XXX Performance problem here
          Label match = label.getLabel(real);
          String name = match.getName();
          Type type = label.getType(real); 

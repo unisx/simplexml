@@ -33,6 +33,15 @@ import java.lang.annotation.Annotation;
 interface Parameter {
    
    /**
+    * This is the key used to represent the parameter. The key is
+    * used to store the parameter in hash containers. Unlike the
+    * path is not necessarily the path for the parameter.
+    * 
+    * @return this is the key used to represent the parameter
+    */
+   public Object getKey();
+   
+   /**
     * This is used to acquire the annotated type class. The class
     * is the type that is to be deserialized from the XML. This
     * is used to validate against annotated fields and methods.

@@ -1,16 +1,16 @@
 Testsuite: org.simpleframework.xml.core.PathSectionIndexOrderTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.181 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.177 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Ordered element 'path' in path 'path[3]/third' is out of sequence for class org.simpleframework.xml.core.PathSectionIndexOrderTest$ElementPathSectionOutOfOrder
 	at org.simpleframework.xml.core.ModelAssembler.registerElement(ModelAssembler.java:236)
 	at org.simpleframework.xml.core.ModelAssembler.registerElements(ModelAssembler.java:204)
 	at org.simpleframework.xml.core.ModelAssembler.assembleElements(ModelAssembler.java:109)
 	at org.simpleframework.xml.core.ModelAssembler.assemble(ModelAssembler.java:89)
-	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:166)
-	at org.simpleframework.xml.core.Scanner.order(Scanner.java:390)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:358)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:163)
+	at org.simpleframework.xml.core.Scanner.order(Scanner.java:425)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:393)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -42,11 +42,11 @@ org.simpleframework.xml.core.PathException: Ordered element 'path' in path 'path
 org.simpleframework.xml.core.PathException: Ordered element 'path[1]/first/@value' references an attribute in class org.simpleframework.xml.core.PathSectionIndexOrderTest$AttributeReferenceInElementOrder
 	at org.simpleframework.xml.core.ModelAssembler.assembleElements(ModelAssembler.java:107)
 	at org.simpleframework.xml.core.ModelAssembler.assemble(ModelAssembler.java:89)
-	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:166)
-	at org.simpleframework.xml.core.Scanner.order(Scanner.java:390)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:358)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:163)
+	at org.simpleframework.xml.core.Scanner.order(Scanner.java:425)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:393)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -78,11 +78,11 @@ org.simpleframework.xml.core.PathException: Ordered element 'path[1]/first/@valu
 org.simpleframework.xml.core.PathException: Ordered attribute 'path[1]/first/value' references an element in class org.simpleframework.xml.core.PathSectionIndexOrderTest$ElementReferenceInAttributeOrder
 	at org.simpleframework.xml.core.ModelAssembler.assembleAttributes(ModelAssembler.java:127)
 	at org.simpleframework.xml.core.ModelAssembler.assemble(ModelAssembler.java:90)
-	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:166)
-	at org.simpleframework.xml.core.Scanner.order(Scanner.java:390)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:358)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:163)
+	at org.simpleframework.xml.core.Scanner.order(Scanner.java:425)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:393)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -115,5 +115,5 @@ org.simpleframework.xml.core.PathException: Ordered attribute 'path[1]/first/val
 
 Testcase: testOutOfOrderElement took 0.159 sec
 Testcase: testAttributeInElement took 0.003 sec
-Testcase: testElementInAttribute took 0.005 sec
+Testcase: testElementInAttribute took 0.002 sec
 Testcase: testDirectory took 0.003 sec

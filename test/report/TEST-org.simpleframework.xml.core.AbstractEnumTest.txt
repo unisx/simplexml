@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.core.AbstractEnumTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.211 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.236 sec
 
-Testcase: testFoo took 0.206 sec
+Testcase: testFoo took 0.229 sec

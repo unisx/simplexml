@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.convert.ScannerBuilderTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.048 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.047 sec
 
-Testcase: testScannerBuilder took 0.043 sec
+Testcase: testScannerBuilder took 0.042 sec

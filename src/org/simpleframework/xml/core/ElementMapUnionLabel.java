@@ -42,7 +42,7 @@ import org.simpleframework.xml.stream.Format;
  * 
  * @see org.simpleframework.xml.ElementMapUnion
  */
-class ElementMapUnionLabel implements Label {
+class ElementMapUnionLabel extends TemplateLabel {
    
    /**
     * This is used to extract the individual unions in the group.
@@ -310,17 +310,6 @@ class ElementMapUnionLabel implements Label {
    }  
 
    /**
-    * This method is used to determine if the label represents an
-    * attribute. This is used to style the name so that elements
-    * are styled as elements and attributes are styled as required.
-    * 
-    * @return this is used to determine if this is an attribute
-    */
-   public boolean isAttribute() {
-      return label.isAttribute();
-   }
-
-   /**
     * This is used to determine if the label is a collection. If the
     * label represents a collection then any original assignment to
     * the field or method can be written to without the need to 
@@ -369,18 +358,6 @@ class ElementMapUnionLabel implements Label {
     */
    public boolean isRequired() {
       return label.isRequired();
-   }
-
-   /**
-    * This is used to determine if the label represents text. If
-    * a label represents text it typically does not have a name,
-    * instead the empty string represents the name. Also text
-    * labels can not exist with other text labels, or elements.
-    * 
-    * @return this returns true if this label represents text
-    */
-   public boolean isText() {
-      return label.isText();
    }
    
    /**

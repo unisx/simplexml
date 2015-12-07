@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.StyleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.018 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.03 sec
 ------------- Standard Error -----------------
 base-64-encoder
 base-64-encoder
@@ -25,5 +25,5 @@ Base64Encoder
 Base64Encoder
 ------------- ---------------- ---------------
 
-Testcase: testHyphenStyle took 0.008 sec
-Testcase: testCamelCaseStyle took 0.004 sec
+Testcase: testHyphenStyle took 0.011 sec
+Testcase: testCamelCaseStyle took 0.01 sec

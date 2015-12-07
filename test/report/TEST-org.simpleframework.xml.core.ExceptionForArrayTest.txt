@@ -1,11 +1,11 @@
 Testsuite: org.simpleframework.xml.core.ExceptionForArrayTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Array length missing or incorrect for field 'b' private int[] org.simpleframework.xml.core.ExceptionForArrayTest$A.b at line 1
 	at org.simpleframework.xml.core.PrimitiveArray.read(PrimitiveArray.java:143)
 	at org.simpleframework.xml.core.PrimitiveArray.read(PrimitiveArray.java:116)
-	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:687)
-	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:635)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:684)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
 	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:610)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:593)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:506)
@@ -41,8 +41,8 @@ org.simpleframework.xml.core.ElementException: Array length missing or incorrect
 org.simpleframework.xml.core.ElementException: Array length missing or incorrect for field 'e' private org.simpleframework.xml.core.ExceptionForArrayTest$E[] org.simpleframework.xml.core.ExceptionForArrayTest$B.e at line 1
 	at org.simpleframework.xml.core.CompositeArray.read(CompositeArray.java:149)
 	at org.simpleframework.xml.core.CompositeArray.read(CompositeArray.java:121)
-	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:687)
-	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:635)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:684)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
 	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:610)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:593)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:506)
@@ -77,6 +77,6 @@ org.simpleframework.xml.core.ElementException: Array length missing or incorrect
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testArrayLength took 0.246 sec
-Testcase: testCompositeArrayLength took 0.007 sec
+Testcase: testArrayLength took 0.265 sec
+Testcase: testCompositeArrayLength took 0.009 sec
 Testcase: testDirectory took 0.002 sec

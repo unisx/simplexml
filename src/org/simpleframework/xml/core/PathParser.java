@@ -84,6 +84,9 @@ class PathParser implements Expression {
     */
    private Cache elements;
    
+   /**
+    * This is the format used to style the path segments.
+    */
    private Format format;
    
    /**

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConverterDecorationTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.325 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.294 sec
 ------------- Standard Error -----------------
 <ConverterDecoration id="0">
    <List class="java.util.ArrayList" id="1">
@@ -25,5 +25,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.325 sec
    </Normal>
 </ConverterDecoration>------------- ---------------- ---------------
 
-Testcase: testConverter took 0.316 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testConverter took 0.286 sec
+Testcase: testDirectory took 0.002 sec

@@ -41,19 +41,19 @@ import org.simpleframework.xml.stream.Format;
 class ConstructorScanner {
 
    /**
-    * This contains a list of all the initializers for the class.
+    * This is a list of all the signatures represented by the type.
     */
-   private List<Initializer> list;
-   
-   /**
-    * This represents the default no argument constructor used.
-    */
-   private Initializer primary;
+   private List<Signature> signatures;
    
    /**
     * This is used to acquire a parameter by the parameter name.
     */
-   private Signature registry;
+   private ParameterMap registry;
+   
+   /**
+    * This represents the default no argument constructor.
+    */
+   private Signature primary;
    
    /**
     * This is the format used to style the parameters extracted.
@@ -69,23 +69,45 @@ class ConstructorScanner {
     * @param type this is the type that is to be scanned
     */
    public ConstructorScanner(Class type, Format format) throws Exception {
-      this.list = new ArrayList<Initializer>();
-      this.registry = new Signature(type);
+      this.signatures = new ArrayList<Signature>();
+      this.registry = new ParameterMap();
       this.format = format;
       this.scan(type);
    }
    
    /**
-    * This is used to create the object instance. It does this by
-    * either delegating to the default no argument constructor or by
-    * using one of the annotated constructors for the object. This
-    * allows deserialized values to be injected in to the created
-    * object if that is required by the class schema.
+    * This is used to acquire the default signature for the class. 
+    * The default signature is the signature for the no argument
+    * constructor for the type. If there is no default constructor
+    * for the type then this will return null.
     * 
-    * @return this returns the creator for the class object
+    * @return this returns the default signature if it exists
     */
-   public Creator getCreator() {
-      return new ClassCreator(list, registry, primary);
+   public Signature getSignature() {
+      return primary;
+   }
+   
+   /**
+    * This returns the signatures for the type. All constructors are
+    * represented as a signature and returned. More signatures than
+    * constructors will be returned if a constructor is annotated 
+    * with a union annotation.
+    *
+    * @return this returns the list of signatures for the type
+    */
+   public List<Signature> getSignatures() {
+      return new ArrayList<Signature>(signatures);
+   }
+   
+   /**
+    * This returns a map of all parameters that exist. This is used
+    * to validate all the parameters against the field and method
+    * annotations that exist within the class. 
+    * 
+    * @return this returns a map of all parameters within the type
+    */
+   public ParameterMap getParameters() {
+      return registry;
    }
    
    /**
@@ -102,7 +124,7 @@ class ConstructorScanner {
          throw new ConstructorException("Can not construct inner %s", type);
       }
       for(Constructor factory: array){
-         if(!type.isPrimitive()) {
+         if(!type.isPrimitive()) { 
             scan(factory);
          }
       } 
@@ -117,31 +139,19 @@ class ConstructorScanner {
     */
    private void scan(Constructor factory) throws Exception {
       SignatureScanner scanner = new SignatureScanner(factory, registry, format);
-      
+
       if(scanner.isValid()) {
          List<Signature> list = scanner.getSignatures();
-         
+            
          for(Signature signature : list) {
-            build(factory, signature);
-         }
+            int size = signature.size();
+               
+            if(size == 0) {
+               primary = signature;
+               }
+            signatures.add(signature);
+            }
       }
-   }
- 
-   /**
-    * This is used to build the <code>Initializer</code> object that is
-    * to be used to instantiate the object. The initializer contains 
-    * the constructor at the parameters in the declaration order.
-    * 
-    * @param factory this is the constructor that is to be scanned
-    * @param signature the parameter map that contains parameters
-    */
-   private void build(Constructor factory, Signature signature) throws Exception {
-      Initializer initializer = new Initializer(factory, signature);
-      
-      if(initializer.isDefault()) {
-         primary = initializer;
-      }
-      list.add(initializer);   
    }
    
    /**

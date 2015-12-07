@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathTextTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
 ------------- Standard Output ---------------
 <TextExample>
    <Path>
@@ -11,4 +11,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
 </TextExample>
 ------------- ---------------- ---------------
 
-Testcase: testStyleDup took 0.257 sec
+Testcase: testStyleDup took 0.247 sec

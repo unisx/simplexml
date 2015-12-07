@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.SignatureBuilderTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.018 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.01 sec
 ------------- Standard Error -----------------
 [x] [a] [1] [i] 
 [x] [a] [1] [j] 
@@ -27,4 +27,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.018 sec
 [y] [c] [2] [j] 
 ------------- ---------------- ---------------
 
-Testcase: testMatrix took 0.007 sec
+Testcase: testMatrix took 0.005 sec

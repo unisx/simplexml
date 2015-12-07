@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultWithParametersInGetterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.386 sec
 ------------- Standard Output ---------------
 <defaultTestClass>
    <foo>100</foo>
@@ -39,10 +39,10 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:182)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:161)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:488)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:361)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:524)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -81,10 +81,10 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:182)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:161)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:488)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:361)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:524)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -115,7 +115,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDefaultWithParameters took 0.362 sec
-Testcase: testDefaultWithTransientErrors took 0.014 sec
-Testcase: testDefaultWithElementErrors took 0.006 sec
-Testcase: testDirectory took 0.003 sec
+Testcase: testDefaultWithParameters took 0.341 sec
+Testcase: testDefaultWithTransientErrors took 0.016 sec
+Testcase: testDefaultWithElementErrors took 0.005 sec
+Testcase: testDirectory took 0.002 sec

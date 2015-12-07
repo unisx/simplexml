@@ -46,11 +46,6 @@ class SignatureBuilder {
    private final Constructor factory;
    
    /**
-    * This is the declaring class to build the signatures for.
-    */
-   private final Class type;
-   
-   /**
     * Constructor for the <code>SignatureBuilder</code> object. This
     * requires the constructor that the signatures will be built for.
     * If the constructor contains no annotations then no signatures
@@ -60,7 +55,6 @@ class SignatureBuilder {
     */
    public SignatureBuilder(Constructor factory) {
       this.table = new ParameterTable();
-      this.type = factory.getDeclaringClass();
       this.factory = factory;
    }
    
@@ -85,7 +79,7 @@ class SignatureBuilder {
     * index mirroring the index it appears within the constructor.
     * 
     * @param value this is the parameter to be added in the table
-    * @param column this is the index to added the parameter to
+    * @param index this is the index to added the parameter to
     */
    public void insert(Parameter value, int index) {
       table.insert(value, index);
@@ -130,7 +124,7 @@ class SignatureBuilder {
     */
    private List<Signature> create() throws Exception {
       List<Signature> list = new ArrayList<Signature>();
-      Signature signature = new Signature(type);
+      Signature signature = new Signature(factory);
       
       if(isValid()) {
          list.add(signature);
@@ -154,16 +148,17 @@ class SignatureBuilder {
       int width = matrix.width();
 
       for(int i = 0; i < height; i++) {
-         Signature signature = new Signature(type);
+         Signature signature = new Signature(factory);
          
          for(int j = 0; j < width; j++) {
             Parameter parameter = matrix.get(j, i);
             String path = parameter.getPath();
+            Object key = parameter.getKey();
             
-            if(signature.containsKey(path)) {
+            if(signature.contains(key)) {
                throw new ConstructorException("Parameter '%s' is a duplicate in %s", path, factory);
             }
-            signature.put(path, parameter);
+            signature.add(parameter);
          }
          list.add(signature);
       }

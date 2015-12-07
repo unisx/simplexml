@@ -93,7 +93,7 @@ class ElementListLabel extends TemplateLabel {
       this.type = contact.getType();
       this.entry = label.entry();
       this.item = label.type();
-      this.name = label.name();
+      this.name = label.name();      
       this.format = format;
       this.label = label;
    }

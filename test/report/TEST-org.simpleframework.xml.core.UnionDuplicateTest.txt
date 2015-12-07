@@ -1,8 +1,13 @@
 Testsuite: org.simpleframework.xml.core.UnionDuplicateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.277 sec
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.ElementException: Element 'square' does not have a match in class org.simpleframework.xml.core.UnionDuplicateTest$Diagram at line 1
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:588)
+org.simpleframework.xml.core.PersistenceException: Element 'square' is already used with @org.simpleframework.xml.ElementUnion(value=[@org.simpleframework.xml.Element(type=class org.simpleframework.xml.core.UnionDuplicateTest$Circle, required=true, data=false, name=circle), @org.simpleframework.xml.Element(type=class org.simpleframework.xml.core.UnionDuplicateTest$Square, required=true, data=false, name=square)]) on field 'shape' private org.simpleframework.xml.core.UnionDuplicateTest$Shape org.simpleframework.xml.core.UnionDuplicateTest$Diagram.shape at line 1
+	at org.simpleframework.xml.core.Variable$Adapter.read(Variable.java:467)
+	at org.simpleframework.xml.core.Variable$Adapter.read(Variable.java:445)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:684)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:610)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:593)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:506)
 	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
@@ -35,5 +40,5 @@ org.simpleframework.xml.core.ElementException: Element 'square' does not have a 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testShape took 0.242 sec
+Testcase: testShape took 0.269 sec
 Testcase: testDirectory took 0.002 sec

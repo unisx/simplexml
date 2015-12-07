@@ -103,7 +103,7 @@ public class Format {
     * 
     * @param style this is the style to apply to the format object
     */    
-   public Format(Style style) {
+   public Format(Style  style) {
       this(3, null, style);         
    }
    

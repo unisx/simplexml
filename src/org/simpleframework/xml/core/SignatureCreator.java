@@ -1,5 +1,5 @@
 /*
- * Initializer.java April 2009
+ * Instantiator.java April 2009
  *
  * Copyright (C) 2009, Niall Gallagher <niallg@users.sf.net>
  *
@@ -18,75 +18,71 @@
 
 package org.simpleframework.xml.core;
 
-import java.lang.reflect.Constructor;
-import java.util.Collection;
+import static org.simpleframework.xml.core.Support.isAssignable;
+
 import java.util.List;
 
 /**
- * The <code>Initializer</code> object is used to represent an single
+ * The <code>Instantiator</code> object is used to represent an single
  * constructor within an object. It contains the actual constructor
- * as well as the list of parameters. Each initializer will score its
+ * as well as the list of parameters. Each instantiator will score its
  * weight when given a <code>Criteria</code> object. This allows
  * the deserialization process to find the most suitable one to
  * use when instantiating an object.
  * 
  * @author Niall Gallagher
  */
-class Initializer {   
+class SignatureCreator implements Creator {   
    
    /**
     * This is the list of parameters in the order of declaration. 
     */
    private final List<Parameter> list;
-
-   /**
-    * This is the factory that is used to instantiate the object.
-    */
-   private final Constructor factory;
    
    /**
     * This is the map that contains the parameters to be used.
     */
    private final Signature signature;
-
+   
    /**
-    * Constructor for the <code>Initializer</code> object. This is used
+    * This is the type represented by the creator instance.
+    */
+   private final Class type;
+   
+   /**
+    * Constructor for the <code>Instantiator</code> object. This is used
     * to create a factory like object used for instantiating objects.
-    * Each initializer will score its suitability using the parameters
+    * Each instantiator will score its suitability using the parameters
     * it is provided.
     * 
-    * @param factory this is the factory used for instantiation
-    * @param signature is the map of parameters that are declared
+    * @param signature this is the signature that contains parameters
     */
-   public Initializer(Constructor factory, Signature signature) {
-      this.list = signature.getParameters();
+   public SignatureCreator(Signature signature) {
+      this.type = signature.getType();
+      this.list = signature.getAll();
       this.signature = signature;
-      this.factory = factory;
    } 
    
    /**
-    * This is used to determine if this <code>Initializer</code> is a
-    * default constructor. If the class does contain a no argument
-    * constructor then this will return true.
+    * This is the type associated with the <code>Creator</code> object.
+    * All instances returned from this creator will be of this type.
     * 
-    * @return true if the class has a default constructor
+    * @return this returns the type associated with this creator
     */
-   public boolean isDefault() {
-      return signature.size() == 0;
+   public Class getType() {
+      return type;
    }
    
    /**
-    * This is used to acquire the named <code>Parameter</code> from
-    * the initializer. A parameter is taken from the constructor which
-    * contains annotations for each object that is required. These
-    * parameters must have a matching field or method.
+    * This is the signature associated with the creator. The signature
+    * contains all the parameters associated with the creator as well
+    * as the constructor that this represents. Exposing the signature
+    * allows the creator to be validated.
     * 
-    * @param name this is the name of the parameter to be acquired
-    * 
-    * @return this returns the named parameter for the initializer
+    * @return this is the signature associated with the creator
     */
-   public Parameter getParameter(String name) {
-      return signature.get(name);
+   public Signature getSignature() {
+      return signature;
    }
    
    /**
@@ -97,10 +93,7 @@ class Initializer {
     * @return this returns the object that has been instantiated
     */
    public Object getInstance() throws Exception {
-      if(!factory.isAccessible()) {
-         factory.setAccessible(true);
-      } 
-      return factory.newInstance();
+      return signature.create();
    }
    
    /**
@@ -119,7 +112,7 @@ class Initializer {
       for(int i = 0; i < list.size(); i++) {
          values[i] = getVariable(criteria, i);
       }
-      return getInstance(values);
+      return signature.create(values);
    }
    
    /**
@@ -135,8 +128,8 @@ class Initializer {
     */
    private Object getVariable(Criteria criteria, int index) throws Exception {
       Parameter parameter = list.get(index);
-      String path = parameter.getPath();
-      Variable variable = criteria.remove(path);
+      Object key = parameter.getKey();
+      Variable variable = criteria.remove(key);
       
       if(variable != null) {
          return variable.getValue();
@@ -145,8 +138,8 @@ class Initializer {
    }
   
    /**
-    * This is used to score this <code>Initializer</code> object so that
-    * it can be weighed amongst other constructors. The initializer that
+    * This is used to score this <code>Instantiator</code> object so that
+    * it can be weighed amongst other constructors. The instantiator that
     * scores the highest is the one that is used for instantiation.
     * <p>
     * If any read only element or attribute is not a parameter in
@@ -159,55 +152,29 @@ class Initializer {
     * @return this returns the score based on the criteria provided
     */
    public double getScore(Criteria criteria) throws Exception {
-      Signature match = signature.getSignature();
+      Signature match = signature.copy();
       
-      for(String name : criteria) {
-         Label label = criteria.resolve(name);
-         
-         if(label != null) {
-            Parameter value = match.getParameter(name);
-            Contact contact = label.getContact();
+      for(Object key : criteria) {
+         Parameter parameter = match.get(key);
+         Variable label = criteria.get(key);
+         Contact contact = label.getContact();
 
-            if(value == null) {
-               value = getParameter(match, label);
+         if(parameter != null) {
+            Object value = label.getValue();
+            Class expect = value.getClass();
+            Class actual = parameter.getType();
+            
+            if(!isAssignable(expect, actual)) {
+               return -1.0;
             }
-            if(contact.isReadOnly()) {
-               if(value == null) {
-                  return -1.0;
-               }               
-            }
+         }
+         if(contact.isReadOnly()) {
+            if(parameter == null) {
+               return -1.0;
+            }               
          }
       }
       return getPercentage(criteria);
-   }
-   
-   /**
-    * This is used to resolve a <code>Parameter</code> using a given
-    * label. Resolution is performed by using the paths to find a
-    * parameter in the signature. If nothing is resolved then this
-    * will return null, also the types must match for success.
-    * 
-    * @param match this is the signature to find a parameter in
-    * @param label this is the label to used to resolve a parameter
-    * 
-    * @return this returns the parameter that has been resolved
-    */
-   private Parameter getParameter(Signature match, Label label) throws Exception {
-      Collection<String> options = label.getNames();
-      Class type = label.getType();
-      
-      for(String option : options) {
-         Parameter parameter = match.getParameter(option);
-         
-         if(parameter != null) {
-            Class other = parameter.getType();
-         
-            if(other.isAssignableFrom(type)) {
-               return parameter;
-            }
-         }
-      }
-      return null;
    }
    
    /**
@@ -230,8 +197,8 @@ class Initializer {
       double score = 0.0;
       
       for(Parameter value : list) {
-         String name = value.getPath();
-         Label label = criteria.resolve(name);
+         Object key = value.getKey();
+         Label label = criteria.get(key);
 
          if(label == null) {
             if(value.isRequired()) {
@@ -267,30 +234,13 @@ class Initializer {
    }   
    
    /**
-    * This is used to instantiate the object using a constructor that
-    * takes deserialized objects as arguments. The objects that have
-    * been deserialized are provided in declaration order so they can
-    * be passed to the constructor to instantiate the object.
-    * 
-    * @param list this is the list of objects used for instantiation
-    * 
-    * @return this returns the object that has been instantiated
-    */
-   private Object getInstance(Object[] list) throws Exception {
-      if(!factory.isAccessible()) {
-         factory.setAccessible(true);
-      } 
-      return factory.newInstance(list);
-   }
-   
-   /**
-    * This is used to acquire a descriptive name for the initializer.
+    * This is used to acquire a descriptive name for the instantiator.
     * Providing a name is useful in debugging and when exceptions are
-    * thrown as it describes the constructor the initializer represents.
+    * thrown as it describes the constructor the instantiator represents.
     * 
     * @return this returns the name of the constructor to be used
     */
    public String toString() {
-      return factory.toString();
+      return signature.toString();
    }
 }

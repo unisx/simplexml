@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MissingPrefixTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.22 sec
 ------------- Standard Error -----------------
 org.xmlpull.v1.XmlPullParserException: could not determine namespace bound to element prefix d (position: TEXT seen <blah>\n   <d:foo>... @2:11) 
 	at org.xmlpull.mxp1.MXParser.parseStartTag(MXParser.java:1816)
@@ -41,4 +41,4 @@ org.xmlpull.v1.XmlPullParserException: could not determine namespace bound to el
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testMissingPrefix took 0.244 sec
+Testcase: testMissingPrefix took 0.215 sec

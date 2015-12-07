@@ -39,7 +39,7 @@ class TextParameter extends TemplateParameter {
    /**
     * This is the expression used to represent this parameter.
     */
-   private final Expression expression;  
+   private final Expression expression;   
    
    /**
     * This is the contact used to determine the parameter name.
@@ -67,6 +67,11 @@ class TextParameter extends TemplateParameter {
    private final Class type;
    
    /**
+    * This is the key used to represent this parameter object.
+    */
+   private final Object key;
+   
+   /**
     * This is the index that the parameter was declared at.
     */
    private final int index;
@@ -88,7 +93,19 @@ class TextParameter extends TemplateParameter {
       this.path = label.getPath();
       this.type = label.getType();
       this.name = label.getName();
+      this.key = label.getKey();
       this.index = index;
+   }
+   
+   /**
+    * This is the key used to represent the parameter. The key is
+    * used to store the parameter in hash containers. Unlike the
+    * path is not necessarily the path for the parameter.
+    * 
+    * @return this is the key used to represent the parameter
+    */
+   public Object getKey() {
+      return key;
    }
    
    /**

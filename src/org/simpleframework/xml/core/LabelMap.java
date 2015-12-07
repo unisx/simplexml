@@ -126,7 +126,7 @@ class LabelMap extends LinkedHashMap<String, Label> implements Iterable<Label> {
          }
       }
       return list;
-   } 
+   }
    
    /**
     * This method is used to clone the label map such that mappings
@@ -147,7 +147,7 @@ class LabelMap extends LinkedHashMap<String, Label> implements Iterable<Label> {
          }
       }         
       return map;      
-   } 
+   }   
 
    /**
     * This method is used to determine whether strict mappings are

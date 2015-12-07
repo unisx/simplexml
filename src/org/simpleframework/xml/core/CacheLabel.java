@@ -95,6 +95,11 @@ class CacheLabel implements Label {
    private final Label label;
    
    /**
+    * This is the key is used to represent this label object.
+    */
+   private final Object key;
+   
+   /**
     * This is used to represent the dependent type to be used.
     */
    private final Type depend;
@@ -162,6 +167,7 @@ class CacheLabel implements Label {
       this.entry = label.getEntry();
       this.data = label.isData();
       this.text = label.isText();
+      this.key = label.getKey();
       this.label = label;
    }
    
@@ -267,8 +273,8 @@ class CacheLabel implements Label {
     */
    public Converter getConverter(Context context) throws Exception {
       return label.getConverter(context);
-   } 
-   
+   }
+     
    /**
     * This is used to provide a configured empty value used when the
     * annotated value is null. This ensures that XML can be created
@@ -294,6 +300,17 @@ class CacheLabel implements Label {
     */
    public Type getDependent() throws Exception {
       return depend;
+   }
+   
+   /**
+    * This is the key used to represent this label. The key is used
+    * to store the parameter in hash containers. Typically the
+    * key is generated from the paths associated with the label.
+    * 
+    * @return this is the key used to represent the label
+    */
+   public Object getKey() throws Exception {
+      return key;
    }
    
    /**

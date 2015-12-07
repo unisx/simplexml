@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScannerDefaultTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.158 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.MethodException: Annotations do not match for 'name' in class org.simpleframework.xml.core.ScannerDefaultTest$NonMatchingAnnotationExample
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:457)
@@ -7,10 +7,10 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:399)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:163)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:488)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:361)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:89)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:524)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:90)
 	at org.simpleframework.xml.core.ScannerDefaultTest.testNonMatchingAnnotationExample(ScannerDefaultTest.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -29,6 +29,6 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNonMatchingAnnotationExample took 0.113 sec
-Testcase: testDuplicateExample took 0.03 sec
-Testcase: testScanner took 0.007 sec
+Testcase: testNonMatchingAnnotationExample took 0.112 sec
+Testcase: testDuplicateExample took 0.033 sec
+Testcase: testScanner took 0.006 sec
