@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConversionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.383 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.321 sec
 ------------- Standard Output ---------------
 <petShop>
    <pets>
@@ -11,5 +11,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.383 sec
    </pets>
 </petShop>------------- ---------------- ---------------
 
-Testcase: testConverter took 0.371 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testConverter took 0.312 sec
+Testcase: testDirectory took 0.003 sec

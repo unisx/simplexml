@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DecoratorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.821 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.652 sec
 ------------- Standard Output ---------------
 <friendList>
    <list type="list">
@@ -164,5 +164,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.821 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testDecorator took 0.81 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDecorator took 0.645 sec
+Testcase: testDirectory took 0 sec

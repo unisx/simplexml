@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ConverterMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.547 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.434 sec
 ------------- Standard Output ---------------
 <mapHolder>
    <map class="java.util.HashMap">
@@ -153,5 +153,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.547 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testMap took 0.517 sec
+Testcase: testMap took 0.425 sec
 Testcase: testDirectory took 0.001 sec

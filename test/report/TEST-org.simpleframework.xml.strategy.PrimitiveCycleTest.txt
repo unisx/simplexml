@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.706 sec
 ------------- Standard Output ---------------
 <test id="0">
    <primitive id="1">
@@ -246,6 +246,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.646 sec
-Testcase: testPrimitiveReference took 0.134 sec
+Testcase: testPrimitive took 0.585 sec
+Testcase: testPrimitiveReference took 0.113 sec
 Testcase: testDirectory took 0 sec

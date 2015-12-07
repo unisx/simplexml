@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ListCycleTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.62 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.554 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one class="java.util.ArrayList" id="1">
@@ -225,8 +225,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.62 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.465 sec
-Testcase: testInlineList took 0.053 sec
-Testcase: testInlinePrimitiveList took 0.045 sec
-Testcase: testNestedExample took 0.04 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testCycle took 0.427 sec
+Testcase: testInlineList took 0.042 sec
+Testcase: testInlinePrimitiveList took 0.04 sec
+Testcase: testNestedExample took 0.033 sec
+Testcase: testDirectory took 0 sec

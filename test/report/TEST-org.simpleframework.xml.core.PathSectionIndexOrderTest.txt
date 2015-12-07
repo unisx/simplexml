@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathSectionIndexOrderTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Ordered element 'path' in path 'path[3]/third' is out of sequence for class org.simpleframework.xml.core.PathSectionIndexOrderTest$ElementPathSectionOutOfOrder
 	at org.simpleframework.xml.core.ModelAssembler.registerElement(ModelAssembler.java:220)
@@ -113,7 +113,7 @@ org.simpleframework.xml.core.PathException: Ordered attribute 'path[1]/first/val
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testOutOfOrderElement took 0.2 sec
+Testcase: testOutOfOrderElement took 0.174 sec
 Testcase: testAttributeInElement took 0.003 sec
-Testcase: testElementInAttribute took 0.003 sec
+Testcase: testElementInAttribute took 0.005 sec
 Testcase: testDirectory took 0.004 sec

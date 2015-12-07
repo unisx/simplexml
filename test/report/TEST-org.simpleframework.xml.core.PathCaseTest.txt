@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathCaseTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.347 sec
 ------------- Standard Output ---------------
 <caseExample>
    <SomePath>
@@ -81,6 +81,6 @@ org.simpleframework.xml.core.PathException: Path with name 'secondPath' is a dup
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNoStyle took 0.331 sec
-Testcase: testStyle took 0.046 sec
-Testcase: testOtherStyle took 0.009 sec
+Testcase: testNoStyle took 0.295 sec
+Testcase: testStyle took 0.033 sec
+Testcase: testOtherStyle took 0.007 sec

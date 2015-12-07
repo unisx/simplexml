@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultAnnotationTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
 ------------- Standard Output ---------------
 <orderItem>
    <customer id="1">
@@ -52,7 +52,7 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMisMatch took 0.275 sec
-Testcase: testIgnoreStatic took 0.121 sec
-Testcase: testDefault took 0.046 sec
-Testcase: testDirectory took 0.003 sec
+Testcase: testTypeMisMatch took 0.277 sec
+Testcase: testIgnoreStatic took 0.119 sec
+Testcase: testDefault took 0.045 sec
+Testcase: testDirectory took 0.002 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OverrideTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.335 sec
 ------------- Standard Output ---------------
 <root name="change">
    <list class="java.util.ArrayList">
@@ -9,7 +9,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
    </list>
 </root>------------- ---------------- ---------------
 
-Testcase: testComposite took 0.29 sec
-Testcase: testInterface took 0.004 sec
-Testcase: testList took 0.019 sec
-Testcase: testCopy took 0.047 sec
+Testcase: testComposite took 0.26 sec
+Testcase: testInterface took 0.005 sec
+Testcase: testList took 0.018 sec
+Testcase: testCopy took 0.043 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorScannerTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.178 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.176 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.MethodException: Annotations do not match for 'a[1]/b[1]/c[1]' in class org.simpleframework.xml.core.ConstructorScannerTest$ClashBetweenElementAndText
 	at org.simpleframework.xml.core.ConstructorScanner.validate(ConstructorScanner.java:237)
@@ -69,9 +69,9 @@ org.simpleframework.xml.core.PersistenceException: Parameter 'path[1]/a[1]' is a
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testElementWithPath took 0.097 sec
-Testcase: testClashOnElementByPath took 0.019 sec
-Testcase: testAmbiguousParameters took 0.017 sec
-Testcase: testSameNameWithPath took 0.005 sec
+Testcase: testElementWithPath took 0.086 sec
+Testcase: testClashOnElementByPath took 0.017 sec
+Testcase: testAmbiguousParameters took 0.015 sec
+Testcase: testSameNameWithPath took 0.004 sec
 Testcase: testSameNameAndAnnotationWithPath took 0.008 sec
-Testcase: testSameNameWithDifferentPath took 0.004 sec
+Testcase: testSameNameWithDifferentPath took 0.003 sec

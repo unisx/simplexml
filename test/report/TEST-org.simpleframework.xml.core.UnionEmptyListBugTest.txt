@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionEmptyListBugTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.35 sec
 ------------- Standard Output ---------------
 <elementListUnionBug>
    <string>A</string>
@@ -17,6 +17,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
 </elementMapUnionBug>
 ------------- ---------------- ---------------
 
-Testcase: testListBug took 0.347 sec
-Testcase: testMapBug took 0.066 sec
-Testcase: testDirectory took 0.003 sec
+Testcase: testListBug took 0.281 sec
+Testcase: testMapBug took 0.06 sec
+Testcase: testDirectory took 0.002 sec

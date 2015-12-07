@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.707 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.91 sec
 ------------- Standard Output ---------------
 <inlineListExample>
    <xx>
@@ -200,7 +200,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.707 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.584 sec
-Testcase: testXList took 0.059 sec
-Testcase: testYList took 0.052 sec
+Testcase: testInlineList took 0.768 sec
+Testcase: testXList took 0.064 sec
+Testcase: testYList took 0.061 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathDuplicateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.36 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.351 sec
 ------------- Standard Output ---------------
 <example>
    <y>
@@ -23,5 +23,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.36 sec
 </StyleExample>
 ------------- ---------------- ---------------
 
-Testcase: testDup took 0.326 sec
-Testcase: testStyleDup took 0.026 sec
+Testcase: testDup took 0.313 sec
+Testcase: testStyleDup took 0.029 sec

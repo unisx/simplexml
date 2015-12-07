@@ -1,15 +1,9 @@
 Testsuite: org.simpleframework.xml.core.OrderWithInvalidPathAndTextTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.259 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework.xml.Text(required=true, data=false, empty=) on field 'text' private java.lang.String org.simpleframework.xml.core.OrderWithInvalidPathAndTextTest$InvalidOrder.text can not be used with paths in class org.simpleframework.xml.core.OrderWithInvalidPathAndTextTest$InvalidOrder
-	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:375)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:358)
-	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:454)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:357)
-	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:454)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:357)
-	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:513)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:499)
+org.simpleframework.xml.core.ElementException: Ordered element 'a/b/c' missing for class org.simpleframework.xml.core.OrderWithInvalidPathAndTextTest$InvalidOrder
+	at org.simpleframework.xml.core.StructureBuilder.validateElements(StructureBuilder.java:591)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:508)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:393)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
@@ -44,5 +38,5 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testIvalidOrderWithText took 0.25 sec
+Testcase: testIvalidOrderWithText took 0.232 sec
 Testcase: testDirectory took 0.002 sec

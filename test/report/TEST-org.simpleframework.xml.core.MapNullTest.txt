@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.865 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -384,12 +384,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
          <bigDecimal>1</bigDecimal>
       </entry>
       <entry>
-         <string>c</string>
-         <bigDecimal/>
-      </entry>
-      <entry>
          <string/>
          <bigDecimal>4</bigDecimal>
+      </entry>
+      <entry>
+         <string>c</string>
+         <bigDecimal/>
       </entry>
       <entry>
          <string>b</string>
@@ -403,12 +403,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
          <bigDecimal>1</bigDecimal>
       </entry>
       <entry>
-         <string>c</string>
-         <bigDecimal/>
-      </entry>
-      <entry>
          <string/>
          <bigDecimal>4</bigDecimal>
+      </entry>
+      <entry>
+         <string>c</string>
+         <bigDecimal/>
       </entry>
       <entry>
          <string>b</string>
@@ -426,14 +426,14 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
          <big-decimal ID="3">1</big-decimal>
       </entry>
       <entry>
-         <!-- java.lang.String -->
-         <string ID="4">c</string>
-         <big-decimal/>
-      </entry>
-      <entry>
          <string/>
          <!-- java.math.BigDecimal -->
-         <big-decimal ID="5">4</big-decimal>
+         <big-decimal ID="4">4</big-decimal>
+      </entry>
+      <entry>
+         <!-- java.lang.String -->
+         <string ID="5">c</string>
+         <big-decimal/>
       </entry>
       <entry>
          <!-- java.lang.String -->
@@ -455,14 +455,14 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
          <bigDecimal ID="3">1</bigDecimal>
       </Entry>
       <Entry>
-         <!-- java.lang.String -->
-         <String ID="4">c</String>
-         <bigDecimal/>
-      </Entry>
-      <Entry>
          <String/>
          <!-- java.math.BigDecimal -->
-         <bigDecimal ID="5">4</bigDecimal>
+         <bigDecimal ID="4">4</bigDecimal>
+      </Entry>
+      <Entry>
+         <!-- java.lang.String -->
+         <String ID="5">c</String>
+         <bigDecimal/>
       </Entry>
       <Entry>
          <!-- java.lang.String -->
@@ -862,13 +862,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.465 sec
+Testcase: testEmptyCompositeValue took 0.403 sec
 Testcase: testEmptyCompositeBlankValue took 0.053 sec
-Testcase: testEmptyCompositeKey took 0.057 sec
-Testcase: testEmptyCompositeBlankKey took 0.047 sec
-Testcase: testEmptyPrimitiveValue took 0.052 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.047 sec
-Testcase: testEmptyPrimitiveKey took 0.035 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.058 sec
-Testcase: testNullValue took 0.158 sec
+Testcase: testEmptyCompositeKey took 0.054 sec
+Testcase: testEmptyCompositeBlankKey took 0.038 sec
+Testcase: testEmptyPrimitiveValue took 0.04 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.035 sec
+Testcase: testEmptyPrimitiveKey took 0.039 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.053 sec
+Testcase: testNullValue took 0.135 sec
 Testcase: testDirectory took 0 sec

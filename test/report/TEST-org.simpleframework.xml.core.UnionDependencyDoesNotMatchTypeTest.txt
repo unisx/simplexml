@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionDependencyDoesNotMatchTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.47 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.472 sec
 ------------- Standard Output ---------------
 <example>
    <x/>
@@ -44,4 +44,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.47 sec
 ------------- ---------------- ---------------
 
 Testcase: testTypeMatch took 0.461 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

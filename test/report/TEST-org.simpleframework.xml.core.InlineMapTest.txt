@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.602 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.49 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -108,7 +108,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.602 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.507 sec
-Testcase: testPrimitiveAttributeMap took 0.032 sec
-Testcase: testPrimitiveAttributeValueMap took 0.043 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testPrimitiveMap took 0.385 sec
+Testcase: testPrimitiveAttributeMap took 0.042 sec
+Testcase: testPrimitiveAttributeValueMap took 0.05 sec
+Testcase: testDirectory took 0.004 sec

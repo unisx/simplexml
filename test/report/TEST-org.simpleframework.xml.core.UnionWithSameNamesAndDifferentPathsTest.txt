@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionWithSameNamesAndDifferentPathsTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.625 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.46 sec
 ------------- Standard Output ---------------
 <example>
    <path>
@@ -43,8 +43,8 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.625 sec
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Parameter 'b' does not have a match in class org.simpleframework.xml.core.UnionWithSameNamesAndDifferentPathsTest$AmbiguousConstructorParameterExample
-	at org.simpleframework.xml.core.StructureBuilder.validateParameters(StructureBuilder.java:717)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:497)
+	at org.simpleframework.xml.core.StructureBuilder.validateParameters(StructureBuilder.java:730)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:510)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:393)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
@@ -79,6 +79,6 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'b' does not have a
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNamespaceWithUnion took 0.592 sec
-Testcase: testErrorInParametersExample took 0.013 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testNamespaceWithUnion took 0.436 sec
+Testcase: testErrorInParametersExample took 0.011 sec
+Testcase: testDirectory took 0 sec

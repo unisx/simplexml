@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.SubstituteTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.598 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.468 sec
 ------------- Standard Output ---------------
 <substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
@@ -71,6 +71,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.598 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testReplace took 0.444 sec
-Testcase: testResolve took 0.143 sec
+Testcase: testReplace took 0.388 sec
+Testcase: testResolve took 0.069 sec
 Testcase: testDirectory took 0 sec
