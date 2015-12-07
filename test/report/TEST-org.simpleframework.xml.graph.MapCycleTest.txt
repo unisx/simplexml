@@ -69,7 +69,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.625 sec
    </map>
 </primitiveMap>------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.532 sec
+Testcase: testEntryMap took 0.531 sec
 Testcase: testComplexMap took 0.047 sec
-Testcase: testPrimitiveMap took 0.046 sec
+Testcase: testPrimitiveMap took 0.047 sec
 Testcase: testDirectory took 0 sec

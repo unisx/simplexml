@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.graph.ArrayCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.765 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one length="5" id="1">
@@ -24,8 +24,8 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.765 sec
       <entry id="3">
          <list length="3" id="4">
             <entry class="org.simpleframework.xml.graph.ArrayCycleTest$TextValue" id="5" name="blah">
-               <text id="6">Some text</text>
                <list ref="4"/>
+               <text id="6">Some text</text>
             </entry>
             <entry ref="3"/>
             <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="7">
@@ -42,7 +42,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.765 sec
    </list>
 </value>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.672 sec
+Testcase: testCycle took 0.719 sec
 Testcase: testNestedExample took 0.047 sec
 Testcase: testPromotion took 0.016 sec
 Testcase: testDirectory took 0 sec

@@ -40,6 +40,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.594 sec
    <c id="2">1</c>
 </integerReferenceExample>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 1.078 sec
+Testcase: testPrimitive took 1.047 sec
 Testcase: testPrimitiveReference took 0.5 sec
 Testcase: testDirectory took 0 sec

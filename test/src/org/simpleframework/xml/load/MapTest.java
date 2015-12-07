@@ -1,8 +1,11 @@
 package org.simpleframework.xml.load;
 
+import java.io.StringWriter;
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.Map;
 
+import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.ElementMap;
 import org.simpleframework.xml.Root;
@@ -51,51 +54,97 @@ public class MapTest extends ValidationTestCase {
    "   </map>\n"+
    "</stringMap>";
    
-   private static final String COMPLEX_MAP =     
+   private static final String COMPLEX_VALUE_KEY_OVERRIDE_MAP =     
    "<complexMap>\n"+
    "   <map>\n"+   
-   "      <entry>" +
-   "         <compositeKey>\n" +
+   "      <item>" +
+   "         <key>\n" +
    "            <name>name 1</name>\n" +
    "            <address>address 1</address>\n" +
-   "         </compositeKey>\n" +
-   "         <mapEntry>\n" +  
+   "         </key>\n" +
+   "         <value>\n" +  
    "            <name>a</name>\n"+
    "            <value>example 1</value>\n"+
-   "         </mapEntry>" + 
-   "      </entry>" +
-   "      <entry>" +
-   "         <compositeKey>\n" +
+   "         </value>" + 
+   "      </item>" +
+   "      <item>" +
+   "         <key>\n" +
    "            <name>name 2</name>\n" +
    "            <address>address 2</address>\n" +
-   "         </compositeKey>\n" +
-   "         <mapEntry>\n" +  
+   "         </key>\n" +
+   "         <value>\n" +  
    "            <name>b</name>\n"+
    "            <value>example 2</value>\n"+
-   "         </mapEntry>" + 
-   "      </entry>" +
-   "      <entry>" +
-   "         <compositeKey>\n" +
+   "         </value>" + 
+   "      </item>" +
+   "      <item>" +
+   "         <key>\n" +
    "            <name>name 3</name>\n" +
    "            <address>address 3</address>\n" +
-   "         </compositeKey>\n" +
-   "         <mapEntry>\n" +  
+   "         </key>\n" +
+   "         <value>\n" +  
    "            <name>c</name>\n"+
    "            <value>example 3</value>\n"+
-   "         </mapEntry>" + 
-   "      </entry>" +
-   "      <entry>" +
-   "         <compositeKey>\n" +
+   "         </value>" + 
+   "      </item>" +
+   "      <item>" +
+   "         <key>\n" +
    "            <name>name 4</name>\n" +
    "            <address>address 4</address>\n" +
-   "         </compositeKey>\n" +
-   "         <mapEntry>\n" +  
+   "         </key>\n" +
+   "         <value>\n" +  
    "            <name>d</name>\n"+
    "            <value>example 4</value>\n"+
-   "         </mapEntry>" + 
-   "      </entry>" +
+   "         </value>" + 
+   "      </item>" +
    "   </map>\n"+
    "</complexMap>"; 
+   
+   private static final String COMPLEX_MAP =     
+      "<complexMap>\n"+
+      "   <map>\n"+   
+      "      <entry>" +
+      "         <compositeKey>\n" +
+      "            <name>name 1</name>\n" +
+      "            <address>address 1</address>\n" +
+      "         </compositeKey>\n" +
+      "         <mapEntry>\n" +  
+      "            <name>a</name>\n"+
+      "            <value>example 1</value>\n"+
+      "         </mapEntry>" + 
+      "      </entry>" +
+      "      <entry>" +
+      "         <compositeKey>\n" +
+      "            <name>name 2</name>\n" +
+      "            <address>address 2</address>\n" +
+      "         </compositeKey>\n" +
+      "         <mapEntry>\n" +  
+      "            <name>b</name>\n"+
+      "            <value>example 2</value>\n"+
+      "         </mapEntry>" + 
+      "      </entry>" +
+      "      <entry>" +
+      "         <compositeKey>\n" +
+      "            <name>name 3</name>\n" +
+      "            <address>address 3</address>\n" +
+      "         </compositeKey>\n" +
+      "         <mapEntry>\n" +  
+      "            <name>c</name>\n"+
+      "            <value>example 3</value>\n"+
+      "         </mapEntry>" + 
+      "      </entry>" +
+      "      <entry>" +
+      "         <compositeKey>\n" +
+      "            <name>name 4</name>\n" +
+      "            <address>address 4</address>\n" +
+      "         </compositeKey>\n" +
+      "         <mapEntry>\n" +  
+      "            <name>d</name>\n"+
+      "            <value>example 4</value>\n"+
+      "         </mapEntry>" + 
+      "      </entry>" +
+      "   </map>\n"+
+      "</complexMap>";   
    
    private static final String PRIMITIVE_MAP =      
    "<primitiveMap>\n"+
@@ -181,8 +230,82 @@ public class MapTest extends ValidationTestCase {
    "      <string>four</string>\n" +
    "      <bigDecimal>4.0</bigDecimal>\n" +
    "   </entity>\n"+
-   "</primitiveInlineMap>";   
+   "</primitiveInlineMap>";
    
+   private static final String INDEX_EXAMPLE = 
+   "<?xml version='1.0' encoding='ISO-8859-1'?>\r\n" +
+   "<index id='users'>\r\n" +
+   "     <database>xyz</database>\r\n" +
+   "     <query>\r\n" +
+   "         <columns>foo,bar</columns>\r\n" +
+   "         <tables>a,b,c</tables>\r\n" +
+   "     </query>\r\n" +
+   "     <fields>\r\n" +
+   "         <field id='foo'>\r\n" +
+   "             <lucene>\r\n" +
+   "                 <index>TOKENIZED</index>\r\n" +
+   "                 <store>false</store>\r\n" +
+   "                 <default>true</default>\r\n" +
+   "             </lucene>\r\n" +
+   "         </field>\r\n" +
+   "         <field id='bar'>\r\n" +
+   "             <lucene>\r\n" +
+   "                 <index>TOKENIZED</index>\r\n" +
+   "                 <store>false</store>\r\n" +
+   "                 <default>true</default>\r\n" +
+   "             </lucene>\r\n" +
+   "         </field>\r\n" +
+   "     </fields>\r\n" +
+   "</index>\r\n";
+   
+   @Root(name="index", strict=false)
+   public static class IndexConfig {
+   
+      @Attribute
+      private String id;
+   
+      @Element
+      private String database;
+   
+      @Element
+      private Query query;
+   
+      @ElementMap(name="fields", entry="field", key="id", attribute=true, keyType=String.class, valueType=Lucene.class)
+      private HashMap<String, Lucene> fields = new HashMap<String, Lucene>();
+   }
+   
+   @Root
+   public static class Field {
+   
+      @Attribute
+      private String id;
+   
+      @Element
+      private Lucene lucene;
+   }
+   
+   @Root(strict=false)
+   public static class Lucene {
+      
+      @Element
+      private String index;
+      
+      @Element
+      private boolean store;
+      
+      @Element(name="default")
+      private boolean flag;
+   }
+   
+   @Root
+   private static class Query {
+      
+      @Element
+      private String[] columns;
+      
+      @Element
+      private String[] tables;
+   }
    
    @Root
    private static class EntryMap {      
@@ -203,6 +326,15 @@ public class MapTest extends ValidationTestCase {
       
       @Element
       private String value;
+      
+      public MapEntry() {
+         super();
+      }
+      
+      public MapEntry(String name, String value) {
+         this.name = name;
+         this.value = value;
+      }
    }
    
    @Root
@@ -221,6 +353,10 @@ public class MapTest extends ValidationTestCase {
       
       @ElementMap
       private Map<CompositeKey, MapEntry> map;
+      
+      public ComplexMap() {
+         this.map = new HashMap<CompositeKey, MapEntry>();
+      }
       
       public String getValue(CompositeKey key) {
          return map.get(key).value;
@@ -265,6 +401,10 @@ public class MapTest extends ValidationTestCase {
       @ElementMap(name="table")
       private Map<String, BigDecimal> map;
       
+      public PrimitiveMap() {
+         this.map = new HashMap<String, BigDecimal>();         
+      }
+      
       public BigDecimal getValue(String name) {
          return map.get(name);
       }
@@ -289,6 +429,21 @@ public class MapTest extends ValidationTestCase {
       
       public BigDecimal getValue(String name) {
          return map.get(name);
+      }
+   }
+   
+   @Root
+   private static class ComplexValueKeyOverrideMap {      
+      
+      @ElementMap(key="key", value="value", entry="item")
+      private Map<CompositeKey, MapEntry> map;
+      
+      public ComplexValueKeyOverrideMap() {
+         this.map = new HashMap<CompositeKey, MapEntry>();
+      }
+      
+      public String getValue(CompositeKey key) {
+         return map.get(key).value;
       }
    }
    
@@ -375,6 +530,18 @@ public class MapTest extends ValidationTestCase {
       validate(example, serializer);
    }
    
+   public void testComplexValueKeyOverrideMap() throws Exception {
+      Serializer serializer = new Persister();
+      ComplexValueKeyOverrideMap example = serializer.read(ComplexValueKeyOverrideMap.class, COMPLEX_VALUE_KEY_OVERRIDE_MAP);
+      
+      assertEquals("example 1", example.getValue(new CompositeKey("name 1", "address 1")));
+      assertEquals("example 2", example.getValue(new CompositeKey("name 2", "address 2")));
+      assertEquals("example 3", example.getValue(new CompositeKey("name 3", "address 3")));
+      assertEquals("example 4", example.getValue(new CompositeKey("name 4", "address 4")));
+      
+      validate(example, serializer);
+   }
+   
    public void testPrimitiveInlineMap() throws Exception {
       Serializer serializer = new Persister();
       PrimitiveInlineMap example = serializer.read(PrimitiveInlineMap.class, PRIMITIVE_INLINE_MAP);
@@ -385,5 +552,43 @@ public class MapTest extends ValidationTestCase {
       assertEquals(new BigDecimal("4.0"), example.getValue("four"));
       
       validate(example, serializer);
+   }
+   
+   public void testNullValue() throws Exception {
+      Serializer serializer = new Persister();
+      PrimitiveMap primitiveMap = new PrimitiveMap();
+      
+      primitiveMap.map.put("a", new BigDecimal(1));
+      primitiveMap.map.put("b", new BigDecimal(2));
+      primitiveMap.map.put("c", null);     
+      primitiveMap.map.put(null, new BigDecimal(4));
+      
+      StringWriter out = new StringWriter();
+      serializer.write(primitiveMap, out);
+      
+      primitiveMap = serializer.read(PrimitiveMap.class, out.toString());
+      
+      assertEquals(primitiveMap.map.get(null), new BigDecimal(4));
+      assertEquals(primitiveMap.map.get("c"), null);
+      assertEquals(primitiveMap.map.get("a"), new BigDecimal(1));
+      assertEquals(primitiveMap.map.get("b"), new BigDecimal(2));
+      
+      validate(primitiveMap, serializer);           
+      
+      ComplexMap complexMap = new ComplexMap();
+      
+      complexMap.map.put(new CompositeKey("name.1", "address.1"), new MapEntry("1", "1"));
+      complexMap.map.put(new CompositeKey("name.2", "address.2"), new MapEntry("2", "2"));
+      complexMap.map.put(null, new MapEntry("3", "3"));
+      complexMap.map.put(new CompositeKey("name.4", "address.4"), null);
+      
+      validate(complexMap, serializer);
+   }
+   
+   public void testIndexExample() throws Exception {
+      Serializer serializer = new Persister();
+      IndexConfig config = serializer.read(IndexConfig.class, INDEX_EXAMPLE);
+      
+      validate(config, serializer);
    }
 }

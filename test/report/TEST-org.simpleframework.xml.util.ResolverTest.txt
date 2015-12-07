@@ -1,33 +1,33 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.563 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.578 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
-      <match value="text/html" pattern="*.html"/>
-      <match value="image/jpeg" pattern="*.jpg"/>
-      <match value="image/jpeg" pattern="/images/*"/>
-      <match value="text/plain" pattern="/log/**"/>
-      <match value="application/octetstream" pattern="*.exe"/>
-      <match value="text/plain" pattern="**.txt"/>
-      <match value="text/html" pattern="/html/*"/>
+      <match pattern="*.html" value="text/html"/>
+      <match pattern="*.jpg" value="image/jpeg"/>
+      <match pattern="/images/*" value="image/jpeg"/>
+      <match pattern="/log/**" value="text/plain"/>
+      <match pattern="*.exe" value="application/octetstream"/>
+      <match pattern="**.txt" value="text/plain"/>
+      <match pattern="/html/*" value="text/html"/>
    </list>
 </test><test name="example">
    <list>
-      <match value="text/html" pattern="*.html"/>
-      <match value="image/jpeg" pattern="*.jpg"/>
-      <match value="image/jpeg" pattern="/images/*"/>
-      <match value="application/octetstream" pattern="*.exe"/>
-      <match value="text/plain" pattern="**.txt"/>
-      <match value="text/html" pattern="/html/*"/>
-      <match value="application/octetstream" pattern="*"/>
-      <match value="text/html" pattern="README.*"/>
-      <match value="text/plain" pattern="README.txt"/>
+      <match pattern="*.html" value="text/html"/>
+      <match pattern="*.jpg" value="image/jpeg"/>
+      <match pattern="/images/*" value="image/jpeg"/>
+      <match pattern="*.exe" value="application/octetstream"/>
+      <match pattern="**.txt" value="text/plain"/>
+      <match pattern="/html/*" value="text/html"/>
+      <match pattern="*" value="application/octetstream"/>
+      <match pattern="README.*" value="text/html"/>
+      <match pattern="README.txt" value="text/plain"/>
    </list>
 </test>------------- ---------------- ---------------
 
-Testcase: testResolver took 0.469 sec
+Testcase: testResolver took 0.485 sec
 Testcase: testCache took 0.031 sec
 Testcase: testNoResolution took 0.016 sec
 Testcase: testNonGreedyMatch took 0 sec
-Testcase: testResolverCache took 0.016 sec
+Testcase: testResolverCache took 0.031 sec
 Testcase: testDirectory took 0 sec

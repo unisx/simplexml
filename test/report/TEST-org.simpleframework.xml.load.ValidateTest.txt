@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.407 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.421 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.load.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' at line -1
 	at org.simpleframework.xml.load.Composite.validate(Composite.java:621)
@@ -105,5 +105,5 @@ org.simpleframework.xml.load.PersistenceException: Element 'array' declared twic
 Testcase: testVersionMissing took 0.375 sec
 Testcase: testNameMissing took 0 sec
 Testcase: testTextMissing took 0 sec
-Testcase: testExtraElement took 0.016 sec
+Testcase: testExtraElement took 0.015 sec
 Testcase: testDirectory took 0 sec

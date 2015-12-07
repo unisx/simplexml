@@ -22,7 +22,6 @@ package org.simpleframework.xml.load;
 
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
-import org.simpleframework.xml.stream.Position;
 
 /**
  * The <code>PrimitiveKey</code> is used to serialize a primitive key 
@@ -111,7 +110,7 @@ class PrimitiveKey implements Converter {
     * This method is used to read the key value from the node. The 
     * value read from the node is resolved using the template filter.
     * If the key value can not be found according to the annotation
-    * attributes then an exception is thrown.
+    * attributes then an null is assumed and returned.
     * 
     * @param node this is the node to read the key value from
     * @param name this is the name of the attribute used by the key 
@@ -120,10 +119,9 @@ class PrimitiveKey implements Converter {
     */
    private Object readAttribute(InputNode node, String name) throws Exception {     
       InputNode key = node.getAttribute(name);
-      Position line = node.getPosition();
       
       if(key == null) {
-         throw new AttributeException("Attribute '%s' does not exist at %s", name, line);
+         return null;
       }
       return primitive.read(key);
    }
@@ -132,8 +130,8 @@ class PrimitiveKey implements Converter {
     * This method is used to read the key value from the node. The 
     * value read from the node is resolved using the template filter.
     * If the key value can not be found according to the annotation
-    * attributes then an exception is thrown.
-    * 
+    * attributes then null is assumed and returned.
+    *  
     * @param node this is the node to read the key value from
     * @param name this is the name of the element used by the key 
     *     
@@ -141,10 +139,9 @@ class PrimitiveKey implements Converter {
     */
    private Object readElement(InputNode node, String name) throws Exception {
       InputNode child = node.getNext(name);
-      Position line = node.getPosition();
       
       if(child == null) {
-         throw new ElementException("Element '%s' does not exist at %s", name, line);
+         return null;
       }     
       return primitive.read(child);     
    }
@@ -153,7 +150,7 @@ class PrimitiveKey implements Converter {
     * This method is used to read the key value from the node. The 
     * value read from the node is resolved using the template filter.
     * If the key value can not be found according to the annotation
-    * attributes then an exception is thrown.
+    * attributes then the node is considered as null and is valid.
     * 
     * @param node this is the node to read the key value from
     * 
@@ -175,7 +172,7 @@ class PrimitiveKey implements Converter {
     * This method is used to read the key value from the node. The 
     * value read from the node is resolved using the template filter.
     * If the key value can not be found according to the annotation
-    * attributes then an exception is thrown.
+    * attributes then the node is considered as null and is valid.
     * 
     * @param node this is the node to read the key value from
     * @param name this is the name of the attribute used by the key 
@@ -184,10 +181,9 @@ class PrimitiveKey implements Converter {
     */
    private boolean validateAttribute(InputNode node, String name) throws Exception {     
       InputNode key = node.getAttribute(name);
-      Position line = node.getPosition();
       
       if(key == null) {
-         throw new AttributeException("Attribute '%s' does not exist at %s", name, line);
+         return true;
       }
       return primitive.validate(key);
    }
@@ -196,7 +192,7 @@ class PrimitiveKey implements Converter {
     * This method is used to read the key value from the node. The 
     * value read from the node is resolved using the template filter.
     * If the key value can not be found according to the annotation
-    * attributes then an exception is thrown.
+    * attributes then the node is considered as null and is valid.
     * 
     * @param node this is the node to read the key value from
     * @param name this is the name of the element used by the key 
@@ -205,10 +201,9 @@ class PrimitiveKey implements Converter {
     */
    private boolean validateElement(InputNode node, String name) throws Exception {
       InputNode child = node.getNext(name);
-      Position line = node.getPosition();
       
       if(child == null) {
-         throw new ElementException("Element '%s' does not exist at %s", name, line);
+         return true;
       }     
       return primitive.validate(child);     
    }
@@ -225,7 +220,7 @@ class PrimitiveKey implements Converter {
    public void write(OutputNode node, Object item) throws Exception {
       if(!entry.isAttribute()) {
          writeElement(node, item);
-      } else {
+      } else if(item != null) {
          writeAttribute(node, item);
       }
    }
@@ -246,8 +241,10 @@ class PrimitiveKey implements Converter {
       }    
       OutputNode child = node.getChild(name);  
       
-      if(!isOverridden(child, item)) {
-         primitive.write(child, item);
+      if(item != null) {
+         if(!isOverridden(child, item)) {
+            primitive.write(child, item);
+         }
       }
    }
    
@@ -261,8 +258,11 @@ class PrimitiveKey implements Converter {
     */
    private void writeAttribute(OutputNode node, Object item) throws Exception {    
       String text = factory.getText(item);
-      String name = entry.getKey();   
+      String name = entry.getKey();  
       
+      if(name == null) {
+         name = Factory.getName(type);
+      }      
       if(text != null) {
          node.setAttribute(name, text);
       }

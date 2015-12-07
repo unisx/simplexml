@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.MapTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.734 sec
+Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.906 sec
 ------------- Standard Output ---------------
 <entryMap>
    <map class="java.util.HashMap">
@@ -135,7 +135,50 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.734 sec
          <decimal>3.0</decimal>
       </item>
    </map>
-</primitiveValueKeyOverrideMap><primitiveInlineMap>
+</primitiveValueKeyOverrideMap><complexValueKeyOverrideMap>
+   <map class="java.util.HashMap">
+      <item>
+         <key>
+            <name>name 3</name>
+            <address>address 3</address>
+         </key>
+         <value>
+            <name>c</name>
+            <value>example 3</value>
+         </value>
+      </item>
+      <item>
+         <key>
+            <name>name 1</name>
+            <address>address 1</address>
+         </key>
+         <value>
+            <name>a</name>
+            <value>example 1</value>
+         </value>
+      </item>
+      <item>
+         <key>
+            <name>name 2</name>
+            <address>address 2</address>
+         </key>
+         <value>
+            <name>b</name>
+            <value>example 2</value>
+         </value>
+      </item>
+      <item>
+         <key>
+            <name>name 4</name>
+            <address>address 4</address>
+         </key>
+         <value>
+            <name>d</name>
+            <value>example 4</value>
+         </value>
+      </item>
+   </map>
+</complexValueKeyOverrideMap><primitiveInlineMap>
    <entity>
       <string>one</string>
       <bigDecimal>1.0</bigDecimal>
@@ -152,13 +195,94 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.734 sec
       <string>three</string>
       <bigDecimal>3.0</bigDecimal>
    </entity>
-</primitiveInlineMap>------------- ---------------- ---------------
+</primitiveInlineMap><primitiveMap>
+   <table class="java.util.HashMap">
+      <entry>
+         <string/>
+         <bigDecimal>4</bigDecimal>
+      </entry>
+      <entry>
+         <string>a</string>
+         <bigDecimal>1</bigDecimal>
+      </entry>
+      <entry>
+         <string>c</string>
+         <bigDecimal/>
+      </entry>
+      <entry>
+         <string>b</string>
+         <bigDecimal>2</bigDecimal>
+      </entry>
+   </table>
+</primitiveMap><complexMap>
+   <map class="java.util.HashMap">
+      <entry>
+         <compositeKey>
+            <name>name.1</name>
+            <address>address.1</address>
+         </compositeKey>
+         <mapEntry>
+            <name>1</name>
+            <value>1</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey>
+            <name>name.2</name>
+            <address>address.2</address>
+         </compositeKey>
+         <mapEntry>
+            <name>2</name>
+            <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey>
+            <name>name.4</name>
+            <address>address.4</address>
+         </compositeKey>
+         <mapEntry/>
+      </entry>
+   </map>
+</complexMap><index id="users">
+   <database>xyz</database>
+   <query>
+      <columns length="2">foo, bar</columns>
+      <tables length="3">a, b, c</tables>
+   </query>
+   <fields>
+      <field id="foo">
+         <lucene>
+            <index>TOKENIZED</index>
+            <store>false</store>
+            <default>true</default>
+         </lucene>
+      </field>
+      <field id="bar">
+         <lucene>
+            <index>TOKENIZED</index>
+            <store>false</store>
+            <default>true</default>
+         </lucene>
+      </field>
+   </fields>
+</index>------------- ---------------- ---------------
 
 Testcase: testEntryMap took 0.516 sec
 Testcase: testStringMap took 0.031 sec
-Testcase: testComplexMap took 0.032 sec
+Testcase: testComplexMap took 0.047 sec
 Testcase: testPrimitiveMap took 0.031 sec
-Testcase: testPrimitiveValueOverrideMap took 0.032 sec
-Testcase: testPrimitiveValueKeyOverrideMap took 0.015 sec
+Testcase: testPrimitiveValueOverrideMap took 0.031 sec
+Testcase: testPrimitiveValueKeyOverrideMap took 0.016 sec
+Testcase: testComplexValueKeyOverrideMap took 0.047 sec
 Testcase: testPrimitiveInlineMap took 0.031 sec
+Testcase: testNullValue took 0.047 sec
+Testcase: testIndexExample took 0.047 sec
 Testcase: testDirectory took 0 sec

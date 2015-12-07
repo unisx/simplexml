@@ -5,6 +5,6 @@ Testcase: testValid took 0.375 sec
 Testcase: testNoAttribute took 0 sec
 Testcase: testNoElement took 0 sec
 Testcase: testExtraAttribute took 0 sec
-Testcase: testExtraElement took 0.016 sec
+Testcase: testExtraElement took 0 sec
 Testcase: testMissingElement took 0.031 sec
 Testcase: testMissingAttribute took 0 sec

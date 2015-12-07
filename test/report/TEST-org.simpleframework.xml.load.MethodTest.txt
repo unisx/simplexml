@@ -1,40 +1,40 @@
 Testsuite: org.simpleframework.xml.load.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.625 sec
 ------------- Standard Output ---------------
 <test>
-   <short>120</short>
-   <float>1234.56</float>
-   <byte>16</byte>
-   <long>1234567</long>
    <boolean>true</boolean>
-   <int>1234</int>
+   <byte>16</byte>
    <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
 </test><test>
-   <short>120</short>
-   <float>1234.56</float>
-   <byte>16</byte>
-   <long>1234567</long>
    <boolean>true</boolean>
-   <int>1234</int>
+   <byte>16</byte>
    <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
 </test><implicitMethodNameExample>
-   <shortValue>120</shortValue>
-   <floatValue>1234.56</floatValue>
-   <byteValue>16</byteValue>
-   <longValue>1234567</longValue>
    <booleanValue>true</booleanValue>
-   <intValue>1234</intValue>
+   <byteValue>16</byteValue>
    <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
 </implicitMethodNameExample><implicitMethodNameExample>
-   <shortValue>120</shortValue>
-   <floatValue>1234.56</floatValue>
-   <byteValue>16</byteValue>
-   <longValue>1234567</longValue>
    <booleanValue>true</booleanValue>
-   <intValue>1234</intValue>
+   <byteValue>16</byteValue>
    <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
 </implicitMethodNameExample>------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.484 sec
-Testcase: testImplicitMethodNameExample took 0.047 sec
+Testcase: testExplicitMethodNameExample took 0.563 sec
+Testcase: testImplicitMethodNameExample took 0.031 sec
 Testcase: testDirectory took 0 sec
