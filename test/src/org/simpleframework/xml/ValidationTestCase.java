@@ -18,8 +18,8 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.simpleframework.xml.core.Persister;
-import org.simpleframework.xml.core.Strategy;
-import org.simpleframework.xml.graph.CycleStrategy;
+import org.simpleframework.xml.strategy.CycleStrategy;
+import org.simpleframework.xml.strategy.Strategy;
 import org.simpleframework.xml.stream.CamelCaseStyle;
 import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.HyphenStyle;

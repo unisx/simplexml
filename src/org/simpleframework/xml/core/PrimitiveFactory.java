@@ -20,6 +20,7 @@
 
 package org.simpleframework.xml.core;
 
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 
 /**
@@ -62,13 +63,13 @@ class PrimitiveFactory extends Factory {
     * 
     * @return this returns an instance of the resulting type
     */         
-   public Type getInstance(InputNode node) throws Exception {
-      Type type = getOverride(node);
+   public Instance getInstance(InputNode node) throws Exception {
+      Value value = getOverride(node);
     
-      if(type == null) { 
-         return context.getType(field);         
+      if(value == null) { 
+         return context.getInstance(field);         
       }
-      return type;      
+      return new ObjectInstance(context, value);      
    }      
    
    /**

@@ -178,32 +178,33 @@ class Primitive implements Converter {
     * @return this returns the primitive that has been deserialized
     */ 
    private Object readElement(InputNode node) throws Exception {
-      Type type = factory.getInstance(node);
+      Instance value = factory.getInstance(node);
       
-      if(!type.isReference()) {
-         return readElement(node, type);
+      if(!value.isReference()) {
+         return readElement(node, value);
       }
-      return type.getInstance();
+      return value.getInstance();
    }
    
    /**
-    * This <code>read</code> methos will extract the text value from
+    * This <code>read</code> method will extract the text value from
     * the node and replace any template variables before converting
     * it to a primitive value. This uses the <code>Context</code>
     * object used for this instance of serialization to replace all
     * template variables with values from the context filter.
     *
     * @param node this is the node to be converted to a primitive
+    * @param value this is the instance to set the result to
     *
     * @return this returns the primitive that has been deserialized
     */ 
-   private Object readElement(InputNode node, Type type) throws Exception {
-      Object value = read(node, field);
+   private Object readElement(InputNode node, Instance value) throws Exception {
+      Object result = read(node, field);
       
-      if(value != null) {
-         return type.getInstance(value);
+      if(result != null) {
+         value.setInstance(result);
       }
-      return value;
+      return result;
    }
    
    /**
@@ -259,10 +260,10 @@ class Primitive implements Converter {
     * @return this returns the primitive that has been validated
     */ 
    private boolean validateElement(InputNode node) throws Exception {
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       
       if(!type.isReference()) {         
-         type.getInstance(type);
+         type.setInstance(null);
       }
       return true;
    }

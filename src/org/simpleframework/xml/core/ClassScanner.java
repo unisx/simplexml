@@ -48,6 +48,11 @@ class ClassScanner  {
    private NamespaceDecorator decorator;
    
    /**
+    * This is the scanner that is used to acquire the constructors.
+    */
+   private ConstructorScanner scanner;
+   
+   /**
     * This is the namespace associated with the scanned class.
     */
    private Namespace namespace;
@@ -99,10 +104,24 @@ class ClassScanner  {
     * 
     * @param type this is the type that is scanned for a schema
     */
-   public ClassScanner(Class type) throws Exception {  
+   public ClassScanner(Class type) throws Exception { 
+      this.scanner = new ConstructorScanner(type);
       this.decorator = new NamespaceDecorator();
       this.scan(type);
    }      
+
+   /**
+    * This is used to create the object instance. It does this by
+    * either delegating to the default no argument constructor or by
+    * using one of the annotated constructors for the object. This
+    * allows deserialized values to be injected in to the created
+    * object if that is required by the class schema.
+    * 
+    * @return this returns the creator for the class object
+    */
+   public Creator getCreator() {
+      return scanner.getCreator();
+   }
    
    /**
     * This is used to acquire the <code>Decorator</code> for this.

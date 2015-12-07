@@ -21,6 +21,7 @@
 package org.simpleframework.xml.core;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
@@ -68,6 +69,17 @@ class FieldContact implements Contact {
       this.modifier = field.getModifiers();
       this.label = label;
       this.field = field;
+   } 
+   
+   /**
+    * This is used to identify annotated methods are fields that
+    * can not be modified. Such field will require that there is 
+    * a constructor that can have the value injected in to it.
+    * 
+    * @return this returns true if the field or method is final
+    */
+   public boolean isFinal() {
+      return Modifier.isFinal(modifier); 
    }
 
    /**
@@ -89,8 +101,8 @@ class FieldContact implements Contact {
     * 
     * @return this returns the dependent type for the contact
     */
-   public Class getDependant() {
-      return Reflector.getDependant(field);
+   public Class getDependent() {
+      return Reflector.getDependent(field);
    }
    
    /**
@@ -101,8 +113,8 @@ class FieldContact implements Contact {
     * 
     * @return this returns the dependent type for the contact
     */
-   public Class[] getDependants() {
-      return Reflector.getDependants(field);
+   public Class[] getDependents() {
+      return Reflector.getDependents(field);
    }
    
    /**
@@ -172,7 +184,7 @@ class FieldContact implements Contact {
     * @param value this is the value that is to be set on the object
     */ 
    public void set(Object source, Object value) throws Exception {
-      if(!Modifier.isFinal(modifier)) {
+      if(!isFinal()) {
          field.set(source, value);
       }
    }
@@ -200,6 +212,6 @@ class FieldContact implements Contact {
     * @return this returns a string representation of the contact
     */
    public String toString() {
-      return String.format("field '%s'", getName());
+      return String.format("field '%s' %s", getName(), field.toString());
    }
 }

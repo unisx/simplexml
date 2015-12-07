@@ -20,6 +20,7 @@
 
 package org.simpleframework.xml.core;
 
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 
 /**
@@ -59,15 +60,15 @@ class ObjectFactory extends PrimitiveFactory {
     * @return this returns an instance of the resulting type
     */       
    @Override
-   public Type getInstance(InputNode node) throws Exception {
-      Type type = getOverride(node);
+   public Instance getInstance(InputNode node) throws Exception {
+      Value type = getOverride(node);
     
       if(type == null) { 
          if(!isInstantiable(field)) {
             throw new InstantiationException("Cannot instantiate %s", field);              
          }
-         return context.getType(field);         
+         return context.getInstance(field);         
       }
-      return type;      
+      return new ObjectInstance(context, type);      
    }     
 }

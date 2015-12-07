@@ -22,6 +22,8 @@ package org.simpleframework.xml.core;
 
 import org.simpleframework.xml.Version;
 import org.simpleframework.xml.filter.Filter;
+import org.simpleframework.xml.strategy.Strategy;
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.NodeMap;
 import org.simpleframework.xml.stream.OutputNode;
@@ -168,17 +170,29 @@ class Source implements Context {
    }
    
    /**
-    * This is used to create a <code>Type</code> object for the class
-    * specified. This will allow instances of the specified type to
-    * be instantiated and also allows reflective information to be
-    * cached internally within the context object.
+    * This will create an <code>Instance</code> that can be used
+    * to instantiate objects of the specified class. This leverages
+    * an internal constructor cache to ensure creation is quicker.
     * 
     * @param type this is the type that is to be instantiated
     * 
-    * @return this returns a type that can be used for instantiation
+    * @return this will return an object for instantiating objects
     */
-   public Type getType(Class type) throws Exception {
-      return support.getType(type);
+   public Instance getInstance(Class type) {
+      return support.getInstance(type);
+   }
+   
+   /**
+    * This will create an <code>Instance</code> that can be used
+    * to instantiate objects of the specified class. This leverages
+    * an internal constructor cache to ensure creation is quicker.
+    * 
+    * @param value this contains information on the object instance
+    * 
+    * @return this will return an object for instantiating objects
+    */
+   public Instance getInstance(Value value) {
+      return support.getInstance(value);
    }
    
    /**
@@ -275,7 +289,7 @@ class Source implements Context {
       if(schema == null) {
          throw new PersistenceException("Invalid schema class %s", type);
       }
-      return new Schema(schema, this);
+      return new ClassSchema(schema, this);
    }
    
    /**
@@ -307,7 +321,7 @@ class Source implements Context {
     * 
     * @throws Exception thrown if the class cannot be resolved  
     */
-   public Type getOverride(Class type, InputNode node) throws Exception {
+   public Value getOverride(Class type, InputNode node) throws Exception {
       NodeMap map = node.getAttributes();
       
       if(node.isRoot()) {

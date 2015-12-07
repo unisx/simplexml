@@ -20,6 +20,8 @@
 
 package org.simpleframework.xml.core;
 
+import java.util.LinkedHashMap;
+
 import org.simpleframework.xml.ElementMap;
 import org.simpleframework.xml.stream.Style;
 
@@ -164,18 +166,18 @@ class ElementMapLabel implements Label {
    }
    
    /**
-    * This is used to acquire the dependant type for the annotated
+    * This is used to acquire the dependent type for the annotated
     * list. This will simply return the type that the map object is
     * composed to hold. This must be a serializable type, that is,
     * a type that is annotated with the <code>Root</code> class.
     * 
     * @return this returns the component type for the map object
     */
-   public Class getDependant() throws Exception  {
+   public Class getDependent() throws Exception  {
       Contact contact = getContact();
      
       if(items == null) {
-         items = contact.getDependants();
+         items = contact.getDependents();
       }        
       if(items == null) {
          throw new ElementException("Unable to determine type for %s", label);           
@@ -215,7 +217,7 @@ class ElementMapLabel implements Label {
    }
    
    /**
-    * This acts as a convinience method used to determine the type of
+    * This acts as a convenience method used to determine the type of
     * contact this represents. This is used when an object is written
     * to XML. It determines whether a <code>class</code> attribute
     * is required within the serialized XML element, that is, if the

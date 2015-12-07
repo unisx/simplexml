@@ -22,6 +22,8 @@ package org.simpleframework.xml.core;
 
 import java.lang.reflect.Constructor;
 
+import org.simpleframework.xml.strategy.Value;
+
 /**
  * The <code>Instantiator</code> is used to instantiate types that 
  * will leverage a constructor cache to quickly create the objects.
@@ -50,30 +52,29 @@ class Instantiator {
    }
    
    /**
-    * This will create a <code>Type</code> object that can be used
+    * This will create an <code>Instance</code> that can be used
+    * to instantiate objects of the specified class. This leverages
+    * an internal constructor cache to ensure creation is quicker.
+    * 
+    * @param value this contains information on the object instance
+    * 
+    * @return this will return an object for instantiating objects
+    */
+   public Instance getInstance(Value value) {
+      return new ValueInstance(this, value);
+   }
+
+   /**
+    * This will create an <code>Instance</code> that can be used
     * to instantiate objects of the specified class. This leverages
     * an internal constructor cache to ensure creation is quicker.
     * 
     * @param type this is the type that is to be instantiated
     * 
-    * @return this will return a type for instantiating objects
+    * @return this will return an object for instantiating objects
     */
-   public Type getType(Class type) {
-      return new Instance(this, type);
-   }
-   
-   /**
-    * This will create an array <code>Type</code> that can be used
-    * to instantiate arrays of the specified class. This leverages
-    * an internal constructor cache to ensure creation is quicker.
-    * 
-    * @param type this is the array type that is to be instantiated
-    * @param size this is the length of the array to be created
-    * 
-    * @return this will return a type for instantiating objects
-    */
-   public Type getType(Class type, int size) {
-      return new ArrayInstance(type, size);
+   public Instance getInstance(Class type) {
+      return new ClassInstance(this, type);
    }
    
    /**
@@ -85,7 +86,7 @@ class Instantiator {
     *
     * @return this returns an instance of the specific class type
     */ 
-   public Object getInstance(Class type) throws Exception {
+   public Object getObject(Class type) throws Exception {
       Constructor method = cache.fetch(type);
       
       if(method == null) {

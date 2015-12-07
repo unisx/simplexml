@@ -45,4 +45,5 @@ public class FieldScannerTest extends TestCase {
       assertTrue(list.contains(String.class));
       assertTrue(list.contains(int.class));
    }
+
 }

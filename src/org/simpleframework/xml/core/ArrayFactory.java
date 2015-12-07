@@ -22,6 +22,7 @@ package org.simpleframework.xml.core;
 
 import java.lang.reflect.Array;
 
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 
 /**
@@ -69,41 +70,41 @@ class ArrayFactory extends Factory {
    /**
     * Creates the array type to use. This will use the provided
     * XML element to determine the array type and provide a means
-    * for creating an array with the <code>Type</code> object. If
+    * for creating an array with the <code>Value</code> object. If
     * the array size cannot be determined an exception is thrown.
     * 
     * @param node this is the input node for the array element
     * 
     * @return the object array type used for the instantiation
     */         
-   public Type getInstance(InputNode node) throws Exception {
-      Type type = getOverride(node);    
+   public Instance getInstance(InputNode node) throws Exception {
+      Value value = getOverride(node);    
       
-      if(type == null) {
+      if(value == null) {
          throw new ElementException("Array length required for %s", field);         
       }      
-      Class entry = type.getType();
+      Class type = value.getType();
       
-      return getInstance(type, entry);
+      return getInstance(value, type);
    }
 
    /**
     * Creates the array type to use. This will use the provided
     * XML element to determine the array type and provide a means
-    * for creating an array with the <code>Type</code> object. If
+    * for creating an array with the <code>Value</code> object. If
     * the array types are not compatible an exception is thrown.
     * 
-    * @param type this is the type object with the array details
-    * @param entry this is the entry type for the array instance    
+    * @param value this is the type object with the array details
+    * @param type this is the entry type for the array instance    
     * 
     * @return this object array type used for the instantiation  
     */
-   private Type getInstance(Type type, Class entry) throws Exception {
+   private Instance getInstance(Value value, Class type) throws Exception {
       Class expect = field.getComponentType();
 
-      if(!expect.isAssignableFrom(entry)) {
-         throw new InstantiationException("Array of type %s cannot hold %s", expect, entry);
+      if(!expect.isAssignableFrom(type)) {
+         throw new InstantiationException("Array of type %s cannot hold %s", expect, type);
       }
-      return type;      
+      return new ArrayInstance(value);   
    }   
 }

@@ -96,7 +96,7 @@ class CompositeArray implements Converter {
    }
 
    /**
-    * This <code>read</code> method wll read the XML element list from
+    * This <code>read</code> method will read the XML element list from
     * the provided node and deserialize its children as entry types.
     * This ensures each entry type is deserialized as a root type, that 
     * is, its <code>Root</code> annotation must be present and the
@@ -107,7 +107,7 @@ class CompositeArray implements Converter {
     * @return this returns the item to attach to the object contact
     */ 
    public Object read(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       Object list = type.getInstance();
       
       if(!type.isReference()) {
@@ -159,7 +159,7 @@ class CompositeArray implements Converter {
    }
 
    /**
-    * This <code>validate</code> method wll validate the XML element 
+    * This <code>validate</code> method will validate the XML element 
     * list against the provided node and validate its children as entry 
     * types. This ensures each entry type is validated as a root type, 
     * that is, its <code>Root</code> annotation must be present and the
@@ -170,13 +170,13 @@ class CompositeArray implements Converter {
     * @return true if the element matches the XML schema class given 
     */ 
    public boolean validate(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance value = factory.getInstance(node);
       
-      if(!type.isReference()) {
-         Object real = type.getInstance(type);
-         Class expect = type.getType();
+      if(!value.isReference()) {
+         Object result = value.setInstance(null);
+         Class type = value.getType();
             
-         return validate(node, expect);
+         return validate(node, type);
       }
       return true; 
    }

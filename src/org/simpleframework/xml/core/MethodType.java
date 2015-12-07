@@ -58,7 +58,7 @@ enum MethodType {
    /**
     * Constructor for the <code>MethodType</code> object. This is
     * used to create a method type specifying the length of the
-    * prefix. This allows the method name to be parsed easliy.
+    * prefix. This allows the method name to be parsed easily.
     * 
     * @param prefix this is the length of the method name prefix
     */

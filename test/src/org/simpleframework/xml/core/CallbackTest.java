@@ -1,16 +1,10 @@
 package org.simpleframework.xml.core;
 
+import junit.framework.TestCase;
+
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
-import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
-import org.simpleframework.xml.core.Commit;
-import org.simpleframework.xml.core.Complete;
-import org.simpleframework.xml.core.Persist;
-import org.simpleframework.xml.core.Persister;
-import org.simpleframework.xml.core.Validate;
-
-import junit.framework.TestCase;
 
 public class CallbackTest extends TestCase {
         
@@ -39,6 +33,10 @@ public class CallbackTest extends TestCase {
       private boolean persisted;
 
       private boolean completed;
+      
+      public Entry() {
+         super();
+      }
 
       @Validate
       public void validate() {
@@ -102,6 +100,10 @@ public class CallbackTest extends TestCase {
       public boolean validated;
 
       public boolean persisted;
+      
+      public ExtendedEntry() {
+         super();
+      }
      
       @Validate
       public void extendedValidate() {

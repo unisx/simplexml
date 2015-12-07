@@ -103,7 +103,7 @@ class PrimitiveList implements Converter {
     * @return this returns the item to attach to the object contact
     */ 
    public Object read(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       Object list = type.getInstance();
       
       if(!type.isReference()) {
@@ -127,17 +127,17 @@ class PrimitiveList implements Converter {
     * @return this returns the item to attach to the object contact
     */
    public Object read(InputNode node, Object result) throws Exception {
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       
       if(type.isReference()) {
          return type.getInstance();
       }
-      Object list = type.getInstance(result);
+      type.setInstance(result);
       
-      if(list != null) {
-         return populate(node, list);
+      if(result != null) {
+         return populate(node, result);
       }
-      return list;
+      return result;
    }
    
    /**
@@ -175,11 +175,11 @@ class PrimitiveList implements Converter {
     * @return true if the element matches the XML schema class given 
     */ 
    public boolean validate(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance value = factory.getInstance(node);
       
-      if(!type.isReference()) {
-         Object real = type.getInstance(type);
-         Class expect = type.getType();
+      if(!value.isReference()) {
+         Object result = value.setInstance(null);
+         Class expect = value.getType();
             
          return validate(node, expect);
       }

@@ -88,6 +88,22 @@ class PackageMatcher implements Matcher {
       if(name.startsWith("java.math")) {
          return matchMath(type);
       }
+      return matchEnum(type);
+   }
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that are <code>Enum</code> implementations. If the type is not
+    * an enumeration then this will return null.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */
+   private Transform matchEnum(Class type) {
+      if(type.isEnum()) {
+         return new EnumTransform(type);
+      }
       return null;
    }
    

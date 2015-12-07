@@ -20,6 +20,8 @@
 
 package org.simpleframework.xml.core;
 
+import java.util.ArrayList;
+
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.stream.Style;
 
@@ -133,7 +135,7 @@ class ElementListLabel implements Label {
     * @return this returns the converter for creating a collection 
     */
    private Converter getConverter(Context context, String name) throws Exception {    
-      Class item = getDependant();
+      Class item = getDependent();
       
       if(!context.isPrimitive(item)) {
          return new CompositeList(context, type, item, name);
@@ -152,7 +154,7 @@ class ElementListLabel implements Label {
     * @return this returns the converter for creating a collection 
     */
    private Converter getInlineConverter(Context context, String name) throws Exception {      
-      Class item = getDependant();
+      Class item = getDependent();
       
       if(!context.isPrimitive(item)) {
          return new CompositeInlineList(context, type, item, name);
@@ -213,18 +215,18 @@ class ElementListLabel implements Label {
    }
    
    /**
-    * This is used to acquire the dependant type for the annotated
+    * This is used to acquire the dependent type for the annotated
     * list. This will simply return the type that the collection is
     * composed to hold. This must be a serializable type, that is,
     * a type that is annotated with the <code>Root</code> class.
     * 
     * @return this returns the component type for the collection
     */
-   public Class getDependant() throws Exception  {      
+   public Class getDependent() throws Exception  {      
       Contact contact = getContact();
      
       if(item == void.class) {
-         item = contact.getDependant();
+         item = contact.getDependent();
       }        
       if(item == null) {
          throw new ElementException("Unable to determine type for %s", label);           
@@ -261,7 +263,7 @@ class ElementListLabel implements Label {
    }
    
    /**
-    * This acts as a convinience method used to determine the type of
+    * This acts as a convenience method used to determine the type of
     * contact this represents. This is used when an object is written
     * to XML. It determines whether a <code>class</code> attribute
     * is required within the serialized XML element, that is, if the

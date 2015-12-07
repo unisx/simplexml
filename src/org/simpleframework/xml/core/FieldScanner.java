@@ -36,7 +36,7 @@ import java.lang.reflect.Field;
  * fields marked with an XML annotation. All fields that contain an
  * XML annotation are added as <code>Contact</code> objects to the
  * list of contacts for the class. This scans the object by checking
- * the class heirarchy, this allows a subclass to override a super
+ * the class hierarchy, this allows a subclass to override a super
  * class annotated field, although this should be used rarely.
  * 
  * @author Niall Gallagher
@@ -46,7 +46,12 @@ class FieldScanner extends ContactList {
    /**
     * This is used to acquire the hierarchy for the class scanned.
     */
-   private Hierarchy hierarchy;
+   private final Hierarchy hierarchy;
+   
+   /**
+    * This is the class that is being scanned for annotations.
+    */
+   private final Class type;
    
    /**
     * Constructor for the <code>FieldScanner</code> object. This is
@@ -57,6 +62,7 @@ class FieldScanner extends ContactList {
     */
    public FieldScanner(Class type) {
       this.hierarchy = new Hierarchy(type);
+      this.type = type;
       this.scan(type);
    }
    
@@ -73,7 +79,7 @@ class FieldScanner extends ContactList {
    private void scan(Class type) {
       for(Class next : hierarchy) {
          scan(type, next);
-      }         
+      }  
    }
    
    /**

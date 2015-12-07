@@ -128,7 +128,7 @@ final class MethodPartFactory {
    /**
     * This is used to acquire a <code>MethodName</code> for the name
     * and annotation of the provided method. This must be a getter
-    * method, and so must have a return type that is not voide and 
+    * method, and so must have a return type that is not void and 
     * have not arguments. If the method has arguments an exception 
     * is thrown, if not the Java Bean method name is provided.
     *
@@ -156,7 +156,7 @@ final class MethodPartFactory {
     * and annotation of the provided method. This must be a setter
     * method, and so must accept a single argument, if it contains 
     * more or less than one argument an exception is thrown.
-    * return type that is not voide and
+    * return type that is not void and
     *
     * @param method this is the method to acquire the name for
     * @param type this is the method type to acquire the name for    

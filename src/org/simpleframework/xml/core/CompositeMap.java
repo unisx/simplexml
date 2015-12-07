@@ -113,7 +113,7 @@ class CompositeMap implements Converter {
     * @return this returns the item to attach to the object contact
     */
    public Object read(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       Object map = type.getInstance();
       
       if(!type.isReference()) {
@@ -137,17 +137,17 @@ class CompositeMap implements Converter {
     * @return this returns the item to attach to the object contact
     */
    public Object read(InputNode node, Object result) throws Exception {
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       
       if(type.isReference()) {
          return type.getInstance();
       }
-      Object map = type.getInstance(result);
+      type.setInstance(result);
       
-      if(map != null) {
-         return populate(node, map);
+      if(result != null) {
+         return populate(node, result);
       }
-      return map;
+      return result;
    }
    
    /**
@@ -194,13 +194,13 @@ class CompositeMap implements Converter {
     * @return true if the element matches the XML schema class given 
     */
    public boolean validate(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance value = factory.getInstance(node);
       
-      if(!type.isReference()) {
-         Object real = type.getInstance(type);
-         Class expect = type.getType();
+      if(!value.isReference()) {
+         Object result = value.setInstance(null);
+         Class type = value.getType();
             
-         return validate(node, expect);
+         return validate(node, type);
       }
       return true; 
    }

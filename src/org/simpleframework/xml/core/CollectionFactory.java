@@ -20,6 +20,7 @@
 
 package org.simpleframework.xml.core;
 
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -80,11 +81,11 @@ class CollectionFactory extends Factory {
     * 
     * @return this is the collection instantiated for the field
     */         
-   public Type getInstance(InputNode node) throws Exception {
-      Type type = getOverride(node);
+   public Instance getInstance(InputNode node) throws Exception {
+      Value value = getOverride(node);
      
-      if(type != null) {              
-         return getInstance(type);
+      if(value != null) {              
+         return getInstance(value);
       }
       if(!isInstantiable(field)) {
          field = getConversion(field);
@@ -92,7 +93,7 @@ class CollectionFactory extends Factory {
       if(!isCollection(field)) {
          throw new InstantiationException("Type is not a collection %s", field);
       }
-      return context.getType(field);         
+      return context.getInstance(field);         
    }     
 
    /**
@@ -101,20 +102,20 @@ class CollectionFactory extends Factory {
     * this can promote the type to a collection type that can be 
     * instantiated. This is done by asking the type to convert itself.
     * 
-    * @param type the type used to instantiate the collection
+    * @param value the type used to instantiate the collection
     * 
     * @return this returns a compatible collection instance 
     */
-   public Type getInstance(Type type) throws Exception {
-      Class real = type.getType();
+   public Instance getInstance(Value value) throws Exception {
+      Class type = value.getType();
 
-      if(!isInstantiable(real)) {
-         real = getConversion(real);
+      if(!isInstantiable(type)) {
+         type = getConversion(type);
       }
-      if(!isCollection(real)) {
-         throw new InstantiationException("Type is not a collection %s", real);              
+      if(!isCollection(type)) {
+         throw new InstantiationException("Type is not a collection %s", type);              
       }
-      return new ConversionType(type, real);         
+      return new ConversionInstance(context, value, type);         
    }  
 
    /**

@@ -36,6 +36,8 @@ import java.util.Map;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.filter.Filter;
 import org.simpleframework.xml.filter.PlatformFilter;
+import org.simpleframework.xml.strategy.Strategy;
+import org.simpleframework.xml.strategy.TreeStrategy;
 import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.NodeBuilder;
@@ -56,7 +58,7 @@ import org.simpleframework.xml.transform.Matcher;
  * The read method then reads the contents of the XML stream and builds
  * the object using annotations within the XML schema class.
  * <p>
- * Serialization is peformed by passing an object and an XML stream into
+ * Serialization is performed by passing an object and an XML stream into
  * one of the <code>write</code> methods. The serialization process will
  * use the class of the provided object as the schema class. The object
  * is traversed and all fields are marshalled to the result stream.
@@ -107,7 +109,7 @@ public class Persister implements Serializer {
     * @param format this is used to structure the generated XML
     */
    public Persister(Format format) {
-      this(new DefaultStrategy(), format);
+      this(new TreeStrategy(), format);
    } 
 
    /**
@@ -146,7 +148,7 @@ public class Persister implements Serializer {
     * @param filter the filter used to replace template variables
     */
    public Persister(Filter filter) {
-      this(new DefaultStrategy(), filter);
+      this(new TreeStrategy(), filter);
    }     
 
    /**
@@ -159,7 +161,7 @@ public class Persister implements Serializer {
     * @param format this is used to structure the generated XML
     */
    public Persister(Filter filter, Format format) {
-      this(new DefaultStrategy(), filter, format);
+      this(new TreeStrategy(), filter, format);
    }
    
    /**
@@ -172,7 +174,7 @@ public class Persister implements Serializer {
     * @param matcher this is used to customize the transformations
     */
    public Persister(Matcher matcher) {
-      this(new DefaultStrategy(), matcher);
+      this(new TreeStrategy(), matcher);
    }  
    
    /**
@@ -186,7 +188,7 @@ public class Persister implements Serializer {
     * @param format this is used to structure the generated XML
     */
    public Persister(Matcher matcher, Format format) {
-      this(new DefaultStrategy(), matcher, format);
+      this(new TreeStrategy(), matcher, format);
    }  
 
    /**
@@ -226,7 +228,7 @@ public class Persister implements Serializer {
     * @param matcher this is used to customize the transformations
     */
    public Persister(Filter filter, Matcher matcher) {
-      this(new DefaultStrategy(), filter, matcher);
+      this(new TreeStrategy(), filter, matcher);
    }     
 
    /**
@@ -240,7 +242,7 @@ public class Persister implements Serializer {
     * @param format this is used to structure the generated XML
     */
    public Persister(Filter filter, Matcher matcher, Format format) {
-      this(new DefaultStrategy(), filter, matcher, format);
+      this(new TreeStrategy(), filter, matcher, format);
    }
 
    /**

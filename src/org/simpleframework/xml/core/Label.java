@@ -96,7 +96,7 @@ interface Label {
    public String getName() throws Exception;
    
    /**
-    * This returns the dependant type for the annotation. This type
+    * This returns the dependent type for the annotation. This type
     * is the type other than the annotated field or method type that
     * the label depends on. For the <code>ElementList</code> and 
     * the <code>ElementArray</code> this is the component type that
@@ -104,7 +104,7 @@ interface Label {
     * 
     * @return this is the type that the annotation depends on
     */
-   public Class getDependant() throws Exception;
+   public Class getDependent() throws Exception;
    
    /**
     * This is used to either provide the entry value provided within
@@ -120,7 +120,7 @@ interface Label {
     * This is used to acquire the contact object for this label. The 
     * contact retrieved can be used to set any object or primitive that
     * has been deserialized, and can also be used to acquire values to
-    * be serialized in the case of object persistance. All contacts 
+    * be serialized in the case of object persistence. All contacts 
     * that are retrieved from this method will be accessible. 
     * 
     * @return returns the field that this label is representing
@@ -128,7 +128,7 @@ interface Label {
    public Contact getContact();
 
    /**
-    * This acts as a convinience method used to determine the type of
+    * This acts as a convenience method used to determine the type of
     * the field this represents. This is used when an object is written
     * to XML. It determines whether a <code>class</code> attribute
     * is required within the serialized XML element, that is, if the

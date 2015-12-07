@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.StrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.01 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.011 sec
 ------------- Standard Error -----------------
 base-64-encoder
 base-64-encoder

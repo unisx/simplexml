@@ -24,6 +24,7 @@ import java.beans.Introspector;
 
 import org.simpleframework.xml.filter.Filter;
 import org.simpleframework.xml.filter.PlatformFilter;
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.transform.Matcher;
 import org.simpleframework.xml.transform.Transform;
 import org.simpleframework.xml.transform.Transformer;
@@ -120,17 +121,29 @@ class Support implements Filter {
    }
    
    /**
-    * This is used to create a <code>Type</code> object for the class
-    * specified. This will allow instances of the specified type to
-    * be instantiated and also allows reflective information to be
-    * cached internally within the context object.
+    * This will create an <code>Instance</code> that can be used
+    * to instantiate objects of the specified class. This leverages
+    * an internal constructor cache to ensure creation is quicker.
+    * 
+    * @param value this contains information on the object instance
+    * 
+    * @return this will return an object for instantiating objects
+    */
+   public Instance getInstance(Value value) {
+      return creator.getInstance(value);
+   }
+   
+   /**
+    * This will create an <code>Instance</code> that can be used
+    * to instantiate objects of the specified class. This leverages
+    * an internal constructor cache to ensure creation is quicker.
     * 
     * @param type this is the type that is to be instantiated
     * 
-    * @return this returns a type that can be used for instantiation
+    * @return this will return an object for instantiating objects
     */
-   public Type getType(Class type) throws Exception {
-      return creator.getType(type);
+   public Instance getInstance(Class type) {
+      return creator.getInstance(type);
    }
    
    /**

@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 
 /**
@@ -80,11 +81,11 @@ class MapFactory extends Factory {
     * 
     * @return this is the map object instantiated for the field
     */       
-   public Type getInstance(InputNode node) throws Exception {
-      Type type = getOverride(node);
+   public Instance getInstance(InputNode node) throws Exception {
+      Value value = getOverride(node);
      
-      if(type != null) {              
-         return getInstance(type);
+      if(value != null) {              
+         return getInstance(value);
       }
       if(!isInstantiable(field)) {
          field = getConversion(field);
@@ -92,7 +93,7 @@ class MapFactory extends Factory {
       if(!isMap(field)) {
          throw new InstantiationException("Type is not a map %s", field);
       }
-      return context.getType(field);         
+      return context.getInstance(field);         
    }  
    
    /**
@@ -101,27 +102,27 @@ class MapFactory extends Factory {
     * this can promote the type to a map object type that can be 
     * instantiated. This is done by asking the type to convert itself.
     * 
-    * @param type the type used to instantiate the map object
+    * @param value the type used to instantiate the map object
     * 
     * @return this returns a compatible map object instance 
     */
-   public Type getInstance(Type type) throws Exception {
-      Class real = type.getType();
+   public Instance getInstance(Value value) throws Exception {
+      Class type = value.getType();
 
-      if(!isInstantiable(real)) {
-         real = getConversion(real);
+      if(!isInstantiable(type)) {
+         type = getConversion(type);
       }
-      if(!isMap(real)) {
-         throw new InstantiationException("Type is not a map %s", real);              
+      if(!isMap(type)) {
+         throw new InstantiationException("Type is not a map %s", type);              
       }
-      return new ConversionType(type, real);         
+      return new ConversionInstance(context, value, type);         
    } 
    
    /**
     * This is used to convert the provided type to a map object type
     * from the Java Collections framework. This will check to see if
     * the type is a <code>Map</code> or <code>SortedMap</code> and 
-    * return a <code>HashMapt</code> or <code>TreeSet</code> type. If 
+    * return a <code>HashMap</code> or <code>TreeSet</code> type. If 
     * no suitable match can be found this throws an exception.
     * 
     * @param type this is the type that is to be converted

@@ -22,6 +22,9 @@ package org.simpleframework.xml.core;
 
 import java.beans.Introspector;
 import java.lang.annotation.Annotation;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -47,7 +50,7 @@ import org.simpleframework.xml.Version;
  * 
  * @see org.simpleframework.xml.core.Schema
  */ 
-class Scanner  {
+class Scanner {
    
    /**
     * This method acts as a pointer to the types commit process.
@@ -80,6 +83,11 @@ class Scanner  {
    private String name;
    
    /**
+    * This is the type that is being scanned by this scanner.
+    */
+   private Class type;
+   
+   /**
     * This is used to specify whether the type is a primitive class.
     */
    private boolean primitive;
@@ -95,8 +103,22 @@ class Scanner  {
       this.scanner = new ClassScanner(type);
       this.attributes = new LabelMap(this);
       this.elements = new LabelMap(this); 
+      this.type = type;
       this.scan(type);
    }      
+   
+   /**
+    * This is used to create the object instance. It does this by
+    * either delegating to the default no argument constructor or by
+    * using one of the annotated constructors for the object. This
+    * allows deserialized values to be injected in to the created
+    * object if that is required by the class schema.
+    * 
+    * @return this returns the creator for the class object
+    */
+   public Creator getCreator() {
+      return scanner.getCreator();
+   }
    
    /**
     * This is used to acquire the <code>Decorator</code> for this.
@@ -362,10 +384,8 @@ class Scanner  {
    private void validate(Class type) throws Exception {
       Order order = scanner.getOrder();
       
-      if(order != null) {
-         validateElements(type, order);
-         validateAttributes(type, order);
-      }
+      validateElements(type, order);
+      validateAttributes(type, order);
       validateText(type);
    }
    
@@ -398,11 +418,19 @@ class Scanner  {
     * @throws Exception if an ordered element does not exist
     */
    private void validateElements(Class type, Order order) throws Exception {
-      for(String name : order.elements()) {
-         Label label = elements.get(name);
-         
-         if(label == null) {
-            throw new ElementException("Ordered element '%s' missing for %s", name, type);
+      Creator factory = scanner.getCreator();
+      List<Builder> builders = factory.getBuilders();
+      
+      for(Builder builder : builders) {
+         validateConstructor(builder, elements);
+      }
+      if(order != null) {
+         for(String name : order.elements()) {
+            Label label = elements.get(name);
+            
+            if(label == null) {
+               throw new ElementException("Ordered element '%s' missing for %s", name, type);
+            }
          }
       }
    }
@@ -417,15 +445,51 @@ class Scanner  {
     * @throws Exception if an ordered attribute does not exist
     */
    private void validateAttributes(Class type, Order order) throws Exception {
-      for(String name : order.attributes()) {
-         Label label = attributes.get(name);
-         
-         if(label == null) {
-            throw new AttributeException("Ordered attribute '%s' missing for %s", name, type);
+      Creator factory = scanner.getCreator();
+      List<Builder> builders = factory.getBuilders();
+      
+      for(Builder builder : builders) {
+         validateConstructor(builder, elements);
+      }
+      if(order != null) {
+         for(String name : order.attributes()) {
+            Label label = attributes.get(name);
+            
+            if(label == null) {
+               throw new AttributeException("Ordered attribute '%s' missing for %s", name, type);
+            }
          }
       }
    } 
 
+   /**
+    * This is used to ensure that final methods and fields have a 
+    * constructor parameter that allows the value to be injected in
+    * to. Validating the constructor in this manner ensures that the
+    * class schema remains fully serializable and deserializable.
+    * 
+    * @param builder this is the builder to validate the labels with
+    * @param map this is the map that contains the labels to validate
+    * 
+    * @throws Exception this is thrown if the validation fails
+    */
+   private void validateConstructor(Builder builder, LabelMap map) throws Exception {
+      for(Label label : map) {
+         if(label != null) {
+            Contact contact = label.getContact();
+            String name = label.getName();
+            
+            if(contact.isFinal()) {
+               Parameter value = builder.getParameter(name);
+               
+               if(value == null) {
+                  throw new PersistenceException("Can not set '%s' in '%s'", name, type);
+               }
+            }
+         }
+      }
+   }
+   
    /**
     * This is used to acquire the optional <code>Root</code> from the
     * specified class. The root annotation provides information as
@@ -610,5 +674,50 @@ class Scanner  {
          throw new PersistenceException("Annotation of name '%s' declared twice", name);
       }
       map.put(name, label);      
+      validate(label, name);
+   }
+   
+   /**
+    * This is used to validate the <code>Parameter</code> object that
+    * exist in the constructors. Validation is performed against the
+    * annotated methods and fields to ensure that they match up.
+    * 
+    * @param field this is the annotated method or field to validate
+    * @param name this is the name of the parameter to validate with
+    * 
+    * @throws Exception thrown if the validation fails
+    */
+   private void validate(Label field, String name) throws Exception {
+      Creator factory = scanner.getCreator();
+      Parameter parameter = factory.getParameter(name);
+      
+      if(parameter != null) {
+         validate(field, parameter);
+      }
+   }
+   
+   /**
+    * This is used to validate the <code>Parameter</code> object that
+    * exist in the constructors. Validation is performed against the
+    * annotated methods and fields to ensure that they match up.
+    * 
+    * @param field this is the annotated method or field to validate
+    * @param parameter this is the parameter to validate with
+    * 
+    * @throws Exception thrown if the validation fails
+    */
+   private void validate(Label field, Parameter parameter) throws Exception {
+      Contact contact = field.getContact();
+      Annotation label = contact.getAnnotation();
+      String name = field.getName();
+      
+      if(!parameter.getAnnotation().equals(label)) {
+         throw new PersistenceException("Annotations do not match for '%s' in %s", name, type);
+      }
+      Class expect = contact.getType();
+      
+      if(expect != parameter.getType()) {
+         throw new PersistenceException("Parameter does not match field for '%s' in %s", name, type);
+      }     
    }
 }

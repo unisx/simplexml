@@ -1,0 +1,78 @@
+Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.34 sec
+------------- Standard Output ---------------
+<example number="32">
+   <integer>12</integer>
+   <string>text</string>
+</example><example number="32">
+   <integer>12</integer>
+   <string>text</string>
+</example>
+<example ID="0" number="32">
+   <integer>12</integer>
+   <string ID="1">text</string>
+</example><Example ID="0" number="32">
+   <Integer>12</Integer>
+   <String ID="1">text</String>
+</Example><example number="0">
+   <integer>12</integer>
+   <string>text</string>
+</example><example number="0">
+   <integer>12</integer>
+   <string>text</string>
+</example>
+<example ID="0" number="0">
+   <integer>12</integer>
+   <string ID="1">text</string>
+</example><Example ID="0" number="0">
+   <Integer>12</Integer>
+   <String ID="1">text</String>
+</Example><example number="0">
+   <integer>12</integer>
+</example><example number="0">
+   <integer>12</integer>
+</example>
+<example ID="0" number="0">
+   <integer>12</integer>
+</example><Example ID="0" number="0">
+   <Integer>12</Integer>
+</Example><ArrayExample>
+   <Array length="5">
+      <String>entry one</String>
+      <String>entry two</String>
+      <String>entry three</String>
+      <String>entry four</String>
+      <String>entry five</String>
+   </Array>
+</ArrayExample><ArrayExample>
+   <Array length="5">
+      <String>entry one</String>
+      <String>entry two</String>
+      <String>entry three</String>
+      <String>entry four</String>
+      <String>entry five</String>
+   </Array>
+</ArrayExample>
+<array-example ID="0">
+   <array length="5" ID="1">
+      <string ID="2">entry one</string>
+      <string ID="3">entry two</string>
+      <string ID="4">entry three</string>
+      <string ID="5">entry four</string>
+      <string ID="6">entry five</string>
+   </array>
+</array-example><ArrayExample ID="0">
+   <Array length="5" ID="1">
+      <String ID="2">entry one</String>
+      <String ID="3">entry two</String>
+      <String ID="4">entry three</String>
+      <String ID="5">entry four</String>
+      <String ID="6">entry five</String>
+   </Array>
+</ArrayExample>------------- ---------------- ---------------
+
+Testcase: testConstructor took 0.26 sec
+Testcase: testPartialConstructor took 0.024 sec
+Testcase: testBareConstructor took 0.015 sec
+Testcase: testArrayExample took 0.034 sec
+Testcase: testDirectory took 0.001 sec

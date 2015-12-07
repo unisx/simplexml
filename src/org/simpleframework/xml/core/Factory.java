@@ -22,6 +22,7 @@ package org.simpleframework.xml.core;
 
 import java.lang.reflect.Modifier;
 
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
 
@@ -32,7 +33,7 @@ import org.simpleframework.xml.stream.OutputNode;
  * to determine the type of the field value. The strategy class must be 
  * assignable to the field class type, that is, it must extend it or
  * implement it if it represents an interface. If the strategy returns
- * a null <code>Type</code> then the subclass implementation determines 
+ * a null <code>Value</code> then the subclass implementation determines 
  * the type used to populate the object field value.
  * 
  * @author Niall Gallagher
@@ -86,7 +87,7 @@ abstract class Factory {
     * If the node provided is an element then this checks for a  
     * specific class override using the <code>Strategy</code> object.
     * If the strategy cannot resolve a class then this will return 
-    * null. If the resolved <code>Type</code> is not assignable to 
+    * null. If the resolved <code>Value</code> is not assignable to 
     * the field then this will thrown an exception.
     * 
     * @param node this is the node used to search for the override
@@ -95,17 +96,17 @@ abstract class Factory {
     * 
     * @throws Exception if the override type is not compatible
     */
-   public Type getOverride(InputNode node) throws Exception {
-      Type type = getConversion(node);      
+   protected Value getOverride(InputNode node) throws Exception {
+      Value value = getConversion(node);      
 
-      if(type != null) { 
-         Class real = type.getType();
+      if(value != null) { 
+         Class type = value.getType();
      
-         if(!isCompatible(field, real)) {
-            throw new InstantiationException("Type %s is not compatible with %s", real, field);              
+         if(!isCompatible(field, type)) {
+            throw new InstantiationException("Type %s is not compatible with %s", type, field);              
          }
       }         
-      return type; 
+      return value; 
    }
    
    /**
@@ -139,7 +140,7 @@ abstract class Factory {
     * 
     * @throws Exception thrown if the override class cannot be loaded    
     */ 
-   public Type getConversion(InputNode node) throws Exception {
+   public Value getConversion(InputNode node) throws Exception {
       return context.getOverride(field, node);
    }
    

@@ -43,7 +43,7 @@ import java.util.Set;
  * 
  * @author Niall Gallagher
  * 
- * @see org.simpleframework.xml.core.Strategy
+ * @see org.simpleframework.xml.strategy.Strategy
  */ 
 final class Session implements Map {
 

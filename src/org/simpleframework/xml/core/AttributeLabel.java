@@ -37,16 +37,16 @@ class AttributeLabel implements Label {
     * This is the decorator that is associated with the attribute.
     */
    private Decorator decorator;
+   
+   /**
+    * This contains the details of the annotated contact object.
+    */
+   private Signature detail;
 
    /**
     * Represents the annotation used to label the field.
     */
    private Attribute label;
-
-   /**
-    * This contains the details of the annotated contact object.
-    */
-   private Signature detail;
    
    /**
     * This is the type that the field object references. 
@@ -185,7 +185,7 @@ class AttributeLabel implements Label {
    }
    
    /**
-    * This acts as a convinience method used to determine the type of
+    * This acts as a convenience method used to determine the type of
     * the contact this represents. This will be a primitive type of a
     * primitive type from the <code>java.lang</code> primitives.
     * 
@@ -208,13 +208,13 @@ class AttributeLabel implements Label {
    }
    
    /**
-    * This is used to acquire the dependant class for this label. 
-    * This returns null as there are no dependants to the attribute
-    * annotation as it can only hold primitives with no dependants.
+    * This is used to acquire the dependent class for this label. 
+    * This returns null as there are no dependents to the attribute
+    * annotation as it can only hold primitives with no dependents.
     * 
-    * @return this is used to return the dependant type of null
+    * @return this is used to return the dependent type of null
     */
-   public Class getDependant() {
+   public Class getDependent() {
       return null;
    }
    

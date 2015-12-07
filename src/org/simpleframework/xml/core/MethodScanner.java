@@ -60,22 +60,22 @@ class MethodScanner extends ContactList {
    /**
     * This is used to acquire the hierarchy for the class scanned.
     */
-   private Hierarchy hierarchy;
+   private final Hierarchy hierarchy;
    
    /**
     * This is used to collect all the set methods from the object.
     */
-   private PartMap write;
+   private final PartMap write;
    
    /**
     * This is used to collect all the get methods from the object.
     */
-   private PartMap read;
+   private final PartMap read;
    
    /**
     * This is the type of the object that is being scanned.
     */
-   private Class type;
+   private final Class type;
    
    /**
     * Constructor for the <code>MethodScanner</code> object. This is
@@ -256,19 +256,33 @@ class MethodScanner extends ContactList {
     * the types for the methods and the annotation must also match.
     * 
     * @param read this is a get method that has been extracted
-    * @param name this is the Java Bean methos name to be matched   
+    * @param name this is the Java Bean methods name to be matched   
     *  
     * @throws Exception thrown if there is a problem matching methods
     */
    private void build(MethodPart read, String name) throws Exception {      
       MethodPart match = write.take(name);
-      Method method = read.getMethod();
-      
-      if(match == null) {
-         throw new MethodException("No matching set method for %s in %s", method, type);
-      } 
-      build(read, match);     
+
+      if(match != null) {
+         build(read, match);
+      } else {
+         build(read); // read only
+      }
    }   
+   
+   /**
+    * This method is used to create a read only contact. A read only
+    * contact object is used when there is constructor injection used
+    * by the class schema. So, read only methods can be used in a 
+    * fully serializable and deserializable object.
+    * 
+    * @param read this is the part to add as a read only contact      
+    *  
+    * @throws Exception thrown if there is a problem matching methods
+    */
+   private void build(MethodPart read) throws Exception {
+      add(new MethodContact(read));
+   }
    
    /**
     * This method is used to pair the get methods with a matching set

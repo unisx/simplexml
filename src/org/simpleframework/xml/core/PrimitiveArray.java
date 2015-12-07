@@ -102,7 +102,7 @@ class PrimitiveArray implements Converter {
     * @return this returns the item to attach to the object contact
     */ 
    public Object read(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance type = factory.getInstance(node);
       Object list = type.getInstance();
       
       if(!type.isReference()) {
@@ -144,11 +144,11 @@ class PrimitiveArray implements Converter {
     * @return true if the element matches the XML schema class given 
     */ 
    public boolean validate(InputNode node) throws Exception{
-      Type type = factory.getInstance(node);
+      Instance value = factory.getInstance(node);
       
-      if(!type.isReference()) {
-         Object real = type.getInstance(type);
-         Class expect = type.getType();
+      if(!value.isReference()) {
+         Object result = value.setInstance(null);
+         Class expect = value.getType();
             
          return validate(node, expect);
       }
@@ -223,9 +223,9 @@ class PrimitiveArray implements Converter {
    
    /**
     * This is used to determine whether the specified value has been
-    * overrideen by the strategy. If the item has been overridden
+    * overridden by the strategy. If the item has been overridden
     * then no more serialization is require for that value, this is
-    * effectivly telling the serialization process to stop writing.
+    * effectively telling the serialization process to stop writing.
     * 
     * @param node the node that a potential override is written to
     * @param value this is the object instance to be serialized

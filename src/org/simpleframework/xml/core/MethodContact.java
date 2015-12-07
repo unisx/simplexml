@@ -39,9 +39,14 @@ class MethodContact implements Contact {
     * This is the label that marks both the set and get methods.
     */         
    private Annotation label;
+   
+   /**
+    * This is the set method which is used to set the value.
+    */ 
+   private MethodPart set;
 
    /**
-    * This is the dependant types as taken from the get method.
+    * This is the dependent types as taken from the get method.
     */
    private Class[] items;
    
@@ -61,11 +66,6 @@ class MethodContact implements Contact {
    private Method get;
    
    /**
-    * This is the set method which is used to set the value.
-    */ 
-   private Method set;
-   
-   /**
     * This represents the name of the method for this contact.
     */
    private String name;
@@ -77,16 +77,39 @@ class MethodContact implements Contact {
     * during the serialization process to get and set values.
     *
     * @param get this forms the get method for the object
-    * @param set this forms the get method for the object
+    */ 
+   public MethodContact(MethodPart get) {
+      this(get, null);
+   }
+   
+   /**
+    * Constructor for the <code>MethodContact</code> object. This is
+    * used to compose a point of contact that makes use of a get and
+    * set method on a class. The specified methods will be invoked
+    * during the serialization process to get and set values.
+    *
+    * @param get this forms the get method for the object
+    * @param set this forms the get method for the object 
     */ 
    public MethodContact(MethodPart get, MethodPart set) {
       this.label = get.getAnnotation();   
-      this.items = get.getDependants();
-      this.item = get.getDependant();
-      this.set = set.getMethod();
+      this.items = get.getDependents();
+      this.item = get.getDependent();
       this.get = get.getMethod();
       this.type = get.getType();   
       this.name = get.getName();
+      this.set = set;
+   }  
+   
+   /**
+    * This is used to identify annotated methods are fields that
+    * can not be modified. Such field will require that there is 
+    * a constructor that can have the value injected in to it.
+    * 
+    * @return this returns true if the field or method is final
+    */
+   public boolean isFinal() {
+      return set == null;
    }
    
    /**
@@ -112,7 +135,7 @@ class MethodContact implements Contact {
    public <T extends Annotation> T getAnnotation(Class<T> type) {
       T label = get.getAnnotation(type);
       
-      if(label == null) {
+      if(label == null && set != null) {        
          label = set.getAnnotation(type);
       }
       return label;
@@ -130,26 +153,26 @@ class MethodContact implements Contact {
    }
    
    /**
-    * This provides the dependant class for the contact. This will
+    * This provides the dependent class for the contact. This will
     * actually represent a generic type for the actual type. For
     * contacts that use a <code>Collection</code> type this will
     * be the generic type parameter for that collection.
     * 
-    * @return this returns the dependant type for the contact
+    * @return this returns the dependent type for the contact
     */
-   public Class getDependant() {
+   public Class getDependent() {
       return item;
    }
    
    /**
-    * This provides the dependant classes for the contact. This will
+    * This provides the dependent classes for the contact. This will
     * typically represent a generic types for the actual type. For
     * contacts that use a <code>Map</code> type this will be the 
     * generic type parameter for that map type declaration.
     * 
-    * @return this returns the dependant type for the contact
+    * @return this returns the dependent type for the contact
     */
-   public Class[] getDependants() {
+   public Class[] getDependents() {
       return items;
    } 
    
@@ -175,7 +198,12 @@ class MethodContact implements Contact {
     * @param value this is the value that is to be set on the object
     */    
    public void set(Object source, Object value) throws Exception{
-      set.invoke(source, value);
+      Class type = getType();
+      
+      if(set == null) {
+         throw new MethodException("Method '%s' of '%s' is read only", name, type);
+      }
+      set.getMethod().invoke(source, value);
    }
    
    /**

@@ -20,80 +20,22 @@
 
 package org.simpleframework.xml.core;
 
+import java.util.Set;
+
 import org.simpleframework.xml.Version;
 
 /**
  * The <code>Schema</code> object is used to track which fields within
- * an object have been visited by a converter. This object is nessecary
+ * an object have been visited by a converter. This object is necessary
  * for processing <code>Composite</code> objects. In particular it is
- * nessecary to keep track of which required nodes have been visited 
+ * necessary to keep track of which required nodes have been visited 
  * and which have not, if a required not has not been visited then the
  * XML source does not match the XML class schema and serialization
  * must fail before processing any further. 
  * 
  * @author Niall Gallagher
  */ 
-class Schema {
-   
-   /**
-    * This is the decorator associated with this schema object.
-    */
-   private Decorator decorator;
-
-   /**
-    * Contains a map of all attributes present within the schema.
-    */
-   private LabelMap attributes;
-   
-   /**
-    * Contains a map of all elements present within the schema.
-    */
-   private LabelMap elements;
-   
-   /**
-    * This is the version annotation for the XML class schema.
-    */
-   private Version revision;
-   
-   /**
-    * This is the pointer to the schema class replace method.
-    */
-   private Caller caller;
-   
-   /**
-    * This is the version label used to read the version attribute.
-    */
-   private Label version;
-   
-   /**
-    * This is used to represent a text value within the schema.
-    */
-   private Label text;
-   
-   /**
-    * This is used to specify whether the type is a primitive class.
-    */
-   private boolean primitive;
-
-   /**
-    * Constructor for the <code>Schema</code> object. This is used 
-    * to wrap the element and attribute XML annotations scanned from
-    * a class schema. The schema tracks all fields visited so that
-    * a converter can determine if all fields have been serialized.
-    * 
-    * @param schema this contains all labels scanned from the class
-    * @param context this is the context object for serialization
-    */
-   public Schema(Scanner schema, Context context) throws Exception {   
-      this.attributes = schema.getAttributes(context);
-      this.elements = schema.getElements(context);
-      this.caller = schema.getCaller(context);
-      this.revision = schema.getRevision();
-      this.decorator = schema.getDecorator();
-      this.primitive = schema.isPrimitive();
-      this.version = schema.getVersion();
-      this.text = schema.getText();
-   }
+interface Schema {
    
    /**
     * This is used to determine whether the scanned class represents
@@ -103,9 +45,18 @@ class Schema {
     * 
     * @return this returns true if no XML annotations were found
     */
-   public boolean isPrimitive() {
-      return primitive;
-   }
+   public boolean isPrimitive();
+   
+   /**
+    * This is used to create the object instance. It does this by
+    * either delegating to the default no argument constructor or by
+    * using one of the annotated constructors for the object. This
+    * allows deserialized values to be injected in to the created
+    * object if that is required by the class schema.
+    * 
+    * @return this returns the creator for the class object
+    */
+   public Creator getCreator();
    
    /**
     * This returns the <code>Label</code> that represents the version
@@ -115,9 +66,7 @@ class Schema {
     * 
     * @return this returns the label used for reading the version
     */
-   public Label getVersion() {
-      return version;
-   }
+   public Label getVersion();
    
    /**
     * This is the <code>Version</code> for the scanned class. It 
@@ -128,9 +77,7 @@ class Schema {
     * 
     * @return this returns the version of the class that is scanned
     */
-   public Version getRevision() {
-      return revision;
-   }
+   public Version getRevision();
    
    /**
     * This is used to acquire the <code>Decorator</code> for this.
@@ -141,9 +88,7 @@ class Schema {
     * 
     * @return this returns the decorator associated with this
     */
-   public Decorator getDecorator() {
-      return decorator;
-   }
+   public Decorator getDecorator();
    
    /**
     * This is used to acquire the <code>Caller</code> object. This
@@ -153,9 +98,7 @@ class Schema {
     * 
     * @return this returns the caller for the specified type
     */
-   public Caller getCaller() {
-      return caller;
-   }
+   public Caller getCaller();
    
    /**
     * Returns a <code>LabelMap</code> that contains the details for
@@ -164,9 +107,8 @@ class Schema {
     * 
     * @return map with the details extracted from the schema class
     */ 
-   public LabelMap getAttributes() {
-      return attributes;
-   }   
+   public LabelMap getAttributes();
+   
    /**
     * Returns a <code>LabelMap</code> that contains the details for
     * all fields marked as XML elements. The annotations that are
@@ -175,9 +117,7 @@ class Schema {
     * 
     * @return a map containing the details for XML elements
     */
-   public LabelMap getElements() {
-      return elements;
-   }
+   public LabelMap getElements();
    
    /**
     * This returns the <code>Label</code> that represents the text
@@ -188,7 +128,5 @@ class Schema {
     * 
     * @return this returns the text label for the scanned class
     */
-   public Label getText() {
-      return text;
-   }
+   public Label getText();
 }

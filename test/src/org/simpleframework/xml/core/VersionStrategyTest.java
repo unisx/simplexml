@@ -3,8 +3,8 @@ package org.simpleframework.xml.core;
 import junit.framework.TestCase;
 
 import org.simpleframework.xml.core.Persister;
-import org.simpleframework.xml.core.Strategy;
-import org.simpleframework.xml.core.Type;
+import org.simpleframework.xml.strategy.Strategy;
+import org.simpleframework.xml.strategy.Value;
 import org.simpleframework.xml.stream.Node;
 import org.simpleframework.xml.stream.NodeMap;
 import org.simpleframework.xml.Serializer;
@@ -94,7 +94,7 @@ public class VersionStrategyTest extends TestCase {
 
       private String version;           
 
-      public Type getRoot(Class field, NodeMap root, Map map) throws Exception {
+      public Value getRoot(Class field, NodeMap root, Map map) throws Exception {
          Node version = root.get(VERSION_ATTRIBUTE);                       
 
          if(version != null){
@@ -103,7 +103,7 @@ public class VersionStrategyTest extends TestCase {
          return getElement(field, root, map);
       }
 
-      public Type getElement(Class field, NodeMap node, Map map) throws Exception {
+      public Value getElement(Class field, NodeMap node, Map map) throws Exception {
          String value = field.getName() + map.get(VERSION_ATTRIBUTE);
      
          try {    
@@ -131,7 +131,7 @@ public class VersionStrategyTest extends TestCase {
       }
    }
    
-   public static class SimpleType implements Type{
+   public static class SimpleType implements Value{
 	   
 	   private Class type;
 	   
@@ -139,21 +139,24 @@ public class VersionStrategyTest extends TestCase {
 		   this.type = type;
 	   }
 	   
-	   public Object getInstance() throws Exception {
-		   return getInstance(type);
+	   public int getLength() {
+	      return 0;
 	   }
-
-       public Object getInstance(Class type) throws Exception {
-		   Constructor method = type.getDeclaredConstructor();
-
-		   if(!method.isAccessible()) {
-		      method.setAccessible(true);              
-		   }
-		   return method.newInstance();   
+	   
+	   public Object getValue(){
+	      try {
+   		   Constructor method = type.getDeclaredConstructor();
+   
+   		   if(!method.isAccessible()) {
+   		      method.setAccessible(true);              
+   		   }
+   		   return method.newInstance();   
+	      }catch(Exception e) {
+	         throw new RuntimeException(e);
+	      }
 	   }   
        
-       public Object getInstance(Object value) throws Exception {
-          return value;
+       public void setValue(Object value){
        }
        
        public boolean isReference() {
