@@ -118,7 +118,7 @@ class OutputElement implements OutputNode {
     * @return this returns the prefix associated with this node
     */  
    public String getPrefix(boolean inherit) {
-      String prefix = scope.get(reference);
+      String prefix = scope.getPrefix(reference);
 
       if(inherit) {
          if(prefix == null) {
@@ -284,6 +284,18 @@ class OutputElement implements OutputNode {
     */    
    public void setValue(String value) {
       this.value = value;
+   }
+   
+   /**
+    * This is used to change the name of an output node. This will
+    * only affect the name of the node if the node has not yet been
+    * committed. If the node is committed then this will not be
+    * reflected in the resulting XML generated.
+    * 
+    * @param name this is the name to change the node to
+    */
+   public void setName(String name) {
+      this.name = name;
    }
    
    /**

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.953 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.641 sec
 ------------- Standard Output ---------------
 <test id="0">
    <primitive id="1">
@@ -232,6 +232,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.953 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.734 sec
-Testcase: testPrimitiveReference took 0.219 sec
+Testcase: testPrimitive took 0.461 sec
+Testcase: testPrimitiveReference took 0.173 sec
 Testcase: testDirectory took 0 sec

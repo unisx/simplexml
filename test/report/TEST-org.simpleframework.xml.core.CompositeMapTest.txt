@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CompositeMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.177 sec
 ------------- Standard Output ---------------
 <inlineString>
    <entry key="a" value="1"/>
@@ -27,7 +27,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
    <entry string="b" value="2"/>
 </attributeNoKeyString>------------- ---------------- ---------------
 
-Testcase: testInlineString took 0.156 sec
-Testcase: testNotInlineString took 0.016 sec
-Testcase: testNoAttributeString took 0.156 sec
-Testcase: testAttributeNoKeyString took 0 sec
+Testcase: testInlineString took 0.084 sec
+Testcase: testNotInlineString took 0.002 sec
+Testcase: testNoAttributeString took 0.078 sec
+Testcase: testAttributeNoKeyString took 0.003 sec

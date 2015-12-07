@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.938 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.539 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -354,7 +354,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.938 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.656 sec
-Testcase: testComplexMap took 0.172 sec
-Testcase: testPrimitiveMap took 0.094 sec
+Testcase: testEntryMap took 0.361 sec
+Testcase: testComplexMap took 0.105 sec
+Testcase: testPrimitiveMap took 0.065 sec
 Testcase: testDirectory took 0 sec

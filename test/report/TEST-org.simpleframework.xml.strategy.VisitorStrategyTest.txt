@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.VisitorStrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.718 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.37 sec
 ------------- Standard Output ---------------
 <visitorExample>
    <!-- java.util.ArrayList -->
@@ -108,5 +108,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.718 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testStrategy took 0.703 sec
+Testcase: testStrategy took 0.363 sec
 Testcase: testDirectory took 0 sec

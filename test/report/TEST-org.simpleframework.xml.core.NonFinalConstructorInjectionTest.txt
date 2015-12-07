@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NonFinalConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.469 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
 ------------- Standard Output ---------------
 <nonFinalExample>
    <name>A</name>
@@ -26,5 +26,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.469 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testNonFinal took 0.469 sec
+Testcase: testNonFinal took 0.296 sec
 Testcase: testDirectory took 0 sec

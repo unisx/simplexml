@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DataTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.656 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.433 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
@@ -253,6 +253,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.656 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testData took 0.532 sec
-Testcase: testDataFromByteStream took 0.109 sec
-Testcase: testDirectory took 0 sec
+Testcase: testData took 0.351 sec
+Testcase: testDataFromByteStream took 0.074 sec
+Testcase: testDirectory took 0.001 sec

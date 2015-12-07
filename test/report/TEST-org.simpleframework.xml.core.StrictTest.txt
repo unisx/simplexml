@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.61 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -107,15 +107,15 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.61 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(required=true, data=false, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.StrictTest$NamedStrictObject.name for class org.simpleframework.xml.core.StrictTest$NamedStrictObject at line -1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:658)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:489)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.StrictTest$NamedStrictObject.name for class org.simpleframework.xml.core.StrictTest$NamedStrictObject at line -1
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:700)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:506)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -141,7 +141,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testStrict took 0.531 sec
-Testcase: testNamedStrict took 0.047 sec
-Testcase: testNamedStrictMissingName took 0.016 sec
-Testcase: testDirectory took 0 sec
+Testcase: testStrict took 0.338 sec
+Testcase: testNamedStrict took 0.044 sec
+Testcase: testNamedStrictMissingName took 0.013 sec
+Testcase: testDirectory took 0.001 sec

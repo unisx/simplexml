@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.969 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.504 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -61,16 +61,17 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.969 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:592)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -94,16 +95,17 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=) on method 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredMethodElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:592)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on method 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredMethodElement at line -1
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -127,16 +129,17 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:592)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -160,16 +163,17 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:592)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -195,13 +199,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.344 sec
-Testcase: testRequiredEmptyMethod took 0.031 sec
-Testcase: testRequiredBlank took 0 sec
-Testcase: testOptionalEmpty took 0.016 sec
-Testcase: testOptionalBlank took 0.031 sec
-Testcase: testEmptyCollection took 0.391 sec
-Testcase: testRequiredEmptyAttribute took 0.016 sec
-Testcase: testOptionalEmptyAttribute took 0 sec
-Testcase: testDefaultedAttribute took 0.125 sec
-Testcase: testDirectory took 0 sec
+Testcase: testRequiredEmpty took 0.216 sec
+Testcase: testRequiredEmptyMethod took 0.015 sec
+Testcase: testRequiredBlank took 0.005 sec
+Testcase: testOptionalEmpty took 0.007 sec
+Testcase: testOptionalBlank took 0.003 sec
+Testcase: testEmptyCollection took 0.133 sec
+Testcase: testRequiredEmptyAttribute took 0.017 sec
+Testcase: testOptionalEmptyAttribute took 0.005 sec
+Testcase: testDefaultedAttribute took 0.082 sec
+Testcase: testDirectory took 0.001 sec

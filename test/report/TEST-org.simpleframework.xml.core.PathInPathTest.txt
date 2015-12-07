@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathInPathTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.64 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.37 sec
 ------------- Standard Output ---------------
 <pathInPathRoot>
    <a>
@@ -179,5 +179,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.64 sec
    </a>
 </pathInPathRoot>------------- ---------------- ---------------
 
-Testcase: testPathInPath took 0.625 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPathInPath took 0.363 sec
+Testcase: testDirectory took 0.001 sec

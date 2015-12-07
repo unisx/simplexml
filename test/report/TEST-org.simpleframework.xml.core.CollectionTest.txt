@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.671 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.071 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -635,16 +635,16 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.671 sec
 ------------- Standard Error -----------------
 <test name="example">
    <list class="java.util.HashSet">
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
-         <text>one</text>
-         <description>this is an extended entry</description>
+      <entry id="3">
+         <text>three</text>
       </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
       </entry>
-      <entry id="3">
-         <text>three</text>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
+         <text>one</text>
+         <description>this is an extended entry</description>
       </entry>
    </list>
 </test><test name="example">
@@ -661,20 +661,21 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.671 sec
          <description>this is an extended entry</description>
       </entry>
    </list>
-</test>org.simpleframework.xml.core.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
-	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:122)
+</test>org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.HashSet for field 'list' private java.util.SortedSet org.simpleframework.xml.core.CollectionTest$EntrySortedSet.list at line -1
+	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:147)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -698,20 +699,21 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.671 sec
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayList is not compatible with interface java.util.Set
-	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:122)
+org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.ArrayList for field 'list' private java.util.Set org.simpleframework.xml.core.CollectionTest$EntrySet.list at line -1
+	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:147)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -735,19 +737,20 @@ org.simpleframework.xml.core.InstantiationException: Type class java.util.ArrayL
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Type is not a collection class java.lang.String
+org.simpleframework.xml.core.InstantiationException: Invalid collection class java.lang.String for field 'list' private java.lang.String org.simpleframework.xml.core.CollectionTest$InvalidList.list
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:97)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -771,20 +774,21 @@ org.simpleframework.xml.core.InstantiationException: Type is not a collection cl
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Cannot instantiate class org.simpleframework.xml.core.CollectionTest$UnknownCollection
+org.simpleframework.xml.core.InstantiationException: Cannot instantiate class org.simpleframework.xml.core.CollectionTest$UnknownCollection for field 'list' private org.simpleframework.xml.core.CollectionTest$UnknownCollection org.simpleframework.xml.core.CollectionTest$UnknownCollectionList.list
 	at org.simpleframework.xml.core.CollectionFactory.getConversion(CollectionFactory.java:145)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:94)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -808,21 +812,22 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Cannot instantiate class org.simpleframework.xml.core.CollectionTest$AbstractList
+org.simpleframework.xml.core.InstantiationException: Cannot instantiate class org.simpleframework.xml.core.CollectionTest$AbstractList for field 'list' private java.util.List org.simpleframework.xml.core.CollectionTest$EntryList.list
 	at org.simpleframework.xml.core.CollectionFactory.getConversion(CollectionFactory.java:145)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:116)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:91)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -846,20 +851,21 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Type class java.util.Hashtable is not compatible with interface java.util.List
-	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:122)
+org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.Hashtable for field 'list' private java.util.List org.simpleframework.xml.core.CollectionTest$EntryList.list at line -1
+	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:147)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -894,20 +900,21 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.strategy.TreeStrategy.readValue(TreeStrategy.java:163)
 	at org.simpleframework.xml.strategy.TreeStrategy.read(TreeStrategy.java:102)
 	at org.simpleframework.xml.core.Source.getOverride(Source.java:370)
-	at org.simpleframework.xml.core.Factory.getConversion(Factory.java:162)
-	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:115)
+	at org.simpleframework.xml.core.Factory.getConversion(Factory.java:187)
+	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:139)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
-	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:110)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:637)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:568)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:679)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -933,24 +940,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.375 sec
-Testcase: testSortedSet took 0.25 sec
-Testcase: testList took 0.094 sec
-Testcase: testHashSet took 0.125 sec
-Testcase: testTreeSet took 0.094 sec
-Testcase: testArrayList took 0.078 sec
-Testcase: testSortedSetToSet took 0.015 sec
-Testcase: testExtendedEntry took 0.032 sec
-Testcase: testTypeFromFieldList took 0.125 sec
+Testcase: testSet took 0.213 sec
+Testcase: testSortedSet took 0.14 sec
+Testcase: testList took 0.079 sec
+Testcase: testHashSet took 0.06 sec
+Testcase: testTreeSet took 0.066 sec
+Testcase: testArrayList took 0.063 sec
+Testcase: testSortedSetToSet took 0.007 sec
+Testcase: testExtendedEntry took 0.021 sec
+Testcase: testTypeFromFieldList took 0.09 sec
 Testcase: testTypeFromMethodList took 0.078 sec
-Testcase: testPrimitiveCollection took 0.047 sec
-Testcase: testCompositeCollection took 0.078 sec
-Testcase: testPrimitiveDefaultCollection took 0.047 sec
-Testcase: testSetToSortedSet took 0.062 sec
-Testcase: testListToSet took 0 sec
-Testcase: testInvalidList took 0 sec
-Testcase: testUnknownCollectionList took 0.016 sec
-Testcase: testAbstractList took 0 sec
-Testcase: testNotACollection took 0.015 sec
-Testcase: testMissingCollection took 0.063 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPrimitiveCollection took 0.037 sec
+Testcase: testCompositeCollection took 0.054 sec
+Testcase: testPrimitiveDefaultCollection took 0.03 sec
+Testcase: testSetToSortedSet took 0.005 sec
+Testcase: testListToSet took 0.005 sec
+Testcase: testInvalidList took 0.004 sec
+Testcase: testUnknownCollectionList took 0.064 sec
+Testcase: testAbstractList took 0.006 sec
+Testcase: testNotACollection took 0.01 sec
+Testcase: testMissingCollection took 0.015 sec
+Testcase: testDirectory took 0.001 sec

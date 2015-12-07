@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultWithParametersInGetterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.672 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
 ------------- Standard Output ---------------
 <defaultTestClass>
    <foo>100</foo>
@@ -29,16 +29,16 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodPartFactory.getRead(MethodPartFactory.java:287)
 	at org.simpleframework.xml.core.MethodPartFactory.getName(MethodPartFactory.java:138)
 	at org.simpleframework.xml.core.MethodPartFactory.getInstance(MethodPartFactory.java:110)
-	at org.simpleframework.xml.core.MethodScanner.remove(MethodScanner.java:342)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:253)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:198)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:179)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:158)
-	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:140)
+	at org.simpleframework.xml.core.MethodScanner.remove(MethodScanner.java:354)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:265)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:201)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:182)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:161)
+	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
 	at org.simpleframework.xml.core.Scanner.method(Scanner.java:478)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:351)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:65)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:66)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
 	at org.simpleframework.xml.core.Support.getName(Support.java:232)
 	at org.simpleframework.xml.core.Source.getName(Source.java:250)
@@ -71,16 +71,16 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodPartFactory.getRead(MethodPartFactory.java:287)
 	at org.simpleframework.xml.core.MethodPartFactory.getName(MethodPartFactory.java:138)
 	at org.simpleframework.xml.core.MethodPartFactory.getInstance(MethodPartFactory.java:110)
-	at org.simpleframework.xml.core.MethodScanner.process(MethodScanner.java:275)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:250)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:198)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:179)
-	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:158)
-	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:140)
+	at org.simpleframework.xml.core.MethodScanner.process(MethodScanner.java:287)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:262)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:201)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:182)
+	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:161)
+	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
 	at org.simpleframework.xml.core.Scanner.method(Scanner.java:478)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:351)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:65)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:66)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
 	at org.simpleframework.xml.core.Support.getName(Support.java:232)
 	at org.simpleframework.xml.core.Source.getName(Source.java:250)
@@ -111,7 +111,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDefaultWithParameters took 0.625 sec
+Testcase: testDefaultWithParameters took 0.293 sec
 Testcase: testDefaultWithTransientErrors took 0.016 sec
-Testcase: testDefaultWithElementErrors took 0.016 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDefaultWithElementErrors took 0.005 sec
+Testcase: testDirectory took 0.002 sec

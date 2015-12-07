@@ -1,14 +1,14 @@
 Testsuite: org.simpleframework.xml.core.PathWithExtraSectionTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.329 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.228 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'contact-details' does not have a match in class org.simpleframework.xml.core.PathWithExtraSectionTest$PathSectionIndexExample at line -1
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:563)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:485)
-	at org.simpleframework.xml.core.Composite.readSection(Composite.java:371)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:351)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:217)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:580)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:502)
+	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:234)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -34,6 +34,6 @@ org.simpleframework.xml.core.ElementException: Element 'contact-details' does no
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testExtraSection took 0.297 sec
-Testcase: testExtraSectionWithNonStrict took 0.016 sec
+Testcase: testExtraSection took 0.213 sec
+Testcase: testExtraSectionWithNonStrict took 0.008 sec
 Testcase: testDirectory took 0 sec

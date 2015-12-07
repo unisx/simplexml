@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.75 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.528 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -181,17 +181,17 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.75 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent field 'list' private java.util.List org.simpleframework.xml.core.TextTest$NonPrimitiveTextEntry.list
-	at org.simpleframework.xml.core.TextLabel.getConverter(TextLabel.java:105)
-	at org.simpleframework.xml.core.CacheLabel.getConverter(CacheLabel.java:167)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:616)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:585)
-	at org.simpleframework.xml.core.Composite.readText(Composite.java:507)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
-	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
+org.simpleframework.xml.core.TextException: Cannot use field 'list' private java.util.List org.simpleframework.xml.core.TextTest$NonPrimitiveTextEntry.list to represent @org.simpleframework.xml.Text(required=true, data=false, empty=)
+	at org.simpleframework.xml.core.TextLabel.getConverter(TextLabel.java:165)
+	at org.simpleframework.xml.core.CacheLabel.getConverter(CacheLabel.java:242)
+	at org.simpleframework.xml.core.Composite.readVariable(Composite.java:658)
+	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:627)
+	at org.simpleframework.xml.core.Composite.readText(Composite.java:524)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
+	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
@@ -217,11 +217,11 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.531 sec
-Testcase: testData took 0.079 sec
-Testcase: testDuplicate took 0.015 sec
-Testcase: testIllegalElement took 0.016 sec
-Testcase: testEmpty took 0.015 sec
-Testcase: testOptional took 0.079 sec
-Testcase: testNonPrimitive took 0 sec
-Testcase: testDirectory took 0 sec
+Testcase: testText took 0.366 sec
+Testcase: testData took 0.067 sec
+Testcase: testDuplicate took 0.007 sec
+Testcase: testIllegalElement took 0.012 sec
+Testcase: testEmpty took 0.006 sec
+Testcase: testOptional took 0.053 sec
+Testcase: testNonPrimitive took 0.005 sec
+Testcase: testDirectory took 0.001 sec

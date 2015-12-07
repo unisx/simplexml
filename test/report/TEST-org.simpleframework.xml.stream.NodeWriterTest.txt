@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.NodeWriterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.073 sec
 ------------- Standard Output ---------------
 <root id="test" name="testRoot">
    <child-of-root name="child of root">
@@ -20,7 +20,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.stream.NodeException: No root node
-	at org.simpleframework.xml.stream.OutputDocument.commit(OutputDocument.java:332)
+	at org.simpleframework.xml.stream.OutputDocument.commit(OutputDocument.java:349)
 	at org.simpleframework.xml.stream.NodeWriterTest.testEarlyCommit(NodeWriterTest.java:15)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -39,7 +39,7 @@ org.simpleframework.xml.stream.NodeException: No root node
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testEarlyCommit took 0.047 sec
-Testcase: testBasicWrite took 0.031 sec
-Testcase: testWrite took 0.016 sec
-Testcase: testDirectory took 0 sec
+Testcase: testEarlyCommit took 0.032 sec
+Testcase: testBasicWrite took 0.027 sec
+Testcase: testWrite took 0.005 sec
+Testcase: testDirectory took 0.002 sec

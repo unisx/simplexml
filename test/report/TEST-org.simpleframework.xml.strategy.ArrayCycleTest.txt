@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ArrayCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.797 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.503 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one length="5" id="1">
@@ -232,7 +232,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.797 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.562 sec
-Testcase: testNestedExample took 0.172 sec
-Testcase: testPromotion took 0.063 sec
-Testcase: testDirectory took 0 sec
+Testcase: testCycle took 0.345 sec
+Testcase: testNestedExample took 0.108 sec
+Testcase: testPromotion took 0.041 sec
+Testcase: testDirectory took 0.001 sec

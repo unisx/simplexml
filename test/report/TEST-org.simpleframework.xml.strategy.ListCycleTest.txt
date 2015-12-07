@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ListCycleTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.844 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.534 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one class="java.util.ArrayList" id="1">
@@ -225,8 +225,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.844 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.562 sec
-Testcase: testInlineList took 0.11 sec
-Testcase: testInlinePrimitiveList took 0.093 sec
-Testcase: testNestedExample took 0.063 sec
+Testcase: testCycle took 0.354 sec
+Testcase: testInlineList took 0.071 sec
+Testcase: testInlinePrimitiveList took 0.056 sec
+Testcase: testNestedExample took 0.043 sec
 Testcase: testDirectory took 0 sec
