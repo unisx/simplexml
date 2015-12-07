@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.RegistryConverterTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
 ------------- Standard Output ---------------
 <OrderItem>
    <Envelope>
@@ -18,6 +18,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
 </PersonProfile>
 ------------- ---------------- ---------------
 
-Testcase: testConverter took 0.172 sec
-Testcase: testPersonConverter took 0.031 sec
+Testcase: testConverter took 0.094 sec
+Testcase: testPersonConverter took 0.015 sec
 Testcase: testDirectory took 0 sec

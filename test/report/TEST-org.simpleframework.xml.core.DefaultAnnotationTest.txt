@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultAnnotationTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.141 sec
 ------------- Standard Output ---------------
 <orderItem>
    <customer id="1">
@@ -18,9 +18,9 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:387)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:160)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:140)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:648)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:120)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:478)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:351)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:65)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
 	at org.simpleframework.xml.core.Source.getScanner(Source.java:281)
@@ -47,12 +47,12 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMisMatch took 0.156 sec
-Testcase: testIgnoreStatic took 0.078 sec
+Testcase: testTypeMisMatch took 0.094 sec
+Testcase: testIgnoreStatic took 0.031 sec
 Testcase: testDefault took 0.016 sec
 Testcase: testDirectory took 0 sec

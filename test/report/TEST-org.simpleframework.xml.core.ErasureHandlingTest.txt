@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ErasureHandlingTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.594 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 ------------- Standard Output ---------------
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
@@ -959,11 +959,13 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.594 sec
 org.simpleframework.xml.core.ElementException: Can not have class java.lang.Object as an attribute
 	at org.simpleframework.xml.core.CompositeKey.write(CompositeKey.java:220)
 	at org.simpleframework.xml.core.CompositeMap.write(CompositeMap.java:257)
-	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1175)
-	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1156)
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1037)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:943)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:919)
+	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1217)
+	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1200)
+	at org.simpleframework.xml.core.Composite.writeReplace(Composite.java:1090)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1062)
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:972)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:953)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:930)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:236)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:208)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
@@ -986,14 +988,14 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.375 sec
-Testcase: testPrimitiveErasure took 0.062 sec
+Testcase: testErasure took 0.219 sec
+Testcase: testPrimitiveErasure took 0.047 sec
 Testcase: testEnumErasure took 0.047 sec
-Testcase: testErasureWithMapAttributeIllegalExample took 0.016 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.078 sec
+Testcase: testErasureWithMapAttributeIllegalExample took 0 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.047 sec
 Testcase: testDirectory took 0 sec

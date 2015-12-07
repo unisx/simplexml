@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.CombinedStrategyTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.125 sec
 ------------- Standard Output ---------------
 <combinationExample>
    <item>
@@ -19,6 +19,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
 </combination-example>
 ------------- ---------------- ---------------
 
-Testcase: testCombinedStrategy took 0.188 sec
-Testcase: testCombinationStrategyWithStyle took 0.031 sec
+Testcase: testCombinedStrategy took 0.109 sec
+Testcase: testCombinationStrategyWithStyle took 0.016 sec
 Testcase: testDirectory took 0 sec

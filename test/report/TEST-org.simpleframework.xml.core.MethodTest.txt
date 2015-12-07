@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -159,6 +159,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.312 sec
-Testcase: testImplicitMethodNameExample took 0.094 sec
+Testcase: testExplicitMethodNameExample took 0.203 sec
+Testcase: testImplicitMethodNameExample took 0.078 sec
 Testcase: testDirectory took 0 sec

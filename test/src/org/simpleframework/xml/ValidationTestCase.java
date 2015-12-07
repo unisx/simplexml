@@ -22,7 +22,8 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.custommonkey.xmlunit.XMLTestCase;
+import junit.framework.TestCase;
+
 import org.simpleframework.xml.core.Persister;
 import org.simpleframework.xml.strategy.CycleStrategy;
 import org.simpleframework.xml.strategy.Strategy;
@@ -33,7 +34,6 @@ import org.simpleframework.xml.stream.CamelCaseStyle;
 import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.HyphenStyle;
 import org.simpleframework.xml.stream.InputNode;
-//import org.simpleframework.xml.stream.NodeAdapterBuilder;
 import org.simpleframework.xml.stream.NodeMap;
 import org.simpleframework.xml.stream.OutputNode;
 import org.simpleframework.xml.stream.Style;
@@ -44,7 +44,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 
-public class ValidationTestCase extends XMLTestCase {
+public class ValidationTestCase extends TestCase {
 
    private static TransformerFactory transformerFactory;
   
@@ -224,7 +224,7 @@ public class ValidationTestCase extends XMLTestCase {
              int index = 0;
              if(matcher.matches()) {
                 String value = matcher.group(2);
-                index = Integer.parseInt(value);
+                index = Integer.parseInt(value) -1;
                 path = matcher.group(1);
              }
              List<org.w3c.dom.Element> list = getElementsByTagName(element, path);

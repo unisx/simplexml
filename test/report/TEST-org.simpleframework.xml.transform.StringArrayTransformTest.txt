@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.StringArrayTransformTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.172 sec
 ------------- Standard Output ---------------
 <stringArrayExample attribute="one, two, three, four">
    <element length="4">one, two, three, four</element>
@@ -72,5 +72,5 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
 
 Testcase: testRead took 0 sec
 Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.281 sec
+Testcase: testPersistence took 0.156 sec
 Testcase: testDirectory took 0 sec

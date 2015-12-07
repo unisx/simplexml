@@ -18,15 +18,15 @@ org.simpleframework.xml.transform.InvalidFormatException: Cannot convert 'too lo
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testInteger took 0.016 sec
+Testcase: testInteger took 0.015 sec
 Testcase: testString took 0 sec
 Testcase: testCharacter took 0 sec
-Testcase: testInvalidCharacter took 0.015 sec
+Testcase: testInvalidCharacter took 0 sec
 Testcase: testFloat took 0 sec
 Testcase: testDouble took 0 sec
 Testcase: testBoolean took 0 sec

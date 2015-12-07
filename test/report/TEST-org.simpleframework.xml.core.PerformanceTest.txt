@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PerformanceTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 41.905 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 21.438 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -1136,59 +1136,8 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 41.905 sec
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl
-SIMPLE TOOK 9265ms
-JAVA TOOK 1453ms
-XSTREAM TOOK 5547ms
-XSTREAM --->><org.simpleframework.xml.core.PerformanceTest_-RootEntry>
-  <number>1234</number>
-  <bool>true</bool>
-  <constant>{no.override}</constant>
-  <name>{example.name}</name>
-  <path>{example.path}</path>
-  <text>
-        Some example text where {example.name} is replaced
-        with the system property value and the path is
-        replaced with the path {example.path}
-   </text>
-  <entry>
-    <name>first</name>
-    <one>this is the first element</one>
-    <two>the second element</two>
-    <three>the third elment</three>
-    <grandChild>
-      <entryOne>
-        <name>name.1</name>
-        <value>value.1</value>
-      </entryOne>
-      <entryTwo>
-        <name>name.2</name>
-        <value>value.2</value>
-      </entryTwo>
-    </grandChild>
-  </entry>
-  <list class="list">
-    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-      <name>name.1</name>
-      <value>value.1</value>
-    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-      <name>name.2</name>
-      <value>value.2</value>
-    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-      <name>name.3</name>
-      <value>value.4</value>
-    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-      <name>name.4</name>
-      <value>value.4</value>
-    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-      <name>name.5</name>
-      <value>value.5</value>
-    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
-  </list>
-</org.simpleframework.xml.core.PerformanceTest_-RootEntry>
+SIMPLE TOOK 5031ms
+JAVA TOOK 797ms
 SIMPLE --->><root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
@@ -1229,15 +1178,15 @@ SIMPLE --->><root number="1234" flag="true">
       </entry>
    </list>
 </root>
-Took '7859' ms to process 10000 documents
-Took '8094' ms to process 10000 documents with templates
-Took '6453' ms to process 10000 documents with an empty filter
-Took '2562' ms to write 10000 documents
+Took '3609' ms to process 10000 documents
+Took '5078' ms to process 10000 documents with templates
+Took '5234' ms to process 10000 documents with an empty filter
+Took '1344' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testCompareToOtherSerializers took 16.687 sec
-Testcase: testBasicDocument took 7.969 sec
-Testcase: testTemplateDocument took 8.156 sec
-Testcase: testEmptyFilter took 6.5 sec
-Testcase: testBasicWrite took 2.593 sec
+Testcase: testCompareToOtherSerializers took 5.953 sec
+Testcase: testBasicDocument took 3.672 sec
+Testcase: testTemplateDocument took 5.125 sec
+Testcase: testEmptyFilter took 5.265 sec
+Testcase: testBasicWrite took 1.391 sec
 Testcase: testDirectory took 0 sec

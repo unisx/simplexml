@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.RegistryStrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.235 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.125 sec
 ------------- Standard Output ---------------
 <a:petShop xmlns:a="http://domain/a">
    <b:pets xmlns:b="http://domain/b">
@@ -11,5 +11,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.235 sec
    </b:pets>
 </a:petShop>------------- ---------------- ---------------
 
-Testcase: testConverter took 0.219 sec
+Testcase: testConverter took 0.125 sec
 Testcase: testDirectory took 0 sec
