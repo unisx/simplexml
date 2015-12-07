@@ -108,5 +108,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
    </TextEntry>
 </Example>------------- ---------------- ---------------
 
-Testcase: testCase took 0.313 sec
+Testcase: testCase took 0.298 sec
 Testcase: testDirectory took 0 sec

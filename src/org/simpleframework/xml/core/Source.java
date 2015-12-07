@@ -322,7 +322,7 @@ class Source implements Context {
     * @throws Exception thrown if the class cannot be resolved  
     */
    public Value getOverride(Class type, InputNode node) throws Exception {
-      NodeMap map = node.getAttributes();
+      NodeMap<InputNode> map = node.getAttributes();
       
       if(node.isRoot()) {
          return strategy.getRoot(type, map, session);
@@ -346,7 +346,7 @@ class Source implements Context {
     * @throws Exception thrown if the details cannot be set
     */
    public boolean setOverride(Class type, Object value, OutputNode node) throws Exception {
-      NodeMap map = node.getAttributes();
+      NodeMap<OutputNode> map = node.getAttributes();
       
       if(node.isRoot()) {
          return strategy.setRoot(type, value, map, session);              

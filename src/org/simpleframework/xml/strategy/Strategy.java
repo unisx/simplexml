@@ -22,7 +22,9 @@ package org.simpleframework.xml.strategy;
 
 import java.util.Map;
 
+import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.NodeMap;
+import org.simpleframework.xml.stream.OutputNode;
 
 /**
  * The <code>Strategy</code> interface represents a strategy that can be 
@@ -73,7 +75,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Value getRoot(Class field, NodeMap node, Map map) throws Exception;
+   public Value getRoot(Class field, NodeMap<InputNode> node, Map map) throws Exception;
 
    /**
     * This is used to resolve and load a class for the given element.
@@ -92,7 +94,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Value getElement(Class field, NodeMap node, Map map) throws Exception;
+   public Value getElement(Class field, NodeMap<InputNode> node, Map map) throws Exception;
 
    /**
     * This is used to attach attributes values to the given node
@@ -112,7 +114,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public boolean setRoot(Class field, Object value, NodeMap node, Map map) throws Exception;
+   public boolean setRoot(Class field, Object value, NodeMap<OutputNode> node, Map map) throws Exception;
 
    /**
     * This is used to attach attribute values to the given node
@@ -130,6 +132,6 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public boolean setElement(Class field, Object value, NodeMap node, Map map) throws Exception;
+   public boolean setElement(Class field, Object value, NodeMap<OutputNode> node, Map map) throws Exception;
 
 }

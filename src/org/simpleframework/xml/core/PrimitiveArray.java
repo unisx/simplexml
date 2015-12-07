@@ -20,9 +20,11 @@
 
 package org.simpleframework.xml.core;
 
+import java.lang.reflect.Array;
+
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
-import java.lang.reflect.Array;
+import org.simpleframework.xml.stream.Position;
 
 /**
  * The <code>PrimitiveArray</code> object is used to convert a list of
@@ -123,13 +125,19 @@ class PrimitiveArray implements Converter {
     * @return this returns the item to attach to the object contact
     */ 
    public Object read(InputNode node, Object list) throws Exception{
-      for(int i = 0; true; i++) {
+      int length = Array.getLength(list);
+
+      for(int pos = 0; true; pos++) {
+         Position line = node.getPosition();
          InputNode next = node.getNext();
     
          if(next == null) {
             return list;            
          }
-         Array.set(list, i, root.read(next));
+         if(pos >= length){
+            throw new ElementException("Array length missing or incorrect at %s", line);
+         }
+         Array.set(list, pos, root.read(next));
       } 
    }    
    

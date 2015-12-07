@@ -33,6 +33,16 @@ import java.util.Iterator;
  * @see org.simpleframework.xml.stream.Node
  */ 
 public interface NodeMap<T extends Node> extends Iterable<String> {
+    
+    /**
+     * This is used to acquire the actual node this map represents.
+     * The source node provides further details on the context of
+     * the node, such as the parent name, the namespace, and even
+     * the value in the node. Care should be taken when using this. 
+     * 
+     * @return this returns the node that this map represents
+     */
+    public T getNode();
 
    /**
     * This is used to get the name of the element that owns the

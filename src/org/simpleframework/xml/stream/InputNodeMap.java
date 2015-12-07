@@ -40,7 +40,7 @@ class InputNodeMap extends LinkedHashMap<String, InputNode> implements NodeMap<I
    /**
     * This is the source node that this node map belongs to.
     */          
-   private InputNode source;        
+   private final InputNode source;        
    
    /**
     * Constructor for the <code>InputNodeMap</code> object. This
@@ -65,6 +65,18 @@ class InputNodeMap extends LinkedHashMap<String, InputNode> implements NodeMap<I
    public InputNodeMap(InputNode source, StartElement element) {
       this.source = source;           
       this.put(element);   
+   }
+   
+   /**
+    * This is used to acquire the actual node this map represents.
+    * The source node provides further details on the context of
+    * the node, such as the parent name, the namespace, and even
+    * the value in the node. Care should be taken when using this. 
+    * 
+    * @return this returns the node that this map represents
+    */
+   public InputNode getNode() {
+       return source;
    }
 
    /**

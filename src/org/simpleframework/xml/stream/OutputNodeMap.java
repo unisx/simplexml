@@ -36,7 +36,7 @@ class OutputNodeMap extends LinkedHashMap<String, OutputNode> implements NodeMap
    /**
     * This is the source node that this node map belongs to.
     */         
-   private OutputNode source;
+   private final OutputNode source;
         
    /**
     * Constructor for the <code>OutputNodeMap</code> object. This is
@@ -45,6 +45,18 @@ class OutputNodeMap extends LinkedHashMap<String, OutputNode> implements NodeMap
     */         
    public OutputNodeMap(OutputNode source) {
       this.source = source;           
+   }   
+   
+   /**
+    * This is used to acquire the actual node this map represents.
+    * The source node provides further details on the context of
+    * the node, such as the parent name, the namespace, and even
+    * the value in the node. Care should be taken when using this. 
+    * 
+    * @return this returns the node that this map represents
+    */
+   public OutputNode getNode() {
+       return source;
    }
    
    /**

@@ -300,11 +300,22 @@ class OutputAttribute implements OutputNode {
    /**
     * This is used to determine whether the node has been committed.
     * If the node has been committed, then this will return true.
-    * When committed the node can no longer produce chile nodes.
+    * When committed the node can no longer produce child nodes.
     *
     * @return true if this node has already been committed
     */
    public boolean isCommitted() {
       return true;           
+   }
+   
+   /**
+    * This is used to acquire the name and value of the attribute.
+    * Implementing this method ensures that debugging the output
+    * node is simplified as it is possible to get the actual value.
+    * 
+    * @return this returns the details of this output node
+    */
+   public String toString() {
+       return String.format("attribute %s='%s'", name, value);
    }
 }

@@ -50,7 +50,7 @@ public class PersistenceException extends Exception {
     * 
     * @param cause the source exception this is used to represent
     * @param text a format string used to present the error message
-    * @param list a list of arguments to insert into the stri 
+    * @param list a list of arguments to insert into the string 
     */
    public PersistenceException(Throwable cause, String text, Object... list) {
       super(String.format(text, list), cause);           

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.CycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.109 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.127 sec
 ------------- Standard Output ---------------
 <example id="0">
    <list class="java.util.ArrayList" id="1">
@@ -185,6 +185,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.109 sec
    <Cycle REFERER="0"/>
 </Example>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.266 sec
-Testcase: testMemory took 0.828 sec
+Testcase: testCycle took 0.282 sec
+Testcase: testMemory took 0.829 sec
 Testcase: testDirectory took 0 sec

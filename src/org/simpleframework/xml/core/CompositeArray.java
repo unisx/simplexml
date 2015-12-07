@@ -22,6 +22,8 @@ package org.simpleframework.xml.core;
 
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
+import org.simpleframework.xml.stream.Position;
+
 import java.lang.reflect.Array;
 
 /**
@@ -129,13 +131,19 @@ class CompositeArray implements Converter {
     * @return this returns the item to attach to the object contact
     */  
    public Object read(InputNode node, Object list) throws Exception{
-      for(int i = 0; true; i++) {
+      int length = Array.getLength(list);
+       
+      for(int pos = 0; true; pos++) {
+         Position line = node.getPosition();
          InputNode next = node.getNext();
         
          if(next == null) {
             return list;
          }
-         read(next, list, i);
+         if(pos >= length){
+             throw new ElementException("Array length missing or incorrect at %s", line);
+         }
+         read(next, list, pos);
       } 
    }    
    
