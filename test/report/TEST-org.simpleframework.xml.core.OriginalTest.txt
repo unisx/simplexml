@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OriginalTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.719 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.162 sec
 ------------- Standard Output ---------------
 <exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
@@ -301,6 +301,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.719 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testOriginals took 0.708 sec
-Testcase: testA took 0.001 sec
+Testcase: testOriginals took 0.159 sec
+Testcase: testA took 0 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListTaskTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.633 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.143 sec
 ------------- Standard Output ---------------
 <task name="setup">
    <delete>
@@ -79,5 +79,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.633 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testUnion took 0.623 sec
+Testcase: testUnion took 0.141 sec
 Testcase: testDirectory took 0 sec

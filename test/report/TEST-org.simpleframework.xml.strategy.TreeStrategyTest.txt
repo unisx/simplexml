@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.TreeStrategyTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 49.396 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 9.633 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -1135,14 +1135,14 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 49.396 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-Took '9036' ms to process 10000 documents
-Took '24222' ms to process 10000 documents with templates
-Took '3712' ms to process 10000 documents with an empty filter
-Took '5108' ms to write 10000 documents
+Took '1963' ms to process 10000 documents
+Took '5550' ms to process 10000 documents with templates
+Took '830' ms to process 10000 documents with an empty filter
+Took '1061' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testBasicDocument took 9.699 sec
-Testcase: testTemplateDocument took 24.353 sec
-Testcase: testEmptyFilter took 10.131 sec
-Testcase: testBasicWrite took 5.197 sec
+Testcase: testBasicDocument took 2.11 sec
+Testcase: testTemplateDocument took 5.584 sec
+Testcase: testEmptyFilter took 0.856 sec
+Testcase: testBasicWrite took 1.079 sec
 Testcase: testDirectory took 0.001 sec

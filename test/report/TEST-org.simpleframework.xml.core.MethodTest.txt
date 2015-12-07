@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.882 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.178 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -215,6 +215,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.882 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 2.642 sec
-Testcase: testImplicitMethodNameExample took 0.225 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testExplicitMethodNameExample took 0.13 sec
+Testcase: testImplicitMethodNameExample took 0.046 sec
+Testcase: testDirectory took 0.001 sec

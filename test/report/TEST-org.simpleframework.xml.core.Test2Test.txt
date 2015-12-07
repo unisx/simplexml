@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.Test2Test
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.059 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: Annotation name 'elements' used more than once in @org.simpleframework.xml.ElementListUnion(value=[@org.simpleframework.xml.ElementList(inline=false, entry=element-a, name=elements, data=false, empty=true, required=true, type=class org.simpleframework.xml.core.Test2Test$Test2$MyElementA), @org.simpleframework.xml.ElementList(inline=false, entry=element-b, name=elements, data=false, empty=true, required=true, type=class org.simpleframework.xml.core.Test2Test$Test2$MyElementB)]) for class org.simpleframework.xml.core.Test2Test$Test2
 	at org.simpleframework.xml.core.SignatureScanner.union(SignatureScanner.java:218)
@@ -10,11 +10,11 @@ org.simpleframework.xml.core.UnionException: Annotation name 'elements' used mor
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:139)
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:126)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:73)
-	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:108)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:77)
+	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:109)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:78)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
-	at org.simpleframework.xml.core.Support.getName(Support.java:365)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
+	at org.simpleframework.xml.core.Support.getName(Support.java:419)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
@@ -41,4 +41,4 @@ org.simpleframework.xml.core.UnionException: Annotation name 'elements' used mor
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testException took 0.276 sec
+Testcase: testException took 0.058 sec

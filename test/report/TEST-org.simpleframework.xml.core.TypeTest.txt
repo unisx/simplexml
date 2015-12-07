@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.749 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.173 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -257,5 +257,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.749 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.737 sec
+Testcase: testPrimitive took 0.17 sec
 Testcase: testDirectory took 0.001 sec

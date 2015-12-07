@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextInAPathTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.076 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework.xml.Text(data=false, empty=, required=true) on field 'a' private java.lang.String org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithElement.a used with elements in class org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithElement
 	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:376)
@@ -10,12 +10,12 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:361)
 	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:515)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:500)
-	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
-	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:419)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:373)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:82)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
-	at org.simpleframework.xml.core.Support.getName(Support.java:365)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
+	at org.simpleframework.xml.core.Support.getName(Support.java:419)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
@@ -51,12 +51,12 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:361)
 	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:515)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:500)
-	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
-	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:419)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:373)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:82)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
-	at org.simpleframework.xml.core.Support.getName(Support.java:365)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
+	at org.simpleframework.xml.core.Support.getName(Support.java:419)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
@@ -85,6 +85,6 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testInvalidText took 0.296 sec
-Testcase: testInvalidTextWithCrossingPath took 0.02 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testInvalidText took 0.068 sec
+Testcase: testInvalidTextWithCrossingPath took 0.004 sec
+Testcase: testDirectory took 0.001 sec

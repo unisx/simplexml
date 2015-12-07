@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.781 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.176 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -117,8 +117,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.781 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.541 sec
-Testcase: testPartialConstructor took 0.086 sec
-Testcase: testBareConstructor took 0.072 sec
-Testcase: testArrayExample took 0.069 sec
+Testcase: testConstructor took 0.121 sec
+Testcase: testPartialConstructor took 0.019 sec
+Testcase: testBareConstructor took 0.017 sec
+Testcase: testArrayExample took 0.016 sec
 Testcase: testDirectory took 0 sec

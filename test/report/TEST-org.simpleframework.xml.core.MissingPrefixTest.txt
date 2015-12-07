@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MissingPrefixTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.083 sec
 ------------- Standard Error -----------------
 java.lang.NoSuchFieldException: provider
 	at java.lang.Class.getDeclaredField(Class.java:1882)
@@ -78,4 +78,4 @@ java.lang.NoSuchFieldException: provider
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testMissingPrefix took 0.362 sec
+Testcase: testMissingPrefix took 0.082 sec

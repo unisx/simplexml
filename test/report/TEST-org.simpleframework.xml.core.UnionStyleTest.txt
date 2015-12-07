@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionStyleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.769 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
 ------------- Standard Output ---------------
 <UnionListExample>
    <IntegerField>
@@ -217,6 +217,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.769 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testCamelCaseStyle took 0.617 sec
-Testcase: testHyphenStyle took 0.141 sec
+Testcase: testCamelCaseStyle took 0.136 sec
+Testcase: testHyphenStyle took 0.032 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextAndElementTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.683 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.129 sec
 ------------- Standard Output ---------------
 <pathWithTextAndElementExample>
    <some>
@@ -32,5 +32,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.683 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testTextWithPath took 0.673 sec
+Testcase: testTextWithPath took 0.126 sec
 Testcase: testDirectory took 0 sec

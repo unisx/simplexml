@@ -1,17 +1,17 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.063 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Type is not compatible with @org.simpleframework.xml.Element(name=k, data=true, required=true, type=void) on field 'key' private final java.lang.String org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest$Example.key for 'k' in parameter 0 of constructor public org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest$Example(int,java.lang.String)
 	at org.simpleframework.xml.core.InstantiatorBuilder.validateParameter(InstantiatorBuilder.java:271)
 	at org.simpleframework.xml.core.InstantiatorBuilder.validate(InstantiatorBuilder.java:251)
 	at org.simpleframework.xml.core.InstantiatorBuilder.build(InstantiatorBuilder.java:114)
 	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:483)
-	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:417)
-	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:373)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:82)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
-	at org.simpleframework.xml.core.Support.getName(Support.java:365)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
+	at org.simpleframework.xml.core.Support.getName(Support.java:419)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
@@ -40,5 +40,5 @@ org.simpleframework.xml.core.ConstructorException: Type is not compatible with @
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testDifferentTypes took 0.382 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testDifferentTypes took 0.06 sec
+Testcase: testDirectory took 0 sec

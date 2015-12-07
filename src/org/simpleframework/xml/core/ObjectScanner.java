@@ -21,6 +21,7 @@ package org.simpleframework.xml.core;
 import java.lang.annotation.Annotation;
 import java.util.List;
 
+import org.simpleframework.xml.DefaultType;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Version;
 
@@ -427,7 +428,8 @@ class ObjectScanner implements Scanner {
     */    
    private void field(Detail detail) throws Exception {
       Class type = detail.getType();
-      ContactList list = support.getFields(type);
+      DefaultType access = detail.getOverride();
+      ContactList list = support.getFields(type, access);
       
       for(Contact contact : list) {
          Annotation label = contact.getAnnotation();
@@ -447,7 +449,8 @@ class ObjectScanner implements Scanner {
     */ 
    private void method(Detail detail) throws Exception {
       Class type = detail.getType();
-      ContactList list = support.getMethods(type);
+      DefaultType access = detail.getOverride();
+      ContactList list = support.getMethods(type, access);
       
       for(Contact contact : list) {
          Annotation label = contact.getAnnotation();

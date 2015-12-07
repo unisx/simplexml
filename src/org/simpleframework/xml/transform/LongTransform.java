@@ -28,7 +28,7 @@ package org.simpleframework.xml.transform;
  * <pre>
  * 
  *    &#64;Attribute
- *    private Long octet;
+ *    private Long value;
  *    
  * </pre>
  * As well as the XML attribute values using transforms, fields and

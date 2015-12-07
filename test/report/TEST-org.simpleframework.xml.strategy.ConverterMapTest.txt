@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ConverterMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.129 sec
 ------------- Standard Output ---------------
 <mapHolder>
    <map class="java.util.HashMap">
@@ -153,5 +153,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.569 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testMap took 0.558 sec
+Testcase: testMap took 0.126 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.341 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.301 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -639,12 +639,12 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.341 sec
          <text>two</text>
          <description>this is the second one</description>
       </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
-      </entry>
-      <entry id="3">
-         <text>three</text>
       </entry>
    </list>
 </test><test name="example">
@@ -652,13 +652,13 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.341 sec
       <entry id="3">
          <text>three</text>
       </entry>
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
-         <text>two</text>
-         <description>this is the second one</description>
-      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
+      </entry>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
+         <text>two</text>
+         <description>this is the second one</description>
       </entry>
    </list>
 </test>org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.HashSet for field 'list' private java.util.SortedSet org.simpleframework.xml.core.CollectionTest$EntrySortedSet.list at line 3
@@ -926,24 +926,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.356 sec
-Testcase: testSortedSet took 0.185 sec
-Testcase: testList took 0.077 sec
-Testcase: testHashSet took 0.079 sec
-Testcase: testTreeSet took 0.081 sec
-Testcase: testArrayList took 0.086 sec
-Testcase: testSortedSetToSet took 0.01 sec
-Testcase: testExtendedEntry took 0.04 sec
-Testcase: testTypeFromFieldList took 0.092 sec
-Testcase: testTypeFromMethodList took 0.087 sec
-Testcase: testPrimitiveCollection took 0.052 sec
-Testcase: testCompositeCollection took 0.075 sec
-Testcase: testPrimitiveDefaultCollection took 0.042 sec
-Testcase: testSetToSortedSet took 0.009 sec
-Testcase: testListToSet took 0.008 sec
-Testcase: testInvalidList took 0.008 sec
-Testcase: testUnknownCollectionList took 0.008 sec
-Testcase: testAbstractList took 0.007 sec
-Testcase: testNotACollection took 0.008 sec
-Testcase: testMissingCollection took 0.008 sec
+Testcase: testSet took 0.08 sec
+Testcase: testSortedSet took 0.042 sec
+Testcase: testList took 0.019 sec
+Testcase: testHashSet took 0.018 sec
+Testcase: testTreeSet took 0.018 sec
+Testcase: testArrayList took 0.019 sec
+Testcase: testSortedSetToSet took 0.002 sec
+Testcase: testExtendedEntry took 0.009 sec
+Testcase: testTypeFromFieldList took 0.019 sec
+Testcase: testTypeFromMethodList took 0.02 sec
+Testcase: testPrimitiveCollection took 0.011 sec
+Testcase: testCompositeCollection took 0.017 sec
+Testcase: testPrimitiveDefaultCollection took 0.009 sec
+Testcase: testSetToSortedSet took 0.002 sec
+Testcase: testListToSet took 0.002 sec
+Testcase: testInvalidList took 0.002 sec
+Testcase: testUnknownCollectionList took 0.002 sec
+Testcase: testAbstractList took 0.002 sec
+Testcase: testNotACollection took 0.002 sec
+Testcase: testMissingCollection took 0.001 sec
 Testcase: testDirectory took 0 sec

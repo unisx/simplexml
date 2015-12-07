@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ProviderInformationTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.388 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.088 sec
 ------------- Standard Output ---------------
 Constructor exception Ordered element 'providerInformation' missing for class org.simpleframework.xml.core.ProviderInformationTest$SolutionPackageDeploymentType
 ------------- ---------------- ---------------
@@ -7,11 +7,11 @@ Constructor exception Ordered element 'providerInformation' missing for class or
 org.simpleframework.xml.core.ElementException: Ordered element 'providerInformation' missing for class org.simpleframework.xml.core.ProviderInformationTest$SolutionPackageDeploymentType
 	at org.simpleframework.xml.core.StructureBuilder.validateElements(StructureBuilder.java:620)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:498)
-	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
-	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:419)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:373)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:82)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
 	at org.simpleframework.xml.core.Source.getScanner(Source.java:271)
 	at org.simpleframework.xml.core.Source.getSchema(Source.java:317)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:198)
@@ -40,4 +40,4 @@ org.simpleframework.xml.core.ElementException: Ordered element 'providerInformat
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testToString took 0.379 sec
+Testcase: testToString took 0.086 sec

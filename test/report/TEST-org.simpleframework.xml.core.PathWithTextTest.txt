@@ -1,17 +1,17 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.324 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.067 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework.xml.Text(data=false, empty=, required=true) on field 'text' private java.lang.String org.simpleframework.xml.core.PathWithTextTest$PathWithTextExample.text can not be used with paths in class org.simpleframework.xml.core.PathWithTextTest$PathWithTextExample
 	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:379)
 	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:362)
 	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:515)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:500)
-	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
-	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:419)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:373)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:82)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
-	at org.simpleframework.xml.core.Support.getName(Support.java:365)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
+	at org.simpleframework.xml.core.Support.getName(Support.java:419)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
@@ -40,5 +40,5 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testTextWithPath took 0.311 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testTextWithPath took 0.064 sec
+Testcase: testDirectory took 0 sec

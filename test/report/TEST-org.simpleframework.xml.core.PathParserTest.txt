@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathParserTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 2.12 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.028 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Path '//' in class org.simpleframework.xml.core.PathParserTest references document root
 	at org.simpleframework.xml.core.PathParser.path(PathParser.java:425)
@@ -320,13 +320,13 @@ org.simpleframework.xml.core.PathException: Attribute reference in 'a@' for clas
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testStyledPath took 0.034 sec
-Testcase: testStyledPathWithPrefixes took 0.002 sec
-Testcase: testEmptyPath took 0.004 sec
-Testcase: testAttributePath took 0.009 sec
+Testcase: testStyledPath took 0.005 sec
+Testcase: testStyledPathWithPrefixes took 0 sec
+Testcase: testEmptyPath took 0.001 sec
+Testcase: testAttributePath took 0.002 sec
 Testcase: testSimplePath took 0.001 sec
-Testcase: testPathPrefix took 0.001 sec
-Testcase: testAttribute took 0.001 sec
+Testcase: testPathPrefix took 0 sec
+Testcase: testAttribute took 0 sec
 Testcase: testIndex took 0.001 sec
-Testcase: testExpressions took 0.001 sec
-Testcase: testExceptions took 0.075 sec
+Testcase: testExpressions took 0 sec
+Testcase: testExceptions took 0.015 sec

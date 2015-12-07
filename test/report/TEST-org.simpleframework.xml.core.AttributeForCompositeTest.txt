@@ -1,9 +1,9 @@
 Testsuite: org.simpleframework.xml.core.AttributeForCompositeTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.309 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.069 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.transform.TransformException: Transform of class java.util.HashMap not supported
 	at org.simpleframework.xml.transform.Transformer.write(Transformer.java:124)
-	at org.simpleframework.xml.core.Support.write(Support.java:333)
+	at org.simpleframework.xml.core.Support.write(Support.java:387)
 	at org.simpleframework.xml.core.PrimitiveFactory.getText(PrimitiveFactory.java:128)
 	at org.simpleframework.xml.core.Composite.writeAttribute(Composite.java:1199)
 	at org.simpleframework.xml.core.Composite.writeAttributes(Composite.java:1064)
@@ -37,4 +37,4 @@ org.simpleframework.xml.transform.TransformException: Transform of class java.ut
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testAttr took 0.299 sec
+Testcase: testAttr took 0.067 sec

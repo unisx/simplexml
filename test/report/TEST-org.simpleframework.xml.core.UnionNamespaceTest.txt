@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.598 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.135 sec
 ------------- Standard Output ---------------
 <example>
    <path>
@@ -34,5 +34,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.598 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testNamespaceWithUnion took 0.588 sec
+Testcase: testNamespaceWithUnion took 0.134 sec
 Testcase: testDirectory took 0 sec

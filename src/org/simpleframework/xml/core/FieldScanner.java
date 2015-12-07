@@ -74,7 +74,7 @@ class FieldScanner extends ContactList {
     * @param support this contains various support functions
     */
    public FieldScanner(Detail detail, Support support) throws Exception {
-      this.factory = new AnnotationFactory(detail);
+      this.factory = new AnnotationFactory(detail, support);
       this.done = new ContactMap();
       this.support = support;
       this.scan(detail);
@@ -89,11 +89,12 @@ class FieldScanner extends ContactList {
     * @param detail this contains the details for the class scanned
     */
    private void scan(Detail detail) throws Exception {
+      DefaultType override = detail.getOverride();
       DefaultType access = detail.getAccess();
       Class base = detail.getSuper();
       
       if(base != null) {
-         extend(base);
+         extend(base, override);
       }
       extract(detail, access);
       extract(detail);
@@ -107,9 +108,10 @@ class FieldScanner extends ContactList {
     * this improves the performance of classes within a hierarchy.
     * 
     * @param base the class to inherit scanned fields from
+    * @param access this is the access type used for the super type
     */
-   private void extend(Class base) throws Exception {
-      ContactList list = support.getFields(base);
+   private void extend(Class base, DefaultType access) throws Exception {
+      ContactList list = support.getFields(base, access);
       
       if(list != null) {
          addAll(list);
@@ -155,7 +157,7 @@ class FieldScanner extends ContactList {
             Field field = entry.getField();
             Class real = field.getType();
             
-            if(!isStatic(field)) {
+            if(!isStatic(field) && !isTransient(field)) {
                process(field, real, list);
             }
          }   
@@ -219,7 +221,8 @@ class FieldScanner extends ContactList {
     * @param list this is the list of annotations on the field
     */
    private void process(Field field, Class type, Annotation[] list) throws Exception {
-      Annotation label = factory.getInstance(type);
+      Class[] dependents = Reflector.getDependents(field);
+      Annotation label = factory.getInstance(type, dependents);
       
       if(label != null) {
          process(field, label, list);
@@ -322,6 +325,25 @@ class FieldScanner extends ContactList {
       int modifier = field.getModifiers();
       
       if(Modifier.isStatic(modifier)) {
+         return true;
+      }
+      return false;
+   }
+   
+   /**
+    * This is used to determine if a field is transient. For default
+    * fields that are processed no transient field should be 
+    * considered. This ensures that the serialization of the object
+    * behaves in the same manner as with Java Object Serialization.
+    * 
+    * @param field this is the field to check for transience
+    * 
+    * @return this returns true if the field is a transient one
+    */
+   private boolean isTransient(Field field) {
+      int modifier = field.getModifiers();
+      
+      if(Modifier.isTransient(modifier)) {
          return true;
       }
       return false;

@@ -142,6 +142,17 @@ interface Detail {
    DefaultType getAccess();
    
    /**
+    * This returns the <code>DefaultType</code> override used for this
+    * detail. An override is used only when the class contains no
+    * annotations and does not have a <code>Transform</code> of any 
+    * type associated with it. It allows serialization of external
+    * objects without the need to annotate the types.
+    * 
+    * @return this returns the  access type override for this type
+    */
+   DefaultType getOverride();
+   
+   /**
     * This returns the <code>Namespace</code> annotation that was
     * declared on the type. If no annotation has been declared on the
     * type this will return null as not belonging to any.

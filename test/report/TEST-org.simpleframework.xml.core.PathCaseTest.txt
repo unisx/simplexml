@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathCaseTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.493 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
 ------------- Standard Output ---------------
 <caseExample>
    <SomePath>
@@ -27,11 +27,11 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'SomePath[1]/A[1]' 
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:142)
 	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:126)
 	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:73)
-	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:108)
-	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:77)
+	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:109)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:78)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:81)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:303)
-	at org.simpleframework.xml.core.Support.getName(Support.java:365)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:357)
+	at org.simpleframework.xml.core.Support.getName(Support.java:419)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
@@ -58,6 +58,6 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'SomePath[1]/A[1]' 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testNoStyle took 0.426 sec
-Testcase: testStyle took 0.034 sec
-Testcase: testOtherStyle took 0.024 sec
+Testcase: testNoStyle took 0.094 sec
+Testcase: testStyle took 0.007 sec
+Testcase: testOtherStyle took 0.006 sec

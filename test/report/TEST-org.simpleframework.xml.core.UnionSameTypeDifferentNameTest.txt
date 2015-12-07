@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionSameTypeDifferentNameTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.782 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
 ------------- Standard Output ---------------
 <optionalNameExample>
    <login>john.doe</login>
@@ -54,5 +54,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.782 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalName took 1.766 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testOptionalName took 0.126 sec
+Testcase: testDirectory took 0 sec

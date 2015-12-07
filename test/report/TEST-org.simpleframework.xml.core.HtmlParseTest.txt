@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.HtmlParseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.553 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
 ------------- Standard Output ---------------
 <document><body><p>
 This is a test <b>Bold text</b> other text. This is <i>italics</i> and also another <p>Paragraph <i>italic</i> inside a paragraph</p></p></body></document><document><body><p>
@@ -44,5 +44,5 @@ This is a test
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testDocument took 0.543 sec
+Testcase: testDocument took 0.125 sec
 Testcase: testDirectory took 0 sec

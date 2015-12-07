@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.63 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.143 sec
 ------------- Standard Output ---------------
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
@@ -81,5 +81,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.63 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.619 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testList took 0.141 sec
+Testcase: testDirectory took 0 sec

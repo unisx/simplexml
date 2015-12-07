@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.977 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.223 sec
 ------------- Standard Output ---------------
 <test id="0">
    <primitive id="1">
@@ -246,6 +246,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.977 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.775 sec
-Testcase: testPrimitiveReference took 0.189 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testPrimitive took 0.177 sec
+Testcase: testPrimitiveReference took 0.044 sec
+Testcase: testDirectory took 0 sec

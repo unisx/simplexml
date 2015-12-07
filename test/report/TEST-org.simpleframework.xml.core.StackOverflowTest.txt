@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StackOverflowTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 7.459 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.643 sec
 ------------- Standard Output ---------------
 <delivery>
    <newBenefit>
@@ -31014,5 +31014,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 7.459 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testStackOverflow took 7.449 sec
+Testcase: testStackOverflow took 1.64 sec
 Testcase: testDirectory took 0 sec
