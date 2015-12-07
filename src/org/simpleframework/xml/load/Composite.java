@@ -50,7 +50,7 @@ import org.simpleframework.xml.stream.Position;
  * Serialization requires that contacts marked as required must have
  * values that are not null. This ensures that the serialized object
  * can be deserialized at a later stage using the same class schema.
- * If a required value is null the serialization terminates an an
+ * If a required value is null the serialization terminates and an
  * exception is thrown.
  * 
  * @author Niall Gallagher
@@ -146,9 +146,9 @@ class Composite implements Converter {
    }
    
    /**
-    * The <code>replace</code> method is used to determine if there is
-    * a replacement method which can be used to substitute the object
-    * deserialized. The replace method is used when an object wishes 
+    * The <code>readResolve</code> method is used to determine if there 
+    * is a resolution method which can be used to substitute the object
+    * deserialized. The resolve method is used when an object wishes 
     * to provide a substitute within the deserialized object graph.
     * This acts as an equivelant to the Java Object Serialization
     * <code>readResolve</code> method for the object deserialization.
@@ -195,7 +195,7 @@ class Composite implements Converter {
    }   
 
    /**
-    * This <code>read</code> method is used to read the attributes from
+    * This <code>readAttributes</code> method reads the attributes from
     * the provided XML element. This will iterate over all attributes
     * within the element and convert those attributes as primitives to
     * contact values within the source object.
@@ -222,7 +222,7 @@ class Composite implements Converter {
    }
 
    /**
-    * This <code>read</code> method is used to read the elements from
+    * This <code>readElements</code> method reads the elements from 
     * the provided XML element. This will iterate over all elements
     * within the element and convert those elements to primitives or
     * composite objects depending on the contact annotation.
@@ -253,7 +253,7 @@ class Composite implements Converter {
    }
    
    /**
-    * This <code>read</code> method is used to read the text value
+    * This <code>readText</code> method is used to read the text value
     * from the XML element node specified. This will check the class
     * schema to determine if a <code>Text</code> annotation was
     * specified. If one was specified then the text within the XML
@@ -274,7 +274,7 @@ class Composite implements Converter {
    }
    
    /**
-    * This <code>read</code> method is used to perform deserialization
+    * This <code>readAttribute</code> method is used for deserialization
     * of the provided node object using a delegate converter. This is
     * typically another <code>Composite</code> converter, or if the
     * node is an attribute a <code>Primitive</code> converter. When
@@ -302,7 +302,7 @@ class Composite implements Converter {
    }
 
    /**
-    * This <code>read</code> method is used to perform deserialization
+    * This <code>readElement</code> method is used for deserialization
     * of the provided node object using a delegate converter. This is
     * typically another <code>Composite</code> converter, or if the
     * node is an attribute a <code>Primitive</code> converter. When
@@ -365,8 +365,8 @@ class Composite implements Converter {
             store.put(label, object);
          }
       }         
-   }
-   
+   }   
+
    /**
     * This method checks to see if there are any <code>Label</code>
     * objects remaining in the provided map that are required. This is
@@ -387,6 +387,238 @@ class Composite implements Converter {
       for(Label label : map) {
          if(label.isRequired()) {
             throw new ValueRequiredException("Unable to satisfy %s for %s at %s", label, type, line);
+         }
+      }      
+   }
+   
+   /**
+    * This <code>validate</code> method performs validation of the XML
+    * schema class type by traversing the contacts and validating them
+    * using details from the provided XML element. Because this will
+    * validate a non-primitive value it delegates to other converters 
+    * to perform validation of lists, maps, and primitives.
+    * <p>
+    * If any of the required contacts are not present within the given
+    * XML element this will terminate validation and throw an exception
+    * The annotation missing is reported in the exception.
+    * 
+    * @param node the XML element contact values are deserialized from
+    * 
+    * @return true if the XML element matches the XML schema class given 
+    */
+   public boolean validate(InputNode node) throws Exception {      
+      Type type = factory.getInstance(node);
+      
+      if(!type.isReference()) {
+         Object real = type.getInstance(type);
+         Class expect = type.getType();
+            
+         return validate(node, expect);
+      }
+      return true;  
+   }
+   
+   /**
+    * This <code>validate</code> method performs validation of the XML
+    * schema class type by traversing the contacts and validating them
+    * using details from the provided XML element. Because this will
+    * validate a non-primitive value it delegates to other converters 
+    * to perform validation of lists, maps, and primitives.
+    * <p>
+    * If any of the required contacts are not present within the given
+    * XML element this will terminate validation and throw an exception
+    * The annotation missing is reported in the exception.
+    * 
+    * @param node the XML element contact values are deserialized from
+    * @param source the object whose contacts are to be deserialized
+    */
+   private boolean validate(InputNode node, Class type) throws Exception {
+      Schema schema = root.getSchema(type);
+      
+      validateText(node, schema);
+      validateAttributes(node, schema);
+      validateElements(node, schema);
+      
+      return node.isElement();
+   }   
+
+   /**
+    * This <code>validateAttributes</code> method validates the attributes 
+    * from the provided XML element. This will iterate over all attributes
+    * within the element and validate those attributes as primitives to
+    * contact values within the source object.
+    * <p>
+    * Once all attributes within the XML element have been evaluated the
+    * <code>Schema</code> is checked to ensure that there are no required 
+    * contacts annotated with the <code>Attribute</code> that remain. If 
+    * any required attribute remains an exception is thrown. 
+    * 
+    * @param node this is the XML element to be validated
+    * @param schema this is used to visit the attribute contacts
+    * 
+    * @throws Exception thrown if any required attributes remain
+    */
+   private void validateAttributes(InputNode node, Schema schema) throws Exception {
+      NodeMap list = node.getAttributes();
+      LabelMap map = schema.getAttributes();
+
+      for(String name : list) {         
+         validateAttribute(node.getAttribute(name), map);
+      }  
+      validate(node, map);
+   }
+
+   /**
+    * This <code>validateElements</code> method validates the elements 
+    * from the provided XML element. This will iterate over all elements
+    * within the element and validate those elements as primitives or
+    * composite objects depending on the contact annotation.
+    * <p>
+    * Once all elements within the XML element have been evaluated
+    * the <code>Schema</code> is checked to ensure that there are no
+    * required contacts annotated with the <code>Element</code> that
+    * remain. If any required element remains an exception is thrown.
+    * 
+    * @param node this is the XML element to be evaluated
+    * @param schema this is used to visit the element contacts
+    * 
+    * @throws Exception thrown if any required elements remain
+    */
+   private void validateElements(InputNode node, Schema schema) throws Exception {
+      LabelMap map = schema.getElements();
+      
+      while(true) {
+         InputNode child = node.getNext(); 
+         
+         if(child == null) {
+            break;
+         }
+         validateElement(child, map);
+      } 
+      validate(node, map);
+   }
+   
+   /**
+    * This <code>validateText</code> method validates the text value 
+    * from the XML element node specified. This will check the class
+    * schema to determine if a <code>Text</code> annotation was used. 
+    * If one was specified then the text within the XML element input 
+    * node is checked to determine if it is a valid entry.
+    * 
+    * @param node this is the XML element to acquire the text from
+    * @param schema this is used to visit the element contacts
+    * 
+    * @throws Exception thrown if a required text value was null
+    */
+   private void validateText(InputNode node, Schema schema) throws Exception {
+      Label label = schema.getText();
+      
+      if(label != null) {
+         validate(node, label);
+      }
+   }
+   
+   /**
+    * This <code>validateAttribute</code> method performs a validation
+    * of the provided node object using a delegate converter. This is
+    * typically another <code>Composite</code> converter, or if the
+    * node is an attribute a <code>Primitive</code> converter. If this
+    * fails validation then an exception is thrown to report the issue.
+    * 
+    * @param node this is the node that contains the contact value
+    * @param map this is the map that contains the label objects
+    * 
+    * @throws Exception thrown if the the label object does not exist
+    */
+   private void validateAttribute(InputNode node, LabelMap map) throws Exception {
+      Position line = node.getPosition();
+      String name = node.getName();
+      Label label = map.take(name);
+      
+      if(label == null) {
+         if(map.isStrict()) {              
+            throw new AttributeException("Attribute '%s' does not exist at %s", name, line);
+         }            
+      } else {
+         validate(node, label);
+      }         
+   }
+
+   /**
+    * This <code>validateElement</code> method performs a validation
+    * of the provided node object using a delegate converter. This is
+    * typically another <code>Composite</code> converter, or if the
+    * node is an attribute a <code>Primitive</code> converter. If this
+    * fails validation then an exception is thrown to report the issue.
+    * 
+    * @param node this is the node that contains the contact value
+    * @param source the source object to assign the contact value to
+    * @param map this is the map that contains the label objects
+    * 
+    * @throws Exception thrown if the the label object does not exist
+    */
+   private void validateElement(InputNode node, LabelMap map) throws Exception {
+      String name = node.getName();
+      Label label = map.take(name);      
+
+      if(label == null) {
+         label = store.get(name);
+      }
+      if(label == null) {
+         Position line = node.getPosition();
+         
+         if(map.isStrict()) {              
+            throw new ElementException("Element '%s' does not exist at %s", name, line);
+         } else {
+            node.skip();                 
+         }
+      } else {
+         validate(node, label);
+      }         
+   }
+   
+   /**
+    * This <code>validate</code> method is used to perform validation
+    * of the provided node object using a delegate converter. This is
+    * typically another <code>Composite</code> converter, or if the
+    * node is an attribute a <code>Primitive</code> converter. If this
+    * fails validation then an exception is thrown to report the issue.
+    * 
+    * @param node this is the node that contains the contact value
+    * @param label this is the label used to create the converter
+    * 
+    * @throws Exception thrown if the contact could not be deserialized
+    */
+   private void validate(InputNode node, Label label) throws Exception {    
+      Converter reader = label.getConverter(root);      
+      Position line = node.getPosition();
+      boolean valid = reader.validate(node);
+    
+      if(valid == false) {     
+        throw new PersistenceException("Invalid value for %s in %s at %s", label, type, line);
+      }
+      store.put(label, null);
+   }
+
+   /**
+    * This method checks to see if there are any <code>Label</code>
+    * objects remaining in the provided map that are required. This is
+    * used when validation is performed to ensure the the XML element 
+    * validated contains sufficient details to satisfy the XML schema 
+    * class annotations. If there is a required label that remains it 
+    * is reported within the exception thrown.
+    * 
+    * @param map this is the map to check for remaining labels
+    * @param source this is the object that has been deserialized 
+    * 
+    * @throws Exception thrown if an XML property was not declared
+    */
+   private void validate(InputNode node, LabelMap map) throws Exception {     
+      Position line = node.getPosition();
+
+      for(Label label : map) {
+         if(label.isRequired()) {
+            throw new ValueRequiredException("Unable to satisfy %s at %s", label, line);
          }
       }      
    }
