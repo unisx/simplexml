@@ -1120,6 +1120,11 @@ class Composite implements Converter {
     * done using the <code>Converter</code> acquired from the contact
     * label. If the type of the contact value is not of the same
     * type as the XML schema class a "class" attribute is appended.
+    * <p>
+    * If the element being written is inline, then this will not 
+    * check to see if there is a "class" attribute specifying the
+    * name of the class. This is because inline elements do not have
+    * an outer class and thus could never have an override.
     * 
     * @param value this is the value to be set as an element
     * @param node this is the XML element to write the element to
@@ -1134,12 +1139,14 @@ class Composite implements Converter {
          Type contact = label.getContact(); 
          Class type = contact.getType();
 
+         if(!label.isInline()) {
+            writeNamespaces(next, type, label);
+         }
          if(label.isInline() || !isOverridden(next, value, contact)) {
             Converter convert = label.getConverter(context);
             boolean data = label.isData();
             
             next.setData(data);
-            writeNamespaces(next, type, label);
             writeElement(next, value, convert);
          }
       }

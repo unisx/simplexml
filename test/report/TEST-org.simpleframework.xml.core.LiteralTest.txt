@@ -6,5 +6,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.106 sec
 &lt;/literal&gt;
 </literalExample>------------- ---------------- ---------------
 
-Testcase: testLiteral took 0.102 sec
+Testcase: testLiteral took 0.101 sec
 Testcase: testDirectory took 0 sec

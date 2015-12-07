@@ -18,5 +18,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.199 sec
    <Text ID="2">entry text</Text>
 </PrologExample>------------- ---------------- ---------------
 
-Testcase: testProlog took 0.195 sec
+Testcase: testProlog took 0.193 sec
 Testcase: testDirectory took 0 sec

@@ -385,4 +385,73 @@ final class Reflector {
       }
       return null;
    }
+   
+   /**
+    * This is used to acquire a bean name for a method or field name.
+    * A bean name is the name of a method or field with the first
+    * character decapitalized. An exception to this is when a method
+    * or field starts with an acronym, in such a case the name will
+    * remain unchanged from the original name.
+    * 
+    * @param name this is the name to convert to a bean name
+    * 
+    * @return this returns the bean value for the given name
+    */
+   public static String getName(String name) {
+      int length = name.length();
+      
+      if(length > 0) {
+         char[] array = name.toCharArray();
+         char first = array[0];
+      
+         if(!isAcronym(array)) { 
+            array[0] = toLowerCase(first);
+         }
+         return new String(array);
+      }
+      return name;
+   }
+   
+   /**
+    * This is used to determine if the provided array of characters
+    * represents an acronym. The array of characters is considered
+    * an acronym if the first and second characters are upper case.
+    * 
+    * @param array the array to evaluate whether it is an acronym
+    * 
+    * @return this returns true if the provided array is an acronym
+    */
+   private static boolean isAcronym(char[] array) {
+      if(array.length < 2) {
+         return false;
+      }
+      if(!isUpperCase(array[0])) {
+         return false;
+      }
+      return isUpperCase(array[1]);
+   }
+   
+   /**
+    * This is used to convert the provided character to lower case.
+    * The character conversion is done for all unicode characters. 
+    * 
+    * @param value this is the value that is to be converted
+    * 
+    * @return this returns the provided character in lower case
+    */
+   private static char toLowerCase(char value) {
+      return Character.toLowerCase(value);
+   }
+   
+   /**
+    * This is used to determine if the provided character is an
+    * upper case character. This can deal with unicode characters.
+    * 
+    * @param value this is the value that is to be evaluated
+    * 
+    * @return this returns true if the character is upper case
+    */
+   private static boolean isUpperCase(char value) {
+      return Character.isUpperCase(value);
+   }
 }

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.VersionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.155 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
 ------------- Standard Output ---------------
 <Example>
    <text>text value</text>
@@ -12,4 +12,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.155 sec
 </Example>------------- ---------------- ---------------
 
 Testcase: testVersion1 took 0.143 sec
-Testcase: testVersion2 took 0.008 sec
+Testcase: testVersion2 took 0.009 sec

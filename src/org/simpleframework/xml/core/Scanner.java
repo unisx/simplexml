@@ -18,7 +18,6 @@
 
 package org.simpleframework.xml.core;
 
-import java.beans.Introspector;
 import java.lang.annotation.Annotation;
 import java.util.List;
 
@@ -548,7 +547,7 @@ class Scanner {
          text = root.name();
 
          if(isEmpty(text)) {
-            text = Introspector.decapitalize(real);
+            text = Reflector.getName(real);
          }      
          name = text.intern();      
       }

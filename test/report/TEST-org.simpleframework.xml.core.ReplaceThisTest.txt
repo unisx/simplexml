@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ReplaceThisTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.196 sec
 ------------- Standard Output ---------------
 <realParent>
    <inner/>

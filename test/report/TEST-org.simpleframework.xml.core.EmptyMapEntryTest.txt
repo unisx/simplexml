@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyMapEntryTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.244 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.262 sec
 ------------- Standard Output ---------------
 <simpleBug1 id="0">
    <test1 id="1">
@@ -132,5 +132,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.244 sec
 </simpleBug1>
 ------------- ---------------- ---------------
 
-Testcase: testEmptyMapEntry took 0.24 sec
+Testcase: testEmptyMapEntry took 0.25 sec
 Testcase: testDirectory took 0 sec

@@ -169,11 +169,11 @@ class CompositeInlineList implements Repeater {
    }     
    
    /**
-    * This <code>read</code> method wll read the XML element from the     
+    * This <code>read</code> method will read the XML element from the     
     * provided node. This checks to ensure that the deserialized type
     * is the same as the entry type provided. If the types are not 
     * the same then an exception is thrown. This is done to ensure
-    * each node in the collection contain the same root annotaiton. 
+    * each node in the collection contain the same root annotation. 
     * 
     * @param node this is the XML element that is to be deserialized
     * @param expect this is the type expected of the deserialized type

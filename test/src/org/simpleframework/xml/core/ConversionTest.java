@@ -102,7 +102,6 @@ public class ConversionTest extends ValidationTestCase {
       public void setValue(Object data) {
          this.data = data;
       }
-      
    }
    
    public static class Pet implements org.simpleframework.xml.util.Entry{

@@ -18,8 +18,6 @@
 
 package org.simpleframework.xml.core;
 
-import java.beans.Introspector;
-
 import org.simpleframework.xml.filter.Filter;
 import org.simpleframework.xml.filter.PlatformFilter;
 import org.simpleframework.xml.strategy.Value;
@@ -259,7 +257,7 @@ class Support implements Filter {
       if(type.isPrimitive()) {
          return name;
       }
-      return Introspector.decapitalize(name);
+      return Reflector.getName(name);
    }
    
    /**

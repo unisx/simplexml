@@ -1,4 +1,5 @@
 org.simpleframework.xml
+org.simpleframework.xml.convert
 org.simpleframework.xml.core
 org.simpleframework.xml.filter
 org.simpleframework.xml.strategy

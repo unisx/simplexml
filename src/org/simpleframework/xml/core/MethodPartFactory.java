@@ -20,7 +20,6 @@ package org.simpleframework.xml.core;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import java.beans.Introspector;
 
 /**
  * The <code>MethodPartFactory</code> is used to create method parts
@@ -193,6 +192,6 @@ final class MethodPartFactory {
       if(size > prefix) {
          name = name.substring(prefix, size);
       }
-      return Introspector.decapitalize(name);          
+      return Reflector.getName(name);          
    }
 }

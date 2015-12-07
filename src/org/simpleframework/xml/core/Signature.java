@@ -18,7 +18,6 @@
 
 package org.simpleframework.xml.core;
 
-import java.beans.Introspector;
 import java.lang.annotation.Annotation;
 
 import org.simpleframework.xml.Root;
@@ -132,13 +131,13 @@ class Signature {
       } else {
          name = type.getSimpleName();
       }
-      return Introspector.decapitalize(name);
+      return Reflector.getName(name);
    }
    
    /**
     * This will acquire the name of the <code>Root</code> annotation
     * for the specified class. This will traverse the inheritance
-    * heirarchy looking for the root annotation, when it is found it
+    * hierarchy looking for the root annotation, when it is found it
     * is used to acquire a name for the XML element it represents.
     *  
     * @param type this is the type to acquire the root name with
@@ -162,7 +161,7 @@ class Signature {
    /**
     * This will acquire the name of the <code>Root</code> annotation
     * for the specified class. This will traverse the inheritance
-    * heirarchy looking for the root annotation, when it is found it
+    * hierarchy looking for the root annotation, when it is found it
     * is used to acquire a name for the XML element it represents.
     *  
     * @param real the actual type of the object being searched
@@ -180,7 +179,7 @@ class Signature {
          if(!isEmpty(text)) {
             return text;
          }
-         return Introspector.decapitalize(name);
+         return Reflector.getName(name);
       }
       return null;
    }

@@ -24,7 +24,7 @@ import org.simpleframework.xml.util.WeakCache;
  * The <code>TransformCache</code> is used to cache transform objects. 
  * It is used so the overhead of instantiating a transform each time
  * an object of the specified type requires transformation is removed.
- * Essentially this acts as a typedef for the generic has map.
+ * Essentially this acts as a typedef for the generic hash map.
  * 
  * @author Niall Gallagher
  */

@@ -10,4 +10,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.105 sec
 </aaa:aaa>
 ------------- ---------------- ---------------
 
-Testcase: testNamespace took 0.102 sec
+Testcase: testNamespace took 0.1 sec

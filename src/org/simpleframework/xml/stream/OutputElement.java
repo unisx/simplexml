@@ -339,4 +339,15 @@ class OutputElement implements OutputNode {
    public boolean isCommitted() {
       return writer.isCommitted(this);
    }
+   
+   /**
+    * This is the string representation of the element. It is
+    * used for debugging purposes. When evaluating the element
+    * the to string can be used to print out the element name.
+    * 
+    * @return this returns a text description of the element
+    */
+   public String toString() {
+      return String.format("element %s", name);
+   }
 }
