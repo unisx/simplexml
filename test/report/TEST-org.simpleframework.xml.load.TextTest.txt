@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.217 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.245 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -7,40 +7,88 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.217 sec
       <entry name="b" version="TWO"><![CDATA[Example 2]]></entry>
       <entry name="c" version="THREE"><![CDATA[Example 3]]></entry>
    </array>
-</test><test>
+</test><test id="0">
+   <array length="3" id="1">
+      <entry id="2" name="a" version="ONE"><![CDATA[Example 1]]></entry>
+      <entry id="3" name="b" version="TWO"><![CDATA[Example 2]]></entry>
+      <entry id="4" name="c" version="THREE"><![CDATA[Example 3]]></entry>
+   </array>
+</test><Test id="0">
+   <Array length="3" id="1">
+      <Entry id="2" name="a" version="ONE"><![CDATA[Example 1]]></Entry>
+      <Entry id="3" name="b" version="TWO"><![CDATA[Example 2]]></Entry>
+      <Entry id="4" name="c" version="THREE"><![CDATA[Example 3]]></Entry>
+   </Array>
+</Test><test>
    <array length="3">
       <entry name="a" version="ONE"><![CDATA[Example 1]]></entry>
       <entry name="b" version="TWO"><![CDATA[Example 2]]></entry>
       <entry name="c" version="THREE"><![CDATA[Example 3]]></entry>
    </array>
-</test><text name="a" version="ONE"><![CDATA[
+</test><test id="0">
+   <array length="3" id="1">
+      <entry id="2" name="a" version="ONE"><![CDATA[Example 1]]></entry>
+      <entry id="3" name="b" version="TWO"><![CDATA[Example 2]]></entry>
+      <entry id="4" name="c" version="THREE"><![CDATA[Example 3]]></entry>
+   </array>
+</test><Test id="0">
+   <Array length="3" id="1">
+      <Entry id="2" name="a" version="ONE"><![CDATA[Example 1]]></Entry>
+      <Entry id="3" name="b" version="TWO"><![CDATA[Example 2]]></Entry>
+      <Entry id="4" name="c" version="THREE"><![CDATA[Example 3]]></Entry>
+   </Array>
+</Test><text name="a" version="ONE"><![CDATA[
     
       <element> 
          <data>This is hidden</data>
       </element> 
    
-]]></text><text name="a" version="ONE"><![CDATA[
+]]></text><text id="0" name="a" version="ONE"><![CDATA[
     
       <element> 
          <data>This is hidden</data>
       </element> 
    
-]]></text><text name="a" version="ONE"/><text name="a" version="ONE"/>------------- ---------------- ---------------
+]]></text><Text id="0" name="a" version="ONE"><![CDATA[
+    
+      <element> 
+         <data>This is hidden</data>
+      </element> 
+   
+]]></Text><text name="a" version="ONE"><![CDATA[
+    
+      <element> 
+         <data>This is hidden</data>
+      </element> 
+   
+]]></text><text id="0" name="a" version="ONE"><![CDATA[
+    
+      <element> 
+         <data>This is hidden</data>
+      </element> 
+   
+]]></text><Text id="0" name="a" version="ONE"><![CDATA[
+    
+      <element> 
+         <data>This is hidden</data>
+      </element> 
+   
+]]></Text><text name="a" version="ONE"/><text id="0" name="a" version="ONE"/><Text id="0" name="a" version="ONE"/><text name="a" version="ONE"/><text id="0" name="a" version="ONE"/><Text id="0" name="a" version="ONE"/>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.load.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent interface java.util.List
 	at org.simpleframework.xml.load.TextLabel.getConverter(TextLabel.java:92)
 	at org.simpleframework.xml.load.CacheLabel.getConverter(CacheLabel.java:129)
-	at org.simpleframework.xml.load.Composite.read(Composite.java:353)
-	at org.simpleframework.xml.load.Composite.readText(Composite.java:272)
-	at org.simpleframework.xml.load.Composite.read(Composite.java:192)
-	at org.simpleframework.xml.load.Composite.read(Composite.java:140)
-	at org.simpleframework.xml.load.Composite.read(Composite.java:116)
-	at org.simpleframework.xml.load.Traverser.read(Traverser.java:71)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:392)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:374)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:355)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:337)
-	at org.simpleframework.xml.load.Persister.read(Persister.java:258)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:365)
+	at org.simpleframework.xml.load.Composite.readText(Composite.java:284)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:204)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:152)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:130)
+	at org.simpleframework.xml.load.Traverser.read(Traverser.java:78)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:400)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:382)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:363)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:345)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:266)
 	at org.simpleframework.xml.load.TextTest.testNonPrimitive(TextTest.java:225)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -59,11 +107,11 @@ org.simpleframework.xml.load.TextException: Cannot use @org.simpleframework.xml.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.166 sec
-Testcase: testData took 0.008 sec
-Testcase: testDuplicate took 0.002 sec
+Testcase: testText took 0.188 sec
+Testcase: testData took 0.014 sec
+Testcase: testDuplicate took 0.003 sec
 Testcase: testIllegalElement took 0.007 sec
-Testcase: testEmpty took 0.001 sec
-Testcase: testOptional took 0.012 sec
-Testcase: testNonPrimitive took 0.011 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEmpty took 0.002 sec
+Testcase: testOptional took 0.017 sec
+Testcase: testNonPrimitive took 0.007 sec
+Testcase: testDirectory took 0 sec

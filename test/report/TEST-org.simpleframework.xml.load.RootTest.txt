@@ -1,17 +1,37 @@
 Testsuite: org.simpleframework.xml.load.RootTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.2 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.212 sec
 ------------- Standard Output ---------------
 <rootExample version="1">
    <text>Some text example</text>
-</rootExample><rootExample version="1">
+</rootExample><root-example id="0" version="1">
+   <text id="1">Some text example</text>
+</root-example><RootExample id="0" version="1">
+   <Text id="1">Some text example</Text>
+</RootExample><rootExample version="1">
    <text>Some text example</text>
-</rootExample><rootExample version="1">
+</rootExample><root-example id="0" version="1">
+   <text id="1">Some text example</text>
+</root-example><RootExample id="0" version="1">
+   <Text id="1">Some text example</Text>
+</RootExample><rootExample version="1">
    <text>Some text example</text>
-</rootExample><extendedOverriddenRootExample version="1">
+</rootExample><root-example id="0" version="1">
+   <text id="1">Some text example</text>
+</root-example><RootExample id="0" version="1">
+   <Text id="1">Some text example</Text>
+</RootExample><extendedOverriddenRootExample version="1">
    <text>Some text example</text>
-</extendedOverriddenRootExample><explicitOverride version="1">
+</extendedOverriddenRootExample><extended-overridden-root-example id="0" version="1">
+   <text id="1">Some text example</text>
+</extended-overridden-root-example><ExtendedOverriddenRootExample id="0" version="1">
+   <Text id="1">Some text example</Text>
+</ExtendedOverriddenRootExample><explicitOverride version="1">
    <text>Some text example</text>
-</explicitOverride>------------- ---------------- ---------------
+</explicitOverride><explicit-override id="0" version="1">
+   <text id="1">Some text example</text>
+</explicit-override><ExplicitOverride id="0" version="1">
+   <Text id="1">Some text example</Text>
+</ExplicitOverride>------------- ---------------- ---------------
 
-Testcase: testRoot took 0.195 sec
+Testcase: testRoot took 0.208 sec
 Testcase: testDirectory took 0 sec

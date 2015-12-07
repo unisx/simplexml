@@ -67,6 +67,19 @@ interface Label {
     * a name then that is used, if however the annotation does not
     * specify a name the the field or method name is used instead.
     * 
+    * @param source this is the source used to style the name
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName(Source source) throws Exception;
+   
+   /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
     * @return returns the name that is used for the XML property
     */
    public String getName() throws Exception;

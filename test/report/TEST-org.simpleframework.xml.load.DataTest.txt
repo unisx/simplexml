@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.DataTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.192 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
@@ -28,7 +28,61 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
          ]]></data>
       </query>
    </query-list>
-</scrape>------------- ---------------- ---------------
+</scrape><scrape id="0" section="one" address="http://localhost:9090/">
+   <query-list id="1">
+      <query id="2" type="text" name="title">
+         <data id="3"><![CDATA[
+             
+               <title> 
+               { 
+                  for $text in .//TITLE
+                  return $text
+               }
+               </title>
+            
+         ]]></data>
+      </query>
+      <query id="4" type="image" name="news">
+         <data id="5"><![CDATA[
+               
+               <news>
+               { 
+                  for $text in .//B
+                  return $text
+               }
+               </news>
+            
+         ]]></data>
+      </query>
+   </query-list>
+</scrape><Scrape id="0" section="one" address="http://localhost:9090/">
+   <QueryList id="1">
+      <Query id="2" type="text" name="title">
+         <Data id="3"><![CDATA[
+             
+               <title> 
+               { 
+                  for $text in .//TITLE
+                  return $text
+               }
+               </title>
+            
+         ]]></Data>
+      </Query>
+      <Query id="4" type="image" name="news">
+         <Data id="5"><![CDATA[
+               
+               <news>
+               { 
+                  for $text in .//B
+                  return $text
+               }
+               </news>
+            
+         ]]></Data>
+      </Query>
+   </QueryList>
+</Scrape>------------- ---------------- ---------------
 
-Testcase: testData took 0.175 sec
+Testcase: testData took 0.187 sec
 Testcase: testDirectory took 0 sec

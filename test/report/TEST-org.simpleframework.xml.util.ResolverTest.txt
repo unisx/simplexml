@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.205 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.231 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -11,7 +11,27 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.205 sec
       <match value="text/plain" pattern="**.txt"/>
       <match value="text/html" pattern="/html/*"/>
    </list>
-</test><test name="example">
+</test><test id="0" name="example">
+   <list id="1">
+      <match id="2" value="text/html" pattern="*.html"/>
+      <match id="3" value="image/jpeg" pattern="*.jpg"/>
+      <match id="4" value="image/jpeg" pattern="/images/*"/>
+      <match id="5" value="text/plain" pattern="/log/**"/>
+      <match id="6" value="application/octetstream" pattern="*.exe"/>
+      <match id="7" value="text/plain" pattern="**.txt"/>
+      <match id="8" value="text/html" pattern="/html/*"/>
+   </list>
+</test><Test id="0" name="example">
+   <List id="1">
+      <Match id="2" value="text/html" pattern="*.html"/>
+      <Match id="3" value="image/jpeg" pattern="*.jpg"/>
+      <Match id="4" value="image/jpeg" pattern="/images/*"/>
+      <Match id="5" value="text/plain" pattern="/log/**"/>
+      <Match id="6" value="application/octetstream" pattern="*.exe"/>
+      <Match id="7" value="text/plain" pattern="**.txt"/>
+      <Match id="8" value="text/html" pattern="/html/*"/>
+   </List>
+</Test><test name="example">
    <list>
       <match value="text/html" pattern="*.html"/>
       <match value="image/jpeg" pattern="*.jpg"/>
@@ -23,11 +43,35 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.205 sec
       <match value="text/html" pattern="README.*"/>
       <match value="text/plain" pattern="README.txt"/>
    </list>
-</test>------------- ---------------- ---------------
+</test><test id="0" name="example">
+   <list id="1">
+      <match id="2" value="text/html" pattern="*.html"/>
+      <match id="3" value="image/jpeg" pattern="*.jpg"/>
+      <match id="4" value="image/jpeg" pattern="/images/*"/>
+      <match id="5" value="application/octetstream" pattern="*.exe"/>
+      <match id="6" value="text/plain" pattern="**.txt"/>
+      <match id="7" value="text/html" pattern="/html/*"/>
+      <match id="8" value="application/octetstream" pattern="*"/>
+      <match id="9" value="text/html" pattern="README.*"/>
+      <match id="10" value="text/plain" pattern="README.txt"/>
+   </list>
+</test><Test id="0" name="example">
+   <List id="1">
+      <Match id="2" value="text/html" pattern="*.html"/>
+      <Match id="3" value="image/jpeg" pattern="*.jpg"/>
+      <Match id="4" value="image/jpeg" pattern="/images/*"/>
+      <Match id="5" value="application/octetstream" pattern="*.exe"/>
+      <Match id="6" value="text/plain" pattern="**.txt"/>
+      <Match id="7" value="text/html" pattern="/html/*"/>
+      <Match id="8" value="application/octetstream" pattern="*"/>
+      <Match id="9" value="text/html" pattern="README.*"/>
+      <Match id="10" value="text/plain" pattern="README.txt"/>
+   </List>
+</Test>------------- ---------------- ---------------
 
-Testcase: testResolver took 0.162 sec
-Testcase: testCache took 0.015 sec
+Testcase: testResolver took 0.181 sec
+Testcase: testCache took 0.022 sec
 Testcase: testNoResolution took 0.004 sec
-Testcase: testNonGreedyMatch took 0.001 sec
+Testcase: testNonGreedyMatch took 0.003 sec
 Testcase: testResolverCache took 0.017 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.ScatterTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.277 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -9,7 +9,23 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
    <text name="a" version="ONE">Example 1</text>
    <text name="b" version="TWO">Example 2</text>
    <text name="c" version="THREE">Example 3</text>
-</test><test version="ONE">
+</test><test id="0" version="ONE">
+   <message id="1">Some example message</message>
+   <double id="2">1.0</double>
+   <double id="3">2.0</double>
+   <double id="4">3.0</double>
+   <text id="5" name="a" version="ONE">Example 1</text>
+   <text id="6" name="b" version="TWO">Example 2</text>
+   <text id="7" name="c" version="THREE">Example 3</text>
+</test><Test id="0" version="ONE">
+   <Message id="1">Some example message</Message>
+   <Double id="2">1.0</Double>
+   <Double id="3">2.0</Double>
+   <Double id="4">3.0</Double>
+   <Text id="5" name="a" version="ONE">Example 1</Text>
+   <Text id="6" name="b" version="TWO">Example 2</Text>
+   <Text id="7" name="c" version="THREE">Example 3</Text>
+</Test><test version="ONE">
    <message>Some example message</message>
    <double>1.0</double>
    <double>2.0</double>
@@ -17,31 +33,87 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
    <text name="a" version="ONE">Example 1</text>
    <text name="b" version="TWO">Example 2</text>
    <text name="c" version="THREE">Example 3</text>
-</test><test version="ONE">
+</test><test id="0" version="ONE">
+   <message id="1">Some example message</message>
+   <double id="2">1.0</double>
+   <double id="3">2.0</double>
+   <double id="4">3.0</double>
+   <text id="5" name="a" version="ONE">Example 1</text>
+   <text id="6" name="b" version="TWO">Example 2</text>
+   <text id="7" name="c" version="THREE">Example 3</text>
+</test><Test id="0" version="ONE">
+   <Message id="1">Some example message</Message>
+   <Double id="2">1.0</Double>
+   <Double id="3">2.0</Double>
+   <Double id="4">3.0</Double>
+   <Text id="5" name="a" version="ONE">Example 1</Text>
+   <Text id="6" name="b" version="TWO">Example 2</Text>
+   <Text id="7" name="c" version="THREE">Example 3</Text>
+</Test><test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
    <string>Example 2</string>
    <string>Example 3</string>
-</test><test version="ONE">
+</test><test id="0" version="ONE">
+   <message id="1">Some example message</message>
+   <string id="2">Example 1</string>
+   <string id="3">Example 2</string>
+   <string id="4">Example 3</string>
+</test><Test id="0" version="ONE">
+   <Message id="1">Some example message</Message>
+   <String id="2">Example 1</String>
+   <String id="3">Example 2</String>
+   <String id="4">Example 3</String>
+</Test><test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
    <string>Example 2</string>
    <string>Example 3</string>
-</test><test version="ONE">
+</test><test id="0" version="ONE">
+   <message id="1">Some example message</message>
+   <string id="2">Example 1</string>
+   <string id="3">Example 2</string>
+   <string id="4">Example 3</string>
+</test><Test id="0" version="ONE">
+   <Message id="1">Some example message</Message>
+   <String id="2">Example 1</String>
+   <String id="3">Example 2</String>
+   <String id="4">Example 3</String>
+</Test><test version="ONE">
    <include file="4.txt" name="4"/>
    <include file="1.txt" name="1"/>
    <exclude file="3.txt" name="3"/>
    <exclude file="5.txt" name="5"/>
    <exclude file="2.txt" name="2"/>
-</test><simpleInlineList>
+</test><test id="0" version="ONE">
+   <include id="1" file="4.txt" name="4"/>
+   <include id="2" file="1.txt" name="1"/>
+   <exclude id="3" file="3.txt" name="3"/>
+   <exclude id="4" file="5.txt" name="5"/>
+   <exclude id="5" file="2.txt" name="2"/>
+</test><Test id="0" version="ONE">
+   <Include id="1" file="4.txt" name="4"/>
+   <Include id="2" file="1.txt" name="1"/>
+   <Exclude id="3" file="3.txt" name="3"/>
+   <Exclude id="4" file="5.txt" name="5"/>
+   <Exclude id="5" file="2.txt" name="2"/>
+</Test><simpleInlineList>
    <simpleEntry content="test"/>
-</simpleInlineList><simplePrimitiveInlineList>
+</simpleInlineList><simple-inline-list id="0">
+   <simple-entry id="1" content="test"/>
+</simple-inline-list><SimpleInlineList id="0">
+   <SimpleEntry id="1" content="test"/>
+</SimpleInlineList><simplePrimitiveInlineList>
    <string>test</string>
-</simplePrimitiveInlineList>------------- ---------------- ---------------
+</simplePrimitiveInlineList><simple-primitive-inline-list id="0">
+   <string id="1">test</string>
+</simple-primitive-inline-list><SimplePrimitiveInlineList id="0">
+   <String id="1">test</String>
+</SimplePrimitiveInlineList>------------- ---------------- ---------------
 
-Testcase: testList took 0.197 sec
-Testcase: testPrimitiveList took 0.012 sec
-Testcase: testInlineNamedList took 0.014 sec
-Testcase: testSimpleList took 0.005 sec
-Testcase: testSimplePrimitiveList took 0.004 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testList took 0.223 sec
+Testcase: testPrimitiveList took 0.018 sec
+Testcase: testInlineNamedList took 0.018 sec
+Testcase: testSimpleList took 0.008 sec
+Testcase: testSimplePrimitiveList took 0.006 sec
+Testcase: testDirectory took 0 sec

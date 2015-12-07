@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.192 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.215 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -10,19 +10,57 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.192 sec
       <string>b</string>
       <bigDecimal>2.20000000000000017763568394002504646778106689453125</bigDecimal>
    </entity>
-</primitiveInlineMap><primitiveInlineAttributeMap>
+</primitiveInlineMap><primitive-inline-map id="0">
+   <entity>
+      <string id="1">a</string>
+      <big-decimal id="2">1.100000000000000088817841970012523233890533447265625</big-decimal>
+   </entity>
+   <entity>
+      <string id="3">b</string>
+      <big-decimal id="4">2.20000000000000017763568394002504646778106689453125</big-decimal>
+   </entity>
+</primitive-inline-map><PrimitiveInlineMap id="0">
+   <Entity>
+      <String id="1">a</String>
+      <bigDecimal id="2">1.100000000000000088817841970012523233890533447265625</bigDecimal>
+   </Entity>
+   <Entity>
+      <String id="3">b</String>
+      <bigDecimal id="4">2.20000000000000017763568394002504646778106689453125</bigDecimal>
+   </Entity>
+</PrimitiveInlineMap><primitiveInlineAttributeMap>
    <entity string="d"/>
    <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
    <entity string="c">2.20000000000000017763568394002504646778106689453125</entity>
    <entity string="b"/>
-</primitiveInlineAttributeMap><primitiveInlineAttributeValueMap>
+</primitiveInlineAttributeMap><primitive-inline-attribute-map id="0">
+   <entity string="d"/>
+   <entity string="a" id="1">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity string="c" id="2">2.20000000000000017763568394002504646778106689453125</entity>
+   <entity string="b"/>
+</primitive-inline-attribute-map><PrimitiveInlineAttributeMap id="0">
+   <Entity string="d"/>
+   <Entity string="a" id="1">1.100000000000000088817841970012523233890533447265625</Entity>
+   <Entity string="c" id="2">2.20000000000000017763568394002504646778106689453125</Entity>
+   <Entity string="b"/>
+</PrimitiveInlineAttributeMap><primitiveInlineAttributeValueMap>
    <entity string="d"/>
    <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
-   <entity string="b">2.20000000000000017763568394002504646778106689453125</entity>
    <entity>3.29999999999999982236431605997495353221893310546875</entity>
-</primitiveInlineAttributeValueMap>------------- ---------------- ---------------
+   <entity string="b">2.20000000000000017763568394002504646778106689453125</entity>
+</primitiveInlineAttributeValueMap><primitive-inline-attribute-value-map id="0">
+   <entity string="d"/>
+   <entity string="a" id="1">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity id="2">3.29999999999999982236431605997495353221893310546875</entity>
+   <entity string="b" id="3">2.20000000000000017763568394002504646778106689453125</entity>
+</primitive-inline-attribute-value-map><PrimitiveInlineAttributeValueMap id="0">
+   <Entity string="d"/>
+   <Entity string="a" id="1">1.100000000000000088817841970012523233890533447265625</Entity>
+   <Entity id="2">3.29999999999999982236431605997495353221893310546875</Entity>
+   <Entity string="b" id="3">2.20000000000000017763568394002504646778106689453125</Entity>
+</PrimitiveInlineAttributeValueMap>------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.17 sec
-Testcase: testPrimitiveAttributeMap took 0.01 sec
-Testcase: testPrimitiveAttributeValueMap took 0.006 sec
+Testcase: testPrimitiveMap took 0.184 sec
+Testcase: testPrimitiveAttributeMap took 0.016 sec
+Testcase: testPrimitiveAttributeValueMap took 0.01 sec
 Testcase: testDirectory took 0 sec

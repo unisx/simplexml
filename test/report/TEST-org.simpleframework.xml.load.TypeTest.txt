@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.223 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -22,7 +22,49 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
       <String>text value</String>
       <Enum>TWO</Enum>
    </object>
-</test><test>
+</test><test id="0">
+   <primitive id="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object id="2">
+      <boolean id="3">true</boolean>
+      <byte id="4">16</byte>
+      <short id="5">120</short>
+      <integer id="6">1234</integer>
+      <float id="7">1234.56</float>
+      <long id="8">1234567</long>
+      <double id="9">1234567.89</double>
+      <string id="10">text value</string>
+      <enum id="11">TWO</enum>
+   </object>
+</test><Test id="0">
+   <Primitive id="1">
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Int>1234</Int>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+   </Primitive>
+   <Object id="2">
+      <Boolean id="3">true</Boolean>
+      <Byte id="4">16</Byte>
+      <Short id="5">120</Short>
+      <Integer id="6">1234</Integer>
+      <Float id="7">1234.56</Float>
+      <Long id="8">1234567</Long>
+      <Double id="9">1234567.89</Double>
+      <String id="10">text value</String>
+      <Enum id="11">TWO</Enum>
+   </Object>
+</Test><test>
    <primitive>
       <boolean>true</boolean>
       <byte>16</byte>
@@ -43,7 +85,49 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
       <String>text value</String>
       <Enum>TWO</Enum>
    </object>
-</test>------------- ---------------- ---------------
+</test><test id="0">
+   <primitive id="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object id="2">
+      <boolean id="3">true</boolean>
+      <byte id="4">16</byte>
+      <short id="5">120</short>
+      <integer id="6">1234</integer>
+      <float id="7">1234.56</float>
+      <long id="8">1234567</long>
+      <double id="9">1234567.89</double>
+      <string id="10">text value</string>
+      <enum id="11">TWO</enum>
+   </object>
+</test><Test id="0">
+   <Primitive id="1">
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Int>1234</Int>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+   </Primitive>
+   <Object id="2">
+      <Boolean id="3">true</Boolean>
+      <Byte id="4">16</Byte>
+      <Short id="5">120</Short>
+      <Integer id="6">1234</Integer>
+      <Float id="7">1234.56</Float>
+      <Long id="8">1234567</Long>
+      <Double id="9">1234567.89</Double>
+      <String id="10">text value</String>
+      <Enum id="11">TWO</Enum>
+   </Object>
+</Test>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.19 sec
+Testcase: testPrimitive took 0.219 sec
 Testcase: testDirectory took 0 sec

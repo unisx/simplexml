@@ -21,6 +21,7 @@
 package org.simpleframework.xml.load;
 
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.stream.Style;
 
 /**
  * The <code>AttributeLabel</code> object is used convert any value
@@ -105,6 +106,24 @@ class AttributeLabel implements Label {
          return null;
       }
       return empty;
+   }
+   
+   /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    *
+    * @param source this is the source object used to style the name
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName(Source source) throws Exception {
+      Style style = source.getStyle();
+      String name = detail.getName();
+      
+      return style.getAttribute(name);
    }
    
    /**

@@ -52,14 +52,14 @@ class CacheLabel implements Label {
    private final String entry;
    
    /**
-    * This is used to represent the name of the annotated element.
-    */
-   private final String name;
-   
-   /**
     * This is used to represent the name override for the annotation.
     */
    private final String override;
+   
+   /**
+    * This is used to represent the name of the annotated element.
+    */
+   private final String name;
    
    /**
     * This is used to represent whether the data is written as data. 
@@ -96,8 +96,8 @@ class CacheLabel implements Label {
       this.override = label.getOverride();
       this.inline = label.isInline();
       this.type = label.getType();
-      this.entry = label.getEntry();
       this.name = label.getName();
+      this.entry = label.getEntry();
       this.data = label.isData();
       this.label = label;
    }
@@ -127,6 +127,19 @@ class CacheLabel implements Label {
     */
    public Converter getConverter(Source root) throws Exception {
       return label.getConverter(root);
+   }
+     
+   /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName(Source source) throws Exception {
+      return label.getName(source);
    }
    
    /**

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.ArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.182 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.199 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="3">
@@ -13,15 +13,53 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.182 sec
          <text>three</text>
       </substitute>
    </list>
-</exampleArray><examplePrimitiveArray>
+</exampleArray><example-array id="0">
+   <list length="3" id="1">
+      <substitute id="1">
+         <text id="3">one</text>
+      </substitute>
+      <substitute id="2">
+         <text id="5">two</text>
+      </substitute>
+      <substitute id="3">
+         <text id="7">three</text>
+      </substitute>
+   </list>
+</example-array><ExampleArray id="0">
+   <List length="3" id="1">
+      <Substitute id="1">
+         <Text id="3">one</Text>
+      </Substitute>
+      <Substitute id="2">
+         <Text id="5">two</Text>
+      </Substitute>
+      <Substitute id="3">
+         <Text id="7">three</Text>
+      </Substitute>
+   </List>
+</ExampleArray><examplePrimitiveArray>
    <list length="4">
       <substitute>a</substitute>
       <substitute>b</substitute>
       <substitute>c</substitute>
       <substitute>d</substitute>
    </list>
-</examplePrimitiveArray>------------- ---------------- ---------------
+</examplePrimitiveArray><example-primitive-array id="0">
+   <list length="4" id="1">
+      <substitute id="2">a</substitute>
+      <substitute id="3">b</substitute>
+      <substitute id="4">c</substitute>
+      <substitute id="5">d</substitute>
+   </list>
+</example-primitive-array><ExamplePrimitiveArray id="0">
+   <List length="4" id="1">
+      <Substitute id="2">a</Substitute>
+      <Substitute id="3">b</Substitute>
+      <Substitute id="4">c</Substitute>
+      <Substitute id="5">d</Substitute>
+   </List>
+</ExamplePrimitiveArray>------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.169 sec
-Testcase: testExamplePrimitiveArray took 0.008 sec
+Testcase: testExampleArray took 0.184 sec
+Testcase: testExamplePrimitiveArray took 0.011 sec
 Testcase: testDirectory took 0 sec

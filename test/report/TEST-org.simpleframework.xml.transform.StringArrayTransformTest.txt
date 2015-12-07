@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.StringArrayTransformTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.181 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.199 sec
 ------------- Standard Output ---------------
 <stringArrayExample attribute="one, two, three, four">
    <element length="4">one, two, three, four</element>
@@ -10,7 +10,25 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.181 sec
    <array length="1">
       <string length="4">one, two, three, four</string>
    </array>
-</stringArrayExample>------------- ---------------- ---------------
+</stringArrayExample><string-array-example id="0" attribute="one, two, three, four">
+   <element length="4" id="1">one, two, three, four</element>
+   <list class="java.util.ArrayList" id="2">
+      <string length="4" id="3">one, two, three, four</string>
+      <string length="4" id="4">one, two, three, four</string>
+   </list>
+   <array length="1" id="5">
+      <string length="4" id="6">one, two, three, four</string>
+   </array>
+</string-array-example><StringArrayExample id="0" attribute="one, two, three, four">
+   <Element length="4" id="1">one, two, three, four</Element>
+   <List class="java.util.ArrayList" id="2">
+      <String length="4" id="3">one, two, three, four</String>
+      <String length="4" id="4">one, two, three, four</String>
+   </List>
+   <Array length="1" id="5">
+      <String length="4" id="6">one, two, three, four</String>
+   </Array>
+</StringArrayExample>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <stringArrayExample attribute="one, two, three, four">
    <element length="4">one, two, three, four</element>
@@ -26,5 +44,5 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.181 sec
 
 Testcase: testRead took 0.005 sec
 Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.17 sec
+Testcase: testPersistence took 0.186 sec
 Testcase: testDirectory took 0.001 sec

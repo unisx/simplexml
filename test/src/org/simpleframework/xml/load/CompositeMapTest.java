@@ -9,6 +9,7 @@ import junit.framework.TestCase;
 
 import org.simpleframework.xml.ElementMap;
 import org.simpleframework.xml.filter.StackFilter;
+import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.NodeBuilder;
 import org.simpleframework.xml.stream.OutputNode;
 
@@ -126,7 +127,7 @@ public class CompositeMapTest extends TestCase {
    
    public void testInlineString() throws Exception 
    {
-      Source source = new Source(new DefaultStrategy(), new StackFilter());
+      Source source = new Source(new DefaultStrategy(), new StackFilter(), new DefaultStyle());
       MockElementMap map = new MockElementMap(true, // attribute
                                               false, // data
                                               "entry", // entry 
@@ -152,7 +153,7 @@ public class CompositeMapTest extends TestCase {
    
    public void testNotInlineString() throws Exception 
    {
-      Source source = new Source(new DefaultStrategy(), new StackFilter());
+      Source source = new Source(new DefaultStrategy(), new StackFilter(), new DefaultStyle());
       MockElementMap map = new MockElementMap(false, // attribute
                                               false, // data
                                               "entry", // entry 
@@ -178,7 +179,7 @@ public class CompositeMapTest extends TestCase {
    
    public void testNoAttributeString() throws Exception 
    {
-      Source source = new Source(new DefaultStrategy(), new StackFilter());
+      Source source = new Source(new DefaultStrategy(), new StackFilter(), new DefaultStyle());
       MockElementMap map = new MockElementMap(false, // attribute
                                               false, // data
                                               "entry", // entry 
@@ -204,7 +205,7 @@ public class CompositeMapTest extends TestCase {
    
    public void testAttributeNoKeyString() throws Exception 
    {
-      Source source = new Source(new DefaultStrategy(), new StackFilter());
+      Source source = new Source(new DefaultStrategy(), new StackFilter(), new DefaultStyle());
       MockElementMap map = new MockElementMap(true, // attribute
                                               false, // data
                                               "entry", // entry 

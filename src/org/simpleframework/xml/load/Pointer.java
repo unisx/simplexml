@@ -23,6 +23,7 @@ package org.simpleframework.xml.load;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
 import org.simpleframework.xml.stream.Position;
+import org.simpleframework.xml.stream.Style;
 
 /**
  * The <code>Pointer</code> object is used to represent a pointer to 
@@ -93,6 +94,25 @@ class Pointer implements Label {
    }
    
    /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
+    * @param source this is the source used to style the name
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName(Source source) throws Exception{
+      String name = label.getName(source);
+      Style style = source.getStyle();
+      
+      return style.getElement(name);
+   }
+   
+   
+   /**
     * This is used to provide a configured empty value used when the
     * annotated value is null. This ensures that XML can be created
     * with required details regardless of whether values are null or
@@ -143,7 +163,7 @@ class Pointer implements Label {
    public String getEntry() throws Exception {
       return label.getEntry();
    }
-   
+
    /**
     * This is used to acquire the name of the element or attribute
     * that is used by the class schema. The name is determined by
@@ -153,7 +173,7 @@ class Pointer implements Label {
     * 
     * @return returns the name that is used for the XML property
     */
-   public String getName() throws Exception {
+   public String getName() throws Exception{
       return label.getName();
    }
    

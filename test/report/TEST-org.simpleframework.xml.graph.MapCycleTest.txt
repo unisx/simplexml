@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.graph.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.336 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -22,7 +22,49 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
          </mapEntry>
       </entry>
    </map>
-</entryMap><complexMap id="0">
+</entryMap><entry-map id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry key="d">
+         <map-entry id="2">
+            <name id="3">a</name>
+            <value id="4">example 1</value>
+         </map-entry>
+      </entry>
+      <entry key="a">
+         <map-entry reference="2"/>
+      </entry>
+      <entry key="c">
+         <map-entry reference="2"/>
+      </entry>
+      <entry key="b">
+         <map-entry id="5">
+            <name id="6">b</name>
+            <value id="7">example 2</value>
+         </map-entry>
+      </entry>
+   </map>
+</entry-map><EntryMap id="0">
+   <Map class="java.util.HashMap" id="1">
+      <Entry key="d">
+         <MapEntry id="2">
+            <Name id="3">a</Name>
+            <Value id="4">example 1</Value>
+         </MapEntry>
+      </Entry>
+      <Entry key="a">
+         <MapEntry reference="2"/>
+      </Entry>
+      <Entry key="c">
+         <MapEntry reference="2"/>
+      </Entry>
+      <Entry key="b">
+         <MapEntry id="5">
+            <Name id="6">b</Name>
+            <Value id="7">example 2</Value>
+         </MapEntry>
+      </Entry>
+   </Map>
+</EntryMap><complexMap id="0">
    <map class="java.util.HashMap" id="1">
       <entry>
          <compositeKey id="2">
@@ -52,7 +94,67 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
          </mapEntry>
       </entry>
    </map>
-</complexMap><primitiveMap id="0">
+</complexMap><complex-map id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry>
+         <composite-key id="2">
+            <name id="3">name 3</name>
+            <address id="4">address 3</address>
+         </composite-key>
+         <map-entry id="5">
+            <name id="6">b</name>
+            <value id="7">example 2</value>
+         </map-entry>
+      </entry>
+      <entry>
+         <composite-key id="8">
+            <name id="9">name 1</name>
+            <address id="10">address 1</address>
+         </composite-key>
+         <map-entry reference="5"/>
+      </entry>
+      <entry>
+         <composite-key id="11">
+            <name id="12">name 4</name>
+            <address id="13">address 4</address>
+         </composite-key>
+         <map-entry id="14">
+            <name id="15">d</name>
+            <value id="16">example 4</value>
+         </map-entry>
+      </entry>
+   </map>
+</complex-map><ComplexMap id="0">
+   <Map class="java.util.HashMap" id="1">
+      <Entry>
+         <CompositeKey id="2">
+            <Name id="3">name 3</Name>
+            <Address id="4">address 3</Address>
+         </CompositeKey>
+         <MapEntry id="5">
+            <Name id="6">b</Name>
+            <Value id="7">example 2</Value>
+         </MapEntry>
+      </Entry>
+      <Entry>
+         <CompositeKey id="8">
+            <Name id="9">name 1</Name>
+            <Address id="10">address 1</Address>
+         </CompositeKey>
+         <MapEntry reference="5"/>
+      </Entry>
+      <Entry>
+         <CompositeKey id="11">
+            <Name id="12">name 4</Name>
+            <Address id="13">address 4</Address>
+         </CompositeKey>
+         <MapEntry id="14">
+            <Name id="15">d</Name>
+            <Value id="16">example 4</Value>
+         </MapEntry>
+      </Entry>
+   </Map>
+</ComplexMap><primitiveMap id="0">
    <map class="java.util.HashMap" id="1">
       <entry>
          <string id="2">one</string>
@@ -67,9 +169,39 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
          <double id="6">4.0</double>
       </entry>
    </map>
-</primitiveMap>------------- ---------------- ---------------
+</primitiveMap><primitive-map id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry>
+         <string id="2">one</string>
+         <double id="3">1.0</double>
+      </entry>
+      <entry>
+         <string id="4">two</string>
+         <double reference="3"/>
+      </entry>
+      <entry>
+         <string id="5">three</string>
+         <double id="6">4.0</double>
+      </entry>
+   </map>
+</primitive-map><PrimitiveMap id="0">
+   <Map class="java.util.HashMap" id="1">
+      <Entry>
+         <String id="2">one</String>
+         <double id="3">1.0</double>
+      </Entry>
+      <Entry>
+         <String id="4">two</String>
+         <double reference="3"/>
+      </Entry>
+      <Entry>
+         <String id="5">three</String>
+         <double id="6">4.0</double>
+      </Entry>
+   </Map>
+</PrimitiveMap>------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.273 sec
-Testcase: testComplexMap took 0.019 sec
-Testcase: testPrimitiveMap took 0.017 sec
+Testcase: testEntryMap took 0.195 sec
+Testcase: testComplexMap took 0.116 sec
+Testcase: testPrimitiveMap took 0.02 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,23 +1,23 @@
 Testsuite: org.simpleframework.xml.load.RedundantOrderTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.095 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.09 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.load.ElementException: Ordered element 'c' missing for class org.simpleframework.xml.load.RedundantOrderTest$ElementEntry
-	at org.simpleframework.xml.load.Scanner.validateElements(Scanner.java:408)
-	at org.simpleframework.xml.load.Scanner.validate(Scanner.java:389)
-	at org.simpleframework.xml.load.Scanner.process(Scanner.java:501)
-	at org.simpleframework.xml.load.Scanner.scan(Scanner.java:344)
+	at org.simpleframework.xml.load.Scanner.validateElements(Scanner.java:412)
+	at org.simpleframework.xml.load.Scanner.validate(Scanner.java:393)
+	at org.simpleframework.xml.load.Scanner.process(Scanner.java:505)
+	at org.simpleframework.xml.load.Scanner.scan(Scanner.java:348)
 	at org.simpleframework.xml.load.Scanner.<init>(Scanner.java:126)
 	at org.simpleframework.xml.load.ScannerFactory.getInstance(ScannerFactory.java:63)
 	at org.simpleframework.xml.load.Factory.getScanner(Factory.java:166)
 	at org.simpleframework.xml.load.Factory.getName(Factory.java:183)
-	at org.simpleframework.xml.load.Traverser.getName(Traverser.java:236)
-	at org.simpleframework.xml.load.Traverser.write(Traverser.java:178)
-	at org.simpleframework.xml.load.Traverser.write(Traverser.java:161)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:769)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:751)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:732)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:848)
-	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:71)
+	at org.simpleframework.xml.load.Traverser.getName(Traverser.java:243)
+	at org.simpleframework.xml.load.Traverser.write(Traverser.java:185)
+	at org.simpleframework.xml.load.Traverser.write(Traverser.java:168)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:777)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:759)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:740)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:856)
+	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:77)
 	at org.simpleframework.xml.load.RedundantOrderTest.testRedundantElementOrder(RedundantOrderTest.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -35,22 +35,22 @@ org.simpleframework.xml.load.ElementException: Ordered element 'c' missing for c
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.AttributeException: Ordered attribute 'c' missing for class org.simpleframework.xml.load.RedundantOrderTest$AttributeEntry
-	at org.simpleframework.xml.load.Scanner.validateAttributes(Scanner.java:427)
-	at org.simpleframework.xml.load.Scanner.validate(Scanner.java:390)
-	at org.simpleframework.xml.load.Scanner.process(Scanner.java:501)
-	at org.simpleframework.xml.load.Scanner.scan(Scanner.java:344)
+	at org.simpleframework.xml.load.Scanner.validateAttributes(Scanner.java:431)
+	at org.simpleframework.xml.load.Scanner.validate(Scanner.java:394)
+	at org.simpleframework.xml.load.Scanner.process(Scanner.java:505)
+	at org.simpleframework.xml.load.Scanner.scan(Scanner.java:348)
 	at org.simpleframework.xml.load.Scanner.<init>(Scanner.java:126)
 	at org.simpleframework.xml.load.ScannerFactory.getInstance(ScannerFactory.java:63)
 	at org.simpleframework.xml.load.Factory.getScanner(Factory.java:166)
 	at org.simpleframework.xml.load.Factory.getName(Factory.java:183)
-	at org.simpleframework.xml.load.Traverser.getName(Traverser.java:236)
-	at org.simpleframework.xml.load.Traverser.write(Traverser.java:178)
-	at org.simpleframework.xml.load.Traverser.write(Traverser.java:161)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:769)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:751)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:732)
-	at org.simpleframework.xml.load.Persister.write(Persister.java:848)
-	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:71)
+	at org.simpleframework.xml.load.Traverser.getName(Traverser.java:243)
+	at org.simpleframework.xml.load.Traverser.write(Traverser.java:185)
+	at org.simpleframework.xml.load.Traverser.write(Traverser.java:168)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:777)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:759)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:740)
+	at org.simpleframework.xml.load.Persister.write(Persister.java:856)
+	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:77)
 	at org.simpleframework.xml.load.RedundantOrderTest.testRedundantAttributeOrder(RedundantOrderTest.java:78)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -69,6 +69,6 @@ org.simpleframework.xml.load.AttributeException: Ordered attribute 'c' missing f
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRedundantElementOrder took 0.081 sec
+Testcase: testRedundantElementOrder took 0.077 sec
 Testcase: testRedundantAttributeOrder took 0.005 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDirectory took 0 sec

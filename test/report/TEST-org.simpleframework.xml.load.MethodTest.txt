@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -9,7 +9,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
    <int>1234</int>
    <long>1234567</long>
    <short>120</short>
-</test><test>
+</test><test id="0">
    <boolean>true</boolean>
    <byte>16</byte>
    <double>1234567.89</double>
@@ -17,7 +17,39 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
    <int>1234</int>
    <long>1234567</long>
    <short>120</short>
-</test><implicitMethodNameExample>
+</test><Test id="0">
+   <Boolean>true</Boolean>
+   <Byte>16</Byte>
+   <Double>1234567.89</Double>
+   <Float>1234.56</Float>
+   <Int>1234</Int>
+   <Long>1234567</Long>
+   <Short>120</Short>
+</Test><test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test><test id="0">
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test><Test id="0">
+   <Boolean>true</Boolean>
+   <Byte>16</Byte>
+   <Double>1234567.89</Double>
+   <Float>1234.56</Float>
+   <Int>1234</Int>
+   <Long>1234567</Long>
+   <Short>120</Short>
+</Test><implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
    <doubleValue>1234567.89</doubleValue>
@@ -25,7 +57,23 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
    <intValue>1234</intValue>
    <longValue>1234567</longValue>
    <shortValue>120</shortValue>
-</implicitMethodNameExample><implicitMethodNameExample>
+</implicitMethodNameExample><implicit-method-name-example id="0">
+   <boolean-value>true</boolean-value>
+   <byte-value>16</byte-value>
+   <double-value>1234567.89</double-value>
+   <float-value>1234.56</float-value>
+   <int-value>1234</int-value>
+   <long-value>1234567</long-value>
+   <short-value>120</short-value>
+</implicit-method-name-example><ImplicitMethodNameExample id="0">
+   <BooleanValue>true</BooleanValue>
+   <ByteValue>16</ByteValue>
+   <DoubleValue>1234567.89</DoubleValue>
+   <FloatValue>1234.56</FloatValue>
+   <IntValue>1234</IntValue>
+   <LongValue>1234567</LongValue>
+   <ShortValue>120</ShortValue>
+</ImplicitMethodNameExample><implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
    <doubleValue>1234567.89</doubleValue>
@@ -33,8 +81,24 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
    <intValue>1234</intValue>
    <longValue>1234567</longValue>
    <shortValue>120</shortValue>
-</implicitMethodNameExample>------------- ---------------- ---------------
+</implicitMethodNameExample><implicit-method-name-example id="0">
+   <boolean-value>true</boolean-value>
+   <byte-value>16</byte-value>
+   <double-value>1234567.89</double-value>
+   <float-value>1234.56</float-value>
+   <int-value>1234</int-value>
+   <long-value>1234567</long-value>
+   <short-value>120</short-value>
+</implicit-method-name-example><ImplicitMethodNameExample id="0">
+   <BooleanValue>true</BooleanValue>
+   <ByteValue>16</ByteValue>
+   <DoubleValue>1234567.89</DoubleValue>
+   <FloatValue>1234.56</FloatValue>
+   <IntValue>1234</IntValue>
+   <LongValue>1234567</LongValue>
+   <ShortValue>120</ShortValue>
+</ImplicitMethodNameExample>------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.17 sec
-Testcase: testImplicitMethodNameExample took 0.019 sec
+Testcase: testExplicitMethodNameExample took 0.186 sec
+Testcase: testImplicitMethodNameExample took 0.031 sec
 Testcase: testDirectory took 0 sec

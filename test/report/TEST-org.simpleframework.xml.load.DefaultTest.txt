@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.DefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.563 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.582 sec
 ------------- Standard Output ---------------
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
@@ -7,13 +7,37 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.563 sec
       <textEntry name="b" version="TWO">Example 2</textEntry>
       <textEntry name="c" version="THREE">Example 3</textEntry>
    </list>
-</defaultTextList><defaultTextList version="ONE">
+</defaultTextList><default-text-list id="0" version="ONE">
+   <list class="java.util.ArrayList" id="1">
+      <text-entry id="2" name="a" version="ONE">Example 1</text-entry>
+      <text-entry id="3" name="b" version="TWO">Example 2</text-entry>
+      <text-entry id="4" name="c" version="THREE">Example 3</text-entry>
+   </list>
+</default-text-list><DefaultTextList id="0" version="ONE">
+   <List class="java.util.ArrayList" id="1">
+      <TextEntry id="2" name="a" version="ONE">Example 1</TextEntry>
+      <TextEntry id="3" name="b" version="TWO">Example 2</TextEntry>
+      <TextEntry id="4" name="c" version="THREE">Example 3</TextEntry>
+   </List>
+</DefaultTextList><defaultTextList version="ONE">
    <list class="java.util.ArrayList">
       <textEntry name="a" version="ONE">Example 1</textEntry>
       <textEntry name="b" version="TWO">Example 2</textEntry>
       <textEntry name="c" version="THREE">Example 3</textEntry>
    </list>
-</defaultTextList>------------- ---------------- ---------------
+</defaultTextList><default-text-list id="0" version="ONE">
+   <list class="java.util.ArrayList" id="1">
+      <text-entry id="2" name="a" version="ONE">Example 1</text-entry>
+      <text-entry id="3" name="b" version="TWO">Example 2</text-entry>
+      <text-entry id="4" name="c" version="THREE">Example 3</text-entry>
+   </list>
+</default-text-list><DefaultTextList id="0" version="ONE">
+   <List class="java.util.ArrayList" id="1">
+      <TextEntry id="2" name="a" version="ONE">Example 1</TextEntry>
+      <TextEntry id="3" name="b" version="TWO">Example 2</TextEntry>
+      <TextEntry id="4" name="c" version="THREE">Example 3</TextEntry>
+   </List>
+</DefaultTextList>------------- ---------------- ---------------
 
-Testcase: testList took 0.559 sec
-Testcase: testDirectory took 0 sec
+Testcase: testList took 0.578 sec
+Testcase: testDirectory took 0.001 sec
