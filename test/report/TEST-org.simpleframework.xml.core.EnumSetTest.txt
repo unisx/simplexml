@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumSetTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
 <enumSetExample>
    <set class="java.util.RegularEnumSet">
@@ -27,7 +27,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
    </set>
 </enum-set-example>>>>>> ELEMENT=[element enum-set-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.EnumSetTest$EnumSetExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <EnumSetExample ID="0">
    <!-- java.util.EnumSet -->
    <Set class="java.util.RegularEnumSet" ID="1">
@@ -38,8 +38,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
    </Set>
 </EnumSetExample>>>>>> ELEMENT=[element EnumSetExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.EnumSetTest$EnumSetExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEnumSet took 0.156 sec
+Testcase: testEnumSet took 0.249 sec
 Testcase: testDirectory took 0 sec

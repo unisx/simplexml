@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.HierarchyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
 ------------- Standard Output ---------------
 <specialized>
    <a>a</a>
@@ -31,7 +31,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
    <two ID="6">2.0</two>
 </specialized>>>>>> ELEMENT=[element specialized]
 >>>>> TYPE=[class org.simpleframework.xml.core.HierarchyTest$Specialized]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Specialized ID="0">
    <!-- java.lang.String -->
    <A ID="1">a</A>
@@ -47,8 +47,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
    <Two ID="6">2.0</Two>
 </Specialized>>>>>> ELEMENT=[element Specialized]
 >>>>> TYPE=[class org.simpleframework.xml.core.HierarchyTest$Specialized]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testHierarchy took 0.172 sec
+Testcase: testHierarchy took 0.203 sec
 Testcase: testDirectory took 0 sec

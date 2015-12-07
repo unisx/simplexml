@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -58,7 +58,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
    </object>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$StrictExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.StrictTest$StrictEntry; -->
    <List length="3" ID="1">
@@ -85,7 +85,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
    </Object>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$StrictExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <object>
    <integer>123</integer>
    <name>test</name>
@@ -100,7 +100,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
    <name ID="2">test</name>
 </object>>>>>> ELEMENT=[element object]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$NamedStrictObject]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Object ID="0">
    <!-- java.lang.Integer -->
    <Integer ID="1">123</Integer>
@@ -108,10 +108,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
    <Name ID="2">test</Name>
 </Object>>>>>> ELEMENT=[element Object]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$NamedStrictObject]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(name=name, data=false, type=void, required=true) on field 'name' private java.lang.String org.simpleframework.xml.core.StrictTest$NamedStrictObject.name for class org.simpleframework.xml.core.StrictTest$NamedStrictObject at line 1
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.StrictTest$NamedStrictObject.name for class org.simpleframework.xml.core.StrictTest$NamedStrictObject at line 1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:644)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:449)
 	at org.simpleframework.xml.core.Composite.access$400(Composite.java:59)
@@ -129,7 +129,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -143,7 +143,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testStrict took 0.187 sec
+Testcase: testStrict took 0.281 sec
 Testcase: testNamedStrict took 0.015 sec
 Testcase: testNamedStrictMissingName took 0 sec
 Testcase: testDirectory took 0 sec

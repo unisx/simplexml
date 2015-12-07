@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TutorialTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
 ------------- Standard Output ---------------
 <document title="Secret Document" xmlns="http://www.domain.com/document">
    <user:author xmlns:user="http://www.domain.com/user">Niall Gallagher</user:author>
@@ -18,4 +18,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
    </section>
 </document>------------- ---------------- ---------------
 
-Testcase: testTutorial took 0.172 sec
+Testcase: testTutorial took 0.202 sec

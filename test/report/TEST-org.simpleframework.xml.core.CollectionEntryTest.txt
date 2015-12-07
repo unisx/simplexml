@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -47,7 +47,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </list>
 </example-collection>>>>>> ELEMENT=[element example-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExampleCollection ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -69,7 +69,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </List>
 </ExampleCollection>>>>>> ELEMENT=[element ExampleCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <exampleInlineCollection>
    <substitute id="1">
       <text>one</text>
@@ -109,7 +109,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </substitute>
 </example-inline-collection>>>>>> ELEMENT=[element example-inline-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleInlineCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExampleInlineCollection ID="0">
    <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
    <Substitute ID="1" id="1">
@@ -128,7 +128,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </Substitute>
 </ExampleInlineCollection>>>>>> ELEMENT=[element ExampleInlineCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleInlineCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <examplePrimitiveInlineCollection>
    <substitute>a</substitute>
    <substitute>b</substitute>
@@ -151,7 +151,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    <substitute ID="4">d</substitute>
 </example-primitive-inline-collection>>>>>> ELEMENT=[element example-primitive-inline-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveInlineCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExamplePrimitiveInlineCollection ID="0">
    <!-- java.lang.String -->
    <Substitute ID="1">a</Substitute>
@@ -163,7 +163,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    <Substitute ID="4">d</Substitute>
 </ExamplePrimitiveInlineCollection>>>>>> ELEMENT=[element ExamplePrimitiveInlineCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveInlineCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <examplePrimitiveCollection>
    <list class="java.util.ArrayList">
       <substitute>a</substitute>
@@ -193,7 +193,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </list>
 </example-primitive-collection>>>>>> ELEMENT=[element example-primitive-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExamplePrimitiveCollection ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -208,11 +208,11 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </List>
 </ExamplePrimitiveCollection>>>>>> ELEMENT=[element ExamplePrimitiveCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveCollection]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.187 sec
-Testcase: testExampleInlineCollection took 0.016 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.015 sec
-Testcase: testExamplePrimitiveCollection took 0.016 sec
+Testcase: testExampleCollection took 0.218 sec
+Testcase: testExampleInlineCollection took 0.031 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.016 sec
+Testcase: testExamplePrimitiveCollection took 0.015 sec
 Testcase: testDirectory took 0 sec

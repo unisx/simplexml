@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.343 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -15,7 +15,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    <string ID="2">text</string>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" number="32">
    <!-- java.lang.Integer -->
    <Integer ID="1">12</Integer>
@@ -23,7 +23,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    <String ID="2">text</String>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example number="0">
    <integer>12</integer>
    <string>text</string>
@@ -38,7 +38,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    <string ID="2">text</string>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" number="0">
    <!-- java.lang.Integer -->
    <Integer ID="1">12</Integer>
@@ -46,7 +46,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    <String ID="2">text</String>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example number="0">
    <integer>12</integer>
 </example><example number="0">
@@ -57,13 +57,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    <integer ID="1">12</integer>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" number="0">
    <!-- java.lang.Integer -->
    <Integer ID="1">12</Integer>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ArrayExample>
    <Array length="5">
       <String>entry one</String>
@@ -97,7 +97,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </array>
 </array-example>>>>>> ELEMENT=[element array-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$ArrayExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ArrayExample ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
@@ -114,11 +114,11 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </Array>
 </ArrayExample>>>>>> ELEMENT=[element ArrayExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$ArrayExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.187 sec
-Testcase: testPartialConstructor took 0.016 sec
-Testcase: testBareConstructor took 0.015 sec
+Testcase: testConstructor took 0.249 sec
+Testcase: testPartialConstructor took 0.032 sec
+Testcase: testBareConstructor took 0.031 sec
 Testcase: testArrayExample took 0.031 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionCycleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
 ------------- Standard Output ---------------
 <shapeExample id="0">
    <circle id="1">
@@ -18,7 +18,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
    </circle>
 </shape-example>>>>>> ELEMENT=[element shape-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionCycleTest$ShapeExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ShapeExample ID="0">
    <!-- org.simpleframework.xml.core.UnionCycleTest$Circle -->
    <Circle ID="1">
@@ -27,8 +27,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
    </Circle>
 </ShapeExample>>>>>> ELEMENT=[element ShapeExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionCycleTest$ShapeExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testUnionCycle took 0.171 sec
+Testcase: testUnionCycle took 0.187 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathParserTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.031 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.046 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Path '//' in class org.simpleframework.xml.core.PathParserTest references document root
 	at org.simpleframework.xml.core.PathParser.path(PathParser.java:425)
@@ -10,7 +10,7 @@ org.simpleframework.xml.core.PathException: Path '//' in class org.simpleframewo
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -34,7 +34,7 @@ org.simpleframework.xml.core.PathException: Invalid index for path 'some[[1]/pat
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -57,7 +57,7 @@ org.simpleframework.xml.core.PathException: Illegal character ']' in element for
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -79,7 +79,7 @@ org.simpleframework.xml.core.PathException: Invalid path expression 'a/b//c' in 
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -101,7 +101,7 @@ org.simpleframework.xml.core.PathException: Invalid path expression './a[100]//b
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -124,7 +124,7 @@ org.simpleframework.xml.core.PathException: Illegal character '@' in attribute f
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -146,7 +146,7 @@ org.simpleframework.xml.core.PathException: Path '../a[100]/b/@attribute' in cla
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -168,7 +168,7 @@ org.simpleframework.xml.core.PathException: Path '../a[100]/@b/@attribute' in cl
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -190,7 +190,7 @@ org.simpleframework.xml.core.PathException: Invalid path expression 'a//b//c' in
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -213,7 +213,7 @@ org.simpleframework.xml.core.PathException: Illegal character '/' in attribute f
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -236,7 +236,7 @@ org.simpleframework.xml.core.PathException: Illegal character '/' in attribute f
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -260,7 +260,7 @@ org.simpleframework.xml.core.PathException: Invalid index for path 'a/b[1]/c[' i
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -283,7 +283,7 @@ org.simpleframework.xml.core.PathException: Attribute reference in 'a/b[1]/c/@' 
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -306,7 +306,7 @@ org.simpleframework.xml.core.PathException: Attribute reference in 'a@' for clas
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -320,13 +320,13 @@ org.simpleframework.xml.core.PathException: Attribute reference in 'a@' for clas
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testStyledPath took 0.015 sec
+Testcase: testStyledPath took 0 sec
 Testcase: testStyledPathWithPrefixes took 0 sec
 Testcase: testEmptyPath took 0 sec
-Testcase: testAttributePath took 0 sec
+Testcase: testAttributePath took 0.016 sec
 Testcase: testSimplePath took 0 sec
 Testcase: testPathPrefix took 0 sec
 Testcase: testAttribute took 0 sec
 Testcase: testIndex took 0 sec
 Testcase: testExpressions took 0 sec
-Testcase: testExceptions took 0.016 sec
+Testcase: testExceptions took 0.015 sec

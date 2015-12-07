@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PrimitiveValueTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.047 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.078 sec
 ------------- Standard Output ---------------
 <inlineString value="example"/><notInlineString>
    <value>example</value>

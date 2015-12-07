@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TemplateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
 ------------- Standard Output ---------------
 <test name="test">
    <config class="java.util.ArrayList">
@@ -45,7 +45,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
    </details>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TemplateTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="test">
    <!-- java.util.List -->
    <Config class="java.util.ArrayList" ID="1">
@@ -67,8 +67,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
    </Details>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TemplateTest$Example]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testTemplate took 0.187 sec
+Testcase: testTemplate took 0.265 sec
 Testcase: testDirectory took 0 sec

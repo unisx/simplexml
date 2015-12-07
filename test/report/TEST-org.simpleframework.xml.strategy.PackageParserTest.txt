@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.strategy.PackageParserTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.14 sec
 ------------- Standard Output ---------------
-fast=63ms normal=47ms diff=0
+fast=63ms normal=62ms diff=0
 ------------- ---------------- ---------------
 
-Testcase: testParser took 0.11 sec
+Testcase: testParser took 0.14 sec

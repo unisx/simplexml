@@ -1,7 +1,12 @@
 Testsuite: org.simpleframework.xml.core.SuperTypeTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
 ------------- Standard Output ---------------
 <objects>
+   <object key="one">
+      <class:superType xmlns:class="http://simpleframework.org/xml/core/SuperTypeTest$SubType1">
+         <text>subtype1</text>
+      </class:superType>
+   </object>
    <object key="two">
       <class:superType xmlns:class="http://simpleframework.org/xml/core/SuperTypeTest$SubType2">
          <class:superType xmlns:class="http://simpleframework.org/xml/core/SuperTypeTest$SubType1">
@@ -9,11 +14,6 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
          </class:superType>
       </class:superType>
    </object>
-   <object key="one">
-      <class:superType xmlns:class="http://simpleframework.org/xml/core/SuperTypeTest$SubType1">
-         <text>subtype1</text>
-      </class:superType>
-   </object>
 </objects>------------- ---------------- ---------------
 
-Testcase: testSuperType took 0.156 sec
+Testcase: testSuperType took 0.172 sec

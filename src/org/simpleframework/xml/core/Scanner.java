@@ -18,15 +18,10 @@
 
 package org.simpleframework.xml.core;
 
-import java.lang.annotation.Annotation;
 import java.util.List;
 
-import org.simpleframework.xml.Default;
-import org.simpleframework.xml.DefaultType;
 import org.simpleframework.xml.Order;
-import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Version;
-import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>Scanner</code> object performs the reflective inspection
@@ -42,67 +37,7 @@ import org.simpleframework.xml.stream.Format;
  * 
  * @see org.simpleframework.xml.core.Schema
  */ 
-class Scanner implements Policy {
-   
-   /**
-    * This is used to store all XML attributes and XML elements.
-    */
-   private StructureBuilder builder;
-   
-   /**
-    * This method acts as a pointer to the types commit process.
-    */
-   private ClassScanner scanner;
-   
-   /**
-    * This defines the structure build from the class annotations.
-    */
-   private Structure structure;
-   
-   /**
-    * This is the default access type to be used for this scanner.
-    */
-   private DefaultType access;
-   
-   /**
-    * This is the name of the class as taken from the root class.
-    */
-   private String name;
-   
-   /**
-    * This is the type that is being scanned by this scanner.
-    */
-   private Class type;
-   
-   /**
-    * This is used to determine if the defaults are required.
-    */
-   private boolean required;
-   
-   /**
-    * Constructor for the <code>Scanner</code> object. This is used 
-    * to scan the provided class for annotations that are used to
-    * build a schema for an XML file to follow. 
-    * 
-    * @param type this is the type that is scanned for a schema
-    */
-   public Scanner(Class type) throws Exception {  
-      this(type, new Format());
-   }
-   
-   /**
-    * Constructor for the <code>Scanner</code> object. This is used 
-    * to scan the provided class for annotations that are used to
-    * build a schema for an XML file to follow. 
-    * 
-    * @param type this is the type that is scanned for a schema
-    */
-   public Scanner(Class type, Format format) throws Exception {  
-      this.scanner = new ClassScanner(type, format);
-      this.builder = new StructureBuilder(this, type, format); 
-      this.type = type;
-      this.scan(type);
-   }      
+interface Scanner extends Policy {
    
    /**
     * This is used to acquire the default signature for the class. 
@@ -112,9 +47,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the default signature if it exists
     */
-   public Signature getSignature() {
-      return scanner.getSignature();
-   }
+   public Signature getSignature();
    
    /**
     * This returns the signatures for the type. All constructors are
@@ -124,9 +57,7 @@ class Scanner implements Policy {
     *
     * @return this returns the list of signatures for the type
     */
-   public List<Signature> getSignatures() {
-      return scanner.getSignatures();
-   }
+   public List<Signature> getSignatures();
    
    /**
     * This returns a map of all parameters that exist. This is used
@@ -135,9 +66,7 @@ class Scanner implements Policy {
     * 
     * @return this returns a map of all parameters within the type
     */
-   public ParameterMap getParameters() {
-      return scanner.getParameters();
-   }
+   public ParameterMap getParameters();
    
    /**
     * This is used to acquire the instantiator for the type. This is
@@ -147,9 +76,7 @@ class Scanner implements Policy {
     * 
     * @return this instantiator responsible for creating instances
     */
-   public Instantiator getInstantiator() {
-      return structure.getInstantiator();
-   }
+   public Instantiator getInstantiator();
 
    /**
     * This is used to acquire the type that this scanner scans for
@@ -158,9 +85,7 @@ class Scanner implements Policy {
     * 
     * @return this is the type that this creator will represent
     */
-   public Class getType() {
-      return type;
-   }
+   public Class getType();
    
    /**
     * This is used to acquire the <code>Decorator</code> for this.
@@ -171,9 +96,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the decorator associated with this
     */
-   public Decorator getDecorator() {
-      return scanner.getDecorator();
-   }
+   public Decorator getDecorator();
    
    /**
     * This method is used to return the <code>Caller</code> for this
@@ -183,9 +106,7 @@ class Scanner implements Policy {
     * 
     * @return this returns a caller used for delivering callbacks
     */
-   public Caller getCaller(Context context) {
-      return new Caller(this, context);
-   }
+   public Caller getCaller(Context context);
 
    /**
     * This is used to create a <code>Section</code> given the context
@@ -196,9 +117,7 @@ class Scanner implements Policy {
     * 
     * @return this will return a section for serialization
     */
-   public Section getSection() {
-      return structure.getSection();
-   }
+   public Section getSection();
    
    /**
     * This is the <code>Version</code> for the scanned class. It 
@@ -209,9 +128,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the version of the class that is scanned
     */
-   public Version getRevision() {
-      return structure.getRevision();
-   }
+   public Version getRevision();
    
    /**
     * This is used to acquire the <code>Order</code> annotation for
@@ -222,9 +139,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the order, if any, defined for the class
     */
-   public Order getOrder() {
-      return scanner.getOrder();
-   }
+   public Order getOrder();
    
    /**
     * This returns the <code>Label</code> that represents the version
@@ -234,9 +149,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the label used for reading the version
     */
-   public Label getVersion() {
-      return structure.getVersion();
-   }
+   public Label getVersion();
    
    /**
     * This returns the <code>Label</code> that represents the text
@@ -247,9 +160,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the text label for the scanned class
     */
-   public Label getText() {
-      return structure.getText();
-   }
+   public Label getText();
    
    /**
     * This returns the name of the class processed by this scanner.
@@ -260,9 +171,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the name of the object being scanned
     */
-   public String getName() {
-      return name;
-   }
+   public String getName();
 
    /**
     * This method is used to retrieve the schema class commit method
@@ -273,9 +182,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the commit method for the schema class
     */
-   public Function getCommit() {
-      return scanner.getCommit();           
-   }
+   public Function getCommit();
 
    /**
     * This method is used to retrieve the schema class validation
@@ -286,9 +193,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the validate method for the schema class
     */   
-   public Function getValidate() {
-      return scanner.getValidate();       
-   }
+   public Function getValidate();
    
    /**
     * This method is used to retrieve the schema class persistence
@@ -299,9 +204,7 @@ class Scanner implements Policy {
     * 
     * @return this returns the persist method for the schema class
     */
-   public Function getPersist() {
-      return scanner.getPersist();           
-   }
+   public Function getPersist();
 
    /**
     * This method is used to retrieve the schema class completion
@@ -312,9 +215,7 @@ class Scanner implements Policy {
     * 
     * @return returns the complete method for the schema class
     */   
-   public Function getComplete() {
-      return scanner.getComplete();           
-   }
+   public Function getComplete();
    
    /**
     * This method is used to retrieve the schema class replacement
@@ -325,9 +226,7 @@ class Scanner implements Policy {
     * 
     * @return returns the replace method for the schema class
     */
-   public Function getReplace() {
-      return scanner.getReplace();
-   }
+   public Function getReplace();
    
    /**
     * This method is used to retrieve the schema class replacement
@@ -338,9 +237,7 @@ class Scanner implements Policy {
     * 
     * @return returns the replace method for the schema class
     */
-   public Function getResolve() {
-      return scanner.getResolve();
-   }
+   public Function getResolve();
 
    /**
     * This is used to determine whether the scanned class represents
@@ -350,9 +247,7 @@ class Scanner implements Policy {
     * 
     * @return this returns true if no XML annotations were found
     */
-   public boolean isPrimitive() {
-      return structure.isPrimitive();
-   }
+   public boolean isPrimitive();
    
    /**
     * This is used to determine whether the scanned class represents
@@ -362,9 +257,7 @@ class Scanner implements Policy {
     * 
     * @return this returns true if no XML annotations were found
     */
-   public boolean isEmpty() {
-      return scanner.getRoot() == null;
-   }
+   public boolean isEmpty();
    
    /**
     * This method is used to determine whether strict mappings are
@@ -376,159 +269,6 @@ class Scanner implements Policy {
     *
     * @return true if strict parsing is enabled, false otherwise
     */ 
-   public boolean isStrict() {
-      return scanner.isStrict();
-   }
-   
-   /**
-    * This is used to scan the specified object to extract the fields
-    * and methods that are to be used in the serialization process.
-    * This will acquire all fields and getter setter pairs that have
-    * been annotated with the XML annotations.
-    *
-    * @param type this is the object type that is to be scanned
-    */  
-   private void scan(Class type) throws Exception {
-      root(type);
-      order(type);
-      access(type);
-      field(type);
-      method(type);
-      validate(type);
-      commit(type);
-   }
-   
-   /**
-    * Once the scanner has completed extracting the annotations and
-    * validating the resulting structure this is called to complete 
-    * the process. This will build a <code>Structure</code> object and
-    * clean up any data structures no longer required by the scanner.
-    * 
-    * @param type this is the type that this scanner has scanned
-    */
-   private void commit(Class type) throws Exception {
-      if(structure == null) {
-         structure = builder.build(type);
-      }
-      builder = null;
-   }
-   
-   /**
-    * This is used to acquire the optional order annotation to provide
-    * order to the elements and attributes for the generated XML. This
-    * acts as an override to the order provided by the declaration of
-    * the types within the object.  
-    * 
-    * @param type this is the type to be scanned for the order
-    */
-   private void order(Class<?> type) throws Exception {
-      builder.assemble(type);
-   }
-   
-   /**
-    * This is used to validate the configuration of the scanned class.
-    * If a <code>Text</code> annotation has been used with elements
-    * then validation will fail and an exception will be thrown. 
-    * 
-    * @param type this is the object type that is being scanned
-    * 
-    * @throws Exception if text and element annotations are present
-    */
-   private void validate(Class type) throws Exception {
-      builder.commit(type);
-      builder.validate(type);
-   }
-  
-   /**
-    * This is used to acquire the optional <code>Root</code> from the
-    * specified class. The root annotation provides information as
-    * to how the object is to be parsed as well as other information
-    * such as the name of the object if it is to be serialized.
-    *
-    * @param type this is the type of the class to be inspected
-    */    
-   private void root(Class<?> type) {
-      String real = type.getSimpleName();
-      Root root = scanner.getRoot();
-      String text = real;
-
-      if(root != null) {
-         text = root.name();
-
-         if(isEmpty(text)) {
-            text = Reflector.getName(real);
-         }      
-         name = text.intern();      
-      }
-   }
-   
-   /**
-    * This is used to determine the access type for the class. The
-    * access type is specified by the <code>DefaultType</code>
-    * enumeration. Setting a default access tells this scanner to
-    * synthesize an XML annotation for all fields or methods that
-    * do not have associated annotations. 
-    * 
-    * @param type this is the type to acquire the default type for
-    */
-   private void access(Class<?> type) {
-      Default holder = scanner.getDefault();
-      
-      if(holder != null) {
-         required = holder.required();
-         access = holder.value();
-      }
-   }
-   
-   /**
-    * This method is used to determine if a root annotation value is
-    * an empty value. Rather than determining if a string is empty
-    * be comparing it to an empty string this method allows for the
-    * value an empty string represents to be changed in future.
-    * 
-    * @param value this is the value to determine if it is empty
-    * 
-    * @return true if the string value specified is an empty value
-    */
-   private boolean isEmpty(String value) {
-      return value.length() == 0;
-   }
-  
-   /**
-    * This is used to acquire the contacts for the annotated fields 
-    * within the specified class. The field contacts are added to
-    * either the attributes or elements map depending on annotation.
-    * 
-    * @param type this is the object type that is to be scanned
-    */    
-   private void field(Class type) throws Exception {
-      ContactList list = new FieldScanner(type, access, required);
-      
-      for(Contact contact : list) {
-         Annotation label = contact.getAnnotation();
-         
-         if(label != null) {
-            builder.process(contact, label);
-         }
-      }
-   }
-   
-   /**
-    * This is used to acquire the contacts for the annotated fields 
-    * within the specified class. The field contacts are added to
-    * either the attributes or elements map depending on annotation.
-    * 
-    * @param type this is the object type that is to be scanned
-    */ 
-   private void method(Class type) throws Exception {
-      ContactList list = new MethodScanner(type, access, required);
-      
-      for(Contact contact : list) {
-         Annotation label = contact.getAnnotation();
-         
-         if(label != null) {
-            builder.process(contact, label);
-         }
-      }
-   }
+   public boolean isStrict();
 }
+

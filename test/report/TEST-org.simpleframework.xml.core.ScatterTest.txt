@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScatterTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.358 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -35,7 +35,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <text ID="7" name="c" version="THREE">Example 3</text>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlineTextList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -53,7 +53,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <Text ID="7" name="c" version="THREE">Example 3</Text>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlineTextList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
    <message>Some example message</message>
    <double>1.0</double>
@@ -88,7 +88,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <text ID="7" name="c" version="THREE">Example 3</text>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlineTextList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -106,7 +106,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <Text ID="7" name="c" version="THREE">Example 3</Text>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlineTextList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
@@ -129,7 +129,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <string ID="4">Example 3</string>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -141,7 +141,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <String ID="4">Example 3</String>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
@@ -164,7 +164,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <string ID="4">Example 3</string>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -176,48 +176,48 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <String ID="4">Example 3</String>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
-   <include file="1.txt" name="1"/>
    <include file="4.txt" name="4"/>
+   <include file="1.txt" name="1"/>
    <exclude file="3.txt" name="3"/>
-   <exclude file="2.txt" name="2"/>
    <exclude file="5.txt" name="5"/>
+   <exclude file="2.txt" name="2"/>
 </test><test version="ONE">
-   <include file="1.txt" name="1"/>
    <include file="4.txt" name="4"/>
+   <include file="1.txt" name="1"/>
    <exclude file="3.txt" name="3"/>
-   <exclude file="2.txt" name="2"/>
    <exclude file="5.txt" name="5"/>
+   <exclude file="2.txt" name="2"/>
 </test>
 <test ID="0" version="ONE">
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <include ID="1" file="1.txt" name="1"/>
+   <include ID="1" file="4.txt" name="4"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <include ID="2" file="4.txt" name="4"/>
+   <include ID="2" file="1.txt" name="1"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
    <exclude ID="3" file="3.txt" name="3"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <exclude ID="4" file="2.txt" name="2"/>
+   <exclude ID="4" file="5.txt" name="5"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <exclude ID="5" file="5.txt" name="5"/>
+   <exclude ID="5" file="2.txt" name="2"/>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlineNamedList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <Include ID="1" file="1.txt" name="1"/>
+   <Include ID="1" file="4.txt" name="4"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <Include ID="2" file="4.txt" name="4"/>
+   <Include ID="2" file="1.txt" name="1"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
    <Exclude ID="3" file="3.txt" name="3"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <Exclude ID="4" file="2.txt" name="2"/>
+   <Exclude ID="4" file="5.txt" name="5"/>
    <!-- org.simpleframework.xml.core.ScatterTest$FileMatch -->
-   <Exclude ID="5" file="5.txt" name="5"/>
+   <Exclude ID="5" file="2.txt" name="2"/>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$InlineNamedList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <simpleInlineList>
    <simpleEntry content="test"/>
 </simpleInlineList><simpleInlineList>
@@ -228,13 +228,13 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <simple-entry ID="1" content="test"/>
 </simple-inline-list>>>>>> ELEMENT=[element simple-inline-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$SimpleInlineList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <SimpleInlineList ID="0">
    <!-- org.simpleframework.xml.core.ScatterTest$SimpleEntry -->
    <SimpleEntry ID="1" content="test"/>
 </SimpleInlineList>>>>>> ELEMENT=[element SimpleInlineList]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$SimpleInlineList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <simplePrimitiveInlineList>
    <string>test</string>
 </simplePrimitiveInlineList><simplePrimitiveInlineList>
@@ -245,18 +245,18 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
    <string ID="1">test</string>
 </simple-primitive-inline-list>>>>>> ELEMENT=[element simple-primitive-inline-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$SimplePrimitiveInlineList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <SimplePrimitiveInlineList ID="0">
    <!-- java.lang.String -->
    <String ID="1">test</String>
 </SimplePrimitiveInlineList>>>>>> ELEMENT=[element SimplePrimitiveInlineList]
 >>>>> TYPE=[class org.simpleframework.xml.core.ScatterTest$SimplePrimitiveInlineList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.219 sec
+Testcase: testList took 0.265 sec
 Testcase: testPrimitiveList took 0.031 sec
-Testcase: testInlineNamedList took 0.016 sec
-Testcase: testSimpleList took 0.015 sec
-Testcase: testSimplePrimitiveList took 0 sec
-Testcase: testDirectory took 0 sec
+Testcase: testInlineNamedList took 0.031 sec
+Testcase: testSimpleList took 0 sec
+Testcase: testSimplePrimitiveList took 0.016 sec
+Testcase: testDirectory took 0.015 sec

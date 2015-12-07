@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathAttributeWithNoExistingSectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
 ------------- Standard Output ---------------
 <attributeWithNoExistingSectionExample>
    <some>
@@ -28,7 +28,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
    </some>
 </attribute-with-no-existing-section-example>>>>>> ELEMENT=[element attribute-with-no-existing-section-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathAttributeWithNoExistingSectionTest$AttributeWithNoExistingSectionExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <AttributeWithNoExistingSectionExample ID="0">
    <Some>
       <Path>
@@ -39,7 +39,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
    </Some>
 </AttributeWithNoExistingSectionExample>>>>>> ELEMENT=[element AttributeWithNoExistingSectionExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathAttributeWithNoExistingSectionTest$AttributeWithNoExistingSectionExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <attributeWithNoExistingSectionExample>
@@ -52,5 +52,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
    </some>
 </attributeWithNoExistingSectionExample>------------- ---------------- ---------------
 
-Testcase: testOrder took 0.156 sec
+Testcase: testOrder took 0.202 sec
 Testcase: testDirectory took 0 sec

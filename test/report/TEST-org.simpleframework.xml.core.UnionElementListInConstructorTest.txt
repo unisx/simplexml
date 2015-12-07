@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionElementListInConstructorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
 ------------- Standard Output ---------------
 <inlineListUnion xmlns:x="http://x.com/x" xmlns:y="http://y.com/y">
    <x:path>
@@ -59,7 +59,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </y:path>
 </inline-list-union>>>>>> ELEMENT=[element inline-list-union]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionElementListInConstructorTest$InlineListUnion]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <InlineListUnion ID="0" xmlns:x="http://x.com/x" xmlns:y="http://y.com/y">
    <x:Path>
       <!-- org.simpleframework.xml.core.UnionElementListInConstructorTest$A -->
@@ -87,8 +87,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </y:Path>
 </InlineListUnion>>>>>> ELEMENT=[element InlineListUnion]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionElementListInConstructorTest$InlineListUnion]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testListUnion took 0.218 sec
+Testcase: testListUnion took 0.265 sec
 Testcase: testDirectory took 0 sec

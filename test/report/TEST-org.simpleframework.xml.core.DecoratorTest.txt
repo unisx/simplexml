@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DecoratorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Output ---------------
 <friendList>
    <list type="list">
@@ -110,7 +110,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </list>
 </friend-list>>>>>> ELEMENT=[element friend-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.DecoratorTest$FriendList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <FriendList ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -161,8 +161,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
    </List>
 </FriendList>>>>>> ELEMENT=[element FriendList]
 >>>>> TYPE=[class org.simpleframework.xml.core.DecoratorTest$FriendList]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testDecorator took 0.25 sec
+Testcase: testDecorator took 0.406 sec
 Testcase: testDirectory took 0 sec

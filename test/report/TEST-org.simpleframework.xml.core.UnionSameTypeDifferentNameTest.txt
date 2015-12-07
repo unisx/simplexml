@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionSameTypeDifferentNameTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
 <optionalNameExample>
    <login>john.doe</login>
@@ -11,13 +11,13 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    <login ID="1">john.doe</login>
 </optional-name-example>>>>>> ELEMENT=[element optional-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionSameTypeDifferentNameTest$OptionalNameExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <OptionalNameExample ID="0">
    <!-- java.lang.String -->
    <Login ID="1">john.doe</Login>
 </OptionalNameExample>>>>>> ELEMENT=[element OptionalNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionSameTypeDifferentNameTest$OptionalNameExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <optionalNameExample>
    <login>john.doe</login>
 </optionalNameExample><optionalNameExample>
@@ -28,13 +28,13 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    <login ID="1">john.doe</login>
 </optional-name-example>>>>>> ELEMENT=[element optional-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionSameTypeDifferentNameTest$OptionalNameExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <OptionalNameExample ID="0">
    <!-- java.lang.String -->
    <Login ID="1">john.doe</Login>
 </OptionalNameExample>>>>>> ELEMENT=[element OptionalNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionSameTypeDifferentNameTest$OptionalNameExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <optionalNameExample>
    <login>john.doe</login>
 </optionalNameExample><optionalNameExample>
@@ -45,14 +45,14 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    <login ID="1">john.doe</login>
 </optional-name-example>>>>>> ELEMENT=[element optional-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionSameTypeDifferentNameTest$OptionalNameExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <OptionalNameExample ID="0">
    <!-- java.lang.String -->
    <Login ID="1">john.doe</Login>
 </OptionalNameExample>>>>>> ELEMENT=[element OptionalNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionSameTypeDifferentNameTest$OptionalNameExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalName took 0.187 sec
+Testcase: testOptionalName took 0.234 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -9,17 +9,17 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
             <value id="4">example 1</value>
          </mapEntry>
       </entry>
+      <entry key="a">
+         <mapEntry reference="2"/>
+      </entry>
+      <entry key="c">
+         <mapEntry reference="2"/>
+      </entry>
       <entry key="b">
          <mapEntry id="5">
             <name id="6">b</name>
             <value id="7">example 2</value>
          </mapEntry>
-      </entry>
-      <entry key="c">
-         <mapEntry reference="2"/>
-      </entry>
-      <entry key="a">
-         <mapEntry reference="2"/>
       </entry>
    </map>
 </entryMap><entryMap id="0">
@@ -30,17 +30,17 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
             <value id="4">example 1</value>
          </mapEntry>
       </entry>
+      <entry key="a">
+         <mapEntry reference="2"/>
+      </entry>
+      <entry key="c">
+         <mapEntry reference="2"/>
+      </entry>
       <entry key="b">
          <mapEntry id="5">
             <name id="6">b</name>
             <value id="7">example 2</value>
          </mapEntry>
-      </entry>
-      <entry key="c">
-         <mapEntry reference="2"/>
-      </entry>
-      <entry key="a">
-         <mapEntry reference="2"/>
       </entry>
    </map>
 </entryMap>
@@ -56,6 +56,14 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
             <value ID="4">example 1</value>
          </map-entry>
       </entry>
+      <entry key="a">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
+         <map-entry REFERER="2"/>
+      </entry>
+      <entry key="c">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
+         <map-entry REFERER="2"/>
+      </entry>
       <entry key="b">
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry ID="5">
@@ -65,18 +73,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
             <value ID="7">example 2</value>
          </map-entry>
       </entry>
-      <entry key="c">
-         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <map-entry REFERER="2"/>
-      </entry>
-      <entry key="a">
-         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <map-entry REFERER="2"/>
-      </entry>
    </map>
 </entry-map>>>>>> ELEMENT=[element entry-map]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.MapCycleTest$EntryMap]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <EntryMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -89,6 +89,14 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
             <Value ID="4">example 1</Value>
          </MapEntry>
       </Entry>
+      <Entry key="a">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
+         <MapEntry REFERER="2"/>
+      </Entry>
+      <Entry key="c">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
+         <MapEntry REFERER="2"/>
+      </Entry>
       <Entry key="b">
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry ID="5">
@@ -98,76 +106,68 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
             <Value ID="7">example 2</Value>
          </MapEntry>
       </Entry>
-      <Entry key="c">
-         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <MapEntry REFERER="2"/>
-      </Entry>
-      <Entry key="a">
-         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <MapEntry REFERER="2"/>
-      </Entry>
    </Map>
 </EntryMap>>>>>> ELEMENT=[element EntryMap]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.MapCycleTest$EntryMap]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <complexMap id="0">
    <map class="java.util.HashMap" id="1">
       <entry>
          <compositeKey id="2">
-            <name id="3">name 4</name>
-            <address id="4">address 4</address>
+            <name id="3">name 3</name>
+            <address id="4">address 3</address>
          </compositeKey>
          <mapEntry id="5">
-            <name id="6">d</name>
-            <value id="7">example 4</value>
+            <name id="6">b</name>
+            <value id="7">example 2</value>
          </mapEntry>
       </entry>
       <entry>
          <compositeKey id="8">
-            <name id="9">name 3</name>
-            <address id="10">address 3</address>
+            <name id="9">name 1</name>
+            <address id="10">address 1</address>
          </compositeKey>
-         <mapEntry id="11">
-            <name id="12">b</name>
-            <value id="13">example 2</value>
-         </mapEntry>
+         <mapEntry reference="5"/>
       </entry>
       <entry>
-         <compositeKey id="14">
-            <name id="15">name 1</name>
-            <address id="16">address 1</address>
+         <compositeKey id="11">
+            <name id="12">name 4</name>
+            <address id="13">address 4</address>
          </compositeKey>
-         <mapEntry reference="11"/>
+         <mapEntry id="14">
+            <name id="15">d</name>
+            <value id="16">example 4</value>
+         </mapEntry>
       </entry>
    </map>
 </complexMap><complexMap id="0">
    <map class="java.util.HashMap" id="1">
       <entry>
          <compositeKey id="2">
-            <name id="3">name 4</name>
-            <address id="4">address 4</address>
+            <name id="3">name 3</name>
+            <address id="4">address 3</address>
          </compositeKey>
          <mapEntry id="5">
-            <name id="6">d</name>
-            <value id="7">example 4</value>
+            <name id="6">b</name>
+            <value id="7">example 2</value>
          </mapEntry>
       </entry>
       <entry>
          <compositeKey id="8">
-            <name id="9">name 3</name>
-            <address id="10">address 3</address>
+            <name id="9">name 1</name>
+            <address id="10">address 1</address>
          </compositeKey>
-         <mapEntry id="11">
-            <name id="12">b</name>
-            <value id="13">example 2</value>
-         </mapEntry>
+         <mapEntry reference="5"/>
       </entry>
       <entry>
-         <compositeKey id="14">
-            <name id="15">name 1</name>
-            <address id="16">address 1</address>
+         <compositeKey id="11">
+            <name id="12">name 4</name>
+            <address id="13">address 4</address>
          </compositeKey>
-         <mapEntry reference="11"/>
+         <mapEntry id="14">
+            <name id="15">d</name>
+            <value id="16">example 4</value>
+         </mapEntry>
       </entry>
    </map>
 </complexMap>
@@ -178,49 +178,49 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
          <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <composite-key ID="2">
             <!-- java.lang.String -->
-            <name ID="3">name 4</name>
+            <name ID="3">name 3</name>
             <!-- java.lang.String -->
-            <address ID="4">address 4</address>
+            <address ID="4">address 3</address>
          </composite-key>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry ID="5">
             <!-- java.lang.String -->
-            <name ID="6">d</name>
+            <name ID="6">b</name>
             <!-- java.lang.String -->
-            <value ID="7">example 4</value>
+            <value ID="7">example 2</value>
          </map-entry>
       </entry>
       <entry>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <composite-key ID="8">
             <!-- java.lang.String -->
-            <name ID="9">name 3</name>
+            <name ID="9">name 1</name>
             <!-- java.lang.String -->
-            <address ID="10">address 3</address>
+            <address ID="10">address 1</address>
          </composite-key>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <map-entry ID="11">
-            <!-- java.lang.String -->
-            <name ID="12">b</name>
-            <!-- java.lang.String -->
-            <value ID="13">example 2</value>
-         </map-entry>
+         <map-entry REFERER="5"/>
       </entry>
       <entry>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
-         <composite-key ID="14">
+         <composite-key ID="11">
             <!-- java.lang.String -->
-            <name ID="15">name 1</name>
+            <name ID="12">name 4</name>
             <!-- java.lang.String -->
-            <address ID="16">address 1</address>
+            <address ID="13">address 4</address>
          </composite-key>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <map-entry REFERER="11"/>
+         <map-entry ID="14">
+            <!-- java.lang.String -->
+            <name ID="15">d</name>
+            <!-- java.lang.String -->
+            <value ID="16">example 4</value>
+         </map-entry>
       </entry>
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.MapCycleTest$ComplexMap]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -228,57 +228,57 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
          <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <CompositeKey ID="2">
             <!-- java.lang.String -->
-            <Name ID="3">name 4</Name>
+            <Name ID="3">name 3</Name>
             <!-- java.lang.String -->
-            <Address ID="4">address 4</Address>
+            <Address ID="4">address 3</Address>
          </CompositeKey>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry ID="5">
             <!-- java.lang.String -->
-            <Name ID="6">d</Name>
+            <Name ID="6">b</Name>
             <!-- java.lang.String -->
-            <Value ID="7">example 4</Value>
+            <Value ID="7">example 2</Value>
          </MapEntry>
       </Entry>
       <Entry>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <CompositeKey ID="8">
             <!-- java.lang.String -->
-            <Name ID="9">name 3</Name>
+            <Name ID="9">name 1</Name>
             <!-- java.lang.String -->
-            <Address ID="10">address 3</Address>
+            <Address ID="10">address 1</Address>
          </CompositeKey>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <MapEntry ID="11">
-            <!-- java.lang.String -->
-            <Name ID="12">b</Name>
-            <!-- java.lang.String -->
-            <Value ID="13">example 2</Value>
-         </MapEntry>
+         <MapEntry REFERER="5"/>
       </Entry>
       <Entry>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
-         <CompositeKey ID="14">
+         <CompositeKey ID="11">
             <!-- java.lang.String -->
-            <Name ID="15">name 1</Name>
+            <Name ID="12">name 4</Name>
             <!-- java.lang.String -->
-            <Address ID="16">address 1</Address>
+            <Address ID="13">address 4</Address>
          </CompositeKey>
          <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
-         <MapEntry REFERER="11"/>
+         <MapEntry ID="14">
+            <!-- java.lang.String -->
+            <Name ID="15">d</Name>
+            <!-- java.lang.String -->
+            <Value ID="16">example 4</Value>
+         </MapEntry>
       </Entry>
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.MapCycleTest$ComplexMap]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveMap id="0">
    <map class="java.util.HashMap" id="1">
       <entry>
-         <string id="2">two</string>
+         <string id="2">one</string>
          <double id="3">1.0</double>
       </entry>
       <entry>
-         <string id="4">one</string>
+         <string id="4">two</string>
          <double reference="3"/>
       </entry>
       <entry>
@@ -289,11 +289,11 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 </primitiveMap><primitiveMap id="0">
    <map class="java.util.HashMap" id="1">
       <entry>
-         <string id="2">two</string>
+         <string id="2">one</string>
          <double id="3">1.0</double>
       </entry>
       <entry>
-         <string id="4">one</string>
+         <string id="4">two</string>
          <double reference="3"/>
       </entry>
       <entry>
@@ -307,13 +307,13 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
    <map class="java.util.HashMap" ID="1">
       <entry>
          <!-- java.lang.String -->
-         <string ID="2">two</string>
+         <string ID="2">one</string>
          <!-- java.lang.Double -->
          <double ID="3">1.0</double>
       </entry>
       <entry>
          <!-- java.lang.String -->
-         <string ID="4">one</string>
+         <string ID="4">two</string>
          <!-- java.lang.Double -->
          <double REFERER="3"/>
       </entry>
@@ -326,19 +326,19 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
    </map>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.MapCycleTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
          <!-- java.lang.String -->
-         <String ID="2">two</String>
+         <String ID="2">one</String>
          <!-- java.lang.Double -->
          <double ID="3">1.0</double>
       </Entry>
       <Entry>
          <!-- java.lang.String -->
-         <String ID="4">one</String>
+         <String ID="4">two</String>
          <!-- java.lang.Double -->
          <double REFERER="3"/>
       </Entry>
@@ -351,10 +351,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
    </Map>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.MapCycleTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.187 sec
-Testcase: testComplexMap took 0.031 sec
-Testcase: testPrimitiveMap took 0.031 sec
+Testcase: testEntryMap took 0.25 sec
+Testcase: testComplexMap took 0.046 sec
+Testcase: testPrimitiveMap took 0.032 sec
 Testcase: testDirectory took 0 sec

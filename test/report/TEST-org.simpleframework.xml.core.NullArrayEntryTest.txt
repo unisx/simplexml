@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NullArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="5">
@@ -67,7 +67,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    </list>
 </example-array>>>>>> ELEMENT=[element example-array]
 >>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExampleArray]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExampleArray ID="0">
    <!-- [Lorg.simpleframework.xml.core.NullArrayEntryTest$Entry; -->
    <List length="5" ID="1">
@@ -91,7 +91,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    </List>
 </ExampleArray>>>>>> ELEMENT=[element ExampleArray]
 >>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExampleArray]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <examplePrimitiveArray>
    <list length="7">
       <substitute>a</substitute>
@@ -140,7 +140,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    </list>
 </example-primitive-array>>>>>> ELEMENT=[element example-primitive-array]
 >>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExamplePrimitiveArray]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExamplePrimitiveArray ID="0">
    <!-- [Ljava.lang.String; -->
    <List length="7" ID="1">
@@ -158,9 +158,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
    </List>
 </ExamplePrimitiveArray>>>>>> ELEMENT=[element ExamplePrimitiveArray]
 >>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExamplePrimitiveArray]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.188 sec
+Testcase: testExampleArray took 0.265 sec
 Testcase: testExamplePrimitiveArray took 0.015 sec
 Testcase: testDirectory took 0 sec

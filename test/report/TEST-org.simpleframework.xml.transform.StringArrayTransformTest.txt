@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.StringArrayTransformTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
 ------------- Standard Output ---------------
 <stringArrayExample attribute="one, two, three, four">
    <element length="4">one, two, three, four</element>
@@ -37,7 +37,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
    </array>
 </string-array-example>>>>>> ELEMENT=[element string-array-example]
 >>>>> TYPE=[class org.simpleframework.xml.transform.StringArrayTransformTest$StringArrayExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <StringArrayExample ID="0" attribute="one, two, three, four">
    <!-- [Ljava.lang.String; -->
    <Element length="4" ID="1">one, two, three, four</Element>
@@ -55,7 +55,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
    </Array>
 </StringArrayExample>>>>>> ELEMENT=[element StringArrayExample]
 >>>>> TYPE=[class org.simpleframework.xml.transform.StringArrayTransformTest$StringArrayExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <stringArrayExample attribute="one, two, three, four">
@@ -70,7 +70,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 </stringArrayExample>
 ------------- ---------------- ---------------
 
-Testcase: testRead took 0 sec
+Testcase: testRead took 0.016 sec
 Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.187 sec
+Testcase: testPersistence took 0.218 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathSectionIndexTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
 ------------- Standard Output ---------------
 <pathSectionIndexExample>
    <contact-details>
@@ -39,7 +39,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
    </contact-details>
 </path-section-index-example>>>>>> ELEMENT=[element path-section-index-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathSectionIndexTest$PathSectionIndexExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathSectionIndexExample ID="0">
    <ContactDetails>
       <Phone>
@@ -55,7 +55,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
    </ContactDetails>
 </PathSectionIndexExample>>>>>> ELEMENT=[element PathSectionIndexExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathSectionIndexTest$PathSectionIndexExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <pathSectionIndexExample>
@@ -71,5 +71,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
    </contact-details>
 </pathSectionIndexExample>------------- ---------------- ---------------
 
-Testcase: testSectionIndex took 0.188 sec
+Testcase: testSectionIndex took 0.234 sec
 Testcase: testDirectory took 0 sec

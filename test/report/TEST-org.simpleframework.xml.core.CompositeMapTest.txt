@@ -1,33 +1,33 @@
 Testsuite: org.simpleframework.xml.core.CompositeMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.078 sec
 ------------- Standard Output ---------------
 <inlineString>
-   <entry key="b" value="2"/>
    <entry key="a" value="1"/>
+   <entry key="b" value="2"/>
 </inlineString><notInlineString>
-   <entry>
-      <key>b</key>
-      <value>2</value>
-   </entry>
    <entry>
       <key>a</key>
       <value>1</value>
    </entry>
-</notInlineString><noAttributeString>
    <entry>
-      <string>b</string>
+      <key>b</key>
       <value>2</value>
    </entry>
+</notInlineString><noAttributeString>
    <entry>
       <string>a</string>
       <value>1</value>
    </entry>
+   <entry>
+      <string>b</string>
+      <value>2</value>
+   </entry>
 </noAttributeString><attributeNoKeyString>
-   <entry string="b" value="2"/>
    <entry string="a" value="1"/>
+   <entry string="b" value="2"/>
 </attributeNoKeyString>------------- ---------------- ---------------
 
-Testcase: testInlineString took 0.032 sec
-Testcase: testNotInlineString took 0.015 sec
-Testcase: testNoAttributeString took 0.047 sec
+Testcase: testInlineString took 0.062 sec
+Testcase: testNotInlineString took 0 sec
+Testcase: testNoAttributeString took 0.016 sec
 Testcase: testAttributeNoKeyString took 0 sec

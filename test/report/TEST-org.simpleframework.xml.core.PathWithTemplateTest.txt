@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTemplateTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
 ------------- Standard Output ---------------
 <pathWithTemplateExample>
    <details>
@@ -53,7 +53,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </details>
 </path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathWithTemplateExample ID="0">
    <Details>
       <!-- java.lang.String -->
@@ -77,7 +77,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </Details>
 </PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <pathWithTemplateExample>
    <details>
       <name>Jack Daniels</name>
@@ -130,7 +130,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </details>
 </path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathWithTemplateExample ID="0">
    <Details>
       <!-- java.lang.String -->
@@ -154,7 +154,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </Details>
 </PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <pathWithTemplateExample>
@@ -187,6 +187,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.218 sec
    </details>
 </pathWithTemplateExample>------------- ---------------- ---------------
 
-Testcase: testSerialization took 0.203 sec
-Testcase: testPathWithTemplates took 0.015 sec
+Testcase: testSerialization took 0.234 sec
+Testcase: testPathWithTemplates took 0.032 sec
 Testcase: testDirectory took 0 sec

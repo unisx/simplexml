@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.CycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.764 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.936 sec
 ------------- Standard Output ---------------
 <example id="0">
    <list class="java.util.ArrayList" id="1">
@@ -88,7 +88,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.764 sec
    <cycle REFERER="0"/>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -121,7 +121,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.764 sec
    <Cycle REFERER="0"/>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example id="0">
    <list class="java.util.ArrayList" id="1">
       <entry id="2" key="1">
@@ -209,7 +209,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.764 sec
    <cycle REFERER="0"/>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -242,9 +242,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.764 sec
    <Cycle REFERER="0"/>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.187 sec
-Testcase: testMemory took 0.577 sec
+Testcase: testCycle took 0.312 sec
+Testcase: testMemory took 0.609 sec
 Testcase: testDirectory took 0 sec

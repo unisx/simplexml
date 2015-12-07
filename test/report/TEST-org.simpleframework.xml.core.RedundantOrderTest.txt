@@ -1,13 +1,13 @@
 Testsuite: org.simpleframework.xml.core.RedundantOrderTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Ordered element 'c' missing for class org.simpleframework.xml.core.RedundantOrderTest$ElementEntry
 	at org.simpleframework.xml.core.StructureBuilder.validateElements(StructureBuilder.java:608)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:527)
-	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:439)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:397)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:440)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:398)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:105)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:87)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -23,7 +23,7 @@ org.simpleframework.xml.core.ElementException: Ordered element 'c' missing for c
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -40,10 +40,10 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' does not 
 	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:349)
 	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:543)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:529)
-	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:439)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:397)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:104)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:77)
+	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:440)
+	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:398)
+	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:105)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:87)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
 	at org.simpleframework.xml.core.Support.getName(Support.java:265)
 	at org.simpleframework.xml.core.Source.getName(Source.java:240)
@@ -59,7 +59,7 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' does not 
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -73,6 +73,6 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' does not 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testRedundantElementOrder took 0.094 sec
-Testcase: testRedundantAttributeOrder took 0.015 sec
+Testcase: testRedundantElementOrder took 0.171 sec
+Testcase: testRedundantAttributeOrder took 0.016 sec
 Testcase: testDirectory took 0 sec

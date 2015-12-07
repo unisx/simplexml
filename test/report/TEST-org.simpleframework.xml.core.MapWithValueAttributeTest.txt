@@ -1,49 +1,49 @@
 Testsuite: org.simpleframework.xml.core.MapWithValueAttributeTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.39 sec
 ------------- Standard Output ---------------
 <mapWithValueTextExample id="0">
    <entry key="d">3.0</entry>
-   <entry key="b">1.0</entry>
-   <entry key="c">2.0</entry>
    <entry key="a">0.0</entry>
+   <entry key="c">2.0</entry>
+   <entry key="b">1.0</entry>
 </mapWithValueTextExample><mapWithValueTextExample id="0">
    <entry key="d">3.0</entry>
-   <entry key="b">1.0</entry>
-   <entry key="c">2.0</entry>
    <entry key="a">0.0</entry>
+   <entry key="c">2.0</entry>
+   <entry key="b">1.0</entry>
 </mapWithValueTextExample>
 <map-with-value-text-example ID="0">
    <entry key="d">3.0</entry>
-   <entry key="b">1.0</entry>
-   <entry key="c">2.0</entry>
    <entry key="a">0.0</entry>
+   <entry key="c">2.0</entry>
+   <entry key="b">1.0</entry>
 </map-with-value-text-example>>>>>> ELEMENT=[element map-with-value-text-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueTextExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithValueTextExample ID="0">
    <Entry key="d">3.0</Entry>
-   <Entry key="b">1.0</Entry>
-   <Entry key="c">2.0</Entry>
    <Entry key="a">0.0</Entry>
+   <Entry key="c">2.0</Entry>
+   <Entry key="b">1.0</Entry>
 </MapWithValueTextExample>>>>>> ELEMENT=[element MapWithValueTextExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueTextExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithValueElementExample id="0">
    <entry>
       <key id="1">d</key>
       <value id="2">3.0</value>
    </entry>
    <entry>
-      <key id="3">b</key>
-      <value id="4">1.0</value>
+      <key id="3">a</key>
+      <value id="4">0.0</value>
    </entry>
    <entry>
       <key id="5">c</key>
       <value id="6">2.0</value>
    </entry>
    <entry>
-      <key id="7">a</key>
-      <value id="8">0.0</value>
+      <key id="7">b</key>
+      <value id="8">1.0</value>
    </entry>
 </mapWithValueElementExample><mapWithValueElementExample id="0">
    <entry>
@@ -51,16 +51,16 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
       <value id="2">3.0</value>
    </entry>
    <entry>
-      <key id="3">b</key>
-      <value id="4">1.0</value>
+      <key id="3">a</key>
+      <value id="4">0.0</value>
    </entry>
    <entry>
       <key id="5">c</key>
       <value id="6">2.0</value>
    </entry>
    <entry>
-      <key id="7">a</key>
-      <value id="8">0.0</value>
+      <key id="7">b</key>
+      <value id="8">1.0</value>
    </entry>
 </mapWithValueElementExample>
 <map-with-value-element-example ID="0">
@@ -72,9 +72,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </entry>
    <entry>
       <!-- java.lang.String -->
-      <key ID="3">b</key>
+      <key ID="3">a</key>
       <!-- java.lang.Double -->
-      <value ID="4">1.0</value>
+      <value ID="4">0.0</value>
    </entry>
    <entry>
       <!-- java.lang.String -->
@@ -84,13 +84,13 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </entry>
    <entry>
       <!-- java.lang.String -->
-      <key ID="7">a</key>
+      <key ID="7">b</key>
       <!-- java.lang.Double -->
-      <value ID="8">0.0</value>
+      <value ID="8">1.0</value>
    </entry>
 </map-with-value-element-example>>>>>> ELEMENT=[element map-with-value-element-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueElementExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithValueElementExample ID="0">
    <Entry>
       <!-- java.lang.String -->
@@ -100,9 +100,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </Entry>
    <Entry>
       <!-- java.lang.String -->
-      <Key ID="3">b</Key>
+      <Key ID="3">a</Key>
       <!-- java.lang.Double -->
-      <value ID="4">1.0</value>
+      <value ID="4">0.0</value>
    </Entry>
    <Entry>
       <!-- java.lang.String -->
@@ -112,40 +112,40 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </Entry>
    <Entry>
       <!-- java.lang.String -->
-      <Key ID="7">a</Key>
+      <Key ID="7">b</Key>
       <!-- java.lang.Double -->
-      <value ID="8">0.0</value>
+      <value ID="8">1.0</value>
    </Entry>
 </MapWithValueElementExample>>>>>> ELEMENT=[element MapWithValueElementExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueElementExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithValueAttributeExample id="0">
    <entry key="d" value="3.0"/>
-   <entry key="b" value="1.0"/>
-   <entry key="c" value="2.0"/>
    <entry key="a" value="0.0"/>
+   <entry key="c" value="2.0"/>
+   <entry key="b" value="1.0"/>
 </mapWithValueAttributeExample><mapWithValueAttributeExample id="0">
    <entry key="d" value="3.0"/>
-   <entry key="b" value="1.0"/>
-   <entry key="c" value="2.0"/>
    <entry key="a" value="0.0"/>
+   <entry key="c" value="2.0"/>
+   <entry key="b" value="1.0"/>
 </mapWithValueAttributeExample>
 <map-with-value-attribute-example ID="0">
    <entry key="d" value="3.0"/>
-   <entry key="b" value="1.0"/>
-   <entry key="c" value="2.0"/>
    <entry key="a" value="0.0"/>
+   <entry key="c" value="2.0"/>
+   <entry key="b" value="1.0"/>
 </map-with-value-attribute-example>>>>>> ELEMENT=[element map-with-value-attribute-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueAttributeExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithValueAttributeExample ID="0">
    <Entry key="d" value="3.0"/>
-   <Entry key="b" value="1.0"/>
-   <Entry key="c" value="2.0"/>
    <Entry key="a" value="0.0"/>
+   <Entry key="c" value="2.0"/>
+   <Entry key="b" value="1.0"/>
 </MapWithValueAttributeExample>>>>>> ELEMENT=[element MapWithValueAttributeExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueAttributeExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithCompositeValueExample id="0">
    <entry key="a">
       <value id="1">
@@ -194,7 +194,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </entry>
 </map-with-composite-value-example>>>>>> ELEMENT=[element map-with-composite-value-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithCompositeValueExample ID="0">
    <Entry key="a">
       <!-- org.simpleframework.xml.core.MapWithValueAttributeTest$ValueExample -->
@@ -216,7 +216,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </Entry>
 </MapWithCompositeValueExample>>>>>> ELEMENT=[element MapWithCompositeValueExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithCompositeValueAndElementKeyExample id="0">
    <entry>
       <key id="1">a</key>
@@ -273,7 +273,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </entry>
 </map-with-composite-value-and-element-key-example>>>>>> ELEMENT=[element map-with-composite-value-and-element-key-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueAndElementKeyExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithCompositeValueAndElementKeyExample ID="0">
    <Entry>
       <!-- java.lang.String -->
@@ -299,36 +299,36 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </Entry>
 </MapWithCompositeValueAndElementKeyExample>>>>>> ELEMENT=[element MapWithCompositeValueAndElementKeyExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueAndElementKeyExample]
->>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <mapWithValueTextExample id="0">
    <entry key="d">3.0</entry>
-   <entry key="b">1.0</entry>
-   <entry key="c">2.0</entry>
    <entry key="a">0.0</entry>
+   <entry key="c">2.0</entry>
+   <entry key="b">1.0</entry>
 </mapWithValueTextExample><mapWithValueElementExample id="0">
    <entry>
       <key id="1">d</key>
       <value id="2">3.0</value>
    </entry>
    <entry>
-      <key id="3">b</key>
-      <value id="4">1.0</value>
+      <key id="3">a</key>
+      <value id="4">0.0</value>
    </entry>
    <entry>
       <key id="5">c</key>
       <value id="6">2.0</value>
    </entry>
    <entry>
-      <key id="7">a</key>
-      <value id="8">0.0</value>
+      <key id="7">b</key>
+      <value id="8">1.0</value>
    </entry>
 </mapWithValueElementExample><mapWithValueAttributeExample id="0">
    <entry key="d" value="3.0"/>
-   <entry key="b" value="1.0"/>
-   <entry key="c" value="2.0"/>
    <entry key="a" value="0.0"/>
+   <entry key="c" value="2.0"/>
+   <entry key="b" value="1.0"/>
 </mapWithValueAttributeExample><mapWithCompositeValueExample id="0">
    <entry key="a">
       <value id="1">
@@ -359,9 +359,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.265 sec
    </entry>
 </mapWithCompositeValueAndElementKeyExample>------------- ---------------- ---------------
 
-Testcase: testPrimitiveTextMap took 0.172 sec
-Testcase: testPrimitiveElementMap took 0.015 sec
-Testcase: testPrimitiveAttributeMap took 0.016 sec
+Testcase: testPrimitiveTextMap took 0.234 sec
+Testcase: testPrimitiveElementMap took 0.031 sec
+Testcase: testPrimitiveAttributeMap took 0.031 sec
 Testcase: testCompositeValueMap took 0.047 sec
-Testcase: testCompositeValueAndElementKeyMap took 0.015 sec
+Testcase: testCompositeValueAndElementKeyMap took 0.031 sec
 Testcase: testDirectory took 0 sec

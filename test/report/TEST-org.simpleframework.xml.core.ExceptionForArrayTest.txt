@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ExceptionForArrayTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.125 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.156 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Array length missing or incorrect for field 'b' private int[] org.simpleframework.xml.core.ExceptionForArrayTest$A.b at line 1
 	at org.simpleframework.xml.core.PrimitiveArray.read(PrimitiveArray.java:143)
@@ -24,7 +24,7 @@ org.simpleframework.xml.core.ElementException: Array length missing or incorrect
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -59,7 +59,7 @@ org.simpleframework.xml.core.ElementException: Array length missing or incorrect
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:597)
+	at java.lang.reflect.Method.invoke(Method.java:585)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -73,6 +73,6 @@ org.simpleframework.xml.core.ElementException: Array length missing or incorrect
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testArrayLength took 0.109 sec
+Testcase: testArrayLength took 0.141 sec
 Testcase: testCompositeArrayLength took 0 sec
 Testcase: testDirectory took 0 sec
