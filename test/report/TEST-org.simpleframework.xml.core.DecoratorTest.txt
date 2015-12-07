@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DecoratorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.599 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 ------------- Standard Output ---------------
 <friendList>
    <list type="list">
@@ -164,5 +164,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.599 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testDecorator took 0.591 sec
+Testcase: testDecorator took 0.375 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PerformanceTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 68.288 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 41.905 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -1136,9 +1136,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 68.288 sec
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl
-SIMPLE TOOK 15403ms
-JAVA TOOK 2069ms
-XSTREAM TOOK 7724ms
+SIMPLE TOOK 9265ms
+JAVA TOOK 1453ms
+XSTREAM TOOK 5547ms
 XSTREAM --->><org.simpleframework.xml.core.PerformanceTest_-RootEntry>
   <number>1234</number>
   <bool>true</bool>
@@ -1229,15 +1229,15 @@ SIMPLE --->><root number="1234" flag="true">
       </entry>
    </list>
 </root>
-Took '13164' ms to process 10000 documents
-Took '13260' ms to process 10000 documents with templates
-Took '11812' ms to process 10000 documents with an empty filter
-Took '3751' ms to write 10000 documents
+Took '7859' ms to process 10000 documents
+Took '8094' ms to process 10000 documents with templates
+Took '6453' ms to process 10000 documents with an empty filter
+Took '2562' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testCompareToOtherSerializers took 25.794 sec
-Testcase: testBasicDocument took 13.379 sec
-Testcase: testTemplateDocument took 13.376 sec
-Testcase: testEmptyFilter took 11.923 sec
-Testcase: testBasicWrite took 3.805 sec
+Testcase: testCompareToOtherSerializers took 16.687 sec
+Testcase: testBasicDocument took 7.969 sec
+Testcase: testTemplateDocument took 8.156 sec
+Testcase: testEmptyFilter took 6.5 sec
+Testcase: testBasicWrite took 2.593 sec
 Testcase: testDirectory took 0 sec

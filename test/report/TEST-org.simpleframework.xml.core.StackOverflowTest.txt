@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StackOverflowTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.624 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.687 sec
 ------------- Standard Output ---------------
 <delivery>
    <newBenefit>
@@ -31014,5 +31014,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.624 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testStackOverflow took 2.616 sec
+Testcase: testStackOverflow took 1.687 sec
 Testcase: testDirectory took 0 sec

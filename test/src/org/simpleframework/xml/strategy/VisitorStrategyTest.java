@@ -9,11 +9,7 @@ import java.util.Map;
 import org.simpleframework.xml.Default;
 import org.simpleframework.xml.Root;
 import org.simpleframework.xml.ValidationTestCase;
-import org.simpleframework.xml.core.PersistenceException;
 import org.simpleframework.xml.core.Persister;
-import org.simpleframework.xml.stream.InputNode;
-import org.simpleframework.xml.stream.NodeMap;
-import org.simpleframework.xml.stream.OutputNode;
 
 public class VisitorStrategyTest extends ValidationTestCase {
    

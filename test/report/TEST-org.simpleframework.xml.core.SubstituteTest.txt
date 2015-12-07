@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.SubstituteTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.427 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
 ------------- Standard Output ---------------
 <substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
@@ -71,6 +71,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.427 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testReplace took 0.338 sec
-Testcase: testResolve took 0.082 sec
+Testcase: testReplace took 0.282 sec
+Testcase: testResolve took 0.062 sec
 Testcase: testDirectory took 0 sec

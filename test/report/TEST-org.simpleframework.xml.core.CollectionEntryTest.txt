@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.632 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -211,8 +211,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.632 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.447 sec
-Testcase: testExampleInlineCollection took 0.069 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.033 sec
-Testcase: testExamplePrimitiveCollection took 0.074 sec
+Testcase: testExampleCollection took 0.312 sec
+Testcase: testExampleInlineCollection took 0.031 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.031 sec
+Testcase: testExamplePrimitiveCollection took 0.032 sec
 Testcase: testDirectory took 0 sec

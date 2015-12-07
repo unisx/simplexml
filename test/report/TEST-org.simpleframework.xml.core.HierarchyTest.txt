@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.HierarchyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
 ------------- Standard Output ---------------
 <specialized>
    <a>a</a>
@@ -42,5 +42,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testHierarchy took 0.347 sec
+Testcase: testHierarchy took 0.266 sec
 Testcase: testDirectory took 0 sec

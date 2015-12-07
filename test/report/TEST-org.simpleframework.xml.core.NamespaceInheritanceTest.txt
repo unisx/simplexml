@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceInheritanceTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Output ---------------
 <aaa xmlns="namespace1">
    <bbb xmlns="namespace2">
@@ -17,6 +17,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
 </aaa:aaaWithPrefix>
 ------------- ---------------- ---------------
 
-Testcase: testNamespace took 0.227 sec
-Testcase: testNamespacePrefix took 0.031 sec
-Testcase: testDirectory took 0 sec
+Testcase: testNamespace took 0.172 sec
+Testcase: testNamespacePrefix took 0 sec
+Testcase: testDirectory took 0.015 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.IndentTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 ------------- Standard Output ---------------
 <contact id="some id">
      <details>
@@ -69,6 +69,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testIndent took 0.481 sec
-Testcase: testNoIndent took 0.052 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testIndent took 0.25 sec
+Testcase: testNoIndent took 0.047 sec
+Testcase: testDirectory took 0 sec

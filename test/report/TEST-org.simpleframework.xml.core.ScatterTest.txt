@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScatterTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.657 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -254,9 +254,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.657 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.445 sec
-Testcase: testPrimitiveList took 0.076 sec
-Testcase: testInlineNamedList took 0.052 sec
-Testcase: testSimpleList took 0.027 sec
-Testcase: testSimplePrimitiveList took 0.019 sec
-Testcase: testDirectory took 0.029 sec
+Testcase: testList took 0.344 sec
+Testcase: testPrimitiveList took 0.063 sec
+Testcase: testInlineNamedList took 0.047 sec
+Testcase: testSimpleList took 0.031 sec
+Testcase: testSimplePrimitiveList took 0.015 sec
+Testcase: testDirectory took 0 sec

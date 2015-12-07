@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MixTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 ------------- Standard Output ---------------
 <mixExample>
    <list class="java.util.ArrayList">
@@ -27,7 +27,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-06-02 22:47:51.47 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-07-14 15:31:38.179 BST</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -54,7 +54,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-06-02 22:47:51.47 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-07-14 15:31:38.179 BST</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -81,7 +81,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-06-02 22:47:51.47 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-07-14 15:31:38.179 BST</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -108,7 +108,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-06-02 22:47:51.47 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-07-14 15:31:38.179 BST</calendar>
 </mixExample>
 <mix-example ID="0">
    <!-- java.util.List -->
@@ -152,7 +152,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
       </entry>
    </map>
    <!-- java.util.Calendar -->
-   <calendar class="java.util.GregorianCalendar" ID="16">2010-06-02 22:47:51.47 BST</calendar>
+   <calendar class="java.util.GregorianCalendar" ID="16">2010-07-14 15:31:38.179 BST</calendar>
 </mix-example>>>>>> ELEMENT=[element mix-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MixTest$MixExample]
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
@@ -198,11 +198,11 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
       </Entry>
    </Map>
    <!-- java.util.Calendar -->
-   <Calendar class="java.util.GregorianCalendar" ID="16">2010-06-02 22:47:51.47 BST</Calendar>
+   <Calendar class="java.util.GregorianCalendar" ID="16">2010-07-14 15:31:38.179 BST</Calendar>
 </MixExample>>>>>> ELEMENT=[element MixExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MixTest$MixExample]
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testMix took 0.457 sec
+Testcase: testMix took 0.375 sec
 Testcase: testDirectory took 0 sec

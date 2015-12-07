@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ConverterMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.395 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 ------------- Standard Output ---------------
 <mapHolder>
    <map class="java.util.HashMap">
@@ -153,5 +153,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.395 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testMap took 0.388 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testMap took 0.297 sec
+Testcase: testDirectory took 0 sec
