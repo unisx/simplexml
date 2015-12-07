@@ -66,11 +66,6 @@ class PrimitiveValue implements Converter {
    private final Entry entry; 
    
    /**
-    * Provides this converter with a context to the serialization.
-    */
-   private final Source root;
-   
-   /**
     * Represents the primitive type the value is serialized to and from.
     */
    private final Class type;
@@ -88,7 +83,6 @@ class PrimitiveValue implements Converter {
       this.factory = new PrimitiveFactory(root, type);
       this.primitive = new Primitive(root, type);
       this.entry = entry;
-      this.root = root;
       this.type = type;
    }
    
@@ -103,7 +97,7 @@ class PrimitiveValue implements Converter {
     * @return this returns the value deserialized from the node
     */ 
    public Object read(InputNode node) throws Exception {
-      String name = entry.getName(type);
+      String name = Factory.getName(type);
       
       if(entry.isInline()) {
          return primitive.read(node);
@@ -142,7 +136,7 @@ class PrimitiveValue implements Converter {
     * @param item this is the item that is to be written
     */
    public void write(OutputNode node, Object item) throws Exception {
-      String name = entry.getName(type);
+      String name = Factory.getName(type);
       
       if(!entry.isInline()) {
          node = node.getChild(name);        

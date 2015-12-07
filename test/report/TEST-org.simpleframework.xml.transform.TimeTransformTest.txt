@@ -1,15 +1,15 @@
 Testsuite: org.simpleframework.xml.transform.TimeTransformTest
 Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
 ------------- Standard Output ---------------
-<timeExample attribute="2007-11-15 21:18:24.487 GMT">
-   <element class="java.sql.Time">2007-11-15 21:18:24.487 GMT</element>
-   <time>2007-11-15 21:18:24.487 GMT</time>
+<timeExample attribute="2007-12-06 19:15:11.109 GMT">
+   <element class="java.sql.Time">2007-12-06 19:15:11.109 GMT</element>
+   <time>2007-12-06 19:15:11.109 GMT</time>
    <list class="java.util.ArrayList">
-      <entry>2007-11-15 21:18:24.487 GMT</entry>
-      <entry>2007-11-15 21:18:24.487 GMT</entry>
+      <time>2007-12-06 19:15:11.109 GMT</time>
+      <time>2007-12-06 19:15:11.109 GMT</time>
    </list>
    <array length="1">
-      <entry>2007-11-15 21:18:24.487 GMT</entry>
+      <time>2007-12-06 19:15:11.109 GMT</time>
    </array>
 </timeExample>------------- ---------------- ---------------
 
