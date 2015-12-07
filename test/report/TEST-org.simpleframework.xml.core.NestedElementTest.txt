@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NestedElementTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.172 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.625 sec
 ------------- Standard Output ---------------
 <nestedElementExample>
    <contact-info>
@@ -74,5 +74,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.172 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testNestedExample took 0.172 sec
+Testcase: testNestedExample took 0.609 sec
 Testcase: testDirectory took 0 sec

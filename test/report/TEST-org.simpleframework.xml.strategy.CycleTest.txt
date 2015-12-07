@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.CycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.938 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 4.25 sec
 ------------- Standard Output ---------------
 <example id="0">
    <list class="java.util.ArrayList" id="1">
@@ -245,6 +245,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.938 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.172 sec
-Testcase: testMemory took 0.766 sec
+Testcase: testCycle took 0.563 sec
+Testcase: testMemory took 3.672 sec
 Testcase: testDirectory took 0 sec

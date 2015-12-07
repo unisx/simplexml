@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CompositeInlineMapTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.078 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
 ------------- Standard Output ---------------
 <notInlineString>
    <entry>
@@ -20,10 +20,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.078 sec
       <value>2</value>
    </entry>
 </noAttributeString><attributeNoKeyString>
-   <entry string="a">1</entry>
-   <entry string="b">2</entry>
+   <entry string="a" value="1"/>
+   <entry string="b" value="2"/>
 </attributeNoKeyString>------------- ---------------- ---------------
 
-Testcase: testNotInlineString took 0.046 sec
-Testcase: testNoAttributeString took 0.032 sec
-Testcase: testAttributeNoKeyString took 0 sec
+Testcase: testNotInlineString took 0.141 sec
+Testcase: testNoAttributeString took 0.125 sec
+Testcase: testAttributeNoKeyString took 0.016 sec

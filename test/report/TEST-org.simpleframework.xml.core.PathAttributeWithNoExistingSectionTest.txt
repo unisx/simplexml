@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathAttributeWithNoExistingSectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.14 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.468 sec
 ------------- Standard Output ---------------
 <attributeWithNoExistingSectionExample>
    <some>
@@ -52,5 +52,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.14 sec
    </some>
 </attributeWithNoExistingSectionExample>------------- ---------------- ---------------
 
-Testcase: testOrder took 0.14 sec
+Testcase: testOrder took 0.453 sec
 Testcase: testDirectory took 0 sec

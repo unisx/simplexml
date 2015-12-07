@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceScopeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.39 sec
 ------------- Standard Output ---------------
 <a xmlns="http://domain/a">
    <pre:b xmlns:pre="http://domain/b">
@@ -11,5 +11,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
 </a>
 ------------- ---------------- ---------------
 
-Testcase: testScope took 0.109 sec
+Testcase: testScope took 0.375 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceDefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.125 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.594 sec
 ------------- Standard Output ---------------
 <a xmlns="http://domain/z" xmlns:x="http://domain/x">
    <y:b xmlns:y="http://domain/y">
@@ -10,5 +10,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.125 sec
 </a>
 ------------- ---------------- ---------------
 
-Testcase: testScope took 0.125 sec
+Testcase: testScope took 0.594 sec
 Testcase: testDirectory took 0 sec

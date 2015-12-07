@@ -227,13 +227,13 @@ class Traverser {
       
       if(source != null) {
          Class actual = source.getClass();
-     
-         if(!context.setOverride(type, source, child)) {
-            Converter convert = getComposite(actual);
-            Decorator decorator = getDecorator(actual);
-            
+         Decorator decorator = getDecorator(actual);
+         
+         if(decorator != null) {
             decorator.decorate(child);
-            convert.write(child, source);         
+         }
+         if(!context.setOverride(type, source, child)) {
+            getComposite(actual).write(child, source);         
          }
       }         
       child.commit();      

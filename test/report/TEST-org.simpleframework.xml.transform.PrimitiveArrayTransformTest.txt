@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.PrimitiveArrayTransformTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.906 sec
 ------------- Standard Output ---------------
 <integerArrayExample attribute="1, 2, 3, 4">
    <element length="4">1, 2, 3, 4</element>
@@ -294,8 +294,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testRead took 0 sec
+Testcase: testRead took 0.015 sec
 Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.204 sec
-Testcase: testCyclicPersistence took 0.093 sec
+Testcase: testPersistence took 0.625 sec
+Testcase: testCyclicPersistence took 0.266 sec
 Testcase: testDirectory took 0 sec
