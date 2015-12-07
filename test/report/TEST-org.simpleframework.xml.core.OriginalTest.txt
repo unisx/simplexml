@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OriginalTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 ------------- Standard Output ---------------
 <exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
@@ -239,5 +239,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
    </MapEntry>
 </ExampleWithOriginals>------------- ---------------- ---------------
 
-Testcase: testOriginals took 0.278 sec
+Testcase: testOriginals took 0.277 sec
 Testcase: testDirectory took 0 sec

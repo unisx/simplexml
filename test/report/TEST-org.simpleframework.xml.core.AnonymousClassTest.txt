@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.AnonymousClassTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.196 sec
 ------------- Standard Output ---------------
 <anonymous>
    <prefix:anonymous class="org.simpleframework.xml.core.AnonymousClassTest$Anonymous$1" attribute="example attribute" xmlns:prefix="http://www.domain.com/reference">
@@ -20,5 +20,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
    </prefix:Anonymous>
 </Anonymous>------------- ---------------- ---------------
 
-Testcase: testAnonymousClass took 0.191 sec
+Testcase: testAnonymousClass took 0.192 sec
 Testcase: testDirectory took 0 sec

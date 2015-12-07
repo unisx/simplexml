@@ -147,8 +147,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.304 sec
    </List>
 </Root>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.213 sec
+Testcase: testCycle took 0.212 sec
 Testcase: testInlineList took 0.031 sec
-Testcase: testInlinePrimitiveList took 0.033 sec
-Testcase: testNestedExample took 0.02 sec
+Testcase: testInlinePrimitiveList took 0.035 sec
+Testcase: testNestedExample took 0.019 sec
 Testcase: testDirectory took 0 sec

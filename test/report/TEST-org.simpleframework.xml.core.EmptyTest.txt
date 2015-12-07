@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.441 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -32,11 +32,11 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
 </Test>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:487)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:461)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:377)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:262)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:484)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:458)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:374)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:259)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:204)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
@@ -62,11 +62,11 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=) on method 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredMethodElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:487)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:461)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:377)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:262)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:484)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:458)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:374)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:259)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:204)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
@@ -92,11 +92,11 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:487)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:461)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:377)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:262)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:484)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:458)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:374)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:259)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:204)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
@@ -122,11 +122,11 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(required=true, data=false, name=empty) on field 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
-	at org.simpleframework.xml.core.Composite.read(Composite.java:487)
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:461)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:377)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:262)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:484)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:458)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:374)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:259)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:204)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
@@ -153,13 +153,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.116 sec
+Testcase: testRequiredEmpty took 0.114 sec
 Testcase: testRequiredEmptyMethod took 0.008 sec
 Testcase: testRequiredBlank took 0.002 sec
-Testcase: testOptionalEmpty took 0.004 sec
+Testcase: testOptionalEmpty took 0.003 sec
 Testcase: testOptionalBlank took 0.002 sec
 Testcase: testEmptyCollection took 0.078 sec
 Testcase: testRequiredEmptyAttribute took 0.008 sec
 Testcase: testOptionalEmptyAttribute took 0.001 sec
-Testcase: testDefaultedAttribute took 0.217 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDefaultedAttribute took 0.215 sec
+Testcase: testDirectory took 0.001 sec

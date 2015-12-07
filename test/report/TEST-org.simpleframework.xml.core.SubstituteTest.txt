@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.SubstituteTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.256 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.253 sec
 ------------- Standard Output ---------------
 <substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
@@ -39,6 +39,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.256 sec
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</Substitute>
 </SubstituteExample>------------- ---------------- ---------------
 
-Testcase: testReplace took 0.211 sec
+Testcase: testReplace took 0.209 sec
 Testcase: testResolve took 0.04 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDirectory took 0 sec
