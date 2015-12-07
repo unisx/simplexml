@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StaticTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.396 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
 ------------- Standard Output ---------------
 <document title="Secret Document" xmlns="http://www.domain.com/document">
    <user:author xmlns:user="http://www.domain.com/user">Niall Gallagher</user:author>
@@ -79,5 +79,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.396 sec
    </Section>
 </Document>------------- ---------------- ---------------
 
-Testcase: testStatic took 0.27 sec
+Testcase: testStatic took 0.297 sec
 Testcase: testDirectory took 0 sec

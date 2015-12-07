@@ -179,7 +179,10 @@ class ElementMapLabel implements Label {
       }        
       if(items == null) {
          throw new ElementException("Unable to determine type for %s", label);           
-      }     
+      }    
+      if(items.length == 0) {
+         return Object.class;
+      }
       return items[0];
    }
    

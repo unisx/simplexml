@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumSetTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.751 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 ------------- Standard Output ---------------
 <enumSetExample>
    <set class="java.util.RegularEnumSet">
@@ -29,5 +29,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.751 sec
    </Set>
 </EnumSetExample>------------- ---------------- ---------------
 
-Testcase: testEnumSet took 0.583 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEnumSet took 0.36 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.149 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version at line -1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:882)
@@ -33,9 +33,9 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.ValidateTest$TextEntry.name at line -1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:882)
 	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:730)
@@ -68,9 +68,9 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 org.simpleframework.xml.core.PersistenceException: Element 'array' declared twice at line -1
 	at org.simpleframework.xml.core.Variable$Adapter.validate(Variable.java:383)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:856)
@@ -97,13 +97,13 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testVersionMissing took 0.13 sec
-Testcase: testNameMissing took 0.004 sec
-Testcase: testTextMissing took 0.003 sec
-Testcase: testExtraElement took 0.005 sec
+Testcase: testVersionMissing took 0.156 sec
+Testcase: testNameMissing took 0 sec
+Testcase: testTextMissing took 0 sec
+Testcase: testExtraElement took 0.015 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.291 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.656 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -135,16 +135,16 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.213 sec
-Testcase: testData took 0.026 sec
-Testcase: testDuplicate took 0.003 sec
-Testcase: testIllegalElement took 0.004 sec
-Testcase: testEmpty took 0.006 sec
-Testcase: testOptional took 0.027 sec
-Testcase: testNonPrimitive took 0.004 sec
+Testcase: testText took 0.281 sec
+Testcase: testData took 0.125 sec
+Testcase: testDuplicate took 0 sec
+Testcase: testIllegalElement took 0 sec
+Testcase: testEmpty took 0 sec
+Testcase: testOptional took 1.218 sec
+Testcase: testNonPrimitive took 0 sec
 Testcase: testDirectory took 0 sec

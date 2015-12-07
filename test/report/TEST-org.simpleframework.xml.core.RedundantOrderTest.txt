@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.RedundantOrderTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.101 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.109 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Ordered element 'c' missing for class org.simpleframework.xml.core.RedundantOrderTest$ElementEntry
 	at org.simpleframework.xml.core.Scanner.validateElements(Scanner.java:430)
@@ -31,9 +31,9 @@ org.simpleframework.xml.core.ElementException: Ordered element 'c' missing for c
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' missing for class org.simpleframework.xml.core.RedundantOrderTest$AttributeEntry
 	at org.simpleframework.xml.core.Scanner.validateAttributes(Scanner.java:457)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:386)
@@ -64,11 +64,11 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' missing f
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testRedundantElementOrder took 0.085 sec
-Testcase: testRedundantAttributeOrder took 0.007 sec
+Testcase: testRedundantElementOrder took 0.094 sec
+Testcase: testRedundantAttributeOrder took 0.015 sec
 Testcase: testDirectory took 0 sec
