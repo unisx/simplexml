@@ -1,0 +1,36 @@
+Testsuite: simple.xml.load.TextTest
+Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 0.506 sec
+------------- Standard Output ---------------
+<test>
+   <array>
+      <text name="a" version="ONE">Example 1</text>
+      <text name="b" version="TWO">Example 2</text>
+      <text name="c" version="THREE">Example 3</text>
+   </array>
+</test><test>
+   <array>
+      <text name="a" version="ONE">Example 1</text>
+      <text name="b" version="TWO">Example 2</text>
+      <text name="c" version="THREE">Example 3</text>
+   </array>
+</test><text name="a" version="ONE">
+    
+      &lt;element&gt; 
+         &lt;data&gt;This is hidden&lt;/data&gt;
+      &lt;/element&gt; 
+   
+</text><text name="a" version="ONE">
+    
+      &lt;element&gt; 
+         &lt;data&gt;This is hidden&lt;/data&gt;
+      &lt;/element&gt; 
+   
+</text><text name="a" version="ONE"/><text name="a" version="ONE"/>------------- ---------------- ---------------
+
+Testcase: testText took 0.431 sec
+Testcase: testData took 0.024 sec
+Testcase: testDuplicate took 0.008 sec
+Testcase: testIllegalElement took 0.014 sec
+Testcase: testEmpty took 0.006 sec
+Testcase: testOptional took 0.017 sec
+Testcase: testNonPrimitive took 0.002 sec

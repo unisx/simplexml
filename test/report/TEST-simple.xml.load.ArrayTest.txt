@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.ArrayTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.294 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.481 sec
 ------------- Standard Output ---------------
 <root>
    <array>
@@ -157,8 +157,45 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.294 sec
       <text value="index 97"/>
       <text value="index 99"/>
    </array>
+</root><root>
+   <array>
+      <text>entry one</text>
+      <text>entry two</text>
+      <text>entry three</text>
+      <text>entry four</text>
+      <text>entry five</text>
+   </array>
+</root><root>
+   <array>
+      <entry>
+         <text value="entry one"/>
+      </entry>
+      <entry>
+         <text value="entry two"/>
+      </entry>
+      <entry>
+         <text value="entry three"/>
+      </entry>
+      <entry>
+         <text value="entry four"/>
+      </entry>
+      <entry>
+         <text value="entry five"/>
+      </entry>
+   </array>
+</root><root>
+   <array>
+      <char>a</char>
+      <char>b</char>
+      <char>c</char>
+      <char>d</char>
+      <char>e</char>
+   </array>
 </root>------------- ---------------- ---------------
 
-Testcase: testExample took 0.115 sec
-Testcase: testBadExample took 0.003 sec
-Testcase: testWriteArray took 0.175 sec
+Testcase: testExample took 0.669 sec
+Testcase: testBadExample took 0.007 sec
+Testcase: testWriteArray took 0.762 sec
+Testcase: testPrimitive took 0.018 sec
+Testcase: testParentComposite took 0.012 sec
+Testcase: testCharacter took 0.011 sec

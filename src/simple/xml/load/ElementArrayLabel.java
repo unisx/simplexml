@@ -20,15 +20,15 @@
 
 package simple.xml.load;
 
-import java.lang.reflect.Field;
 import simple.xml.ElementArray;
 
 /**
  * The <code>ElementArrayLabel</code> represents a label that is used
  * to represent an XML element array in a class schema. This element 
  * array label can be used to convert an XML node into an array of
- * composite objects. Each element converted with the converter this
- * creates must be an XML serializable element.
+ * composite or primitive objects. If the array is of primitive types
+ * then the <code>parent</code> attribute must be specified so that 
+ * the primitive values can be serialized in a structured manner.
  * 
  * @author Niall Gallagher
  * 
@@ -44,7 +44,7 @@ final class ElementArrayLabel implements Label {
    /**
     * This references the field from the source object.
     */
-   private Field field;
+   private Contact contact;
    
    /**
     * This is the type of array this label will represent.
@@ -56,12 +56,12 @@ final class ElementArrayLabel implements Label {
     * creates a label object, which can be used to convert an element
     * node to an array of XML serializable objects.
     * 
-    * @param field this is the field that this label represents
+    * @param contact this is the contact that this label represents
     * @param label the annotation that contains the schema details
     */
-   public ElementArrayLabel(Field field, ElementArray label) {
-      this.type = field.getType();
-      this.field = field;
+   public ElementArrayLabel(Contact contact, ElementArray label) {
+      this.type = contact.getType();      
+      this.contact = contact;
       this.label = label;
    }
 	
@@ -76,44 +76,81 @@ final class ElementArrayLabel implements Label {
     */
    public Converter getConverter(Source root) throws Exception {
       if(!type.isArray()) {
-         throw new InstantiationException("Type is not an array %s", type);
+         throw new InstantiationException("Type is not an array %s for %s", type, label);
       }
+      return getConverter(root, getParent());
+   }
+      
+   /**
+    * This will create a <code>Converter</code> for transforming an XML
+    * element into an array of XML serializable objects. The XML schema
+    * class for these objects must present the element list annotation. 
+    * 
+    * @param root this is the source object used for serialization
+    * @param parent this is the name of the parent XML element to use
+    * 
+    * @return this returns the converter for creating a collection 
+    */      
+   private Converter getConverter(Source root, String parent) throws Exception {
       Class entry = type.getComponentType();
+      
+      if(!Factory.isPrimitive(entry)) {
+         return new CompositeArray(root, entry, parent);        
+      }
+      if(parent == null) {
+         throw new ElementException("Annotation %s requires parent for %s", label, type);        
+      }
+      return new PrimitiveArray(root, entry, parent);            
+   }
 
-      return new CompositeArray(root, type, entry);      
+   /**
+    * This method is used to acquire the parent element from the array
+    * label. This checks to ensure that the parent value has been 
+    * specified. If a value has not been specified then this method
+    * will return a null value, which represents no parent setting.
+    * 
+    * @return this returns null if not parent has been set
+    */
+   public String getParent() {
+      String parent = label.parent();
+
+      if(parent.length() == 0) {
+         return null;
+      }
+      return parent;
    }
 
    /**
     * This acts as a convinience method used to determine the type of
-    * the field this represents. This is used when an object is written
+    * contact this represents. This is used when an object is written
     * to XML. It determines whether a <code>class</code> attribute
     * is required within the serialized XML element, that is, if the
     * class returned by this is different from the actual value of the
     * object to be serialized then that type needs to be remembered.
     *  
-    * @return this returns the type of the field class
+    * @return this returns the type of the contact class
     */
    public Class getType() {
       return type;      
    }
    
    /**
-    * This is used to acquire the field object for this label. The 
-    * field retrieved can be used to set any object or primitive that
+    * This is used to acquire the contact object for this label. The 
+    * contact retrieved can be used to set any object or primitive that
     * has been deserialized, and can also be used to acquire values to
-    * be serialized in the case of object persistance. All fields that
-    * are retrieved from this method will be accessible. 
+    * be serialized in the case of object persistance. All contacts
+    * that are retrieved from this method will be accessible. 
     * 
-    * @return returns the field that this label is representing
+    * @return returns the contact that this label is representing
     */   
-   public Field getField() {
-      return field;
+   public Contact getContact() {
+      return contact;
    }
    
    /**
     * This is used to acquire the name of the XML element as taken
-    * from the field annotation. Every XML annotation must contain a
-    * name, so that it can be identified from the XML source. This
+    * from the contact annotation. Every XML annotation must contain 
+    * a name, so that it can be identified from the XML source. This
     * allows the class to be used as a schema for the XML document. 
     * 
     * @return returns the name of the annotation for the field

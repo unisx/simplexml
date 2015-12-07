@@ -1,5 +1,5 @@
 /*
- * FieldRequiredException.java July 2006
+ * ValueRequiredException.java July 2006
  *
  * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
  *
@@ -21,29 +21,29 @@
 package simple.xml.load;
 
 /**
- * The <code>FieldRequiredException</code> is thrown when an attribute
+ * The <code>ValueRequiredException</code> is thrown when an attribute
  * or element is missing from the XML document. This is thrown only if
  * the attribute or element is required according to the annotation
  * for that field within the XML schema class.
  * 
  * @author Niall Gallagher
  */
-public class FieldRequiredException extends PersistenceException {
+public class ValueRequiredException extends PersistenceException {
 
    /**
-    * Constructor for the <code>FieldRequiredException</code> object. 
+    * Constructor for the <code>ValueRequiredException</code> object. 
     * This constructor takes a format string an a variable number of 
     * object arguments, which can be inserted into the format string. 
     * 
     * @param text a format string used to present the error message
     * @param list a list of arguments to insert into the string
     */
-   public FieldRequiredException(String text, Object... list) {
+   public ValueRequiredException(String text, Object... list) {
       super(text, list);           
    }        
 
    /**
-    * Constructor for the <code>FieldRequiredException</code> object. 
+    * Constructor for the <code>ValueRequiredException</code> object. 
     * This constructor takes a format string an a variable number of 
     * object arguments, which can be inserted into the format string. 
     * 
@@ -51,7 +51,7 @@ public class FieldRequiredException extends PersistenceException {
     * @param text a format string used to present the error message
     * @param list a list of arguments to insert into the string
     */  
-   public FieldRequiredException(Throwable cause, String text, Object... list) {
+   public ValueRequiredException(Throwable cause, String text, Object... list) {
       super(cause, text, list);           
    }
 }

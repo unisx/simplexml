@@ -22,12 +22,12 @@ package simple.xml.load;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
-import java.lang.reflect.Field;
 import simple.xml.ElementArray;
 import simple.xml.ElementList;
 import simple.xml.Element;
 import simple.xml.Attribute;
-import java.util.Map;
+import simple.xml.Root;
+import simple.xml.Text;
 
 /**
  * The <code>Scanner</code> object performs the reflective inspection
@@ -43,8 +43,8 @@ import java.util.Map;
  * 
  * @see simple.xml.load.Schema
  */ 
-final class Scanner {
-
+final class Scanner  {
+  
    /**
     * This is used to store all labels that are XML attributes.
     */
@@ -74,7 +74,22 @@ final class Scanner {
     * This method acts as a pointer to the types complete process.
     */
    private Method complete;   
-      
+
+   /**
+    * This is used to store all labels that are XML text values.
+    */
+   private Label text;
+   
+   /**
+    * This is the type the scanner uses to collection annotations.
+    */
+   private Class type;
+
+   /**
+    * This is the optional root annotation for the scanned class.
+    */
+   private Root root;
+   
    /**
     * Constructor for the <code>Schema</code> object. This is used 
     * to scan the provided class for annotations that are used to
@@ -82,9 +97,9 @@ final class Scanner {
     * 
     * @param type this is the type that is scanned for a schema
     */
-   public Scanner(Class type) {           
-      this.attributes = new LabelMap();
-      this.elements = new LabelMap();
+   public Scanner(Class type) throws Exception {           
+      this.attributes = new LabelMap(this);
+      this.elements = new LabelMap(this);
       this.scan(type);
    }       
 
@@ -98,7 +113,7 @@ final class Scanner {
     * @return map with the details extracted from the schema class
     */ 
    public LabelMap getAttributes() {
-      return new LabelMap(attributes);
+      return attributes.clone();
    }        
 
    /**
@@ -111,7 +126,20 @@ final class Scanner {
     * @return a map containing the details for XML elements
     */
    public LabelMap getElements() {
-      return new LabelMap(elements);
+      return elements.clone();
+   }
+   
+   /**
+    * This returns the <code>Label</code> that represents the text
+    * annotation for the scanned class. Only a single text annotation
+    * can be used per class, so this returns only a single label
+    * rather than a <code>LabelMap</code> object. Also if this is
+    * not null then the elements label map must be empty.
+    * 
+    * @return this returns the text label for the scanned class
+    */
+   public Label getText() {
+      return text;
    }
 
    /**
@@ -165,62 +193,213 @@ final class Scanner {
    public Method getComplete() {
       return complete;           
    }
-   
+
    /**
-    * Scan the fields such that the base class is scanned first then 
-    * all super classes up to the base class <code>Object</code>. All 
-    * fields from base classes override fields from higher up the 
-    * inheritance heirarchy. This means that a field annotation can 
-    * be overridden an may not have values assigned to them.  
+    * This method is used to determine whether strict mappings are
+    * required. Strict mapping means that all labels in the class
+    * schema must match the XML elements and attributes in the
+    * source XML document. When strict mapping is disabled, then
+    * XML elements and attributes that do not exist in the schema
+    * class will be ignored without breaking the parser.
+    *
+    * @return true if strict parsing is enabled, false otherwise
+    */ 
+   public boolean isStrict() {
+      if(root != null) {
+         return root.strict();              
+      }              
+      return true;
+   }
+  
+   /**
+    * Scan the fields and methods such that the given class is scanned 
+    * first then all super classes up to the root <code>Object</code>. 
+    * All fields and methods from the most specialized classes override 
+    * fields and methods from higher up the inheritance heirarchy. This
+    * means that annotated details can be overridden and so may not 
+    * have a value assigned to them during deserialization.
     * 
-    * @param type the class to extract fields and annotations from
-    */
-   private void scan(Class type) {
+    * @param type the class to extract fields and methods from
+    */   
+   private void scan(Class type) throws Exception {
       Class real = type;
       
-      do {
+      while(type != null) {
+         if(root == null) {              
+            root(type);
+         }            
          scan(real, type);
          type = type.getSuperclass();
       }
-      while(type != null);    
+      process(real);      
    }
 
    /**
-    * Scans the provided class for all fields in order to extract any
-    * annotations from those fields. Each field extracted from the 
-    * class is checked for annotations that relate to the XML schema.
+    * This is used to scan the specified class for methods so that
+    * the persister callback annotations can be collected. These
+    * annotations help object implementations to validate the data
+    * that is injected into the instance during deserialization.
     * 
-    * @param real this is the class the acts as the XML schema
-    * @param type the current class in the schema heirarchy to check 
+    * @param real this is the actual type of the scanned class 
+    * @param type this is a type from within the class heirarchy
+    * 
+    * @throws Exception thrown if the class schema is invalid
     */
-   private void scan(Class real, Class type) {
-      Field[] field = type.getDeclaredFields();
-      
-      for(int i = 0; i < field.length; i++) {                       
-         scan(field[i]);                      
-      }
+   private void scan(Class real, Class type) throws Exception {
       Method[] method = type.getDeclaredMethods();
 
       for(int i = 0; i < method.length; i++) {
          scan(method[i]);              
-      }
+      }      
    }
+   
+   /**
+    * This is used to validate the configuration of the scanned class.
+    * If a <code>Text</code> annotation has been used with elements
+    * then validation will fail and an exception will be thrown.
+    * 
+    * @param type this is the object type that is being scanned
+    * 
+    * @throws Exception if text and element annotations are present
+    */
+   private void validate(Class type) throws Exception {
+      if(text != null) {
+         if(!elements.isEmpty()) {
+            throw new TextException("Elements used with %s in %s", text, type);
+         }
+      }
+   } 
 
    /**
-    * Scans the provided field for all annotations in order to create
-    * a <code>Label</code> to represent that object. Only annotations
-    * that relate to the XML schema are considered within the field.
-    * 
-    * @param field the field to scan for XML schema annotations
-    */
-   private void scan(Field field) {      
-      Annotation[] list = field.getDeclaredAnnotations();
-      
-      for(int i = 0; i < list.length; i++) {
-         scan(field, list[i]);                       
-      }        
+    * This is used to acquire the optional <code>Root</code> from the
+    * specified class. The root annotation provides information as
+    * to how the object is to be parsed as well as other information
+    * such as the name of the object if it is to be serialized.
+    *
+    * @param type this is the type of the class to be inspected
+    */    
+   private void root(Class type) {
+      if(type.isAnnotationPresent(Root.class)) {
+          root = (Root)type.getAnnotation(Root.class);
+      }
    }
-
+  
+   /**
+    * This is used to scan the specified object to extract the fields
+    * and methods that are to be used in the serialization process.
+    * This will acquire all fields and getter setter pairs that have
+    * been annotated with the XML annotations.
+    *
+    * @param type this is the object type that is to be scanned
+    */  
+   private void process(Class type) throws Exception {
+      field(type);
+      method(type);
+      validate(type);
+   }
+  
+   /**
+    * This is used to acquire the contacts for the annotated fields 
+    * within the specified class. The field contacts are added to
+    * either the attributes or elements map depending on annotation.
+    * 
+    * @param type this is the object type that is to be scanned
+    */    
+   public void field(Class type) throws Exception {
+      ContactList list = new FieldScanner(type);
+      
+      for(Contact contact : list) {
+         scan(contact, contact.getAnnotation());
+      }
+   }
+   
+   /**
+    * This is used to acquire the contacts for the annotated fields 
+    * within the specified class. The field contacts are added to
+    * either the attributes or elements map depending on annotation.
+    * 
+    * @param type this is the object type that is to be scanned
+    */ 
+   public void method(Class type) throws Exception {
+      ContactList list = new MethodScanner(type);
+      
+      for(Contact contact : list) {           
+         scan(contact, contact.getAnnotation());
+      }
+   }
+   
+   /**
+    * This reflectively checks the annotation to determine the type 
+    * of annotation it represents. If it represents an XML schema
+    * annotation it is used to create a <code>Label</code> which can
+    * be used to represent the field within the source object.
+    * 
+    * @param field the field that the annotation comes from
+    * @param label the annotation used to model the XML schema
+    * 
+    * @throws Exception if there is more than one text annotation
+    */   
+   private void scan(Contact field, Annotation label) throws Exception {
+      if(label instanceof Attribute) {
+         process(field, label, attributes);
+      }
+      if(label instanceof ElementList) {
+         process(field, label, elements);
+      }
+      if(label instanceof ElementArray) {
+         process(field, label, elements);
+      }
+      if(label instanceof Element) {
+         process(field, label, elements);
+      }             
+      if(label instanceof Text) {
+         process(field, label);
+      }
+   }
+   
+   /**
+    * This is used to process the <code>Text</code> annotations that
+    * are present in the scanned class. This will set the text label
+    * for the class and an ensure that if there is more than one
+    * text label within the class an exception is thrown.
+    * 
+    * @param field the field the annotation was extracted from
+    * @param type the annotation extracted from the field
+    * 
+    * @throws Exception if there is more than one text annotation
+    */   
+   private void process(Contact field, Annotation type) throws Exception {
+      Label label = LabelFactory.getInstance(field, type);
+      
+      if(text != null) {
+         throw new TextException("Multiple text annotations in %s", type);
+      }
+      text = label;
+   }
+   
+   /**
+    * This is used when all details from a field have been gathered 
+    * and a <code>Label</code> implementation needs to be created. 
+    * This will build a label instance based on the field annotation.
+    * If a label with the same name was already inserted then it is
+    * ignored and the value for that field will not be serialized. 
+    * 
+    * @param field the field the annotation was extracted from
+    * @param type the annotation extracted from the field
+    * @param map this is used to collect the label instance created
+    * 
+    * @throws Exception thrown if the label can not be created
+    */   
+   private void process(Contact field, Annotation type, LabelMap map) throws Exception {
+      Label label = LabelFactory.getInstance(field, type);
+      String name = label.getName();
+      
+      if(map.containsKey(name)) {
+         throw new PersistenceException("Annotation of name '%s' declared twice", name);
+      }
+      map.put(name, label);      
+   }
+   
    /**
     * Scans the provided method for a persister callback method. If 
     * the method contains an method annotated as a callback that 
@@ -306,49 +485,5 @@ final class Scanner {
       if(mark != null) {
          complete = method;                    
       }      
-   }   
-
-   /**
-    * This reflectively checks the annotation to determine the type 
-    * of annotation it represents. If it represents an XML schema
-    * annotation it is used to create a <code>Label</code> which can
-    * be used to represent the field within the source object.
-    * 
-    * @param field the field that the annotation comes from
-    * @param label the annotation used to model the XML schema
-    */
-   private void scan(Field field, Annotation label) {
-      if(label instanceof Attribute) {
-         process(field, label, attributes);
-      }
-      if(label instanceof ElementList) {
-         process(field, label, elements);
-      }
-      if(label instanceof ElementArray) {
-         process(field, label, elements);
-      }
-      if(label instanceof Element) {
-         process(field, label, elements);
-      }             
-   }
-   
-   /**
-    * This is used when all details from a field have been gathered 
-    * and a <code>Label</code> implementation needs to be created. 
-    * This will build a label instance based on the field annotation.
-    * If a label with the same name was already inserted then it is
-    * ignored and the value for that field will not be serialized. 
-    * 
-    * @param field the field the annotation was extracted from
-    * @param type the annotation extracted from the field
-    * @param map this is used to collect the label instance created
-    */
-   private void process(Field field, Annotation type, Map map) {
-      Label label = LabelFactory.getInstance(field, type);
-      String name = label.getName().toLowerCase();
-      
-      if(!map.containsKey(name)) { 
-         map.put(name, label);
-      }  
-   }
+   }      
 }

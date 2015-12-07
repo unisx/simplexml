@@ -1,5 +1,5 @@
 Testsuite: simple.xml.util.ResolverTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.496 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -25,8 +25,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
    </list>
 </test>------------- ---------------- ---------------
 
-Testcase: testResolver took 0.174 sec
-Testcase: testCache took 0.017 sec
-Testcase: testNoResolution took 0.004 sec
-Testcase: testNonGreedyMatch took 0.002 sec
-Testcase: testResolverCache took 0.027 sec
+Testcase: testResolver took 0.384 sec
+Testcase: testCache took 0.034 sec
+Testcase: testNoResolution took 0.01 sec
+Testcase: testNonGreedyMatch took 0.004 sec
+Testcase: testResolverCache took 0.063 sec

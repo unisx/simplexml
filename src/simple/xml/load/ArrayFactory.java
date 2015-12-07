@@ -21,6 +21,8 @@
 package simple.xml.load;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The <code>ArrayFactory</code> is used to create object array
@@ -34,38 +36,68 @@ import java.lang.reflect.Array;
 final class ArrayFactory {
 
    /**
-    * This represents the array type from the object field.
+    * This represents the array component type from the field.
     */
-   private Class field;
+   private Class type;
         
    /**
     * Constructor for the <code>ArrayFactory</code> object. This is
-    * given the field type as taken from the owning object. If the
-    * field type is not an array this throws an exception for each
-    * request to instantiate an array of the specified length.
+    * given the array component type as taken from the field type 
+    * of the source object. Each request for an array will return 
+    * an array which uses the specified component type.
     * 
-    * @param field this is the class for the owning object
+    * @param type the array component type for the field object
     */
-   public ArrayFactory(Class field) {
-      this.field = field;           
+   public ArrayFactory(Class type) {
+      this.type = type;           
    }        
 
    /**
-    * Creates the object array to use. This will check to ensure 
-    * that the field type is an array before instantiating it. If
-    * the field type is not an array then this throws an exception.
+    * Creates the object array to use. This will use the provided
+    * list of values to form the values within the array. Each of
+    * the values witin the specified <code>List</code> will be
+    * set into a the array, if the type of the values within the
+    * list are not compatible then an exception is thrown.
     * 
-    * @param node this is the input node representing the list
+    * @param list this is the list of values for the array
     * 
-    * @return this is the obejct array instantiated for the field
+    * @return this is the obejct array instantiated for the type
     */         
-   public Object[] getInstance(int size) throws Exception {
-      if(!field.isArray()) {
-         throw new InstantiationException("Type is not an array %s", field);  
-      }                 
-      Class type = field.getComponentType();
-      Object list = Array.newInstance(type, size);
-
-      return (Object[])list;
+   public Object getArray(List list) throws Exception {
+      return getArray(list, list.size());
+   }
+   
+   /**
+    * Creates the object array to use. This will use the provided
+    * list of values to form the values within the array. Each of
+    * the values witin the specified <code>List</code> will be
+    * set into a the array, if the type of the values within the
+    * list are not compatible then an exception is thrown.
+    * 
+    * @param list this is the list of values for the array
+    * @param size the number of values to consider for copying
+    * 
+    * @return this is the obejct array instantiated for the type
+    */ 
+   public Object getArray(List list, int size) throws Exception {
+      Object array = Array.newInstance(type, size);
+      
+      for(int i = 0; i < size; i++) {
+         Array.set(array, i, list.get(i));
+      }
+      return array;     
    }     
+   
+   public List getList(Object source) throws Exception {
+      return getList(source, Array.getLength(source));
+   }
+   
+   public List getList(Object source, int size) throws Exception { 
+      List list = new ArrayList();
+      
+      for(int i = 0; i < size; i++) {
+         list.add(Array.get(source, i));         
+      }
+      return list;
+   }
 }
