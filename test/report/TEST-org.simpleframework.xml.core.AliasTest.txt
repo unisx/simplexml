@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.AliasTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.444 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.401 sec
 ------------- Standard Output ---------------
 <table:multiValueMap xmlns:table="http://simpleframework.org/map">
    <map type="map">
@@ -138,5 +138,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.444 sec
 </table:multiValueMap>
 ------------- ---------------- ---------------
 
-Testcase: testMap took 0.436 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testMap took 0.394 sec
+Testcase: testDirectory took 0 sec

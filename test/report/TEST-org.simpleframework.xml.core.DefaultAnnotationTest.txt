@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultAnnotationTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.372 sec
 ------------- Standard Output ---------------
 <orderItem>
    <customer id="1">
@@ -18,22 +18,22 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:399)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:163)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:143)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:478)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:351)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:66)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
-	at org.simpleframework.xml.core.Source.getScanner(Source.java:281)
-	at org.simpleframework.xml.core.Source.getSchema(Source.java:327)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:488)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:361)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
+	at org.simpleframework.xml.core.Source.getScanner(Source.java:271)
+	at org.simpleframework.xml.core.Source.getSchema(Source.java:317)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:200)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.DefaultAnnotationTest.testTypeMisMatch(DefaultAnnotationTest.java:136)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -52,7 +52,7 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMisMatch took 0.277 sec
-Testcase: testIgnoreStatic took 0.119 sec
-Testcase: testDefault took 0.045 sec
+Testcase: testTypeMisMatch took 0.217 sec
+Testcase: testIgnoreStatic took 0.105 sec
+Testcase: testDefault took 0.037 sec
 Testcase: testDirectory took 0.002 sec

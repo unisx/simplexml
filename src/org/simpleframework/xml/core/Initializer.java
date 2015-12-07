@@ -92,13 +92,11 @@ class Initializer {
    /**
     * This is used to instantiate the object using the default no
     * argument constructor. If for some reason the object can not be
-    * instantiated then this will throw an exception with the reason.
-    * 
-    * @param context this is the context used to match parameters     
+    * instantiated then this will throw an exception with the reason.    
     * 
     * @return this returns the object that has been instantiated
     */
-   public Object getInstance(Context context) throws Exception {
+   public Object getInstance() throws Exception {
       if(!factory.isAccessible()) {
          factory.setAccessible(true);
       } 
@@ -110,17 +108,16 @@ class Initializer {
     * takes deserialized objects as arguments. The object that have
     * been deserialized can be taken from the <code>Criteria</code>
     * object which contains the deserialized values.
-    * 
-    * @param context this is the context used to match parameters     
+    *     
     * @param criteria this contains the criteria to be used
     * 
     * @return this returns the object that has been instantiated
     */
-   public Object getInstance(Context context, Criteria criteria) throws Exception {
+   public Object getInstance(Criteria criteria) throws Exception {
       Object[] values = list.toArray();
       
       for(int i = 0; i < list.size(); i++) {
-         values[i] = getVariable(context, criteria, i);
+         values[i] = getVariable(criteria, i);
       }
       return getInstance(values);
    }
@@ -131,15 +128,14 @@ class Initializer {
     * see if the if the parameter is required. If it is required then
     * there must be a non null value or an exception is thrown.
     * 
-    * @param context this is the context used to match parameters
     * @param criteria this is used to acquire the parameter value
     * @param index this is the index to acquire the value for
     * 
     * @return the value associated with the specified parameter
     */
-   private Object getVariable(Context context, Criteria criteria, int index) throws Exception {
+   private Object getVariable(Criteria criteria, int index) throws Exception {
       Parameter parameter = list.get(index);
-      String path = parameter.getPath(context);
+      String path = parameter.getPath();
       Variable variable = criteria.remove(path);
       
       if(variable != null) {
@@ -158,13 +154,12 @@ class Initializer {
     * because there is no way to set the read only entity without a
     * constructor injection in to the instantiated object.
     * 
-    * @param context this is the context used to match parameters
     * @param criteria this contains the criteria to be used
     * 
     * @return this returns the score based on the criteria provided
     */
-   public double getScore(Context context, Criteria criteria) throws Exception {
-      Signature match = signature.getSignature(context);
+   public double getScore(Criteria criteria) throws Exception {
+      Signature match = signature.getSignature();
       
       for(String name : criteria) {
          Label label = criteria.resolve(name);
@@ -173,16 +168,8 @@ class Initializer {
             Parameter value = match.getParameter(name);
             Contact contact = label.getContact();
 
-               if(value == null) {
-               Collection<String> options = label.getNames(context);
-               
-               for(String option : options) {
-                  value = match.getParameter(option);
-                  
-                  if(value != null) {
-                     break;
-                  }
-               }
+            if(value == null) {
+               value = getParameter(match, label);
             }
             if(contact.isReadOnly()) {
                if(value == null) {
@@ -191,7 +178,36 @@ class Initializer {
             }
          }
       }
-      return getPercentage(context, criteria);
+      return getPercentage(criteria);
+   }
+   
+   /**
+    * This is used to resolve a <code>Parameter</code> using a given
+    * label. Resolution is performed by using the paths to find a
+    * parameter in the signature. If nothing is resolved then this
+    * will return null, also the types must match for success.
+    * 
+    * @param match this is the signature to find a parameter in
+    * @param label this is the label to used to resolve a parameter
+    * 
+    * @return this returns the parameter that has been resolved
+    */
+   private Parameter getParameter(Signature match, Label label) throws Exception {
+      Collection<String> options = label.getNames();
+      Class type = label.getType();
+      
+      for(String option : options) {
+         Parameter parameter = match.getParameter(option);
+         
+         if(parameter != null) {
+            Class other = parameter.getType();
+         
+            if(other.isAssignableFrom(type)) {
+               return parameter;
+            }
+         }
+      }
+      return null;
    }
    
    /**
@@ -205,17 +221,16 @@ class Initializer {
     * many constructors with a 100% match on parameters, the one 
     * with the most values to be injected wins. This ensures the
     * most desirable constructor is chosen each time.
-    * 
-    * @param context this is the context used to match parameters     
+    *     
     * @param criteria this is the criteria object containing values
     * 
     * @return this returns the percentage match for the values
     */
-   private double getPercentage(Context context, Criteria criteria) throws Exception {
+   private double getPercentage(Criteria criteria) throws Exception {
       double score = 0.0;
       
       for(Parameter value : list) {
-         String name = value.getPath(context);
+         String name = value.getPath();
          Label label = criteria.resolve(name);
 
          if(label == null) {
@@ -229,7 +244,7 @@ class Initializer {
             score++;
          }
       }
-      return getAdjustment(context, score);
+      return getAdjustment(score);
    }
    
    /**
@@ -238,12 +253,11 @@ class Initializer {
     * with the most values to be injected wins. This ensures the
     * most desirable constructor is chosen each time.
     *     
-    * @param context this is the context used for serialization
     * @param score this is the score from the parameter matching
     * 
     * @return an adjusted score to account for the signature size
     */
-   private double getAdjustment(Context context, double score) {
+   private double getAdjustment(double score) {
       double adjustment = list.size() / 1000.0;
       
       if(score > 0) {

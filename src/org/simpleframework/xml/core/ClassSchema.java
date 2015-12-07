@@ -88,8 +88,8 @@ class ClassSchema implements Schema {
     * @param context this is the context object for serialization
     */
    public ClassSchema(Scanner schema, Context context) throws Exception {  
-      this.section = schema.getSection(context);
       this.caller = schema.getCaller(context);
+      this.section = schema.getSection();
       this.factory = schema.getCreator();
       this.revision = schema.getRevision();
       this.decorator = schema.getDecorator();

@@ -25,6 +25,7 @@ import org.simpleframework.xml.DefaultType;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Version;
+import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>Scanner</code> object performs the reflective inspection
@@ -85,8 +86,19 @@ class Scanner implements Policy {
     * @param type this is the type that is scanned for a schema
     */
    public Scanner(Class type) throws Exception {  
-      this.scanner = new ClassScanner(type);
-      this.builder = new StructureBuilder(this, type); 
+      this(type, new Format());
+   }
+   
+   /**
+    * Constructor for the <code>Scanner</code> object. This is used 
+    * to scan the provided class for annotations that are used to
+    * build a schema for an XML file to follow. 
+    * 
+    * @param type this is the type that is scanned for a schema
+    */
+   public Scanner(Class type, Format format) throws Exception {  
+      this.scanner = new ClassScanner(type, format);
+      this.builder = new StructureBuilder(this, type, format); 
       this.type = type;
       this.scan(type);
    }      
@@ -147,12 +159,10 @@ class Scanner implements Policy {
     * Each section is a tree like structure defining exactly where
     * each attribute an element is located within the source XML.
     * 
-    * @param context this is the context used to style the values
-    * 
     * @return this will return a section for serialization
     */
-   public Section getSection(Context context) {
-      return structure.getSection(context);
+   public Section getSection() {
+      return structure.getSection();
    }
    
    /**

@@ -80,12 +80,10 @@ class Structure {
     * form a section of the schema class. The context is provided 
     * to that the names can be styled if required. 
     * 
-    * @param context this is the context to create the section
-    * 
     * @return a section representing an XML section
     */
-   public Section getSection(Context context) {
-      return new ModelSection(context, model);
+   public Section getSection() {
+      return new ModelSection(model);
    }
    
    /**

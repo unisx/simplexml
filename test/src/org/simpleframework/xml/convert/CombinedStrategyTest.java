@@ -87,7 +87,7 @@ public class CombinedStrategyTest extends ValidationTestCase {
       }
    }
    
-   public void testCombinedStrategy() throws Exception {
+   public void s_testCombinedStrategy() throws Exception {
       Registry registry = new Registry();
       AnnotationStrategy annotationStrategy = new AnnotationStrategy();
       RegistryStrategy registryStrategy = new RegistryStrategy(registry, annotationStrategy);

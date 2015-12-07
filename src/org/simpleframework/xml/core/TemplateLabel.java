@@ -104,40 +104,6 @@ abstract class TemplateLabel implements Label {
    }
    
    /**
-    * This is used to acquire the full set of names and paths that
-    * can be used to identify a label. Labels can be specified using 
-    * the <code>Path</code> optionally. If the path annotation is not
-    * specified then it needs to be identified by the name alone. 
-    * For a union this can create a large set.
-    * 
-    * @param context this is used to style the element names
-    * 
-    * @return this returns the names of each of the elements
-    */
-   public Collection<String> getNames(Context context) throws Exception {
-      String path = getPath(context);
-      String name = getName(context);
-      
-      return Arrays.asList(path, name);
-   }
-   
-   /**
-    * This is used to acquire the full set of paths that can be used 
-    * to identify a label. Labels can be identified using a name or by 
-    * using the optional <code>Path</code> with the name. If the path 
-    * annotation is not specified this will return the names.
-    * 
-    * @param context this is used to style the element names
-    * 
-    * @return this returns the names of each of the elements
-    */
-   public Collection<String> getPaths(Context context) throws Exception {
-      String path = getPath(context);
-      
-      return Collections.singleton(path);
-   }
-   
-   /**
     * This is typically used to acquire the entry value as acquired
     * from the annotation. However given that the annotation this
     * represents does not have a entry attribute this will always

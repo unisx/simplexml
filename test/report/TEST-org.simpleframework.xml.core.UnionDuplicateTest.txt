@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionDuplicateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'square' does not have a match in class org.simpleframework.xml.core.UnionDuplicateTest$Diagram at line 1
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:588)
@@ -11,12 +11,12 @@ org.simpleframework.xml.core.ElementException: Element 'square' does not have a 
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.UnionDuplicateTest.testShape(UnionDuplicateTest.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -35,5 +35,5 @@ org.simpleframework.xml.core.ElementException: Element 'square' does not have a 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testShape took 0.259 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testShape took 0.242 sec
+Testcase: testDirectory took 0.002 sec

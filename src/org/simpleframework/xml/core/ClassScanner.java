@@ -27,6 +27,7 @@ import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.NamespaceList;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Root;
+import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>ClassScanner</code> performs the reflective inspection
@@ -107,9 +108,10 @@ class ClassScanner  {
     * to build a schema for an XML file to follow. 
     * 
     * @param type this is the type that is scanned for a schema
+    * @param format this is the format used to style the XML
     */
-   public ClassScanner(Class type) throws Exception { 
-      this.scanner = new ConstructorScanner(type);
+   public ClassScanner(Class type, Format format) throws Exception { 
+      this.scanner = new ConstructorScanner(type, format);
       this.decorator = new NamespaceDecorator();
       this.scan(type);
    }      

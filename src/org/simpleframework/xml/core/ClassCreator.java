@@ -75,7 +75,12 @@ class ClassCreator implements Creator {
     * @return true if the class has a default constructor
     */
    public boolean isDefault() {
-      return primary != null;
+      int count = list.size();
+      
+      if(count <= 1) {
+         return primary != null;
+      }
+      return false;
    }
    
    /**
@@ -83,12 +88,10 @@ class ClassCreator implements Creator {
     * argument constructor. If for some reason the object can not be
     * instantiated then this will throw an exception with the reason.
     * 
-    * @param context this is the context used to match parameters
-    * 
     * @return this returns the object that has been instantiated
     */
-   public Object getInstance(Context context) throws Exception {
-      return primary.getInstance(context);
+   public Object getInstance() throws Exception {
+      return primary.getInstance();
    }
    
    /**
@@ -102,13 +105,13 @@ class ClassCreator implements Creator {
     * 
     * @return this returns the object that has been instantiated
     */
-   public Object getInstance(Context context, Criteria criteria) throws Exception {
-      Initializer initializer = getInitializer(context, criteria);
+   public Object getInstance(Criteria criteria) throws Exception {
+      Initializer initializer = getInitializer(criteria);
       
       if(initializer == null) {
          throw new PersistenceException("Constructor not matched for %s", type);
       }
-      return initializer.getInstance(context, criteria);
+      return initializer.getInstance(criteria);
    }
    
    /**
@@ -116,17 +119,16 @@ class ClassCreator implements Creator {
     * to instantiate the object. If there is no match for the initializer
     * then the default constructor is provided.
     * 
-    * @param context this is the context used to match parameters
-    * @param criteria this contains the criteria to be used
+    * @param criteria this contains the criteria to be used for this
     * 
     * @return this returns the initializer that has been matched
     */
-   private Initializer getInitializer(Context context, Criteria criteria) throws Exception {
+   private Initializer getInitializer(Criteria criteria) throws Exception {
       Initializer result = primary;
       double max = 0.0;
       
       for(Initializer initializer : list) {
-         double score = initializer.getScore(context, criteria);
+         double score = initializer.getScore(criteria);
          
          if(score > max) {
             result = initializer;

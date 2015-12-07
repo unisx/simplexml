@@ -1,28 +1,32 @@
 Testsuite: org.simpleframework.xml.core.AttributeNameSameAsElementNameTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.182 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.MethodException: Annotations do not match for 'a' in class org.simpleframework.xml.core.AttributeNameSameAsElementNameTest$AttributeSameAsElement
-	at org.simpleframework.xml.core.ConstructorScanner.validate(ConstructorScanner.java:237)
-	at org.simpleframework.xml.core.ConstructorScanner.create(ConstructorScanner.java:218)
-	at org.simpleframework.xml.core.ConstructorScanner.process(ConstructorScanner.java:182)
-	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:134)
-	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:114)
-	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:81)
-	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:112)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:88)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:66)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
-	at org.simpleframework.xml.core.Support.getName(Support.java:232)
-	at org.simpleframework.xml.core.Source.getName(Source.java:250)
+org.simpleframework.xml.core.ConstructorException: Annotations do not match for 'a' in class org.simpleframework.xml.core.AttributeNameSameAsElementNameTest$AttributeSameAsElement
+	at org.simpleframework.xml.core.SignatureScanner.validate(SignatureScanner.java:299)
+	at org.simpleframework.xml.core.SignatureScanner.register(SignatureScanner.java:280)
+	at org.simpleframework.xml.core.SignatureScanner.create(SignatureScanner.java:242)
+	at org.simpleframework.xml.core.SignatureScanner.process(SignatureScanner.java:169)
+	at org.simpleframework.xml.core.SignatureScanner.scan(SignatureScanner.java:149)
+	at org.simpleframework.xml.core.SignatureScanner.scan(SignatureScanner.java:132)
+	at org.simpleframework.xml.core.SignatureScanner.<init>(SignatureScanner.java:93)
+	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:119)
+	at org.simpleframework.xml.core.ConstructorScanner.scan(ConstructorScanner.java:106)
+	at org.simpleframework.xml.core.ConstructorScanner.<init>(ConstructorScanner.java:75)
+	at org.simpleframework.xml.core.ClassScanner.<init>(ClassScanner.java:114)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:100)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
+	at org.simpleframework.xml.core.Support.getName(Support.java:265)
+	at org.simpleframework.xml.core.Source.getName(Source.java:240)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1187)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1169)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1147)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1266)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1248)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1229)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1180)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1162)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1140)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1259)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1241)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1222)
 	at org.simpleframework.xml.core.AttributeNameSameAsElementNameTest.testSame(AttributeNameSameAsElementNameTest.java:35)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -41,4 +45,4 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'a' i
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testSame took 0.176 sec
+Testcase: testSame took 0.164 sec

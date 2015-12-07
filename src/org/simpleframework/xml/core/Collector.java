@@ -46,21 +46,13 @@ class Collector implements Criteria {
    private final Registry alias;
    
    /**
-    * This is the context object used by the serialization process.
-    */
-   private final Context context;
-   
-   /**
     * Constructor for the <code>Collector</code> object. This is 
     * used to store variables for an objects fields and methods.
     * Each variable is stored using the name of the label.
-    * 
-    * @param context this is the context for the deserialization
     */
-   public Collector(Context context) {
+   public Collector() {
       this.registry = new Registry();
       this.alias = new Registry();
-      this.context = context;
    }
 
    /**
@@ -104,8 +96,8 @@ class Collector implements Criteria {
       Variable variable = alias.remove(label);
       
       if(variable != null) {
-         Collection<String> options = variable.getNames(context);
-         String path = variable.getPath(context);
+         Collection<String> options = variable.getNames();
+         String path = variable.getPath();
          
          for(String option : options) {
             alias.remove(option);
@@ -139,8 +131,8 @@ class Collector implements Criteria {
       Variable variable = new Variable(label, value);
 
       if(label != null) {
-         Collection<String> options = label.getNames(context);       
-         String path = label.getPath(context);
+         Collection<String> options = label.getNames();       
+         String path = label.getPath();
          
          if(!registry.containsKey(path)) {
             registry.put(path, variable);

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.547 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.485 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -354,7 +354,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.547 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.41 sec
-Testcase: testComplexMap took 0.079 sec
-Testcase: testPrimitiveMap took 0.047 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testEntryMap took 0.355 sec
+Testcase: testComplexMap took 0.077 sec
+Testcase: testPrimitiveMap took 0.044 sec
+Testcase: testDirectory took 0.001 sec

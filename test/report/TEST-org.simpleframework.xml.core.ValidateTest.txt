@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.318 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.281 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version for class org.simpleframework.xml.core.ValidateTest$TextEntry at line 5
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:993)
@@ -18,12 +18,12 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:764)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:740)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1126)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1106)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1083)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1060)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:994)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:898)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1119)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1099)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1076)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1053)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:987)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:891)
 	at org.simpleframework.xml.core.ValidateTest.testVersionMissing(ValidateTest.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -57,12 +57,12 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:764)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:740)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1126)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1106)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1083)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1060)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:994)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:898)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1119)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1099)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1076)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1053)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:987)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:891)
 	at org.simpleframework.xml.core.ValidateTest.testNameMissing(ValidateTest.java:99)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -80,7 +80,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 org.simpleframework.xml.core.PersistenceException: Element 'array' declared twice at line 7
-	at org.simpleframework.xml.core.Variable$Adapter.validate(Variable.java:537)
+	at org.simpleframework.xml.core.Variable$Adapter.validate(Variable.java:478)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:967)
 	at org.simpleframework.xml.core.Composite.validateUnion(Composite.java:950)
 	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:923)
@@ -89,12 +89,12 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:764)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:740)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1126)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1106)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1083)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1060)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:994)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:898)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1119)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1099)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1076)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1053)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:987)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:891)
 	at org.simpleframework.xml.core.ValidateTest.testExtraElement(ValidateTest.java:125)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -113,8 +113,8 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testVersionMissing took 0.277 sec
-Testcase: testNameMissing took 0.005 sec
-Testcase: testTextMissing took 0.004 sec
-Testcase: testExtraElement took 0.008 sec
-Testcase: testDirectory took 0.014 sec
+Testcase: testVersionMissing took 0.248 sec
+Testcase: testNameMissing took 0.006 sec
+Testcase: testTextMissing took 0.005 sec
+Testcase: testExtraElement took 0.01 sec
+Testcase: testDirectory took 0.002 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.499 sec
 ------------- Standard Output ---------------
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
@@ -81,5 +81,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.455 sec
+Testcase: testList took 0.49 sec
 Testcase: testDirectory took 0.001 sec

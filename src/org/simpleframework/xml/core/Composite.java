@@ -116,7 +116,7 @@ class Composite implements Converter {
    public Composite(Context context, Type type, Class override) {
       this.factory = new ObjectFactory(context, type, override);  
       this.primitive = new Primitive(context, type);
-      this.criteria = new Collector(context);
+      this.criteria = new Collector();
       this.revision = new Revision();
       this.context = context;
       this.type = type;
@@ -285,7 +285,7 @@ class Composite implements Converter {
     */
    private Object readConstructor(InputNode node, Schema schema, Instance value) throws Exception {
       Creator creator = schema.getCreator();
-      Object source = creator.getInstance(context, criteria);
+      Object source = creator.getInstance(criteria);
       
       if(value != null) {
          value.setInstance(source);
@@ -608,7 +608,7 @@ class Composite implements Converter {
     */
    private void readUnion(InputNode node, Object source, LabelMap map, Label label) throws Exception {
       Object value = readInstance(node, source, label);
-      Collection<String> list = label.getPaths(context);
+      Collection<String> list = label.getPaths();
       
       for(String key : list) {
          Label union = map.getLabel(key);
@@ -664,10 +664,10 @@ class Composite implements Converter {
     */
    private Object readVariable(InputNode node, Object source, Label label) throws Exception {    
       Converter reader = label.getConverter(context);   
-      String name = label.getName(context);
+      String path = label.getPath();
       
       if(label.isCollection()) {
-         Variable variable = criteria.get(name);
+         Variable variable = criteria.get(path);
          Contact contact = label.getContact();
          
          if(variable != null) {
@@ -936,7 +936,7 @@ class Composite implements Converter {
     * @param label this is the label used to define the XML element
     */
    private void validateUnion(InputNode node, LabelMap map, Label label) throws Exception {
-      Collection<String> list = label.getPaths(context);
+      Collection<String> list = label.getPaths();
       
       for(String key : list) {
          Label union = map.getLabel(key);
@@ -1193,7 +1193,7 @@ class Composite implements Converter {
       if(replace != null) {
          writeElement(node, replace, label);            
       }
-      Collection<String> list = label.getPaths(context);
+      Collection<String> list = label.getPaths();
       
       for(String name : list) {
          Label union = section.getElement(name);
@@ -1270,7 +1270,7 @@ class Composite implements Converter {
    private void writeAttribute(OutputNode node, Object value, Label label) throws Exception {
       if(value != null) {         
          Decorator decorator = label.getDecorator();
-         String name = label.getName(context);
+         String name = label.getName();
          String text = factory.getText(value);
          OutputNode done = node.setAttribute(name, text);
          
@@ -1298,8 +1298,9 @@ class Composite implements Converter {
    private void writeElement(OutputNode node, Object value, Label label) throws Exception {
       if(value != null) {
          Class real = value.getClass();
+         /// XXX Performance problem here
          Label match = label.getLabel(real);
-         String name = match.getName(context);
+         String name = match.getName();
          Type type = label.getType(real); 
          OutputNode next = node.getChild(name);
 

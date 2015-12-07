@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.317 sec
 ------------- Standard Output ---------------
 <unionListExample>
    <integer>
@@ -26,5 +26,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
    </d>
 </unionListExample>------------- ---------------- ---------------
 
-Testcase: testListDeserialization took 0.351 sec
-Testcase: testDoubleListDeserialization took 0.016 sec
+Testcase: testListDeserialization took 0.295 sec
+Testcase: testDoubleListDeserialization took 0.015 sec

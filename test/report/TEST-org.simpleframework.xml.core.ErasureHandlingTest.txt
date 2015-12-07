@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ErasureHandlingTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.727 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.726 sec
 ------------- Standard Output ---------------
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
@@ -959,8 +959,8 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.727 sec
 org.simpleframework.xml.core.ElementException: Can not have class java.lang.Object as an attribute for @org.simpleframework.xml.ElementMap(key=, value=, inline=false, required=true, attribute=true, valueType=void, data=false, entry=, empty=true, name=, keyType=void) on field 'erasedToString' private java.util.Map org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapAttributeIllegalExample.erasedToString
 	at org.simpleframework.xml.core.CompositeKey.write(CompositeKey.java:221)
 	at org.simpleframework.xml.core.CompositeMap.write(CompositeMap.java:257)
-	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1331)
-	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1314)
+	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1332)
+	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1315)
 	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1194)
 	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1165)
 	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
@@ -969,12 +969,12 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:236)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:208)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1187)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1169)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1147)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1266)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1248)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1229)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1180)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1162)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1140)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1259)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1241)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1222)
 	at org.simpleframework.xml.core.ErasureHandlingTest.testErasureWithMapAttributeIllegalExample(ErasureHandlingTest.java:150)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -993,9 +993,9 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.503 sec
-Testcase: testPrimitiveErasure took 0.059 sec
-Testcase: testEnumErasure took 0.063 sec
-Testcase: testErasureWithMapAttributeIllegalExample took 0.007 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.083 sec
+Testcase: testErasure took 0.495 sec
+Testcase: testPrimitiveErasure took 0.06 sec
+Testcase: testEnumErasure took 0.07 sec
+Testcase: testErasureWithMapAttributeIllegalExample took 0.008 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.081 sec
 Testcase: testDirectory took 0 sec

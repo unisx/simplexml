@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NonFinalConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.36 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
 ------------- Standard Output ---------------
 <nonFinalExample>
    <name>A</name>
@@ -26,5 +26,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.36 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testNonFinal took 0.349 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testNonFinal took 0.316 sec
+Testcase: testDirectory took 0 sec

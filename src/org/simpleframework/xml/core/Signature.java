@@ -21,7 +21,6 @@ package org.simpleframework.xml.core;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Set;
 
 /**
  * The <code>Signature</code> object represents a constructor
@@ -96,15 +95,13 @@ class Signature extends LinkedHashMap<String, Parameter> {
     * match styled element names or attributes to ensure that they 
     * can be used to acquire the parameters.
     * 
-    * @param context this is used to build the signature
-    * 
     * @return this returns a signature with styled keys
     */
-   public Signature getSignature(Context context) throws Exception {
+   public Signature getSignature() throws Exception {
       Signature signature = new Signature(type);
       
       for(Parameter value : values()) {  
-         String name = value.getPath(context);
+         String name = value.getPath();
          signature.put(name, value);
       }
       return signature;

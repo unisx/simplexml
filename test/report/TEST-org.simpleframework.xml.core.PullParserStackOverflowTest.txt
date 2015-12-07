@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PullParserStackOverflowTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Error -----------------
 org.xmlpull.v1.XmlPullParserException: only whitespace content allowed before start tag and not l (position: START_DOCUMENT seen <?xml version="1.0" encoding="UTF-8"?>l... @1:39) 
 	at org.xmlpull.mxp1.MXParser.parseProlog(MXParser.java:1519)
@@ -11,8 +11,8 @@ org.xmlpull.v1.XmlPullParserException: only whitespace content allowed before st
 	at org.simpleframework.xml.stream.NodeReader.readRoot(NodeReader.java:79)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:84)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:58)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:550)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:451)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:543)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:444)
 	at org.simpleframework.xml.core.PullParserStackOverflowTest.testBrokenStart(PullParserStackOverflowTest.java:41)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -39,8 +39,8 @@ org.xmlpull.v1.XmlPullParserException: only whitespace content allowed before st
 	at org.simpleframework.xml.stream.NodeReader.readRoot(NodeReader.java:79)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:84)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:58)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:550)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:451)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:543)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:444)
 	at org.simpleframework.xml.core.PullParserStackOverflowTest.testBrokenStartButComplete(PullParserStackOverflowTest.java:55)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -73,11 +73,11 @@ org.xmlpull.v1.XmlPullParserException: end tag name </text> must match start tag
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:550)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:451)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:543)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:444)
 	at org.simpleframework.xml.core.PullParserStackOverflowTest.testBrokenElementButComplete(PullParserStackOverflowTest.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -96,7 +96,7 @@ org.xmlpull.v1.XmlPullParserException: end tag name </text> must match start tag
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testBrokenStart took 0.103 sec
-Testcase: testBrokenStartButComplete took 0.002 sec
-Testcase: testBrokenElementButComplete took 0.189 sec
+Testcase: testBrokenStart took 0.086 sec
+Testcase: testBrokenStartButComplete took 0.001 sec
+Testcase: testBrokenElementButComplete took 0.149 sec
 Testcase: testDirectory took 0.003 sec

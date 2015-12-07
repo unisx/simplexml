@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.054 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.878 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -2775,8 +2775,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.054 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.55 sec
-Testcase: testWriteUnicode took 0.349 sec
-Testcase: testUnicodeFromByteStream took 0.131 sec
-Testcase: testIncorrectEncoding took 0.01 sec
+Testcase: testUnicode took 0.474 sec
+Testcase: testWriteUnicode took 0.266 sec
+Testcase: testUnicodeFromByteStream took 0.114 sec
+Testcase: testIncorrectEncoding took 0.009 sec
 Testcase: testDirectory took 0.003 sec

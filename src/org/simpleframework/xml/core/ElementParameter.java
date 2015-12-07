@@ -22,6 +22,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>ElementParameter</code> represents a constructor 
@@ -39,11 +40,6 @@ class ElementParameter extends TemplateParameter {
     * This is the expression used to represent this parameter.
     */
    private final Expression expression;   
-   
-   /**
-    * This is the constructor the parameter was declared in.
-    */
-   private final Constructor factory;
    
    /**
     * This is the contact used to determine the parameter name.
@@ -82,16 +78,16 @@ class ElementParameter extends TemplateParameter {
     * 
     * @param factory this is the constructor the parameter is in
     * @param value this is the annotation used for the parameter
+    * @param format this is the format used to style the parameter
     * @param index this is the index the parameter appears at
     */
-   public ElementParameter(Constructor factory, Element value, int index) throws Exception {
+   public ElementParameter(Constructor factory, Element value, Format format, int index) throws Exception {
       this.contact = new Contact(value, factory, index);
-      this.label = new ElementLabel(contact, value);
+      this.label = new ElementLabel(contact, value, format);
       this.expression = label.getExpression();
       this.path = label.getPath();
       this.type = label.getType();
       this.name = label.getName();
-      this.factory = factory;
       this.index = index;
    }
    
@@ -138,7 +134,7 @@ class ElementParameter extends TemplateParameter {
     * @return this returns the type used for the parameter
     */
    public Class getType() {
-      return factory.getParameterTypes()[index];
+      return type;
    } 
    
    /**

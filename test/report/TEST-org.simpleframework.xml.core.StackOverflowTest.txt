@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StackOverflowTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.023 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.133 sec
 ------------- Standard Output ---------------
 <delivery>
    <newBenefit>
@@ -31014,5 +31014,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 2.023 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testStackOverflow took 2.015 sec
-Testcase: testDirectory took 0 sec
+Testcase: testStackOverflow took 2.126 sec
+Testcase: testDirectory took 0.001 sec

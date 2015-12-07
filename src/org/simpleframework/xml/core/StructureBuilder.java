@@ -35,6 +35,7 @@ import org.simpleframework.xml.ElementUnion;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Text;
 import org.simpleframework.xml.Version;
+import org.simpleframework.xml.stream.Format;
 
 /**
  * The <code>StructureBuilder</code> object is used to build the XML
@@ -96,6 +97,11 @@ class StructureBuilder {
    private Scanner scanner;
    
    /**
+    * This is the context object used by this serialization object.
+    */
+   private Format format;
+   
+   /**
     * This is the version annotation extracted from the class.
     */
    private Label version;
@@ -129,10 +135,11 @@ class StructureBuilder {
     * 
     * @param scanner this is the scanner used to scan annotations
     * @param type this is the type that is being scanned
-    */
-   public StructureBuilder(Scanner scanner, Class type) throws Exception {
-      this.builder = new ExpressionBuilder(type);
-      this.assembler = new ModelAssembler(builder, type);
+    * @param format this is the format used to style the XML
+    */ 
+   public StructureBuilder(Scanner scanner, Class type, Format format) throws Exception {
+      this.builder = new ExpressionBuilder(type, format);
+      this.assembler = new ModelAssembler(builder, type, format);
       this.root = new TreeModel(scanner, type);
       this.attributes = new LabelMap(scanner);
       this.elements = new LabelMap(scanner);
@@ -140,6 +147,7 @@ class StructureBuilder {
       this.resolver = new LabelResolver();
       this.comparer = new Comparer();
       this.scanner = scanner;
+      this.format = format;
       this.type = type;
    }   
    
@@ -220,7 +228,7 @@ class StructureBuilder {
       Annotation[] list = extract(type);
       
       for(Annotation value : list) {
-         Label label = LabelFactory.getInstance(field, type, value);
+         Label label = LabelFactory.getInstance(field, type, value, format);
          String path = label.getPath();
          String name = label.getName();
          
@@ -246,7 +254,7 @@ class StructureBuilder {
     * @throws Exception thrown if the label can not be created
     */   
    private void process(Contact field, Annotation type, LabelMap map) throws Exception {
-      Label label = LabelFactory.getInstance(field, type);
+      Label label = LabelFactory.getInstance(field, type, format);
       String path = label.getPath();
       String name = label.getName();
       
@@ -295,7 +303,7 @@ class StructureBuilder {
     * @throws Exception if there is more than one text annotation
     */   
    private void text(Contact field, Annotation type) throws Exception {
-      Label label = LabelFactory.getInstance(field, type);
+      Label label = LabelFactory.getInstance(field, type, format);
       Expression expression = label.getExpression();
       String path = label.getPath();
       Model model = root;
@@ -323,7 +331,7 @@ class StructureBuilder {
     * @throws Exception if there is more than one text annotation
     */   
    private void version(Contact field, Annotation type) throws Exception {
-      Label label = LabelFactory.getInstance(field, type);
+      Label label = LabelFactory.getInstance(field, type, format);
       
       if(version != null) {
          throw new AttributeException("Multiple version annotations in %s", type);
@@ -383,7 +391,7 @@ class StructureBuilder {
     * 
     * @return this returns true if an element or model exists
     */
-   private boolean isElement(String path)throws Exception {
+   private boolean isElement(String path) throws Exception {
       Expression target = builder.build(path);
       Model model = lookup(target);
       
@@ -419,8 +427,12 @@ class StructureBuilder {
       Expression target = builder.build(path);
       Model model = lookup(target);
       
-      if(model != null) { 
+      if(model != null) {
          String name = target.getLast();
+         
+         if(!target.isPath()) {
+            return model.isAttribute(path);
+         }
          return model.isAttribute(name);
       }
       return false;
@@ -586,7 +598,7 @@ class StructureBuilder {
     */
    private void validateElements(Class type, Order order) throws Exception {
       if(order != null) {
-         for(String name : order.elements()) {
+         for(String name : order.elements()) { 
             if(!isElement(name)) {
                throw new ElementException("Ordered element '%s' missing for %s", name, type);
             }
@@ -761,10 +773,11 @@ class StructureBuilder {
       Collection<String> options = label.getNames();
       Contact contact = label.getContact();
       String name = parameter.getName();
+      Class actual = parameter.getType();
       Class expect = contact.getType();
       
-      if(expect != parameter.getType()) {
-         throw new ConstructorException("Type does not match %s for '%s' in %s", label, name, parameter);
+      if(!expect.isAssignableFrom(actual)) {
+         throw new ConstructorException("Type is not compatible with %s for '%s' in %s", label, name, parameter);
       }
       if(!options.contains(name)) {
          String require = label.getName();

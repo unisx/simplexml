@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.518 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.471 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -141,9 +141,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.518 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testResolver took 0.369 sec
-Testcase: testCache took 0.063 sec
-Testcase: testNoResolution took 0.009 sec
+Testcase: testResolver took 0.327 sec
+Testcase: testCache took 0.058 sec
+Testcase: testNoResolution took 0.01 sec
 Testcase: testNonGreedyMatch took 0.006 sec
-Testcase: testResolverCache took 0.023 sec
-Testcase: testDirectory took 0.039 sec
+Testcase: testResolverCache took 0.026 sec
+Testcase: testDirectory took 0.034 sec

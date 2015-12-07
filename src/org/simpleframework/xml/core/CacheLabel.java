@@ -19,12 +19,9 @@
 package org.simpleframework.xml.core;
 
 import java.lang.annotation.Annotation;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 
 import org.simpleframework.xml.strategy.Type;
-import org.simpleframework.xml.stream.Style;
 
 /**
  * The <code>CacheLabel</code> object is used to acquire details from an
@@ -222,46 +219,6 @@ class CacheLabel implements Label {
    }
    
    /**
-    * This is used to acquire the full set of paths that can be used 
-    * to identify a label. Labels can be identified using a name or by 
-    * using the optional <code>Path</code> with the name. If the path 
-    * annotation is not specified this will return the names.
-    * 
-    * @param context this is used to style the element names
-    * 
-    * @return this returns the names of each of the elements
-    */
-   public Collection<String> getNames(Context context) throws Exception {
-      if(!union) {
-         String path = getPath(context);
-         String name = getName(context);
-      
-         return Arrays.asList(path, name);
-      }
-      return label.getNames(context);
-   }
-   
-   /**
-    * This returns a <code>Set</code> of elements in a union. This
-    * will typically be an empty set, and is never null. If this is
-    * a label union then this will return the name of each label
-    * within the group. Providing the labels for a union allows the
-    * serialization process to determine the associated labels.
-    *
-    * @param context this is used to style the element names
-    * 
-    * @return this returns the names of each of the elements
-    */
-   public Collection<String> getPaths(Context context) throws Exception {
-      if(!union) {
-         String path = getPath(context);
-      
-         return Collections.singleton(path);
-      }
-      return label.getPaths(context);
-   }
-   
-   /**
     * This acquires the annotation associated with this label. This
     * is typically the annotation acquired from the field or method.
     * However, in the case of unions this will return the actual
@@ -310,46 +267,7 @@ class CacheLabel implements Label {
     */
    public Converter getConverter(Context context) throws Exception {
       return label.getConverter(context);
-   }
-     
-   /**
-    * This is used to acquire the name of the element or attribute
-    * that is used by the class schema. The name is determined by
-    * checking for an override within the annotation. If it contains
-    * a name then that is used, if however the annotation does not
-    * specify a name the the field or method name is used instead.
-    * 
-    * @param context this is the context used to style the name
-    * 
-    * @return returns the name that is used for the XML property
-    */
-   public String getName(Context context) throws Exception {
-      Style style = context.getStyle();
-      
-      if(attribute) {
-         return style.getAttribute(name);
-      }
-      return style.getElement(name);
-   }
-   
-   /**
-    * This is used to acquire the path of the element or attribute
-    * that is used by the class schema. The path is determined by
-    * acquiring the XPath expression and appending the name of the
-    * label to form a fully qualified styled path.
-    * 
-    * @param context this is the context used to style the path
-    * 
-    * @return returns the path that is used for the XML property
-    */
-   public String getPath(Context context) throws Exception {
-      String name = getName(context);
-      
-      if(attribute) {
-         return expression.getAttribute(name);
-      }
-      return expression.getElement(name);
-   }  
+   } 
    
    /**
     * This is used to provide a configured empty value used when the

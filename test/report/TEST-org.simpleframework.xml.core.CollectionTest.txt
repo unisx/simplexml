@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.951 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.005 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -635,6 +635,9 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.951 sec
 ------------- Standard Error -----------------
 <test name="example">
    <list class="java.util.HashSet">
+      <entry id="3">
+         <text>three</text>
+      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
@@ -642,23 +645,20 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.951 sec
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
-      </entry>
-      <entry id="3">
-         <text>three</text>
       </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
-         <text>two</text>
-         <description>this is the second one</description>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
+         <text>one</text>
+         <description>this is an extended entry</description>
       </entry>
       <entry id="3">
          <text>three</text>
       </entry>
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
-         <text>one</text>
-         <description>this is an extended entry</description>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
+         <text>two</text>
+         <description>this is the second one</description>
       </entry>
    </list>
 </test>org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.HashSet for field 'list' private java.util.SortedSet org.simpleframework.xml.core.CollectionTest$EntrySortedSet.list at line 3
@@ -677,12 +677,12 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.951 sec
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testSetToSortedSet(CollectionTest.java:744)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -715,12 +715,12 @@ org.simpleframework.xml.core.InstantiationException: Incompatible class java.uti
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testListToSet(CollectionTest.java:756)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -752,12 +752,12 @@ org.simpleframework.xml.core.InstantiationException: Invalid collection class ja
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testInvalidList(CollectionTest.java:769)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -790,12 +790,12 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testUnknownCollectionList(CollectionTest.java:781)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -829,12 +829,12 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testAbstractList(CollectionTest.java:793)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -867,12 +867,12 @@ org.simpleframework.xml.core.InstantiationException: Incompatible class java.uti
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testNotACollection(CollectionTest.java:805)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -899,7 +899,7 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.strategy.Loader.load(Loader.java:50)
 	at org.simpleframework.xml.strategy.TreeStrategy.readValue(TreeStrategy.java:163)
 	at org.simpleframework.xml.strategy.TreeStrategy.read(TreeStrategy.java:102)
-	at org.simpleframework.xml.core.Source.getOverride(Source.java:370)
+	at org.simpleframework.xml.core.Source.getOverride(Source.java:360)
 	at org.simpleframework.xml.core.Factory.getConversion(Factory.java:207)
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:139)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
@@ -916,12 +916,12 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:562)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:499)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:408)
 	at org.simpleframework.xml.core.CollectionTest.testMissingCollection(CollectionTest.java:817)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -940,24 +940,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.284 sec
-Testcase: testSortedSet took 0.14 sec
-Testcase: testList took 0.053 sec
-Testcase: testHashSet took 0.047 sec
+Testcase: testSet took 0.281 sec
+Testcase: testSortedSet took 0.138 sec
+Testcase: testList took 0.047 sec
+Testcase: testHashSet took 0.052 sec
 Testcase: testTreeSet took 0.038 sec
-Testcase: testArrayList took 0.034 sec
-Testcase: testSortedSetToSet took 0.006 sec
-Testcase: testExtendedEntry took 0.02 sec
-Testcase: testTypeFromFieldList took 0.04 sec
-Testcase: testTypeFromMethodList took 0.074 sec
-Testcase: testPrimitiveCollection took 0.02 sec
+Testcase: testArrayList took 0.039 sec
+Testcase: testSortedSetToSet took 0.008 sec
+Testcase: testExtendedEntry took 0.022 sec
+Testcase: testTypeFromFieldList took 0.048 sec
+Testcase: testTypeFromMethodList took 0.078 sec
+Testcase: testPrimitiveCollection took 0.018 sec
 Testcase: testCompositeCollection took 0.029 sec
 Testcase: testPrimitiveDefaultCollection took 0.017 sec
-Testcase: testSetToSortedSet took 0.005 sec
-Testcase: testListToSet took 0.006 sec
-Testcase: testInvalidList took 0.005 sec
+Testcase: testSetToSortedSet took 0.004 sec
+Testcase: testListToSet took 0.009 sec
+Testcase: testInvalidList took 0.06 sec
 Testcase: testUnknownCollectionList took 0.003 sec
-Testcase: testAbstractList took 0.079 sec
-Testcase: testNotACollection took 0.01 sec
-Testcase: testMissingCollection took 0.007 sec
+Testcase: testAbstractList took 0.004 sec
+Testcase: testNotACollection took 0.005 sec
+Testcase: testMissingCollection took 0.005 sec
 Testcase: testDirectory took 0.001 sec

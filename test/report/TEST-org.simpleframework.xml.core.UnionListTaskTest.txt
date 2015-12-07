@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListTaskTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.48 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.426 sec
 ------------- Standard Output ---------------
 <task name="setup">
    <delete>
@@ -79,5 +79,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.48 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testUnion took 0.471 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testUnion took 0.417 sec
+Testcase: testDirectory took 0 sec

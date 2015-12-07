@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PerformanceTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 25.373 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 24.708 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -1136,8 +1136,8 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 25.373 sec
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 class org.xmlpull.mxp1.MXParserCachingStrings
-SIMPLE TOOK 4766ms
-JAVA TOOK 2167ms
+SIMPLE TOOK 5154ms
+JAVA TOOK 2242ms
 SIMPLE --->><root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
@@ -1178,15 +1178,15 @@ SIMPLE --->><root number="1234" flag="true">
       </entry>
    </list>
 </root>
-Took '4032' ms to process 10000 documents
-Took '4652' ms to process 10000 documents with templates
-Took '4040' ms to process 10000 documents with an empty filter
-Took '4982' ms to write 10000 documents
+Took '4212' ms to process 10000 documents
+Took '3859' ms to process 10000 documents with templates
+Took '3628' ms to process 10000 documents with an empty filter
+Took '4767' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testCompareToOtherSerializers took 7.294 sec
-Testcase: testBasicDocument took 4.15 sec
-Testcase: testTemplateDocument took 4.736 sec
-Testcase: testEmptyFilter took 4.142 sec
-Testcase: testBasicWrite took 5.033 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testCompareToOtherSerializers took 7.886 sec
+Testcase: testBasicDocument took 4.338 sec
+Testcase: testTemplateDocument took 3.927 sec
+Testcase: testEmptyFilter took 3.689 sec
+Testcase: testBasicWrite took 4.849 sec
+Testcase: testDirectory took 0 sec

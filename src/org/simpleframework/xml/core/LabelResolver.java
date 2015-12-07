@@ -82,6 +82,15 @@ class LabelResolver {
     * based on its name and path. Registration like this is done
     * to ensure that the label can be resolved based on a parameter
     * name or path. 
+    * <p>
+    * Registration here ensures a parameter can be resolved on both
+    * name and path. However, because we want these mappings to be
+    * unique we do not allow multiple names to be mapped to the same
+    * label. For example, say we have 'x/@a' and 'y/@a', these both 
+    * have the same name 'a' even though the point to different
+    * things. Here we would not allow a mapping from 'a' and keep
+    * only mappings based on the full path. This means that any
+    * parameters specified must declare the full path also.
     * 
     * @param label this is the label that is to be registered
     * @param map this is the map that the label is registered with
@@ -91,7 +100,12 @@ class LabelResolver {
       String path = label.getPath();
       
       if(map.containsKey(name)) {
-         map.put(name, null);
+         Label current = map.get(name);
+         String key = current.getPath();
+         
+         if(!key.equals(name)) {
+            map.put(name, null); 
+         }
       } else {
          map.put(name, label);
       }

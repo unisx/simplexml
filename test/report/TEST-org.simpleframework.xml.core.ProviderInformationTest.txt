@@ -1,26 +1,26 @@
 Testsuite: org.simpleframework.xml.core.ProviderInformationTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
 ------------- Standard Output ---------------
 Constructor exception Ordered element 'providerInformation' missing for class org.simpleframework.xml.core.ProviderInformationTest$SolutionPackageDeploymentType
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Ordered element 'providerInformation' missing for class org.simpleframework.xml.core.ProviderInformationTest$SolutionPackageDeploymentType
-	at org.simpleframework.xml.core.StructureBuilder.validateElements(StructureBuilder.java:591)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:508)
-	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:393)
-	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
-	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
-	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:66)
-	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
-	at org.simpleframework.xml.core.Source.getScanner(Source.java:281)
-	at org.simpleframework.xml.core.Source.getSchema(Source.java:327)
+	at org.simpleframework.xml.core.StructureBuilder.validateElements(StructureBuilder.java:603)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:520)
+	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:403)
+	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:362)
+	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:103)
+	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:76)
+	at org.simpleframework.xml.core.Support.getScanner(Support.java:203)
+	at org.simpleframework.xml.core.Source.getScanner(Source.java:271)
+	at org.simpleframework.xml.core.Source.getSchema(Source.java:317)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:200)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:150)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:550)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:625)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:606)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:584)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:543)
 	at org.simpleframework.xml.core.ProviderInformationTest$SolutionPackageDeploymentDescriptor.<init>(ProviderInformationTest.java:130)
 	at org.simpleframework.xml.core.ProviderInformationTest.testToString(ProviderInformationTest.java:248)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -40,4 +40,4 @@ org.simpleframework.xml.core.ElementException: Ordered element 'providerInformat
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testToString took 0.279 sec
+Testcase: testToString took 0.258 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.VisitorSetNodeNameTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.304 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.278 sec
 ------------- Standard Output ---------------
 <RENAMEEXAMPLE>
    <NAME>example name</NAME>
@@ -11,5 +11,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.304 sec
 </RenameExample>
 ------------- ---------------- ---------------
 
-Testcase: testVisitor took 0.291 sec
-Testcase: testDirectory took 0.005 sec
+Testcase: testVisitor took 0.27 sec
+Testcase: testDirectory took 0.002 sec

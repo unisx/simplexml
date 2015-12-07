@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ArrayCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.555 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one length="5" id="1">
@@ -232,7 +232,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.555 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.401 sec
-Testcase: testNestedExample took 0.107 sec
-Testcase: testPromotion took 0.037 sec
+Testcase: testCycle took 0.341 sec
+Testcase: testNestedExample took 0.081 sec
+Testcase: testPromotion took 0.023 sec
 Testcase: testDirectory took 0.002 sec

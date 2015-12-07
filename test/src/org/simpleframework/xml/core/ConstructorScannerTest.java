@@ -10,6 +10,7 @@ import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Path;
 import org.simpleframework.xml.Text;
+import org.simpleframework.xml.stream.Format;
 
 public class ConstructorScannerTest extends TestCase {
 
@@ -56,7 +57,7 @@ public class ConstructorScannerTest extends TestCase {
    }
    
    public void testElementWithPath() throws Exception {
-      ConstructorScanner scanner = new ConstructorScanner(ExampleWithTextAndElement.class);
+      ConstructorScanner scanner = new ConstructorScanner(ExampleWithTextAndElement.class, new Format());
       Creator creator = scanner.getCreator();
       List<Parameter> parameters = creator.getParameters();
       Set<String> names = new HashSet<String>();
@@ -75,7 +76,7 @@ public class ConstructorScannerTest extends TestCase {
       boolean failure = false;
       
       try {
-         new ConstructorScanner(ClashBetweenElementAndText.class);
+         new ConstructorScanner(ClashBetweenElementAndText.class, new Format());
       }catch(Exception e) {
          e.printStackTrace();
          failure = true;
@@ -87,7 +88,7 @@ public class ConstructorScannerTest extends TestCase {
       boolean failure = false;
       
       try {
-         new ConstructorScanner(AmbiguousParameters.class);
+         new ConstructorScanner(AmbiguousParameters.class, new Format());
       }catch(Exception e) {
          e.printStackTrace();
          failure = true;
@@ -96,7 +97,7 @@ public class ConstructorScannerTest extends TestCase {
    }
    
    public void testSameNameWithPath() throws Exception {
-      ConstructorScanner scanner = new ConstructorScanner(SameNameWithPath.class);
+      ConstructorScanner scanner = new ConstructorScanner(SameNameWithPath.class, new Format());
       Creator creator = scanner.getCreator();
       List<Parameter> parameters = creator.getParameters();
       Set<String> names = new HashSet<String>();
@@ -113,7 +114,7 @@ public class ConstructorScannerTest extends TestCase {
       boolean failure = false;
       
       try {
-         new ConstructorScanner(SameNameAndAnnotationWithPath.class);
+         new ConstructorScanner(SameNameAndAnnotationWithPath.class, new Format());
       }catch(Exception e) {
          e.printStackTrace();
          failure = true;
@@ -122,7 +123,7 @@ public class ConstructorScannerTest extends TestCase {
    }
    
    public void testSameNameWithDifferentPath() throws Exception {
-      ConstructorScanner scanner = new ConstructorScanner(SameNameWithDifferentPath.class);
+      ConstructorScanner scanner = new ConstructorScanner(SameNameWithDifferentPath.class, new Format());
       Creator creator = scanner.getCreator();
       List<Parameter> parameters = creator.getParameters();
       Set<String> names = new HashSet<String>();

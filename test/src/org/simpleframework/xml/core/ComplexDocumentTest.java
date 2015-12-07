@@ -608,10 +608,6 @@ public class ComplexDocumentTest extends TestCase {
 
    
    public static InputStream openDocument() throws Exception {
-      File file = new File("C:\\Users\\niall\\Workspace\\xml\\src\\test\\java\\org\\simpleframework\\xml\\core\\document.xml");
-      if(file.exists())  {
-         return new FileInputStream(file);
-      }
       return ComplexDocumentTest.class.getClassLoader().getResourceAsStream("org/simpleframework/xml/core/document.xml");
    }
    

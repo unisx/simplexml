@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.StrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.024 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.023 sec
 ------------- Standard Error -----------------
 base-64-encoder
 base-64-encoder
@@ -25,5 +25,5 @@ Base64Encoder
 Base64Encoder
 ------------- ---------------- ---------------
 
-Testcase: testHyphenStrategy took 0.011 sec
+Testcase: testHyphenStrategy took 0.01 sec
 Testcase: testCamelCaseStrategy took 0.006 sec

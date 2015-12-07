@@ -28,8 +28,13 @@
             </fileset>
          </classpath>
       </javac>
-      <copy todir="${build.path}">
+      <copy todir="${build.path}/core">
          <fileset dir="${parent.path}/${source.path}">
+            <exclude name="**/*.java"/>
+         </fileset>
+       </copy>
+       <copy todir="${build.path}/test">
+         <fileset dir="${source.path}">
             <exclude name="**/*.java"/>
          </fileset>
       </copy>

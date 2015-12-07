@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.545 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -257,5 +257,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.545 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.535 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testPrimitive took 0.452 sec
+Testcase: testDirectory took 0 sec

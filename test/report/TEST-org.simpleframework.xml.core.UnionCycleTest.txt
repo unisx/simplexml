@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionCycleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.35 sec
 ------------- Standard Output ---------------
 <shapeExample id="0">
    <circle id="1">

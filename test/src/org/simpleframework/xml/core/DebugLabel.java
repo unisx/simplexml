@@ -75,11 +75,6 @@ class DebugLabel implements Label{
       return label.getLabel(type);
    }
 
-   public String getName(Context context) throws Exception {
-      showMethodInvocation();
-      return label.getName(context);
-   }
-
    public String getName() throws Exception {
       showMethodInvocation();
       return label.getName();
@@ -88,11 +83,6 @@ class DebugLabel implements Label{
    public Collection<String> getNames() throws Exception {
       showMethodInvocation();
       return label.getNames();
-   }
-
-   public Collection<String> getNames(Context context) throws Exception {
-      showMethodInvocation();
-      return label.getNames(context);
    }
 
    public String getOverride() {
@@ -113,11 +103,6 @@ class DebugLabel implements Label{
    public Collection<String> getPaths() throws Exception {
       showMethodInvocation();
       return label.getPaths();
-   }
-
-   public Collection<String> getPaths(Context context) throws Exception {
-      showMethodInvocation();
-      return label.getPaths(context);
    }
 
    public Type getType(Class type) throws Exception {
