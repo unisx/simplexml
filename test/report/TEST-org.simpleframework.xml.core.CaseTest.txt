@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -97,7 +97,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
       <!-- java.lang.String -->
       <text ID="17">example 6</text>
    </text-entry>
-</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.CaseTest$CaseExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CaseTest$TextEntry -->
@@ -140,7 +143,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
       <!-- java.lang.String -->
       <Text ID="17">example 6</Text>
    </TextEntry>
-</Example>------------- ---------------- ---------------
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.CaseTest$CaseExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testCase took 0.262 sec
-Testcase: testDirectory took 0 sec
+Testcase: testCase took 0.253 sec
+Testcase: testDirectory took 0.004 sec

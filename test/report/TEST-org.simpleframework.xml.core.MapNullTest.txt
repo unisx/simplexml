@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.581 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -36,7 +36,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <map-entry/>
       </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map>>>>>> ELEMENT=[element complex-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -50,7 +53,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <MapEntry/>
       </Entry>
    </Map>
-</ComplexMap><complexMap>
+</ComplexMap>>>>>> ELEMENT=[element ComplexMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<complexMap>
    <map class="java.util.HashMap">
       <entry>
          <compositeKey>
@@ -85,7 +91,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <map-entry/>
       </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map>>>>>> ELEMENT=[element complex-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -99,7 +108,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <MapEntry/>
       </Entry>
    </Map>
-</ComplexMap><complexMap>
+</ComplexMap>>>>>> ELEMENT=[element ComplexMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<complexMap>
    <map class="java.util.HashMap">
       <entry>
          <compositeKey/>
@@ -134,7 +146,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </map-entry>
       </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map>>>>>> ELEMENT=[element complex-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -148,7 +163,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </MapEntry>
       </Entry>
    </Map>
-</ComplexMap><complexMap>
+</ComplexMap>>>>>> ELEMENT=[element ComplexMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<complexMap>
    <map class="java.util.HashMap">
       <entry>
          <compositeKey/>
@@ -183,7 +201,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </map-entry>
       </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map>>>>>> ELEMENT=[element complex-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -197,7 +218,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </MapEntry>
       </Entry>
    </Map>
-</ComplexMap><primitiveMap>
+</ComplexMap>>>>>> ELEMENT=[element ComplexMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveMap>
    <table class="java.util.HashMap">
       <entry>
          <string>example</string>
@@ -221,7 +245,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <big-decimal/>
       </entry>
    </table>
-</primitive-map><PrimitiveMap ID="0">
+</primitive-map>>>>>> ELEMENT=[element primitive-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -230,7 +257,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal/>
       </Entry>
    </Table>
-</PrimitiveMap><primitiveMap>
+</PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveMap>
    <table class="java.util.HashMap">
       <entry>
          <string>example</string>
@@ -254,7 +284,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <big-decimal/>
       </entry>
    </table>
-</primitive-map><PrimitiveMap ID="0">
+</primitive-map>>>>>> ELEMENT=[element primitive-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -263,7 +296,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal/>
       </Entry>
    </Table>
-</PrimitiveMap><primitiveMap>
+</PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveMap>
    <table class="java.util.HashMap">
       <entry>
          <string/>
@@ -287,7 +323,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <big-decimal ID="2">4</big-decimal>
       </entry>
    </table>
-</primitive-map><PrimitiveMap ID="0">
+</primitive-map>>>>>> ELEMENT=[element primitive-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -296,7 +335,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal ID="2">4</bigDecimal>
       </Entry>
    </Table>
-</PrimitiveMap><primitiveMap>
+</PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveMap>
    <table class="java.util.HashMap">
       <entry>
          <string/>
@@ -320,7 +362,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <big-decimal ID="2">4</big-decimal>
       </entry>
    </table>
-</primitive-map><PrimitiveMap ID="0">
+</primitive-map>>>>>> ELEMENT=[element primitive-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -329,7 +374,10 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal ID="2">4</bigDecimal>
       </Entry>
    </Table>
-</PrimitiveMap><primitiveMap>
+</PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveMap>
    <table class="java.util.HashMap">
       <entry>
          <string>a</string>
@@ -340,12 +388,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal/>
       </entry>
       <entry>
-         <string/>
-         <bigDecimal>4</bigDecimal>
-      </entry>
-      <entry>
          <string>b</string>
          <bigDecimal>2</bigDecimal>
+      </entry>
+      <entry>
+         <string/>
+         <bigDecimal>4</bigDecimal>
       </entry>
    </table>
 </primitiveMap><primitiveMap>
@@ -359,12 +407,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal/>
       </entry>
       <entry>
-         <string/>
-         <bigDecimal>4</bigDecimal>
-      </entry>
-      <entry>
          <string>b</string>
          <bigDecimal>2</bigDecimal>
+      </entry>
+      <entry>
+         <string/>
+         <bigDecimal>4</bigDecimal>
       </entry>
    </table>
 </primitiveMap>
@@ -383,18 +431,21 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <big-decimal/>
       </entry>
       <entry>
-         <string/>
+         <!-- java.lang.String -->
+         <string ID="5">b</string>
          <!-- java.math.BigDecimal -->
-         <big-decimal ID="5">4</big-decimal>
+         <big-decimal ID="6">2</big-decimal>
       </entry>
       <entry>
-         <!-- java.lang.String -->
-         <string ID="6">b</string>
+         <string/>
          <!-- java.math.BigDecimal -->
-         <big-decimal ID="7">2</big-decimal>
+         <big-decimal ID="7">4</big-decimal>
       </entry>
    </table>
-</primitive-map><PrimitiveMap ID="0">
+</primitive-map>>>>>> ELEMENT=[element primitive-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
       <Entry>
@@ -409,18 +460,21 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          <bigDecimal/>
       </Entry>
       <Entry>
-         <String/>
+         <!-- java.lang.String -->
+         <String ID="5">b</String>
          <!-- java.math.BigDecimal -->
-         <bigDecimal ID="5">4</bigDecimal>
+         <bigDecimal ID="6">2</bigDecimal>
       </Entry>
       <Entry>
-         <!-- java.lang.String -->
-         <String ID="6">b</String>
+         <String/>
          <!-- java.math.BigDecimal -->
-         <bigDecimal ID="7">2</bigDecimal>
+         <bigDecimal ID="7">4</bigDecimal>
       </Entry>
    </Table>
-</PrimitiveMap><complexMap>
+</PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<complexMap>
    <map class="java.util.HashMap">
       <entry>
          <compositeKey>
@@ -443,18 +497,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.4</name>
             <address>address.4</address>
          </compositeKey>
          <mapEntry/>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
+         </mapEntry>
       </entry>
    </map>
 </complexMap><complexMap>
@@ -480,18 +534,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.4</name>
             <address>address.4</address>
          </compositeKey>
          <mapEntry/>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
+         </mapEntry>
       </entry>
    </map>
 </complexMap>
@@ -531,27 +585,30 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </map-entry>
       </entry>
       <entry>
-         <composite-key/>
-         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <map-entry ID="12">
-            <!-- java.lang.String -->
-            <name ID="13">3</name>
-            <!-- java.lang.String -->
-            <value REFERER="13"/>
-         </map-entry>
-      </entry>
-      <entry>
          <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <composite-key ID="14">
+         <composite-key ID="12">
             <!-- java.lang.String -->
-            <name ID="15">name.4</name>
+            <name ID="13">name.4</name>
             <!-- java.lang.String -->
-            <address ID="16">address.4</address>
+            <address ID="14">address.4</address>
          </composite-key>
          <map-entry/>
       </entry>
+      <entry>
+         <composite-key/>
+         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
+         <map-entry ID="15">
+            <!-- java.lang.String -->
+            <name ID="16">3</name>
+            <!-- java.lang.String -->
+            <value REFERER="16"/>
+         </map-entry>
+      </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map>>>>>> ELEMENT=[element complex-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -587,27 +644,30 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </MapEntry>
       </Entry>
       <Entry>
-         <CompositeKey/>
-         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <MapEntry ID="12">
-            <!-- java.lang.String -->
-            <Name ID="13">3</Name>
-            <!-- java.lang.String -->
-            <Value REFERER="13"/>
-         </MapEntry>
-      </Entry>
-      <Entry>
          <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <CompositeKey ID="14">
+         <CompositeKey ID="12">
             <!-- java.lang.String -->
-            <Name ID="15">name.4</Name>
+            <Name ID="13">name.4</Name>
             <!-- java.lang.String -->
-            <Address ID="16">address.4</Address>
+            <Address ID="14">address.4</Address>
          </CompositeKey>
          <MapEntry/>
       </Entry>
+      <Entry>
+         <CompositeKey/>
+         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
+         <MapEntry ID="15">
+            <!-- java.lang.String -->
+            <Name ID="16">3</Name>
+            <!-- java.lang.String -->
+            <Value REFERER="16"/>
+         </MapEntry>
+      </Entry>
    </Map>
-</ComplexMap><complexMap>
+</ComplexMap>>>>>> ELEMENT=[element ComplexMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<complexMap>
    <map class="java.util.HashMap">
       <entry>
          <compositeKey>
@@ -630,18 +690,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.4</name>
             <address>address.4</address>
          </compositeKey>
          <mapEntry/>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
+         </mapEntry>
       </entry>
    </map>
 </complexMap><complexMap>
@@ -667,18 +727,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.4</name>
             <address>address.4</address>
          </compositeKey>
          <mapEntry/>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
+         </mapEntry>
       </entry>
    </map>
 </complexMap>
@@ -718,27 +778,30 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </map-entry>
       </entry>
       <entry>
-         <composite-key/>
-         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <map-entry ID="14">
-            <!-- java.lang.String -->
-            <name ID="15">3</name>
-            <!-- java.lang.String -->
-            <value ID="16">3</value>
-         </map-entry>
-      </entry>
-      <entry>
          <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <composite-key ID="17">
+         <composite-key ID="14">
             <!-- java.lang.String -->
-            <name ID="18">name.4</name>
+            <name ID="15">name.4</name>
             <!-- java.lang.String -->
-            <address ID="19">address.4</address>
+            <address ID="16">address.4</address>
          </composite-key>
          <map-entry/>
       </entry>
+      <entry>
+         <composite-key/>
+         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
+         <map-entry ID="17">
+            <!-- java.lang.String -->
+            <name ID="18">3</name>
+            <!-- java.lang.String -->
+            <value ID="19">3</value>
+         </map-entry>
+      </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map>>>>>> ELEMENT=[element complex-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -774,35 +837,38 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.541 sec
          </MapEntry>
       </Entry>
       <Entry>
-         <CompositeKey/>
-         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <MapEntry ID="14">
-            <!-- java.lang.String -->
-            <Name ID="15">3</Name>
-            <!-- java.lang.String -->
-            <Value ID="16">3</Value>
-         </MapEntry>
-      </Entry>
-      <Entry>
          <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <CompositeKey ID="17">
+         <CompositeKey ID="14">
             <!-- java.lang.String -->
-            <Name ID="18">name.4</Name>
+            <Name ID="15">name.4</Name>
             <!-- java.lang.String -->
-            <Address ID="19">address.4</Address>
+            <Address ID="16">address.4</Address>
          </CompositeKey>
          <MapEntry/>
       </Entry>
+      <Entry>
+         <CompositeKey/>
+         <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
+         <MapEntry ID="17">
+            <!-- java.lang.String -->
+            <Name ID="18">3</Name>
+            <!-- java.lang.String -->
+            <Value ID="19">3</Value>
+         </MapEntry>
+      </Entry>
    </Map>
-</ComplexMap>------------- ---------------- ---------------
+</ComplexMap>>>>>> ELEMENT=[element ComplexMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.242 sec
-Testcase: testEmptyCompositeBlankValue took 0.028 sec
-Testcase: testEmptyCompositeKey took 0.03 sec
-Testcase: testEmptyCompositeBlankKey took 0.027 sec
-Testcase: testEmptyPrimitiveValue took 0.022 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.019 sec
-Testcase: testEmptyPrimitiveKey took 0.023 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.036 sec
-Testcase: testNullValue took 0.106 sec
+Testcase: testEmptyCompositeValue took 0.21 sec
+Testcase: testEmptyCompositeBlankValue took 0.039 sec
+Testcase: testEmptyCompositeKey took 0.033 sec
+Testcase: testEmptyCompositeBlankKey took 0.032 sec
+Testcase: testEmptyPrimitiveValue took 0.049 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.024 sec
+Testcase: testEmptyPrimitiveKey took 0.022 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.02 sec
+Testcase: testNullValue took 0.145 sec
 Testcase: testDirectory took 0 sec

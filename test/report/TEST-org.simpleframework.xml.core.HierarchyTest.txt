@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.HierarchyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.204 sec
 ------------- Standard Output ---------------
 <specialized>
    <a>a</a>
@@ -25,7 +25,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
    <d>2</d>
    <one>1</one>
    <two>2.0</two>
-</specialized><Specialized ID="0">
+</specialized>>>>>> ELEMENT=[element specialized]
+>>>>> TYPE=[class org.simpleframework.xml.core.HierarchyTest$Specialized]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Specialized ID="0">
    <!-- java.lang.String -->
    <A ID="1">a</A>
    <!-- java.lang.String -->
@@ -34,7 +37,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
    <D>2</D>
    <One>1</One>
    <Two>2.0</Two>
-</Specialized>------------- ---------------- ---------------
+</Specialized>>>>>> ELEMENT=[element Specialized]
+>>>>> TYPE=[class org.simpleframework.xml.core.HierarchyTest$Specialized]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testHierarchy took 0.213 sec
+Testcase: testHierarchy took 0.198 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultEmptyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.248 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.235 sec
 ------------- Standard Output ---------------
 <defaultExample name="test">
    <stringList class="java.util.ArrayList"/>
@@ -26,7 +26,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.248 sec
    <string-array length="0" ID="3"/>
    <!-- java.lang.String -->
    <text ID="4">some text</text>
-</default-example><DefaultExample ID="0" name="test">
+</default-example>>>>>> ELEMENT=[element default-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.DefaultEmptyTest$DefaultExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<DefaultExample ID="0" name="test">
    <!-- java.util.List -->
    <StringList class="java.util.ArrayList" ID="1"/>
    <!-- java.util.Map -->
@@ -35,9 +38,12 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.248 sec
    <StringArray length="0" ID="3"/>
    <!-- java.lang.String -->
    <Text ID="4">some text</Text>
-</DefaultExample><defaultExample name="name">
+</DefaultExample>>>>>> ELEMENT=[element DefaultExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.DefaultEmptyTest$DefaultExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<defaultExample name="name">
    <text>example text</text>
 </defaultExample>------------- ---------------- ---------------
 
-Testcase: testDefaults took 0.242 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDefaults took 0.228 sec
+Testcase: testDirectory took 0.001 sec

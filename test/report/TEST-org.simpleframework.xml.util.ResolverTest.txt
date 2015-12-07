@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -40,7 +40,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
       <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="8" value="text/html" pattern="/html/*"/>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- org.simpleframework.xml.util.Resolver -->
    <List ID="1">
       <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
@@ -58,7 +61,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
       <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="8" value="text/html" pattern="/html/*"/>
    </List>
-</Test><test name="example">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test name="example">
    <list>
       <match value="text/html" pattern="*.html"/>
       <match value="image/jpeg" pattern="*.jpg"/>
@@ -105,7 +111,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
       <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="10" value="text/plain" pattern="README.txt"/>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- org.simpleframework.xml.util.Resolver -->
    <List ID="1">
       <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
@@ -127,11 +136,14 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
       <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="10" value="text/plain" pattern="README.txt"/>
    </List>
-</Test>------------- ---------------- ---------------
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
 Testcase: testResolver took 0.222 sec
-Testcase: testCache took 0.042 sec
-Testcase: testNoResolution took 0.009 sec
-Testcase: testNonGreedyMatch took 0.003 sec
-Testcase: testResolverCache took 0.019 sec
+Testcase: testCache took 0.056 sec
+Testcase: testNoResolution took 0.004 sec
+Testcase: testNonGreedyMatch took 0.005 sec
+Testcase: testResolverCache took 0.017 sec
 Testcase: testDirectory took 0 sec

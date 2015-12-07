@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.TreeStrategyTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 23.141 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -182,7 +182,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><Root ID="0" number="1234" flag="true">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">{no.override}</Constant>
    <!-- java.lang.String -->
@@ -245,7 +248,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <Value ID="24">value.5</Value>
       </Entry>
    </List>
-</Root><root number="1234" flag="true">
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
    <path>{example.path}</path>
@@ -465,7 +471,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><Root ID="0" number="1234" flag="true">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">some constant</Constant>
    <!-- java.lang.String -->
@@ -528,7 +537,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <Value ID="24">value.5</Value>
       </Entry>
    </List>
-</Root><root number="1234" flag="true">
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<root number="1234" flag="true">
    <constant>some constant</constant>
    <name>some name</name>
    <path>/some/path</path>
@@ -748,7 +760,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><Root ID="0" number="1234" flag="true">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">${no.override}</Constant>
    <!-- java.lang.String -->
@@ -811,7 +826,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <Value ID="24">value.5</Value>
       </Entry>
    </List>
-</Root><root number="1234" flag="true">
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<root number="1234" flag="true">
    <constant>${no.override}</constant>
    <name>${example.name}</name>
    <path>${example.path}</path>
@@ -1015,7 +1033,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <value ID="24">value.5</value>
       </entry>
    </list>
-</root><Root ID="0" number="1234" flag="true">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">&gt;&gt;&lt;&lt;</Constant>
    <!-- java.lang.String -->
@@ -1074,7 +1095,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
          <Value ID="24">value.5</Value>
       </Entry>
    </List>
-</Root><root number="1234" flag="true">
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.TreeStrategyTest$RootEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<root number="1234" flag="true">
    <constant>&gt;&gt;&lt;&lt;</constant>
    <name>{example.name}</name>
    <path>{example.path}</path>
@@ -1111,14 +1135,14 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.915 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-Took '3515' ms to process 10000 documents
-Took '3323' ms to process 10000 documents with templates
-Took '3225' ms to process 10000 documents with an empty filter
-Took '2439' ms to write 10000 documents
+Took '7986' ms to process 10000 documents
+Took '6219' ms to process 10000 documents with templates
+Took '6018' ms to process 10000 documents with an empty filter
+Took '2493' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testBasicDocument took 3.783 sec
-Testcase: testTemplateDocument took 3.362 sec
-Testcase: testEmptyFilter took 3.263 sec
-Testcase: testBasicWrite took 2.494 sec
+Testcase: testBasicDocument took 8.24 sec
+Testcase: testTemplateDocument took 6.281 sec
+Testcase: testEmptyFilter took 6.085 sec
+Testcase: testBasicWrite took 2.524 sec
 Testcase: testDirectory took 0 sec

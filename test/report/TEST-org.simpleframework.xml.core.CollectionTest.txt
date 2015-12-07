@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.656 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -45,7 +45,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <List class="java.util.TreeSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -64,7 +67,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Entry>
    </List>
-</Test><test name="example">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
          <text>one</text>
@@ -108,7 +114,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -127,16 +136,19 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Entry>
    </List>
-</Test><test name="example">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test name="example">
    <list class="java.util.HashSet">
       <entry id="2">
          <text>two</text>
       </entry>
-      <entry id="1">
-         <text>one</text>
-      </entry>
       <entry id="3">
          <text>three</text>
+      </entry>
+      <entry id="1">
+         <text>one</text>
       </entry>
    </list>
 </test><test name="example">
@@ -144,11 +156,11 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
       <entry id="2">
          <text>two</text>
       </entry>
-      <entry id="1">
-         <text>one</text>
-      </entry>
       <entry id="3">
          <text>three</text>
+      </entry>
+      <entry id="1">
+         <text>one</text>
       </entry>
    </list>
 </test>
@@ -161,17 +173,20 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="3">two</text>
       </entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <entry ID="4" id="1">
+      <entry ID="4" id="3">
          <!-- java.lang.String -->
-         <text ID="5">one</text>
+         <text ID="5">three</text>
       </entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <entry ID="6" id="3">
+      <entry ID="6" id="1">
          <!-- java.lang.String -->
-         <text ID="7">three</text>
+         <text ID="7">one</text>
       </entry>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- java.util.Set -->
    <List class="java.util.HashSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -180,17 +195,20 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="3">two</Text>
       </Entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <Entry ID="4" id="1">
+      <Entry ID="4" id="3">
          <!-- java.lang.String -->
-         <Text ID="5">one</Text>
+         <Text ID="5">three</Text>
       </Entry>
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
-      <Entry ID="6" id="3">
+      <Entry ID="6" id="1">
          <!-- java.lang.String -->
-         <Text ID="7">three</Text>
+         <Text ID="7">one</Text>
       </Entry>
    </List>
-</Test><test name="example">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test name="example">
    <list class="java.util.TreeSet">
       <entry id="1">
          <text>one</text>
@@ -234,7 +252,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <List class="java.util.TreeSet" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -253,7 +274,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Entry>
    </List>
-</Test><test name="example">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
          <text>one</text>
@@ -297,7 +321,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -316,7 +343,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Entry>
    </List>
-</Test><typeFromFieldList name="example">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<typeFromFieldList name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
          <text>one</text>
@@ -360,7 +390,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</type-from-field-list><TypeFromFieldList ID="0" name="example">
+</type-from-field-list>>>>>> ELEMENT=[element type-from-field-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromFieldList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<TypeFromFieldList ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -379,7 +412,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Entry>
    </List>
-</TypeFromFieldList><typeFromMethodList name="example">
+</TypeFromFieldList>>>>>> ELEMENT=[element TypeFromFieldList]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromFieldList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<typeFromMethodList name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
          <text>one</text>
@@ -423,7 +459,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </entry>
    </list>
-</type-from-method-list><TypeFromMethodList ID="0" name="example">
+</type-from-method-list>>>>>> ELEMENT=[element type-from-method-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromMethodList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<TypeFromMethodList ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -442,7 +481,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Entry>
    </List>
-</TypeFromMethodList><primitiveCollection name="example">
+</TypeFromMethodList>>>>>> ELEMENT=[element TypeFromMethodList]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromMethodList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveCollection name="example">
    <list class="java.util.ArrayList">
       <text>one</text>
       <text>two</text>
@@ -465,7 +507,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
       <!-- java.lang.String -->
       <text ID="4">three</text>
    </list>
-</primitive-collection><PrimitiveCollection ID="0" name="example">
+</primitive-collection>>>>>> ELEMENT=[element primitive-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -475,7 +520,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
       <!-- java.lang.String -->
       <Text ID="4">three</Text>
    </List>
-</PrimitiveCollection><compositeCollection name="example">
+</PrimitiveCollection>>>>>> ELEMENT=[element PrimitiveCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<compositeCollection name="example">
    <list class="java.util.ArrayList">
       <text id="1">
          <text>one</text>
@@ -519,7 +567,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <text ID="7">three</text>
       </text>
    </list>
-</composite-collection><CompositeCollection ID="0" name="example">
+</composite-collection>>>>>> ELEMENT=[element composite-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$CompositeCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<CompositeCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionTest$Entry -->
@@ -538,7 +589,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
          <Text ID="7">three</Text>
       </Text>
    </List>
-</CompositeCollection><primitiveDefaultCollection name="example">
+</CompositeCollection>>>>>> ELEMENT=[element CompositeCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$CompositeCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveDefaultCollection name="example">
    <list class="java.util.ArrayList">
       <string>one</string>
       <string>two</string>
@@ -561,7 +615,10 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
       <!-- java.lang.String -->
       <string ID="4">three</string>
    </list>
-</primitive-default-collection><PrimitiveDefaultCollection ID="0" name="example">
+</primitive-default-collection>>>>>> ELEMENT=[element primitive-default-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveDefaultCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveDefaultCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- java.lang.String -->
@@ -571,17 +628,20 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
       <!-- java.lang.String -->
       <String ID="4">three</String>
    </List>
-</PrimitiveDefaultCollection>------------- ---------------- ---------------
+</PrimitiveDefaultCollection>>>>>> ELEMENT=[element PrimitiveDefaultCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveDefaultCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <test name="example">
    <list class="java.util.HashSet">
-      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
-         <text>one</text>
-         <description>this is an extended entry</description>
-      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
+      </entry>
+      <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
+         <text>one</text>
+         <description>this is an extended entry</description>
       </entry>
       <entry id="3">
          <text>three</text>
@@ -589,12 +649,12 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
-      <entry id="3">
-         <text>three</text>
-      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
+      </entry>
+      <entry id="3">
+         <text>three</text>
       </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
@@ -859,24 +919,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.133 sec
-Testcase: testSortedSet took 0.102 sec
-Testcase: testList took 0.029 sec
-Testcase: testHashSet took 0.034 sec
-Testcase: testTreeSet took 0.032 sec
-Testcase: testArrayList took 0.026 sec
-Testcase: testSortedSetToSet took 0.004 sec
-Testcase: testExtendedEntry took 0.01 sec
-Testcase: testTypeFromFieldList took 0.057 sec
-Testcase: testTypeFromMethodList took 0.038 sec
-Testcase: testPrimitiveCollection took 0.017 sec
-Testcase: testCompositeCollection took 0.033 sec
-Testcase: testPrimitiveDefaultCollection took 0.011 sec
+Testcase: testSet took 0.128 sec
+Testcase: testSortedSet took 0.098 sec
+Testcase: testList took 0.044 sec
+Testcase: testHashSet took 0.048 sec
+Testcase: testTreeSet took 0.04 sec
+Testcase: testArrayList took 0.045 sec
+Testcase: testSortedSetToSet took 0.003 sec
+Testcase: testExtendedEntry took 0.011 sec
+Testcase: testTypeFromFieldList took 0.065 sec
+Testcase: testTypeFromMethodList took 0.037 sec
+Testcase: testPrimitiveCollection took 0.026 sec
+Testcase: testCompositeCollection took 0.032 sec
+Testcase: testPrimitiveDefaultCollection took 0.023 sec
 Testcase: testSetToSortedSet took 0.006 sec
-Testcase: testListToSet took 0.003 sec
-Testcase: testInvalidList took 0.001 sec
+Testcase: testListToSet took 0.002 sec
+Testcase: testInvalidList took 0.002 sec
 Testcase: testUnknownCollectionList took 0.002 sec
-Testcase: testAbstractList took 0.001 sec
-Testcase: testNotACollection took 0.002 sec
-Testcase: testMissingCollection took 0.002 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testAbstractList took 0.002 sec
+Testcase: testNotACollection took 0.004 sec
+Testcase: testMissingCollection took 0.004 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.AnnotationTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
 ------------- Standard Output ---------------
 <annotationExample age="10">
    <name key="name">John Doe</name>
@@ -9,10 +9,16 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.382 sec
 <annotation-example ID="0" age="10">
    <!-- java.lang.String -->
    <name ID="1">John Doe</name>
-</annotation-example><AnnotationExample ID="0" age="10">
+</annotation-example>>>>>> ELEMENT=[element annotation-example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.AnnotationTypeTest$AnnotationExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<AnnotationExample ID="0" age="10">
    <!-- java.lang.String -->
    <Name ID="1">John Doe</Name>
-</AnnotationExample>------------- ---------------- ---------------
+</AnnotationExample>>>>>> ELEMENT=[element AnnotationExample]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.AnnotationTypeTest$AnnotationExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testAnnotationType took 0.376 sec
+Testcase: testAnnotationType took 0.367 sec
 Testcase: testDirectory took 0 sec

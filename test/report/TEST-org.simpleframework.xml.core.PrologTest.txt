@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PrologTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.186 sec
 ------------- Standard Output ---------------
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <prologExample id="12" flag="true">
@@ -15,12 +15,18 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.202 sec
    <name ID="1">some name</name>
    <!-- java.lang.String -->
    <text ID="2">entry text</text>
-</prolog-example><PrologExample ID="0" id="12" flag="true">
+</prolog-example>>>>>> ELEMENT=[element prolog-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.PrologTest$PrologExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrologExample ID="0" id="12" flag="true">
    <!-- java.lang.String -->
    <Name ID="1">some name</Name>
    <!-- java.lang.String -->
    <Text ID="2">entry text</Text>
-</PrologExample>------------- ---------------- ---------------
+</PrologExample>>>>>> ELEMENT=[element PrologExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.PrologTest$PrologExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testProlog took 0.196 sec
+Testcase: testProlog took 0.179 sec
 Testcase: testDirectory took 0 sec

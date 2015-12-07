@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.CycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.004 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.621 sec
 ------------- Standard Output ---------------
 <example id="0">
    <list class="java.util.ArrayList" id="1">
@@ -86,7 +86,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.004 sec
    </list>
    <!-- org.simpleframework.xml.strategy.CycleTest$CycleExample -->
    <cycle REFERER="0"/>
-</example><Example ID="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.strategy.CycleTest$Entry -->
@@ -116,7 +119,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.004 sec
    </List>
    <!-- org.simpleframework.xml.strategy.CycleTest$CycleExample -->
    <Cycle REFERER="0"/>
-</Example><example id="0">
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example id="0">
    <list class="java.util.ArrayList" id="1">
       <entry id="2" key="1">
          <value id="3">one</value>
@@ -201,7 +207,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.004 sec
    </list>
    <!-- org.simpleframework.xml.strategy.CycleTest$CycleExample -->
    <cycle REFERER="0"/>
-</example><Example ID="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.strategy.CycleTest$Entry -->
@@ -231,8 +240,11 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.004 sec
    </List>
    <!-- org.simpleframework.xml.strategy.CycleTest$CycleExample -->
    <Cycle REFERER="0"/>
-</Example>------------- ---------------- ---------------
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testCycle took 0.243 sec
-Testcase: testMemory took 0.754 sec
+Testcase: testCycle took 0.23 sec
+Testcase: testMemory took 1.383 sec
 Testcase: testDirectory took 0.001 sec

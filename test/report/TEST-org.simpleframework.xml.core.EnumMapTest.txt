@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
 ------------- Standard Output ---------------
 <enumMapExample>
    <numbers>
@@ -84,7 +84,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
          <string ID="7">3</string>
       </entry>
    </numbers>
-</enum-map-example><EnumMapExample ID="0">
+</enum-map-example>>>>>> ELEMENT=[element enum-map-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.EnumMapTest$EnumMapExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<EnumMapExample ID="0">
    <!-- java.util.EnumMap -->
    <Numbers ID="1">
       <Entry>
@@ -106,7 +109,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
          <string ID="7">3</string>
       </Entry>
    </Numbers>
-</EnumMapExample>------------- ---------------- ---------------
+</EnumMapExample>>>>>> ELEMENT=[element EnumMapExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.EnumMapTest$EnumMapExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testEnumMap took 0.231 sec
+Testcase: testEnumMap took 0.218 sec
 Testcase: testDirectory took 0 sec

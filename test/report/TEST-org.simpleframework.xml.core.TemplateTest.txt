@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TemplateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.246 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
 ------------- Standard Output ---------------
 <test name="test">
    <config class="java.util.ArrayList">
@@ -43,7 +43,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.246 sec
       <!-- java.lang.String -->
       <name ID="8">Niall Gallagher</name>
    </details>
-</test><Test ID="0" name="test">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TemplateTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="test">
    <!-- java.util.List -->
    <Config class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.TemplateTest$Variable -->
@@ -62,7 +65,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.246 sec
       <!-- java.lang.String -->
       <Name ID="8">Niall Gallagher</Name>
    </Details>
-</Test>------------- ---------------- ---------------
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TemplateTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testTemplate took 0.24 sec
+Testcase: testTemplate took 0.217 sec
 Testcase: testDirectory took 0 sec

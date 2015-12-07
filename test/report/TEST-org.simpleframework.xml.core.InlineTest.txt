@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -21,7 +21,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <text ID="3" name="b" version="TWO">Example 2</text>
    <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="4" name="c" version="THREE">Example 3</text>
-</test><Test ID="0" version="ONE">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
@@ -30,7 +33,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <Text ID="3" name="b" version="TWO">Example 2</Text>
    <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="4" name="c" version="THREE">Example 3</Text>
-</Test><test version="ONE">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test version="ONE">
    <message>Some example message</message>
    <text name="a" version="ONE">Example 1</text>
    <text name="b" version="TWO">Example 2</text>
@@ -50,7 +56,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <text ID="3" name="b" version="TWO">Example 2</text>
    <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="4" name="c" version="THREE">Example 3</text>
-</test><Test ID="0" version="ONE">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
@@ -59,7 +68,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <Text ID="3" name="b" version="TWO">Example 2</Text>
    <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="4" name="c" version="THREE">Example 3</Text>
-</Test><test version="ONE">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
    <string>Example 2</string>
@@ -79,7 +91,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <string ID="3">Example 2</string>
    <!-- java.lang.String -->
    <string ID="4">Example 3</string>
-</test><Test ID="0" version="ONE">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- java.lang.String -->
@@ -88,7 +103,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <String ID="3">Example 2</String>
    <!-- java.lang.String -->
    <String ID="4">Example 3</String>
-</Test><test version="ONE">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
    <string>Example 2</string>
@@ -108,7 +126,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <string ID="3">Example 2</string>
    <!-- java.lang.String -->
    <string ID="4">Example 3</string>
-</test><Test ID="0" version="ONE">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
    <!-- java.lang.String -->
@@ -117,7 +138,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <String ID="3">Example 2</String>
    <!-- java.lang.String -->
    <String ID="4">Example 3</String>
-</Test><simpleInlineList>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<simpleInlineList>
    <simpleEntry content="test 0"/>
    <simpleEntry content="test 1"/>
    <simpleEntry content="test 2"/>
@@ -161,7 +185,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <simple-entry ID="9" content="test 8"/>
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="10" content="test 9"/>
-</simple-inline-list><SimpleInlineList ID="0">
+</simple-inline-list>>>>>> ELEMENT=[element simple-inline-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleInlineList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SimpleInlineList ID="0">
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="1" content="test 0"/>
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
@@ -182,7 +209,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <SimpleEntry ID="9" content="test 8"/>
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="10" content="test 9"/>
-</SimpleInlineList><simpleNameInlineList>
+</SimpleInlineList>>>>>> ELEMENT=[element SimpleInlineList]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleInlineList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<simpleNameInlineList>
    <item content="test 0"/>
    <item content="test 1"/>
    <item content="test 2"/>
@@ -226,7 +256,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <item ID="9" content="test 8"/>
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="10" content="test 9"/>
-</simple-name-inline-list><SimpleNameInlineList ID="0">
+</simple-name-inline-list>>>>>> ELEMENT=[element simple-name-inline-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleNameInlineList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SimpleNameInlineList ID="0">
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="1" content="test 0"/>
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
@@ -247,7 +280,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
    <Item ID="9" content="test 8"/>
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="10" content="test 9"/>
-</SimpleNameInlineList><simplePrimitiveInlineList>
+</SimpleNameInlineList>>>>>> ELEMENT=[element SimpleNameInlineList]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleNameInlineList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<simplePrimitiveInlineList>
    <string>test</string>
 </simplePrimitiveInlineList><simplePrimitiveInlineList>
    <string>test</string>
@@ -255,14 +291,20 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.562 sec
 <simple-primitive-inline-list ID="0">
    <!-- java.lang.String -->
    <string ID="1">test</string>
-</simple-primitive-inline-list><SimplePrimitiveInlineList ID="0">
+</simple-primitive-inline-list>>>>>> ELEMENT=[element simple-primitive-inline-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimplePrimitiveInlineList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SimplePrimitiveInlineList ID="0">
    <!-- java.lang.String -->
    <String ID="1">test</String>
-</SimplePrimitiveInlineList>------------- ---------------- ---------------
+</SimplePrimitiveInlineList>>>>>> ELEMENT=[element SimplePrimitiveInlineList]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimplePrimitiveInlineList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testList took 0.267 sec
-Testcase: testPrimitiveList took 0.042 sec
-Testcase: testSimpleList took 0.036 sec
-Testcase: testSimpleNameList took 0.052 sec
-Testcase: testSimplePrimitiveList took 0.018 sec
+Testcase: testList took 0.305 sec
+Testcase: testPrimitiveList took 0.051 sec
+Testcase: testSimpleList took 0.041 sec
+Testcase: testSimpleNameList took 0.034 sec
+Testcase: testSimplePrimitiveList took 0.015 sec
 Testcase: testDirectory took 0 sec

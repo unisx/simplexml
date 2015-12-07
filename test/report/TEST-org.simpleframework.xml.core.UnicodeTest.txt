@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.743 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -474,7 +474,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -688,7 +691,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
-</Example><example>
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
          <text>Ἀρχιμήδης</text>
@@ -1161,7 +1167,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -1375,7 +1384,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
-</Example><example>
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example>
    <list>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
          <text>Tor Åge Bringsværd</text>
@@ -1848,7 +1860,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -2062,7 +2077,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
-</Example><example>
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
          <text>Ἀρχιμήδης</text>
@@ -2535,7 +2553,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
@@ -2749,10 +2770,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.666 sec
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
-</Example>------------- ---------------- ---------------
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.367 sec
-Testcase: testWriteUnicode took 0.212 sec
-Testcase: testUnicodeFromByteStream took 0.073 sec
-Testcase: testIncorrectEncoding took 0.007 sec
+Testcase: testUnicode took 0.37 sec
+Testcase: testWriteUnicode took 0.263 sec
+Testcase: testUnicodeFromByteStream took 0.093 sec
+Testcase: testIncorrectEncoding took 0.006 sec
 Testcase: testDirectory took 0 sec

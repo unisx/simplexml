@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StyleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.405 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -185,7 +185,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
          <URL-item ID="30">http://b.com/</URL-item>
       </URL-item>
    </URL-map>
-</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.StyleTest$TextEntry -->
@@ -266,7 +269,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
          <URLItem ID="30">http://b.com/</URLItem>
       </URLItem>
    </URLMap>
-</Example><example version="1.0" name="example" URL="http://domain.com/">
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example version="1.0" name="example" URL="http://domain.com/">
    <list class="java.util.ArrayList">
       <list-entry id="1">
          <text>one</text>
@@ -450,7 +456,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
          <URL-item ID="30">http://b.com/</URL-item>
       </URL-item>
    </URL-map>
-</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.StyleTest$TextEntry -->
@@ -531,7 +540,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
          <URLItem ID="30">http://b.com/</URLItem>
       </URLItem>
    </URLMap>
-</Example>------------- ---------------- ---------------
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <example version="1.0" name="example" URL="http://domain.com/">
    <list class="java.util.ArrayList">
@@ -586,5 +598,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
    </URL-map>
 </example>------------- ---------------- ---------------
 
-Testcase: testCase took 0.389 sec
+Testcase: testCase took 0.397 sec
 Testcase: testDirectory took 0 sec

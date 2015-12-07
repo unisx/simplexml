@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StaticTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.363 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
 ------------- Standard Output ---------------
 <document title="Secret Document" xmlns="http://www.domain.com/document">
    <user:author xmlns:user="http://www.domain.com/user">Niall Gallagher</user:author>
@@ -74,7 +74,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.363 sec
       <!-- org.simpleframework.xml.core.StaticTest$Paragraph -->
       <para:paragraph ID="12">Third and final paragraph</para:paragraph>
    </section>
-</document><Document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
+</document>>>>>> ELEMENT=[element document]
+>>>>> TYPE=[class org.simpleframework.xml.core.StaticTest$Document]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Document ID="0" title="Secret Document" xmlns="http://www.domain.com/document">
    <!-- java.lang.String -->
    <user:Author ID="1" xmlns:user="http://www.domain.com/user">Niall Gallagher</user:Author>
    <!-- java.lang.String -->
@@ -101,7 +104,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.363 sec
       <!-- org.simpleframework.xml.core.StaticTest$Paragraph -->
       <para:Paragraph ID="12">Third and final paragraph</para:Paragraph>
    </Section>
-</Document>------------- ---------------- ---------------
+</Document>>>>>> ELEMENT=[element Document]
+>>>>> TYPE=[class org.simpleframework.xml.core.StaticTest$Document]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testStatic took 0.353 sec
-Testcase: testDirectory took 0 sec
+Testcase: testStatic took 0.254 sec
+Testcase: testDirectory took 0.004 sec

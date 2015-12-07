@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MultiElementMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
 <properties>
    <entry>
@@ -68,7 +68,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
          <string ID="9">hello world</string>
       </value>
    </entry>
-</properties><Properties ID="0">
+</properties>>>>>> ELEMENT=[element properties]
+>>>>> TYPE=[class org.simpleframework.xml.core.MultiElementMapTest$Properties]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Properties ID="0">
    <Entry>
       <!-- java.lang.String -->
       <Key ID="1">int-value</Key>
@@ -96,7 +99,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
          <String ID="9">hello world</String>
       </Value>
    </Entry>
-</Properties>------------- ---------------- ---------------
+</Properties>>>>>> ELEMENT=[element Properties]
+>>>>> TYPE=[class org.simpleframework.xml.core.MultiElementMapTest$Properties]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testProperties took 0.244 sec
+Testcase: testProperties took 0.243 sec
 Testcase: testDirectory took 0 sec

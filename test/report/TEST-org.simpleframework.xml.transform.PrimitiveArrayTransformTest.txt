@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.PrimitiveArrayTransformTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.728 sec
 ------------- Standard Output ---------------
 <integerArrayExample attribute="1, 2, 3, 4">
    <element length="4">1, 2, 3, 4</element>
@@ -68,7 +68,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <test-array length="1" ID="9">
       <non-primitive/>
    </test-array>
-</integer-array-example><IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
+</integer-array-example>>>>>> ELEMENT=[element integer-array-example]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
    <!-- [I -->
    <Element length="4" ID="1">1, 2, 3, 4</Element>
    <!-- java.util.List -->
@@ -91,7 +94,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <TestArray length="1" ID="9">
       <NonPrimitive/>
    </TestArray>
-</IntegerArrayExample><integerArrayExample>
+</IntegerArrayExample>>>>>> ELEMENT=[element IntegerArrayExample]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<integerArrayExample>
    <list class="java.util.ArrayList"/>
    <array length="1">
       <int/>
@@ -127,7 +133,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <test-array length="1" ID="5">
       <non-primitive/>
    </test-array>
-</integer-array-example><IntegerArrayExample ID="0">
+</integer-array-example>>>>>> ELEMENT=[element integer-array-example]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<IntegerArrayExample ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1"/>
    <!-- [[I -->
@@ -142,7 +151,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <TestArray length="1" ID="5">
       <NonPrimitive/>
    </TestArray>
-</IntegerArrayExample><integerArrayExample id="0" attribute="1, 2, 3, 4">
+</IntegerArrayExample>>>>>> ELEMENT=[element IntegerArrayExample]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<integerArrayExample id="0" attribute="1, 2, 3, 4">
    <element length="4" id="1">1, 2, 3, 4</element>
    <list class="java.util.ArrayList" id="2">
       <int reference="1"/>
@@ -194,7 +206,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <test-array length="1" ID="6">
       <non-primitive/>
    </test-array>
-</integer-array-example><IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
+</integer-array-example>>>>>> ELEMENT=[element integer-array-example]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<IntegerArrayExample ID="0" attribute="1, 2, 3, 4">
    <!-- [I -->
    <Element length="4" ID="1">1, 2, 3, 4</Element>
    <!-- java.util.List -->
@@ -217,7 +232,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <TestArray length="1" ID="6">
       <NonPrimitive/>
    </TestArray>
-</IntegerArrayExample><integerArrayExample id="0">
+</IntegerArrayExample>>>>>> ELEMENT=[element IntegerArrayExample]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<integerArrayExample id="0">
    <list class="java.util.ArrayList" id="1"/>
    <array length="1" id="2">
       <int/>
@@ -253,7 +271,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <test-array length="1" ID="5">
       <non-primitive/>
    </test-array>
-</integer-array-example><IntegerArrayExample ID="0">
+</integer-array-example>>>>>> ELEMENT=[element integer-array-example]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<IntegerArrayExample ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1"/>
    <!-- [[I -->
@@ -268,10 +289,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
    <TestArray length="1" ID="5">
       <NonPrimitive/>
    </TestArray>
-</IntegerArrayExample>------------- ---------------- ---------------
+</IntegerArrayExample>>>>>> ELEMENT=[element IntegerArrayExample]
+>>>>> TYPE=[class org.simpleframework.xml.transform.PrimitiveArrayTransformTest$IntegerArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testRead took 0.003 sec
+Testcase: testRead took 0.004 sec
 Testcase: testWrite took 0.001 sec
-Testcase: testPersistence took 0.263 sec
-Testcase: testCyclicPersistence took 0.394 sec
+Testcase: testPersistence took 0.313 sec
+Testcase: testCyclicPersistence took 0.404 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.292 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -12,11 +12,17 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
    <integer>12</integer>
    <!-- java.lang.String -->
    <string ID="1">text</string>
-</example><Example ID="0" number="32">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0" number="32">
    <Integer>12</Integer>
    <!-- java.lang.String -->
    <String ID="1">text</String>
-</Example><example number="0">
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example number="0">
    <integer>12</integer>
    <string>text</string>
 </example><example number="0">
@@ -27,20 +33,32 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
    <integer>12</integer>
    <!-- java.lang.String -->
    <string ID="1">text</string>
-</example><Example ID="0" number="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0" number="0">
    <Integer>12</Integer>
    <!-- java.lang.String -->
    <String ID="1">text</String>
-</Example><example number="0">
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<example number="0">
    <integer>12</integer>
 </example><example number="0">
    <integer>12</integer>
 </example>
 <example ID="0" number="0">
    <integer>12</integer>
-</example><Example ID="0" number="0">
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Example ID="0" number="0">
    <Integer>12</Integer>
-</Example><ArrayExample>
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ArrayExample>
    <Array length="5">
       <String>entry one</String>
       <String>entry two</String>
@@ -71,7 +89,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
       <!-- java.lang.String -->
       <string ID="6">entry five</string>
    </array>
-</array-example><ArrayExample ID="0">
+</array-example>>>>>> ELEMENT=[element array-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$ArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ArrayExample ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
       <!-- java.lang.String -->
@@ -85,10 +106,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
       <!-- java.lang.String -->
       <String ID="6">entry five</String>
    </Array>
-</ArrayExample>------------- ---------------- ---------------
+</ArrayExample>>>>>> ELEMENT=[element ArrayExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$ArrayExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.213 sec
-Testcase: testPartialConstructor took 0.021 sec
-Testcase: testBareConstructor took 0.017 sec
-Testcase: testArrayExample took 0.025 sec
+Testcase: testConstructor took 0.198 sec
+Testcase: testPartialConstructor took 0.024 sec
+Testcase: testBareConstructor took 0.023 sec
+Testcase: testArrayExample took 0.035 sec
 Testcase: testDirectory took 0 sec

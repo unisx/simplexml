@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ArrayCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.341 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one length="5" id="1">
@@ -59,7 +59,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
    </three>
    <!-- org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample -->
    <example REFERER="0"/>
-</root><Root ID="0">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Entry; -->
    <One length="5" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Entry -->
@@ -86,7 +89,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
    </Three>
    <!-- org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample -->
    <Example REFERER="0"/>
-</Root><root id="0">
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.ArrayCycleTest$ArrayCycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<root id="0">
    <array length="2" id="1">
       <entry id="2">
          <list ref="1"/>
@@ -152,7 +158,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
          </list>
       </entry>
    </array>
-</root><Root ID="0">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.ArrayCycleTest$NestedArrayCycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Value; -->
    <Array length="2" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value -->
@@ -181,7 +190,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
          </List>
       </Entry>
    </Array>
-</Root><value id="0">
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.ArrayCycleTest$NestedArrayCycleExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<value id="0">
    <list length="1" class="org.simpleframework.xml.strategy.ArrayCycleTest$ElementValue" id="1">
       <entry class="org.simpleframework.xml.strategy.ArrayCycleTest$ElementValue" id="2">
          <element id="3">Example text</element>
@@ -203,7 +215,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
          <element ID="3">Example text</element>
       </entry>
    </list>
-</value><Value ID="0">
+</value>>>>>> ELEMENT=[element value]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.ArrayCycleTest$Value]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Value ID="0">
    <!-- [Lorg.simpleframework.xml.strategy.ArrayCycleTest$Value; -->
    <List length="1" class="org.simpleframework.xml.strategy.ArrayCycleTest$ElementValue" ID="1">
       <!-- org.simpleframework.xml.strategy.ArrayCycleTest$Value -->
@@ -212,9 +227,12 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
          <Element ID="3">Example text</Element>
       </Entry>
    </List>
-</Value>------------- ---------------- ---------------
+</Value>>>>>> ELEMENT=[element Value]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.ArrayCycleTest$Value]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testCycle took 0.236 sec
-Testcase: testNestedExample took 0.064 sec
-Testcase: testPromotion took 0.018 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testCycle took 0.225 sec
+Testcase: testNestedExample took 0.079 sec
+Testcase: testPromotion took 0.028 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NullArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="5">
@@ -65,7 +65,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
          <text ID="7">e</text>
       </substitute>
    </list>
-</example-array><ExampleArray ID="0">
+</example-array>>>>>> ELEMENT=[element example-array]
+>>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExampleArray]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExampleArray ID="0">
    <!-- [Lorg.simpleframework.xml.core.NullArrayEntryTest$Entry; -->
    <List length="5" ID="1">
       <!-- org.simpleframework.xml.core.NullArrayEntryTest$Entry -->
@@ -86,7 +89,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
          <Text ID="7">e</Text>
       </Substitute>
    </List>
-</ExampleArray><examplePrimitiveArray>
+</ExampleArray>>>>>> ELEMENT=[element ExampleArray]
+>>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExampleArray]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<examplePrimitiveArray>
    <list length="7">
       <substitute>a</substitute>
       <substitute>b</substitute>
@@ -132,7 +138,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
       <!-- java.lang.String -->
       <substitute ID="5">f</substitute>
    </list>
-</example-primitive-array><ExamplePrimitiveArray ID="0">
+</example-primitive-array>>>>>> ELEMENT=[element example-primitive-array]
+>>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExamplePrimitiveArray]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExamplePrimitiveArray ID="0">
    <!-- [Ljava.lang.String; -->
    <List length="7" ID="1">
       <!-- java.lang.String -->
@@ -147,8 +156,11 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
       <!-- java.lang.String -->
       <Substitute ID="5">f</Substitute>
    </List>
-</ExamplePrimitiveArray>------------- ---------------- ---------------
+</ExamplePrimitiveArray>>>>>> ELEMENT=[element ExamplePrimitiveArray]
+>>>>> TYPE=[class org.simpleframework.xml.core.NullArrayEntryTest$ExamplePrimitiveArray]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.228 sec
-Testcase: testExamplePrimitiveArray took 0.02 sec
+Testcase: testExampleArray took 0.202 sec
+Testcase: testExamplePrimitiveArray took 0.03 sec
 Testcase: testDirectory took 0 sec

@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.core.InjectTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.153 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.138 sec
 
-Testcase: testInject took 0.149 sec
+Testcase: testInject took 0.134 sec

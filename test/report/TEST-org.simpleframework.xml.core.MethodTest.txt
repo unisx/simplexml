@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.35 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -26,7 +26,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <int>1234</int>
    <long>1234567</long>
    <short>120</short>
-</test><Test ID="0">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0">
    <Boolean>true</Boolean>
    <Byte>16</Byte>
    <Double>1234567.89</Double>
@@ -34,7 +37,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <Int>1234</Int>
    <Long>1234567</Long>
    <Short>120</Short>
-</Test><test>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test>
    <boolean>true</boolean>
    <byte>16</byte>
    <double>1234567.89</double>
@@ -59,7 +65,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <int>1234</int>
    <long>1234567</long>
    <short>120</short>
-</test><Test ID="0">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0">
    <Boolean>true</Boolean>
    <Byte>16</Byte>
    <Double>1234567.89</Double>
@@ -67,7 +76,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <Int>1234</Int>
    <Long>1234567</Long>
    <Short>120</Short>
-</Test><implicitMethodNameExample>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
    <doubleValue>1234567.89</doubleValue>
@@ -92,7 +104,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <int-value>1234</int-value>
    <long-value>1234567</long-value>
    <short-value>120</short-value>
-</implicit-method-name-example><ImplicitMethodNameExample ID="0">
+</implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ImplicitMethodNameExample ID="0">
    <BooleanValue>true</BooleanValue>
    <ByteValue>16</ByteValue>
    <DoubleValue>1234567.89</DoubleValue>
@@ -100,7 +115,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <IntValue>1234</IntValue>
    <LongValue>1234567</LongValue>
    <ShortValue>120</ShortValue>
-</ImplicitMethodNameExample><implicitMethodNameExample>
+</ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
    <doubleValue>1234567.89</doubleValue>
@@ -125,7 +143,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <int-value>1234</int-value>
    <long-value>1234567</long-value>
    <short-value>120</short-value>
-</implicit-method-name-example><ImplicitMethodNameExample ID="0">
+</implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ImplicitMethodNameExample ID="0">
    <BooleanValue>true</BooleanValue>
    <ByteValue>16</ByteValue>
    <DoubleValue>1234567.89</DoubleValue>
@@ -133,8 +154,11 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    <IntValue>1234</IntValue>
    <LongValue>1234567</LongValue>
    <ShortValue>120</ShortValue>
-</ImplicitMethodNameExample>------------- ---------------- ---------------
+</ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.258 sec
-Testcase: testImplicitMethodNameExample took 0.076 sec
+Testcase: testExplicitMethodNameExample took 0.245 sec
+Testcase: testImplicitMethodNameExample took 0.098 sec
 Testcase: testDirectory took 0 sec

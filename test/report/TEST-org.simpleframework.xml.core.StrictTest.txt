@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.358 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.244 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -55,7 +55,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.358 sec
    <object ID="8">
       <integer>123</integer>
    </object>
-</root><Root ID="0">
+</root>>>>>> ELEMENT=[element root]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$StrictExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.StrictTest$StrictEntry; -->
    <List length="3" ID="1">
       <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
@@ -78,7 +81,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.358 sec
    <Object ID="8">
       <Integer>123</Integer>
    </Object>
-</Root><object>
+</Root>>>>>> ELEMENT=[element Root]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$StrictExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<object>
    <integer>123</integer>
    <name>test</name>
 </object><object>
@@ -89,11 +95,17 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.358 sec
    <integer>123</integer>
    <!-- java.lang.String -->
    <name ID="1">test</name>
-</object><Object ID="0">
+</object>>>>>> ELEMENT=[element object]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$NamedStrictObject]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Object ID="0">
    <Integer>123</Integer>
    <!-- java.lang.String -->
    <Name ID="1">test</Name>
-</Object>------------- ---------------- ---------------
+</Object>>>>>> ELEMENT=[element Object]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictTest$NamedStrictObject]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(required=true, data=false, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.StrictTest$NamedStrictObject.name for class org.simpleframework.xml.core.StrictTest$NamedStrictObject at line -1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:651)
@@ -127,7 +139,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testStrict took 0.318 sec
-Testcase: testNamedStrict took 0.019 sec
-Testcase: testNamedStrictMissingName took 0.013 sec
+Testcase: testStrict took 0.206 sec
+Testcase: testNamedStrict took 0.024 sec
+Testcase: testNamedStrictMissingName took 0.007 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictModeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.245 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.229 sec
 ------------- Standard Output ---------------
 <exampleObjectWithAddress version="1.0">
    <integer>123</integer>
@@ -27,7 +27,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.245 sec
    </address>
    <!-- java.lang.String -->
    <name ID="4">test</name>
-</example-object-with-address><ExampleObjectWithAddress ID="0" version="1.0">
+</example-object-with-address>>>>>> ELEMENT=[element example-object-with-address]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExampleObjectWithAddress ID="0" version="1.0">
    <Integer>123</Integer>
    <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
    <Address ID="1">
@@ -38,9 +41,12 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.245 sec
    </Address>
    <!-- java.lang.String -->
    <Name ID="4">test</Name>
-</ExampleObjectWithAddress>------------- ---------------- ---------------
+</ExampleObjectWithAddress>>>>>> ELEMENT=[element ExampleObjectWithAddress]
+>>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist at line -1
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not have a match at line -1
 	at org.simpleframework.xml.core.Composite.readAttribute(Composite.java:513)
 	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:435)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:349)
@@ -181,8 +187,8 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testStrictMode took 0.129 sec
-Testcase: testNonStrictMode took 0.098 sec
+Testcase: testStrictMode took 0.118 sec
+Testcase: testNonStrictMode took 0.089 sec
 Testcase: testNonStrictModeMissingName took 0.004 sec
-Testcase: testValidation took 0.008 sec
+Testcase: testValidation took 0.012 sec
 Testcase: testDirectory took 0 sec

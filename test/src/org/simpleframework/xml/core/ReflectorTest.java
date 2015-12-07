@@ -114,11 +114,11 @@ public class ReflectorTest extends TestCase {
    }
    
    public void testCase() throws Exception {
-      assertEquals("URL", Reflector.getName("URL"));
-      assertEquals("getEntry", Reflector.getName("getEntry"));
-      assertEquals("iF", Reflector.getName("iF"));
-      assertEquals("if", Reflector.getName("if"));
-      assertEquals("URLConnection", Reflector.getName("URLConnection"));
-      assertEquals("type", Reflector.getName("Type"));
+      assertEquals("URL", Support.getName("URL"));
+      assertEquals("getEntry", Support.getName("getEntry"));
+      assertEquals("iF", Support.getName("iF"));
+      assertEquals("if", Support.getName("if"));
+      assertEquals("URLConnection", Support.getName("URLConnection"));
+      assertEquals("type", Support.getName("Type"));
    }
 }

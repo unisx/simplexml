@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.AliasTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.275 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
 ------------- Standard Output ---------------
 <table:multiValueMap xmlns:table="http://simpleframework.org/map">
    <map type="map">
@@ -75,7 +75,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.275 sec
          <object class="java.lang.Integer" ID="9">1</object>
       </entry>
    </map>
-</table:multi-value-map><table:MultiValueMap ID="0" xmlns:table="http://simpleframework.org/map">
+</table:multi-value-map>>>>>> ELEMENT=[element multi-value-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.AliasTest$MultiValueMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<table:MultiValueMap ID="0" xmlns:table="http://simpleframework.org/map">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
@@ -106,7 +109,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.275 sec
          <Object class="java.lang.Integer" ID="9">1</Object>
       </Entry>
    </Map>
-</table:MultiValueMap>------------- ---------------- ---------------
+</table:MultiValueMap>>>>>> ELEMENT=[element MultiValueMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.AliasTest$MultiValueMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <table:multiValueMap xmlns:table="http://simpleframework.org/map">
    <map type="map">
@@ -132,5 +138,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.275 sec
 </table:multiValueMap>
 ------------- ---------------- ---------------
 
-Testcase: testMap took 0.269 sec
+Testcase: testMap took 0.248 sec
 Testcase: testDirectory took 0 sec

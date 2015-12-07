@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ErasureHandlingTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.498 sec
 ------------- Standard Output ---------------
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
@@ -292,7 +292,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          </object>
       </entry>
    </double-generic>
-</erasure-example><ErasureExample ID="0">
+</erasure-example>>>>>> ELEMENT=[element erasure-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ErasureExample ID="0">
    <!-- java.util.Map -->
    <List class="java.util.LinkedHashMap" ID="1">
       <Entry>
@@ -380,7 +383,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          </Object>
       </Entry>
    </DoubleGeneric>
-</ErasureExample><erasureExample>
+</ErasureExample>>>>>> ELEMENT=[element ErasureExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<erasureExample>
    <!-- java.util.LinkedHashMap -->
    <class:list xmlns:class="http://util.java/LinkedHashMap">
       <entry>
@@ -544,7 +550,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          <object class="java.lang.Double" ID="14">1.3</object>
       </entry>
    </double-generic>
-</erasure-example><ErasureExample ID="0">
+</erasure-example>>>>>> ELEMENT=[element erasure-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ErasureExample ID="0">
    <!-- java.util.Map -->
    <List class="java.util.LinkedHashMap" ID="1">
       <Entry>
@@ -587,7 +596,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          <Object class="java.lang.Double" ID="14">1.3</Object>
       </Entry>
    </DoubleGeneric>
-</ErasureExample><erasureExample>
+</ErasureExample>>>>>> ELEMENT=[element ErasureExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<erasureExample>
    <!-- java.util.LinkedHashMap -->
    <class:list xmlns:class="http://util.java/LinkedHashMap">
       <entry>
@@ -751,7 +763,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          <object class="org.simpleframework.xml.core.ErasureHandlingTest$ErasureEnum" ID="9">D</object>
       </entry>
    </double-generic>
-</erasure-example><ErasureExample ID="0">
+</erasure-example>>>>>> ELEMENT=[element erasure-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ErasureExample ID="0">
    <!-- java.util.Map -->
    <List class="java.util.LinkedHashMap" ID="1">
       <Entry>
@@ -794,7 +809,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          <Object class="org.simpleframework.xml.core.ErasureHandlingTest$ErasureEnum" ID="9">D</Object>
       </Entry>
    </DoubleGeneric>
-</ErasureExample><erasureWithMapAttributeIllegalExample>
+</ErasureExample>>>>>> ELEMENT=[element ErasureExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<erasureWithMapAttributeIllegalExample>
    <!-- java.util.HashMap --><erasureWithMapInlineValueIsIgnoredExample>
    <entry key="a">
       <value class="org.simpleframework.xml.core.ErasureHandlingTest$ErasureItem">
@@ -902,7 +920,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          <value ID="9">3</value>
       </value>
    </entry>
-</erasure-with-map-inline-value-is-ignored-example><ErasureWithMapInlineValueIsIgnoredExample ID="0">
+</erasure-with-map-inline-value-is-ignored-example>>>>>> ELEMENT=[element erasure-with-map-inline-value-is-ignored-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapInlineValueIsIgnoredExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ErasureWithMapInlineValueIsIgnoredExample ID="0">
    <Entry key="a">
       <!-- java.lang.Object -->
       <Value class="org.simpleframework.xml.core.ErasureHandlingTest$ErasureItem" ID="1">
@@ -930,7 +951,10 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
          <Value ID="9">3</Value>
       </Value>
    </Entry>
-</ErasureWithMapInlineValueIsIgnoredExample>------------- ---------------- ---------------
+</ErasureWithMapInlineValueIsIgnoredExample>>>>>> ELEMENT=[element ErasureWithMapInlineValueIsIgnoredExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapInlineValueIsIgnoredExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Can not have class java.lang.Object as an attribute
 	at org.simpleframework.xml.core.CompositeKey.write(CompositeKey.java:220)
@@ -967,9 +991,9 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.315 sec
+Testcase: testErasure took 0.3 sec
 Testcase: testPrimitiveErasure took 0.054 sec
-Testcase: testEnumErasure took 0.045 sec
-Testcase: testErasureWithMapAttributeIllegalExample took 0.006 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.068 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEnumErasure took 0.054 sec
+Testcase: testErasureWithMapAttributeIllegalExample took 0.004 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.08 sec
+Testcase: testDirectory took 0 sec

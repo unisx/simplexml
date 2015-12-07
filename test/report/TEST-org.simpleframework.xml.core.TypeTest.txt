@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.296 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -76,7 +76,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
       <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><Test ID="0">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
@@ -108,7 +111,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
       <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
       <Enum ID="11">TWO</Enum>
    </Object>
-</Test><test>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<test>
    <primitive>
       <boolean>true</boolean>
       <byte>16</byte>
@@ -183,7 +189,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
       <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><Test ID="0">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
@@ -215,7 +224,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
       <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
       <Enum ID="11">TWO</Enum>
    </Object>
-</Test>------------- ---------------- ---------------
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.3 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPrimitive took 0.288 sec
+Testcase: testDirectory took 0.001 sec

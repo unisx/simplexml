@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyMapEntryTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
 ------------- Standard Output ---------------
 <simpleBug1 id="0">
    <test1 id="1">
@@ -89,7 +89,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
          </entry>
       </data>
    </test-1>
-</simple-bug-1><SimpleBug1 ID="0">
+</simple-bug-1>>>>>> ELEMENT=[element simple-bug-1]
+>>>>> TYPE=[class org.simpleframework.xml.core.EmptyMapEntryTest$SimpleBug1]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SimpleBug1 ID="0">
    <!-- org.simpleframework.xml.core.EmptyMapEntryTest$SimpleBug1$Mojo -->
    <Test1 ID="1">
       <!-- java.util.HashMap -->
@@ -126,7 +129,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
          </Entry>
       </Data>
    </Test1>
-</SimpleBug1>------------- ---------------- ---------------
+</SimpleBug1>>>>>> ELEMENT=[element SimpleBug1]
+>>>>> TYPE=[class org.simpleframework.xml.core.EmptyMapEntryTest$SimpleBug1]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <simpleBug1 id="0">
    <test1 id="1">
@@ -156,5 +162,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.251 sec
 </simpleBug1>
 ------------- ---------------- ---------------
 
-Testcase: testEmptyMapEntry took 0.245 sec
+Testcase: testEmptyMapEntry took 0.235 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.053 sec
 ------------- Standard Output ---------------
 <test id="0">
    <primitive id="1">
@@ -76,7 +76,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
       <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><Test ID="0">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveCycleEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0">
    <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
@@ -108,7 +111,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
       <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$TestEnum -->
       <Enum ID="11">TWO</Enum>
    </Object>
-</Test><stringReferenceExample id="0">
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveCycleEntry]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<stringReferenceExample id="0">
    <a id="1">a</a>
    <b reference="1"/>
    <c reference="1"/>
@@ -124,14 +130,20 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
    <b REFERER="1"/>
    <!-- java.lang.String -->
    <c REFERER="1"/>
-</string-reference-example><StringReferenceExample ID="0">
+</string-reference-example>>>>>> ELEMENT=[element string-reference-example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<StringReferenceExample ID="0">
    <!-- java.lang.String -->
    <A ID="1">a</A>
    <!-- java.lang.String -->
    <B REFERER="1"/>
    <!-- java.lang.String -->
    <C REFERER="1"/>
-</StringReferenceExample><stringReferenceExample id="0">
+</StringReferenceExample>>>>>> ELEMENT=[element StringReferenceExample]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<stringReferenceExample id="0">
    <a id="1">a</a>
    <b id="2">b</b>
    <c reference="1"/>
@@ -147,14 +159,20 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
    <b ID="2">b</b>
    <!-- java.lang.String -->
    <c REFERER="1"/>
-</string-reference-example><StringReferenceExample ID="0">
+</string-reference-example>>>>>> ELEMENT=[element string-reference-example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<StringReferenceExample ID="0">
    <!-- java.lang.String -->
    <A ID="1">a</A>
    <!-- java.lang.String -->
    <B ID="2">b</B>
    <!-- java.lang.String -->
    <C REFERER="1"/>
-</StringReferenceExample><integerReferenceExample id="0">
+</StringReferenceExample>>>>>> ELEMENT=[element StringReferenceExample]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<integerReferenceExample id="0">
    <a id="1">1</a>
    <b id="2">1</b>
    <c id="3">1</c>
@@ -170,14 +188,20 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
    <b ID="2">1</b>
    <!-- java.lang.Integer -->
    <c ID="3">1</c>
-</integer-reference-example><IntegerReferenceExample ID="0">
+</integer-reference-example>>>>>> ELEMENT=[element integer-reference-example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<IntegerReferenceExample ID="0">
    <!-- java.lang.Integer -->
    <A ID="1">1</A>
    <!-- java.lang.Integer -->
    <B ID="2">1</B>
    <!-- java.lang.Integer -->
    <C ID="3">1</C>
-</IntegerReferenceExample><integerReferenceExample id="0">
+</IntegerReferenceExample>>>>>> ELEMENT=[element IntegerReferenceExample]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<integerReferenceExample id="0">
    <a id="1">1</a>
    <b reference="1"/>
    <c id="2">1</c>
@@ -193,15 +217,21 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.048 sec
    <b REFERER="1"/>
    <!-- java.lang.Integer -->
    <c ID="2">1</c>
-</integer-reference-example><IntegerReferenceExample ID="0">
+</integer-reference-example>>>>>> ELEMENT=[element integer-reference-example]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<IntegerReferenceExample ID="0">
    <!-- java.lang.Integer -->
    <A ID="1">1</A>
    <!-- java.lang.Integer -->
    <B REFERER="1"/>
    <!-- java.lang.Integer -->
    <C ID="2">1</C>
-</IntegerReferenceExample>------------- ---------------- ---------------
+</IntegerReferenceExample>>>>>> ELEMENT=[element IntegerReferenceExample]
+>>>>> TYPE=[class org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.683 sec
-Testcase: testPrimitiveReference took 0.358 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testPrimitive took 0.69 sec
+Testcase: testPrimitiveReference took 0.357 sec
+Testcase: testDirectory took 0 sec

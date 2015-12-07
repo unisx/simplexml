@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.DictionaryTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.22 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -45,7 +45,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
          <text ID="7">one</text>
       </property>
    </list>
-</test><Test ID="0" name="example">
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.util.DictionaryTest$PropertySet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<Test ID="0" name="example">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
       <!-- org.simpleframework.xml.util.DictionaryTest$Property -->
@@ -64,7 +67,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
          <Text ID="7">one</Text>
       </Property>
    </List>
-</Test>------------- ---------------- ---------------
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.util.DictionaryTest$PropertySet]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testDictionary took 0.216 sec
+Testcase: testDictionary took 0.213 sec
 Testcase: testDirectory took 0 sec

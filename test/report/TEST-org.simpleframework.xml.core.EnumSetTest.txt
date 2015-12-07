@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumSetTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.205 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.195 sec
 ------------- Standard Output ---------------
 <enumSetExample>
    <set class="java.util.RegularEnumSet">
@@ -25,7 +25,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.205 sec
       <!-- org.simpleframework.xml.core.EnumSetTest$Qualification -->
       <qualification ID="3">EXPERT</qualification>
    </set>
-</enum-set-example><EnumSetExample ID="0">
+</enum-set-example>>>>>> ELEMENT=[element enum-set-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.EnumSetTest$EnumSetExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<EnumSetExample ID="0">
    <!-- java.util.EnumSet -->
    <Set class="java.util.RegularEnumSet" ID="1">
       <!-- org.simpleframework.xml.core.EnumSetTest$Qualification -->
@@ -33,7 +36,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.205 sec
       <!-- org.simpleframework.xml.core.EnumSetTest$Qualification -->
       <Qualification ID="3">EXPERT</Qualification>
    </Set>
-</EnumSetExample>------------- ---------------- ---------------
+</EnumSetExample>>>>>> ELEMENT=[element EnumSetExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.EnumSetTest$EnumSetExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testEnumSet took 0.199 sec
+Testcase: testEnumSet took 0.188 sec
 Testcase: testDirectory took 0 sec

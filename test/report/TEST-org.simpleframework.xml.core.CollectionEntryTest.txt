@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.326 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -45,7 +45,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
          <text ID="7">three</text>
       </substitute>
    </list>
-</example-collection><ExampleCollection ID="0">
+</example-collection>>>>>> ELEMENT=[element example-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExampleCollection ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
@@ -64,7 +67,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
          <Text ID="7">three</Text>
       </Substitute>
    </List>
-</ExampleCollection><exampleInlineCollection>
+</ExampleCollection>>>>>> ELEMENT=[element ExampleCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<exampleInlineCollection>
    <substitute id="1">
       <text>one</text>
    </substitute>
@@ -101,7 +107,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
       <!-- java.lang.String -->
       <text ID="6">three</text>
    </substitute>
-</example-inline-collection><ExampleInlineCollection ID="0">
+</example-inline-collection>>>>>> ELEMENT=[element example-inline-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleInlineCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExampleInlineCollection ID="0">
    <!-- org.simpleframework.xml.core.CollectionEntryTest$Entry -->
    <Substitute ID="1" id="1">
       <!-- java.lang.String -->
@@ -117,7 +126,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
       <!-- java.lang.String -->
       <Text ID="6">three</Text>
    </Substitute>
-</ExampleInlineCollection><examplePrimitiveInlineCollection>
+</ExampleInlineCollection>>>>>> ELEMENT=[element ExampleInlineCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExampleInlineCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<examplePrimitiveInlineCollection>
    <substitute>a</substitute>
    <substitute>b</substitute>
    <substitute>c</substitute>
@@ -137,7 +149,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
    <substitute ID="3">c</substitute>
    <!-- java.lang.String -->
    <substitute ID="4">d</substitute>
-</example-primitive-inline-collection><ExamplePrimitiveInlineCollection ID="0">
+</example-primitive-inline-collection>>>>>> ELEMENT=[element example-primitive-inline-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveInlineCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExamplePrimitiveInlineCollection ID="0">
    <!-- java.lang.String -->
    <Substitute ID="1">a</Substitute>
    <!-- java.lang.String -->
@@ -146,7 +161,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
    <Substitute ID="3">c</Substitute>
    <!-- java.lang.String -->
    <Substitute ID="4">d</Substitute>
-</ExamplePrimitiveInlineCollection><examplePrimitiveCollection>
+</ExamplePrimitiveInlineCollection>>>>>> ELEMENT=[element ExamplePrimitiveInlineCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveInlineCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<examplePrimitiveCollection>
    <list class="java.util.ArrayList">
       <substitute>a</substitute>
       <substitute>b</substitute>
@@ -173,7 +191,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
       <!-- java.lang.Character -->
       <substitute ID="5">d</substitute>
    </list>
-</example-primitive-collection><ExamplePrimitiveCollection ID="0">
+</example-primitive-collection>>>>>> ELEMENT=[element example-primitive-collection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ExamplePrimitiveCollection ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- java.lang.Character -->
@@ -185,10 +206,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.322 sec
       <!-- java.lang.Character -->
       <Substitute ID="5">d</Substitute>
    </List>
-</ExamplePrimitiveCollection>------------- ---------------- ---------------
+</ExamplePrimitiveCollection>>>>>> ELEMENT=[element ExamplePrimitiveCollection]
+>>>>> TYPE=[class org.simpleframework.xml.core.CollectionEntryTest$ExamplePrimitiveCollection]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.236 sec
-Testcase: testExampleInlineCollection took 0.029 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.015 sec
-Testcase: testExamplePrimitiveCollection took 0.031 sec
+Testcase: testExampleCollection took 0.21 sec
+Testcase: testExampleInlineCollection took 0.04 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.029 sec
+Testcase: testExamplePrimitiveCollection took 0.038 sec
 Testcase: testDirectory took 0.001 sec

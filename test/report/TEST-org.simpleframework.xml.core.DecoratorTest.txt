@@ -108,7 +108,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.317 sec
          </messages>
       </friend>
    </list>
-</friend-list><FriendList ID="0">
+</friend-list>>>>>> ELEMENT=[element friend-list]
+>>>>> TYPE=[class org.simpleframework.xml.core.DecoratorTest$FriendList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<FriendList ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
       <!-- org.simpleframework.xml.core.DecoratorTest$Friend -->
@@ -156,7 +159,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.317 sec
          </Messages>
       </Friend>
    </List>
-</FriendList>------------- ---------------- ---------------
+</FriendList>>>>>> ELEMENT=[element FriendList]
+>>>>> TYPE=[class org.simpleframework.xml.core.DecoratorTest$FriendList]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testDecorator took 0.312 sec
+Testcase: testDecorator took 0.313 sec
 Testcase: testDirectory took 0 sec

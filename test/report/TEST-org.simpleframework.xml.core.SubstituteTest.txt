@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.SubstituteTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
 ------------- Standard Output ---------------
 <substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
@@ -9,10 +9,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 <substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</substitute>
-</substitute-example><SubstituteExample ID="0">
+</substitute-example>>>>>> ELEMENT=[element substitute-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</Substitute>
-</SubstituteExample><substituteExample>
+</SubstituteExample>>>>>> ELEMENT=[element SubstituteExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" name="this is the other substitute">some example text</substitute>
@@ -20,10 +26,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 <substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</substitute>
-</substitute-example><SubstituteExample ID="0">
+</substitute-example>>>>>> ELEMENT=[element substitute-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$OtherSubstitute" ID="1" name="this is the other substitute">some example text</Substitute>
-</SubstituteExample><substituteExample>
+</SubstituteExample>>>>>> ELEMENT=[element SubstituteExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
@@ -31,10 +43,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 <substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
-</substitute-example><SubstituteExample ID="0">
+</substitute-example>>>>>> ELEMENT=[element substitute-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</Substitute>
-</SubstituteExample><substituteExample>
+</SubstituteExample>>>>>> ELEMENT=[element SubstituteExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
 </substituteExample><substituteExample>
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
@@ -42,11 +60,17 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 <substitute-example ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</substitute>
-</substitute-example><SubstituteExample ID="0">
+</substitute-example>>>>>> ELEMENT=[element substitute-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<SubstituteExample ID="0">
    <!-- org.simpleframework.xml.core.SubstituteTest$Substitute -->
    <Substitute class="org.simpleframework.xml.core.SubstituteTest$LargeSubstitute" ID="1" name="John Doe" street="Sesame Street" city="Metropilis">some example text</Substitute>
-</SubstituteExample>------------- ---------------- ---------------
+</SubstituteExample>>>>>> ELEMENT=[element SubstituteExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.SubstituteTest$SubstituteExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
 
-Testcase: testReplace took 0.23 sec
-Testcase: testResolve took 0.044 sec
+Testcase: testReplace took 0.211 sec
+Testcase: testResolve took 0.051 sec
 Testcase: testDirectory took 0 sec
