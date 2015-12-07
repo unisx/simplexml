@@ -7,7 +7,7 @@
       <property name="build.path" value="build"/>
       <property name="jar.path" value="jar"/>
       <property name="test.path" value="test"/>
-      <property name="version" value="0.9.6"/>
+      <property name="version" value="1.0"/>
    </target>
 
    <target name="clean" depends="layout">
