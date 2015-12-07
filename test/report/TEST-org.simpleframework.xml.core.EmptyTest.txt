@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.55 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.56 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -11,20 +11,20 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.55 sec
    <empty class="java.util.ArrayList" ID="1"/>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$EmptyCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <!-- java.util.Collection -->
    <Empty class="java.util.ArrayList" ID="1"/>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$EmptyCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test/><test/>
 <test ID="0"/>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$EmptyCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0"/>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$EmptyCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="John Doe" address="NULL">
    <description>Some description</description>
 </test><test name="John Doe" address="NULL">
@@ -35,13 +35,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.55 sec
    <description ID="1">Some description</description>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$DefaultedAttribute]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="John Doe" address="NULL">
    <!-- java.lang.String -->
    <Description ID="1">Some description</Description>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$DefaultedAttribute]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="NULL" address="NULL">
    <description>Some description</description>
 </test><test name="NULL" address="NULL">
@@ -52,16 +52,16 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.55 sec
    <description ID="1">Some description</description>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$DefaultedAttribute]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="NULL" address="NULL">
    <!-- java.lang.String -->
    <Description ID="1">Some description</Description>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.EmptyTest$DefaultedAttribute]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line 3
 	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
 	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
@@ -95,7 +95,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on method 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredMethodElement at line -1
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on method 'empty' in class org.simpleframework.xml.core.EmptyTest$RequiredMethodElement at line 3
 	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
 	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
@@ -129,7 +129,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line 3
 	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
 	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
@@ -163,7 +163,7 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line -1
+org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simpleframework.xml.Element(type=void, required=true, data=false, name=empty) on field 'empty' private java.lang.String org.simpleframework.xml.core.EmptyTest$RequiredElement.empty in class org.simpleframework.xml.core.EmptyTest$RequiredElement at line 3
 	at org.simpleframework.xml.core.Composite.readInstance(Composite.java:634)
 	at org.simpleframework.xml.core.Composite.readUnion(Composite.java:602)
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:585)
@@ -199,13 +199,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.218 sec
-Testcase: testRequiredEmptyMethod took 0.014 sec
-Testcase: testRequiredBlank took 0.004 sec
-Testcase: testOptionalEmpty took 0.006 sec
-Testcase: testOptionalBlank took 0.058 sec
-Testcase: testEmptyCollection took 0.128 sec
-Testcase: testRequiredEmptyAttribute took 0.018 sec
+Testcase: testRequiredEmpty took 0.241 sec
+Testcase: testRequiredEmptyMethod took 0.015 sec
+Testcase: testRequiredBlank took 0.003 sec
+Testcase: testOptionalEmpty took 0.005 sec
+Testcase: testOptionalBlank took 0.03 sec
+Testcase: testEmptyCollection took 0.143 sec
+Testcase: testRequiredEmptyAttribute took 0.014 sec
 Testcase: testOptionalEmptyAttribute took 0.003 sec
-Testcase: testDefaultedAttribute took 0.085 sec
+Testcase: testDefaultedAttribute took 0.076 sec
 Testcase: testDirectory took 0 sec

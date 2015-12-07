@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapWithValueAttributeTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.585 sec
 ------------- Standard Output ---------------
 <mapWithValueTextExample id="0">
    <entry key="d">3.0</entry>
@@ -19,7 +19,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    <entry key="b">1.0</entry>
 </map-with-value-text-example>>>>>> ELEMENT=[element map-with-value-text-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueTextExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithValueTextExample ID="0">
    <Entry key="d">3.0</Entry>
    <Entry key="a">0.0</Entry>
@@ -27,7 +27,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    <Entry key="b">1.0</Entry>
 </MapWithValueTextExample>>>>>> ELEMENT=[element MapWithValueTextExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueTextExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithValueElementExample id="0">
    <entry>
       <key id="1">d</key>
@@ -90,7 +90,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </entry>
 </map-with-value-element-example>>>>>> ELEMENT=[element map-with-value-element-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueElementExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithValueElementExample ID="0">
    <Entry>
       <!-- java.lang.String -->
@@ -118,7 +118,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </Entry>
 </MapWithValueElementExample>>>>>> ELEMENT=[element MapWithValueElementExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueElementExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithValueAttributeExample id="0">
    <entry key="d" value="3.0"/>
    <entry key="a" value="0.0"/>
@@ -137,7 +137,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    <entry key="b" value="1.0"/>
 </map-with-value-attribute-example>>>>>> ELEMENT=[element map-with-value-attribute-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueAttributeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithValueAttributeExample ID="0">
    <Entry key="d" value="3.0"/>
    <Entry key="a" value="0.0"/>
@@ -145,7 +145,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    <Entry key="b" value="1.0"/>
 </MapWithValueAttributeExample>>>>>> ELEMENT=[element MapWithValueAttributeExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithValueAttributeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithCompositeValueExample id="0">
    <entry key="a">
       <value id="1">
@@ -194,7 +194,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </entry>
 </map-with-composite-value-example>>>>>> ELEMENT=[element map-with-composite-value-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithCompositeValueExample ID="0">
    <Entry key="a">
       <!-- org.simpleframework.xml.core.MapWithValueAttributeTest$ValueExample -->
@@ -216,7 +216,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </Entry>
 </MapWithCompositeValueExample>>>>>> ELEMENT=[element MapWithCompositeValueExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithCompositeValueAndElementKeyExample id="0">
    <entry>
       <key id="1">a</key>
@@ -273,7 +273,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </entry>
 </map-with-composite-value-and-element-key-example>>>>>> ELEMENT=[element map-with-composite-value-and-element-key-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueAndElementKeyExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithCompositeValueAndElementKeyExample ID="0">
    <Entry>
       <!-- java.lang.String -->
@@ -299,7 +299,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </Entry>
 </MapWithCompositeValueAndElementKeyExample>>>>>> ELEMENT=[element MapWithCompositeValueAndElementKeyExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapWithValueAttributeTest$MapWithCompositeValueAndElementKeyExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <mapWithValueTextExample id="0">
@@ -359,9 +359,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.577 sec
    </entry>
 </mapWithCompositeValueAndElementKeyExample>------------- ---------------- ---------------
 
-Testcase: testPrimitiveTextMap took 0.301 sec
-Testcase: testPrimitiveElementMap took 0.064 sec
-Testcase: testPrimitiveAttributeMap took 0.037 sec
-Testcase: testCompositeValueMap took 0.096 sec
+Testcase: testPrimitiveTextMap took 0.325 sec
+Testcase: testPrimitiveElementMap took 0.059 sec
+Testcase: testPrimitiveAttributeMap took 0.032 sec
+Testcase: testCompositeValueMap took 0.091 sec
 Testcase: testCompositeValueAndElementKeyMap took 0.07 sec
 Testcase: testDirectory took 0 sec

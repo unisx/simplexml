@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
 ------------- Standard Output ---------------
 <inlineMapExample>
    <yEntry yKey="3">
@@ -92,7 +92,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
    </x-entry>
 </inline-map-example>>>>>> ELEMENT=[element inline-map-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$InlineMapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <InlineMapExample ID="0">
    <YEntry yKey="3">
       <!-- org.simpleframework.xml.core.UnionMapTest$Y -->
@@ -131,7 +131,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
    </XEntry>
 </InlineMapExample>>>>>> ELEMENT=[element InlineMapExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$InlineMapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapExample>
    <xMap class="java.util.HashMap">
       <xx key="2">
@@ -179,7 +179,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
    </x-map>
 </map-example>>>>>> ELEMENT=[element map-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapExample ID="0">
    <!-- java.util.Map -->
    <XMap class="java.util.HashMap" ID="1">
@@ -200,7 +200,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
    </XMap>
 </MapExample>>>>>> ELEMENT=[element MapExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapExample>
    <yMap class="java.util.HashMap">
       <yy key="2">
@@ -248,7 +248,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
    </y-map>
 </map-example>>>>>> ELEMENT=[element map-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapExample ID="0">
    <!-- java.util.Map -->
    <YMap class="java.util.HashMap" ID="1">
@@ -269,10 +269,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
    </YMap>
 </MapExample>>>>>> ELEMENT=[element MapExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapTest$MapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.399 sec
-Testcase: testXList took 0.078 sec
-Testcase: testYList took 0.062 sec
-Testcase: testDirectory took 0 sec
+Testcase: testInlineList took 0.402 sec
+Testcase: testXList took 0.069 sec
+Testcase: testYList took 0.051 sec
+Testcase: testDirectory took 0.001 sec

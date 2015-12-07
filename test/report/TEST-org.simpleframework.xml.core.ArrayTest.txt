@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayTest
-Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
+Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.149 sec
 ------------- Standard Output ---------------
 <root>
    <array length="100">
@@ -414,7 +414,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="100" ID="1">
@@ -621,7 +621,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="100">
       <entry/>
@@ -985,7 +985,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="100" ID="1">
@@ -1142,7 +1142,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <text>entry one</text>
@@ -1176,7 +1176,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
@@ -1193,7 +1193,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <text>1</text>
@@ -1222,7 +1222,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [I -->
    <Array length="5" ID="1">
@@ -1234,7 +1234,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <text length="6">1, 2, 3, 4, 5, 6</text>
@@ -1268,7 +1268,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveMultidimensionalIntegerArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [[I -->
    <Array length="5" ID="1">
@@ -1285,7 +1285,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveMultidimensionalIntegerArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <string>entry one</string>
@@ -1319,7 +1319,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultPrimitiveArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
@@ -1336,7 +1336,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultPrimitiveArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <text/>
@@ -1367,7 +1367,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
@@ -1381,7 +1381,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <entry value="entry one"/>
@@ -1415,7 +1415,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="5" ID="1">
@@ -1432,7 +1432,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <text value="entry one"/>
@@ -1466,7 +1466,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultCompositeArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="5" ID="1">
@@ -1483,7 +1483,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DefaultCompositeArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <entry/>
@@ -1514,7 +1514,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="5" ID="1">
@@ -1528,7 +1528,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$ParentCompositeArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="5">
       <char>a</char>
@@ -1557,7 +1557,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$CharacterArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [C -->
    <Array length="5" ID="1">
@@ -1569,7 +1569,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$CharacterArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root>
    <array length="6">
       <entry class="org.simpleframework.xml.core.ArrayTest$ExtendedText" value="one"/>
@@ -1604,7 +1604,7 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DifferentArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayTest$Text; -->
    <Array length="6" ID="1">
@@ -1620,20 +1620,20 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.214 sec
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$DifferentArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExample took 0.212 sec
-Testcase: testBadExample took 0.006 sec
-Testcase: testWriteArray took 0.599 sec
-Testcase: testPrimitive took 0.036 sec
-Testcase: testPrimitiveInteger took 0.028 sec
-Testcase: testPrimitiveMultidimensionalInteger took 0.064 sec
-Testcase: testDefaultPrimitive took 0.025 sec
-Testcase: testPrimitiveNull took 0.03 sec
-Testcase: testParentComposite took 0.033 sec
-Testcase: testDefaultComposite took 0.032 sec
-Testcase: testParentCompositeNull took 0.069 sec
-Testcase: testCharacter took 0.027 sec
-Testcase: testDifferentArray took 0.032 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testExample took 0.249 sec
+Testcase: testBadExample took 0.005 sec
+Testcase: testWriteArray took 0.603 sec
+Testcase: testPrimitive took 0.022 sec
+Testcase: testPrimitiveInteger took 0.018 sec
+Testcase: testPrimitiveMultidimensionalInteger took 0.059 sec
+Testcase: testDefaultPrimitive took 0.019 sec
+Testcase: testPrimitiveNull took 0.018 sec
+Testcase: testParentComposite took 0.035 sec
+Testcase: testDefaultComposite took 0.025 sec
+Testcase: testParentCompositeNull took 0.029 sec
+Testcase: testCharacter took 0.022 sec
+Testcase: testDifferentArray took 0.022 sec
+Testcase: testDirectory took 0 sec

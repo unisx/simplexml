@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OriginalTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.464 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.51 sec
 ------------- Standard Output ---------------
 <exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
@@ -220,7 +220,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.464 sec
    </map-entry>
 </example-with-originals>>>>>> ELEMENT=[element example-with-originals]
 >>>>> TYPE=[class org.simpleframework.xml.core.OriginalTest$ExampleWithOriginals]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExampleWithOriginals ID="0" xmlns:root="http://domain/entry">
    <!-- java.util.Collection -->
    <List class="java.util.concurrent.CopyOnWriteArrayList" ID="1">
@@ -298,9 +298,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.464 sec
    </MapEntry>
 </ExampleWithOriginals>>>>>> ELEMENT=[element ExampleWithOriginals]
 >>>>> TYPE=[class org.simpleframework.xml.core.OriginalTest$ExampleWithOriginals]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testOriginals took 0.456 sec
+Testcase: testOriginals took 0.499 sec
 Testcase: testA took 0 sec
 Testcase: testDirectory took 0 sec

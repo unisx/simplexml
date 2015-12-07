@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.661 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -26,7 +26,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    </array>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <!-- [Lorg.simpleframework.xml.core.TextTest$TextEntry; -->
    <Array length="3" ID="1">
@@ -39,7 +39,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    </Array>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test>
    <array length="3">
       <entry name="a" version="ONE"><![CDATA[Example 1]]></entry>
@@ -65,7 +65,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    </array>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <!-- [Lorg.simpleframework.xml.core.TextTest$TextEntry; -->
    <Array length="3" ID="1">
@@ -78,7 +78,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    </Array>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <text name="a" version="ONE"><![CDATA[
     
       <element> 
@@ -100,10 +100,10 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    
 ]]></text>>>>>> ELEMENT=[element text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Text ID="0" name="a" version="ONE"><![CDATA[
     
       <element> 
@@ -112,10 +112,10 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    
 ]]></Text>>>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <text name="a" version="ONE"><![CDATA[
     
       <element> 
@@ -137,10 +137,10 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    
 ]]></text>>>>>> ELEMENT=[element text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Text ID="0" name="a" version="ONE"><![CDATA[
     
       <element> 
@@ -149,36 +149,36 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
    
 ]]></Text>>>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$TextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <text name="a" version="ONE"/><text name="a" version="ONE"/>
 <text ID="0" name="a" version="ONE"/>>>>>> ELEMENT=[element text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$OptionalTextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Text ID="0" name="a" version="ONE"/>>>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$OptionalTextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <text name="a" version="ONE"/><text name="a" version="ONE"/>
 <text ID="0" name="a" version="ONE"/>>>>>> ELEMENT=[element text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$OptionalTextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Text ID="0" name="a" version="ONE"/>>>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class org.simpleframework.xml.core.TextTest$OptionalTextEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 >>>>> ELEMENT=[element Text]
 >>>>> TYPE=[class java.lang.String]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Cannot use field 'list' private java.util.List org.simpleframework.xml.core.TextTest$NonPrimitiveTextEntry.list to represent @org.simpleframework.xml.Text(required=true, data=false, empty=)
@@ -217,11 +217,11 @@ org.simpleframework.xml.core.TextException: Cannot use field 'list' private java
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.37 sec
-Testcase: testData took 0.069 sec
-Testcase: testDuplicate took 0.006 sec
-Testcase: testIllegalElement took 0.011 sec
-Testcase: testEmpty took 0.006 sec
-Testcase: testOptional took 0.054 sec
-Testcase: testNonPrimitive took 0.006 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testText took 0.523 sec
+Testcase: testData took 0.048 sec
+Testcase: testDuplicate took 0.005 sec
+Testcase: testIllegalElement took 0.008 sec
+Testcase: testEmpty took 0.003 sec
+Testcase: testOptional took 0.043 sec
+Testcase: testNonPrimitive took 0.005 sec
+Testcase: testDirectory took 0 sec

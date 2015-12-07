@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTemplateTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.431 sec
 ------------- Standard Output ---------------
 <pathWithTemplateExample>
    <details>
@@ -52,7 +52,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
    </details>
 </path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathWithTemplateExample ID="0">
    <Details>
       <!-- java.lang.String -->
@@ -75,7 +75,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
    </Details>
 </PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <pathWithTemplateExample>
    <details>
       <name>Jack Daniels</name>
@@ -127,7 +127,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
    </details>
 </path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathWithTemplateExample ID="0">
    <Details>
       <!-- java.lang.String -->
@@ -150,7 +150,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
    </Details>
 </PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <pathWithTemplateExample>
@@ -183,6 +183,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
    </details>
 </pathWithTemplateExample>------------- ---------------- ---------------
 
-Testcase: testSerialization took 0.352 sec
-Testcase: testPathWithTemplates took 0.069 sec
+Testcase: testSerialization took 0.363 sec
+Testcase: testPathWithTemplates took 0.06 sec
 Testcase: testDirectory took 0 sec

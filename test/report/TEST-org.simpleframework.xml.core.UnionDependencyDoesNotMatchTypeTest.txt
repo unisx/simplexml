@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionDependencyDoesNotMatchTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.347 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
 ------------- Standard Output ---------------
 <example>
    <x/>
@@ -28,7 +28,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.347 sec
    <z ID="4"/>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionDependencyDoesNotMatchTypeTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- org.simpleframework.xml.core.UnionDependencyDoesNotMatchTypeTest$X -->
    <X ID="1"/>
@@ -40,8 +40,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.347 sec
    <Z ID="4"/>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionDependencyDoesNotMatchTypeTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testTypeMatch took 0.336 sec
-Testcase: testDirectory took 0 sec
+Testcase: testTypeMatch took 0.361 sec
+Testcase: testDirectory took 0.001 sec

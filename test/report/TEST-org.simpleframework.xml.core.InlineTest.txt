@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.67 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -23,7 +23,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <text ID="4" name="c" version="THREE">Example 3</text>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -35,7 +35,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <Text ID="4" name="c" version="THREE">Example 3</Text>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
    <message>Some example message</message>
    <text name="a" version="ONE">Example 1</text>
@@ -58,7 +58,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <text ID="4" name="c" version="THREE">Example 3</text>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -70,7 +70,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <Text ID="4" name="c" version="THREE">Example 3</Text>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlineTextList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
@@ -93,7 +93,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <string ID="4">Example 3</string>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -105,7 +105,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <String ID="4">Example 3</String>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test version="ONE">
    <message>Some example message</message>
    <string>Example 1</string>
@@ -128,7 +128,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <string ID="4">Example 3</string>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" version="ONE">
    <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
@@ -140,7 +140,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <String ID="4">Example 3</String>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$InlinePrimitiveList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <simpleInlineList>
    <simpleEntry content="test 0"/>
    <simpleEntry content="test 1"/>
@@ -187,7 +187,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <simple-entry ID="10" content="test 9"/>
 </simple-inline-list>>>>>> ELEMENT=[element simple-inline-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleInlineList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <SimpleInlineList ID="0">
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="1" content="test 0"/>
@@ -211,7 +211,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <SimpleEntry ID="10" content="test 9"/>
 </SimpleInlineList>>>>>> ELEMENT=[element SimpleInlineList]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleInlineList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <simpleNameInlineList>
    <item content="test 0"/>
    <item content="test 1"/>
@@ -258,7 +258,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <item ID="10" content="test 9"/>
 </simple-name-inline-list>>>>>> ELEMENT=[element simple-name-inline-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleNameInlineList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <SimpleNameInlineList ID="0">
    <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="1" content="test 0"/>
@@ -282,7 +282,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <Item ID="10" content="test 9"/>
 </SimpleNameInlineList>>>>>> ELEMENT=[element SimpleNameInlineList]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimpleNameInlineList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <simplePrimitiveInlineList>
    <string>test</string>
 </simplePrimitiveInlineList><simplePrimitiveInlineList>
@@ -293,18 +293,18 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.65 sec
    <string ID="1">test</string>
 </simple-primitive-inline-list>>>>>> ELEMENT=[element simple-primitive-inline-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimplePrimitiveInlineList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <SimplePrimitiveInlineList ID="0">
    <!-- java.lang.String -->
    <String ID="1">test</String>
 </SimplePrimitiveInlineList>>>>>> ELEMENT=[element SimplePrimitiveInlineList]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineTest$SimplePrimitiveInlineList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.401 sec
-Testcase: testPrimitiveList took 0.094 sec
-Testcase: testSimpleList took 0.064 sec
+Testcase: testList took 0.449 sec
+Testcase: testPrimitiveList took 0.073 sec
+Testcase: testSimpleList took 0.057 sec
 Testcase: testSimpleNameList took 0.052 sec
-Testcase: testSimplePrimitiveList took 0.027 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testSimplePrimitiveList took 0.02 sec
+Testcase: testDirectory took 0 sec

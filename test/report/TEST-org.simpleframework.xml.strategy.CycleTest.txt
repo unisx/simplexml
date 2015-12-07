@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.CycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.294 sec
 ------------- Standard Output ---------------
 <example id="0">
    <list class="java.util.ArrayList" id="1">
@@ -88,7 +88,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
    <cycle REFERER="0"/>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -121,7 +121,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
    <Cycle REFERER="0"/>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example id="0">
    <list class="java.util.ArrayList" id="1">
       <entry id="2" key="1">
@@ -209,7 +209,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
    <cycle REFERER="0"/>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -242,9 +242,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 2.53 sec
    <Cycle REFERER="0"/>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.CycleTest$CycleExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCycle took 0.361 sec
-Testcase: testMemory took 2.161 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testCycle took 0.368 sec
+Testcase: testMemory took 0.919 sec
+Testcase: testDirectory took 0 sec

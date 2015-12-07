@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ErasureHandlingTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.906 sec
 ------------- Standard Output ---------------
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
@@ -294,7 +294,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </double-generic>
 </erasure-example>>>>>> ELEMENT=[element erasure-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ErasureExample ID="0">
    <!-- java.util.Map -->
    <List class="java.util.LinkedHashMap" ID="1">
@@ -385,7 +385,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </DoubleGeneric>
 </ErasureExample>>>>>> ELEMENT=[element ErasureExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
    <class:list xmlns:class="http://util.java/LinkedHashMap">
@@ -552,7 +552,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </double-generic>
 </erasure-example>>>>>> ELEMENT=[element erasure-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ErasureExample ID="0">
    <!-- java.util.Map -->
    <List class="java.util.LinkedHashMap" ID="1">
@@ -598,7 +598,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </DoubleGeneric>
 </ErasureExample>>>>>> ELEMENT=[element ErasureExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
    <class:list xmlns:class="http://util.java/LinkedHashMap">
@@ -765,7 +765,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </double-generic>
 </erasure-example>>>>>> ELEMENT=[element erasure-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ErasureExample ID="0">
    <!-- java.util.Map -->
    <List class="java.util.LinkedHashMap" ID="1">
@@ -811,7 +811,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </DoubleGeneric>
 </ErasureExample>>>>>> ELEMENT=[element ErasureExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <erasureWithMapAttributeIllegalExample>
    <!-- java.util.HashMap --><erasureWithMapInlineValueIsIgnoredExample>
    <entry key="a">
@@ -922,7 +922,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </entry>
 </erasure-with-map-inline-value-is-ignored-example>>>>>> ELEMENT=[element erasure-with-map-inline-value-is-ignored-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapInlineValueIsIgnoredExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ErasureWithMapInlineValueIsIgnoredExample ID="0">
    <Entry key="a">
       <!-- java.lang.Object -->
@@ -953,7 +953,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.789 sec
    </Entry>
 </ErasureWithMapInlineValueIsIgnoredExample>>>>>> ELEMENT=[element ErasureWithMapInlineValueIsIgnoredExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapInlineValueIsIgnoredExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Can not have class java.lang.Object as an attribute for @org.simpleframework.xml.ElementMap(key=, value=, inline=false, required=true, attribute=true, valueType=void, data=false, entry=, empty=true, name=, keyType=void) on field 'erasedToString' private java.util.Map org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapAttributeIllegalExample.erasedToString
@@ -993,9 +993,9 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.48 sec
-Testcase: testPrimitiveErasure took 0.087 sec
-Testcase: testEnumErasure took 0.078 sec
-Testcase: testErasureWithMapAttributeIllegalExample took 0.006 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.131 sec
-Testcase: testDirectory took 0 sec
+Testcase: testErasure took 0.585 sec
+Testcase: testPrimitiveErasure took 0.092 sec
+Testcase: testEnumErasure took 0.082 sec
+Testcase: testErasureWithMapAttributeIllegalExample took 0.007 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.123 sec
+Testcase: testDirectory took 0.001 sec

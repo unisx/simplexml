@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumArrayTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.316 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.381 sec
 ------------- Standard Output ---------------
 <example size="3">
    <array length="3">ONE, TWO, FOUR</array>
@@ -11,14 +11,14 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.316 sec
    <array length="3" ID="1">ONE, TWO, FOUR</array>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.EnumArrayTest$NumberArray]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" size="3">
    <!-- [Lorg.simpleframework.xml.core.EnumArrayTest$Number; -->
    <Array length="3" ID="1">ONE, TWO, FOUR</Array>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.EnumArrayTest$NumberArray]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testArrayElement took 0.309 sec
-Testcase: testDirectory took 0 sec
+Testcase: testArrayElement took 0.373 sec
+Testcase: testDirectory took 0.001 sec

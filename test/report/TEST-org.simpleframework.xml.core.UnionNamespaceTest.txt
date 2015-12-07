@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.353 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.369 sec
 ------------- Standard Output ---------------
 <example>
    <path>
@@ -17,7 +17,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.353 sec
    </path>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionNamespaceTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <Path>
       <!-- java.lang.String -->
@@ -25,8 +25,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.353 sec
    </Path>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionNamespaceTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testNamespaceWithUnion took 0.347 sec
-Testcase: testDirectory took 0 sec
+Testcase: testNamespaceWithUnion took 0.361 sec
+Testcase: testDirectory took 0.001 sec

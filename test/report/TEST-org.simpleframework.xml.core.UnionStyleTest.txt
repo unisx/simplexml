@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionStyleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.513 sec
 ------------- Standard Output ---------------
 <UnionListExample>
    <IntegerField>
@@ -78,7 +78,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
    </string-entry>
 </union-list-example>>>>>> ELEMENT=[element union-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <UnionListExample ID="0">
    <!-- org.simpleframework.xml.core.UnionStyleTest$IntegerEntry -->
    <IntegerField ID="1">
@@ -107,7 +107,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
    </StringEntry>
 </UnionListExample>>>>>> ELEMENT=[element UnionListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <union-list-example>
    <integer-field>
       <number>777</number>
@@ -185,7 +185,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
    </string-entry>
 </union-list-example>>>>>> ELEMENT=[element union-list-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <UnionListExample ID="0">
    <!-- org.simpleframework.xml.core.UnionStyleTest$IntegerEntry -->
    <IntegerField ID="1">
@@ -214,9 +214,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
    </StringEntry>
 </UnionListExample>>>>>> ELEMENT=[element UnionListExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionStyleTest$UnionListExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCamelCaseStyle took 0.388 sec
-Testcase: testHyphenStyle took 0.099 sec
+Testcase: testCamelCaseStyle took 0.412 sec
+Testcase: testHyphenStyle took 0.094 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NestedListTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.293 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.319 sec
 ------------- Standard Output ---------------
 <testSuit>
    <defaultTestScenario includeDefault="false">
@@ -60,5 +60,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.293 sec
    </testScenario>
 </testSuit>------------- ---------------- ---------------
 
-Testcase: testNestedList took 0.286 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testNestedList took 0.308 sec
+Testcase: testDirectory took 0 sec

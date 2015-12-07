@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.507 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.492 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -78,7 +78,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.507 sec
    </object>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
@@ -113,7 +113,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.507 sec
    </Object>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test>
    <primitive>
       <boolean>true</boolean>
@@ -191,7 +191,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.507 sec
    </object>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
    <Primitive ID="1">
@@ -226,8 +226,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.507 sec
    </Object>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.499 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPrimitive took 0.485 sec
+Testcase: testDirectory took 0.001 sec

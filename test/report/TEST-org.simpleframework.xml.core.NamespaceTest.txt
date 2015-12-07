@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
 ------------- Standard Output ---------------
 <per:person age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
    <jb:job tax:salary="10" experience="12" xmlns:jb="http://www.domain.com/job">
@@ -55,7 +55,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
    <value ID="7">Person</value>
 </per:person>>>>>> ELEMENT=[element person]
 >>>>> TYPE=[class org.simpleframework.xml.core.NamespaceTest$Person]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <per:Person ID="0" age="30" xmlns:per="http://www.domain.com/person" xmlns:tax="http://www.domain.com/tax" xmlns="http://www.domain.com/default">
    <!-- org.simpleframework.xml.core.NamespaceTest$Profession -->
    <jb:Job ID="1" tax:salary="10" experience="12" xmlns:jb="http://www.domain.com/job">
@@ -76,8 +76,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
    <Value ID="7">Person</Value>
 </per:Person>>>>>> ELEMENT=[element Person]
 >>>>> TYPE=[class org.simpleframework.xml.core.NamespaceTest$Person]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testNamespace took 0.37 sec
+Testcase: testNamespace took 0.415 sec
 Testcase: testDirectory took 0 sec

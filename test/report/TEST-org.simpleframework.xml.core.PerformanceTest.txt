@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PerformanceTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 19.473 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -184,7 +184,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">{no.override}</Constant>
@@ -250,7 +250,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
@@ -473,7 +473,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">some constant</Constant>
@@ -539,7 +539,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root number="1234" flag="true">
    <constant>some constant</constant>
    <name>some name</name>
@@ -762,7 +762,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">${no.override}</Constant>
@@ -828,7 +828,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root number="1234" flag="true">
    <constant>${no.override}</constant>
    <name>${example.name}</name>
@@ -1035,7 +1035,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </list>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Root ID="0" number="1234" flag="true">
    <!-- java.lang.String -->
    <Constant ID="1">&gt;&gt;&lt;&lt;</Constant>
@@ -1097,7 +1097,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </List>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PerformanceTest$RootEntry]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <root number="1234" flag="true">
    <constant>&gt;&gt;&lt;&lt;</constant>
    <name>{example.name}</name>
@@ -1135,9 +1135,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 58.518 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl
-SIMPLE TOOK 13115ms
-JAVA TOOK 1986ms
+class org.xmlpull.mxp1.MXParserCachingStrings
+SIMPLE TOOK 3731ms
+JAVA TOOK 1911ms
 SIMPLE --->><root number="1234" flag="true">
    <constant>{no.override}</constant>
    <name>{example.name}</name>
@@ -1178,15 +1178,15 @@ SIMPLE --->><root number="1234" flag="true">
       </entry>
    </list>
 </root>
-Took '12248' ms to process 10000 documents
-Took '12947' ms to process 10000 documents with templates
-Took '13060' ms to process 10000 documents with an empty filter
-Took '4471' ms to write 10000 documents
+Took '3032' ms to process 10000 documents
+Took '3004' ms to process 10000 documents with templates
+Took '2921' ms to process 10000 documents with an empty filter
+Took '4168' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testCompareToOtherSerializers took 15.407 sec
-Testcase: testBasicDocument took 12.385 sec
-Testcase: testTemplateDocument took 13.022 sec
-Testcase: testEmptyFilter took 13.168 sec
-Testcase: testBasicWrite took 4.524 sec
+Testcase: testCompareToOtherSerializers took 5.945 sec
+Testcase: testBasicDocument took 3.181 sec
+Testcase: testTemplateDocument took 3.073 sec
+Testcase: testEmptyFilter took 2.996 sec
+Testcase: testBasicWrite took 4.258 sec
 Testcase: testDirectory took 0.001 sec

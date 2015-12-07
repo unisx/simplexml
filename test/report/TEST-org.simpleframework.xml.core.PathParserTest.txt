@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathParserTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.144 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.149 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Path '//' in class org.simpleframework.xml.core.PathParserTest references document root
 	at org.simpleframework.xml.core.PathParser.path(PathParser.java:268)
@@ -320,9 +320,9 @@ org.simpleframework.xml.core.PathException: Illegal character '@' in element for
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testSimplePath took 0.007 sec
-Testcase: testPathPrefix took 0 sec
-Testcase: testAttribute took 0 sec
-Testcase: testIndex took 0.082 sec
+Testcase: testSimplePath took 0.008 sec
+Testcase: testPathPrefix took 0.001 sec
+Testcase: testAttribute took 0.001 sec
+Testcase: testIndex took 0.081 sec
 Testcase: testExpressions took 0.001 sec
-Testcase: testExceptions took 0.039 sec
+Testcase: testExceptions took 0.045 sec

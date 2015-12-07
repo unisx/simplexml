@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultWithParametersInGetterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.326 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.378 sec
 ------------- Standard Output ---------------
 <defaultTestClass>
    <foo>100</foo>
@@ -16,13 +16,13 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.326 sec
    <flag>false</flag>
 </default-test-class>>>>>> ELEMENT=[element default-test-class]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultWithParametersInGetterTest$DefaultTestClass]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <DefaultTestClass ID="0">
    <Foo>100</Foo>
    <Flag>false</Flag>
 </DefaultTestClass>>>>>> ELEMENT=[element DefaultTestClass]
 >>>>> TYPE=[class org.simpleframework.xml.core.DefaultWithParametersInGetterTest$DefaultTestClass]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.MethodException: Get method public java.lang.String org.simpleframework.xml.core.DefaultWithParametersInGetterTest$DefaultTestClassWithInvalidTransient.getWithParams(int) is not a valid property
@@ -111,7 +111,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDefaultWithParameters took 0.295 sec
-Testcase: testDefaultWithTransientErrors took 0.016 sec
-Testcase: testDefaultWithElementErrors took 0.005 sec
+Testcase: testDefaultWithParameters took 0.345 sec
+Testcase: testDefaultWithTransientErrors took 0.017 sec
+Testcase: testDefaultWithElementErrors took 0.007 sec
 Testcase: testDirectory took 0.002 sec

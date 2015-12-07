@@ -42,7 +42,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- org.simpleframework.xml.util.Resolver -->
    <List ID="1">
@@ -63,7 +63,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="example">
    <list>
       <match value="text/html" pattern="*.html"/>
@@ -113,7 +113,7 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- org.simpleframework.xml.util.Resolver -->
    <List ID="1">
@@ -138,12 +138,12 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.util.ResolverTest$ContentResolver]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testResolver took 0.336 sec
-Testcase: testCache took 0.079 sec
-Testcase: testNoResolution took 0.008 sec
+Testcase: testResolver took 0.348 sec
+Testcase: testCache took 0.071 sec
+Testcase: testNoResolution took 0.005 sec
 Testcase: testNonGreedyMatch took 0.006 sec
-Testcase: testResolverCache took 0.021 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testResolverCache took 0.02 sec
+Testcase: testDirectory took 0 sec

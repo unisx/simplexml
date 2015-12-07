@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.511 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -35,7 +35,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
    </entity>
 </primitive-inline-map>>>>>> ELEMENT=[element primitive-inline-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveInlineMap ID="0">
    <Entity>
       <!-- java.lang.String -->
@@ -51,7 +51,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
    </Entity>
 </PrimitiveInlineMap>>>>>> ELEMENT=[element PrimitiveInlineMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveInlineAttributeMap>
    <entity string="d"/>
    <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
@@ -70,7 +70,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
    <entity string="b"/>
 </primitive-inline-attribute-map>>>>>> ELEMENT=[element primitive-inline-attribute-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveInlineAttributeMap ID="0">
    <Entity string="d"/>
    <Entity string="a">1.100000000000000088817841970012523233890533447265625</Entity>
@@ -78,7 +78,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
    <Entity string="b"/>
 </PrimitiveInlineAttributeMap>>>>>> ELEMENT=[element PrimitiveInlineAttributeMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveInlineAttributeValueMap>
    <entity string="d"/>
    <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
@@ -97,7 +97,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
    <entity string="b" value="2.20000000000000017763568394002504646778106689453125"/>
 </primitive-inline-attribute-value-map>>>>>> ELEMENT=[element primitive-inline-attribute-value-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeValueMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveInlineAttributeValueMap ID="0">
    <Entity string="d"/>
    <Entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
@@ -105,10 +105,10 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
    <Entity string="b" value="2.20000000000000017763568394002504646778106689453125"/>
 </PrimitiveInlineAttributeValueMap>>>>>> ELEMENT=[element PrimitiveInlineAttributeValueMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeValueMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.328 sec
-Testcase: testPrimitiveAttributeMap took 0.051 sec
-Testcase: testPrimitiveAttributeValueMap took 0.054 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testPrimitiveMap took 0.409 sec
+Testcase: testPrimitiveAttributeMap took 0.046 sec
+Testcase: testPrimitiveAttributeValueMap took 0.044 sec
+Testcase: testDirectory took 0.001 sec

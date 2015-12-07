@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictModeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.383 sec
 ------------- Standard Output ---------------
 <exampleObjectWithAddress version="1.0">
    <integer>123</integer>
@@ -29,7 +29,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
    <name ID="4">test</name>
 </example-object-with-address>>>>>> ELEMENT=[element example-object-with-address]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExampleObjectWithAddress ID="0" version="1.0">
    <Integer>123</Integer>
    <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
@@ -43,10 +43,10 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
    <Name ID="4">test</Name>
 </ExampleObjectWithAddress>>>>>> ELEMENT=[element ExampleObjectWithAddress]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.AttributeException: Attribute 'name' does not have a match in class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line -1
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not have a match in class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
 	at org.simpleframework.xml.core.Composite.readAttribute(Composite.java:549)
 	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:471)
 	at org.simpleframework.xml.core.Composite.readSection(Composite.java:387)
@@ -78,7 +78,7 @@ org.simpleframework.xml.core.AttributeException: Attribute 'name' does not have 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on field 'name' java.lang.String org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress.name for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line -1
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on field 'name' java.lang.String org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress.name for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:700)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:506)
 	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
@@ -109,7 +109,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line -1
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
 	at org.simpleframework.xml.core.Composite.validateAttribute(Composite.java:873)
 	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:799)
 	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:776)
@@ -138,7 +138,7 @@ org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line -1
+org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
 	at org.simpleframework.xml.core.Composite.validateAttribute(Composite.java:873)
 	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:799)
 	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:776)
@@ -167,7 +167,7 @@ org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on field 'name' java.lang.String org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress.name for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line -1
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Element(type=void, required=true, data=false, name=) on field 'name' java.lang.String org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress.name for class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress at line 1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:977)
 	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:833)
 	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:777)
@@ -197,8 +197,8 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testStrictMode took 0.205 sec
-Testcase: testNonStrictMode took 0.136 sec
-Testcase: testNonStrictModeMissingName took 0.007 sec
-Testcase: testValidation took 0.018 sec
-Testcase: testDirectory took 0 sec
+Testcase: testStrictMode took 0.209 sec
+Testcase: testNonStrictMode took 0.145 sec
+Testcase: testNonStrictModeMissingName took 0.008 sec
+Testcase: testValidation took 0.01 sec
+Testcase: testDirectory took 0.001 sec

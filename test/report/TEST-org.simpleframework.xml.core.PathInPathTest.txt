@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathInPathTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.368 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.424 sec
 ------------- Standard Output ---------------
 <pathInPathRoot>
    <a>
@@ -103,7 +103,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.368 sec
    </a>
 </path-in-path-root>>>>>> ELEMENT=[element path-in-path-root]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathInPathTest$PathInPathRoot]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathInPathRoot ID="0">
    <A>
       <B>
@@ -143,7 +143,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.368 sec
    </A>
 </PathInPathRoot>>>>>> ELEMENT=[element PathInPathRoot]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathInPathTest$PathInPathRoot]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <pathInPathRoot>
@@ -179,5 +179,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.368 sec
    </a>
 </pathInPathRoot>------------- ---------------- ---------------
 
-Testcase: testPathInPath took 0.362 sec
+Testcase: testPathInPath took 0.416 sec
 Testcase: testDirectory took 0 sec

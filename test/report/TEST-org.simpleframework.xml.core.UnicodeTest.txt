@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.015 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -476,7 +476,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </list>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
@@ -693,7 +693,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </List>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
@@ -1169,7 +1169,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </list>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
@@ -1386,7 +1386,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </List>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example>
    <list>
       <unicode origin="Norway" name="Tor Age Bringsvaerd">
@@ -1862,7 +1862,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </list>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
@@ -2079,7 +2079,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </List>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example>
    <list>
       <unicode origin="Syracuse (Sicily)" name="Archimedes">
@@ -2555,7 +2555,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </list>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0">
    <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
@@ -2772,11 +2772,11 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
    </List>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnicodeTest$UnicodeExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.573 sec
-Testcase: testWriteUnicode took 0.391 sec
-Testcase: testUnicodeFromByteStream took 0.15 sec
-Testcase: testIncorrectEncoding took 0.014 sec
+Testcase: testUnicode took 0.546 sec
+Testcase: testWriteUnicode took 0.327 sec
+Testcase: testUnicodeFromByteStream took 0.122 sec
+Testcase: testIncorrectEncoding took 0.009 sec
 Testcase: testDirectory took 0.001 sec

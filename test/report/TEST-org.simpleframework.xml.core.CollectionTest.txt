@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.027 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -47,7 +47,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <List class="java.util.TreeSet" ID="1">
@@ -69,7 +69,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
@@ -116,7 +116,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -138,7 +138,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="example">
    <list class="java.util.HashSet">
       <entry id="3">
@@ -185,7 +185,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySet]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- java.util.Set -->
    <List class="java.util.HashSet" ID="1">
@@ -207,7 +207,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySet]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="example">
    <list class="java.util.TreeSet">
       <entry id="1">
@@ -254,7 +254,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- java.util.SortedSet -->
    <List class="java.util.TreeSet" ID="1">
@@ -276,7 +276,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntrySortedSet]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
@@ -323,7 +323,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -345,7 +345,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$EntryList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <typeFromFieldList name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
@@ -392,7 +392,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </type-from-field-list>>>>>> ELEMENT=[element type-from-field-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromFieldList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <TypeFromFieldList ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -414,7 +414,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </TypeFromFieldList>>>>>> ELEMENT=[element TypeFromFieldList]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromFieldList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <typeFromMethodList name="example">
    <list class="java.util.ArrayList">
       <entry id="1">
@@ -461,7 +461,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </type-from-method-list>>>>>> ELEMENT=[element type-from-method-list]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromMethodList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <TypeFromMethodList ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -483,7 +483,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </TypeFromMethodList>>>>>> ELEMENT=[element TypeFromMethodList]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$TypeFromMethodList]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveCollection name="example">
    <list class="java.util.ArrayList">
       <text>one</text>
@@ -509,7 +509,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </primitive-collection>>>>>> ELEMENT=[element primitive-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -522,7 +522,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </PrimitiveCollection>>>>>> ELEMENT=[element PrimitiveCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <compositeCollection name="example">
    <list class="java.util.ArrayList">
       <text id="1">
@@ -569,7 +569,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </composite-collection>>>>>> ELEMENT=[element composite-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$CompositeCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <CompositeCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -591,7 +591,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </CompositeCollection>>>>>> ELEMENT=[element CompositeCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$CompositeCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveDefaultCollection name="example">
    <list class="java.util.ArrayList">
       <string>one</string>
@@ -617,7 +617,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </list>
 </primitive-default-collection>>>>>> ELEMENT=[element primitive-default-collection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveDefaultCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveDefaultCollection ID="0" name="example">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -630,7 +630,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
    </List>
 </PrimitiveDefaultCollection>>>>>> ELEMENT=[element PrimitiveDefaultCollection]
 >>>>> TYPE=[class org.simpleframework.xml.core.CollectionTest$PrimitiveDefaultCollection]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <test name="example">
@@ -661,7 +661,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
          <description>this is an extended entry</description>
       </entry>
    </list>
-</test>org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.HashSet for field 'list' private java.util.SortedSet org.simpleframework.xml.core.CollectionTest$EntrySortedSet.list at line -1
+</test>org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.HashSet for field 'list' private java.util.SortedSet org.simpleframework.xml.core.CollectionTest$EntrySortedSet.list at line 3
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:147)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
@@ -699,7 +699,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.095 sec
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.ArrayList for field 'list' private java.util.Set org.simpleframework.xml.core.CollectionTest$EntrySet.list at line -1
+org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.ArrayList for field 'list' private java.util.Set org.simpleframework.xml.core.CollectionTest$EntrySet.list at line 3
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:147)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
@@ -851,7 +851,7 @@ org.simpleframework.xml.core.InstantiationException: Cannot instantiate class or
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.Hashtable for field 'list' private java.util.List org.simpleframework.xml.core.CollectionTest$EntryList.list at line -1
+org.simpleframework.xml.core.InstantiationException: Incompatible class java.util.Hashtable for field 'list' private java.util.List org.simpleframework.xml.core.CollectionTest$EntryList.list at line 3
 	at org.simpleframework.xml.core.Factory.getOverride(Factory.java:147)
 	at org.simpleframework.xml.core.CollectionFactory.getInstance(CollectionFactory.java:87)
 	at org.simpleframework.xml.core.CompositeList.read(CompositeList.java:116)
@@ -940,24 +940,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.217 sec
-Testcase: testSortedSet took 0.134 sec
-Testcase: testList took 0.07 sec
-Testcase: testHashSet took 0.06 sec
-Testcase: testTreeSet took 0.062 sec
-Testcase: testArrayList took 0.055 sec
-Testcase: testSortedSetToSet took 0.006 sec
-Testcase: testExtendedEntry took 0.022 sec
-Testcase: testTypeFromFieldList took 0.094 sec
-Testcase: testTypeFromMethodList took 0.073 sec
-Testcase: testPrimitiveCollection took 0.037 sec
-Testcase: testCompositeCollection took 0.055 sec
-Testcase: testPrimitiveDefaultCollection took 0.029 sec
-Testcase: testSetToSortedSet took 0.006 sec
-Testcase: testListToSet took 0.005 sec
-Testcase: testInvalidList took 0.004 sec
-Testcase: testUnknownCollectionList took 0.005 sec
-Testcase: testAbstractList took 0.005 sec
-Testcase: testNotACollection took 0.078 sec
-Testcase: testMissingCollection took 0.051 sec
-Testcase: testDirectory took 0 sec
+Testcase: testSet took 0.258 sec
+Testcase: testSortedSet took 0.174 sec
+Testcase: testList took 0.065 sec
+Testcase: testHashSet took 0.055 sec
+Testcase: testTreeSet took 0.051 sec
+Testcase: testArrayList took 0.042 sec
+Testcase: testSortedSetToSet took 0.007 sec
+Testcase: testExtendedEntry took 0.021 sec
+Testcase: testTypeFromFieldList took 0.048 sec
+Testcase: testTypeFromMethodList took 0.055 sec
+Testcase: testPrimitiveCollection took 0.027 sec
+Testcase: testCompositeCollection took 0.038 sec
+Testcase: testPrimitiveDefaultCollection took 0.021 sec
+Testcase: testSetToSortedSet took 0.005 sec
+Testcase: testListToSet took 0.002 sec
+Testcase: testInvalidList took 0.003 sec
+Testcase: testUnknownCollectionList took 0.003 sec
+Testcase: testAbstractList took 0.086 sec
+Testcase: testNotACollection took 0.005 sec
+Testcase: testMissingCollection took 0.005 sec
+Testcase: testDirectory took 0.001 sec

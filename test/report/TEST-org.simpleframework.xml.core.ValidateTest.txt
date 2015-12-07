@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.279 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.261 sec
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version for class org.simpleframework.xml.core.ValidateTest$TextEntry at line -1
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version for class org.simpleframework.xml.core.ValidateTest$TextEntry at line 5
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:977)
 	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:801)
 	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:776)
@@ -40,7 +40,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.ValidateTest$TextEntry.name for class org.simpleframework.xml.core.ValidateTest$TextEntry at line -1
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=name) on field 'name' private java.lang.String org.simpleframework.xml.core.ValidateTest$TextEntry.name for class org.simpleframework.xml.core.ValidateTest$TextEntry at line 3
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:977)
 	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:801)
 	at org.simpleframework.xml.core.Composite.validateSection(Composite.java:776)
@@ -79,7 +79,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
-org.simpleframework.xml.core.PersistenceException: Element 'array' declared twice at line -1
+org.simpleframework.xml.core.PersistenceException: Element 'array' declared twice at line 7
 	at org.simpleframework.xml.core.Variable$Adapter.validate(Variable.java:466)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:951)
 	at org.simpleframework.xml.core.Composite.validateUnion(Composite.java:934)
@@ -113,8 +113,8 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testVersionMissing took 0.241 sec
+Testcase: testVersionMissing took 0.229 sec
 Testcase: testNameMissing took 0.005 sec
-Testcase: testTextMissing took 0.008 sec
+Testcase: testTextMissing took 0.003 sec
 Testcase: testExtraElement took 0.008 sec
-Testcase: testDirectory took 0.005 sec
+Testcase: testDirectory took 0.006 sec

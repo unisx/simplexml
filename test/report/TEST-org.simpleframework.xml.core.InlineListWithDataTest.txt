@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineListWithDataTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.387 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.479 sec
 ------------- Standard Output ---------------
 <listWithDataExample>
    <string><![CDATA[A]]></string>
@@ -24,7 +24,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.387 sec
    <string ID="3"><![CDATA[C]]></string>
 </list-with-data-example>>>>>> ELEMENT=[element list-with-data-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$ListWithDataExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ListWithDataExample ID="0">
    <!-- java.lang.String -->
    <String ID="1"><![CDATA[A]]></String>
@@ -34,7 +34,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.387 sec
    <String ID="3"><![CDATA[C]]></String>
 </ListWithDataExample>>>>>> ELEMENT=[element ListWithDataExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$ListWithDataExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <mapWithDataExample>
    <entry string="A"><![CDATA[1]]></entry>
    <entry string="B"><![CDATA[2]]></entry>
@@ -55,16 +55,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.387 sec
    <entry string="C"><![CDATA[3]]></entry>
 </map-with-data-example>>>>>> ELEMENT=[element map-with-data-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$MapWithDataExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapWithDataExample ID="0">
    <Entry string="A"><![CDATA[1]]></Entry>
    <Entry string="B"><![CDATA[2]]></Entry>
    <Entry string="C"><![CDATA[3]]></Entry>
 </MapWithDataExample>>>>>> ELEMENT=[element MapWithDataExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$MapWithDataExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testListWithData took 0.301 sec
-Testcase: testMapWithData took 0.079 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testListWithData took 0.373 sec
+Testcase: testMapWithData took 0.082 sec
+Testcase: testDirectory took 0 sec

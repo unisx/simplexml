@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.41 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.446 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -99,7 +99,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.41 sec
    </text-entry>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.CaseTest$CaseExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -145,8 +145,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.41 sec
    </TextEntry>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.CaseTest$CaseExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCase took 0.397 sec
-Testcase: testDirectory took 0.007 sec
+Testcase: testCase took 0.439 sec
+Testcase: testDirectory took 0 sec

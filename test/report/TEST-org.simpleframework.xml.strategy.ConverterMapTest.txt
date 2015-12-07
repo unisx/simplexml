@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ConverterMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.374 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.388 sec
 ------------- Standard Output ---------------
 <mapHolder>
    <map class="java.util.HashMap">
@@ -107,7 +107,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.374 sec
    </map>
 </map-holder>>>>>> ELEMENT=[element map-holder]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ConverterMapTest$MapHolder]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapHolder ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -150,8 +150,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.374 sec
    </Map>
 </MapHolder>>>>>> ELEMENT=[element MapHolder]
 >>>>> TYPE=[class org.simpleframework.xml.strategy.ConverterMapTest$MapHolder]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testMap took 0.367 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testMap took 0.382 sec
+Testcase: testDirectory took 0 sec

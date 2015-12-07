@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 1.029 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -38,7 +38,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -55,7 +55,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <complexMap>
    <map class="java.util.HashMap">
       <entry>
@@ -93,7 +93,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -110,7 +110,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <complexMap>
    <map class="java.util.HashMap">
       <entry>
@@ -148,7 +148,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -165,7 +165,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <complexMap>
    <map class="java.util.HashMap">
       <entry>
@@ -203,7 +203,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -220,7 +220,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveMap>
    <table class="java.util.HashMap">
       <entry>
@@ -247,7 +247,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </table>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
@@ -259,7 +259,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Table>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveMap>
    <table class="java.util.HashMap">
       <entry>
@@ -286,7 +286,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </table>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
@@ -298,7 +298,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Table>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveMap>
    <table class="java.util.HashMap">
       <entry>
@@ -325,7 +325,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </table>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
@@ -337,7 +337,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Table>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveMap>
    <table class="java.util.HashMap">
       <entry>
@@ -364,7 +364,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </table>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
@@ -376,7 +376,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Table>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveMap>
    <table class="java.util.HashMap">
       <entry>
@@ -444,7 +444,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </table>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveMap ID="0">
    <!-- java.util.Map -->
    <Table class="java.util.HashMap" ID="1">
@@ -473,7 +473,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Table>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$PrimitiveMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <complexMap>
    <map class="java.util.HashMap">
       <entry>
@@ -607,7 +607,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -666,7 +666,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <complexMap>
    <map class="java.util.HashMap">
       <entry>
@@ -800,7 +800,7 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ComplexMap ID="0">
    <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
@@ -859,16 +859,16 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.981 sec
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.MapNullTest$ComplexMap]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.341 sec
-Testcase: testEmptyCompositeBlankValue took 0.071 sec
-Testcase: testEmptyCompositeKey took 0.062 sec
-Testcase: testEmptyCompositeBlankKey took 0.061 sec
-Testcase: testEmptyPrimitiveValue took 0.07 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.037 sec
-Testcase: testEmptyPrimitiveKey took 0.041 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.042 sec
-Testcase: testNullValue took 0.243 sec
+Testcase: testEmptyCompositeValue took 0.468 sec
+Testcase: testEmptyCompositeBlankValue took 0.058 sec
+Testcase: testEmptyCompositeKey took 0.055 sec
+Testcase: testEmptyCompositeBlankKey took 0.052 sec
+Testcase: testEmptyPrimitiveValue took 0.042 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.034 sec
+Testcase: testEmptyPrimitiveKey took 0.037 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.06 sec
+Testcase: testNullValue took 0.204 sec
 Testcase: testDirectory took 0 sec

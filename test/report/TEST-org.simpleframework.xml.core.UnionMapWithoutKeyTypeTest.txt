@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.361 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.377 sec
 ------------- Standard Output ---------------
 <mapExample>
    <y-node key="3">
@@ -47,7 +47,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.361 sec
    </x-node>
 </map-example>>>>>> ELEMENT=[element map-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$MapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <MapExample ID="0">
    <YNode key="3">
       <!-- org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$Y -->
@@ -67,8 +67,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.361 sec
    </XNode>
 </MapExample>>>>>> ELEMENT=[element MapExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest$MapExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.354 sec
+Testcase: testInlineList took 0.369 sec
 Testcase: testDirectory took 0 sec

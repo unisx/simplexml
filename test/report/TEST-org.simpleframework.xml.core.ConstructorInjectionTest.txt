@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.477 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.533 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -14,14 +14,14 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.477 sec
    <string ID="1">text</string>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" number="32">
    <Integer>12</Integer>
    <!-- java.lang.String -->
    <String ID="1">text</String>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example number="0">
    <integer>12</integer>
    <string>text</string>
@@ -35,14 +35,14 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.477 sec
    <string ID="1">text</string>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" number="0">
    <Integer>12</Integer>
    <!-- java.lang.String -->
    <String ID="1">text</String>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <example number="0">
    <integer>12</integer>
 </example><example number="0">
@@ -52,12 +52,12 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.477 sec
    <integer>12</integer>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Example ID="0" number="0">
    <Integer>12</Integer>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$Example]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ArrayExample>
    <Array length="5">
       <String>entry one</String>
@@ -91,7 +91,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.477 sec
    </array>
 </array-example>>>>>> ELEMENT=[element array-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$ArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ArrayExample ID="0">
    <!-- [Ljava.lang.String; -->
    <Array length="5" ID="1">
@@ -108,11 +108,11 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.477 sec
    </Array>
 </ArrayExample>>>>>> ELEMENT=[element ArrayExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ConstructorInjectionTest$ArrayExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.326 sec
-Testcase: testPartialConstructor took 0.051 sec
-Testcase: testBareConstructor took 0.038 sec
-Testcase: testArrayExample took 0.054 sec
+Testcase: testConstructor took 0.403 sec
+Testcase: testPartialConstructor took 0.036 sec
+Testcase: testBareConstructor took 0.034 sec
+Testcase: testArrayExample took 0.047 sec
 Testcase: testDirectory took 0 sec

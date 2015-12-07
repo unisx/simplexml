@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathAsNamespacePrefixTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.426 sec
 ------------- Standard Output ---------------
 <p:pathWithPrefix xmlns:p="http://www.x.com/y">
    <x>
@@ -38,7 +38,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
    </x>
 </p:path-with-prefix>>>>>> ELEMENT=[element path-with-prefix]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathAsNamespacePrefixTest$PathWithPrefix]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <p:PathWithPrefix ID="0" xmlns:p="http://www.x.com/y">
    <X>
       <Y>
@@ -50,7 +50,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
    </X>
 </p:PathWithPrefix>>>>>> ELEMENT=[element PathWithPrefix]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathAsNamespacePrefixTest$PathWithPrefix]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <p:bringPrefixInScope xmlns:p="http://www.x.com/p">
    <example>
       <x>
@@ -97,7 +97,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
    </example>
 </p:bring-prefix-in-scope>>>>>> ELEMENT=[element bring-prefix-in-scope]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathAsNamespacePrefixTest$BringPrefixInScope]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <p:BringPrefixInScope ID="0" xmlns:p="http://www.x.com/p">
    <!-- org.simpleframework.xml.core.PathAsNamespacePrefixTest$PathWithPrefixOutOfScope -->
    <Example ID="1">
@@ -112,7 +112,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
    </Example>
 </p:BringPrefixInScope>>>>>> ELEMENT=[element BringPrefixInScope]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathAsNamespacePrefixTest$BringPrefixInScope]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Namespace prefix 'p' in class org.simpleframework.xml.core.PathAsNamespacePrefixTest$PathWithPrefixOutOfScope is not in scope
@@ -150,7 +150,7 @@ org.simpleframework.xml.core.ElementException: Namespace prefix 'p' in class org
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testPathWithPrefix took 0.345 sec
-Testcase: testPathWithPrefixOufOfScope took 0.013 sec
-Testcase: testBringPrefixInScope took 0.07 sec
+Testcase: testPathWithPrefix took 0.348 sec
+Testcase: testPathWithPrefixOufOfScope took 0.012 sec
+Testcase: testBringPrefixInScope took 0.058 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.632 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -28,7 +28,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <short>120</short>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <Boolean>true</Boolean>
    <Byte>16</Byte>
@@ -39,7 +39,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <Short>120</Short>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <test>
    <boolean>true</boolean>
    <byte>16</byte>
@@ -67,7 +67,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <short>120</short>
 </test>>>>>> ELEMENT=[element test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <Test ID="0">
    <Boolean>true</Boolean>
    <Byte>16</Byte>
@@ -78,7 +78,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <Short>120</Short>
 </Test>>>>>> ELEMENT=[element Test]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
@@ -106,7 +106,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <short-value>120</short-value>
 </implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ImplicitMethodNameExample ID="0">
    <BooleanValue>true</BooleanValue>
    <ByteValue>16</ByteValue>
@@ -117,7 +117,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <ShortValue>120</ShortValue>
 </ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <implicitMethodNameExample>
    <booleanValue>true</booleanValue>
    <byteValue>16</byteValue>
@@ -145,7 +145,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <short-value>120</short-value>
 </implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ImplicitMethodNameExample ID="0">
    <BooleanValue>true</BooleanValue>
    <ByteValue>16</ByteValue>
@@ -156,9 +156,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
    <ShortValue>120</ShortValue>
 </ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.403 sec
-Testcase: testImplicitMethodNameExample took 0.145 sec
+Testcase: testExplicitMethodNameExample took 0.463 sec
+Testcase: testImplicitMethodNameExample took 0.142 sec
 Testcase: testDirectory took 0 sec

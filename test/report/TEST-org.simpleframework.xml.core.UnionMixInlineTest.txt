@@ -1,9 +1,9 @@
 Testsuite: org.simpleframework.xml.core.UnionMixInlineTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.UnionException: Inline must be consistent in @org.simpleframework.xml.UnionList(value=[@org.simpleframework.xml.ElementList(inline=true, type=class java.lang.Integer, required=true, data=false, entry=, empty=true, name=x), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.Double, required=true, data=false, entry=, empty=true, name=y), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.String, required=true, data=false, entry=, empty=true, name=z)]) for org.simpleframework.xml.core.UnionListLabel@ab95e6
-	at org.simpleframework.xml.core.StructureBuilder.validateUnions(StructureBuilder.java:535)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:471)
+org.simpleframework.xml.core.UnionException: Inline must be consistent in @org.simpleframework.xml.UnionList(value=[@org.simpleframework.xml.ElementList(inline=true, type=class java.lang.Integer, required=true, data=false, entry=, empty=true, name=x), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.Double, required=true, data=false, entry=, empty=true, name=y), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.String, required=true, data=false, entry=, empty=true, name=z)]) for org.simpleframework.xml.core.UnionListLabel@1d99a4d
+	at org.simpleframework.xml.core.StructureBuilder.validateUnions(StructureBuilder.java:536)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:472)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:393)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
@@ -38,5 +38,5 @@ org.simpleframework.xml.core.UnionException: Inline must be consistent in @org.s
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testInlineMix took 0.173 sec
+Testcase: testInlineMix took 0.182 sec
 Testcase: testDirectory took 0 sec

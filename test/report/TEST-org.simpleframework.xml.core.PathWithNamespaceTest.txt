@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithNamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.332 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.34 sec
 ------------- Standard Output ---------------
 <pathWithNamespaceExample xmlns="http://www.domain.com/root">
    <a>
@@ -33,7 +33,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.332 sec
    </a>
 </path-with-namespace-example>>>>>> ELEMENT=[element path-with-namespace-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithNamespaceTest$PathWithNamespaceExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PathWithNamespaceExample ID="0" xmlns="http://www.domain.com/root">
    <A>
       <B>
@@ -47,8 +47,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.332 sec
    </A>
 </PathWithNamespaceExample>>>>>> ELEMENT=[element PathWithNamespaceExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithNamespaceTest$PathWithNamespaceExample]
->>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPathWithNamespace took 0.326 sec
+Testcase: testPathWithNamespace took 0.333 sec
 Testcase: testDirectory took 0 sec
