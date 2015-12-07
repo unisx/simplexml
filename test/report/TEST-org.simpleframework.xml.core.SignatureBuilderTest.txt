@@ -27,4 +27,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.01 sec
 [y] [c] [2] [j] 
 ------------- ---------------- ---------------
 
-Testcase: testMatrix took 0.005 sec
+Testcase: testMatrix took 0.006 sec

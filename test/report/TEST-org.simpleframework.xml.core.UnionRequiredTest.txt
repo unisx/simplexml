@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionRequiredTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.26 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: Required must be consistent in @org.simpleframework.xml.ElementUnion(value=[@org.simpleframework.xml.Element(type=class java.lang.Double, required=false, data=false, name=double), @org.simpleframework.xml.Element(type=class java.lang.String, required=true, data=false, name=string), @org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=int)]) for field 'value' private java.lang.Object org.simpleframework.xml.core.UnionRequiredTest$Example.value
 	at org.simpleframework.xml.core.StructureBuilder.validateUnions(StructureBuilder.java:591)
@@ -73,6 +73,6 @@ org.simpleframework.xml.core.UnionException: Required must be consistent in @org
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testRequired took 0.222 sec
-Testcase: testListRequired took 0.028 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testRequired took 0.191 sec
+Testcase: testListRequired took 0.024 sec
+Testcase: testDirectory took 0.001 sec

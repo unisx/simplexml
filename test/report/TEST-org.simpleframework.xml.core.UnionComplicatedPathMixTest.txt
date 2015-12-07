@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionComplicatedPathMixTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.103 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.954 sec
 ------------- Standard Output ---------------
 <complicatedExample xmlns:x="http://www.x.com/x">
    <x:path>
@@ -369,6 +369,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.103 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testComplicatedMap took 0.741 sec
-Testcase: testStyledComplicatedMap took 0.354 sec
+Testcase: testComplicatedMap took 0.68 sec
+Testcase: testStyledComplicatedMap took 0.267 sec
 Testcase: testDirectory took 0.001 sec

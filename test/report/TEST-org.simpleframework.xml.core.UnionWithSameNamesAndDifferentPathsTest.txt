@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionWithSameNamesAndDifferentPathsTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.59 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.421 sec
 ------------- Standard Output ---------------
 <example>
    <path>
@@ -80,6 +80,6 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'b' does not have a
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNamespaceWithUnion took 0.516 sec
-Testcase: testErrorInParametersExample took 0.054 sec
+Testcase: testNamespaceWithUnion took 0.39 sec
+Testcase: testErrorInParametersExample took 0.015 sec
 Testcase: testDirectory took 0 sec

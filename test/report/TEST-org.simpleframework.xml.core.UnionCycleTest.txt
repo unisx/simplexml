@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionCycleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.347 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.332 sec
 ------------- Standard Output ---------------
 <shapeExample id="0">
    <circle id="1">
@@ -30,5 +30,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.347 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testUnionCycle took 0.34 sec
-Testcase: testDirectory took 0 sec
+Testcase: testUnionCycle took 0.326 sec
+Testcase: testDirectory took 0.001 sec

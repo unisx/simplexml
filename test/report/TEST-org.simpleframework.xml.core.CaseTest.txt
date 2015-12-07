@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.385 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -148,5 +148,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCase took 0.402 sec
+Testcase: testCase took 0.378 sec
 Testcase: testDirectory took 0 sec

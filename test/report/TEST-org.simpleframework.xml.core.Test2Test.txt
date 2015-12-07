@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.Test2Test
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.172 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.168 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: Annotation name 'elements' used more than once in @org.simpleframework.xml.ElementListUnion(value=[@org.simpleframework.xml.ElementList(inline=false, type=class org.simpleframework.xml.core.Test2Test$Test2$MyElementA, required=true, data=false, entry=element-a, empty=true, name=elements), @org.simpleframework.xml.ElementList(inline=false, type=class org.simpleframework.xml.core.Test2Test$Test2$MyElementB, required=true, data=false, entry=element-b, empty=true, name=elements)]) for class org.simpleframework.xml.core.Test2Test$Test2
 	at org.simpleframework.xml.core.SignatureScanner.union(SignatureScanner.java:219)
@@ -41,4 +41,4 @@ org.simpleframework.xml.core.UnionException: Annotation name 'elements' used mor
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testException took 0.167 sec
+Testcase: testException took 0.163 sec

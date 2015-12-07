@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.VisitorStrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.359 sec
 ------------- Standard Output ---------------
 <visitorExample>
    <!-- java.util.ArrayList -->
@@ -108,5 +108,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testStrategy took 0.369 sec
+Testcase: testStrategy took 0.352 sec
 Testcase: testDirectory took 0 sec

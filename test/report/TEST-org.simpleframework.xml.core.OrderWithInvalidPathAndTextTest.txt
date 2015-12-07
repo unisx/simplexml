@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OrderWithInvalidPathAndTextTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.208 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.196 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Ordered element 'a/b/c' missing for class org.simpleframework.xml.core.OrderWithInvalidPathAndTextTest$InvalidOrder
 	at org.simpleframework.xml.core.StructureBuilder.validateElements(StructureBuilder.java:609)
@@ -38,5 +38,5 @@ org.simpleframework.xml.core.ElementException: Ordered element 'a/b/c' missing f
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testIvalidOrderWithText took 0.199 sec
+Testcase: testIvalidOrderWithText took 0.189 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.279 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.238 sec
 ------------- Standard Output ---------------
 <nonMatchingUnionList>
    <a/>
@@ -44,5 +44,5 @@ org.simpleframework.xml.core.UnionException: Entry of class org.simpleframework.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNonMatching took 0.267 sec
-Testcase: testDirectory took 0.003 sec
+Testcase: testNonMatching took 0.225 sec
+Testcase: testDirectory took 0.002 sec

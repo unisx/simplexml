@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithMixedOrdreringTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.42 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
 ------------- Standard Output ---------------
 <person>
    <name>
@@ -62,5 +62,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.42 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testMixedOrdering took 0.413 sec
+Testcase: testMixedOrdering took 0.33 sec
 Testcase: testDirectory took 0 sec

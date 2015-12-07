@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.826 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.461 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -117,8 +117,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.826 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.614 sec
-Testcase: testPartialConstructor took 0.075 sec
-Testcase: testBareConstructor took 0.067 sec
-Testcase: testArrayExample took 0.057 sec
-Testcase: testDirectory took 0 sec
+Testcase: testConstructor took 0.336 sec
+Testcase: testPartialConstructor took 0.044 sec
+Testcase: testBareConstructor took 0.033 sec
+Testcase: testArrayExample took 0.039 sec
+Testcase: testDirectory took 0.001 sec

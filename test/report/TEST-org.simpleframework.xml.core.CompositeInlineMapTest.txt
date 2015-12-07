@@ -25,5 +25,5 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.182 sec
 </attributeNoKeyString>------------- ---------------- ---------------
 
 Testcase: testNotInlineString took 0.087 sec
-Testcase: testNoAttributeString took 0.084 sec
+Testcase: testNoAttributeString took 0.083 sec
 Testcase: testAttributeNoKeyString took 0.004 sec

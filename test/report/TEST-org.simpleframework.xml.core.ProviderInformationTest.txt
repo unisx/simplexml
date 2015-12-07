@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ProviderInformationTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.262 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
 ------------- Standard Output ---------------
 Constructor exception Ordered element 'providerInformation' missing for class org.simpleframework.xml.core.ProviderInformationTest$SolutionPackageDeploymentType
 ------------- ---------------- ---------------
@@ -40,4 +40,4 @@ org.simpleframework.xml.core.ElementException: Ordered element 'providerInformat
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testToString took 0.255 sec
+Testcase: testToString took 0.23 sec

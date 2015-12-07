@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapTest
-Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.814 sec
+Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.837 sec
 ------------- Standard Output ---------------
 <entryMap>
    <map class="java.util.HashMap">
@@ -1444,14 +1444,14 @@ Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.814 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.363 sec
-Testcase: testStringMap took 0.022 sec
-Testcase: testComplexMap took 0.081 sec
-Testcase: testPrimitiveMap took 0.037 sec
-Testcase: testPrimitiveValueOverrideMap took 0.026 sec
-Testcase: testPrimitiveValueKeyOverrideMap took 0.022 sec
-Testcase: testComplexValueKeyOverrideMap took 0.071 sec
+Testcase: testEntryMap took 0.355 sec
+Testcase: testStringMap took 0.028 sec
+Testcase: testComplexMap took 0.084 sec
+Testcase: testPrimitiveMap took 0.044 sec
+Testcase: testPrimitiveValueOverrideMap took 0.033 sec
+Testcase: testPrimitiveValueKeyOverrideMap took 0.026 sec
+Testcase: testComplexValueKeyOverrideMap took 0.084 sec
 Testcase: testPrimitiveInlineMap took 0.026 sec
-Testcase: testNullValue took 0.07 sec
-Testcase: testIndexExample took 0.075 sec
+Testcase: testNullValue took 0.068 sec
+Testcase: testIndexExample took 0.074 sec
 Testcase: testDirectory took 0 sec

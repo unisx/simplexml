@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionWithMissingValuesTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.315 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
 
-Testcase: testDefaultMatchA took 0.247 sec
-Testcase: testMatchAD took 0.024 sec
-Testcase: testMatchACD took 0.019 sec
-Testcase: testMatchABCD took 0.016 sec
+Testcase: testDefaultMatchA took 0.222 sec
+Testcase: testMatchAD took 0.023 sec
+Testcase: testMatchACD took 0.017 sec
+Testcase: testMatchABCD took 0.015 sec

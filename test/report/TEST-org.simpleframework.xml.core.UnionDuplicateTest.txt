@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionDuplicateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.277 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.237 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PersistenceException: Element 'square' is already used with @org.simpleframework.xml.ElementUnion(value=[@org.simpleframework.xml.Element(type=class org.simpleframework.xml.core.UnionDuplicateTest$Circle, required=true, data=false, name=circle), @org.simpleframework.xml.Element(type=class org.simpleframework.xml.core.UnionDuplicateTest$Square, required=true, data=false, name=square)]) on field 'shape' private org.simpleframework.xml.core.UnionDuplicateTest$Shape org.simpleframework.xml.core.UnionDuplicateTest$Diagram.shape at line 1
 	at org.simpleframework.xml.core.Variable$Adapter.read(Variable.java:467)
@@ -40,5 +40,5 @@ org.simpleframework.xml.core.PersistenceException: Element 'square' is already u
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testShape took 0.269 sec
+Testcase: testShape took 0.23 sec
 Testcase: testDirectory took 0.002 sec

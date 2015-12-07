@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathCaseTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.292 sec
 ------------- Standard Output ---------------
 <caseExample>
    <SomePath>
@@ -58,6 +58,6 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'SomePath[1]/A[1]' 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNoStyle took 0.27 sec
-Testcase: testStyle took 0.026 sec
-Testcase: testOtherStyle took 0.011 sec
+Testcase: testNoStyle took 0.253 sec
+Testcase: testStyle took 0.023 sec
+Testcase: testOtherStyle took 0.01 sec

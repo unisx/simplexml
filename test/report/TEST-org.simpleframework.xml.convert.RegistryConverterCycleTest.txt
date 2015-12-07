@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.RegistryConverterCycleTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.261 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.292 sec
 ------------- Standard Output ---------------
 <Club id="0">
    <Address id="1">
@@ -16,4 +16,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.261 sec
    </Members>
 </Club>------------- ---------------- ---------------
 
-Testcase: testCycle took 0.255 sec
+Testcase: testCycle took 0.283 sec

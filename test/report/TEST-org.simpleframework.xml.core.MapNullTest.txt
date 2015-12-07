@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.745 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.69 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -862,13 +862,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.745 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.359 sec
-Testcase: testEmptyCompositeBlankValue took 0.049 sec
-Testcase: testEmptyCompositeKey took 0.043 sec
-Testcase: testEmptyCompositeBlankKey took 0.036 sec
-Testcase: testEmptyPrimitiveValue took 0.028 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.025 sec
-Testcase: testEmptyPrimitiveKey took 0.026 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.047 sec
-Testcase: testNullValue took 0.113 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEmptyCompositeValue took 0.336 sec
+Testcase: testEmptyCompositeBlankValue took 0.041 sec
+Testcase: testEmptyCompositeKey took 0.039 sec
+Testcase: testEmptyCompositeBlankKey took 0.034 sec
+Testcase: testEmptyPrimitiveValue took 0.026 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.023 sec
+Testcase: testEmptyPrimitiveKey took 0.023 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.046 sec
+Testcase: testNullValue took 0.105 sec
+Testcase: testDirectory took 0 sec

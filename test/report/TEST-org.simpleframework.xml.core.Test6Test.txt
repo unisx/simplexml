@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.Test6Test
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.27 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.256 sec
 ------------- Standard Output ---------------
 <test6>
    <elements>
@@ -17,4 +17,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.27 sec
 
 ------------- ---------------- ---------------
 
-Testcase: testSerialize took 0.265 sec
+Testcase: testSerialize took 0.25 sec
