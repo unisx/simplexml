@@ -35,8 +35,9 @@ import java.lang.annotation.Retention;
  * or table of sorts the persist method can be used to grab a lock
  * for the internal data structure. Such a scheme will ensure that
  * the object is serialized in a known state. The persist method
- * must be a no argument public method, it may throw an exception
- * to terminate the serialization process if required.
+ * must be a no argument public method or a method that takes a 
+ * single <code>Map</code> argument, it may throw an exception to 
+ * terminate the serialization process if required.
  * 
  * @author Niall Gallagher
  * 

@@ -1,0 +1,15 @@
+Testsuite: simple.xml.load.CollectionTest
+Tests run: 12, Failures: 0, Errors: 0, Time elapsed: 0.312 sec
+
+Testcase: testSet took 0.226 sec
+Testcase: testSortedSet took 0.003 sec
+Testcase: testList took 0.004 sec
+Testcase: testHashSet took 0.006 sec
+Testcase: testTreeSet took 0.002 sec
+Testcase: testArrayList took 0.006 sec
+Testcase: testSortedSetToSet took 0.002 sec
+Testcase: testSetToSortedSet took 0.047 sec
+Testcase: testListToSet took 0.002 sec
+Testcase: testAbstractList took 0.004 sec
+Testcase: testNotACollection took 0.002 sec
+Testcase: testMissingCollection took 0.006 sec

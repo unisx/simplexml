@@ -34,7 +34,8 @@ import java.lang.annotation.Retention;
  * the persist method was invoked. For example, should the persist
  * method acquire a lock to ensure the object is serialized in a
  * safe state then the commit method can be used to release the lock.
- * The complete method must be a no argument public method. The
+ * The complete method must be a no argument public method or a
+ * method that takes a single <code>Map</code> object argument. The
  * complete method is invoked even if deserialization terminates.   
  * 
  * @author Niall Gallagher

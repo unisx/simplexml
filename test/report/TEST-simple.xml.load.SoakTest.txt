@@ -1,0 +1,4 @@
+Testsuite: simple.xml.load.SoakTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.707 sec
+
+Testcase: testSystem took 0.706 sec

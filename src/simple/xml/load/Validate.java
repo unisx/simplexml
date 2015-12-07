@@ -32,7 +32,8 @@ import java.lang.annotation.Retention;
  * <p>
  * Typically the validate method is used to validate the fields that
  * have been assigned once deserialization has been completed. The
- * validate method must be a no argument public method. When invoked 
+ * validate method must be a no argument public method or a method
+ * that takes a <code>Map</code> as the only argument. When invoked 
  * the object can determine whether the fields are valid, if the  
  * field values do not conform to the objects requirements then the
  * method can throw an exception to terminate deserialization.

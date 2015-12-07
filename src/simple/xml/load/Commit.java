@@ -34,7 +34,8 @@ import java.lang.annotation.Retention;
  * Typically the commit method is used to complete deserialization
  * by allowing the object to build further data structures from the
  * fields that have been created from the deserialization process.
- * The commit method must be a no argument method, and may throw an
+ * The commit method must be a no argument method or a method that
+ * takes a single <code>Map</code> object argument, and may throw an
  * exception, in which case the deserialization process terminates.
  * 
  * @author Niall Gallagher
