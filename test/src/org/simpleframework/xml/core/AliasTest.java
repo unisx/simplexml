@@ -1,9 +1,13 @@
 package org.simpleframework.xml.core;
 
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -18,6 +22,9 @@ import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.Node;
 import org.simpleframework.xml.stream.NodeMap;
 import org.simpleframework.xml.stream.OutputNode;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
 public class AliasTest extends ValidationTestCase {
     
@@ -80,7 +87,7 @@ public class AliasTest extends ValidationTestCase {
     }
     
     @Root
-    @Namespace(prefix="m", reference="http://simpleframework.org/map")
+    @Namespace(prefix="table", reference="http://simpleframework.org/map")
     private static class MultiValueMap {
         
         @ElementMap        
@@ -100,7 +107,7 @@ public class AliasTest extends ValidationTestCase {
     }
     
     @Root
-    @Namespace(prefix="e", reference="http://simpleframework.org/entry")
+    @Namespace(prefix="item", reference="http://simpleframework.org/entry")
     private static class MultiValueEntry {
         
         @Attribute(name="name")
@@ -126,16 +133,17 @@ public class AliasTest extends ValidationTestCase {
         alias.addAlias(Integer.class, "int");
         alias.addAlias(Double.class, "float");
         alias.addAlias(String.class, "text");
-        alias.addAlias(MultiValueEntry.class, "entry");
+        alias.addAlias(MultiValueEntry.class, "item");
         
         map.add("integer", 1);
         map.add("double", 0.0d);
         map.add("string", "test");
-        map.add("entry", new MultiValueEntry("example", "item"));
+        map.add("item", new MultiValueEntry("example", "item"));
         
         StringWriter out = new StringWriter();
         persister.write(map, out);
-        String text = out.toString();
+        String text = out.toString();//.replaceAll("entry", "table:entry");
+        System.err.println(text);
         
         MultiValueMap read = persister.read(MultiValueMap.class, text);
         
@@ -144,6 +152,20 @@ public class AliasTest extends ValidationTestCase {
         assertEquals(read.get("string"), "test");
         
         validate(persister, map);
+        
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        
+        // Ensure we know about namespaces
+        factory.setNamespaceAware(true);
+        factory.setValidating(false);
+        
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        StringReader reader = new StringReader(text);
+        InputSource source = new InputSource(reader);        
+        Document doc = builder.parse(source);        
+        org.w3c.dom.Element element = doc.getDocumentElement();
+        
+        assertEquals("multiValueMap", element.getLocalName());
+        assertEquals("http://simpleframework.org/map", element.getNamespaceURI());
     }
-
 }

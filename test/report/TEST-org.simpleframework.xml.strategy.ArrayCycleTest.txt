@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.ArrayCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.891 sec
 ------------- Standard Output ---------------
 <root id="0">
    <one length="5" id="1">
@@ -163,6 +163,6 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
 </Value>------------- ---------------- ---------------
 
 Testcase: testCycle took 0.266 sec
-Testcase: testNestedExample took 0.079 sec
-Testcase: testPromotion took 0.031 sec
+Testcase: testNestedExample took 0.078 sec
+Testcase: testPromotion took 0.547 sec
 Testcase: testDirectory took 0 sec

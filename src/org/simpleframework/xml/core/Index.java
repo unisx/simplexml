@@ -1,5 +1,5 @@
 /*
- * ClassMap.java April 2009
+ * Index.java April 2009
  *
  * Copyright (C) 2009, Niall Gallagher <niallg@users.sf.net>
  *
@@ -23,7 +23,7 @@ package org.simpleframework.xml.core;
 import java.util.LinkedHashMap;
 
 /**
- * The <code>ClassMap</code> object is used to represent a map
+ * The <code>Index</code> object is used to represent an index
  * of parameters iterable in declaration order. This is used so
  * that parameters can be acquired by name for validation. It is
  * also used to create an array of <code>Parameter</code> objects
@@ -32,7 +32,7 @@ import java.util.LinkedHashMap;
  * 
  * @author Niall Gallagher
  */
-class ClassMap extends LinkedHashMap<String, Parameter> {
+class Index extends LinkedHashMap<String, Parameter> {
     
    /**
     * This represents a blank array of parameter objects.
@@ -45,27 +45,40 @@ class ClassMap extends LinkedHashMap<String, Parameter> {
    private final Class type;
    
    /**
-    * Constructor for the <code>ClassMap</code> object. This
-    * is used to create a hash map that can be used to acquire
+    * Constructor for the <code>Index</code> object. This is 
+    * used to create a hash map that can be used to acquire
     * parameters by name. It also provides the parameters in
     * declaration order within a for each loop.
     * 
     * @param type this is the type the map is created for
     */
-   public ClassMap(Class type) {
+   public Index(Class type) {
       this.blank = new Parameter[]{};
       this.type = type;
+   }
+   
+   /**
+    * This is used to acquire a <code>Parameter</code> using the
+    * position of that parameter within the constructor. This 
+    * allows a builder to determine which parameters to use..
+    * 
+    * @param ordinal this is the position of the parameter
+    * 
+    * @return this returns the parameter for the position
+    */
+   public Parameter getParameter(int ordinal) {
+      return getParameters()[ordinal];
    }
     
    /**
     * This is used to acquire an array of <code>Parameter</code>
     * objects in declaration order. This array will help with the
-    * resolution of the correct constructor to use on deserialization
+    * resolution of the correct constructor for deserialization
     * of the XML. It also provides a faster method of iteration.
     * 
     * @return this returns the parameters in declaration order
     */
-   public Parameter[] list() {
+   public Parameter[] getParameters() {
       return values().toArray(blank);
    }
  

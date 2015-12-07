@@ -47,7 +47,7 @@ class Builder {
    /**
     * This is the map that contains the parameters to be used.
     */
-   private final ClassMap map;
+   private final Index index;
 
    /**
     * Constructor for the <code>Builder</code> object. This is used
@@ -56,12 +56,12 @@ class Builder {
     * it is provided.
     * 
     * @param factory this is the factory used for instantiation
-    * @param map this is the map of parameters that are declared
+    * @param index this is the map of parameters that are declared
     */
-   public Builder(Constructor factory, ClassMap map) {
-      this.list = map.list();
+   public Builder(Constructor factory, Index index) {
+      this.list = index.getParameters();
       this.factory = factory;
-      this.map = map;
+      this.index = index;
    } 
    
    /**
@@ -72,7 +72,7 @@ class Builder {
     * @return true if the class has a default constructor
     */
    public boolean isDefault() {
-      return map.size() == 0;
+      return index.size() == 0;
    }
    
    /**
@@ -86,7 +86,7 @@ class Builder {
     * @return this returns the named parameter for the builder
     */
    public Parameter getParameter(String name) {
-      return map.get(name);
+      return index.get(name);
    }
    
    /**
@@ -97,6 +97,9 @@ class Builder {
     * @return this returns the object that has been instantiated
     */
    public Object getInstance() throws Exception {
+      if(!factory.isAccessible()) {
+         factory.setAccessible(true);
+      }
       return factory.newInstance();
    }
    

@@ -45,7 +45,7 @@ class ClassCreator implements Creator {
    /**
     * This is used to acquire a parameter by the parameter name.
     */
-   private final ClassMap map;
+   private final Index index;
    
    /**
     * This is the type this builder creates instances of.
@@ -58,14 +58,14 @@ class ClassCreator implements Creator {
     * relates to the construction of an instance. 
     * 
     * @param list this contains the list of all constructors 
-    * @param map this contains all parameters for each constructor
+    * @param index this contains all parameters for each constructor
     * @param primary this is the default no argument constructor
     */
-   public ClassCreator(List<Builder> list, ClassMap map, Builder primary) {
-      this.type = map.getType();
+   public ClassCreator(List<Builder> list, Index index, Builder primary) {
+      this.type = index.getType();
       this.primary = primary;
+      this.index = index;
       this.list = list;
-      this.map = map;
    }
 
    /**
@@ -144,7 +144,7 @@ class ClassCreator implements Creator {
     * @return this returns the named parameter for the creator
     */
    public Parameter getParameter(String name) {
-      return map.get(name);
+      return index.get(name);
    }
    
    /**

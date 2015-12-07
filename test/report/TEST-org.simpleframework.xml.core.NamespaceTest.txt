@@ -59,5 +59,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
    <Value ID="7">Person</Value>
 </per:Person>------------- ---------------- ---------------
 
-Testcase: testNamespace took 0.297 sec
+Testcase: testNamespace took 0.282 sec
 Testcase: testDirectory took 0 sec

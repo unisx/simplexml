@@ -22,6 +22,7 @@ package org.simpleframework.xml.stream;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLEventReader;
+import java.io.InputStream;
 import java.io.Reader;
 import java.io.Writer;
 
@@ -46,6 +47,19 @@ public final class NodeBuilder {
 
    static {
       factory = XMLInputFactory.newInstance();                    
+   }
+
+   /**
+    * This is used to create an <code>InputNode</code> that can be 
+    * used to read XML from the specified stream. The stream will
+    * be positioned at the root element in the XML document.
+    *
+    * @param source this contains the contents of the XML source
+    *
+    * @throws Exception thrown if there is an I/O exception
+    */   
+   public static InputNode read(InputStream source) throws Exception {
+      return read(factory.createXMLEventReader(source));   
    }
         
    /**

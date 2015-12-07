@@ -298,13 +298,8 @@ class ClassScanner  {
    private void scan(Class real, Class type) throws Exception {
       Method[] method = type.getDeclaredMethods();
 
-      for(int i = 0; i < method.length; i++) {
-         Method next = method[i];
-         
-         if(!next.isAccessible()) {
-            next.setAccessible(true);
-         }
-         scan(next);              
+      for(int i = 0; i < method.length; i++) {         
+         scan(method[i]);              
       }     
    }
 
@@ -524,6 +519,9 @@ class ClassScanner  {
    private Function getFunction(Method method) {
       boolean contextual = isContextual(method);
       
+      if(!method.isAccessible()) {
+         method.setAccessible(true);
+      }
       return new Function(method, contextual);
    }
    

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CompatibilityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.204 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'address' does not exist at line -1
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:543)
@@ -31,7 +31,7 @@ org.simpleframework.xml.core.ElementException: Element 'address' does not exist 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:420)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:911)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
-org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.ElementList(inline=false, type=void, required=true, data=false, entry=, empty=true, name=) on field 'list' private java.util.List org.simpleframework.xml.core.CompatibilityTest$Example_v1.list for class org.simpleframework.xml.core.CompatibilityTest$Example_v1 at line -1
+org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.ElementList(inline=false, required=true, type=void, data=false, entry=, empty=true, name=) on field 'list' private java.util.List org.simpleframework.xml.core.CompatibilityTest$Example_v1.list for class org.simpleframework.xml.core.CompatibilityTest$Example_v1 at line -1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:646)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:466)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:350)
@@ -93,4 +93,4 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testCompatibility took 0.204 sec
+Testcase: testCompatibility took 0.203 sec

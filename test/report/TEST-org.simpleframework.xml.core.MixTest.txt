@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MixTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
 ------------- Standard Output ---------------
 <mixExample>
    <list class="java.util.ArrayList">
@@ -27,7 +27,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2009-10-05 11:03:44.270 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2009-11-12 18:32:38.769 GMT</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -54,7 +54,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2009-10-05 11:03:44.270 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2009-11-12 18:32:38.769 GMT</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -81,7 +81,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2009-10-05 11:03:44.270 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2009-11-12 18:32:38.769 GMT</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -108,7 +108,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2009-10-05 11:03:44.270 BST</calendar>
+   <calendar class="java.util.GregorianCalendar">2009-11-12 18:32:38.769 GMT</calendar>
 </mixExample>
 <mix-example ID="0">
    <list class="java.util.ArrayList" ID="1">
@@ -136,7 +136,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
          <object class="java.lang.String" ID="15">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar" ID="16">2009-10-05 11:03:44.270 BST</calendar>
+   <calendar class="java.util.GregorianCalendar" ID="16">2009-11-12 18:32:38.769 GMT</calendar>
 </mix-example><MixExample ID="0">
    <List class="java.util.ArrayList" ID="1">
       <Object class="java.lang.String" ID="2">text</Object>
@@ -163,8 +163,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.376 sec
          <Object class="java.lang.String" ID="15">value 2</Object>
       </Entry>
    </Map>
-   <Calendar class="java.util.GregorianCalendar" ID="16">2009-10-05 11:03:44.270 BST</Calendar>
+   <Calendar class="java.util.GregorianCalendar" ID="16">2009-11-12 18:32:38.769 GMT</Calendar>
 </MixExample>------------- ---------------- ---------------
 
-Testcase: testMix took 0.376 sec
+Testcase: testMix took 0.422 sec
 Testcase: testDirectory took 0 sec

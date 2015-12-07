@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MatcherTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.235 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
 ------------- Standard Output ---------------
 <foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
    <value>12345</value>
@@ -14,5 +14,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.235 sec
    <Value ID="1">1</Value>
 </foo:Example>------------- ---------------- ---------------
 
-Testcase: testMatcher took 0.235 sec
+Testcase: testMatcher took 0.234 sec
 Testcase: testDirectory took 0 sec

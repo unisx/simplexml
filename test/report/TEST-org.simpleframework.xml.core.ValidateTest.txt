@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version at line -1
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:882)
@@ -105,5 +105,5 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 Testcase: testVersionMissing took 0.172 sec
 Testcase: testNameMissing took 0 sec
 Testcase: testTextMissing took 0 sec
-Testcase: testExtraElement took 0 sec
+Testcase: testExtraElement took 0.015 sec
 Testcase: testDirectory took 0 sec

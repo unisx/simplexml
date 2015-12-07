@@ -49,7 +49,7 @@ class ConstructorScanner {
    /**
     * This contains a list of all the builders for the class.
     */
-   private List<Builder> done;
+   private List<Builder> list;
    
    /**
     * This represents the default no argument constructor used.
@@ -59,7 +59,7 @@ class ConstructorScanner {
    /**
     * This is used to acquire a parameter by the parameter name.
     */
-   private ClassMap table;
+   private Index index;
    
    /**
     * This is the type that is scanner for annotated constructors.
@@ -75,8 +75,8 @@ class ConstructorScanner {
     * @param type this is the type that is to be scanned
     */
    public ConstructorScanner(Class type) throws Exception {
-      this.done = new ArrayList<Builder>();
-      this.table = new ClassMap(type);
+      this.list = new ArrayList<Builder>();
+      this.index = new Index(type);
       this.type = type;
       this.scan(type);
    }
@@ -91,7 +91,7 @@ class ConstructorScanner {
     * @return this returns the creator for the class object
     */
    public Creator getCreator() {
-      return new ClassCreator(done, table, primary);
+      return new ClassCreator(list, index, primary);
    }
    
    /**
@@ -105,12 +105,11 @@ class ConstructorScanner {
       Constructor[] array = type.getDeclaredConstructors();
       
       for(Constructor factory: array){
-         ClassMap map = new ClassMap(type);
+         Index index = new Index(type);
          
-         if(!factory.isAccessible()) {
-            factory.setAccessible(true);
+         if(!type.isPrimitive()) {
+            scan(factory, index);
          }
-         scan(factory, map);
       } 
    }
    
@@ -123,7 +122,7 @@ class ConstructorScanner {
     * @param factory this is the constructor that is to be scanned
     * @param map this is the parameter map that contains parameters
     */
-   private void scan(Constructor factory, ClassMap map) throws Exception {
+   private void scan(Constructor factory, Index map) throws Exception {
       Annotation[][] labels = factory.getParameterAnnotations();
       Class[] types = factory.getParameterTypes();
 
@@ -137,7 +136,7 @@ class ConstructorScanner {
                if(map.containsKey(name)) {
                   throw new PersistenceException("Parameter '%s' is a duplicate in %s", name, factory);
                }
-               table.put(name, value);
+               index.put(name, value);
                map.put(name, value);
             }
          }
@@ -155,13 +154,13 @@ class ConstructorScanner {
     * @param factory this is the constructor that is to be scanned
     * @param map this is the parameter map that contains parameters
     */
-   private void build(Constructor factory, ClassMap map) throws Exception {
+   private void build(Constructor factory, Index map) throws Exception {
       Builder builder = new Builder(factory, map);
       
       if(builder.isDefault()) {
          primary = builder;
       }
-      done.add(builder);   
+      list.add(builder);   
    }
    
    /**
@@ -171,25 +170,25 @@ class ConstructorScanner {
     * 
     * @param factory this is the constructor the parameter is in
     * @param label this is the annotation used for the parameter
-    * @param index this is the index the parameter appears in
+    * @param ordinal this is the position the parameter appears at
     * 
     * @return this returns the parameter for the constructor
     */
-   private Parameter process(Constructor factory, Annotation label, int index) throws Exception{
+   private Parameter process(Constructor factory, Annotation label, int ordinal) throws Exception{
       if(label instanceof Attribute) {
-         return create(factory, label, index);
+         return create(factory, label, ordinal);
       }
       if(label instanceof ElementList) {
-         return create(factory, label, index);
+         return create(factory, label, ordinal);
       }     
       if(label instanceof ElementArray) {
-         return create(factory, label, index);
+         return create(factory, label, ordinal);
       }
       if(label instanceof ElementMap) {
-         return create(factory, label, index);
+         return create(factory, label, ordinal);
       }
       if(label instanceof Element) {
-         return create(factory, label, index);
+         return create(factory, label, ordinal);
       }
       return null;
    }
@@ -201,15 +200,15 @@ class ConstructorScanner {
     * 
     * @param factory this is the constructor the parameter is in
     * @param label this is the annotation used for the parameter
-    * @param index this is the index the parameter appears in
+    * @param ordinal this is the position the parameter appears at
     * 
     * @return this returns the parameter for the constructor
     */
-   private Parameter create(Constructor factory, Annotation label, int index) throws Exception {
-      Parameter value = ParameterFactory.getInstance(factory, label, index);
+   private Parameter create(Constructor factory, Annotation label, int ordinal) throws Exception {
+      Parameter value = ParameterFactory.getInstance(factory, label, ordinal);
       String name = value.getName(); 
       
-      if(table.containsKey(name)) {
+      if(index.containsKey(name)) {
          validate(value, name);
       }
       return value;
@@ -225,7 +224,7 @@ class ConstructorScanner {
     * @param name this is the name of the parameter to validate
     */
    private void validate(Parameter parameter, String name) throws Exception {
-      Parameter other = table.get(name);
+      Parameter other = index.get(name);
       Annotation label = other.getAnnotation();
       
       if(!parameter.getAnnotation().equals(label)) {

@@ -25,5 +25,5 @@ Base64Encoder
 Base64Encoder
 ------------- ---------------- ---------------
 
-Testcase: testHyphenStrategy took 0 sec
+Testcase: testHyphenStrategy took 0.015 sec
 Testcase: testCamelCaseStrategy took 0 sec

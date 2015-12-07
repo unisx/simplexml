@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InterceptorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
 ------------- Standard Output ---------------
 <example>
    <map class="java.util.HashMap">
@@ -134,5 +134,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
    </Set>
 </Example>------------- ---------------- ---------------
 
-Testcase: testInterceptor took 0.298 sec
+Testcase: testInterceptor took 0.422 sec
 Testcase: testDirectory took 0 sec
