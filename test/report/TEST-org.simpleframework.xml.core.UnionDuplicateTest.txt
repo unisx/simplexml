@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionDuplicateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.247 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.242 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'square' does not have a match in class org.simpleframework.xml.core.UnionDuplicateTest$Diagram at line 1
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:580)
@@ -35,5 +35,5 @@ org.simpleframework.xml.core.ElementException: Element 'square' does not have a 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testShape took 0.24 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testShape took 0.236 sec
+Testcase: testDirectory took 0 sec

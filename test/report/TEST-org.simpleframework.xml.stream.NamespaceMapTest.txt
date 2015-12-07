@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.NamespaceMapTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.102 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.094 sec
 ------------- Standard Output ---------------
 <jsp:root xmlns:xhtml="http://www.w3c.com/xhtml" xmlns:jsp="http://www.sun.com/jsp">
    <child xhtml:name.1="1" name.2="2"/>
@@ -16,6 +16,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.102 sec
 </jsp:root>
 ------------- ---------------- ---------------
 
-Testcase: testInputNode took 0.06 sec
-Testcase: testOutputNode took 0.035 sec
+Testcase: testInputNode took 0.055 sec
+Testcase: testOutputNode took 0.032 sec
 Testcase: testDirectory took 0 sec

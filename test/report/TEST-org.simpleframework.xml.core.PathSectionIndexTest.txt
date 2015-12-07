@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathSectionIndexTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.355 sec
 ------------- Standard Output ---------------
 <pathSectionIndexExample>
    <contact-details>
@@ -71,5 +71,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.346 sec
    </contact-details>
 </pathSectionIndexExample>------------- ---------------- ---------------
 
-Testcase: testSectionIndex took 0.34 sec
+Testcase: testSectionIndex took 0.348 sec
 Testcase: testDirectory took 0 sec

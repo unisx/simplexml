@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.583 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.667 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -302,9 +302,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.583 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.396 sec
-Testcase: testPrimitiveList took 0.06 sec
-Testcase: testSimpleList took 0.047 sec
-Testcase: testSimpleNameList took 0.047 sec
-Testcase: testSimplePrimitiveList took 0.017 sec
+Testcase: testList took 0.415 sec
+Testcase: testPrimitiveList took 0.075 sec
+Testcase: testSimpleList took 0.082 sec
+Testcase: testSimpleNameList took 0.059 sec
+Testcase: testSimplePrimitiveList took 0.021 sec
 Testcase: testDirectory took 0 sec

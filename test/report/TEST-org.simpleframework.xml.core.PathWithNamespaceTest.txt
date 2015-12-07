@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithNamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.359 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
 ------------- Standard Output ---------------
 <pathWithNamespaceExample xmlns="http://www.domain.com/root">
    <a>
@@ -50,5 +50,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.359 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPathWithNamespace took 0.352 sec
+Testcase: testPathWithNamespace took 0.337 sec
 Testcase: testDirectory took 0 sec

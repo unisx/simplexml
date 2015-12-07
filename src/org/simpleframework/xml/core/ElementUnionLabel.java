@@ -1,5 +1,5 @@
 /*
- * UnionLabel.java March 2011
+ * ElementUnionLabel.java March 2011
  *
  * Copyright (C) 2011, Niall Gallagher <niallg@users.sf.net>
  *
@@ -22,11 +22,11 @@ import java.lang.annotation.Annotation;
 import java.util.Set;
 
 import org.simpleframework.xml.Element;
-import org.simpleframework.xml.Union;
+import org.simpleframework.xml.ElementUnion;
 import org.simpleframework.xml.strategy.Type;
 
 /**
- * The <code>UnionLabel</code> acts as an adapter for an internal
+ * The <code>ElementUnionLabel</code> is an adapter for an internal
  * label. Each annotation within the union can be acquired by type 
  * so that deserialization can dynamically switch the converter used.
  * Each union label can be used in place of any other, this means 
@@ -39,9 +39,9 @@ import org.simpleframework.xml.strategy.Type;
  * 
  * @author Niall Gallagher
  * 
- * @see org.simpleframework.xml.core.Union
+ * @see org.simpleframework.xml.core.ElementUnion
  */
-class UnionLabel implements Label {
+class ElementUnionLabel implements Label {
 
    /**
     * This is used to extract the individual unions in the group.
@@ -49,14 +49,14 @@ class UnionLabel implements Label {
    private final GroupExtractor extractor;
    
    /**
+    * This is the union associated with this label instance.
+    */
+   private final ElementUnion union;   
+   
+   /**
     * This is the contact that this label is associated with.
     */
    private final Contact contact;
-   
-   /**
-    * This is the union associated with this label instance.
-    */
-   private final Union union;   
    
    /**
     * This is the label that this acts as an adapter to.
@@ -64,7 +64,7 @@ class UnionLabel implements Label {
    private final Label label;
    
    /**
-    * Constructor for the <code>UnionLabel</code> object. This 
+    * Constructor for the <code>ElementUnionLabel</code> object. This 
     * is given the union this represents as well as the individual
     * element it will act as an adapter for. This allows the union
     * label to acquire any other label within the group.
@@ -73,7 +73,7 @@ class UnionLabel implements Label {
     * @param union this is the union annotation this represents
     * @param element this is the individual annotation used
     */
-   public UnionLabel(Contact contact, Union union, Element element) throws Exception {
+   public ElementUnionLabel(Contact contact, ElementUnion union, Element element) throws Exception {
       this.extractor = new GroupExtractor(contact, union);
       this.label = new ElementLabel(contact, element);
       this.contact = contact;
@@ -370,5 +370,18 @@ class UnionLabel implements Label {
     */
    public boolean isRequired() {
       return label.isRequired();
+   }
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This will provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
+    */
+   public String toString() {
+      return label.toString();
    }
 }

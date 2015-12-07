@@ -17,30 +17,32 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.379 sec
    <name>test</name>
 </exampleObjectWithAddress>
 <example-object-with-address ID="0" version="1.0">
-   <integer>123</integer>
+   <!-- java.lang.Integer -->
+   <integer ID="1">123</integer>
    <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
-   <address ID="1">
+   <address ID="2">
       <!-- java.lang.String -->
-      <name ID="2">example name</name>
+      <name ID="3">example name</name>
       <!-- java.lang.String -->
-      <address ID="3">example address</address>
+      <address ID="4">example address</address>
    </address>
    <!-- java.lang.String -->
-   <name ID="4">test</name>
+   <name ID="5">test</name>
 </example-object-with-address>>>>>> ELEMENT=[element example-object-with-address]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <ExampleObjectWithAddress ID="0" version="1.0">
-   <Integer>123</Integer>
+   <!-- java.lang.Integer -->
+   <Integer ID="1">123</Integer>
    <!-- org.simpleframework.xml.core.StrictModeTest$Address -->
-   <Address ID="1">
+   <Address ID="2">
       <!-- java.lang.String -->
-      <Name ID="2">example name</Name>
+      <Name ID="3">example name</Name>
       <!-- java.lang.String -->
-      <Address ID="3">example address</Address>
+      <Address ID="4">example address</Address>
    </Address>
    <!-- java.lang.String -->
-   <Name ID="4">test</Name>
+   <Name ID="5">test</Name>
 </ExampleObjectWithAddress>>>>>> ELEMENT=[element ExampleObjectWithAddress]
 >>>>> TYPE=[class org.simpleframework.xml.core.StrictModeTest$ExampleObjectWithAddress]
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
@@ -197,8 +199,8 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testStrictMode took 0.218 sec
-Testcase: testNonStrictMode took 0.134 sec
-Testcase: testNonStrictModeMissingName took 0.007 sec
-Testcase: testValidation took 0.009 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testStrictMode took 0.211 sec
+Testcase: testNonStrictMode took 0.142 sec
+Testcase: testNonStrictModeMissingName took 0.006 sec
+Testcase: testValidation took 0.008 sec
+Testcase: testDirectory took 0 sec

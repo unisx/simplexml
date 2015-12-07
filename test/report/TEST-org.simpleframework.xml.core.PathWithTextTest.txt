@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.308 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.19 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Paths used with @org.simpleframework.xml.Text(required=true, data=false, empty=) on field 'text' private java.lang.String org.simpleframework.xml.core.PathWithTextTest$PathWithTextExample.text in class org.simpleframework.xml.core.PathWithTextTest$PathWithTextExample
 	at org.simpleframework.xml.core.StructureBuilder.validateText(StructureBuilder.java:508)
@@ -38,5 +38,5 @@ org.simpleframework.xml.core.TextException: Paths used with @org.simpleframework
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testTextWithPath took 0.268 sec
+Testcase: testTextWithPath took 0.183 sec
 Testcase: testDirectory took 0 sec

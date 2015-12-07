@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.4 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.36 sec
 ------------- Standard Output ---------------
 <enumMapExample>
    <numbers>
@@ -114,5 +114,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.4 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEnumMap took 0.393 sec
+Testcase: testEnumMap took 0.355 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.WrapperTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.27 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
 ------------- Standard Error -----------------
 <wrapperExample>
    <wrapper type="org.simpleframework.xml.convert.WrapperTest$Entry">
@@ -11,4 +11,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.27 sec
 </wrapperExample>
 ------------- ---------------- ---------------
 
-Testcase: testWrapper took 0.266 sec
+Testcase: testWrapper took 0.258 sec

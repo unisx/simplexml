@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionInlineListWitinPathTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.338 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.271 sec
 ------------- Standard Output ---------------
 <department id="0">
    <employees>
@@ -23,5 +23,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.338 sec
    <name id="7">Human Resources</name>
 </department>------------- ---------------- ---------------
 
-Testcase: testListWithPath took 0.327 sec
+Testcase: testListWithPath took 0.263 sec
 Testcase: testDirectory took 0.001 sec

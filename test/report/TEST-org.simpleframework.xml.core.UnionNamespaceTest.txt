@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.37 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.366 sec
 ------------- Standard Output ---------------
 <example>
    <path>
@@ -28,5 +28,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.37 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testNamespaceWithUnion took 0.364 sec
+Testcase: testNamespaceWithUnion took 0.359 sec
 Testcase: testDirectory took 0 sec

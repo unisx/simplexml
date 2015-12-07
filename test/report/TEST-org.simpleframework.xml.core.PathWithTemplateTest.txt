@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTemplateTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.442 sec
 ------------- Standard Output ---------------
 <pathWithTemplateExample>
    <details>
@@ -34,20 +34,21 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
    <details>
       <!-- java.lang.String -->
       <name ID="1">John Doe</name>
-      <age>21</age>
+      <!-- java.lang.Integer -->
+      <age ID="2">21</age>
       <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
-      <sex ID="2">MALE</sex>
+      <sex ID="3">MALE</sex>
       <address>
          <!-- java.lang.String -->
-         <street ID="3">George Street</street>
+         <street ID="4">George Street</street>
          <!-- java.lang.String -->
-         <city ID="4">Sydney</city>
+         <city ID="5">Sydney</city>
       </address>
       <phone area="+61">
          <!-- java.lang.String -->
-         <mobile ID="5">12345</mobile>
+         <mobile ID="6">12345</mobile>
          <!-- java.lang.String -->
-         <home ID="6">67890</home>
+         <home ID="7">67890</home>
       </phone>
    </details>
 </path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
@@ -57,20 +58,21 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
    <Details>
       <!-- java.lang.String -->
       <Name ID="1">John Doe</Name>
-      <Age>21</Age>
+      <!-- java.lang.Integer -->
+      <Age ID="2">21</Age>
       <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
-      <Sex ID="2">MALE</Sex>
+      <Sex ID="3">MALE</Sex>
       <Address>
          <!-- java.lang.String -->
-         <Street ID="3">George Street</Street>
+         <Street ID="4">George Street</Street>
          <!-- java.lang.String -->
-         <City ID="4">Sydney</City>
+         <City ID="5">Sydney</City>
       </Address>
       <Phone area="+61">
          <!-- java.lang.String -->
-         <Mobile ID="5">12345</Mobile>
+         <Mobile ID="6">12345</Mobile>
          <!-- java.lang.String -->
-         <Home ID="6">67890</Home>
+         <Home ID="7">67890</Home>
       </Phone>
    </Details>
 </PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
@@ -109,20 +111,21 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
    <details>
       <!-- java.lang.String -->
       <name ID="1">Jack Daniels</name>
-      <age>22</age>
+      <!-- java.lang.Integer -->
+      <age ID="2">22</age>
       <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
-      <sex ID="2">MALE</sex>
+      <sex ID="3">MALE</sex>
       <address>
          <!-- java.lang.String -->
-         <street ID="3">Old Street</street>
+         <street ID="4">Old Street</street>
          <!-- java.lang.String -->
-         <city ID="4">London</city>
+         <city ID="5">London</city>
       </address>
       <phone area="+44">
          <!-- java.lang.String -->
-         <mobile ID="5">12345</mobile>
+         <mobile ID="6">12345</mobile>
          <!-- java.lang.String -->
-         <home ID="6">67890</home>
+         <home ID="7">67890</home>
       </phone>
    </details>
 </path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
@@ -132,20 +135,21 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
    <Details>
       <!-- java.lang.String -->
       <Name ID="1">Jack Daniels</Name>
-      <Age>22</Age>
+      <!-- java.lang.Integer -->
+      <Age ID="2">22</Age>
       <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
-      <Sex ID="2">MALE</Sex>
+      <Sex ID="3">MALE</Sex>
       <Address>
          <!-- java.lang.String -->
-         <Street ID="3">Old Street</Street>
+         <Street ID="4">Old Street</Street>
          <!-- java.lang.String -->
-         <City ID="4">London</City>
+         <City ID="5">London</City>
       </Address>
       <Phone area="+44">
          <!-- java.lang.String -->
-         <Mobile ID="5">12345</Mobile>
+         <Mobile ID="6">12345</Mobile>
          <!-- java.lang.String -->
-         <Home ID="6">67890</Home>
+         <Home ID="7">67890</Home>
       </Phone>
    </Details>
 </PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
@@ -183,6 +187,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
    </details>
 </pathWithTemplateExample>------------- ---------------- ---------------
 
-Testcase: testSerialization took 0.359 sec
-Testcase: testPathWithTemplates took 0.059 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testSerialization took 0.367 sec
+Testcase: testPathWithTemplates took 0.067 sec
+Testcase: testDirectory took 0 sec

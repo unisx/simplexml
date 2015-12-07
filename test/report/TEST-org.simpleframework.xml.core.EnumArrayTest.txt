@@ -20,5 +20,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.324 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testArrayElement took 0.318 sec
+Testcase: testArrayElement took 0.317 sec
 Testcase: testDirectory took 0 sec

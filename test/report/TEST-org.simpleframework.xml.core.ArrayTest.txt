@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayTest
-Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.068 sec
+Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.086 sec
 ------------- Standard Output ---------------
 <root>
    <array length="100">
@@ -1214,11 +1214,16 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.068 sec
 <root ID="0">
    <!-- [I -->
    <array length="5" ID="1">
-      <text>1</text>
-      <text>2</text>
-      <text>3</text>
-      <text>4</text>
-      <text>5</text>
+      <!-- java.lang.Integer -->
+      <text ID="2">1</text>
+      <!-- java.lang.Integer -->
+      <text ID="3">2</text>
+      <!-- java.lang.Integer -->
+      <text ID="4">3</text>
+      <!-- java.lang.Integer -->
+      <text ID="5">4</text>
+      <!-- java.lang.Integer -->
+      <text ID="6">5</text>
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample]
@@ -1226,11 +1231,16 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.068 sec
 <Root ID="0">
    <!-- [I -->
    <Array length="5" ID="1">
-      <Text>1</Text>
-      <Text>2</Text>
-      <Text>3</Text>
-      <Text>4</Text>
-      <Text>5</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="2">1</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="3">2</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="4">3</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="5">4</Text>
+      <!-- java.lang.Integer -->
+      <Text ID="6">5</Text>
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$PrimitiveIntegerArrayExample]
@@ -1549,11 +1559,16 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.068 sec
 <root ID="0">
    <!-- [C -->
    <array length="5" ID="1">
-      <char>a</char>
-      <char>b</char>
-      <char>c</char>
-      <char>d</char>
-      <char>e</char>
+      <!-- java.lang.Character -->
+      <char ID="2">a</char>
+      <!-- java.lang.Character -->
+      <char ID="3">b</char>
+      <!-- java.lang.Character -->
+      <char ID="4">c</char>
+      <!-- java.lang.Character -->
+      <char ID="5">d</char>
+      <!-- java.lang.Character -->
+      <char ID="6">e</char>
    </array>
 </root>>>>>> ELEMENT=[element root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$CharacterArrayExample]
@@ -1561,11 +1576,16 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.068 sec
 <Root ID="0">
    <!-- [C -->
    <Array length="5" ID="1">
-      <Char>a</Char>
-      <Char>b</Char>
-      <Char>c</Char>
-      <Char>d</Char>
-      <Char>e</Char>
+      <!-- java.lang.Character -->
+      <Char ID="2">a</Char>
+      <!-- java.lang.Character -->
+      <Char ID="3">b</Char>
+      <!-- java.lang.Character -->
+      <Char ID="4">c</Char>
+      <!-- java.lang.Character -->
+      <Char ID="5">d</Char>
+      <!-- java.lang.Character -->
+      <Char ID="6">e</Char>
    </Array>
 </Root>>>>>> ELEMENT=[element Root]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayTest$CharacterArrayExample]
@@ -1623,17 +1643,17 @@ Tests run: 14, Failures: 0, Errors: 0, Time elapsed: 1.068 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExample took 0.214 sec
+Testcase: testExample took 0.212 sec
 Testcase: testBadExample took 0.005 sec
-Testcase: testWriteArray took 0.58 sec
-Testcase: testPrimitive took 0.019 sec
-Testcase: testPrimitiveInteger took 0.016 sec
-Testcase: testPrimitiveMultidimensionalInteger took 0.05 sec
-Testcase: testDefaultPrimitive took 0.016 sec
-Testcase: testPrimitiveNull took 0.024 sec
-Testcase: testParentComposite took 0.025 sec
-Testcase: testDefaultComposite took 0.02 sec
-Testcase: testParentCompositeNull took 0.032 sec
-Testcase: testCharacter took 0.019 sec
-Testcase: testDifferentArray took 0.02 sec
-Testcase: testDirectory took 0.009 sec
+Testcase: testWriteArray took 0.546 sec
+Testcase: testPrimitive took 0.053 sec
+Testcase: testPrimitiveInteger took 0.022 sec
+Testcase: testPrimitiveMultidimensionalInteger took 0.026 sec
+Testcase: testDefaultPrimitive took 0.02 sec
+Testcase: testPrimitiveNull took 0.022 sec
+Testcase: testParentComposite took 0.03 sec
+Testcase: testDefaultComposite took 0.023 sec
+Testcase: testParentCompositeNull took 0.03 sec
+Testcase: testCharacter took 0.022 sec
+Testcase: testDifferentArray took 0.057 sec
+Testcase: testDirectory took 0.001 sec

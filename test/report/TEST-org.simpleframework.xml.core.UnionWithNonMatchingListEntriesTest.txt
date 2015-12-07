@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.221 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.22 sec
 ------------- Standard Output ---------------
 <nonMatchingUnionList>
    <a/>
@@ -7,8 +7,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.221 sec
    <c/>
    <d/>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.core.UnionException: Entry of class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$E not declared in field 'list' private java.util.List org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$NonMatchingUnionList.list with annotation @org.simpleframework.xml.UnionList(value=[@org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$A, required=true, data=false, entry=a, empty=true, name=), @org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$B, required=true, data=false, entry=b, empty=true, name=), @org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$C, required=true, data=false, entry=c, empty=true, name=), @org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$D, required=true, data=false, entry=d, empty=true, name=)])
-	at org.simpleframework.xml.core.CompositeUnionList.write(CompositeUnionList.java:162)
+org.simpleframework.xml.core.UnionException: Entry of class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$E not declared in field 'list' private java.util.List org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$NonMatchingUnionList.list with annotation @org.simpleframework.xml.ElementListUnion(value=[@org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$A, required=true, data=false, entry=a, empty=true, name=), @org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$B, required=true, data=false, entry=b, empty=true, name=), @org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$C, required=true, data=false, entry=c, empty=true, name=), @org.simpleframework.xml.ElementList(inline=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$D, required=true, data=false, entry=d, empty=true, name=)])
+	at org.simpleframework.xml.core.CompositeListUnion.write(CompositeListUnion.java:162)
 	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1314)
 	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1297)
 	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1177)
@@ -43,5 +43,5 @@ org.simpleframework.xml.core.UnionException: Entry of class org.simpleframework.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNonMatching took 0.212 sec
+Testcase: testNonMatching took 0.211 sec
 Testcase: testDirectory took 0 sec

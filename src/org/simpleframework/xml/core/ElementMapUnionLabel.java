@@ -1,5 +1,5 @@
 /*
- * UnionMapLabel.java March 2011
+ * ElementMapUnionLabel.java March 2011
  *
  * Copyright (C) 2011, Niall Gallagher <niallg@users.sf.net>
  *
@@ -22,11 +22,11 @@ import java.lang.annotation.Annotation;
 import java.util.Set;
 
 import org.simpleframework.xml.ElementMap;
-import org.simpleframework.xml.UnionMap;
+import org.simpleframework.xml.ElementMapUnion;
 import org.simpleframework.xml.strategy.Type;
 
 /**
- * The <code>UnionMapLabel</code> acts as an adapter for an internal
+ * The <code>ElementMapUnionLabel</code> is an adapter for an internal
  * label. Each annotation within the union can be acquired by type 
  * so that deserialization can dynamically switch the converter used.
  * Each union label can be used in place of any other, this means 
@@ -39,9 +39,9 @@ import org.simpleframework.xml.strategy.Type;
  * 
  * @author Niall Gallagher
  * 
- * @see org.simpleframework.xml.core.UnionMap
+ * @see org.simpleframework.xml.core.ElementMapUnion
  */
-class UnionMapLabel implements Label {
+class ElementMapUnionLabel implements Label {
    
    /**
     * This is used to extract the individual unions in the group.
@@ -59,8 +59,8 @@ class UnionMapLabel implements Label {
    private final Label label;
 
    /**
-    * Constructor for the <code>UnionMapLabel</code> object. This 
-    * is given the union this represents as well as the individual
+    * Constructor for the <code>ElementMapUnionLabel</code> object. 
+    * This is given the union this represents as well as the individual
     * element it will act as an adapter for. This allows the union
     * label to acquire any other label within the group.
     * 
@@ -68,7 +68,7 @@ class UnionMapLabel implements Label {
     * @param union this is the union annotation this represents
     * @param element this is the individual annotation used
     */
-   public UnionMapLabel(Contact contact, UnionMap union, ElementMap element) throws Exception {
+   public ElementMapUnionLabel(Contact contact, ElementMapUnion union, ElementMap element) throws Exception {
       this.extractor = new GroupExtractor(contact, union);
       this.label = new ElementMapLabel(contact, element);
       this.contact = contact;
@@ -143,7 +143,7 @@ class UnionMapLabel implements Label {
       if(type == null) {
          throw new UnionException("Union %s was not declared on a field or method", label);
       }
-      return new CompositeUnionMap(context, extractor, type);
+      return new CompositeMapUnion(context, extractor, type);
    }
    
    /**
@@ -354,5 +354,18 @@ class UnionMapLabel implements Label {
     */
    public boolean isRequired() {
       return label.isRequired();
+   }
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This will provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
+    */
+   public String toString() {
+      return label.toString();
    }
 }

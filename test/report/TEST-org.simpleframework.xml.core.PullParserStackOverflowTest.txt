@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PullParserStackOverflowTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.232 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
 ------------- Standard Error -----------------
 org.xmlpull.v1.XmlPullParserException: only whitespace content allowed before start tag and not l (position: START_DOCUMENT seen <?xml version="1.0" encoding="UTF-8"?>l... @1:39) 
 	at org.xmlpull.mxp1.MXParser.parseProlog(MXParser.java:1519)
@@ -96,7 +96,7 @@ org.xmlpull.v1.XmlPullParserException: end tag name </text> must match start tag
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testBrokenStart took 0.083 sec
-Testcase: testBrokenStartButComplete took 0.001 sec
-Testcase: testBrokenElementButComplete took 0.136 sec
+Testcase: testBrokenStart took 0.081 sec
+Testcase: testBrokenStartButComplete took 0.002 sec
+Testcase: testBrokenElementButComplete took 0.128 sec
 Testcase: testDirectory took 0.002 sec

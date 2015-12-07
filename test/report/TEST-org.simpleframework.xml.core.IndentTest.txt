@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.IndentTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.402 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
 ------------- Standard Output ---------------
 <contact id="some id">
      <details>
@@ -69,6 +69,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.402 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testIndent took 0.343 sec
-Testcase: testNoIndent took 0.044 sec
+Testcase: testIndent took 0.327 sec
+Testcase: testNoIndent took 0.051 sec
 Testcase: testDirectory took 0.001 sec

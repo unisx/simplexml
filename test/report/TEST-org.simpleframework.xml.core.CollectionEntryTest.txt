@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.523 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -211,8 +211,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.556 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.414 sec
-Testcase: testExampleInlineCollection took 0.05 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.033 sec
-Testcase: testExamplePrimitiveCollection took 0.049 sec
+Testcase: testExampleCollection took 0.37 sec
+Testcase: testExampleInlineCollection took 0.053 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.035 sec
+Testcase: testExamplePrimitiveCollection took 0.055 sec
 Testcase: testDirectory took 0.001 sec

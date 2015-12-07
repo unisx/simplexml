@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapTest
-Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 1.005 sec
+Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.995 sec
 ------------- Standard Output ---------------
 <entryMap>
    <map class="java.util.HashMap">
@@ -1383,17 +1383,21 @@ Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 1.005 sec
          <lucene ID="6">
             <!-- java.lang.String -->
             <index ID="7">TOKENIZED</index>
-            <store>false</store>
-            <default>true</default>
+            <!-- java.lang.Boolean -->
+            <store ID="8">false</store>
+            <!-- java.lang.Boolean -->
+            <default ID="9">true</default>
          </lucene>
       </field>
       <field id="bar">
          <!-- org.simpleframework.xml.core.MapTest$Lucene -->
-         <lucene ID="8">
+         <lucene ID="10">
             <!-- java.lang.String -->
-            <index ID="9">TOKENIZED</index>
-            <store>false</store>
-            <default>true</default>
+            <index ID="11">TOKENIZED</index>
+            <!-- java.lang.Boolean -->
+            <store ID="12">false</store>
+            <!-- java.lang.Boolean -->
+            <default ID="13">true</default>
          </lucene>
       </field>
    </fields>
@@ -1417,17 +1421,21 @@ Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 1.005 sec
          <Lucene ID="6">
             <!-- java.lang.String -->
             <Index ID="7">TOKENIZED</Index>
-            <Store>false</Store>
-            <Default>true</Default>
+            <!-- java.lang.Boolean -->
+            <Store ID="8">false</Store>
+            <!-- java.lang.Boolean -->
+            <Default ID="9">true</Default>
          </Lucene>
       </Field>
       <Field id="bar">
          <!-- org.simpleframework.xml.core.MapTest$Lucene -->
-         <Lucene ID="8">
+         <Lucene ID="10">
             <!-- java.lang.String -->
-            <Index ID="9">TOKENIZED</Index>
-            <Store>false</Store>
-            <Default>true</Default>
+            <Index ID="11">TOKENIZED</Index>
+            <!-- java.lang.Boolean -->
+            <Store ID="12">false</Store>
+            <!-- java.lang.Boolean -->
+            <Default ID="13">true</Default>
          </Lucene>
       </Field>
    </Fields>
@@ -1436,14 +1444,14 @@ Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 1.005 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.44 sec
-Testcase: testStringMap took 0.037 sec
-Testcase: testComplexMap took 0.095 sec
-Testcase: testPrimitiveMap took 0.089 sec
+Testcase: testEntryMap took 0.381 sec
+Testcase: testStringMap took 0.043 sec
+Testcase: testComplexMap took 0.106 sec
+Testcase: testPrimitiveMap took 0.063 sec
 Testcase: testPrimitiveValueOverrideMap took 0.035 sec
-Testcase: testPrimitiveValueKeyOverrideMap took 0.033 sec
-Testcase: testComplexValueKeyOverrideMap took 0.092 sec
-Testcase: testPrimitiveInlineMap took 0.033 sec
-Testcase: testNullValue took 0.085 sec
-Testcase: testIndexExample took 0.049 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPrimitiveValueKeyOverrideMap took 0.039 sec
+Testcase: testComplexValueKeyOverrideMap took 0.077 sec
+Testcase: testPrimitiveInlineMap took 0.077 sec
+Testcase: testNullValue took 0.101 sec
+Testcase: testIndexExample took 0.059 sec
+Testcase: testDirectory took 0.001 sec
