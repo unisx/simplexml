@@ -51,6 +51,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.516 sec
    </list>
 </examplePrimitiveArray>------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.468 sec
-Testcase: testExamplePrimitiveArray took 0.016 sec
-Testcase: testDirectory took 0 sec
+Testcase: testExampleArray took 0.469 sec
+Testcase: testExamplePrimitiveArray took 0.015 sec
+Testcase: testDirectory took 0.016 sec

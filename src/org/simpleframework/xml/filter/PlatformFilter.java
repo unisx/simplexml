@@ -38,6 +38,16 @@ public class PlatformFilter extends StackFilter {
     * adds a filter which can be used to resolve environment 
     * variables followed by one that can be used to resolve system
     * properties and finally one to resolve user specified values.
+    */
+   public PlatformFilter() {
+      this(null);
+   }
+   
+   /**
+    * Constructor for the <code>PlatformFilter</code> object. This
+    * adds a filter which can be used to resolve environment 
+    * variables followed by one that can be used to resolve system
+    * properties and finally one to resolve user specified values.
     * 
     * @param map this is a map contain the user mappings
     */

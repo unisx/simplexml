@@ -39,8 +39,8 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.672 sec
    <string>test</string>
 </simplePrimitiveInlineList>------------- ---------------- ---------------
 
-Testcase: testList took 0.547 sec
-Testcase: testPrimitiveList took 0.032 sec
+Testcase: testList took 0.563 sec
+Testcase: testPrimitiveList took 0.031 sec
 Testcase: testInlineNamedList took 0.031 sec
 Testcase: testSimpleList took 0.015 sec
 Testcase: testSimplePrimitiveList took 0.016 sec
