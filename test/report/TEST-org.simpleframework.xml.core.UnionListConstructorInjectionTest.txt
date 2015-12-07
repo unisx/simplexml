@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.473 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.601 sec
 ------------- Standard Output ---------------
 <accessControl>
    <user>
@@ -172,5 +172,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.473 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testListInjection took 0.466 sec
-Testcase: testDirectory took 0 sec
+Testcase: testListInjection took 0.59 sec
+Testcase: testDirectory took 0.001 sec

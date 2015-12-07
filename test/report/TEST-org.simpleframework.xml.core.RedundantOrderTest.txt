@@ -1,11 +1,11 @@
 Testsuite: org.simpleframework.xml.core.RedundantOrderTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.227 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.305 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'c' not defined in class org.simpleframework.xml.core.RedundantOrderTest$ElementEntry
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1146)
-	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1056)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1026)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1003)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1163)
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1042)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1019)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:236)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:208)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
@@ -13,7 +13,7 @@ org.simpleframework.xml.core.ElementException: Element 'c' not defined in class 
 	at org.simpleframework.xml.core.Persister.write(Persister.java:1169)
 	at org.simpleframework.xml.core.Persister.write(Persister.java:1147)
 	at org.simpleframework.xml.core.Persister.write(Persister.java:1266)
-	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:95)
+	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:78)
 	at org.simpleframework.xml.core.RedundantOrderTest.testRedundantElementOrder(RedundantOrderTest.java:67)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -31,10 +31,10 @@ org.simpleframework.xml.core.ElementException: Element 'c' not defined in class 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' does not exist in class org.simpleframework.xml.core.RedundantOrderTest$AttributeEntry
-	at org.simpleframework.xml.core.TreeModel.validateAttributes(TreeModel.java:373)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:322)
-	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:491)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:477)
+	at org.simpleframework.xml.core.TreeModel.validateAttributes(TreeModel.java:475)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:355)
+	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:513)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:499)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:393)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
@@ -49,7 +49,7 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' does not 
 	at org.simpleframework.xml.core.Persister.write(Persister.java:1169)
 	at org.simpleframework.xml.core.Persister.write(Persister.java:1147)
 	at org.simpleframework.xml.core.Persister.write(Persister.java:1266)
-	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:95)
+	at org.simpleframework.xml.ValidationTestCase.validate(ValidationTestCase.java:78)
 	at org.simpleframework.xml.core.RedundantOrderTest.testRedundantAttributeOrder(RedundantOrderTest.java:81)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -68,6 +68,6 @@ org.simpleframework.xml.core.AttributeException: Ordered attribute 'c' does not 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testRedundantElementOrder took 0.21 sec
-Testcase: testRedundantAttributeOrder took 0.01 sec
-Testcase: testDirectory took 0 sec
+Testcase: testRedundantElementOrder took 0.282 sec
+Testcase: testRedundantAttributeOrder took 0.011 sec
+Testcase: testDirectory took 0.002 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NullArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.454 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="5">
@@ -161,6 +161,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.359 sec
-Testcase: testExamplePrimitiveArray took 0.041 sec
+Testcase: testExampleArray took 0.422 sec
+Testcase: testExamplePrimitiveArray took 0.022 sec
 Testcase: testDirectory took 0 sec

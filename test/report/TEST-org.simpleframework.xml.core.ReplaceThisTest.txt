@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ReplaceThisTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.363 sec
 ------------- Standard Output ---------------
 <realParent>
    <inner/>
@@ -23,5 +23,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.313 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testReplaceParent took 0.306 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testReplaceParent took 0.355 sec
+Testcase: testDirectory took 0 sec

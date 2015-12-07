@@ -1,11 +1,11 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.191 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Type does not match @org.simpleframework.xml.Element(type=void, required=true, data=true, name=k) on field 'key' private final java.lang.String org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest$Example.key for 'k' in parameter 0 of constructor public org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest$Example(int,java.lang.String)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:734)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:715)
-	at org.simpleframework.xml.core.StructureBuilder.process(StructureBuilder.java:243)
-	at org.simpleframework.xml.core.StructureBuilder.process(StructureBuilder.java:184)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:754)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:735)
+	at org.simpleframework.xml.core.StructureBuilder.process(StructureBuilder.java:257)
+	at org.simpleframework.xml.core.StructureBuilder.process(StructureBuilder.java:196)
 	at org.simpleframework.xml.core.Scanner.field(Scanner.java:465)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:350)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
@@ -40,5 +40,5 @@ org.simpleframework.xml.core.ConstructorException: Type does not match @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDifferentTypes took 0.185 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDifferentTypes took 0.239 sec
+Testcase: testDirectory took 0.002 sec

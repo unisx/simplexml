@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultWithParametersInGetterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.336 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.391 sec
 ------------- Standard Output ---------------
 <defaultTestClass>
    <foo>100</foo>
@@ -115,7 +115,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDefaultWithParameters took 0.307 sec
-Testcase: testDefaultWithTransientErrors took 0.014 sec
-Testcase: testDefaultWithElementErrors took 0.006 sec
+Testcase: testDefaultWithParameters took 0.363 sec
+Testcase: testDefaultWithTransientErrors took 0.012 sec
+Testcase: testDefaultWithElementErrors took 0.005 sec
 Testcase: testDirectory took 0.002 sec

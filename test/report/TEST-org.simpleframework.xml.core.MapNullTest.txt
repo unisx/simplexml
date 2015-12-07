@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.997 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -388,12 +388,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          <bigDecimal/>
       </entry>
       <entry>
-         <string>b</string>
-         <bigDecimal>2</bigDecimal>
-      </entry>
-      <entry>
          <string/>
          <bigDecimal>4</bigDecimal>
+      </entry>
+      <entry>
+         <string>b</string>
+         <bigDecimal>2</bigDecimal>
       </entry>
    </table>
 </primitiveMap><primitiveMap>
@@ -407,12 +407,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          <bigDecimal/>
       </entry>
       <entry>
-         <string>b</string>
-         <bigDecimal>2</bigDecimal>
-      </entry>
-      <entry>
          <string/>
          <bigDecimal>4</bigDecimal>
+      </entry>
+      <entry>
+         <string>b</string>
+         <bigDecimal>2</bigDecimal>
       </entry>
    </table>
 </primitiveMap>
@@ -431,15 +431,15 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          <big-decimal/>
       </entry>
       <entry>
-         <!-- java.lang.String -->
-         <string ID="5">b</string>
-         <!-- java.math.BigDecimal -->
-         <big-decimal ID="6">2</big-decimal>
-      </entry>
-      <entry>
          <string/>
          <!-- java.math.BigDecimal -->
-         <big-decimal ID="7">4</big-decimal>
+         <big-decimal ID="5">4</big-decimal>
+      </entry>
+      <entry>
+         <!-- java.lang.String -->
+         <string ID="6">b</string>
+         <!-- java.math.BigDecimal -->
+         <big-decimal ID="7">2</big-decimal>
       </entry>
    </table>
 </primitive-map>>>>>> ELEMENT=[element primitive-map]
@@ -460,15 +460,15 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          <bigDecimal/>
       </Entry>
       <Entry>
-         <!-- java.lang.String -->
-         <String ID="5">b</String>
-         <!-- java.math.BigDecimal -->
-         <bigDecimal ID="6">2</bigDecimal>
-      </Entry>
-      <Entry>
          <String/>
          <!-- java.math.BigDecimal -->
-         <bigDecimal ID="7">4</bigDecimal>
+         <bigDecimal ID="5">4</bigDecimal>
+      </Entry>
+      <Entry>
+         <!-- java.lang.String -->
+         <String ID="6">b</String>
+         <!-- java.math.BigDecimal -->
+         <bigDecimal ID="7">2</bigDecimal>
       </Entry>
    </Table>
 </PrimitiveMap>>>>>> ELEMENT=[element PrimitiveMap]
@@ -497,18 +497,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey>
-            <name>name.4</name>
-            <address>address.4</address>
-         </compositeKey>
-         <mapEntry/>
-      </entry>
-      <entry>
          <compositeKey/>
          <mapEntry>
             <name>3</name>
             <value>3</value>
          </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey>
+            <name>name.4</name>
+            <address>address.4</address>
+         </compositeKey>
+         <mapEntry/>
       </entry>
    </map>
 </complexMap><complexMap>
@@ -534,18 +534,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey>
-            <name>name.4</name>
-            <address>address.4</address>
-         </compositeKey>
-         <mapEntry/>
-      </entry>
-      <entry>
          <compositeKey/>
          <mapEntry>
             <name>3</name>
             <value>3</value>
          </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey>
+            <name>name.4</name>
+            <address>address.4</address>
+         </compositeKey>
+         <mapEntry/>
       </entry>
    </map>
 </complexMap>
@@ -585,24 +585,24 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </map-entry>
       </entry>
       <entry>
-         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <composite-key ID="12">
-            <!-- java.lang.String -->
-            <name ID="13">name.4</name>
-            <!-- java.lang.String -->
-            <address ID="14">address.4</address>
-         </composite-key>
-         <map-entry/>
-      </entry>
-      <entry>
          <composite-key/>
          <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <map-entry ID="15">
+         <map-entry ID="12">
             <!-- java.lang.String -->
-            <name ID="16">3</name>
+            <name ID="13">3</name>
             <!-- java.lang.String -->
-            <value REFERER="16"/>
+            <value REFERER="13"/>
          </map-entry>
+      </entry>
+      <entry>
+         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
+         <composite-key ID="14">
+            <!-- java.lang.String -->
+            <name ID="15">name.4</name>
+            <!-- java.lang.String -->
+            <address ID="16">address.4</address>
+         </composite-key>
+         <map-entry/>
       </entry>
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
@@ -644,24 +644,24 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </MapEntry>
       </Entry>
       <Entry>
-         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <CompositeKey ID="12">
-            <!-- java.lang.String -->
-            <Name ID="13">name.4</Name>
-            <!-- java.lang.String -->
-            <Address ID="14">address.4</Address>
-         </CompositeKey>
-         <MapEntry/>
-      </Entry>
-      <Entry>
          <CompositeKey/>
          <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <MapEntry ID="15">
+         <MapEntry ID="12">
             <!-- java.lang.String -->
-            <Name ID="16">3</Name>
+            <Name ID="13">3</Name>
             <!-- java.lang.String -->
-            <Value REFERER="16"/>
+            <Value REFERER="13"/>
          </MapEntry>
+      </Entry>
+      <Entry>
+         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
+         <CompositeKey ID="14">
+            <!-- java.lang.String -->
+            <Name ID="15">name.4</Name>
+            <!-- java.lang.String -->
+            <Address ID="16">address.4</Address>
+         </CompositeKey>
+         <MapEntry/>
       </Entry>
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
@@ -690,18 +690,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey>
-            <name>name.4</name>
-            <address>address.4</address>
-         </compositeKey>
-         <mapEntry/>
-      </entry>
-      <entry>
          <compositeKey/>
          <mapEntry>
             <name>3</name>
             <value>3</value>
          </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey>
+            <name>name.4</name>
+            <address>address.4</address>
+         </compositeKey>
+         <mapEntry/>
       </entry>
    </map>
 </complexMap><complexMap>
@@ -727,18 +727,18 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey>
-            <name>name.4</name>
-            <address>address.4</address>
-         </compositeKey>
-         <mapEntry/>
-      </entry>
-      <entry>
          <compositeKey/>
          <mapEntry>
             <name>3</name>
             <value>3</value>
          </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey>
+            <name>name.4</name>
+            <address>address.4</address>
+         </compositeKey>
+         <mapEntry/>
       </entry>
    </map>
 </complexMap>
@@ -778,24 +778,24 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </map-entry>
       </entry>
       <entry>
-         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <composite-key ID="14">
-            <!-- java.lang.String -->
-            <name ID="15">name.4</name>
-            <!-- java.lang.String -->
-            <address ID="16">address.4</address>
-         </composite-key>
-         <map-entry/>
-      </entry>
-      <entry>
          <composite-key/>
          <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <map-entry ID="17">
+         <map-entry ID="14">
             <!-- java.lang.String -->
-            <name ID="18">3</name>
+            <name ID="15">3</name>
             <!-- java.lang.String -->
-            <value ID="19">3</value>
+            <value ID="16">3</value>
          </map-entry>
+      </entry>
+      <entry>
+         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
+         <composite-key ID="17">
+            <!-- java.lang.String -->
+            <name ID="18">name.4</name>
+            <!-- java.lang.String -->
+            <address ID="19">address.4</address>
+         </composite-key>
+         <map-entry/>
       </entry>
    </map>
 </complex-map>>>>>> ELEMENT=[element complex-map]
@@ -837,24 +837,24 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
          </MapEntry>
       </Entry>
       <Entry>
-         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
-         <CompositeKey ID="14">
-            <!-- java.lang.String -->
-            <Name ID="15">name.4</Name>
-            <!-- java.lang.String -->
-            <Address ID="16">address.4</Address>
-         </CompositeKey>
-         <MapEntry/>
-      </Entry>
-      <Entry>
          <CompositeKey/>
          <!-- org.simpleframework.xml.core.MapNullTest$MapEntry -->
-         <MapEntry ID="17">
+         <MapEntry ID="14">
             <!-- java.lang.String -->
-            <Name ID="18">3</Name>
+            <Name ID="15">3</Name>
             <!-- java.lang.String -->
-            <Value ID="19">3</Value>
+            <Value ID="16">3</Value>
          </MapEntry>
+      </Entry>
+      <Entry>
+         <!-- org.simpleframework.xml.core.MapNullTest$CompositeKey -->
+         <CompositeKey ID="17">
+            <!-- java.lang.String -->
+            <Name ID="18">name.4</Name>
+            <!-- java.lang.String -->
+            <Address ID="19">address.4</Address>
+         </CompositeKey>
+         <MapEntry/>
       </Entry>
    </Map>
 </ComplexMap>>>>>> ELEMENT=[element ComplexMap]
@@ -862,13 +862,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.841 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.353 sec
+Testcase: testEmptyCompositeValue took 0.465 sec
 Testcase: testEmptyCompositeBlankValue took 0.053 sec
-Testcase: testEmptyCompositeKey took 0.043 sec
-Testcase: testEmptyCompositeBlankKey took 0.042 sec
-Testcase: testEmptyPrimitiveValue took 0.037 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.034 sec
-Testcase: testEmptyPrimitiveKey took 0.063 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.029 sec
-Testcase: testNullValue took 0.171 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEmptyCompositeKey took 0.057 sec
+Testcase: testEmptyCompositeBlankKey took 0.047 sec
+Testcase: testEmptyPrimitiveValue took 0.052 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.047 sec
+Testcase: testEmptyPrimitiveKey took 0.035 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.058 sec
+Testcase: testNullValue took 0.158 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.602 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -81,34 +81,34 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <primitiveInlineAttributeValueMap>
    <entity string="d"/>
-   <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <entity value="3.29999999999999982236431605997495353221893310546875"/>
+   <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <entity string="b" value="2.20000000000000017763568394002504646778106689453125"/>
 </primitiveInlineAttributeValueMap><primitiveInlineAttributeValueMap>
    <entity string="d"/>
-   <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <entity value="3.29999999999999982236431605997495353221893310546875"/>
+   <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <entity string="b" value="2.20000000000000017763568394002504646778106689453125"/>
 </primitiveInlineAttributeValueMap>
 <primitive-inline-attribute-value-map ID="0">
    <entity string="d"/>
-   <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <entity value="3.29999999999999982236431605997495353221893310546875"/>
+   <entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <entity string="b" value="2.20000000000000017763568394002504646778106689453125"/>
 </primitive-inline-attribute-value-map>>>>>> ELEMENT=[element primitive-inline-attribute-value-map]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeValueMap]
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 <PrimitiveInlineAttributeValueMap ID="0">
    <Entity string="d"/>
-   <Entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <Entity value="3.29999999999999982236431605997495353221893310546875"/>
+   <Entity string="a" value="1.100000000000000088817841970012523233890533447265625"/>
    <Entity string="b" value="2.20000000000000017763568394002504646778106689453125"/>
 </PrimitiveInlineAttributeValueMap>>>>>> ELEMENT=[element PrimitiveInlineAttributeValueMap]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeValueMap]
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.342 sec
-Testcase: testPrimitiveAttributeMap took 0.043 sec
-Testcase: testPrimitiveAttributeValueMap took 0.047 sec
+Testcase: testPrimitiveMap took 0.507 sec
+Testcase: testPrimitiveAttributeMap took 0.032 sec
+Testcase: testPrimitiveAttributeValueMap took 0.043 sec
 Testcase: testDirectory took 0.002 sec

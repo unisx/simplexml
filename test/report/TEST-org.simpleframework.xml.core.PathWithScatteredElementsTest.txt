@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithScatteredElementsTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.434 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <messages>
@@ -64,10 +64,10 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
    <string>Example 2</string>
    <string>Example 3</string>
 </test>org.simpleframework.xml.core.ElementException: Element 'message' is also a path name in class org.simpleframework.xml.core.PathWithScatteredElementsTest$PathWithConflictInlinePrimitiveList
-	at org.simpleframework.xml.core.TreeModel.validateElements(TreeModel.java:398)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:323)
-	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:491)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:477)
+	at org.simpleframework.xml.core.TreeModel.validateElements(TreeModel.java:500)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:356)
+	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:513)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:499)
 	at org.simpleframework.xml.core.Scanner.validate(Scanner.java:393)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:352)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:91)
@@ -102,6 +102,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testScattering took 0.434 sec
-Testcase: testConflictScattering took 0.014 sec
+Testcase: testScattering took 0.42 sec
+Testcase: testConflictScattering took 0.006 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionSameTypeDifferentNameTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.398 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
 ------------- Standard Output ---------------
 <optionalNameExample>
    <login>john.doe</login>
@@ -54,5 +54,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.398 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalName took 0.391 sec
+Testcase: testOptionalName took 0.543 sec
 Testcase: testDirectory took 0 sec

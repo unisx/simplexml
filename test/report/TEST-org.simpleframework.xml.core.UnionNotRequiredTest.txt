@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNotRequiredTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.478 sec
 ------------- Standard Output ---------------
 <animalFarm>
    <dog>
@@ -37,6 +37,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalEntry took 0.342 sec
-Testcase: testOptionalMissingEntry took 0.024 sec
+Testcase: testOptionalEntry took 0.433 sec
+Testcase: testOptionalMissingEntry took 0.035 sec
 Testcase: testDirectory took 0 sec

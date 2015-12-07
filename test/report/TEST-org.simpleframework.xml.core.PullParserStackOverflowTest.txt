@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PullParserStackOverflowTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.298 sec
 ------------- Standard Error -----------------
 org.xmlpull.v1.XmlPullParserException: only whitespace content allowed before start tag and not l (position: START_DOCUMENT seen <?xml version="1.0" encoding="UTF-8"?>l... @1:39) 
 	at org.xmlpull.mxp1.MXParser.parseProlog(MXParser.java:1519)
@@ -65,9 +65,9 @@ org.xmlpull.v1.XmlPullParserException: end tag name </text> must match start tag
 	at org.simpleframework.xml.stream.PullReader.next(PullReader.java:89)
 	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:115)
 	at org.simpleframework.xml.stream.InputElement.getNext(InputElement.java:216)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:493)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:497)
 	at org.simpleframework.xml.core.Composite.readSection(Composite.java:388)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:368)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:367)
 	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:262)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:232)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:202)
@@ -96,7 +96,7 @@ org.xmlpull.v1.XmlPullParserException: end tag name </text> must match start tag
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testBrokenStart took 0.081 sec
-Testcase: testBrokenStartButComplete took 0.002 sec
-Testcase: testBrokenElementButComplete took 0.128 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testBrokenStart took 0.105 sec
+Testcase: testBrokenStartButComplete took 0.001 sec
+Testcase: testBrokenElementButComplete took 0.18 sec
+Testcase: testDirectory took 0.003 sec

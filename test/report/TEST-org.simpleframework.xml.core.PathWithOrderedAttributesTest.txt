@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithOrderedAttributesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.463 sec
 ------------- Standard Output ---------------
 <serverDeployment>
    <group processor="INTEL" os="LINUX">
@@ -80,5 +80,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testAttributeOrder took 0.381 sec
+Testcase: testAttributeOrder took 0.454 sec
 Testcase: testDirectory took 0 sec

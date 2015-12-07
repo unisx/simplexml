@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ErasureHandlingTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.745 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.932 sec
 ------------- Standard Output ---------------
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
@@ -959,13 +959,13 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.745 sec
 org.simpleframework.xml.core.ElementException: Can not have class java.lang.Object as an attribute for @org.simpleframework.xml.ElementMap(key=, value=, inline=false, required=true, attribute=true, valueType=void, data=false, entry=, empty=true, name=, keyType=void) on field 'erasedToString' private java.util.Map org.simpleframework.xml.core.ErasureHandlingTest$ErasureWithMapAttributeIllegalExample.erasedToString
 	at org.simpleframework.xml.core.CompositeKey.write(CompositeKey.java:221)
 	at org.simpleframework.xml.core.CompositeMap.write(CompositeMap.java:257)
+	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1331)
 	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1314)
-	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1297)
-	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1177)
-	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1148)
-	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1056)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1026)
-	at org.simpleframework.xml.core.Composite.write(Composite.java:1003)
+	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1194)
+	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1165)
+	at org.simpleframework.xml.core.Composite.writeSection(Composite.java:1071)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1042)
+	at org.simpleframework.xml.core.Composite.write(Composite.java:1019)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:236)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:208)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
@@ -993,9 +993,9 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.488 sec
-Testcase: testPrimitiveErasure took 0.082 sec
-Testcase: testEnumErasure took 0.073 sec
-Testcase: testErasureWithMapAttributeIllegalExample took 0.006 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.086 sec
+Testcase: testErasure took 0.623 sec
+Testcase: testPrimitiveErasure took 0.074 sec
+Testcase: testEnumErasure took 0.077 sec
+Testcase: testErasureWithMapAttributeIllegalExample took 0.034 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.106 sec
 Testcase: testDirectory took 0 sec

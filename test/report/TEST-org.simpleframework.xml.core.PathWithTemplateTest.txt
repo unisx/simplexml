@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithTemplateTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.442 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.518 sec
 ------------- Standard Output ---------------
 <pathWithTemplateExample>
    <details>
@@ -187,6 +187,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.442 sec
    </details>
 </pathWithTemplateExample>------------- ---------------- ---------------
 
-Testcase: testSerialization took 0.367 sec
-Testcase: testPathWithTemplates took 0.067 sec
-Testcase: testDirectory took 0 sec
+Testcase: testSerialization took 0.447 sec
+Testcase: testPathWithTemplates took 0.062 sec
+Testcase: testDirectory took 0.001 sec

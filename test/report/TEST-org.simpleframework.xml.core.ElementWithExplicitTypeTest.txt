@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ElementWithExplicitTypeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.483 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.623 sec
 ------------- Standard Output ---------------
 <example>
    <string>str</string>
@@ -121,8 +121,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.483 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitType took 0.336 sec
-Testcase: testExplicitUnionType took 0.043 sec
-Testcase: testExplicitHierarchyType took 0.049 sec
-Testcase: testExplicitIncorrectHierarchyType took 0.041 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testExplicitType took 0.483 sec
+Testcase: testExplicitUnionType took 0.051 sec
+Testcase: testExplicitHierarchyType took 0.041 sec
+Testcase: testExplicitIncorrectHierarchyType took 0.037 sec
+Testcase: testDirectory took 0 sec
