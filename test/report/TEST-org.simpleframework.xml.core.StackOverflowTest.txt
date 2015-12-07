@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StackOverflowTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.938 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.014 sec
 ------------- Standard Output ---------------
 <delivery>
    <newBenefit>
@@ -21007,7 +21007,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.938 sec
    </benefit-mutation>
 </delivery>>>>>> ELEMENT=[element delivery]
 >>>>> TYPE=[class org.simpleframework.xml.core.StackOverflowTest$Delivery]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Delivery ID="0">
    <!-- org.simpleframework.xml.core.StackOverflowTest$NewBenefit -->
    <NewBenefit ID="1">
@@ -31011,8 +31011,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.938 sec
    </BenefitMutation>
 </Delivery>>>>>> ELEMENT=[element Delivery]
 >>>>> TYPE=[class org.simpleframework.xml.core.StackOverflowTest$Delivery]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testStackOverflow took 1.929 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testStackOverflow took 1.014 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ElementWithExplicitTypeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
 <example>
    <string>str</string>
@@ -23,7 +23,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <bool ID="3">true</bool>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$Example]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Example ID="0">
    <!-- java.lang.String -->
    <String ID="1">str</String>
@@ -33,7 +33,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <Bool ID="3">true</Bool>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$Example]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <unionExample>
    <s>str</s>
 </unionExample><unionExample>
@@ -46,13 +46,13 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <s ID="1">str</s>
 </union-example>>>>>> ELEMENT=[element union-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$UnionExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <UnionExample ID="0">
    <!-- java.lang.String -->
    <S ID="1">str</S>
 </UnionExample>>>>>> ELEMENT=[element UnionExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$UnionExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <heirarchyExample>
    <a class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$B"/>
    <b class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$C"/>
@@ -75,7 +75,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <c ID="3"/>
 </heirarchy-example>>>>>> ELEMENT=[element heirarchy-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$HeirarchyExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <HeirarchyExample ID="0">
    <!-- org.simpleframework.xml.core.ElementWithExplicitTypeTest$A -->
    <A class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$B" ID="1"/>
@@ -85,7 +85,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <C ID="3"/>
 </HeirarchyExample>>>>>> ELEMENT=[element HeirarchyExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$HeirarchyExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <heirarchyExample>
    <a class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$B"/>
    <b class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$A"/>
@@ -108,7 +108,7 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <c class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$A" ID="3"/>
 </heirarchy-example>>>>>> ELEMENT=[element heirarchy-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$HeirarchyExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <HeirarchyExample ID="0">
    <!-- org.simpleframework.xml.core.ElementWithExplicitTypeTest$A -->
    <A class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$B" ID="1"/>
@@ -118,11 +118,11 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.457 sec
    <C class="org.simpleframework.xml.core.ElementWithExplicitTypeTest$A" ID="3"/>
 </HeirarchyExample>>>>>> ELEMENT=[element HeirarchyExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.ElementWithExplicitTypeTest$HeirarchyExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitType took 0.331 sec
-Testcase: testExplicitUnionType took 0.048 sec
-Testcase: testExplicitHierarchyType took 0.037 sec
-Testcase: testExplicitIncorrectHierarchyType took 0.031 sec
+Testcase: testExplicitType took 0.187 sec
+Testcase: testExplicitUnionType took 0.031 sec
+Testcase: testExplicitHierarchyType took 0.016 sec
+Testcase: testExplicitIncorrectHierarchyType took 0.015 sec
 Testcase: testDirectory took 0 sec

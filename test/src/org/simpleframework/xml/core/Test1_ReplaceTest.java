@@ -72,7 +72,7 @@ public class Test1_ReplaceTest extends TestCase {
      // s.write(new Test1B(), sw);    
       serializedForm = sw.toString();
       System.out.println(serializedForm);
-      //o = s.read(Test1.class, serializedForm);
+     // o = s.read(Test1.class, serializedForm);
    }
    
 }

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.385 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -99,7 +99,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.385 sec
    </text-entry>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.CaseTest$CaseExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -145,8 +145,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.385 sec
    </TextEntry>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.CaseTest$CaseExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testCase took 0.378 sec
+Testcase: testCase took 0.203 sec
 Testcase: testDirectory took 0 sec

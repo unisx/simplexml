@@ -18,7 +18,8 @@
 
 package org.simpleframework.xml.transform;
 
-import org.simpleframework.xml.util.WeakCache;
+import org.simpleframework.xml.util.Cache;
+import org.simpleframework.xml.util.ConcurrentCache;
 
 /**
  * The <code>RegistryMatcher</code> provides a simple matcher backed
@@ -51,8 +52,8 @@ public class RegistryMatcher implements Matcher {
     * is essentially a convenience implementation.
     */
    public RegistryMatcher() {
-      this.transforms = new Cache<Transform>();
-      this.types = new Cache<Class>();
+      this.transforms = new ConcurrentCache<Transform>();
+      this.types = new ConcurrentCache<Class>();
    }
    
    /**
@@ -134,26 +135,4 @@ public class RegistryMatcher implements Matcher {
       }
       return transform;
    }
-   
-   /**
-    * The <code>Cache</code> object that is used store the transform
-    * types and instances. Each item cached can be resolved using
-    * a type. If the key is no longer referenced then the garbage 
-    * collector can collect the value cached.
-    * 
-    * @author Niall Gallagher
-    */
-   private static class Cache<T> extends WeakCache<Class, T> {
-    
-      /**
-       * Constructor for the <code>Cache</code> object. This is
-       * used to instantiate a weak cache that is keyed by type.
-       * Weak keys ensure that the registrations can be collected
-       * when the keys are collected by the garbage collector.
-       */
-      public Cache() {
-         super();
-      }
-   }
-
 }

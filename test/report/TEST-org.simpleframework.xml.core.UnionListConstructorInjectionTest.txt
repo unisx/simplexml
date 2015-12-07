@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.249 sec
 ------------- Standard Output ---------------
 <accessControl>
    <user>
@@ -123,7 +123,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
    </admin>
 </access-control>>>>>> ELEMENT=[element access-control]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListConstructorInjectionTest$AccessControl]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <AccessControl ID="0">
    <!-- org.simpleframework.xml.core.UnionListConstructorInjectionTest$UserIdentity -->
    <User ID="1">
@@ -169,8 +169,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.456 sec
    </Admin>
 </AccessControl>>>>>> ELEMENT=[element AccessControl]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionListConstructorInjectionTest$AccessControl]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testListInjection took 0.451 sec
+Testcase: testListInjection took 0.219 sec
 Testcase: testDirectory took 0 sec

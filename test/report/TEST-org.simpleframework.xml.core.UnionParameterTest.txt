@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.core.UnionParameterTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.14 sec
 
-Testcase: testParameter took 0.278 sec
+Testcase: testParameter took 0.14 sec

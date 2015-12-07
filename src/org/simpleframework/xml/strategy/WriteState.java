@@ -20,6 +20,7 @@ package org.simpleframework.xml.strategy;
 
 import org.simpleframework.xml.util.WeakCache;
 
+
 /**
  * The <code>WriteState</code> object is used to store all graphs that
  * are currently been written with a given cycle strategy. The goal of
@@ -33,7 +34,7 @@ import org.simpleframework.xml.util.WeakCache;
  * 
  * @see org.simpleframework.xml.strategy.WriteGraph
  */
-class WriteState extends WeakCache<Object, WriteGraph> {
+class WriteState extends WeakCache<WriteGraph> {
 
    /**
     * This is the contract that specifies the attributes to use.

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNotRequiredTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.393 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Output ---------------
 <animalFarm>
    <dog>
@@ -18,7 +18,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.393 sec
    </dog>
 </animal-farm>>>>>> ELEMENT=[element animal-farm]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionNotRequiredTest$AnimalFarm]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <AnimalFarm ID="0">
    <!-- org.simpleframework.xml.core.UnionNotRequiredTest$Dog -->
    <Dog ID="1">
@@ -27,16 +27,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.393 sec
    </Dog>
 </AnimalFarm>>>>>> ELEMENT=[element AnimalFarm]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionNotRequiredTest$AnimalFarm]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <animalFarm/><animalFarm/>
 <animal-farm ID="0"/>>>>>> ELEMENT=[element animal-farm]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionNotRequiredTest$AnimalFarm]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <AnimalFarm ID="0"/>>>>>> ELEMENT=[element AnimalFarm]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionNotRequiredTest$AnimalFarm]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalEntry took 0.349 sec
-Testcase: testOptionalMissingEntry took 0.037 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testOptionalEntry took 0.171 sec
+Testcase: testOptionalMissingEntry took 0.016 sec
+Testcase: testDirectory took 0 sec

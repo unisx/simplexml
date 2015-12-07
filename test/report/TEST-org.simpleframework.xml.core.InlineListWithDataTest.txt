@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineListWithDataTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
 ------------- Standard Output ---------------
 <listWithDataExample>
    <string><![CDATA[A]]></string>
@@ -24,7 +24,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
    <string ID="3"><![CDATA[C]]></string>
 </list-with-data-example>>>>>> ELEMENT=[element list-with-data-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$ListWithDataExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ListWithDataExample ID="0">
    <!-- java.lang.String -->
    <String ID="1"><![CDATA[A]]></String>
@@ -34,7 +34,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
    <String ID="3"><![CDATA[C]]></String>
 </ListWithDataExample>>>>>> ELEMENT=[element ListWithDataExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$ListWithDataExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <mapWithDataExample>
    <entry string="A"><![CDATA[1]]></entry>
    <entry string="B"><![CDATA[2]]></entry>
@@ -55,16 +55,16 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.373 sec
    <entry string="C"><![CDATA[3]]></entry>
 </map-with-data-example>>>>>> ELEMENT=[element map-with-data-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$MapWithDataExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <MapWithDataExample ID="0">
    <Entry string="A"><![CDATA[1]]></Entry>
    <Entry string="B"><![CDATA[2]]></Entry>
    <Entry string="C"><![CDATA[3]]></Entry>
 </MapWithDataExample>>>>>> ELEMENT=[element MapWithDataExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$MapWithDataExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testListWithData took 0.301 sec
-Testcase: testMapWithData took 0.064 sec
+Testcase: testListWithData took 0.172 sec
+Testcase: testMapWithData took 0.031 sec
 Testcase: testDirectory took 0 sec

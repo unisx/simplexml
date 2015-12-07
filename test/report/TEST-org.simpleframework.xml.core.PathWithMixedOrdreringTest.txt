@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithMixedOrdreringTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Output ---------------
 <person>
    <name>
@@ -41,7 +41,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
    </name>
 </person>>>>>> ELEMENT=[element person]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithMixedOrdreringTest$Person]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Person ID="0">
    <Name>
       <!-- java.lang.String -->
@@ -59,8 +59,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.337 sec
    </Name>
 </Person>>>>>> ELEMENT=[element Person]
 >>>>> TYPE=[class org.simpleframework.xml.core.PathWithMixedOrdreringTest$Person]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testMixedOrdering took 0.33 sec
+Testcase: testMixedOrdering took 0.187 sec
 Testcase: testDirectory took 0 sec

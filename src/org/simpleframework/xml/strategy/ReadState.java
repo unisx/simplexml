@@ -20,6 +20,7 @@ package org.simpleframework.xml.strategy;
 
 import org.simpleframework.xml.util.WeakCache;
 
+
 /**
  * The <code>ReadState</code> object is used to store all graphs that
  * are currently been read with a given cycle strategy. The goal of
@@ -33,7 +34,7 @@ import org.simpleframework.xml.util.WeakCache;
  * 
  * @see org.simpleframework.xml.util.WeakCache
  */
-class ReadState extends WeakCache<Object, ReadGraph>{
+class ReadState extends WeakCache<ReadGraph>{
    
    /** 
     * This is the contract that specifies the attributes to use.

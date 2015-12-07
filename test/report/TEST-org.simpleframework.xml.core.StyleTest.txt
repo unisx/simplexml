@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StyleTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -42,14 +42,14 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
       </TextEntry>
    </TextArray>
    <URLMap class="java.util.HashMap">
-      <URLItem Key="a">
-         <URLItem>http://a.com/</URLItem>
+      <URLItem Key="b">
+         <URLItem>http://b.com/</URLItem>
       </URLItem>
       <URLItem Key="c">
          <URLItem>http://c.com/</URLItem>
       </URLItem>
-      <URLItem Key="b">
-         <URLItem>http://b.com/</URLItem>
+      <URLItem Key="a">
+         <URLItem>http://a.com/</URLItem>
       </URLItem>
    </URLMap>
 </Example><Example Version="1.0" Name="example" URL="http://domain.com/">
@@ -93,14 +93,14 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
       </TextEntry>
    </TextArray>
    <URLMap class="java.util.HashMap">
-      <URLItem Key="a">
-         <URLItem>http://a.com/</URLItem>
+      <URLItem Key="b">
+         <URLItem>http://b.com/</URLItem>
       </URLItem>
       <URLItem Key="c">
          <URLItem>http://c.com/</URLItem>
       </URLItem>
-      <URLItem Key="b">
-         <URLItem>http://b.com/</URLItem>
+      <URLItem Key="a">
+         <URLItem>http://a.com/</URLItem>
       </URLItem>
    </URLMap>
 </Example>
@@ -172,22 +172,22 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
    </text-array>
    <!-- java.util.Map -->
    <URL-map class="java.util.HashMap" ID="27">
-      <URL-item key="a">
+      <URL-item key="b">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URL-item ID="28">http://a.com/</URL-item>
+         <URL-item ID="28">http://b.com/</URL-item>
       </URL-item>
       <URL-item key="c">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
          <URL-item ID="29">http://c.com/</URL-item>
       </URL-item>
-      <URL-item key="b">
+      <URL-item key="a">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URL-item ID="30">http://b.com/</URL-item>
+         <URL-item ID="30">http://a.com/</URL-item>
       </URL-item>
    </URL-map>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -256,22 +256,22 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
    </TextArray>
    <!-- java.util.Map -->
    <URLMap class="java.util.HashMap" ID="27">
-      <URLItem Key="a">
+      <URLItem Key="b">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URLItem ID="28">http://a.com/</URLItem>
+         <URLItem ID="28">http://b.com/</URLItem>
       </URLItem>
       <URLItem Key="c">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
          <URLItem ID="29">http://c.com/</URLItem>
       </URLItem>
-      <URLItem Key="b">
+      <URLItem Key="a">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URLItem ID="30">http://b.com/</URLItem>
+         <URLItem ID="30">http://a.com/</URLItem>
       </URLItem>
    </URLMap>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <example version="1.0" name="example" URL="http://domain.com/">
    <list class="java.util.ArrayList">
       <list-entry id="1">
@@ -313,14 +313,14 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
       </text-entry>
    </text-array>
    <URL-map class="java.util.HashMap">
-      <URL-item key="a">
-         <URL-item>http://a.com/</URL-item>
+      <URL-item key="b">
+         <URL-item>http://b.com/</URL-item>
       </URL-item>
       <URL-item key="c">
          <URL-item>http://c.com/</URL-item>
       </URL-item>
-      <URL-item key="b">
-         <URL-item>http://b.com/</URL-item>
+      <URL-item key="a">
+         <URL-item>http://a.com/</URL-item>
       </URL-item>
    </URL-map>
 </example><example version="1.0" name="example" URL="http://domain.com/">
@@ -364,14 +364,14 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
       </text-entry>
    </text-array>
    <URL-map class="java.util.HashMap">
-      <URL-item key="a">
-         <URL-item>http://a.com/</URL-item>
+      <URL-item key="b">
+         <URL-item>http://b.com/</URL-item>
       </URL-item>
       <URL-item key="c">
          <URL-item>http://c.com/</URL-item>
       </URL-item>
-      <URL-item key="b">
-         <URL-item>http://b.com/</URL-item>
+      <URL-item key="a">
+         <URL-item>http://a.com/</URL-item>
       </URL-item>
    </URL-map>
 </example>
@@ -443,22 +443,22 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
    </text-array>
    <!-- java.util.Map -->
    <URL-map class="java.util.HashMap" ID="27">
-      <URL-item key="a">
+      <URL-item key="b">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URL-item ID="28">http://a.com/</URL-item>
+         <URL-item ID="28">http://b.com/</URL-item>
       </URL-item>
       <URL-item key="c">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
          <URL-item ID="29">http://c.com/</URL-item>
       </URL-item>
-      <URL-item key="b">
+      <URL-item key="a">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URL-item ID="30">http://b.com/</URL-item>
+         <URL-item ID="30">http://a.com/</URL-item>
       </URL-item>
    </URL-map>
 </example>>>>>> ELEMENT=[element example]
 >>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
@@ -527,22 +527,22 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
    </TextArray>
    <!-- java.util.Map -->
    <URLMap class="java.util.HashMap" ID="27">
-      <URLItem Key="a">
+      <URLItem Key="b">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URLItem ID="28">http://a.com/</URLItem>
+         <URLItem ID="28">http://b.com/</URLItem>
       </URLItem>
       <URLItem Key="c">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
          <URLItem ID="29">http://c.com/</URLItem>
       </URLItem>
-      <URLItem Key="b">
+      <URLItem Key="a">
          <!-- org.simpleframework.xml.core.StyleTest$URLEntry -->
-         <URLItem ID="30">http://b.com/</URLItem>
+         <URLItem ID="30">http://a.com/</URLItem>
       </URLItem>
    </URLMap>
 </Example>>>>>> ELEMENT=[element Example]
 >>>>> TYPE=[class org.simpleframework.xml.core.StyleTest$CaseExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 <example version="1.0" name="example" URL="http://domain.com/">
@@ -586,17 +586,17 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.549 sec
       </text-entry>
    </text-array>
    <URL-map class="java.util.HashMap">
-      <URL-item key="a">
-         <URL-item>http://a.com/</URL-item>
+      <URL-item key="b">
+         <URL-item>http://b.com/</URL-item>
       </URL-item>
       <URL-item key="c">
          <URL-item>http://c.com/</URL-item>
       </URL-item>
-      <URL-item key="b">
-         <URL-item>http://b.com/</URL-item>
+      <URL-item key="a">
+         <URL-item>http://a.com/</URL-item>
       </URL-item>
    </URL-map>
 </example>------------- ---------------- ---------------
 
-Testcase: testCase took 0.541 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testCase took 0.28 sec
+Testcase: testDirectory took 0 sec

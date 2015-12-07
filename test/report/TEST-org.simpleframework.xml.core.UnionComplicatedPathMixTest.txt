@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionComplicatedPathMixTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.954 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
 ------------- Standard Output ---------------
 <complicatedExample xmlns:x="http://www.x.com/x">
    <x:path>
@@ -136,7 +136,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.954 sec
    </x:path>
 </complicated-example>>>>>> ELEMENT=[element complicated-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionComplicatedPathMixTest$ComplicatedExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ComplicatedExample ID="0" xmlns:x="http://www.x.com/x">
    <x:Path>
       <A>
@@ -183,7 +183,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.954 sec
    </x:Path>
 </ComplicatedExample>>>>>> ELEMENT=[element ComplicatedExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionComplicatedPathMixTest$ComplicatedExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ComplicatedExample xmlns:x="http://www.x.com/x">
    <x:Path>
       <A>
@@ -319,7 +319,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.954 sec
    </x:path>
 </complicated-example>>>>>> ELEMENT=[element complicated-example]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionComplicatedPathMixTest$ComplicatedExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ComplicatedExample ID="0" xmlns:x="http://www.x.com/x">
    <x:Path>
       <A>
@@ -366,9 +366,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.954 sec
    </x:Path>
 </ComplicatedExample>>>>>> ELEMENT=[element ComplicatedExample]
 >>>>> TYPE=[class org.simpleframework.xml.core.UnionComplicatedPathMixTest$ComplicatedExample]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testComplicatedMap took 0.68 sec
-Testcase: testStyledComplicatedMap took 0.267 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testComplicatedMap took 0.328 sec
+Testcase: testStyledComplicatedMap took 0.093 sec
+Testcase: testDirectory took 0 sec

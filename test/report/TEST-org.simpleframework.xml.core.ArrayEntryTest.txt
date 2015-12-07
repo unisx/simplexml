@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="3">
@@ -47,7 +47,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
    </list>
 </example-array>>>>>> ELEMENT=[element example-array]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayEntryTest$ExampleArray]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ExampleArray ID="0">
    <!-- [Lorg.simpleframework.xml.core.ArrayEntryTest$Entry; -->
    <List length="3" ID="1">
@@ -69,7 +69,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
    </List>
 </ExampleArray>>>>>> ELEMENT=[element ExampleArray]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayEntryTest$ExampleArray]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <examplePrimitiveArray>
    <list length="4">
       <substitute>a</substitute>
@@ -99,7 +99,7 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
    </list>
 </example-primitive-array>>>>>> ELEMENT=[element example-primitive-array]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayEntryTest$ExamplePrimitiveArray]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 <ExamplePrimitiveArray ID="0">
    <!-- [Ljava.lang.Character; -->
    <List length="4" ID="1">
@@ -114,9 +114,9 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
    </List>
 </ExamplePrimitiveArray>>>>>> ELEMENT=[element ExamplePrimitiveArray]
 >>>>> TYPE=[class org.simpleframework.xml.core.ArrayEntryTest$ExamplePrimitiveArray]
->>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+>>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.327 sec
-Testcase: testExamplePrimitiveArray took 0.019 sec
+Testcase: testExampleArray took 0.172 sec
+Testcase: testExamplePrimitiveArray took 0.016 sec
 Testcase: testDirectory took 0 sec

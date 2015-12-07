@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.125 sec
 
-Testcase: testEnum took 0.219 sec
-Testcase: testVargsEnum took 0.008 sec
+Testcase: testEnum took 0.125 sec
+Testcase: testVargsEnum took 0 sec
