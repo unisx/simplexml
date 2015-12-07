@@ -15,6 +15,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.Integer">3</object>
       </entry>
       <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
          <object class="java.lang.String">key 4</object>
          <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
       </entry>
@@ -22,12 +26,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.String">key 2</object>
          <object class="java.lang.String">value 2</object>
       </entry>
-      <entry>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
-      </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-02-01 20:55:04.462 GMT</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-02-03 23:24:37.112 GMT</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -54,7 +54,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.String">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-02-01 20:55:04.462 GMT</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-02-03 23:24:37.112 GMT</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -69,6 +69,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.Integer">3</object>
       </entry>
       <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
          <object class="java.lang.String">key 4</object>
          <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
       </entry>
@@ -76,12 +80,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.String">key 2</object>
          <object class="java.lang.String">value 2</object>
       </entry>
-      <entry>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
-      </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-02-01 20:55:04.462 GMT</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-02-03 23:24:37.112 GMT</calendar>
 </mixExample><mixExample>
    <list class="java.util.ArrayList">
       <object class="java.lang.String">text</object>
@@ -96,6 +96,10 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.Integer">3</object>
       </entry>
       <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
          <object class="java.lang.String">key 4</object>
          <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
       </entry>
@@ -103,12 +107,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.String">key 2</object>
          <object class="java.lang.String">value 2</object>
       </entry>
-      <entry>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
-      </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar">2010-02-01 20:55:04.462 GMT</calendar>
+   <calendar class="java.util.GregorianCalendar">2010-02-03 23:24:37.112 GMT</calendar>
 </mixExample>
 <mix-example ID="0">
    <list class="java.util.ArrayList" ID="1">
@@ -124,19 +124,19 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <object class="java.lang.Integer" ID="9">3</object>
       </entry>
       <entry>
-         <object class="java.lang.String" ID="10">key 4</object>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="11" id="4">value 4</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="10" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="11" id="1">value 1</object>
       </entry>
       <entry>
-         <object class="java.lang.String" ID="12">key 2</object>
-         <object class="java.lang.String" ID="13">value 2</object>
+         <object class="java.lang.String" ID="12">key 4</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="13" id="4">value 4</object>
       </entry>
       <entry>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="14" id="1">key 1</object>
-         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="15" id="1">value 1</object>
+         <object class="java.lang.String" ID="14">key 2</object>
+         <object class="java.lang.String" ID="15">value 2</object>
       </entry>
    </map>
-   <calendar class="java.util.GregorianCalendar" ID="16">2010-02-01 20:55:04.462 GMT</calendar>
+   <calendar class="java.util.GregorianCalendar" ID="16">2010-02-03 23:24:37.112 GMT</calendar>
 </mix-example><MixExample ID="0">
    <List class="java.util.ArrayList" ID="1">
       <Object class="java.lang.String" ID="2">text</Object>
@@ -151,19 +151,19 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
          <Object class="java.lang.Integer" ID="9">3</Object>
       </Entry>
       <Entry>
-         <Object class="java.lang.String" ID="10">key 4</Object>
-         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="11" id="4">value 4</Object>
+         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="10" id="1">key 1</Object>
+         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="11" id="1">value 1</Object>
       </Entry>
       <Entry>
-         <Object class="java.lang.String" ID="12">key 2</Object>
-         <Object class="java.lang.String" ID="13">value 2</Object>
+         <Object class="java.lang.String" ID="12">key 4</Object>
+         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="13" id="4">value 4</Object>
       </Entry>
       <Entry>
-         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="14" id="1">key 1</Object>
-         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="15" id="1">value 1</Object>
+         <Object class="java.lang.String" ID="14">key 2</Object>
+         <Object class="java.lang.String" ID="15">value 2</Object>
       </Entry>
    </Map>
-   <Calendar class="java.util.GregorianCalendar" ID="16">2010-02-01 20:55:04.462 GMT</Calendar>
+   <Calendar class="java.util.GregorianCalendar" ID="16">2010-02-03 23:24:37.112 GMT</Calendar>
 </MixExample>------------- ---------------- ---------------
 
 Testcase: testMix took 0.314 sec

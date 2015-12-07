@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DecoratorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.315 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.304 sec
 ------------- Standard Output ---------------
 <friendList>
    <list type="list">
@@ -120,5 +120,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.315 sec
    </List>
 </FriendList>------------- ---------------- ---------------
 
-Testcase: testDecorator took 0.308 sec
+Testcase: testDecorator took 0.297 sec
 Testcase: testDirectory took 0 sec

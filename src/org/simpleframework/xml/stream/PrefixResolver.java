@@ -128,7 +128,7 @@ class PrefixResolver extends LinkedHashMap<String, String> implements NamespaceM
       int size = size();
       
       if(size > 0) {
-         String prefix = super.get(reference);
+         String prefix = super.get(reference); 
    
          if(prefix != null) {
             return prefix;
@@ -149,10 +149,14 @@ class PrefixResolver extends LinkedHashMap<String, String> implements NamespaceM
    private String resolve(String reference) {
       NamespaceMap parent = source.getNamespaces();
       
-      if(parent == null) {
-         return null;
+      if(parent != null) {
+         String prefix = parent.get(reference);
+         
+         if(!containsValue(prefix)) {
+            return prefix;
+         }
       }
-      return parent.get(reference);
+      return null;
    }
    
    /**

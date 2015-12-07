@@ -8,7 +8,9 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,6 +30,7 @@ import org.simpleframework.xml.stream.CamelCaseStyle;
 import org.simpleframework.xml.stream.Format;
 import org.simpleframework.xml.stream.HyphenStyle;
 import org.simpleframework.xml.stream.Style;
+import org.w3c.dom.CDATASection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -46,6 +49,7 @@ public class ValidationTestCase extends XMLTestCase {
    static  {
       try {           
          builderFactory = DocumentBuilderFactory.newInstance();
+         builderFactory.setNamespaceAware(true);
          builder = builderFactory.newDocumentBuilder();
 
          transformerFactory = TransformerFactory.newInstance();
@@ -142,12 +146,16 @@ public class ValidationTestCase extends XMLTestCase {
        assertMatch(sourceXml, pathExpression, new ElementMatch(value), true);
     }
     
+    public void assertElementHasCDATA(String sourceXml, String pathExpression, String value) throws Exception {
+       assertMatch(sourceXml, pathExpression, new ElementCDATAMatch(value), true);
+    }
+    
     public void assertElementHasAttribute(String sourceXml, String pathExpression, String name, String value) throws Exception {
        assertMatch(sourceXml, pathExpression, new AttributeMatch(name, value), true);
     }
     
     public void assertElementHasNamespace(String sourceXml, String pathExpression, String reference) throws Exception {
-       assertMatch(sourceXml, pathExpression, new NamespaceMatch(reference), true);
+       assertMatch(sourceXml, pathExpression, new OfficialNamespaceMatch(reference), true);
     }
     
     public void assertElementDoesNotExist(String sourceXml, String pathExpression) throws Exception {
@@ -158,12 +166,16 @@ public class ValidationTestCase extends XMLTestCase {
        assertMatch(sourceXml, pathExpression, new ElementMatch(value), false);
     }
     
+    public void assertElementDoesNotHaveCDATA(String sourceXml, String pathExpression, String value) throws Exception {
+       assertMatch(sourceXml, pathExpression, new ElementCDATAMatch(value), false);
+    }
+    
     public void assertElementDoesNotHaveAttribute(String sourceXml, String pathExpression, String name, String value) throws Exception {
        assertMatch(sourceXml, pathExpression, new AttributeMatch(name, value), false);
     }
     
     public void assertElementDoesNotHaveNamespace(String sourceXml, String pathExpression, String reference) throws Exception {
-       assertMatch(sourceXml, pathExpression, new NamespaceMatch(reference), false);
+       assertMatch(sourceXml, pathExpression, new OfficialNamespaceMatch(reference), false);
     }
     
     private void assertMatch(String sourceXml, String pathExpression, ExpressionMatch match, boolean assertTrue) throws Exception {
@@ -284,6 +296,26 @@ public class ValidationTestCase extends XMLTestCase {
        }
     }
     
+    public static class ElementCDATAMatch implements ExpressionMatch {
+       private final String text;
+       public ElementCDATAMatch(String text){
+          this.text = text;
+       }
+       public boolean match(org.w3c.dom.Element element) {
+          if(element != null) {
+             Node value = element.getFirstChild();
+             if(value instanceof CDATASection) {
+                return value != null && value.getNodeValue().equals(text);
+             }
+             return false;
+          }
+          return false;
+       }
+       public String getDescription() {
+          return "text value equal to '"+text+"'";
+       }
+    }
+    
     public static class NamespaceMatch implements ExpressionMatch {
        private final String reference;
        public NamespaceMatch(String reference) {
@@ -325,6 +357,26 @@ public class ValidationTestCase extends XMLTestCase {
        }
     }
     
+    public static class OfficialNamespaceMatch implements ExpressionMatch {
+       private final String reference;
+       public OfficialNamespaceMatch(String reference) {
+          this.reference = reference;
+       }
+       public boolean match(org.w3c.dom.Element element) {
+          if(element != null) {
+             String actual = element.getNamespaceURI();
+             if(actual == null){
+                return reference == null || reference.equals("");
+             }
+             return element.getNamespaceURI().equals(reference);
+          }
+          return false;
+       }
+       public String getDescription(){
+          return "namespace reference as '"+reference+"'";
+       }
+    }
+    
     public static class AttributeMatch implements ExpressionMatch {
        private final String name;
        private final String value;
@@ -343,4 +395,29 @@ public class ValidationTestCase extends XMLTestCase {
           return "attribute "+name+"='"+value+"'";
        }
     }
+    
+    private static void print(Node node) {
+       Queue<Node> nodes = new LinkedList<Node>();
+       nodes.add(node);
+       while (!nodes.isEmpty()) {
+         node = nodes.poll();
+         NodeList list = node.getChildNodes();
+         for (int i = 0; i < list.getLength(); i++) {
+            if(list.item(i) instanceof org.w3c.dom.Element) {
+               nodes.add(list.item(i));
+            }
+         }
+         System.out.format("name='%s' prefix='%s' reference='%s'%n", node.getPrefix(), node.getLocalName(),
+             node.getNamespaceURI());
+       }
+     }
+
+     public static void dumpNamespaces(String xml) throws Exception {
+       DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+       dbf.setNamespaceAware(true);
+       Document doc = dbf.newDocumentBuilder().parse(
+           new InputSource(new StringReader(xml)));
+       print(doc.getDocumentElement());
+     }
+
 }

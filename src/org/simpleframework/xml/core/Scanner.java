@@ -493,7 +493,7 @@ class Scanner {
             Contact contact = label.getContact();
             String name = label.getName();
             
-            if(contact.isFinal()) {
+            if(contact.isReadOnly()) {
                Parameter value = builder.getParameter(name);
                
                if(value == null) {

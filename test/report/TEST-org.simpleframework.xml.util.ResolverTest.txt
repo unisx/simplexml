@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.298 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -93,9 +93,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
    </List>
 </Test>------------- ---------------- ---------------
 
-Testcase: testResolver took 0.211 sec
+Testcase: testResolver took 0.221 sec
 Testcase: testCache took 0.041 sec
-Testcase: testNoResolution took 0.008 sec
-Testcase: testNonGreedyMatch took 0.004 sec
+Testcase: testNoResolution took 0.01 sec
+Testcase: testNonGreedyMatch took 0.005 sec
 Testcase: testResolverCache took 0.016 sec
 Testcase: testDirectory took 0 sec

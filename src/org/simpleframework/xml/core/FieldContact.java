@@ -69,6 +69,30 @@ class FieldContact implements Contact {
    } 
    
    /**
+    * This is used to determine if the annotated contact is for a
+    * read only variable. A read only variable is a field that
+    * can be set from within the constructor such as a blank final
+    * variable. It can also be a method with no set counterpart.
+    * 
+    * @return this returns true if the contact is a constant one
+    */
+   public boolean isReadOnly() {
+      return !isStatic() && isFinal();
+   }
+   
+   /**
+    * This is used to determine if the annotated contact is for a
+    * static field or method. A static field or method is one that
+    * contains the "static" keyword. Any static final fields will
+    * be read only and does not require any matching annotation.
+    * 
+    * @return this returns true if the contact is a static one
+    */
+   public boolean isStatic() {
+      return Modifier.isStatic(modifier);
+   }
+   
+   /**
     * This is used to identify annotated methods are fields that
     * can not be modified. Such field will require that there is 
     * a constructor that can have the value injected in to it.

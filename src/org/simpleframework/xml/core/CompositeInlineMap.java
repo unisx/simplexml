@@ -22,6 +22,7 @@ import java.util.Map;
 
 import org.simpleframework.xml.strategy.Type;
 import org.simpleframework.xml.stream.InputNode;
+import org.simpleframework.xml.stream.Mode;
 import org.simpleframework.xml.stream.OutputNode;
 import org.simpleframework.xml.stream.Style;
 
@@ -214,13 +215,14 @@ class CompositeInlineMap implements Repeater {
     * @param source this is the source map that is to be written 
     */
    public void write(OutputNode node, Object source) throws Exception {               
-      OutputNode parent = node.getParent();      
-      Map table = (Map) source;
-      
+      OutputNode parent = node.getParent();  
+      Mode mode = node.getMode();
+      Map map = (Map) source;
+
       if(!node.isCommitted()) {
          node.remove();
       }
-      write(parent, table);
+      write(parent, map, mode);
    }
    
    /**
@@ -233,8 +235,9 @@ class CompositeInlineMap implements Repeater {
     * 
     * @param node this is the node the map is to be written to
     * @param map this is the source map that is to be written 
+    * @param mode this is the mode that has been inherited
     */
-   public void write(OutputNode node, Map map) throws Exception {   
+   private void write(OutputNode node, Map map, Mode mode) throws Exception {   
       String root = entry.getEntry();
       String name = style.getElement(root);
       
@@ -242,6 +245,7 @@ class CompositeInlineMap implements Repeater {
          OutputNode next = node.getChild(name);
          Object item = map.get(index);            
          
+         next.setMode(mode); 
          key.write(next, index);            
          value.write(next, item);                  
       }

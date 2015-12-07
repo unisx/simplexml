@@ -33,15 +33,6 @@ import org.simpleframework.xml.strategy.Type;
  * @see org.simpleframework.xml.core.Label
  */ 
 interface Contact extends Type {
-
-   /**
-    * This is used to identify annotated methods are fields that
-    * can not be modified. Such field will require that there is 
-    * a constructor that can have the value injected in to it.
-    * 
-    * @return this returns true if the field or method is final
-    */
-   public boolean isFinal();
    
    /**
     * This represents the name of the object contact. If the contact
@@ -105,6 +96,16 @@ interface Contact extends Type {
     * @return this is the value acquired from the point of contact
     */ 
    public Object get(Object source) throws Exception;
+   
+   /**
+    * This is used to determine if the annotated contact is for a
+    * read only variable. A read only variable is a field that
+    * can be set from within the constructor such as a blank final
+    * variable. It can also be a method with no set counterpart.
+    * 
+    * @return this returns true if the contact is a constant one
+    */
+   public boolean isReadOnly();
    
    /**
     * This is used to describe the contact as it exists within the

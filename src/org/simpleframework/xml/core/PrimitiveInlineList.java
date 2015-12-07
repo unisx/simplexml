@@ -214,7 +214,7 @@ class PrimitiveInlineList implements Repeater {
     * @param source this is the source collection to be serialized 
     * @param mode this is used to determine whether to output CDATA    
     */ 
-   public void write(OutputNode node, Object source, Mode mode) throws Exception {
+   private void write(OutputNode node, Object source, Mode mode) throws Exception {
       Collection list = (Collection) source;
       
       for(Object item : list) {

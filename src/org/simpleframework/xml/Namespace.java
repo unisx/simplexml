@@ -31,30 +31,34 @@ import java.lang.annotation.RetentionPolicy;
  * <pre>
  *  
  *    &lt;book:book xmlns:book="http://www.example.com/book"&gt;
- *       &lt;book:author&gt;saurabh&lt;/book:author&gt;
- *       &lt;book:title&gt;example title&lt;/book:title&gt;
- *       &lt;book:isbn&gt;ISB-16728-10&lt;/book:isbn&gt;
+ *       &lt;author&gt;saurabh&lt;/author&gt;
+ *       &lt;title&gt;example title&lt;/title&gt;
+ *       &lt;isbn&gt;ISB-16728-10&lt;/isbn&gt;
  *    &lt;/book:book&gt;
  *
  * </pre>
  * In the above XML snippet a namespace has been declared with the
  * prefix "book" and the reference "http://www.example.com/book". If
  * such a namespace is applied to a class, method, or field then 
- * each of the attributes an elements, which does not have an 
- * explicit override then they inherit their parents prefix. 
+ * that element will contain the namespace and the element name will
+ * be prefixed with a namespace qualifier, which is "book" here.
  * <pre>
  *
- *    &lt;root:example xmlns:root="http://www.example.com/root"&gt;
- *       &lt;child xmlns=""&gt;
- *          &lt;anonymous&gt;anonymous element&lt;/anonymous&gt;
+ *    &lt;example xmlns="http://www.example.com/root"&gt;
+ *       &lt;child&gt;
+ *          &lt;text xmlns=""&gt;text element&lt;/text&gt;
  *       &lt;/child&gt;
- *    &lt;/root:example&gt;
+ *    &lt;/example&gt;
  *
  * </pre>
- * In order to override the parent namespace an anonymous namespace
- * can be declared. This overrides the parents scope with no default
- * namespace tied to the child elements which is declared within a
- * given namespace.
+ * In order for a namespace to be inherited it must be specified as
+ * a default namespace. A default namespace is one that does not have
+ * a prefix. All elements that do not have an explicit namespace will
+ * inherit the last default namespace in scope. For details see
+ * <a href='http://www.w3.org/TR/xml-names/#defaulting'>Section 6.2</a>
+ * of the namespaces in XML 1.0 specification. To remove the default
+ * namespace simply specify a namespace with no prefix or reference,
+ * such as the "text" element in the above example.  
  *
  * @author Niall Gallagher
  */ 

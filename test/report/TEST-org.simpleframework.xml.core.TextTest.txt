@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.31 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.325 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -140,11 +140,11 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.226 sec
-Testcase: testData took 0.03 sec
+Testcase: testText took 0.243 sec
+Testcase: testData took 0.031 sec
 Testcase: testDuplicate took 0.003 sec
-Testcase: testIllegalElement took 0.004 sec
+Testcase: testIllegalElement took 0.005 sec
 Testcase: testEmpty took 0.007 sec
-Testcase: testOptional took 0.029 sec
+Testcase: testOptional took 0.026 sec
 Testcase: testNonPrimitive took 0.003 sec
 Testcase: testDirectory took 0 sec

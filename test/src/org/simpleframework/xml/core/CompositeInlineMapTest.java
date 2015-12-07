@@ -9,6 +9,7 @@ import junit.framework.TestCase;
 
 import org.simpleframework.xml.ElementMap;
 import org.simpleframework.xml.strategy.TreeStrategy;
+import org.simpleframework.xml.stream.Mode;
 import org.simpleframework.xml.stream.NodeBuilder;
 import org.simpleframework.xml.stream.OutputNode;
 
@@ -150,7 +151,7 @@ public class CompositeInlineMapTest extends TestCase {
       
       exampleMap.put("a", "1");
       exampleMap.put("b", "2");
-      value.write(node.getChild("notInlineString"), exampleMap);
+      value.write(node.getChild("notInlineString").getChild("map"), exampleMap);
       node.commit();            
    }
    
@@ -176,7 +177,7 @@ public class CompositeInlineMapTest extends TestCase {
       
       exampleMap.put("a", "1");
       exampleMap.put("b", "2");      
-      value.write(node.getChild("noAttributeString"), exampleMap);
+      value.write(node.getChild("noAttributeString").getChild("map"), exampleMap);
       node.commit();
    }
    
@@ -202,7 +203,7 @@ public class CompositeInlineMapTest extends TestCase {
       
       exampleMap.put("a", "1");
       exampleMap.put("b", "2");
-      value.write(node.getChild("attributeNoKeyString"), exampleMap);
+      value.write(node.getChild("attributeNoKeyString").getChild("map"), exampleMap);
       node.commit();
    }
 }

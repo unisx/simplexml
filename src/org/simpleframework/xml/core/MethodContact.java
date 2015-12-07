@@ -100,13 +100,14 @@ class MethodContact implements Contact {
    }  
    
    /**
-    * This is used to identify annotated methods are fields that
-    * can not be modified. Such field will require that there is 
-    * a constructor that can have the value injected in to it.
+    * This is used to determine if the annotated contact is for a
+    * read only variable. A read only variable is a field that
+    * can be set from within the constructor such as a blank final
+    * variable. It can also be a method with no set counterpart.
     * 
-    * @return this returns true if the field or method is final
+    * @return this returns true if the contact is a constant one
     */
-   public boolean isFinal() {
+   public boolean isReadOnly() {
       return set == null;
    }
    
