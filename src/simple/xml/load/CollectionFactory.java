@@ -20,12 +20,11 @@
 
 package simple.xml.load;
 
+import simple.xml.stream.InputNode;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.TreeSet;
-
-import simple.xml.stream.InputNode;
 
 /**
  * The <code>CollectionFactory</code> is used to create collection
@@ -61,26 +60,27 @@ final class CollectionFactory extends Factory {
     * @return this is the collection instantiated for the field
     */         
    public Collection getInstance(InputNode node) throws Exception {
-      Class type = getOverride(node);
+      Type type = getOverride(node);
      
       if(type != null) {              
-         return getInstance(type);                       
-      }              
+         return getInstance(type);
+      }
       if(!isInstantiable(field)) {
          field = getConversion(field);
       }
       if(!isCollection(field)) {
-         throw new InstantiationException("Type is not a collection %s", field);              
+         throw new InstantiationException("Type is not a collection %s", field);
       }
-      return (Collection)field.newInstance();
+      return (Collection)field.newInstance();   
    }     
 
    /**
-    * This creates a <code>Collection</code> instance from the class
+    * This creates a <code>Collection</code> instance from the type
     * provided. If the type provided is abstract or an interface then
-    * a suitable match is searched from within the Java Collections
-    * framework. If the type is concrete and a collection then its
-    * default no argument constructor is used to create the instance.
+    * this throws an exception to indicate that the type can not be 
+    * used to represent the field value. Also, if the type class is 
+    * not a collection this will throw an exception. If however the 
+    * type class is suitable, the type will create an instance.
     * 
     * @param type the type used to instantiate the collection
     * 
@@ -88,14 +88,16 @@ final class CollectionFactory extends Factory {
     * 
     * @throws Exception if the collection cannot be instantiated
     */
-   public Collection getInstance(Class type) throws Exception {
-      if(!isInstantiable(type)) {
-         throw new InstantiationException("Could not instantiate class %s", type);
+   public Collection getInstance(Type type) throws Exception {
+      Class real = type.getType();
+
+      if(!isInstantiable(real)) {
+         throw new InstantiationException("Could not instantiate class %s", real);
       }
-      if(!isCollection(type)) {
-         throw new InstantiationException("Type is not a collection %s", type);              
+      if(!isCollection(real)) {
+         throw new InstantiationException("Type is not a collection %s", real);              
       }
-      return (Collection)type.newInstance();    
+      return (Collection)type.getInstance();    
    }  
 
    /**

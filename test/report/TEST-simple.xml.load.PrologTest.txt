@@ -7,4 +7,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.155 sec
     <name>some name</name>
 </source>------------- ---------------- ---------------
 
-Testcase: testProlog took 0.153 sec
+Testcase: testProlog took 0.155 sec

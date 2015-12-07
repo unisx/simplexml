@@ -32,7 +32,7 @@ import java.util.Map;
  * <pre>
  * 
  *    &lt;xml version="1.0"&gt;
- *    &lt;example class="some.example.Type"&gt;
+ *    &lt;example class="some.example.Demo"&gt;
  *       &lt;integer&gt;2&lt;/integer&gt;
  *    &lt;/example&gt;
  *    
@@ -40,7 +40,7 @@ import java.util.Map;
  * The above example shows how the default strategy augments elements
  * with "class" attributes that describe the type that should be used
  * to instantiate a field when an object is deserialized. So looking at
- * the above example the root element would be a "some.example.Type".
+ * the above example the root element would be a "some.example.Demo".
  * <p>
  * Custom <code>Strategy</code> implementations give the persister a
  * chance to intercept the class loading and type resolution for XML
@@ -58,21 +58,21 @@ public interface Strategy {
    /**
     * This is used to resolve and load the root class type. To perform
     * the resolution this method is given the root node map for the
-    * XML document. This is separate to the <code>readElement</code>
+    * XML document. This is separate to the <code>getElement</code>
     * because the root element may contain details like the location
     * of the byte codes, much like the RMI codebase annotation, or
     * the version of the package for example "some.package.v2". This 
-    * must return null if a class cannot be resolved.  
+    * must return null if a type cannot be resolved.  
     *  
     * @param field this is the type of the root element expected
     * @param node this is the node map used to resolve an override
     * @param map this is used to maintain contextual information
     * 
-    * @return returns the class that should be used for the object
+    * @return the type that should be used to create a new instance
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Class readRoot(Class field, NodeMap node, Map map) throws Exception;
+   public Type getRoot(Class field, NodeMap node, Map map) throws Exception;
 
    /**
     * This is used to resolve and load a class for the given element.
@@ -87,11 +87,11 @@ public interface Strategy {
     * @param node this is the node map used to resolve an override
     * @param map this is used to maintain contextual information
     * 
-    * @return returns the class that should be used for the object
+    * @return the type that should be used to create a new instance
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Class readElement(Class field, NodeMap node, Map map) throws Exception;
+   public Type getElement(Class field, NodeMap node, Map map) throws Exception;
 
    /**
     * This is used to attach attributes values to the given node
@@ -109,7 +109,7 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public void writeRoot(Class field, Object value, NodeMap node, Map map) throws Exception;
+   public void setRoot(Class field, Object value, NodeMap node, Map map) throws Exception;
 
    /**
     * This is used to attach attribute values to the given node
@@ -125,6 +125,6 @@ public interface Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public void writeElement(Class field, Object value, NodeMap node, Map map) throws Exception;
+   public void setElement(Class field, Object value, NodeMap node, Map map) throws Exception;
 
 }

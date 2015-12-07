@@ -15,4 +15,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.161 sec
    </list>
 </test>------------- ---------------- ---------------
 
-Testcase: testDictionary took 0.16 sec
+Testcase: testDictionary took 0.161 sec
