@@ -8,7 +8,7 @@
       <property name="jar.path" value="jar"/>
       <property name="test.path" value="test"/>
       <property name="lib.path" value="lib"/>
-      <property name="version" value="1.3.1"/>
+      <property name="version" value="1.4"/>
    </target>
 
    <target name="clean" depends="layout">
@@ -40,7 +40,7 @@
 
    <target name="javadoc" depends="layout">
       <mkdir dir="${javadoc.path}"/>
-      <javadoc sourcepath="${source.path}" packagenames="simple.*" destdir="${javadoc.path}" private="false">
+      <javadoc sourcepath="${source.path}" packagenames="org.simpleframework.*" destdir="${javadoc.path}" private="false">
          <classpath>
             <fileset dir="${lib.path}">
                <include name="**/*.jar"/>
