@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictModeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.354 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.415 sec
 ------------- Standard Output ---------------
 <exampleObjectWithAddress version="1.0">
    <integer>123</integer>
@@ -55,11 +55,12 @@ org.simpleframework.xml.core.AttributeException: Attribute 'name' does not have 
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:601)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:582)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:563)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:500)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:409)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:415)
 	at org.simpleframework.xml.core.StrictModeTest.testStrictMode(StrictModeTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -85,10 +86,11 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:601)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:582)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:563)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:500)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:632)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:613)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:591)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:569)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:506)
 	at org.simpleframework.xml.core.StrictModeTest.testNonStrictModeMissingName(StrictModeTest.java:87)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -111,11 +113,12 @@ org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:709)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:686)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1043)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1023)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1003)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:937)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:841)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1126)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1106)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1083)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1060)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:994)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:898)
 	at org.simpleframework.xml.core.StrictModeTest.testValidation(StrictModeTest.java:102)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -138,11 +141,12 @@ org.simpleframework.xml.core.AttributeException: Attribute 'name' does not exist
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:709)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:686)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1043)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1023)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1003)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:937)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:841)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1126)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1106)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1083)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1060)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:994)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:898)
 	at org.simpleframework.xml.core.StrictModeTest.testValidation(StrictModeTest.java:108)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -165,10 +169,11 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:710)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:686)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:171)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1043)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1023)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:1003)
-	at org.simpleframework.xml.core.Persister.validate(Persister.java:937)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1126)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1106)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1083)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:1060)
+	at org.simpleframework.xml.core.Persister.validate(Persister.java:994)
 	at org.simpleframework.xml.core.StrictModeTest.testValidation(StrictModeTest.java:114)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -187,8 +192,8 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testStrictMode took 0.186 sec
-Testcase: testNonStrictMode took 0.136 sec
+Testcase: testStrictMode took 0.211 sec
+Testcase: testNonStrictMode took 0.164 sec
 Testcase: testNonStrictModeMissingName took 0.006 sec
-Testcase: testValidation took 0.016 sec
-Testcase: testDirectory took 0 sec
+Testcase: testValidation took 0.022 sec
+Testcase: testDirectory took 0.001 sec

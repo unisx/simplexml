@@ -1,6 +1,6 @@
 Testsuite: org.simpleframework.xml.core.FilterTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.243 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
 
-Testcase: testSystem took 0.213 sec
-Testcase: testMap took 0.005 sec
-Testcase: testEnvironmentFilter took 0.018 sec
+Testcase: testSystem took 0.238 sec
+Testcase: testMap took 0.006 sec
+Testcase: testEnvironmentFilter took 0.019 sec

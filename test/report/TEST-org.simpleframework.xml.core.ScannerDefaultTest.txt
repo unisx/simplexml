@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScannerDefaultTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.149 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.164 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.MethodException: Annotations do not match for 'name' in class org.simpleframework.xml.core.ScannerDefaultTest$NonMatchingAnnotationExample
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:445)
@@ -7,7 +7,7 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:387)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:160)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:140)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:645)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:648)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:120)
 	at org.simpleframework.xml.core.ScannerDefaultTest.testNonMatchingAnnotationExample(ScannerDefaultTest.java:76)
@@ -28,6 +28,6 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testNonMatchingAnnotationExample took 0.087 sec
-Testcase: testDuplicateExample took 0.048 sec
+Testcase: testNonMatchingAnnotationExample took 0.1 sec
+Testcase: testDuplicateExample took 0.049 sec
 Testcase: testScanner took 0.006 sec

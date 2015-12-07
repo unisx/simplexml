@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultWithParametersInGetterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
 ------------- Standard Output ---------------
 <defaultTestClass>
    <foo>100</foo>
@@ -35,22 +35,22 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:179)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:158)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:140)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:645)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:648)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:120)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:65)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
 	at org.simpleframework.xml.core.Support.getName(Support.java:232)
-	at org.simpleframework.xml.core.Source.getName(Source.java:271)
+	at org.simpleframework.xml.core.Source.getName(Source.java:250)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1098)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1080)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1061)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1177)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1159)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1140)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1187)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1169)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1147)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1266)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1248)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1229)
 	at org.simpleframework.xml.core.DefaultWithParametersInGetterTest.testDefaultWithTransientErrors(DefaultWithParametersInGetterTest.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -77,22 +77,22 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:179)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:158)
 	at org.simpleframework.xml.core.MethodScanner.<init>(MethodScanner.java:140)
-	at org.simpleframework.xml.core.Scanner.method(Scanner.java:645)
+	at org.simpleframework.xml.core.Scanner.method(Scanner.java:648)
 	at org.simpleframework.xml.core.Scanner.scan(Scanner.java:396)
 	at org.simpleframework.xml.core.Scanner.<init>(Scanner.java:120)
 	at org.simpleframework.xml.core.ScannerFactory.getInstance(ScannerFactory.java:65)
 	at org.simpleframework.xml.core.Support.getScanner(Support.java:170)
 	at org.simpleframework.xml.core.Support.getName(Support.java:232)
-	at org.simpleframework.xml.core.Source.getName(Source.java:271)
+	at org.simpleframework.xml.core.Source.getName(Source.java:250)
 	at org.simpleframework.xml.core.Traverser.getName(Traverser.java:284)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:203)
 	at org.simpleframework.xml.core.Traverser.write(Traverser.java:186)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1098)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1080)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1061)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1177)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1159)
-	at org.simpleframework.xml.core.Persister.write(Persister.java:1140)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1187)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1169)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1147)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1266)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1248)
+	at org.simpleframework.xml.core.Persister.write(Persister.java:1229)
 	at org.simpleframework.xml.core.DefaultWithParametersInGetterTest.testDefaultWithElementErrors(DefaultWithParametersInGetterTest.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
@@ -111,7 +111,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDefaultWithParameters took 0.272 sec
-Testcase: testDefaultWithTransientErrors took 0.015 sec
-Testcase: testDefaultWithElementErrors took 0.008 sec
-Testcase: testDirectory took 0.004 sec
+Testcase: testDefaultWithParameters took 0.275 sec
+Testcase: testDefaultWithTransientErrors took 0.013 sec
+Testcase: testDefaultWithElementErrors took 0.005 sec
+Testcase: testDirectory took 0.001 sec

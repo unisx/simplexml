@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.CommentTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.185 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.197 sec
 ------------- Standard Output ---------------
 <commentExample>
    <!-- This represents the name value -->
@@ -10,5 +10,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.185 sec
    <price>9.99</price>
 </commentExample>------------- ---------------- ---------------
 
-Testcase: testComment took 0.18 sec
+Testcase: testComment took 0.191 sec
 Testcase: testDirectory took 0 sec

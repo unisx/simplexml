@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.convert.ContactEntryTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.243 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.268 sec
 ------------- Standard Output ---------------
 <entryList>
    <entry>
@@ -28,5 +28,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.243 sec
 </entryList>
 ------------- ---------------- ---------------
 
-Testcase: testContact took 0.238 sec
-Testcase: testDirectory took 0 sec
+Testcase: testContact took 0.262 sec
+Testcase: testDirectory took 0.001 sec

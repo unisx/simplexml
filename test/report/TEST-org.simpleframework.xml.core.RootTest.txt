@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.RootTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.46 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.415 sec
 ------------- Standard Output ---------------
 <rootExample version="1">
    <text>Some text example</text>
@@ -88,5 +88,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.46 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testRoot took 0.452 sec
+Testcase: testRoot took 0.409 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.423 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.519 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -85,21 +85,21 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.423 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 <primitiveInlineAttributeValueMap>
    <entity string="d"/>
-   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
    <entity>3.29999999999999982236431605997495353221893310546875</entity>
+   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
    <entity string="b">2.20000000000000017763568394002504646778106689453125</entity>
 </primitiveInlineAttributeValueMap><primitiveInlineAttributeValueMap>
    <entity string="d"/>
-   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
    <entity>3.29999999999999982236431605997495353221893310546875</entity>
+   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
    <entity string="b">2.20000000000000017763568394002504646778106689453125</entity>
 </primitiveInlineAttributeValueMap>
 <primitive-inline-attribute-value-map ID="0">
    <entity string="d"/>
    <!-- java.math.BigDecimal -->
-   <entity string="a" ID="1">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity ID="1">3.29999999999999982236431605997495353221893310546875</entity>
    <!-- java.math.BigDecimal -->
-   <entity ID="2">3.29999999999999982236431605997495353221893310546875</entity>
+   <entity string="a" ID="2">1.100000000000000088817841970012523233890533447265625</entity>
    <!-- java.math.BigDecimal -->
    <entity string="b" ID="3">2.20000000000000017763568394002504646778106689453125</entity>
 </primitive-inline-attribute-value-map>>>>>> ELEMENT=[element primitive-inline-attribute-value-map]
@@ -108,9 +108,9 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.423 sec
 <PrimitiveInlineAttributeValueMap ID="0">
    <Entity string="d"/>
    <!-- java.math.BigDecimal -->
-   <Entity string="a" ID="1">1.100000000000000088817841970012523233890533447265625</Entity>
+   <Entity ID="1">3.29999999999999982236431605997495353221893310546875</Entity>
    <!-- java.math.BigDecimal -->
-   <Entity ID="2">3.29999999999999982236431605997495353221893310546875</Entity>
+   <Entity string="a" ID="2">1.100000000000000088817841970012523233890533447265625</Entity>
    <!-- java.math.BigDecimal -->
    <Entity string="b" ID="3">2.20000000000000017763568394002504646778106689453125</Entity>
 </PrimitiveInlineAttributeValueMap>>>>>> ELEMENT=[element PrimitiveInlineAttributeValueMap]
@@ -118,7 +118,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.423 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.309 sec
-Testcase: testPrimitiveAttributeMap took 0.062 sec
-Testcase: testPrimitiveAttributeValueMap took 0.041 sec
+Testcase: testPrimitiveMap took 0.4 sec
+Testcase: testPrimitiveAttributeMap took 0.06 sec
+Testcase: testPrimitiveAttributeValueMap took 0.042 sec
 Testcase: testDirectory took 0.002 sec

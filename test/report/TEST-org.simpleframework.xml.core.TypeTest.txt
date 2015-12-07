@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.454 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.503 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -229,5 +229,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.454 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.447 sec
+Testcase: testPrimitive took 0.494 sec
 Testcase: testDirectory took 0.001 sec

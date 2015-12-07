@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumArrayTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.291 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
 ------------- Standard Output ---------------
 <example size="3">
    <array length="3">ONE, TWO, FOUR</array>
@@ -20,5 +20,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.291 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testArrayElement took 0.285 sec
+Testcase: testArrayElement took 0.297 sec
 Testcase: testDirectory took 0 sec
