@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.116 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.138 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -2775,8 +2775,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.116 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.564 sec
-Testcase: testWriteUnicode took 0.381 sec
-Testcase: testUnicodeFromByteStream took 0.148 sec
+Testcase: testUnicode took 0.573 sec
+Testcase: testWriteUnicode took 0.391 sec
+Testcase: testUnicodeFromByteStream took 0.15 sec
 Testcase: testIncorrectEncoding took 0.014 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

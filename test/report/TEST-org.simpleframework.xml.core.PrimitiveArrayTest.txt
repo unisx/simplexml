@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PrimitiveArrayTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.129 sec
 
-Testcase: testZero took 0.111 sec
-Testcase: testTwo took 0.011 sec
+Testcase: testZero took 0.114 sec
+Testcase: testTwo took 0.009 sec

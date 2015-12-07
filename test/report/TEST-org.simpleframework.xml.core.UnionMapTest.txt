@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.548 sec
 ------------- Standard Output ---------------
 <inlineMapExample>
    <yEntry yKey="3">
@@ -272,7 +272,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.387 sec
-Testcase: testXList took 0.074 sec
+Testcase: testInlineList took 0.399 sec
+Testcase: testXList took 0.078 sec
 Testcase: testYList took 0.062 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDirectory took 0 sec

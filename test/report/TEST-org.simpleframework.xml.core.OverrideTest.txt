@@ -9,7 +9,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.303 sec
    </list>
 </root>------------- ---------------- ---------------
 
-Testcase: testComposite took 0.228 sec
-Testcase: testInterface took 0.007 sec
-Testcase: testList took 0.02 sec
+Testcase: testComposite took 0.23 sec
+Testcase: testInterface took 0.005 sec
+Testcase: testList took 0.018 sec
 Testcase: testCopy took 0.042 sec

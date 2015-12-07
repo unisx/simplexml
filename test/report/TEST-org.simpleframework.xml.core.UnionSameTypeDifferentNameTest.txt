@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionSameTypeDifferentNameTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.395 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.391 sec
 ------------- Standard Output ---------------
 <optionalNameExample>
    <login>john.doe</login>
@@ -54,5 +54,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.395 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalName took 0.388 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testOptionalName took 0.385 sec
+Testcase: testDirectory took 0 sec

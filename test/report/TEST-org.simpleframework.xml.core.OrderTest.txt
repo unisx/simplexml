@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.OrderTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.38 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.385 sec
 ------------- Standard Output ---------------
 <orderExample one="2" two="3.0" three="1">
    <first>first</first>
@@ -73,6 +73,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.38 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testLinkedHashMapOrder took 0.002 sec
-Testcase: testSerializationOrder took 0.371 sec
+Testcase: testLinkedHashMapOrder took 0.001 sec
+Testcase: testSerializationOrder took 0.376 sec
 Testcase: testDirectory took 0 sec

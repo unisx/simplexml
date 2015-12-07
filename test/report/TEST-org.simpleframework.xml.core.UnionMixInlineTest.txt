@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMixInlineTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.178 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: Inline must be consistent in @org.simpleframework.xml.UnionList(value=[@org.simpleframework.xml.ElementList(inline=true, type=class java.lang.Integer, required=true, data=false, entry=, empty=true, name=x), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.Double, required=true, data=false, entry=, empty=true, name=y), @org.simpleframework.xml.ElementList(inline=false, type=class java.lang.String, required=true, data=false, entry=, empty=true, name=z)]) for org.simpleframework.xml.core.UnionListLabel@ab95e6
 	at org.simpleframework.xml.core.StructureBuilder.validateUnions(StructureBuilder.java:535)
@@ -38,5 +38,5 @@ org.simpleframework.xml.core.UnionException: Inline must be consistent in @org.s
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testInlineMix took 0.171 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testInlineMix took 0.173 sec
+Testcase: testDirectory took 0 sec

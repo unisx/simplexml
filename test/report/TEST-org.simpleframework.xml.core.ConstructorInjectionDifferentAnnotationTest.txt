@@ -39,5 +39,5 @@ org.simpleframework.xml.core.ConstructorException: Annotation interface org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testInvalidExample took 0.165 sec
+Testcase: testInvalidExample took 0.166 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithMixedOrdreringTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.351 sec
 ------------- Standard Output ---------------
 <person>
    <name>
@@ -62,5 +62,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testMixedOrdering took 0.338 sec
+Testcase: testMixedOrdering took 0.345 sec
 Testcase: testDirectory took 0 sec

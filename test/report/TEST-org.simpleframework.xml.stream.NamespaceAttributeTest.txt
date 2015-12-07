@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.stream.NamespaceAttributeTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.077 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.08 sec
 
-Testcase: testAttributes took 0.071 sec
+Testcase: testAttributes took 0.074 sec

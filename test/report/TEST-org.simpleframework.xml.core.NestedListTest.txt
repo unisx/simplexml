@@ -61,4 +61,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.293 sec
 </testSuit>------------- ---------------- ---------------
 
 Testcase: testNestedList took 0.286 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

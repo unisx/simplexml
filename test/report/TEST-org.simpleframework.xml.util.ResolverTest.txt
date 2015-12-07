@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.458 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.459 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -141,9 +141,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.458 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testResolver took 0.332 sec
-Testcase: testCache took 0.083 sec
-Testcase: testNoResolution took 0.006 sec
+Testcase: testResolver took 0.336 sec
+Testcase: testCache took 0.079 sec
+Testcase: testNoResolution took 0.008 sec
 Testcase: testNonGreedyMatch took 0.006 sec
-Testcase: testResolverCache took 0.022 sec
+Testcase: testResolverCache took 0.021 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionListConstructorInjectionTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.493 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.452 sec
 ------------- Standard Output ---------------
 <accessControl>
    <user>
@@ -172,5 +172,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.493 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testListInjection took 0.486 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testListInjection took 0.446 sec
+Testcase: testDirectory took 0 sec

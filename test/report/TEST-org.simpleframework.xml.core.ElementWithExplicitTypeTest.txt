@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ElementWithExplicitTypeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.489 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.503 sec
 ------------- Standard Output ---------------
 <example>
    <string>str</string>
@@ -121,8 +121,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.489 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitType took 0.323 sec
-Testcase: testExplicitUnionType took 0.057 sec
+Testcase: testExplicitType took 0.342 sec
+Testcase: testExplicitUnionType took 0.056 sec
 Testcase: testExplicitHierarchyType took 0.047 sec
-Testcase: testExplicitIncorrectHierarchyType took 0.054 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testExplicitIncorrectHierarchyType took 0.049 sec
+Testcase: testDirectory took 0 sec

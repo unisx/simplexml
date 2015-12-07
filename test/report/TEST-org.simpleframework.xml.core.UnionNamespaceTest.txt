@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNamespaceTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.35 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.353 sec
 ------------- Standard Output ---------------
 <example>
    <path>
@@ -28,5 +28,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.35 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testNamespaceWithUnion took 0.343 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testNamespaceWithUnion took 0.347 sec
+Testcase: testDirectory took 0 sec

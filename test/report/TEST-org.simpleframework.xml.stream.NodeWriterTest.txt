@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.NodeWriterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.073 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.07 sec
 ------------- Standard Output ---------------
 <root id="test" name="testRoot">
    <child-of-root name="child of root">
@@ -39,7 +39,7 @@ org.simpleframework.xml.stream.NodeException: No root node
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testEarlyCommit took 0.032 sec
-Testcase: testBasicWrite took 0.027 sec
+Testcase: testEarlyCommit took 0.029 sec
+Testcase: testBasicWrite took 0.025 sec
 Testcase: testWrite took 0.005 sec
 Testcase: testDirectory took 0.002 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionStyleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.492 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.494 sec
 ------------- Standard Output ---------------
 <UnionListExample>
    <IntegerField>
@@ -217,6 +217,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.492 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testCamelCaseStyle took 0.39 sec
-Testcase: testHyphenStyle took 0.094 sec
+Testcase: testCamelCaseStyle took 0.388 sec
+Testcase: testHyphenStyle took 0.099 sec
 Testcase: testDirectory took 0 sec

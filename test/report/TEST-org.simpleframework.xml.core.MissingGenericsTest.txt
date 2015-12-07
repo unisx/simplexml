@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.core.MissingGenericsTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.28 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
 
-Testcase: testMissingGenerics took 0.274 sec
+Testcase: testMissingGenerics took 0.279 sec

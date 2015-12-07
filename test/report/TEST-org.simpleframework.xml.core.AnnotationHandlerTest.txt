@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.AnnotationHandlerTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.053 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.054 sec
 ------------- Standard Error -----------------
 @org.simpleframework.xml.Element(required=true, name=, type=void, data=false)
 @org.simpleframework.xml.Element(type=void, required=true, data=false, name=)

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.443 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -109,6 +109,6 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.437 sec
 ------------- ---------------- ---------------
 
 Testcase: testPrimitiveMap took 0.328 sec
-Testcase: testPrimitiveAttributeMap took 0.049 sec
-Testcase: testPrimitiveAttributeValueMap took 0.052 sec
+Testcase: testPrimitiveAttributeMap took 0.051 sec
+Testcase: testPrimitiveAttributeValueMap took 0.054 sec
 Testcase: testDirectory took 0.002 sec

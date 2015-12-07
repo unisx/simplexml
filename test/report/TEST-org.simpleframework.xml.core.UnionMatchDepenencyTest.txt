@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMatchDepenencyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.209 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.21 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: No type matches class java.lang.String in @org.simpleframework.xml.Union(value=[@org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=x), @org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=y), @org.simpleframework.xml.Element(type=class java.lang.Integer, required=true, data=false, name=z)]) for field 'value' private java.lang.String org.simpleframework.xml.core.UnionMatchDepenencyTest$Example.value
 	at org.simpleframework.xml.core.UnionLabel.getLabel(UnionLabel.java:122)
@@ -38,4 +38,4 @@ org.simpleframework.xml.core.UnionException: No type matches class java.lang.Str
 ------------- ---------------- ---------------
 
 Testcase: testTypeMatch took 0.203 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec
