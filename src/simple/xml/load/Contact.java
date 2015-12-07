@@ -53,6 +53,27 @@ interface Contact {
    public Class getType();
    
    /**
+    * This provides the dependant class for the contact. This will
+    * typically represent a generic type for the actual type. For
+    * contacts that use a <code>Collection</code> type this will
+    * be the generic type parameter for that collection.
+    * 
+    * @return this returns the dependant type for the contact
+    */
+   public Class getDependant();
+   
+   /**
+    * This represents the name of the object contact. If the contact
+    * is a field then the name of the field is provided. If however
+    * the contact is a method then the Java Bean name of the method
+    * is provided, which will be the decapatilized name of the 
+    * method without the get, set, or is prefix to the method.
+    * 
+    * @return this returns the name of the contact represented
+    */
+   public String getName();
+   
+   /**
     * This is used to set the value on the specified object through
     * this contact. Depending on the type of contact this will set
     * the value given, typically this will be done by invoking a
@@ -74,4 +95,13 @@ interface Contact {
     * @return this is the value acquired from the point of contact
     */ 
    public Object get(Object source) throws Exception;
+   
+   /**
+    * This is used to describe the contact as it exists within the
+    * owning class. This is used to provide error messages that can
+    * be used to debug issues that occur when processing a contact.  
+    * 
+    * @return this returns a string representation of the contact
+    */
+   public String toString();
 }

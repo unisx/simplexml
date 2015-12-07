@@ -36,7 +36,7 @@ import java.util.TreeSet;
  * 
  * @author Niall Gallagher
  */ 
-final class CollectionFactory extends Factory {
+class CollectionFactory extends Factory {
 
    /**
     * Constructor for the <code>CollectionFactory</code> object. This
@@ -47,8 +47,25 @@ final class CollectionFactory extends Factory {
     */
    public CollectionFactory(Source root, Class field) {
       super(root, field);           
-   }        
-
+   }
+   
+   /**
+    * Creates a collection that is determined from the field type. 
+    * This is used for the <code>ElementInlineList</code> to get a
+    * collection that does not have any overrides. This must be
+    * done as the inline list does not contain an outer element.
+    * 
+    * @return a type which is used to instantiate the collection     
+    */
+   public Object getInstance() throws Exception {
+      Class type = getConversion(field);   
+      
+      if(type != null) {
+         return type.newInstance();
+      }
+      return null;
+   }
+   
    /**
     * Creates the collection to use. The <code>Strategy</code> object
     * is consulted for the collection class, if one is not resolved

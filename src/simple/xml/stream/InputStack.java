@@ -20,7 +20,7 @@
 
 package simple.xml.stream;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 /**
  * The <code>InputStack</code> is used to keep track of the nodes 
@@ -31,7 +31,7 @@ import java.util.LinkedList;
  *
  * @see simple.xml.stream.InputNode
  */ 
-final class InputStack extends LinkedList<InputNode> {
+class InputStack extends ArrayList<InputNode> {
 
    /**
     * Constructor for the <code>InputStack</code> object. This is
@@ -50,10 +50,12 @@ final class InputStack extends LinkedList<InputNode> {
     * @return this returns the node from the top of the stack
     */ 
    public InputNode pop() {
-      if(isEmpty()) {
+      int size = size();
+      
+      if(size <= 0) {
          return null;               
       }           
-      return removeLast();
+      return remove(size - 1);
    }
    
    /**
@@ -64,10 +66,12 @@ final class InputStack extends LinkedList<InputNode> {
     * @return this returns the node from the top of the stack
     */ 
    public InputNode top() {
-      if(isEmpty()) {
+      int size = size();
+      
+      if(size <= 0) {
          return null;              
       }           
-      return getLast();
+      return get(size - 1);
    }
    
    /**
@@ -78,10 +82,12 @@ final class InputStack extends LinkedList<InputNode> {
     * @return this returns the node from the bottom of the stack
     */ 
    public InputNode bottom() {
-      if(isEmpty()) {
+      int size = size();
+      
+      if(size <= 0) {
          return null;              
       }           
-      return getFirst();           
+      return get(0);           
    }
    
    /**
@@ -95,5 +101,20 @@ final class InputStack extends LinkedList<InputNode> {
    public InputNode push(InputNode value) {
       add(value);
       return value;
+   }
+   
+   /**
+    * This is used to determine if the specified node is relevant
+    * with respect to the state of the input stack. This returns
+    * true if there are no elements in the stack, which accounts
+    * for a new root node. Also this returns true if the specified
+    * node exists within the stack and is thus an active node.
+    * 
+    * @param value this is the input node value to be checked
+    * 
+    * @return returns true if the node is relevant in the stack
+    */
+   public boolean isRelevant(InputNode value) {
+	   return contains(value) || isEmpty();
    }
 }

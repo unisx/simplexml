@@ -33,12 +33,12 @@ import java.lang.reflect.Array;
  * that can be deserialized dynamically. 
  * <pre>
  *
- *    &lt;array size="2"&gt;
- *       &lt;entry attribute="value"&gt;
+ *    &lt;array length="2"&gt;
+ *       &lt;entry&gt;
  *          &lt;text&gt;example text value&lt;/text&gt;
  *       &lt;/entry&gt;
- *       &lt;entry attribute="demo"&gt;
- *          &lt;text&gt;some other example&lt;/text/&gt;
+ *       &lt;entry&gt;
+ *          &lt;text&gt;some other example&lt;/text&gt;
  *       &lt;/entry&gt;
  *    &lt;/array&gt;
  * 

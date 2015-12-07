@@ -30,7 +30,7 @@ import simple.xml.Attribute;
  * 
  * @author Niall Gallagher
  */
-final class AttributeLabel implements Label {
+class AttributeLabel implements Label {
 
    /**
     * Represents the annotation used to label the field.
@@ -38,9 +38,9 @@ final class AttributeLabel implements Label {
    private Attribute label;
 	
    /**
-    * This is the contact that this label object represents.
+    * This contains the details of the annotated contact object.
     */
-   private Contact contact;
+   private Signature detail;
    
    /**
     * This is the type that the field object references. 
@@ -48,7 +48,7 @@ final class AttributeLabel implements Label {
    private Class type;
    
    /**
-    * This is the name of the element from the annotation.
+    * This is the name of the element for this label instance.
     */
    private String name;
    
@@ -62,9 +62,9 @@ final class AttributeLabel implements Label {
     * @param label represents the annotation for the field
     */
    public AttributeLabel(Contact contact, Attribute label) {
+      this.detail = new Signature(contact, this);
       this.type = contact.getType();
-      this.name = label.name();
-      this.contact = contact;
+      this.name = label.name();      
       this.label = label; 
    }   
    
@@ -75,30 +75,33 @@ final class AttributeLabel implements Label {
     * 
     * @param root this is source object used for serialization
     */
-   public Converter getConverter(Source root) {
+   public Converter getConverter(Source root) throws Exception {
       return new Primitive(root, type);
    }
    
    /**
-    * This acts as a convinience method used to determine the type of
-    * the contact this represents. This will be a primitive type of a
-    * primitive type from the <code>java.lang</code> primitives.
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
     * 
-    * @return this returns the type of the contact class
-    */  
-   public Class getType() {
-      return type;
-   }  
+    * @return returns the name that is used for the XML property
+    */
+   public String getName() throws Exception {
+      return detail.getName();
+   }
    
    /**
-    * This is used to acquire the name of the XML attribute as taken
-    * from the contact annotation. Every XML annotation must contain 
-    * a name, so that it can be identified from the XML source. This
-    * allows the class to be used as a schema for the XML document. 
+    * This is used to acquire the name of the element or attribute
+    * as taken from the annotation. If the element or attribute
+    * explicitly specifies a name then that name is used for the
+    * XML element or attribute used. If however no overriding name
+    * is provided then the method or field is used for the name. 
     * 
     * @return returns the name of the annotation for the contact
-    */   
-   public String getName() {
+    */
+   public String getOverride(){
       return name;
    }
    
@@ -112,7 +115,41 @@ final class AttributeLabel implements Label {
     * @return returns the contact that this label is representing
     */   
    public Contact getContact() {
-      return contact;
+      return detail.getContact();
+   }
+   
+   /**
+    * This acts as a convinience method used to determine the type of
+    * the contact this represents. This will be a primitive type of a
+    * primitive type from the <code>java.lang</code> primitives.
+    * 
+    * @return this returns the type of the contact class
+    */  
+   public Class getType() {
+      return type;
+   }
+   
+   /**
+    * This is typically used to acquire the parent value as acquired
+    * from the annotation. However given that the annotation this
+    * represents does not have a parent attribute this will always
+    * provide a null value for the parent string.
+    * 
+    * @return this will always return null for the parent value 
+    */
+   public String getParent() {
+      return null;
+   }
+   
+   /**
+    * This is used to acquire the dependant class for this label. 
+    * This returns null as there are no dependants to the attribute
+    * annotation as it can only hold primitives with no dependants.
+    * 
+    * @return this is used to return the dependant type of null
+    */
+   public Class getDependant() {
+      return null;
    }
    
    /**
@@ -129,13 +166,40 @@ final class AttributeLabel implements Label {
    }
    
    /**
-    * This provides a string describing the XML annotation this is
-    * used to represent. This is used when debugging an error as
-    * it can be used within stack traces for problem labels.
+    * Because the attribute can contain only simple text values it
+    * is never required to specified as anything other than text.
+    * Therefore this will always return false as CDATA does not
+    * apply to the attribute values.
+    *
+    * @return this will always return false for XML attributes
+    */
+   public boolean isData() {
+      return false;
+   }
+   
+   /**
+    * This method is used by the deserialization process to check
+    * to see if an annotation is inline or not. If an annotation
+    * represents an inline XML entity then the deserialization
+    * and serialization process ignores overrides and special 
+    * attributes. By default all attributes are not inline items.
     * 
-    * @return this returns a description of the XML annotation
+    * @return this always returns false for attribute labels
+    */
+   public boolean isInline() {
+      return false;
+   }
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This will provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
     */
    public String toString() {
-      return label.toString();
+      return detail.toString();
    }
 }

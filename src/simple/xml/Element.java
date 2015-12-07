@@ -25,9 +25,10 @@ import java.lang.annotation.Retention;
 
 /**
  * The <code>Element</code> annotation is used to represent a field
- * that appears as an XML element. Fields annotated with this can
- * be either primitive or compound, that is, represent an object
- * that can be serialized and deserialized. 
+ * or method that appears as an XML element. Fields or methods that
+ * are annotated with this can be either primitive or compound, that
+ * is, represent an object that can be serialized and deserialized.
+ * Below is an example of the serialized format for a compond object. 
  * <pre>
  * 
  *    &lt;example class="demo.Example"&gt;
@@ -36,9 +37,12 @@ import java.lang.annotation.Retention;
  * 
  * </pre>
  * Each element may have any number of attributes and sub-elements
- * representing fields of the compound object it is converted to and
- * from. However, the <code>class</code> attribute is reserved by 
- * the serialization framework to represent the serialized type. 
+ * representing fields or methods of that compound object. Attribute
+ * and element names can be acquired from the annotation or, if the
+ * annotation does not explicitly declare a name, it is taken from
+ * the annotated field or method. There are exceptions in some cases,
+ * for example, the <code>class</code> attribute is reserved by the
+ * serialization framework to represent the serialized type. 
  * 
  * @author Niall Gallagher
  */ 
@@ -47,12 +51,24 @@ public @interface Element {
    
    /**
     * This represents the name of the XML element. Annotated fields
-    * must provide the name of the element they represent so that
-    * that can be serialized and deserialized to and from the XML.
+    * can optionally provide the name of the element. If no name is
+    * provided then the name of the annotated field or method will
+    * be used in its place. The name is provided if the field or
+    * method name is not suitable as an XML element name.
     * 
     * @return the name of the XML element this represents
     */
-   public String name();
+   public String name() default "";
+   
+   /**
+    * This is used to determine whether the element data is written
+    * in a CDATA block or not. If this is set to true then the text
+    * is written within a CDATA block, by default the text is output
+    * as escaped XML. Typically this is useful for primitives only.
+    * 
+    * @return true if the data is to be wrapped in a CDATA block
+    */
+   public boolean data() default false;
    
    /**
     * Determines whether the element is required within the XML

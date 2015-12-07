@@ -21,6 +21,7 @@
 package simple.xml.load;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Field;
 
 /**
@@ -33,7 +34,7 @@ import java.lang.reflect.Field;
  *
  * @see simple.xml.load.FieldScanner
  */ 
-final class FieldContact implements Contact {
+class FieldContact implements Contact {
    
    /**
     * This is the label that marks the field within the object.
@@ -44,6 +45,11 @@ final class FieldContact implements Contact {
     * This represents the field within the schema class object.
     */ 
    private Field field;
+   
+   /**
+    * This is the name for this contact as taken from the field.
+    */
+   private String name;
    
    /**
     * Constructor for the <code>FieldContact</code> object. This is 
@@ -67,6 +73,77 @@ final class FieldContact implements Contact {
     */
    public Class getType() {
       return field.getType();
+   }
+   
+   /**
+    * This provides the dependant class for the contact. This will
+    * actually represent a generic type for the actual type. For
+    * contacts that use a <code>Collection</code> type this will
+    * be the generic type parameter for that collection.
+    * 
+    * @return this returns the dependant type for the contact
+    */
+   public Class getDependant() {
+      ParameterizedType type = getParameterType();
+      
+      if(type != null) {
+         Object[] list = type.getActualTypeArguments();
+      
+         if(list.length > 0) {
+            return (Class) list[0];
+         }
+      }
+      return null;
+   }
+   
+   /**
+    * This returns the parameter type for the type used. This is
+    * the type with any generic information also provided. This
+    * allows the contact to determine any dependendants required.
+    * 
+    * @return this returns the parameterized type for the field
+    */
+   private ParameterizedType getParameterType() {
+      Object type = field.getGenericType();
+      
+      if(type instanceof ParameterizedType) {
+         return (ParameterizedType) type;
+      }
+      return null;
+   }
+   
+   /**
+    * This is used to acquire the name of the field. This will return
+    * the name of the field wich can then be used to determine the 
+    * XML attribute or element the contact represents. This ensures
+    * that the name provided string is internalized for performance.  
+    * 
+    *  @return this returns the name of the field represented
+    */
+   public String getName() {
+      if(name == null) {
+         name = getName(field);
+      }
+      return name;
+   }
+   
+   /**
+    * This is used to acquire the name of the field such that it is
+    * an internalized string. Internalization of the contact name
+    * ensures that comparisons can be made to annotation names with
+    * a simple reference comparison rather than a string comparison.
+    * 
+    * @param field the field to acquire the internalized name from
+    * 
+    * @return this returns the name of the string, internalized
+    */
+   private String getName(Field field) {
+      String name = field.getName();
+      
+      if(name != null) {
+         name = name.intern();
+      }
+      return name;
    }
 
    /**
@@ -104,5 +181,17 @@ final class FieldContact implements Contact {
     */
    public Object get(Object source) throws Exception {
       return field.get(source);
+   }
+   
+   /**
+    * This is used to describe the contact as it exists within the
+    * owning class. It is used to provide error messages that can
+    * be used to debug issues that occur when processing a contact.
+    * The string provided is the generic field string.
+    * 
+    * @return this returns a string representation of the contact
+    */
+   public String toString() {
+      return String.format("field '%s'", getName());
    }
 }

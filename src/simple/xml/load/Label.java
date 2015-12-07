@@ -44,11 +44,42 @@ interface Label {
     * 
     * @param root this is the source object for the serialization
     * 
-    * @return this returns an object that can be used to convert
-    *         XML elements to objects and vice versa
+    * @return this returns an object that is used for conversion
     */
    public Converter getConverter(Source root) throws Exception;
-
+   
+   /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName() throws Exception;
+   
+   /**
+    * This returns the dependant type for the annotation. This type
+    * is the type other than the annotated field or method type that
+    * the label depends on. For the <code>ElementList</code> and 
+    * the <code>ElementArray</code> this is the component type that
+    * is deserialized individually and inserted into the container. 
+    * 
+    * @return this is the type that the annotation depends on
+    */
+   public Class getDependant() throws Exception;
+   
+   /**
+    * This is used to either provide the parent value provided within
+    * the annotation or compute a parent value. If the parent string
+    * is not provided the the parent value is calculated as the type
+    * of primitive the object is as a simplified class name.
+    * 
+    * @return this returns the name of the XML parent element used 
+    */
+   public String getParent() throws Exception;      
+   
    /**
     * This is used to acquire the contact object for this label. The 
     * contact retrieved can be used to set any object or primitive that
@@ -73,14 +104,25 @@ interface Label {
    public Class getType();
    
    /**
-    * This is used to acquire the name of the XML attribute as taken
-    * from the field annotation. Every XML annotation must contain a
-    * name, so that it can be identified from the XML source. This
-    * allows the class to be used as a schema for the XML document. 
+    * This is used to acquire the name of the element or attribute
+    * as taken from the annotation. If the element or attribute
+    * explicitly specifies a name then that name is used for the
+    * XML element or attribute used. If however no overriding name
+    * is provided then the method or field is used for the name. 
     * 
-    * @return returns the name of the annotation for the field
+    * @return returns the name of the annotation for the contact
     */
-   public String getName();
+   public String getOverride();
+   
+   /**
+    * This is used to determine whether the annotation requires it
+    * and its children to be written as a CDATA block. This is done
+    * when a primitive or other such element requires a text value
+    * and that value needs to be encapsulated within a CDATA block.
+    * 
+    * @return this returns true if the element requires CDATA
+    */
+   public boolean isData();
    
    /**
     * Determines whether the XML attribute or element is required. 
@@ -92,4 +134,26 @@ interface Label {
     * @return true if the label represents a some required data
     */
    public boolean isRequired();
+   
+   /**
+    * This is used to determine whether the label represents an
+    * inline XML entity. The <code>ElementList</code> annotation
+    * and the <code>Text</code> annotation represent inline 
+    * items. This means that they contain no containing element
+    * and so can not specify overrides or special attributes.
+    * 
+    * @return this returns true if the annotaiton is inline
+    */
+   public boolean isInline();
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This should provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
+    */
+   public String toString();
 }

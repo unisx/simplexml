@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.ArrayTest
-Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
+Tests run: 11, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
 ------------- Standard Output ---------------
 <root>
    <array length="100">
@@ -517,6 +517,14 @@ Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
    </array>
 </root><root>
    <array length="5">
+      <string>entry one</string>
+      <string>entry two</string>
+      <string>entry three</string>
+      <string>entry four</string>
+      <string>entry five</string>
+   </array>
+</root><root>
+   <array length="5">
       <text/>
       <text>entry two</text>
       <text>entry three</text>
@@ -540,6 +548,24 @@ Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
       <entry>
          <text value="entry five"/>
       </entry>
+   </array>
+</root><root>
+   <array length="5">
+      <object>
+         <text value="entry one"/>
+      </object>
+      <object>
+         <text value="entry two"/>
+      </object>
+      <object>
+         <text value="entry three"/>
+      </object>
+      <object>
+         <text value="entry four"/>
+      </object>
+      <object>
+         <text value="entry five"/>
+      </object>
    </array>
 </root><root>
    <array length="5">
@@ -578,12 +604,14 @@ Tests run: 9, Failures: 0, Errors: 0, Time elapsed: 0.422 sec
    </array>
 </root>------------- ---------------- ---------------
 
-Testcase: testExample took 0.125 sec
-Testcase: testBadExample took 0.016 sec
-Testcase: testWriteArray took 0.234 sec
-Testcase: testPrimitive took 0 sec
+Testcase: testExample took 0.156 sec
+Testcase: testBadExample took 0 sec
+Testcase: testWriteArray took 0.25 sec
+Testcase: testPrimitive took 0.016 sec
+Testcase: testDefaultPrimitive took 0.015 sec
 Testcase: testPrimitiveNull took 0.016 sec
 Testcase: testParentComposite took 0 sec
-Testcase: testParentCompositeNull took 0.015 sec
-Testcase: testCharacter took 0 sec
+Testcase: testDefaultComposite took 0.015 sec
+Testcase: testParentCompositeNull took 0.016 sec
+Testcase: testCharacter took 0.016 sec
 Testcase: testDifferentArray took 0 sec

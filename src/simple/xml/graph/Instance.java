@@ -1,5 +1,5 @@
 /*
- * ClassType.java January 2007
+ * Instance.java January 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -24,16 +24,16 @@ import java.lang.reflect.Constructor;
 import simple.xml.load.Type;
 
 /**
- * The <code>ClassType</code> is an implementation of the type that
+ * The <code>Instance</code> is an implementation of the type that
  * is used to instantiate an object using its default no argument
  * constructor. This will simply ensure that the constructor is an
  * accessible method before invoking the types new instance method.
  * 
  * @author Niall Gallagher
  * 
- * @see simple.xml.graph.CycleStrategy
+ * @see simple.xml.graph.Allocate
  */
-final class ClassType implements Type {
+class Instance implements Type {
    
    /**
     * This is the type that this object is used to represent.
@@ -41,13 +41,13 @@ final class ClassType implements Type {
    private Class type;
 
    /**
-    * Constructor for the <code>ClassType</code> object. This is
+    * Constructor for the <code>Instance</code> object. This is
     * used to create a type object that can be used to instantiate
     * and object with that objects default no argument constructor.
     * 
     * @param type this is the type of object that is created
     */
-   public ClassType(Class type) {
+   public Instance(Class type) {
       this.type = type;
    }        
    

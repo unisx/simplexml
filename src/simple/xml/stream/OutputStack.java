@@ -20,7 +20,8 @@
 
 package simple.xml.stream;
 
-import java.util.LinkedList;
+import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.Set;
 
 /**
@@ -32,7 +33,7 @@ import java.util.Set;
  *
  * @see simple.xml.stream.OutputNode
  */ 
-final class OutputStack extends LinkedList<OutputNode> {
+class OutputStack extends ArrayList<OutputNode> {
 
    /**
     * Represents the set of nodes that have not been committed.
@@ -56,12 +57,12 @@ final class OutputStack extends LinkedList<OutputNode> {
     * @return this returns the node from the top of the stack
     */    
    public OutputNode pop() {
-      OutputNode node = removeLast();
+      int size = size();
       
-      if(node != null){
-         active.remove(node);
+      if(size <= 0) {
+         return null;
       }
-      return node;
+      return purge(size - 1);
    }
    
    /**
@@ -72,10 +73,12 @@ final class OutputStack extends LinkedList<OutputNode> {
     * @return this returns the node from the top of the stack
     */    
    public OutputNode top() {
-      if(isEmpty()) {
+      int size = size();
+      
+      if(size <= 0) {
          return null;              
       }           
-      return getLast();
+      return get(size - 1);
    }
 
    /**
@@ -86,10 +89,12 @@ final class OutputStack extends LinkedList<OutputNode> {
     * @return this returns the node from the bottom of the stack
     */ 
    public OutputNode bottom() {
-      if(isEmpty()) {
+      int size = size();
+      
+      if(size <= 0) {
          return null;              
       }           
-      return getFirst();           
+      return get(0);           
    }
 
    /**
@@ -104,5 +109,94 @@ final class OutputStack extends LinkedList<OutputNode> {
       active.add(value);
       add(value);
       return value;
+   }
+   
+   /**
+    * The <code>purge</code> method is used to purge a match from
+    * the provided position. This also ensures that the active set
+    * has the node removed so that it is no longer relevant.
+    *
+    * @param index the index of the node that is to be removed
+    * 
+    * @return returns the node removed from the specified index
+    */ 
+   public OutputNode purge(int index) {      
+      OutputNode node = remove(index);  
+      
+      if(node != null){
+         active.remove(node);
+      }    
+      return node;
+   }
+   
+   /**
+    * This is returns an <code>Iterator</code> that is used to loop
+    * through the ouptut nodes from the top down. This allows the
+    * node writer to determine what <code>Mode</code> should be used
+    * by an output node. This reverses the iteration of the list.
+    * 
+    * @return returns an iterator to iterate from the top down
+    */ 
+   public Iterator<OutputNode> iterator() {
+      return new Sequence();              
+   }
+
+   /**
+    * The is used to order the <code>OutputNode</code> objects from
+    * the top down. This is basically used to reverse the order of
+    * the linked list so that the stack can be iterated within a
+    * for each loop easily. This can also be used to remove a node.
+    *
+    * @author Niall Gallagher
+    */
+   private class Sequence implements Iterator<OutputNode> {
+
+      /**
+       * The cursor used to acquire objects from the stack.
+       */               
+      private int cursor;
+
+      /**
+       * Constructor for the <code>Sequence</code> object. This is
+       * used to position the cursor at the end of the list so the
+       * last inserted output node is the first returned from this.
+       */ 
+      public Sequence() {
+         this.cursor = size();                 
+      }
+
+      /**
+       * Returns the <code>OutputNode</code> object at the cursor
+       * position. If the cursor has reached the start of the list 
+       * then this returns null instead of the first output node.
+       * 
+       * @return this returns the node from the cursor position
+       */ 
+      public OutputNode next() {
+         if(hasNext()) {
+             return get(--cursor);
+         }           
+         return null;     
+      }    
+
+      /**
+       * This is used to determine if the cursor has reached the
+       * start of the list. When the cursor reaches the start of
+       * the list then this method returns false.
+       * 
+       * @return this returns true if there are more nodes left
+       */ 
+      public boolean hasNext() {
+         return cursor > 0;
+      }
+
+      /**
+       * Removes the match from the cursor position. This also
+       * ensures that the node is removed from the active set so
+       * that it is not longer considered a relevant output node.
+       */ 
+      public void remove() {                    
+         purge(cursor);                
+      }        
    }
 }

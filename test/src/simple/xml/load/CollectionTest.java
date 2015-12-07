@@ -147,6 +147,58 @@ public class CollectionTest extends ValidationTestCase {
    "   </list>\n"+
    "</test>";     
    
+   private static final String TYPE_FROM_FIELD_LIST = 
+   "<?xml version=\"1.0\"?>\n"+
+   "<typeFromFieldList name='example'>\n"+
+   "   <list>\n"+   
+   "      <entry id='1'>\n"+
+   "         <text>one</text>  \n\r"+
+   "      </entry>\n\r"+
+   "      <entry id='2'>\n"+
+   "         <text>two</text>  \n\r"+
+   "      </entry>\n"+
+   "      <entry id='3'>\n"+
+   "         <text>three</text>  \n\r"+
+   "      </entry>\n"+
+   "   </list>\n"+
+   "</typeFromFieldList>";  
+   
+   private static final String TYPE_FROM_METHOD_LIST = 
+   "<?xml version=\"1.0\"?>\n"+
+   "<typeFromMethodList name='example'>\n"+
+   "   <list>\n"+   
+   "      <entry id='1'>\n"+
+   "         <text>one</text>  \n\r"+
+   "      </entry>\n\r"+
+   "      <entry id='2'>\n"+
+   "         <text>two</text>  \n\r"+
+   "      </entry>\n"+
+   "      <entry id='3'>\n"+
+   "         <text>three</text>  \n\r"+
+   "      </entry>\n"+
+   "   </list>\n"+
+   "</typeFromMethodList>";
+   
+   private static final String PRIMITIVE_LIST = 
+   "<?xml version=\"1.0\"?>\n"+
+   "<primitiveCollection name='example'>\n"+
+   "   <list>\n"+   
+   "      <text>one</text>  \n\r"+
+   "      <text>two</text>  \n\r"+
+   "      <text>three</text>  \n\r"+
+   "   </list>\n"+
+   "</primitiveCollection>";
+   
+   private static final String PRIMITIVE_DEFAULT_LIST = 
+   "<?xml version=\"1.0\"?>\n"+
+   "<primitiveDefaultCollection name='example'>\n"+
+   "   <list>\n"+   
+   "      <string>one</string>  \n\r"+
+   "      <string>two</string>  \n\r"+
+   "      <string>three</string>  \n\r"+
+   "   </list>\n"+
+   "</primitiveDefaultCollection>";  
+   
    @Root(name="entry")
    private static class Entry implements Comparable {
 
@@ -232,7 +284,72 @@ public class CollectionTest extends ValidationTestCase {
       public Iterator<Entry> iterator() {
          return list.iterator();  
       }
-   } 
+   }
+   
+   @Root
+   private static class TypeFromFieldList implements Iterable<Entry> {
+      
+      @ElementList
+      private List<Entry> list;           
+
+      @Attribute
+      private String name;
+
+      public Iterator<Entry> iterator() {
+         return list.iterator();  
+      }
+   }
+   
+   @Root
+   private static class TypeFromMethodList implements Iterable<Entry> {      
+      
+      private List<Entry> list;           
+
+      @Attribute
+      private String name;
+      
+      @ElementList
+      public List<Entry> getList() {
+         return list;
+      }
+      
+      @ElementList
+      public void setList(List<Entry> list) {
+         this.list = list;
+      }
+
+      public Iterator<Entry> iterator() {
+         return list.iterator();  
+      }
+   }
+
+   @Root
+   private static class PrimitiveCollection implements Iterable<String> {
+
+      @ElementList(name="list", type=String.class, parent="text")
+      private List<String> list;           
+
+      @Attribute(name="name")
+      private String name;
+
+      public Iterator<String> iterator() {
+         return list.iterator();  
+      }
+   }
+   
+   @Root
+   private static class PrimitiveDefaultCollection implements Iterable<String> {
+
+      @ElementList
+      private List<String> list;           
+
+      @Attribute
+      private String name;
+
+      public Iterator<String> iterator() {
+         return list.iterator();  
+      }
+   }
    
    private abstract class AbstractList<T> extends ArrayList<T> {
 
@@ -247,7 +364,6 @@ public class CollectionTest extends ValidationTestCase {
          super();              
       }           
    }
-   
    
 	private Persister serializer;
 
@@ -461,14 +577,111 @@ public class CollectionTest extends ValidationTestCase {
       assertEquals(three, 2);
 
       serializer.write(other, System.err);      
-   }    
-
+   }
+   
+   public void testTypeFromFieldList() throws Exception {    
+      TypeFromFieldList list = serializer.read(TypeFromFieldList.class, TYPE_FROM_FIELD_LIST);
+      int one = 0;
+      int two = 0;
+      int three = 0;
+      
+      for(Entry entry : list) {
+         if(entry.id == 1 && entry.text.equals("one")) {              
+            one++;
+         }
+         if(entry.id == 2 && entry.text.equals("two")) {              
+            two++;
+         }
+         if(entry.id == 3 && entry.text.equals("three")) {              
+            three++;
+         }
+      }         
+      assertEquals(one, 1);
+      assertEquals(two, 1);
+      assertEquals(three, 1);
+      
+      validate(list, serializer);
+   }
+   
+   public void testTypeFromMethodList() throws Exception {    
+      TypeFromMethodList list = serializer.read(TypeFromMethodList.class, TYPE_FROM_METHOD_LIST);
+      int one = 0;
+      int two = 0;
+      int three = 0;
+      
+      for(Entry entry : list) {
+         if(entry.id == 1 && entry.text.equals("one")) {              
+            one++;
+         }
+         if(entry.id == 2 && entry.text.equals("two")) {              
+            two++;
+         }
+         if(entry.id == 3 && entry.text.equals("three")) {              
+            three++;
+         }
+      }         
+      assertEquals(one, 1);
+      assertEquals(two, 1);
+      assertEquals(three, 1);
+      
+      validate(list, serializer);
+   }
+   
+   public void testPrimitiveCollection() throws Exception {    
+      PrimitiveCollection list = serializer.read(PrimitiveCollection.class, PRIMITIVE_LIST);
+      int one = 0;
+      int two = 0;
+      int three = 0;
+      
+      for(String entry : list) {
+         if(entry.equals("one")) {              
+            one++;
+         }
+         if(entry.equals("two")) {              
+            two++;
+         }
+         if(entry.equals("three")) {              
+            three++;
+         }
+      }         
+      assertEquals(one, 1);
+      assertEquals(two, 1);
+      assertEquals(three, 1);
+      
+      validate(list, serializer);
+   }
+   
+   public void testPrimitiveDefaultCollection() throws Exception {    
+      PrimitiveDefaultCollection list = serializer.read(PrimitiveDefaultCollection.class, PRIMITIVE_DEFAULT_LIST);      
+      int one = 0;
+      int two = 0;
+      int three = 0;
+      
+      for(String entry : list) {
+         if(entry.equals("one")) {              
+            one++;
+         }
+         if(entry.equals("two")) {              
+            two++;
+         }
+         if(entry.equals("three")) {              
+            three++;
+         }
+      }         
+      assertEquals(one, 1);
+      assertEquals(two, 1);
+      assertEquals(three, 1);
+      
+      validate(list, serializer);
+   }
+   
    public void testSetToSortedSet() throws Exception {    
       boolean success = false;
 
       try {      
          EntrySortedSet set = serializer.read(EntrySortedSet.class, HASH_SET);
       } catch(InstantiationException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);
@@ -480,6 +693,7 @@ public class CollectionTest extends ValidationTestCase {
       try {      
          EntrySet set = serializer.read(EntrySet.class, ARRAY_LIST);
       } catch(InstantiationException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);
@@ -492,6 +706,7 @@ public class CollectionTest extends ValidationTestCase {
       try {      
          InvalidList set = serializer.read(InvalidList.class, LIST);
       } catch(InstantiationException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);
@@ -503,6 +718,7 @@ public class CollectionTest extends ValidationTestCase {
       try {      
          UnknownCollectionList set = serializer.read(UnknownCollectionList.class, LIST);
       } catch(InstantiationException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);
@@ -514,6 +730,7 @@ public class CollectionTest extends ValidationTestCase {
       try {      
          EntryList set = serializer.read(EntryList.class, ABSTRACT_LIST);
       } catch(InstantiationException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);
@@ -525,6 +742,7 @@ public class CollectionTest extends ValidationTestCase {
       try {      
          EntryList set = serializer.read(EntryList.class, NOT_A_COLLECTION);
       } catch(InstantiationException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);
@@ -536,6 +754,7 @@ public class CollectionTest extends ValidationTestCase {
       try {      
          EntrySet set = serializer.read(EntrySet.class, MISSING_COLLECTION);
       } catch(ClassNotFoundException e) {
+         e.printStackTrace();
          success = true;              
       }         
       assertTrue(success);           

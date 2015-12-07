@@ -1,22 +1,39 @@
 Testsuite: simple.xml.load.MethodTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
 ------------- Standard Output ---------------
 <test>
-   <byte>16</byte>
-   <int>1234</int>
    <short>120</short>
-   <long>1234567</long>
-   <double>1234567.89</double>
-   <boolean>true</boolean>
    <float>1234.56</float>
+   <byte>16</byte>
+   <long>1234567</long>
+   <boolean>true</boolean>
+   <int>1234</int>
+   <double>1234567.89</double>
 </test><test>
-   <byte>16</byte>
-   <int>1234</int>
    <short>120</short>
-   <long>1234567</long>
-   <double>1234567.89</double>
-   <boolean>true</boolean>
    <float>1234.56</float>
-</test>------------- ---------------- ---------------
+   <byte>16</byte>
+   <long>1234567</long>
+   <boolean>true</boolean>
+   <int>1234</int>
+   <double>1234567.89</double>
+</test><implicitMethodNameExample>
+   <shortValue>120</shortValue>
+   <floatValue>1234.56</floatValue>
+   <byteValue>16</byteValue>
+   <longValue>1234567</longValue>
+   <booleanValue>true</booleanValue>
+   <intValue>1234</intValue>
+   <doubleValue>1234567.89</doubleValue>
+</implicitMethodNameExample><implicitMethodNameExample>
+   <shortValue>120</shortValue>
+   <floatValue>1234.56</floatValue>
+   <byteValue>16</byteValue>
+   <longValue>1234567</longValue>
+   <booleanValue>true</booleanValue>
+   <intValue>1234</intValue>
+   <doubleValue>1234567.89</doubleValue>
+</implicitMethodNameExample>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.531 sec
+Testcase: testExplicitMethodNameExample took 0.203 sec
+Testcase: testImplicitMethodNameExample took 0.031 sec

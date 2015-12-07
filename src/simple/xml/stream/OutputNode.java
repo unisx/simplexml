@@ -38,7 +38,7 @@ public interface OutputNode extends Node {
     * 
     * @return true if this is the root node within the document
     */
-   public boolean isRoot();
+   public boolean isRoot();  
    
    /**
     * This returns a <code>NodeMap</code> which can be used to add
@@ -49,7 +49,42 @@ public interface OutputNode extends Node {
     * @return returns the node map used to manipulate attributes
     */ 
    public NodeMap getAttributes();
-
+   
+   /**
+    * The <code>Mode</code> is used to indicate the output mode
+    * of this node. Three modes are possible, each determines
+    * how a value, if specified, is written to the resulting XML
+    * document. This is determined by the <code>setData</code>
+    * method which will set the output to be CDATA or escaped, 
+    * if neither is specified the mode is inherited.
+    * 
+    * @return this returns the mode of this output node object
+    */
+   public Mode getMode();
+   
+   /**
+    * This is used to set the output mode of this node to either
+    * be CDATA, escaped, or inherited. If the mode is set to data
+    * then any value specified will be written in a CDATA block, 
+    * if this is set to escaped values are escaped. If however 
+    * this method is set to inherited then the mode is inherited
+    * from the parent node.
+    * 
+    * @param mode this is the output mode to set the node to 
+    */
+   public void setMode(Mode mode);
+   
+   /**
+    * This is used to set the output mode of this node to either
+    * be CDATA or escaped. If this is set to true the any value
+    * specified will be written in a CDATA block, if this is set
+    * to false the values is escaped. If however this method is
+    * never invoked then the mode is inherited from the parent.
+    * 
+    * @param data if true the value is written as a CDATA block
+    */
+   public void setData(boolean data);
+   
    /**
     * This is used to set a text value to the element. This should
     * be added to the element if the element contains no child
@@ -59,8 +94,8 @@ public interface OutputNode extends Node {
     *
     * @throws Exception thrown if the text value cannot be added
     */ 
-   public void setValue(String value) throws Exception;
-
+   public void setValue(String value);
+   
    /**
     * This method is used for convinience to add an attribute node 
     * to the attribute <code>NodeMap</code>. The attribute added
@@ -70,6 +105,16 @@ public interface OutputNode extends Node {
     * @param value this is the value of the node to be added
     */ 
    public void setAttribute(String name, String value);
+   
+   /**
+    * This is used to acquire the <code>Node</code> that is the
+    * parent of this node. This will return the node that is
+    * the direct parent of this node and allows for siblings to
+    * make use of nodes with their parents if required.  
+    *   
+    * @return this returns the parent node for this node
+    */
+   public OutputNode getParent();
    
    /**
     * This is used to create a child element within the element that
@@ -82,6 +127,16 @@ public interface OutputNode extends Node {
     */ 
    public OutputNode getChild(String name) throws Exception;        
 
+   /**
+    * This is used to remove any uncommitted changes. Removal of an
+    * output node can only be done if it has no siblings and has
+    * not yet been committed. If the node is committed then this 
+    * will throw an exception to indicate that it cannot be removed. 
+    * 
+    * @throws Exception thrown if the node cannot be removed
+    */
+   public void remove() throws Exception;
+   
    /**
     * The <code>commit</code> method is used flush and commit any 
     * child nodes that have been created by this node. This allows

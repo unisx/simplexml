@@ -33,13 +33,13 @@ import java.lang.reflect.Method;
  *
  * @see simple.xml.load.MethodScanner
  */ 
-final class MethodContact implements Contact {
-
+class MethodContact implements Contact {
+   
    /**
     * This is the label that marks both the set and get methods.
     */         
    private Annotation label;
-        
+   
    /**
     * This is the read method which is used to get the value.
     */
@@ -56,6 +56,16 @@ final class MethodContact implements Contact {
    private Class type;
    
    /**
+    * This is the dependant type as taken from the read method.
+    */
+   private Class item;
+   
+   /**
+    * This represents the name of the method for this contact.
+    */
+   private String name;
+   
+   /**
     * Constructor for the <code>MethodContact</code> object. This is
     * used to compose a point of contact that makes use of a get and
     * set method on a class. The specified methods will be invoked
@@ -65,10 +75,13 @@ final class MethodContact implements Contact {
     * @param write this forms the get method for the object
     */ 
    public MethodContact(MethodPart read, MethodPart write) {
-      this.label = read.getAnnotation();           
+      this.label = read.getAnnotation();   
+      this.item = read.getDependant();
       this.write = write.getMethod();
       this.read = read.getMethod();
-      this.type= read.getType();
+      this.type = read.getType();   
+      this.name = read.getName();
+
    }
 
    /**
@@ -81,7 +94,32 @@ final class MethodContact implements Contact {
    public Class getType() {
       return type;
    }
-
+   
+   /**
+    * This provides the dependant class for the contact. This will
+    * actually represent a generic type for the actual type. For
+    * contacts that use a <code>Collection</code> type this will
+    * be the generic type parameter for that collection.
+    * 
+    * @return this returns the dependant type for the contact
+    */
+   public Class getDependant() {
+      return item;
+   }   
+   
+   /**
+    * This is used to acquire the name of the method. This returns
+    * the name of the method without the get, set or is prefix that
+    * represents the Java Bean method type. Also this decaptitalizes
+    * the resulting name. The result is used to represent the XML
+    * attribute of element within the class schema represented.
+    * 
+    *  @return this returns the name of the method represented
+    */
+   public String getName() {		  
+      return name;
+   }
+   
    /**
     * This is the annotation associated with the point of contact.
     * This will be an XML annotation that describes how the contact
@@ -117,5 +155,17 @@ final class MethodContact implements Contact {
     */ 
    public Object get(Object source) throws Exception {
       return read.invoke(source);
+   }
+   
+   /**
+    * This is used to describe the contact as it exists within the
+    * owning class. It is used to provide error messages that can
+    * be used to debug issues that occur when processing a contact.
+    * The string provided contains both the set and get methods.
+    * 
+    * @return this returns a string representation of the contact
+    */
+   public String toString() {
+      return String.format("method '%s'", name);
    }
 }

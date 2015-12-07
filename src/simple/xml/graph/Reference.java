@@ -1,5 +1,5 @@
 /*
- * ReferenceType.java May 2006
+ * Reference.java May 2006
  *
  * Copyright (C) 2006, Niall Gallagher <niallg@users.sf.net>
  *
@@ -23,7 +23,7 @@ package simple.xml.graph;
 import simple.xml.load.Type;
 
 /**
- * The <code>ReferenceType</code> object represents an object that 
+ * The <code>Reference</code> object represents an object that 
  * is used to provide a reference to an already instantiated value.
  * This is what is used if there is a cycle in the object graph. 
  * The <code>getInstance</code> method of this object will simply
@@ -31,7 +31,7 @@ import simple.xml.load.Type;
  * 
  * @author Niall Gallagher
  */
-final class ReferenceType implements Type {
+class Reference implements Type {
    
    /**
     * This is the object instance that has already be created.
@@ -44,14 +44,14 @@ final class ReferenceType implements Type {
    private Class type;
    
    /**
-    * Constructor for the <code>ReferenceType</code> object. This 
+    * Constructor for the <code>Reference</code> object. This 
     * is used to create a type that will produce the specified 
     * value when the <code>getInstance</code> methos is invoked.
     * 
     * @param value the value for the reference this represents
     * @param type this is the type value for the instance
     */
-   public ReferenceType(Object value, Class type) {      
+   public Reference(Object value, Class type) {      
       this.value = value;      
       this.type = type;
    }

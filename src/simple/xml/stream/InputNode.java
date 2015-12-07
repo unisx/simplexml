@@ -73,6 +73,16 @@ public interface InputNode extends Node {
    public NodeMap getAttributes();
    
    /**
+    * This is used to acquire the <code>Node</code> that is the
+    * parent of this node. This will return the node that is
+    * the direct parent of this node and allows for siblings to
+    * make use of nodes with their parents if required.  
+    *   
+    * @return this returns the parent node for this node
+    */
+   public InputNode getParent();
+   
+   /**
     * This returns the next child element within this element if
     * one exists. If all children have been read, or if there are
     * no child elements for this element then this returns null.
@@ -81,7 +91,20 @@ public interface InputNode extends Node {
     *
     * @exception Exception thrown if there was a parse error
     */ 
-   public InputNode getNext() throws Exception;   
+   public InputNode getNext() throws Exception;  
+   
+   /**
+    * This returns the next child in this element if that child
+    * has the name provided. If the next child element in this
+    * node does not have the name given then null is returned.
+    * 
+    * @param name this is the name of the next child element 
+    * 
+    * @return the next element if it has the name specified
+    * 
+    * @exception Exception thrown if there was a parse error
+    */
+   public InputNode getNext(String name) throws Exception;
 
    /**
     * This method is used to skip all child elements from this

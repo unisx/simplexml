@@ -127,7 +127,7 @@ final class NodeWriter {
    public boolean isCommitted(OutputNode node) {
       return !active.contains(node);
    }
-  
+ 
    /**
     * This method is used to commit all nodes on the stack up to and
     * including the specified node. This will effectively create end 
@@ -151,7 +151,23 @@ final class NodeWriter {
          stack.pop();
       }
    } 
-
+   
+   /**
+    * This method is used to remove the output node from the output
+    * buffer if that node has not yet been committed. This allows a
+    * node that has been created to be deleted, ensuring that it
+    * will not affect the resulting XML document structure.
+    * 
+    * @param node this is the output node that is to be removed    
+    */
+   public void remove(OutputNode node) throws Exception {
+      if(stack.top() != node) {
+         throw new NodeException("Cannot remove node");
+      }      
+      writer.reset();
+      stack.pop();
+   }
+   
    /**
     * This is used to create a new element under the specified node.
     * This will effectively commit all nodes that are open until this
@@ -165,7 +181,7 @@ final class NodeWriter {
     */ 
    public OutputNode writeElement(OutputNode parent, String name) throws Exception {
       if(stack.isEmpty()) {
-         return writeStart(name);       
+         return writeStart(parent, name);       
       }
       if(stack.contains(parent)) {
          OutputNode top = stack.top();
@@ -176,7 +192,7 @@ final class NodeWriter {
          while(stack.top() != parent) {
             writeEnd(stack.pop());
          }       
-         return writeStart(name);
+         return writeStart(parent, name);
       }
       return null;
    }
@@ -187,12 +203,13 @@ final class NodeWriter {
      * name before writing the start tag. Once the tag is written 
      * the node is pushed on to the head of the output node stack.
      *
+     * @param parent this is the parent node to the next output node
      * @param name this is the name of the node that is to be written
      *
      * @return this returns an output node used for writing content
      */       
-   private OutputNode writeStart(String name) throws Exception {
-      OutputNode node = new OutputElement(this, name);
+   private OutputNode writeStart(OutputNode parent, String name) throws Exception {
+      OutputNode node = new OutputElement(parent, this, name);
 
       if(name != null) {
           writer.writeStart(name);
@@ -209,11 +226,31 @@ final class NodeWriter {
     * @param node this is the node that is to have an end tag
     */  
    private void writeEnd(OutputNode node) throws Exception {
+      Mode mode = node.getMode();
+  
+      for(OutputNode next : stack) {         
+         if(mode != Mode.INHERIT) {
+            break; 
+         }
+         mode = next.getMode();
+      }
+      writeEnd(node, mode);
+   }
+   
+   /**
+    * This is used to write a new end element to the resulting XML
+    * document. This will acquire the name and value of the given
+    * node, if the node has a value that is written. Finally a new
+    * end tag is written to the document and the output is flushed.
+    *
+    * @param node this is the node that is to have an end tag
+    */  
+   private void writeEnd(OutputNode node, Mode mode) throws Exception {
       String value = node.getValue();
       String name = node.getName();
 
       if(value != null) { 
-         writer.writeText(value);
+         writer.writeText(value, mode);
       }         
       writer.writeEnd(name);
       writer.flush();

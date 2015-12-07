@@ -32,9 +32,9 @@ import simple.xml.ElementArray;
  * 
  * @author Niall Gallagher
  * 
- *  @see simple.xml.ElementArray
+ * @see simple.xml.ElementArray
  */
-final class ElementArrayLabel implements Label {
+class ElementArrayLabel implements Label {
 
    /**
     * This references the annotation that the field uses.
@@ -42,9 +42,9 @@ final class ElementArrayLabel implements Label {
    private ElementArray label;
    
    /**
-    * This references the field from the source object.
+    * This contains the details of the annotated contact object.
     */
-   private Contact contact;
+   private Signature detail;
    
    /**
     * This is the type of array this label will represent.
@@ -57,7 +57,7 @@ final class ElementArrayLabel implements Label {
    private String parent;
    
    /**
-    * This is the name of the element from the annotation.
+    * This is the name of the element for this label instance.
     */
    private String name;
 	
@@ -70,33 +70,35 @@ final class ElementArrayLabel implements Label {
     * @param label the annotation that contains the schema details
     */
    public ElementArrayLabel(Contact contact, ElementArray label) {
-      this.type = contact.getType();      
+      this.detail = new Signature(contact, this);   
+      this.type = contact.getType();
       this.parent = label.parent();
       this.name = label.name();
-      this.contact = contact;
       this.label = label;
    }
 	
    /**
     * This will create a <code>Converter</code> for transforming an XML
     * element into an array of XML serializable objects. The XML schema
-    * class for these objects must present the element list annotation. 
+    * class for these objects must present the element array annotation. 
     * 
     * @param root this is the source object used for serialization
     * 
     * @return this returns the converter for creating a collection 
     */
    public Converter getConverter(Source root) throws Exception {
+      String parent = getParent();
+      
       if(!type.isArray()) {
          throw new InstantiationException("Type is not an array %s for %s", type, label);
       }
       return getConverter(root, parent);
-   }
+   }  
       
    /**
     * This will create a <code>Converter</code> for transforming an XML
     * element into an array of XML serializable objects. The XML schema
-    * class for these objects must present the element list annotation. 
+    * class for these objects must present the element array annotation. 
     * 
     * @param root this is the source object used for serialization
     * @param parent this is the name of the parent XML element to use
@@ -104,14 +106,54 @@ final class ElementArrayLabel implements Label {
     * @return this returns the converter for creating a collection 
     */      
    private Converter getConverter(Source root, String parent) throws Exception {
-      Class entry = type.getComponentType();
+      Class entry = type.getComponentType();   
       
       if(!Factory.isPrimitive(entry)) {
          return new CompositeArray(root, type, entry, parent);        
       }
       return new PrimitiveArray(root, type, entry, parent);            
    }
-
+   
+   /**
+    * This is used to either provide the parent value provided within
+    * the annotation or compute a parent value. If the parent string
+    * is not provided the the parent value is calculated as the type
+    * of primitive the object is as a simplified class name.
+    * 
+    * @return this returns the name of the XML parent element used 
+    */
+   public String getParent() throws Exception {      
+      if(detail.isEmpty(parent)) {
+         parent = detail.getParent();
+      }
+      return parent;
+   }
+   
+   /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName() throws Exception{
+      return detail.getName();
+   }
+   
+   /**
+    * This is used to acquire the dependant type for the annotated
+    * array. This will simply return the type that the array is
+    * composed to hold. This must be a serializable type, that is,
+    * a type that is annotated with the <code>Root</code> class.
+    * 
+    * @return this returns the component type for the array
+    */
+   public Class getDependant() {
+      return type.getComponentType();
+   }
+   
    /**
     * This acts as a convinience method used to determine the type of
     * contact this represents. This is used when an object is written
@@ -136,18 +178,19 @@ final class ElementArrayLabel implements Label {
     * @return returns the contact that this label is representing
     */   
    public Contact getContact() {
-      return contact;
+      return detail.getContact();
    }
    
    /**
-    * This is used to acquire the name of the XML element as taken
-    * from the contact annotation. Every XML annotation must contain 
-    * a name, so that it can be identified from the XML source. This
-    * allows the class to be used as a schema for the XML document. 
+    * This is used to acquire the name of the element or attribute
+    * as taken from the annotation. If the element or attribute
+    * explicitly specifies a name then that name is used for the
+    * XML element or attribute used. If however no overriding name
+    * is provided then the method or field is used for the name. 
     * 
-    * @return returns the name of the annotation for the field
-    */    
-   public String getName() {
+    * @return returns the name of the annotation for the contact
+    */
+   public String getOverride() {
       return name;
    }
    
@@ -165,13 +208,40 @@ final class ElementArrayLabel implements Label {
    }
    
    /**
-    * This provides a string describing the XML annotation this is
-    * used to represent. This is used when debugging an error as
-    * it can be used within stack traces for problem labels.
+    * This is used to determine whether the annotation requires it
+    * and its children to be written as a CDATA block. This is done
+    * when a primitive or other such element requires a text value
+    * and that value needs to be encapsulated within a CDATA block.
     * 
-    * @return this returns a description of the XML annotation
+    * @return this returns true if the element requires CDATA
+    */
+   public boolean isData() {
+      return label.data();
+   }
+   
+   /**
+    * This method is used by the deserialization process to check
+    * to see if an annotation is inline or not. If an annotation
+    * represents an inline XML entity then the deserialization
+    * and serialization process ignores overrides and special 
+    * attributes. By default element arrays are not inline.
+    * 
+    * @return this always returns false for array labels
+    */
+   public boolean isInline() {
+      return false;
+   }
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This will provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
     */
    public String toString() {
-      return label.toString();
+      return detail.toString();
    }   
 }

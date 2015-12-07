@@ -33,7 +33,12 @@ import simple.xml.Text;
  * 
  *  @see simple.xml.Text
  */
-final class TextLabel implements Label {
+class TextLabel implements Label {
+   
+   /**
+    * This represents the signature of the annotated contact.
+    */
+   private Signature detail;
    
    /**
     * The contact that this annotation label represents.
@@ -59,6 +64,7 @@ final class TextLabel implements Label {
     * @param label this is the annotation for the contact 
     */
    public TextLabel(Contact contact, Text label) {
+      this.detail = new Signature(contact, this);
       this.type = contact.getType();
       this.contact = contact;
       this.label = label;      
@@ -94,14 +100,28 @@ final class TextLabel implements Label {
    }
    
    /**
-    * This is used to acquire the name of the XML element as taken
-    * from the contact annotation. Every XML annotation must contain 
-    * a name, so that it can be identified from the XML source. This
-    * allows the class to be used as a schema for the XML document. 
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName() {
+      return contact.toString();
+   }
+   
+   /**
+    * This is used to acquire the name of the element or attribute
+    * as taken from the annotation. If the element or attribute
+    * explicitly specifies a name then that name is used for the
+    * XML element or attribute used. If however no overriding name
+    * is provided then the method or field is used for the name. 
     * 
     * @return returns the name of the annotation for the contact
-    */   
-   public String getName() {
+    */
+   public String getOverride(){
       return contact.toString();
    }
    
@@ -120,6 +140,29 @@ final class TextLabel implements Label {
    }
    
    /**
+    * This is typically used to acquire the parent value as acquired
+    * from the annotation. However given that the annotation this
+    * represents does not have a parent attribute this will always
+    * provide a null value for the parent string.
+    * 
+    * @return this will always return null for the parent value 
+    */
+   public String getParent() {
+      return null;
+   }
+   
+   /**
+    * This is used to acquire the dependant class for this label. 
+    * This returns null as there are no dependants to the XML text
+    * annotation as it can only hold primitives with no dependants.
+    * 
+    * @return this is used to return the dependant type of null
+    */
+   public Class getDependant() {
+      return null;
+   }
+   
+   /**
     * This is used to determine whether the XML element is required. 
     * This ensures that if an XML element is missing from a document
     * that deserialization can continue. Also, in the process of
@@ -133,13 +176,41 @@ final class TextLabel implements Label {
    }
    
    /**
-    * This provides a string describing the XML annotation this is
-    * used to represent. This is used when debugging an error as
-    * it can be used within stack traces for problem labels.
+    * This is used to determine if the <code>Text</code> method or
+    * field is to have its value written as a CDATA block. This will
+    * set the output node to CDATA mode if this returns true, if it
+    * is false data will be written according to an inherited mode.
+    * By default inherited mode results in escaped XML text.
     * 
-    * @return this returns a description of the XML annotation
+    * @return this returns true if the text is to be a CDATA block
+    */
+   public boolean isData() {
+      return label.data();
+   }
+   
+   /**
+    * This method is used by the deserialization process to check
+    * to see if an annotation is inline or not. If an annotation
+    * represents an inline XML entity then the deserialization
+    * and serialization process ignores overrides and special 
+    * attributes. By default all text entities are inline.
+    * 
+    * @return this always returns true for text labels
+    */
+   public boolean isInline() {
+      return true;
+   }
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This will provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
     */
    public String toString() {
-      return label.toString();
-   }
+      return detail.toString();
+   }  
 }

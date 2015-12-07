@@ -38,6 +38,22 @@ public class EmptyTest extends TestCase {
       @Element(name="empty", required=false)
       private String empty;
    }    
+   
+   @Root(name="test")
+   private static class RequiredMethodElement {
+      
+      private String text;
+      
+      @Element
+      private void setEmpty(String text) {
+         this.text = text;
+      }
+      
+      @Element
+      private String getEmpty() {
+         return text;
+      }
+   }
 
    @Root(name="test")
    private static class RequiredAttribute {
@@ -65,17 +81,31 @@ public class EmptyTest extends TestCase {
       try {           
          persister.read(RequiredElement.class, EMPTY_ELEMENT);      
       } catch(ValueRequiredException e) {
+         e.printStackTrace();              
          success = true;              
       }
       assertTrue(success);
    }
 
+   public void testRequiredEmptyMethod() throws Exception {   
+      boolean success = false;
+      
+      try {           
+         persister.read(RequiredMethodElement.class, EMPTY_ELEMENT);     
+      } catch(ValueRequiredException e) {
+         e.printStackTrace();
+         success = true;              
+      }
+      assertTrue(success);   
+   }
+   
    public void testRequiredBlank() throws Exception {    
       boolean success = false;
       
       try {           
          persister.read(RequiredElement.class, BLANK_ELEMENT);     
       } catch(ValueRequiredException e) {
+         e.printStackTrace();
          success = true;              
       }
       assertTrue(success);           
@@ -87,6 +117,7 @@ public class EmptyTest extends TestCase {
       try {           
          persister.read(RequiredElement.class, EMPTY_ELEMENT);     
       } catch(ValueRequiredException e) {
+         e.printStackTrace();
          success = true;              
       }
       assertTrue(success);   

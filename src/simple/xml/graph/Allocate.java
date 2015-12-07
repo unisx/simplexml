@@ -1,5 +1,5 @@
 /*
- * CreateType.java January 2007
+ * Allocate.java January 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -24,16 +24,16 @@ import simple.xml.load.Type;
 import java.util.Map;
 
 /**
- * The <code>CreateType</code> object is used to represent a type 
- * that has not yet been created and needs to be added to the object
- * graph. This is given a map that contains each node in the graph
- * keyed via a unique identifier. When an instance is created with
- * this <code>Type</code> implementation it is inserted into the
- * graph using a specified key value, so it can be reused later.
+ * The <code>Allocate</code> object is used to represent an entity 
+ * that has not yet been created and needs to be allocated to the
+ * the object graph. This is given a map that contains each node 
+ * in the graph keyed via a unique identifier. When an instance is 
+ * created with a <code>Type</code> implementation it is inserted 
+ * into the graph using a specified key value.
  * 
  * @author Niall Gallagher
  */
-final class CreateType implements Type {
+class Allocate implements Type {
    
    /**
     * This is used to create an instance of the specified type.
@@ -51,7 +51,7 @@ final class CreateType implements Type {
    private Map map;
    
    /**
-    * Constructor for the <code>CreateType</code> object. This is used
+    * Constructor for the <code>Allocate</code> object. This is used
     * to create a type that can be used to establish an instance and
     * insert that instance into a map of nodes with an unique key.
     * 
@@ -59,7 +59,7 @@ final class CreateType implements Type {
     * @param map this contains each instance mapped with a key
     * @param key this is the unique key representing this instance
     */
-   public CreateType(Type type, Map map, String key) {
+   public Allocate(Type type, Map map, String key) {
       this.type = type;
       this.map = map;
       this.key = key;

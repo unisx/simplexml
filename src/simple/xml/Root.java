@@ -28,8 +28,8 @@ import java.lang.annotation.Retention;
  * need to be serialized. Also, elements within an element list, as
  * represented by the <code>ElementList</code> annotation need this
  * annotation so that the element names can be determined. All other
- * field names can be determined using the field annotation and so
- * the <code>Root</code> annotation is not needed for those. 
+ * field or method names can be determined using the annotation and 
+ * so the <code>Root</code> annotation is not needed for such objects. 
  * 
  * @author Niall Gallagher
  */
@@ -37,11 +37,11 @@ import java.lang.annotation.Retention;
 public @interface Root {
   
    /**
-    * This represents the name of the XML element. This must be 
-    * used for objects within element lists and root elements
-    * so that they can be serialized with a known name. If a
-    * root object does not contain this annotation it cannot be
-    * serialized as the root element name cannot be determined.
+    * This represents the name of the XML element. This is optional
+    * an is used when the name of the class is not suitable as an
+    * element name. If this is not specified then the name of the
+    * XML element will be the name of the class. If specified the
+    * class will be serialized and deserialized with the given name.
     * 
     * @return the name of the XML element this represents
     */

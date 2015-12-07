@@ -513,9 +513,13 @@ final class Composite implements Converter {
          String name = label.getName();
          OutputNode next = node.getChild(name);
          Class type = label.getType();
-        
-         if(!factory.setOverride(type, value, next)) {           
-            label.getConverter(root).write(next, value);
+
+         if(label.isInline() || !isOverridden(next, value, type)) {
+            Converter convert = label.getConverter(root);
+            boolean data = label.isData();
+            
+            next.setData(data);
+            convert.write(next, value);
          }
       }
    }
@@ -535,13 +539,31 @@ final class Composite implements Converter {
     */
    private void writeText(OutputNode node, Object value, Label label) throws Exception {
       if(value != null) {         
-         String text = value.toString();
+         String text = value.toString(); 
+         boolean data = label.isData();
          
          if(value instanceof Enum) {
             Enum type = (Enum) value;
             text = type.name();
          }
+         node.setData(data);
          node.setValue(text);        
       }
+   }
+   
+   /**
+    * This is used to determine whether the specified value has been
+    * overrideen by the strategy. If the item has been overridden
+    * then no more serialization is require for that value, this is
+    * effectivly telling the serialization process to stop writing.
+    * 
+    * @param node the node that a potential override is written to
+    * @param value this is the object instance to be serialized
+    * @param type this is the type of the object to be serialized
+    * 
+    * @return returns true if the strategy overrides the object
+    */
+   private boolean isOverridden(OutputNode node, Object value, Class type) throws Exception{
+      return factory.setOverride(type, value, node);
    }
 }

@@ -22,7 +22,6 @@ package simple.xml.load;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
 import simple.xml.ElementArray;
 import simple.xml.ElementList;
 import simple.xml.Element;
@@ -56,14 +55,14 @@ final class LabelFactory {
     * 
     * @return returns the label instantiated for the field
     */
-   public static Label getInstance(Contact contact, Annotation label) {
-      try {                
-         Constructor factory = getConstructor(label);         
-         return (Label)factory.newInstance(contact, label);
-      }catch(Exception e) {
-         return null;
+   public static Label getInstance(Contact contact, Annotation label) throws Exception {               
+      Constructor factory = getConstructor(label);    
+      
+      if(!factory.isAccessible()) {
+         factory.setAccessible(true);
       }
-    } 
+      return (Label)factory.newInstance(contact, label);
+   } 
     
     /**
      * Creates a constructor that can be used to instantiate the label
@@ -108,7 +107,7 @@ final class LabelFactory {
           return new Entry(AttributeLabel.class, Attribute.class);
        }
        if(label instanceof Text) {
-    	   return new Entry(TextLabel.class, Text.class);
+          return new Entry(TextLabel.class, Text.class);
        }
        throw new PersistenceException("Annotation %s not supported", label);
     }

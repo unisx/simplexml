@@ -29,7 +29,7 @@ package simple.xml.stream;
  * 
  * @author Niall Gallagher
  */ 
-final class OutputDocument implements OutputNode {
+class OutputDocument implements OutputNode {
 
    /**
     * Represents a dummy output node map for the attributes.
@@ -50,6 +50,11 @@ final class OutputDocument implements OutputNode {
     * Represents the value that has been set on this document.
     */ 
    private String value;
+   
+   /**
+    * This is the output mode of this output document object.
+    */
+   private Mode mode;
   
    /**
     * Constructor for the <code>OutputDocument</code> object. This 
@@ -60,11 +65,24 @@ final class OutputDocument implements OutputNode {
     * @param stack this is the stack that contains the open nodes
     */ 
    public OutputDocument(NodeWriter writer, OutputStack stack) {
-      this.table = new OutputNodeMap(this);           
+      this.table = new OutputNodeMap(this);    
+      this.mode = Mode.INHERIT;
       this.writer = writer;
       this.stack = stack;
    }     
-
+   
+   /**
+    * This is used to acquire the <code>Node</code> that is the
+    * parent of this node. This will return the node that is
+    * the direct parent of this node and allows for siblings to
+    * make use of nodes with their parents if required.  
+    *   
+    * @return this will always return null for this output    
+    */
+   public OutputNode getParent() {
+	   return null;
+   }
+   
    /**
     * To signify that this is the document element this method will
     * return null. Any object with a handle on an output node that
@@ -97,6 +115,34 @@ final class OutputDocument implements OutputNode {
     */
    public boolean isRoot() {
       return true;
+   }
+   
+   /**
+    * The <code>Mode</code> is used to indicate the output mode
+    * of this node. Three modes are possible, each determines
+    * how a value, if specified, is written to the resulting XML
+    * document. This is determined by the <code>setData</code>
+    * method which will set the output to be CDATA or escaped, 
+    * if neither is specified the mode is inherited.
+    * 
+    * @return this returns the mode of this output node object
+    */
+   public Mode getMode() {
+      return mode;
+   }
+   
+   /**
+    * This is used to set the output mode of this node to either
+    * be CDATA, escaped, or inherited. If the mode is set to data
+    * then any value specified will be written in a CDATA block, 
+    * if this is set to escaped values are escaped. If however 
+    * this method is set to inherited then the mode is inherited
+    * from the parent node.
+    * 
+    * @param mode this is the output mode to set the node to 
+    */
+   public void setMode(Mode mode) {
+      this.mode = mode;
    }
    
    /**
@@ -134,6 +180,23 @@ final class OutputDocument implements OutputNode {
    }
    
    /**
+    * This is used to set the output mode of this node to either
+    * be CDATA or escaped. If this is set to true the any value
+    * specified will be written in a CDATA block, if this is set
+    * to false the values is escaped. If however this method is
+    * never invoked then the mode is inherited from the parent.
+    * 
+    * @param data if true the value is written as a CDATA block
+    */
+   public void setData(boolean data) {
+      if(data) {
+         mode = Mode.DATA;
+      } else {
+         mode = Mode.ESCAPE;
+      }     
+   }
+   
+   /**
     * This is used to create a child element within the element that
     * this object represents. When a new child is created with this
     * method then the previous child is committed to the document.
@@ -144,6 +207,21 @@ final class OutputDocument implements OutputNode {
     */  
    public OutputNode getChild(String name) throws Exception {
       return writer.writeElement(this, name);
+   }
+   
+   /**
+    * This is used to remove any uncommitted changes. Removal of an
+    * output node can only be done if it has no siblings and has
+    * not yet been committed. If the node is committed then this 
+    * will throw an exception to indicate that it cannot be removed. 
+    * 
+    * @throws Exception thrown if the node cannot be removed
+    */
+   public void remove() throws Exception {
+      if(stack.isEmpty()) {
+         throw new NodeException("No root node");              
+      }           
+      stack.bottom().remove();  
    }
 
    /**

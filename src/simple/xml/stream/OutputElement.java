@@ -42,6 +42,11 @@ class OutputElement implements OutputNode {
    protected NodeWriter writer;
    
    /**
+    * This is the parent XML element to this output node.
+    */
+   private OutputNode parent;
+   
+   /**
     * Represents the value that has been set for the element.
     */ 
    private String value;
@@ -52,20 +57,40 @@ class OutputElement implements OutputNode {
    private String name;
    
    /**
+    * This is the output mode that this element object is using.
+    */
+   private Mode mode;
+   
+   /**
     * Constructor for the <code>OutputElement</code> object. This is
     * used to create an output element that can create elements for
     * an XML document. This requires the writer that is used to 
     * generate the actual document and the name of this node.
     *
+    * @param parent this is the parent node to this output node
     * @param writer this is the writer used to generate the file
     * @param name this is the name of the element this represents
     */ 
-   public OutputElement(NodeWriter writer, String name) {
-      this.table = new OutputNodeMap(this);           
+   public OutputElement(OutputNode parent, NodeWriter writer, String name) {
+      this.table = new OutputNodeMap(this);
+      this.mode = Mode.INHERIT;
       this.writer = writer;           
+      this.parent = parent;
       this.name = name;
    }     
-
+   
+   /**
+    * This is used to acquire the <code>Node</code> that is the
+    * parent of this node. This will return the node that is
+    * the direct parent of this node and allows for siblings to
+    * make use of nodes with their parents if required.  
+    *   
+    * @return this returns the parent node for this node
+    */
+   public OutputNode getParent() {
+	   return parent;
+   }
+   
    /**
     * Returns the name of the node that this represents. This is
     * an immutable property and cannot be changed. This will be
@@ -101,6 +126,34 @@ class OutputElement implements OutputNode {
    }
    
    /**
+    * The <code>Mode</code> is used to indicate the output mode
+    * of this node. Three modes are possible, each determines
+    * how a value, if specified, is written to the resulting XML
+    * document. This is determined by the <code>setData</code>
+    * method which will set the output to be CDATA or escaped, 
+    * if neither is specified the mode is inherited.
+    * 
+    * @return this returns the mode of this output node object
+    */
+   public Mode getMode() {
+      return mode;
+   }
+   
+   /**
+    * This is used to set the output mode of this node to either
+    * be CDATA, escaped, or inherited. If the mode is set to data
+    * then any value specified will be written in a CDATA block, 
+    * if this is set to escaped values are escaped. If however 
+    * this method is set to inherited then the mode is inherited
+    * from the parent node.
+    * 
+    * @param mode this is the output mode to set the node to 
+    */
+   public void setMode(Mode mode) {
+      this.mode = mode;
+   }
+   
+   /**
     * This returns a <code>NodeMap</code> which can be used to add
     * nodes to the element before that element has been committed. 
     * Nodes can be removed or added to the map and will appear as
@@ -121,6 +174,23 @@ class OutputElement implements OutputNode {
     */    
    public void setValue(String value) {
       this.value = value;
+   }
+   
+   /**
+    * This is used to set the output mode of this node to either
+    * be CDATA or escaped. If this is set to true the any value
+    * specified will be written in a CDATA block, if this is set
+    * to false the values is escaped. If however this method is
+    * never invoked then the mode is inherited from the parent.
+    * 
+    * @param data if true the value is written as a CDATA block
+    */
+   public void setData(boolean data) {
+      if(data) {
+         mode = Mode.DATA;
+      } else {
+         mode = Mode.ESCAPE;
+      }      
    }
 
    /**
@@ -146,6 +216,18 @@ class OutputElement implements OutputNode {
     */    
    public OutputNode getChild(String name) throws Exception {
       return writer.writeElement(this, name);
+   }
+   
+   /**
+    * This is used to remove any uncommitted changes. Removal of an
+    * output node can only be done if it has no siblings and has
+    * not yet been committed. If the node is committed then this 
+    * will throw an exception to indicate that it cannot be removed. 
+    * 
+    * @throws Exception thrown if the node cannot be removed
+    */
+   public void remove() throws Exception {
+      writer.remove(this);
    }
    
    /**

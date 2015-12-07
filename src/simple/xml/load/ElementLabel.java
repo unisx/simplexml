@@ -33,7 +33,12 @@ import simple.xml.Element;
  * 
  *  @see simple.xml.Element
  */
-final class ElementLabel implements Label {
+class ElementLabel implements Label {
+   
+   /**
+    * The contact that this element label represents.
+    */
+   private Signature detail;
    
    /**
     * References the annotation that was used by the field.
@@ -41,17 +46,12 @@ final class ElementLabel implements Label {
    private Element label;
    
    /**
-    * The contact that this element label represents.
-    */
-   private Contact contact;
-   
-   /**
     * This is the type of the class that the field references.
     */
    private Class type;
    
    /**
-    * This is the name of the element taken from the annotation.
+    * This is the name of the element for this label instance.
     */
    private String name;
    
@@ -63,10 +63,10 @@ final class ElementLabel implements Label {
     * @param contact this is the field that this label represents
     * @param label this is the annotation for the contact 
     */
-   public ElementLabel(Contact contact, Element label) {     
+   public ElementLabel(Contact contact, Element label) {
+      this.detail = new Signature(contact, this);
       this.type = contact.getType();
-      this.name = label.name();
-      this.contact = contact;
+      this.name = label.name();     
       this.label = label;      
    }
    
@@ -79,11 +79,24 @@ final class ElementLabel implements Label {
     * 
     * @return this returns a converter for serializing XML elements
     */
-   public Converter getConverter(Source source) {
+   public Converter getConverter(Source source) throws Exception {
       if(Factory.isPrimitive(type)) {
          return new Primitive(source, type);
       }
       return new Composite(source, type);
+   }
+   
+   /**
+    * This is used to acquire the name of the element or attribute
+    * that is used by the class schema. The name is determined by
+    * checking for an override within the annotation. If it contains
+    * a name then that is used, if however the annotation does not
+    * specify a name the the field or method name is used instead.
+    * 
+    * @return returns the name that is used for the XML property
+    */
+   public String getName() throws Exception {
+      return detail.getName();
    }
    
    /**
@@ -96,18 +109,19 @@ final class ElementLabel implements Label {
     * @return returns the contact that this label is representing
     */
    public Contact getContact() {
-      return contact;
+      return detail.getContact();
    }
    
    /**
-    * This is used to acquire the name of the XML element as taken
-    * from the contact annotation. Every XML annotation must contain 
-    * a name, so that it can be identified from the XML source. This
-    * allows the class to be used as a schema for the XML document. 
+    * This is used to acquire the name of the element or attribute
+    * as taken from the annotation. If the element or attribute
+    * explicitly specifies a name then that name is used for the
+    * XML element or attribute used. If however no overriding name
+    * is provided then the method or field is used for the name. 
     * 
     * @return returns the name of the annotation for the contact
-    */   
-   public String getName() {
+    */
+   public String getOverride() {
       return name;
    }
    
@@ -126,6 +140,29 @@ final class ElementLabel implements Label {
    }
    
    /**
+    * This is typically used to acquire the parent value as acquired
+    * from the annotation. However given that the annotation this
+    * represents does not have a parent attribute this will always
+    * provide a null value for the parent string.
+    * 
+    * @return this will always return null for the parent value 
+    */
+   public String getParent() {
+      return null;
+   }
+   
+   /**
+    * This is used to acquire the dependant class for this label. 
+    * This returns null as there are no dependants to the element
+    * annotation as it can only hold primitives with no dependants.
+    * 
+    * @return this is used to return the dependant type of null
+    */
+   public Class getDependant() {
+      return null;
+   }
+   
+   /**
     * This is used to determine whether the XML element is required. 
     * This ensures that if an XML element is missing from a document
     * that deserialization can continue. Also, in the process of
@@ -139,13 +176,40 @@ final class ElementLabel implements Label {
    }
    
    /**
-    * This provides a string describing the XML annotation this is
-    * used to represent. This is used when debugging an error as
-    * it can be used within stack traces for problem labels.
+    * This is used to determine whether the annotation requires it
+    * and its children to be written as a CDATA block. This is done
+    * when a primitive or other such element requires a text value
+    * and that value needs to be encapsulated within a CDATA block.
     * 
-    * @return this returns a description of the XML annotation
+    * @return this returns true if the element requires CDATA
+    */
+   public boolean isData() {
+      return label.data();
+   }
+   
+   /**
+    * This method is used by the deserialization process to check
+    * to see if an annotation is inline or not. If an annotation
+    * represents an inline XML entity then the deserialization
+    * and serialization process ignores overrides and special 
+    * attributes. By default all XML elements are not inline.
+    * 
+    * @return this always returns false for element labels
+    */
+   public boolean isInline() {
+      return false;
+   }
+   
+   /**
+    * This is used to describe the annotation and method or field
+    * that this label represents. This is used to provide error
+    * messages that can be used to debug issues that occur when
+    * processing a method. This will provide enough information
+    * such that the problem can be isolated correctly. 
+    * 
+    * @return this returns a string representation of the label
     */
    public String toString() {
-      return label.toString();
+      return detail.toString();
    }
 }

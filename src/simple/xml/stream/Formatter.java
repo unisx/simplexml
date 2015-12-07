@@ -60,21 +60,26 @@ final class Formatter {
     * Represents the XML escape sequence for the ampersand sign.
     */ 
    private static final char[] AND = { '&', 'a', 'm', 'p', ';'};
-
+   
+   /**
+    * Output buffer used to write the generated XML result to.
+    */ 
+   private OutputBuffer buffer;
+   
    /**
     * Creates the indentations that are used bu the XML file.
     */         
    private Indenter indenter;
    
    /**
-    * Output used to write the generated XML result to.
-    */ 
+    * This is the writer that is used to write the XML document.
+    */
    private Writer result;
 
    /**
-    * Represents the encoding to use in the generated prolog.
+    * Represents the prolog to insert at the start of the document.
     */ 
-   private String encoding;
+   private String prolog;
    
    /**
     * Represents the last type of content that was written.
@@ -92,22 +97,22 @@ final class Formatter {
    public Formatter(Writer result, Format format){
        this.result = new BufferedWriter(result);
        this.indenter = new Indenter(format);
-       this.encoding = format.getEncoding();      
+       this.buffer = new OutputBuffer();
+       this.prolog = format.getProlog();      
    }
 
    /**
     * This is used to write a prolog to the specified output. This is
     * only written if the specified <code>Format</code> object has
-    * been given a non null encoding. If no encoding is specified no
+    * been given a non null prolog. If no prolog is specified then no
     * prolog is written to the generated XML.
     *
     * @throws Exception thrown if there is an I/O problem 
     */ 
    public void writeProlog() throws Exception {
-      if(encoding != null) {
-         write("<?xml version='1.0' encoding='");
-         write(encoding);
-         write("'?>\n");         
+      if(prolog != null) {
+         write(prolog);         
+         write("\n");         
       }
    }
    
@@ -125,11 +130,12 @@ final class Formatter {
       String text = indenter.push();
 
       if(last == Tag.START) {
-         write('>');    
-      }                
-      write(text);
-      write('<');
-      write(name);
+         append('>');    
+      }        
+      flush();
+      append(text);
+      append('<');
+      append(name);
       last = Tag.START;
    }
   
@@ -157,17 +163,35 @@ final class Formatter {
 
    /**
     * This is used to write the specified text value to the writer.
-    * If the last tag written was a start tag then it is closed. 
+    * If the last tag written was a start tag then it is closed.
+    * By default this will escape any illegal XML characters. 
     *
     * @param text this is the text to write to the output
     *
     * @throws Exception thrown if there is an I/O exception
     */ 
    public void writeText(String text) throws Exception{
+      writeText(text, Mode.ESCAPE);      
+   }
+   
+   /**
+    * This is used to write the specified text value to the writer.
+    * If the last tag written was a start tag then it is closed.
+    * This will use the output mode specified. 
+    *
+    * @param text this is the text to write to the output
+    *
+    * @throws Exception thrown if there is an I/O exception
+    */ 
+   public void writeText(String text, Mode mode) throws Exception{
       if(last == Tag.START) {
          write('>');
       }                
-      escape(text);                
+      if(mode == Mode.DATA) {
+         data(text);
+      } else {
+         escape(text);
+      }         
       last = Tag.TEXT;
    }
    
@@ -202,24 +226,16 @@ final class Formatter {
    }
 
    /**
-    * This is used to flush the writer when the XML if it has been
-    * buffered. The flush method is used by the node writer after an
-    * end element has been written. Flushing ensures that buffering
-    * does not affect the result of the node writer.
-    */ 
-   public void flush() throws Exception{
-      result.flush();
-   }
-
-   /**
     * This is used to write a character to the output stream without
     * any translation. This is used when writing the start tags and
     * end tags, this is also used to write attribute names.
     *
     * @param ch this is the character to be written to the output
     */ 
-   private void write(char ch) throws Exception {
-      result.write(ch);           
+   private void write(char ch) throws Exception {     
+      buffer.write(result);
+      buffer.clear();
+      result.write(ch);      
    }
 
    /**
@@ -229,8 +245,10 @@ final class Formatter {
     *
     * @param plain this is the text to be written to the output
     */    
-   private void write(char[] plain) throws Exception {
-      result.write(plain);           
+   private void write(char[] plain) throws Exception {      
+      buffer.write(result);
+      buffer.clear();
+      result.write(plain);  
    }
 
    /**
@@ -240,8 +258,47 @@ final class Formatter {
     *
     * @param plain this is the text to be written to the output
     */    
-   private void write(String plain) throws Exception{
-      result.write(plain);                    
+   private void write(String plain) throws Exception{      
+      buffer.write(result);
+      buffer.clear();
+      result.write(plain);  
+   }
+   
+   /**
+    * This is used to buffer a character to the output stream without
+    * any translation. This is used when buffering the start tags so
+    * that they can be reset without affecting the resulting document.
+    *
+    * @param ch this is the character to be written to the output
+    */ 
+   private void append(char ch) throws Exception {
+      buffer.append(ch);           
+   }
+
+   /**
+    * This is used to buffer characters to the output stream without
+    * any translation. This is used when buffering the start tags so
+    * that they can be reset without affecting the resulting document.
+    *
+    * @param plain this is the string that is to be buffered
+    */     
+   private void append(String plain) throws Exception{
+      buffer.append(plain);                    
+   }
+   
+   /**
+    * This method is used to write the specified text as a CDATA block
+    * within the XML element. This is typically used when the value is
+    * large or if it must be preserved in a format that will not be
+    * affected by other XML parsers. For large text values this is 
+    * also faster than performing a character by character escaping.
+    * 
+    * @param value this is the text value to be written as CDATA
+    */
+   private void data(String value) throws Exception {
+      write("<![CDATA[");
+      write(value);
+      write("]]>");
    }
    
    /**
@@ -278,6 +335,33 @@ final class Formatter {
       } else {
          write(ch);                 
       }
+   }   
+   
+   /**
+    * This method is used to reset the internal buffer such that the
+    * contents are discarded. This is useful when a tag needs to be
+    * removed or deleted as its contents can be removed from the 
+    * buffer so as not to affect the resulting XML document.    
+    */
+   public void reset() throws Exception {
+      if(last != Tag.START) {
+         throw new NodeException("Can not remove element text");
+      }      
+      indenter.pop();
+      buffer.clear();
+      last = Tag.TEXT;
+   }
+
+   /**
+    * This is used to flush the writer when the XML if it has been
+    * buffered. The flush method is used by the node writer after an
+    * end element has been written. Flushing ensures that buffering
+    * does not affect the result of the node writer.
+    */ 
+   public void flush() throws Exception{
+      buffer.write(result);
+      buffer.clear();
+      result.flush();
    }
 
    /**
@@ -337,7 +421,7 @@ final class Formatter {
         return AND;
       }
       return null;
-  }
+  }  
    
    /**
     * This is used to enumerate the different types of tag that can

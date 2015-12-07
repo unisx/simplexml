@@ -20,8 +20,8 @@
 
 package simple.xml.load;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.lang.annotation.Annotation;
 import simple.xml.ElementArray;
 import simple.xml.ElementList;
 import simple.xml.Attribute;
@@ -38,7 +38,7 @@ import simple.xml.Text;
  * 
  * @author Niall Gallagher
  */
-final class FieldScanner extends ContactList {
+class FieldScanner extends ContactList {
    
    /**
     * Constructor for the <codde>FieldScanner</code> object. This is
@@ -118,7 +118,7 @@ final class FieldScanner extends ContactList {
       }
       if(label instanceof ElementList) {
          process(field, label);
-      }
+      }     
       if(label instanceof ElementArray) {
          process(field, label);
       }
