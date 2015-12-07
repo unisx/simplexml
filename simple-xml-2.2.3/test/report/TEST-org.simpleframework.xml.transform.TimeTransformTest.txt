@@ -1,0 +1,49 @@
+Testsuite: org.simpleframework.xml.transform.TimeTransformTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.298 sec
+------------- Standard Output ---------------
+<timeExample attribute="2010-02-03 23:25:39.640 GMT">
+   <element class="java.sql.Time">2010-02-03 23:25:39.640 GMT</element>
+   <time>2010-02-03 23:25:39.640 GMT</time>
+   <list class="java.util.ArrayList">
+      <time>2010-02-03 23:25:39.640 GMT</time>
+      <time>2010-02-03 23:25:39.640 GMT</time>
+   </list>
+   <array length="1">
+      <time>2010-02-03 23:25:39.640 GMT</time>
+   </array>
+</timeExample><timeExample attribute="2010-02-03 23:25:39.640 GMT">
+   <element class="java.sql.Time">2010-02-03 23:25:39.640 GMT</element>
+   <time>2010-02-03 23:25:39.640 GMT</time>
+   <list class="java.util.ArrayList">
+      <time>2010-02-03 23:25:39.640 GMT</time>
+      <time>2010-02-03 23:25:39.640 GMT</time>
+   </list>
+   <array length="1">
+      <time>2010-02-03 23:25:39.640 GMT</time>
+   </array>
+</timeExample>
+<time-example ID="0" attribute="2010-02-03 23:25:39.640 GMT">
+   <element class="java.sql.Time" ID="1">2010-02-03 23:25:39.640 GMT</element>
+   <time ID="2">2010-02-03 23:25:39.640 GMT</time>
+   <list class="java.util.ArrayList" ID="3">
+      <time ID="4">2010-02-03 23:25:39.640 GMT</time>
+      <time ID="5">2010-02-03 23:25:39.640 GMT</time>
+   </list>
+   <array length="1" ID="6">
+      <time ID="7">2010-02-03 23:25:39.640 GMT</time>
+   </array>
+</time-example><TimeExample ID="0" attribute="2010-02-03 23:25:39.640 GMT">
+   <Element class="java.sql.Time" ID="1">2010-02-03 23:25:39.640 GMT</Element>
+   <Time ID="2">2010-02-03 23:25:39.640 GMT</Time>
+   <List class="java.util.ArrayList" ID="3">
+      <Time ID="4">2010-02-03 23:25:39.640 GMT</Time>
+      <Time ID="5">2010-02-03 23:25:39.640 GMT</Time>
+   </List>
+   <Array length="1" ID="6">
+      <Time ID="7">2010-02-03 23:25:39.640 GMT</Time>
+   </Array>
+</TimeExample>------------- ---------------- ---------------
+
+Testcase: testTime took 0.018 sec
+Testcase: testPersistence took 0.268 sec
+Testcase: testDirectory took 0 sec

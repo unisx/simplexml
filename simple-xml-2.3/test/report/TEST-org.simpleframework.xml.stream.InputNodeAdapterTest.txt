@@ -1,0 +1,4 @@
+Testsuite: org.simpleframework.xml.stream.InputNodeAdapterTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.065 sec
+
+Testcase: testNodeAdapter took 0.061 sec

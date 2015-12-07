@@ -1,0 +1,168 @@
+Testsuite: org.simpleframework.xml.graph.ArrayCycleTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
+------------- Standard Output ---------------
+<root id="0">
+   <one length="5" id="1">
+      <entry id="2" value="entry one"/>
+      <entry id="3" value="entry two"/>
+      <entry id="4" value="entry three"/>
+      <entry id="5" value="entry four"/>
+      <entry id="6" value="entry five"/>
+   </one>
+   <two ref="1"/>
+   <three length="3" id="7">
+      <entry id="8" value="tom"/>
+      <entry id="9" value="dick"/>
+      <entry id="10" value="harry"/>
+   </three>
+   <example ref="0"/>
+</root><root id="0">
+   <one length="5" id="1">
+      <entry id="2" value="entry one"/>
+      <entry id="3" value="entry two"/>
+      <entry id="4" value="entry three"/>
+      <entry id="5" value="entry four"/>
+      <entry id="6" value="entry five"/>
+   </one>
+   <two ref="1"/>
+   <three length="3" id="7">
+      <entry id="8" value="tom"/>
+      <entry id="9" value="dick"/>
+      <entry id="10" value="harry"/>
+   </three>
+   <example ref="0"/>
+</root>
+<root ID="0">
+   <one length="5" ID="1">
+      <entry ID="2" value="entry one"/>
+      <entry ID="3" value="entry two"/>
+      <entry ID="4" value="entry three"/>
+      <entry ID="5" value="entry four"/>
+      <entry ID="6" value="entry five"/>
+   </one>
+   <two REFERER="1"/>
+   <three length="3" ID="7">
+      <entry ID="8" value="tom"/>
+      <entry ID="9" value="dick"/>
+      <entry ID="10" value="harry"/>
+   </three>
+   <example REFERER="0"/>
+</root><Root ID="0">
+   <One length="5" ID="1">
+      <Entry ID="2" value="entry one"/>
+      <Entry ID="3" value="entry two"/>
+      <Entry ID="4" value="entry three"/>
+      <Entry ID="5" value="entry four"/>
+      <Entry ID="6" value="entry five"/>
+   </One>
+   <Two REFERER="1"/>
+   <Three length="3" ID="7">
+      <Entry ID="8" value="tom"/>
+      <Entry ID="9" value="dick"/>
+      <Entry ID="10" value="harry"/>
+   </Three>
+   <Example REFERER="0"/>
+</Root><root id="0">
+   <array length="2" id="1">
+      <entry id="2">
+         <list ref="1"/>
+      </entry>
+      <entry id="3">
+         <list length="3" id="4">
+            <entry class="org.simpleframework.xml.graph.ArrayCycleTest$TextValue" id="5" name="blah">
+               <list ref="4"/>
+               <text id="6">Some text</text>
+            </entry>
+            <entry ref="3"/>
+            <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="7">
+               <element id="8">Example element text</element>
+            </entry>
+         </list>
+      </entry>
+   </array>
+</root><root id="0">
+   <array length="2" id="1">
+      <entry id="2">
+         <list ref="1"/>
+      </entry>
+      <entry id="3">
+         <list length="3" id="4">
+            <entry class="org.simpleframework.xml.graph.ArrayCycleTest$TextValue" id="5" name="blah">
+               <list ref="4"/>
+               <text id="6">Some text</text>
+            </entry>
+            <entry ref="3"/>
+            <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="7">
+               <element id="8">Example element text</element>
+            </entry>
+         </list>
+      </entry>
+   </array>
+</root>
+<root ID="0">
+   <array length="2" ID="1">
+      <entry ID="2">
+         <list REFERER="1"/>
+      </entry>
+      <entry ID="3">
+         <list length="3" ID="4">
+            <entry class="org.simpleframework.xml.graph.ArrayCycleTest$TextValue" ID="5" name="blah">
+               <list REFERER="4"/>
+               <text ID="6">Some text</text>
+            </entry>
+            <entry REFERER="3"/>
+            <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" ID="7">
+               <element ID="8">Example element text</element>
+            </entry>
+         </list>
+      </entry>
+   </array>
+</root><Root ID="0">
+   <Array length="2" ID="1">
+      <Entry ID="2">
+         <List REFERER="1"/>
+      </Entry>
+      <Entry ID="3">
+         <List length="3" ID="4">
+            <Entry class="org.simpleframework.xml.graph.ArrayCycleTest$TextValue" ID="5" name="blah">
+               <List REFERER="4"/>
+               <Text ID="6">Some text</Text>
+            </Entry>
+            <Entry REFERER="3"/>
+            <Entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" ID="7">
+               <Element ID="8">Example element text</Element>
+            </Entry>
+         </List>
+      </Entry>
+   </Array>
+</Root><value id="0">
+   <list length="1" class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="1">
+      <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="2">
+         <element id="3">Example text</element>
+      </entry>
+   </list>
+</value><value id="0">
+   <list length="1" class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="1">
+      <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" id="2">
+         <element id="3">Example text</element>
+      </entry>
+   </list>
+</value>
+<value ID="0">
+   <list length="1" class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" ID="1">
+      <entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" ID="2">
+         <element ID="3">Example text</element>
+      </entry>
+   </list>
+</value><Value ID="0">
+   <List length="1" class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" ID="1">
+      <Entry class="org.simpleframework.xml.graph.ArrayCycleTest$ElementValue" ID="2">
+         <Element ID="3">Example text</Element>
+      </Entry>
+   </List>
+</Value>------------- ---------------- ---------------
+
+Testcase: testCycle took 0.201 sec
+Testcase: testNestedExample took 0.058 sec
+Testcase: testPromotion took 0.017 sec
+Testcase: testDirectory took 0.001 sec

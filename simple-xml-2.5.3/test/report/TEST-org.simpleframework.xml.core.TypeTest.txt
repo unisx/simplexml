@@ -1,0 +1,233 @@
+Testsuite: org.simpleframework.xml.core.TypeTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.482 sec
+------------- Standard Output ---------------
+<test>
+   <primitive>
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object>
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Integer>1234</Integer>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+      <String>text value</String>
+      <Enum>TWO</Enum>
+   </object>
+</test><test>
+   <primitive>
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object>
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Integer>1234</Integer>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+      <String>text value</String>
+      <Enum>TWO</Enum>
+   </object>
+</test>
+<test ID="0">
+   <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
+   <primitive ID="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <!-- org.simpleframework.xml.core.TypeTest$ObjectEntry -->
+   <object ID="2">
+      <!-- java.lang.Boolean -->
+      <boolean ID="3">true</boolean>
+      <!-- java.lang.Byte -->
+      <byte ID="4">16</byte>
+      <!-- java.lang.Short -->
+      <short ID="5">120</short>
+      <!-- java.lang.Integer -->
+      <integer ID="6">1234</integer>
+      <!-- java.lang.Float -->
+      <float ID="7">1234.56</float>
+      <!-- java.lang.Long -->
+      <long ID="8">1234567</long>
+      <!-- java.lang.Double -->
+      <double ID="9">1234567.89</double>
+      <!-- java.lang.String -->
+      <string ID="10">text value</string>
+      <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
+      <enum ID="11">TWO</enum>
+   </object>
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Test ID="0">
+   <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
+   <Primitive ID="1">
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Int>1234</Int>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+   </Primitive>
+   <!-- org.simpleframework.xml.core.TypeTest$ObjectEntry -->
+   <Object ID="2">
+      <!-- java.lang.Boolean -->
+      <Boolean ID="3">true</Boolean>
+      <!-- java.lang.Byte -->
+      <Byte ID="4">16</Byte>
+      <!-- java.lang.Short -->
+      <Short ID="5">120</Short>
+      <!-- java.lang.Integer -->
+      <Integer ID="6">1234</Integer>
+      <!-- java.lang.Float -->
+      <Float ID="7">1234.56</Float>
+      <!-- java.lang.Long -->
+      <Long ID="8">1234567</Long>
+      <!-- java.lang.Double -->
+      <Double ID="9">1234567.89</Double>
+      <!-- java.lang.String -->
+      <String ID="10">text value</String>
+      <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
+      <Enum ID="11">TWO</Enum>
+   </Object>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<test>
+   <primitive>
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object>
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Integer>1234</Integer>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+      <String>text value</String>
+      <Enum>TWO</Enum>
+   </object>
+</test><test>
+   <primitive>
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object>
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Integer>1234</Integer>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+      <String>text value</String>
+      <Enum>TWO</Enum>
+   </object>
+</test>
+<test ID="0">
+   <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
+   <primitive ID="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <!-- org.simpleframework.xml.core.TypeTest$ObjectEntry -->
+   <object ID="2">
+      <!-- java.lang.Boolean -->
+      <boolean ID="3">true</boolean>
+      <!-- java.lang.Byte -->
+      <byte ID="4">16</byte>
+      <!-- java.lang.Short -->
+      <short ID="5">120</short>
+      <!-- java.lang.Integer -->
+      <integer ID="6">1234</integer>
+      <!-- java.lang.Float -->
+      <float ID="7">1234.56</float>
+      <!-- java.lang.Long -->
+      <long ID="8">1234567</long>
+      <!-- java.lang.Double -->
+      <double ID="9">1234567.89</double>
+      <!-- java.lang.String -->
+      <string ID="10">text value</string>
+      <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
+      <enum ID="11">TWO</enum>
+   </object>
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Test ID="0">
+   <!-- org.simpleframework.xml.core.TypeTest$PrimitiveEntry -->
+   <Primitive ID="1">
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Int>1234</Int>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+   </Primitive>
+   <!-- org.simpleframework.xml.core.TypeTest$ObjectEntry -->
+   <Object ID="2">
+      <!-- java.lang.Boolean -->
+      <Boolean ID="3">true</Boolean>
+      <!-- java.lang.Byte -->
+      <Byte ID="4">16</Byte>
+      <!-- java.lang.Short -->
+      <Short ID="5">120</Short>
+      <!-- java.lang.Integer -->
+      <Integer ID="6">1234</Integer>
+      <!-- java.lang.Float -->
+      <Float ID="7">1234.56</Float>
+      <!-- java.lang.Long -->
+      <Long ID="8">1234567</Long>
+      <!-- java.lang.Double -->
+      <Double ID="9">1234567.89</Double>
+      <!-- java.lang.String -->
+      <String ID="10">text value</String>
+      <!-- org.simpleframework.xml.core.TypeTest$TestEnum -->
+      <Enum ID="11">TWO</Enum>
+   </Object>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.TypeTest$Entry]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testPrimitive took 0.475 sec
+Testcase: testDirectory took 0.001 sec

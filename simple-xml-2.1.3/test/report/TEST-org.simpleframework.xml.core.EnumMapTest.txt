@@ -1,0 +1,98 @@
+Testsuite: org.simpleframework.xml.core.EnumMapTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.239 sec
+------------- Standard Output ---------------
+<enumMapExample>
+   <numbers>
+      <entry>
+         <number>ONE</number>
+         <string>1</string>
+      </entry>
+      <entry>
+         <number>TWO</number>
+         <string>2</string>
+      </entry>
+      <entry>
+         <number>THREE</number>
+         <string>3</string>
+      </entry>
+   </numbers>
+</enumMapExample><enumMapExample>
+   <numbers>
+      <entry>
+         <number>ONE</number>
+         <string>1</string>
+      </entry>
+      <entry>
+         <number>TWO</number>
+         <string>2</string>
+      </entry>
+      <entry>
+         <number>THREE</number>
+         <string>3</string>
+      </entry>
+   </numbers>
+</enumMapExample><enumMapExample>
+   <numbers>
+      <entry>
+         <number>ONE</number>
+         <string>1</string>
+      </entry>
+      <entry>
+         <number>TWO</number>
+         <string>2</string>
+      </entry>
+      <entry>
+         <number>THREE</number>
+         <string>3</string>
+      </entry>
+   </numbers>
+</enumMapExample><enumMapExample>
+   <numbers>
+      <entry>
+         <number>ONE</number>
+         <string>1</string>
+      </entry>
+      <entry>
+         <number>TWO</number>
+         <string>2</string>
+      </entry>
+      <entry>
+         <number>THREE</number>
+         <string>3</string>
+      </entry>
+   </numbers>
+</enumMapExample>
+<enum-map-example ID="0">
+   <numbers ID="1">
+      <entry>
+         <number ID="2">ONE</number>
+         <string ID="3">1</string>
+      </entry>
+      <entry>
+         <number ID="4">TWO</number>
+         <string ID="5">2</string>
+      </entry>
+      <entry>
+         <number ID="6">THREE</number>
+         <string ID="7">3</string>
+      </entry>
+   </numbers>
+</enum-map-example><EnumMapExample ID="0">
+   <Numbers ID="1">
+      <Entry>
+         <Number ID="2">ONE</Number>
+         <string ID="3">1</string>
+      </Entry>
+      <Entry>
+         <Number ID="4">TWO</Number>
+         <string ID="5">2</string>
+      </Entry>
+      <Entry>
+         <Number ID="6">THREE</Number>
+         <string ID="7">3</string>
+      </Entry>
+   </Numbers>
+</EnumMapExample>------------- ---------------- ---------------
+
+Testcase: testEnumMap took 0.232 sec
+Testcase: testDirectory took 0 sec

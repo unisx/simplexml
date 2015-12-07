@@ -1,0 +1,24 @@
+Testsuite: org.simpleframework.xml.stream.NodeWriterTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.045 sec
+------------- Standard Output ---------------
+<root id="test" name="testRoot">
+   <child-of-root name="child of root">
+      <child-of-child-of-root>I am a child of the child-of-root element and a grand child of the root element</child-of-child-of-root>
+   </child-of-root>
+   <another-child-of-root id="yet another child of root">I am a sibling to child-of-root</another-child-of-root>
+   <final-child-of-root>this element is a child of root</final-child-of-root>
+</root>
+<root version="1.0">
+   <first-child key="1">some value for first child</first-child>
+   <second-child key="2">
+      <test>test value</test>some value for second child</second-child>
+   <third-child key="3" name="three"/>
+   <fourth-child key="4" name="four">
+      <fourth-child-child name="foobar">some text for grand-child</fourth-child-child>
+   </fourth-child>
+</root>
+------------- ---------------- ---------------
+
+Testcase: testBasicWrite took 0.038 sec
+Testcase: testWrite took 0.002 sec
+Testcase: testDirectory took 0.001 sec

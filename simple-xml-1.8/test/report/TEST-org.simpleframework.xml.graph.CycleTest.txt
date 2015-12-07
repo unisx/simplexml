@@ -1,0 +1,152 @@
+Testsuite: org.simpleframework.xml.graph.CycleTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.938 sec
+------------- Standard Output ---------------
+<example id="0">
+   <list class="java.util.ArrayList" id="1">
+      <entry id="2" key="1">
+         <value id="3">one</value>
+      </entry>
+      <entry id="4" key="2">
+         <value id="5">two</value>
+      </entry>
+      <entry id="6" key="3">
+         <value id="7">three</value>
+      </entry>
+      <entry ref="2"/>
+      <entry ref="4"/>
+      <entry id="8" key="3">
+         <value ref="7"/>
+      </entry>
+   </list>
+   <cycle ref="0"/>
+</example><example id="0">
+   <list class="java.util.ArrayList" id="1">
+      <entry id="2" key="1">
+         <value id="3">one</value>
+      </entry>
+      <entry id="4" key="2">
+         <value id="5">two</value>
+      </entry>
+      <entry id="6" key="3">
+         <value id="7">three</value>
+      </entry>
+      <entry ref="2"/>
+      <entry ref="4"/>
+      <entry id="8" key="3">
+         <value ref="7"/>
+      </entry>
+   </list>
+   <cycle ref="0"/>
+</example><example id="0">
+   <list class="java.util.ArrayList" id="1">
+      <entry id="2" key="1">
+         <value id="3">one</value>
+      </entry>
+      <entry id="4" key="2">
+         <value id="5">two</value>
+      </entry>
+      <entry id="6" key="3">
+         <value id="7">three</value>
+      </entry>
+      <entry reference="2"/>
+      <entry reference="4"/>
+      <entry id="8" key="3">
+         <value reference="7"/>
+      </entry>
+   </list>
+   <cycle reference="0"/>
+</example><Example id="0">
+   <List class="java.util.ArrayList" id="1">
+      <Entry id="2" key="1">
+         <Value id="3">one</Value>
+      </Entry>
+      <Entry id="4" key="2">
+         <Value id="5">two</Value>
+      </Entry>
+      <Entry id="6" key="3">
+         <Value id="7">three</Value>
+      </Entry>
+      <Entry reference="2"/>
+      <Entry reference="4"/>
+      <Entry id="8" key="3">
+         <Value reference="7"/>
+      </Entry>
+   </List>
+   <Cycle reference="0"/>
+</Example><example id="0">
+   <list class="java.util.ArrayList" id="1">
+      <entry id="2" key="1">
+         <value id="3">one</value>
+      </entry>
+      <entry id="4" key="2">
+         <value id="5">two</value>
+      </entry>
+      <entry id="6" key="3">
+         <value id="7">three</value>
+      </entry>
+      <entry ref="2"/>
+      <entry ref="4"/>
+      <entry id="8" key="3">
+         <value ref="7"/>
+      </entry>
+   </list>
+   <cycle ref="0"/>
+</example><example id="0">
+   <list class="java.util.ArrayList" id="1">
+      <entry id="2" key="1">
+         <value id="3">one</value>
+      </entry>
+      <entry id="4" key="2">
+         <value id="5">two</value>
+      </entry>
+      <entry id="6" key="3">
+         <value id="7">three</value>
+      </entry>
+      <entry ref="2"/>
+      <entry ref="4"/>
+      <entry id="8" key="3">
+         <value ref="7"/>
+      </entry>
+   </list>
+   <cycle ref="0"/>
+</example><example id="0">
+   <list class="java.util.ArrayList" id="1">
+      <entry id="2" key="1">
+         <value id="3">one</value>
+      </entry>
+      <entry id="4" key="2">
+         <value id="5">two</value>
+      </entry>
+      <entry id="6" key="3">
+         <value id="7">three</value>
+      </entry>
+      <entry reference="2"/>
+      <entry reference="4"/>
+      <entry id="8" key="3">
+         <value reference="7"/>
+      </entry>
+   </list>
+   <cycle reference="0"/>
+</example><Example id="0">
+   <List class="java.util.ArrayList" id="1">
+      <Entry id="2" key="1">
+         <Value id="3">one</Value>
+      </Entry>
+      <Entry id="4" key="2">
+         <Value id="5">two</Value>
+      </Entry>
+      <Entry id="6" key="3">
+         <Value id="7">three</Value>
+      </Entry>
+      <Entry reference="2"/>
+      <Entry reference="4"/>
+      <Entry id="8" key="3">
+         <Value reference="7"/>
+      </Entry>
+   </List>
+   <Cycle reference="0"/>
+</Example>------------- ---------------- ---------------
+
+Testcase: testCycle took 0.195 sec
+Testcase: testMemory took 0.739 sec
+Testcase: testDirectory took 0 sec

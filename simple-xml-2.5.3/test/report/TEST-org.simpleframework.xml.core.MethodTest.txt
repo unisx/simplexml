@@ -1,0 +1,164 @@
+Testsuite: org.simpleframework.xml.core.MethodTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.59 sec
+------------- Standard Output ---------------
+<test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test><test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test>
+<test ID="0">
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Test ID="0">
+   <Boolean>true</Boolean>
+   <Byte>16</Byte>
+   <Double>1234567.89</Double>
+   <Float>1234.56</Float>
+   <Int>1234</Int>
+   <Long>1234567</Long>
+   <Short>120</Short>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test><test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test>
+<test ID="0">
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test>>>>>> ELEMENT=[element test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Test ID="0">
+   <Boolean>true</Boolean>
+   <Byte>16</Byte>
+   <Double>1234567.89</Double>
+   <Float>1234.56</Float>
+   <Int>1234</Int>
+   <Long>1234567</Long>
+   <Short>120</Short>
+</Test>>>>>> ELEMENT=[element Test]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ExplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<implicitMethodNameExample>
+   <booleanValue>true</booleanValue>
+   <byteValue>16</byteValue>
+   <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
+</implicitMethodNameExample><implicitMethodNameExample>
+   <booleanValue>true</booleanValue>
+   <byteValue>16</byteValue>
+   <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
+</implicitMethodNameExample>
+<implicit-method-name-example ID="0">
+   <boolean-value>true</boolean-value>
+   <byte-value>16</byte-value>
+   <double-value>1234567.89</double-value>
+   <float-value>1234.56</float-value>
+   <int-value>1234</int-value>
+   <long-value>1234567</long-value>
+   <short-value>120</short-value>
+</implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<ImplicitMethodNameExample ID="0">
+   <BooleanValue>true</BooleanValue>
+   <ByteValue>16</ByteValue>
+   <DoubleValue>1234567.89</DoubleValue>
+   <FloatValue>1234.56</FloatValue>
+   <IntValue>1234</IntValue>
+   <LongValue>1234567</LongValue>
+   <ShortValue>120</ShortValue>
+</ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<implicitMethodNameExample>
+   <booleanValue>true</booleanValue>
+   <byteValue>16</byteValue>
+   <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
+</implicitMethodNameExample><implicitMethodNameExample>
+   <booleanValue>true</booleanValue>
+   <byteValue>16</byteValue>
+   <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
+</implicitMethodNameExample>
+<implicit-method-name-example ID="0">
+   <boolean-value>true</boolean-value>
+   <byte-value>16</byte-value>
+   <double-value>1234567.89</double-value>
+   <float-value>1234.56</float-value>
+   <int-value>1234</int-value>
+   <long-value>1234567</long-value>
+   <short-value>120</short-value>
+</implicit-method-name-example>>>>>> ELEMENT=[element implicit-method-name-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<ImplicitMethodNameExample ID="0">
+   <BooleanValue>true</BooleanValue>
+   <ByteValue>16</ByteValue>
+   <DoubleValue>1234567.89</DoubleValue>
+   <FloatValue>1234.56</FloatValue>
+   <IntValue>1234</IntValue>
+   <LongValue>1234567</LongValue>
+   <ShortValue>120</ShortValue>
+</ImplicitMethodNameExample>>>>>> ELEMENT=[element ImplicitMethodNameExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.MethodTest$ImplicitMethodNameExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testExplicitMethodNameExample took 0.459 sec
+Testcase: testImplicitMethodNameExample took 0.116 sec
+Testcase: testDirectory took 0 sec

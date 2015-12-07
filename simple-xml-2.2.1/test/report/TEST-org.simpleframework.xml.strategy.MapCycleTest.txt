@@ -1,0 +1,276 @@
+Testsuite: org.simpleframework.xml.strategy.MapCycleTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.323 sec
+------------- Standard Output ---------------
+<entryMap id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry key="d">
+         <mapEntry id="2">
+            <name id="3">a</name>
+            <value id="4">example 1</value>
+         </mapEntry>
+      </entry>
+      <entry key="a">
+         <mapEntry reference="2"/>
+      </entry>
+      <entry key="c">
+         <mapEntry reference="2"/>
+      </entry>
+      <entry key="b">
+         <mapEntry id="5">
+            <name id="6">b</name>
+            <value id="7">example 2</value>
+         </mapEntry>
+      </entry>
+   </map>
+</entryMap><entryMap id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry key="d">
+         <mapEntry id="2">
+            <name id="3">a</name>
+            <value id="4">example 1</value>
+         </mapEntry>
+      </entry>
+      <entry key="a">
+         <mapEntry reference="2"/>
+      </entry>
+      <entry key="c">
+         <mapEntry reference="2"/>
+      </entry>
+      <entry key="b">
+         <mapEntry id="5">
+            <name id="6">b</name>
+            <value id="7">example 2</value>
+         </mapEntry>
+      </entry>
+   </map>
+</entryMap>
+<entry-map ID="0">
+   <map class="java.util.HashMap" ID="1">
+      <entry key="d">
+         <map-entry ID="2">
+            <name ID="3">a</name>
+            <value ID="4">example 1</value>
+         </map-entry>
+      </entry>
+      <entry key="a">
+         <map-entry REFERER="2"/>
+      </entry>
+      <entry key="c">
+         <map-entry REFERER="2"/>
+      </entry>
+      <entry key="b">
+         <map-entry ID="5">
+            <name ID="6">b</name>
+            <value ID="7">example 2</value>
+         </map-entry>
+      </entry>
+   </map>
+</entry-map><EntryMap ID="0">
+   <Map class="java.util.HashMap" ID="1">
+      <Entry key="d">
+         <MapEntry ID="2">
+            <Name ID="3">a</Name>
+            <Value ID="4">example 1</Value>
+         </MapEntry>
+      </Entry>
+      <Entry key="a">
+         <MapEntry REFERER="2"/>
+      </Entry>
+      <Entry key="c">
+         <MapEntry REFERER="2"/>
+      </Entry>
+      <Entry key="b">
+         <MapEntry ID="5">
+            <Name ID="6">b</Name>
+            <Value ID="7">example 2</Value>
+         </MapEntry>
+      </Entry>
+   </Map>
+</EntryMap><complexMap id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry>
+         <compositeKey id="2">
+            <name id="3">name 3</name>
+            <address id="4">address 3</address>
+         </compositeKey>
+         <mapEntry id="5">
+            <name id="6">b</name>
+            <value id="7">example 2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey id="8">
+            <name id="9">name 1</name>
+            <address id="10">address 1</address>
+         </compositeKey>
+         <mapEntry reference="5"/>
+      </entry>
+      <entry>
+         <compositeKey id="11">
+            <name id="12">name 4</name>
+            <address id="13">address 4</address>
+         </compositeKey>
+         <mapEntry id="14">
+            <name id="15">d</name>
+            <value id="16">example 4</value>
+         </mapEntry>
+      </entry>
+   </map>
+</complexMap><complexMap id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry>
+         <compositeKey id="2">
+            <name id="3">name 3</name>
+            <address id="4">address 3</address>
+         </compositeKey>
+         <mapEntry id="5">
+            <name id="6">b</name>
+            <value id="7">example 2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey id="8">
+            <name id="9">name 1</name>
+            <address id="10">address 1</address>
+         </compositeKey>
+         <mapEntry reference="5"/>
+      </entry>
+      <entry>
+         <compositeKey id="11">
+            <name id="12">name 4</name>
+            <address id="13">address 4</address>
+         </compositeKey>
+         <mapEntry id="14">
+            <name id="15">d</name>
+            <value id="16">example 4</value>
+         </mapEntry>
+      </entry>
+   </map>
+</complexMap>
+<complex-map ID="0">
+   <map class="java.util.HashMap" ID="1">
+      <entry>
+         <composite-key ID="2">
+            <name ID="3">name 3</name>
+            <address ID="4">address 3</address>
+         </composite-key>
+         <map-entry ID="5">
+            <name ID="6">b</name>
+            <value ID="7">example 2</value>
+         </map-entry>
+      </entry>
+      <entry>
+         <composite-key ID="8">
+            <name ID="9">name 1</name>
+            <address ID="10">address 1</address>
+         </composite-key>
+         <map-entry REFERER="5"/>
+      </entry>
+      <entry>
+         <composite-key ID="11">
+            <name ID="12">name 4</name>
+            <address ID="13">address 4</address>
+         </composite-key>
+         <map-entry ID="14">
+            <name ID="15">d</name>
+            <value ID="16">example 4</value>
+         </map-entry>
+      </entry>
+   </map>
+</complex-map><ComplexMap ID="0">
+   <Map class="java.util.HashMap" ID="1">
+      <Entry>
+         <CompositeKey ID="2">
+            <Name ID="3">name 3</Name>
+            <Address ID="4">address 3</Address>
+         </CompositeKey>
+         <MapEntry ID="5">
+            <Name ID="6">b</Name>
+            <Value ID="7">example 2</Value>
+         </MapEntry>
+      </Entry>
+      <Entry>
+         <CompositeKey ID="8">
+            <Name ID="9">name 1</Name>
+            <Address ID="10">address 1</Address>
+         </CompositeKey>
+         <MapEntry REFERER="5"/>
+      </Entry>
+      <Entry>
+         <CompositeKey ID="11">
+            <Name ID="12">name 4</Name>
+            <Address ID="13">address 4</Address>
+         </CompositeKey>
+         <MapEntry ID="14">
+            <Name ID="15">d</Name>
+            <Value ID="16">example 4</Value>
+         </MapEntry>
+      </Entry>
+   </Map>
+</ComplexMap><primitiveMap id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry>
+         <string id="2">one</string>
+         <double id="3">1.0</double>
+      </entry>
+      <entry>
+         <string id="4">two</string>
+         <double reference="3"/>
+      </entry>
+      <entry>
+         <string id="5">three</string>
+         <double id="6">4.0</double>
+      </entry>
+   </map>
+</primitiveMap><primitiveMap id="0">
+   <map class="java.util.HashMap" id="1">
+      <entry>
+         <string id="2">one</string>
+         <double id="3">1.0</double>
+      </entry>
+      <entry>
+         <string id="4">two</string>
+         <double reference="3"/>
+      </entry>
+      <entry>
+         <string id="5">three</string>
+         <double id="6">4.0</double>
+      </entry>
+   </map>
+</primitiveMap>
+<primitive-map ID="0">
+   <map class="java.util.HashMap" ID="1">
+      <entry>
+         <string ID="2">one</string>
+         <double ID="3">1.0</double>
+      </entry>
+      <entry>
+         <string ID="4">two</string>
+         <double REFERER="3"/>
+      </entry>
+      <entry>
+         <string ID="5">three</string>
+         <double ID="6">4.0</double>
+      </entry>
+   </map>
+</primitive-map><PrimitiveMap ID="0">
+   <Map class="java.util.HashMap" ID="1">
+      <Entry>
+         <String ID="2">one</String>
+         <double ID="3">1.0</double>
+      </Entry>
+      <Entry>
+         <String ID="4">two</String>
+         <double REFERER="3"/>
+      </Entry>
+      <Entry>
+         <String ID="5">three</String>
+         <double ID="6">4.0</double>
+      </Entry>
+   </Map>
+</PrimitiveMap>------------- ---------------- ---------------
+
+Testcase: testEntryMap took 0.225 sec
+Testcase: testComplexMap took 0.057 sec
+Testcase: testPrimitiveMap took 0.035 sec
+Testcase: testDirectory took 0 sec

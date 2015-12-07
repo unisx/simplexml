@@ -1,0 +1,5 @@
+Testsuite: org.simpleframework.xml.core.PrimitiveTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.063 sec
+
+Testcase: testPrimitive took 0.047 sec
+Testcase: testPrimitiveCycle took 0.016 sec

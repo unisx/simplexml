@@ -1,0 +1,18 @@
+Testsuite: org.simpleframework.xml.core.MatcherTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
+------------- Standard Output ---------------
+<foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
+   <foo:value>12345</foo:value>
+</foo:example><foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
+   <foo:value>12345</foo:value>
+</foo:example><foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
+   <foo:value>12345</foo:value>
+</foo:example>
+<foo:example ID="0" attr="9999" xmlns:foo="http://www.domain.com/value">
+   <foo:value ID="1">1</foo:value>
+</foo:example><foo:Example ID="0" attr="9999" xmlns:foo="http://www.domain.com/value">
+   <foo:Value ID="1">1</foo:Value>
+</foo:Example>------------- ---------------- ---------------
+
+Testcase: testMatcher took 0.198 sec
+Testcase: testDirectory took 0 sec

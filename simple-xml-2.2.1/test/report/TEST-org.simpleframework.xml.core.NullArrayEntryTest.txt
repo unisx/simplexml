@@ -1,0 +1,130 @@
+Testsuite: org.simpleframework.xml.core.NullArrayEntryTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.232 sec
+------------- Standard Output ---------------
+<exampleArray>
+   <list length="5">
+      <substitute id="1">
+         <text>a</text>
+      </substitute>
+      <substitute id="2">
+         <text>b</text>
+      </substitute>
+      <substitute/>
+      <substitute/>
+      <substitute id="5">
+         <text>e</text>
+      </substitute>
+   </list>
+</exampleArray><exampleArray>
+   <list length="5">
+      <substitute id="1">
+         <text>a</text>
+      </substitute>
+      <substitute id="2">
+         <text>b</text>
+      </substitute>
+      <substitute/>
+      <substitute/>
+      <substitute id="5">
+         <text>e</text>
+      </substitute>
+   </list>
+</exampleArray><exampleArray>
+   <list length="5">
+      <substitute id="1">
+         <text>a</text>
+      </substitute>
+      <substitute id="2">
+         <text>b</text>
+      </substitute>
+      <substitute/>
+      <substitute/>
+      <substitute id="5">
+         <text>e</text>
+      </substitute>
+   </list>
+</exampleArray>
+<example-array ID="0">
+   <list length="5" ID="1">
+      <substitute ID="2" id="1">
+         <text ID="3">a</text>
+      </substitute>
+      <substitute ID="4" id="2">
+         <text ID="5">b</text>
+      </substitute>
+      <substitute/>
+      <substitute/>
+      <substitute ID="6" id="5">
+         <text ID="7">e</text>
+      </substitute>
+   </list>
+</example-array><ExampleArray ID="0">
+   <List length="5" ID="1">
+      <Substitute ID="2" id="1">
+         <Text ID="3">a</Text>
+      </Substitute>
+      <Substitute ID="4" id="2">
+         <Text ID="5">b</Text>
+      </Substitute>
+      <Substitute/>
+      <Substitute/>
+      <Substitute ID="6" id="5">
+         <Text ID="7">e</Text>
+      </Substitute>
+   </List>
+</ExampleArray><examplePrimitiveArray>
+   <list length="7">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute/>
+      <substitute/>
+      <substitute>e</substitute>
+      <substitute/>
+      <substitute>f</substitute>
+   </list>
+</examplePrimitiveArray><examplePrimitiveArray>
+   <list length="7">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute/>
+      <substitute/>
+      <substitute>e</substitute>
+      <substitute/>
+      <substitute>f</substitute>
+   </list>
+</examplePrimitiveArray><examplePrimitiveArray>
+   <list length="7">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute/>
+      <substitute/>
+      <substitute>e</substitute>
+      <substitute/>
+      <substitute>f</substitute>
+   </list>
+</examplePrimitiveArray>
+<example-primitive-array ID="0">
+   <list length="7" ID="1">
+      <substitute ID="2">a</substitute>
+      <substitute ID="3">b</substitute>
+      <substitute/>
+      <substitute/>
+      <substitute ID="4">e</substitute>
+      <substitute/>
+      <substitute ID="5">f</substitute>
+   </list>
+</example-primitive-array><ExamplePrimitiveArray ID="0">
+   <List length="7" ID="1">
+      <Substitute ID="2">a</Substitute>
+      <Substitute ID="3">b</Substitute>
+      <Substitute/>
+      <Substitute/>
+      <Substitute ID="4">e</Substitute>
+      <Substitute/>
+      <Substitute ID="5">f</Substitute>
+   </List>
+</ExamplePrimitiveArray>------------- ---------------- ---------------
+
+Testcase: testExampleArray took 0.209 sec
+Testcase: testExamplePrimitiveArray took 0.016 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,28 @@
+Testsuite: org.simpleframework.xml.core.MixTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.317 sec
+------------- Standard Output ---------------
+<mixExample>
+   <calendar class="java.util.GregorianCalendar">2011-04-09 13:26:20.561 BST</calendar>
+</mixExample><mixExample>
+   <calendar class="java.util.GregorianCalendar">2011-04-09 13:26:20.561 BST</calendar>
+</mixExample><mixExample>
+   <calendar class="java.util.GregorianCalendar">2011-04-09 13:26:20.561 BST</calendar>
+</mixExample><mixExample>
+   <calendar class="java.util.GregorianCalendar">2011-04-09 13:26:20.561 BST</calendar>
+</mixExample>
+<mix-example ID="0">
+   <!-- java.util.Calendar -->
+   <calendar class="java.util.GregorianCalendar" ID="1">2011-04-09 13:26:20.561 BST</calendar>
+</mix-example>>>>>> ELEMENT=[element mix-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.MixTest$MixExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<MixExample ID="0">
+   <!-- java.util.Calendar -->
+   <Calendar class="java.util.GregorianCalendar" ID="1">2011-04-09 13:26:20.561 BST</Calendar>
+</MixExample>>>>>> ELEMENT=[element MixExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.MixTest$MixExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
+
+Testcase: testMix took 0.311 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,17 @@
+Testsuite: org.simpleframework.xml.load.PrologTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.174 sec
+------------- Standard Output ---------------
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<prologExample id="12" flag="true">
+    <name>some name</name>
+    <text>entry text</text>
+</prologExample><prolog-example id="12" flag="true">
+   <name id="1">some name</name>
+   <text id="2">entry text</text>
+</prolog-example><PrologExample id="12" flag="true">
+   <Name id="1">some name</Name>
+   <Text id="2">entry text</Text>
+</PrologExample>------------- ---------------- ---------------
+
+Testcase: testProlog took 0.17 sec
+Testcase: testDirectory took 0 sec

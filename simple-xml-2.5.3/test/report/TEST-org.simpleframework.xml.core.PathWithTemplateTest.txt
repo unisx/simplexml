@@ -1,0 +1,188 @@
+Testsuite: org.simpleframework.xml.core.PathWithTemplateTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
+------------- Standard Output ---------------
+<pathWithTemplateExample>
+   <details>
+      <name>John Doe</name>
+      <age>21</age>
+      <sex>MALE</sex>
+      <address>
+         <street>George Street</street>
+         <city>Sydney</city>
+      </address>
+      <phone area="+61">
+         <mobile>12345</mobile>
+         <home>67890</home>
+      </phone>
+   </details>
+</pathWithTemplateExample><pathWithTemplateExample>
+   <details>
+      <name>John Doe</name>
+      <age>21</age>
+      <sex>MALE</sex>
+      <address>
+         <street>George Street</street>
+         <city>Sydney</city>
+      </address>
+      <phone area="+61">
+         <mobile>12345</mobile>
+         <home>67890</home>
+      </phone>
+   </details>
+</pathWithTemplateExample>
+<path-with-template-example ID="0">
+   <details>
+      <!-- java.lang.String -->
+      <name ID="1">John Doe</name>
+      <age>21</age>
+      <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
+      <sex ID="2">MALE</sex>
+      <address>
+         <!-- java.lang.String -->
+         <street ID="3">George Street</street>
+         <!-- java.lang.String -->
+         <city ID="4">Sydney</city>
+      </address>
+      <phone area="+61">
+         <!-- java.lang.String -->
+         <mobile ID="5">12345</mobile>
+         <!-- java.lang.String -->
+         <home ID="6">67890</home>
+      </phone>
+   </details>
+</path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<PathWithTemplateExample ID="0">
+   <Details>
+      <!-- java.lang.String -->
+      <Name ID="1">John Doe</Name>
+      <Age>21</Age>
+      <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
+      <Sex ID="2">MALE</Sex>
+      <Address>
+         <!-- java.lang.String -->
+         <Street ID="3">George Street</Street>
+         <!-- java.lang.String -->
+         <City ID="4">Sydney</City>
+      </Address>
+      <Phone area="+61">
+         <!-- java.lang.String -->
+         <Mobile ID="5">12345</Mobile>
+         <!-- java.lang.String -->
+         <Home ID="6">67890</Home>
+      </Phone>
+   </Details>
+</PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<pathWithTemplateExample>
+   <details>
+      <name>Jack Daniels</name>
+      <age>22</age>
+      <sex>MALE</sex>
+      <address>
+         <street>Old Street</street>
+         <city>London</city>
+      </address>
+      <phone area="+44">
+         <mobile>12345</mobile>
+         <home>67890</home>
+      </phone>
+   </details>
+</pathWithTemplateExample><pathWithTemplateExample>
+   <details>
+      <name>Jack Daniels</name>
+      <age>22</age>
+      <sex>MALE</sex>
+      <address>
+         <street>Old Street</street>
+         <city>London</city>
+      </address>
+      <phone area="+44">
+         <mobile>12345</mobile>
+         <home>67890</home>
+      </phone>
+   </details>
+</pathWithTemplateExample>
+<path-with-template-example ID="0">
+   <details>
+      <!-- java.lang.String -->
+      <name ID="1">Jack Daniels</name>
+      <age>22</age>
+      <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
+      <sex ID="2">MALE</sex>
+      <address>
+         <!-- java.lang.String -->
+         <street ID="3">Old Street</street>
+         <!-- java.lang.String -->
+         <city ID="4">London</city>
+      </address>
+      <phone area="+44">
+         <!-- java.lang.String -->
+         <mobile ID="5">12345</mobile>
+         <!-- java.lang.String -->
+         <home ID="6">67890</home>
+      </phone>
+   </details>
+</path-with-template-example>>>>>> ELEMENT=[element path-with-template-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<PathWithTemplateExample ID="0">
+   <Details>
+      <!-- java.lang.String -->
+      <Name ID="1">Jack Daniels</Name>
+      <Age>22</Age>
+      <!-- org.simpleframework.xml.core.PathWithTemplateTest$Sex -->
+      <Sex ID="2">MALE</Sex>
+      <Address>
+         <!-- java.lang.String -->
+         <Street ID="3">Old Street</Street>
+         <!-- java.lang.String -->
+         <City ID="4">London</City>
+      </Address>
+      <Phone area="+44">
+         <!-- java.lang.String -->
+         <Mobile ID="5">12345</Mobile>
+         <!-- java.lang.String -->
+         <Home ID="6">67890</Home>
+      </Phone>
+   </Details>
+</PathWithTemplateExample>>>>>> ELEMENT=[element PathWithTemplateExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.PathWithTemplateTest$PathWithTemplateExample]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+<pathWithTemplateExample>
+   <details>
+      <name>John Doe</name>
+      <age>21</age>
+      <sex>MALE</sex>
+      <address>
+         <street>George Street</street>
+         <city>Sydney</city>
+      </address>
+      <phone area="+61">
+         <mobile>12345</mobile>
+         <home>67890</home>
+      </phone>
+   </details>
+</pathWithTemplateExample><pathWithTemplateExample>
+   <details>
+      <name>Jack Daniels</name>
+      <age>22</age>
+      <sex>MALE</sex>
+      <address>
+         <street>Old Street</street>
+         <city>London</city>
+      </address>
+      <phone area="+44">
+         <mobile>12345</mobile>
+         <home>67890</home>
+      </phone>
+   </details>
+</pathWithTemplateExample>------------- ---------------- ---------------
+
+Testcase: testSerialization took 0.359 sec
+Testcase: testPathWithTemplates took 0.059 sec
+Testcase: testDirectory took 0.001 sec

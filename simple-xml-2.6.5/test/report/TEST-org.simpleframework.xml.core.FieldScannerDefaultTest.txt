@@ -1,0 +1,5 @@
+Testsuite: org.simpleframework.xml.core.FieldScannerDefaultTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.066 sec
+
+Testcase: testMixedAnnotations took 0.051 sec
+Testcase: testNoAnnotations took 0.009 sec

@@ -1,0 +1,22 @@
+Testsuite: simple.xml.load.MethodTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.38 sec
+------------- Standard Output ---------------
+<test>
+   <double>1234567.89</double>
+   <byte>16</byte>
+   <short>120</short>
+   <float>1234.56</float>
+   <int>1234</int>
+   <boolean>true</boolean>
+   <long>1234567</long>
+</test><test>
+   <double>1234567.89</double>
+   <byte>16</byte>
+   <short>120</short>
+   <float>1234.56</float>
+   <int>1234</int>
+   <boolean>true</boolean>
+   <long>1234567</long>
+</test>------------- ---------------- ---------------
+
+Testcase: testPrimitive took 0.379 sec

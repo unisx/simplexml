@@ -1,0 +1,32 @@
+Testsuite: org.simpleframework.xml.core.UnionNamespaceTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.37 sec
+------------- Standard Output ---------------
+<example>
+   <path>
+      <x:a xmlns:x="http://www.xml.com/ns">example</x:a>
+   </path>
+</example><example>
+   <path>
+      <x:a xmlns:x="http://www.xml.com/ns">example</x:a>
+   </path>
+</example>
+<example ID="0">
+   <path>
+      <!-- java.lang.String -->
+      <x:a ID="1" xmlns:x="http://www.xml.com/ns">example</x:a>
+   </path>
+</example>>>>>> ELEMENT=[element example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionNamespaceTest$Example]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+<Example ID="0">
+   <Path>
+      <!-- java.lang.String -->
+      <x:A ID="1" xmlns:x="http://www.xml.com/ns">example</x:A>
+   </Path>
+</Example>>>>>> ELEMENT=[element Example]
+>>>>> TYPE=[class org.simpleframework.xml.core.UnionNamespaceTest$Example]
+>>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
+------------- ---------------- ---------------
+
+Testcase: testNamespaceWithUnion took 0.364 sec
+Testcase: testDirectory took 0 sec

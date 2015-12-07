@@ -1,0 +1,19 @@
+Testsuite: org.simpleframework.xml.load.DefaultEmptyTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.189 sec
+------------- Standard Output ---------------
+<defaultExample name="test">
+   <stringList class="java.util.ArrayList"/>
+   <stringMap class="java.util.HashMap"/>
+   <stringArray length="0"/>
+   <text>some text</text>
+</defaultExample><defaultExample name="test">
+   <stringList class="java.util.ArrayList"/>
+   <stringMap class="java.util.HashMap"/>
+   <stringArray length="0"/>
+   <text>some text</text>
+</defaultExample><defaultExample name="name">
+   <text>example text</text>
+</defaultExample>------------- ---------------- ---------------
+
+Testcase: testDefaults took 0.184 sec
+Testcase: testDirectory took 0 sec

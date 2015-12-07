@@ -1,0 +1,138 @@
+Testsuite: org.simpleframework.xml.core.InterceptorTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.344 sec
+------------- Standard Output ---------------
+<example>
+   <map class="java.util.HashMap">
+      <entry>
+         <string>1</string>
+         <object class="java.lang.Integer">1</object>
+      </entry>
+      <entry>
+         <string>1.0</string>
+         <object class="java.lang.Double">1.0</object>
+      </entry>
+      <entry>
+         <string>true</string>
+         <object class="java.lang.Boolean">true</object>
+      </entry>
+      <entry>
+         <string>text</string>
+         <object class="java.lang.String">text</object>
+      </entry>
+   </map>
+   <set class="java.util.HashSet">
+      <string>a</string>
+      <string>b</string>
+      <string>c</string>
+      <string>d</string>
+      <string>e</string>
+   </set>
+</example><example>
+   <map class="java.util.HashMap">
+      <entry>
+         <string>1</string>
+         <object class="java.lang.Integer">1</object>
+      </entry>
+      <entry>
+         <string>1.0</string>
+         <object class="java.lang.Double">1.0</object>
+      </entry>
+      <entry>
+         <string>true</string>
+         <object class="java.lang.Boolean">true</object>
+      </entry>
+      <entry>
+         <string>text</string>
+         <object class="java.lang.String">text</object>
+      </entry>
+   </map>
+   <set class="java.util.HashSet">
+      <string>a</string>
+      <string>b</string>
+      <string>c</string>
+      <string>d</string>
+      <string>e</string>
+   </set>
+</example><example>
+   <map class="java.util.HashMap">
+      <entry>
+         <string>1</string>
+         <object class="java.lang.Integer">1</object>
+      </entry>
+      <entry>
+         <string>1.0</string>
+         <object class="java.lang.Double">1.0</object>
+      </entry>
+      <entry>
+         <string>true</string>
+         <object class="java.lang.Boolean">true</object>
+      </entry>
+      <entry>
+         <string>text</string>
+         <object class="java.lang.String">text</object>
+      </entry>
+   </map>
+   <set class="java.util.HashSet">
+      <string>a</string>
+      <string>b</string>
+      <string>c</string>
+      <string>d</string>
+      <string>e</string>
+   </set>
+</example>
+<example ID="0">
+   <map class="java.util.concurrent.ConcurrentHashMap" ID="1">
+      <entry>
+         <string ID="2">1</string>
+         <object class="java.lang.Integer" ID="3">1</object>
+      </entry>
+      <entry>
+         <string ID="4">1.0</string>
+         <object class="java.lang.Double" ID="5">1.0</object>
+      </entry>
+      <entry>
+         <string ID="6">true</string>
+         <object class="java.lang.Boolean" ID="7">true</object>
+      </entry>
+      <entry>
+         <string ID="8">text</string>
+         <object class="java.lang.String" REFERER="8"/>
+      </entry>
+   </map>
+   <set class="java.util.concurrent.CopyOnWriteArraySet" ID="9">
+      <string ID="10">a</string>
+      <string ID="11">b</string>
+      <string ID="12">c</string>
+      <string ID="13">d</string>
+      <string ID="14">e</string>
+   </set>
+</example><Example ID="0">
+   <Map class="java.util.concurrent.ConcurrentHashMap" ID="1">
+      <Entry>
+         <String ID="2">1</String>
+         <Object class="java.lang.Integer" ID="3">1</Object>
+      </Entry>
+      <Entry>
+         <String ID="4">1.0</String>
+         <Object class="java.lang.Double" ID="5">1.0</Object>
+      </Entry>
+      <Entry>
+         <String ID="6">true</String>
+         <Object class="java.lang.Boolean" ID="7">true</Object>
+      </Entry>
+      <Entry>
+         <String ID="8">text</String>
+         <Object class="java.lang.String" REFERER="8"/>
+      </Entry>
+   </Map>
+   <Set class="java.util.concurrent.CopyOnWriteArraySet" ID="9">
+      <String ID="10">a</String>
+      <String ID="11">b</String>
+      <String ID="12">c</String>
+      <String ID="13">d</String>
+      <String ID="14">e</String>
+   </Set>
+</Example>------------- ---------------- ---------------
+
+Testcase: testInterceptor took 0.344 sec
+Testcase: testDirectory took 0 sec

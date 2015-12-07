@@ -1,0 +1,13 @@
+Testsuite: org.simpleframework.xml.core.NamespaceInheritanceTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.105 sec
+------------- Standard Output ---------------
+<aaa:aaa xmlns:aaa="namespace1">
+   <bbb:bbb xmlns:bbb="namespace2">
+      <aaa:aaa>
+         <bbb:bbb/>
+      </aaa:aaa>
+   </bbb:bbb>
+</aaa:aaa>
+------------- ---------------- ---------------
+
+Testcase: testNamespace took 0.1 sec

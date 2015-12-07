@@ -1,0 +1,8 @@
+Testsuite: org.simpleframework.xml.core.CallbackTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.42 sec
+------------- Standard Error -----------------
+Diff:0.9301625441294672
+B:3275000.0
+------------- ---------------- ---------------
+
+Testcase: testReuseScannedFields took 0.41 sec

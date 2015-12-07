@@ -1,0 +1,58 @@
+Testsuite: org.simpleframework.xml.transform.StringArrayTransformTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.253 sec
+------------- Standard Output ---------------
+<stringArrayExample attribute="one, two, three, four">
+   <element length="4">one, two, three, four</element>
+   <list class="java.util.ArrayList">
+      <string length="4">one, two, three, four</string>
+      <string length="4">one, two, three, four</string>
+   </list>
+   <array length="1">
+      <string length="4">one, two, three, four</string>
+   </array>
+</stringArrayExample><stringArrayExample attribute="one, two, three, four">
+   <element length="4">one, two, three, four</element>
+   <list class="java.util.ArrayList">
+      <string length="4">one, two, three, four</string>
+      <string length="4">one, two, three, four</string>
+   </list>
+   <array length="1">
+      <string length="4">one, two, three, four</string>
+   </array>
+</stringArrayExample>
+<string-array-example ID="0" attribute="one, two, three, four">
+   <element length="4" ID="1">one, two, three, four</element>
+   <list class="java.util.ArrayList" ID="2">
+      <string length="4" ID="3">one, two, three, four</string>
+      <string length="4" ID="4">one, two, three, four</string>
+   </list>
+   <array length="1" ID="5">
+      <string length="4" ID="6">one, two, three, four</string>
+   </array>
+</string-array-example><StringArrayExample ID="0" attribute="one, two, three, four">
+   <Element length="4" ID="1">one, two, three, four</Element>
+   <List class="java.util.ArrayList" ID="2">
+      <String length="4" ID="3">one, two, three, four</String>
+      <String length="4" ID="4">one, two, three, four</String>
+   </List>
+   <Array length="1" ID="5">
+      <String length="4" ID="6">one, two, three, four</String>
+   </Array>
+</StringArrayExample>------------- ---------------- ---------------
+------------- Standard Error -----------------
+<stringArrayExample attribute="one, two, three, four">
+   <element length="4">one, two, three, four</element>
+   <list class="java.util.ArrayList">
+      <string length="4">one, two, three, four</string>
+      <string length="4">one, two, three, four</string>
+   </list>
+   <array length="1">
+      <string length="4">one, two, three, four</string>
+   </array>
+</stringArrayExample>
+------------- ---------------- ---------------
+
+Testcase: testRead took 0.004 sec
+Testcase: testWrite took 0 sec
+Testcase: testPersistence took 0.241 sec
+Testcase: testDirectory took 0 sec

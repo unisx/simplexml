@@ -1,0 +1,136 @@
+Testsuite: org.simpleframework.xml.core.EmptyMapEntryTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.298 sec
+------------- Standard Output ---------------
+<simpleBug1 id="0">
+   <test1 id="1">
+      <data id="2">
+         <entry>
+            <string id="3">key1</string>
+            <object class="java.lang.String" id="4">value1</object>
+         </entry>
+         <entry>
+            <string id="5">key3</string>
+            <object class="java.lang.String" id="6"></object>
+         </entry>
+         <entry>
+            <string id="7">key2</string>
+            <object class="java.lang.String" ref="4"/>
+         </entry>
+         <entry>
+            <string id="8">key4</string>
+            <object class="java.lang.String" ref="6"/>
+         </entry>
+         <entry>
+            <string ref="6"/>
+            <object class="java.lang.String" ref="6"/>
+         </entry>
+      </data>
+   </test1>
+</simpleBug1><simpleBug1 id="0">
+   <test1 id="1">
+      <data id="2">
+         <entry>
+            <string id="3">key1</string>
+            <object class="java.lang.String" id="4">value1</object>
+         </entry>
+         <entry>
+            <string id="5">key3</string>
+            <object class="java.lang.String" id="6"></object>
+         </entry>
+         <entry>
+            <string id="7">key2</string>
+            <object class="java.lang.String" ref="4"/>
+         </entry>
+         <entry>
+            <string id="8">key4</string>
+            <object class="java.lang.String" ref="6"/>
+         </entry>
+         <entry>
+            <string ref="6"/>
+            <object class="java.lang.String" ref="6"/>
+         </entry>
+      </data>
+   </test1>
+</simpleBug1>
+<simple-bug-1 ID="0">
+   <test-1 ID="1">
+      <data ID="2">
+         <entry>
+            <string ID="3">key1</string>
+            <object class="java.lang.String" ID="4">value1</object>
+         </entry>
+         <entry>
+            <string ID="5">key3</string>
+            <object class="java.lang.String" ID="6"></object>
+         </entry>
+         <entry>
+            <string ID="7">key2</string>
+            <object class="java.lang.String" REFERER="4"/>
+         </entry>
+         <entry>
+            <string ID="8">key4</string>
+            <object class="java.lang.String" REFERER="6"/>
+         </entry>
+         <entry>
+            <string REFERER="6"/>
+            <object class="java.lang.String" REFERER="6"/>
+         </entry>
+      </data>
+   </test-1>
+</simple-bug-1><SimpleBug1 ID="0">
+   <Test1 ID="1">
+      <Data ID="2">
+         <Entry>
+            <String ID="3">key1</String>
+            <Object class="java.lang.String" ID="4">value1</Object>
+         </Entry>
+         <Entry>
+            <String ID="5">key3</String>
+            <Object class="java.lang.String" ID="6"></Object>
+         </Entry>
+         <Entry>
+            <String ID="7">key2</String>
+            <Object class="java.lang.String" REFERER="4"/>
+         </Entry>
+         <Entry>
+            <String ID="8">key4</String>
+            <Object class="java.lang.String" REFERER="6"/>
+         </Entry>
+         <Entry>
+            <String REFERER="6"/>
+            <Object class="java.lang.String" REFERER="6"/>
+         </Entry>
+      </Data>
+   </Test1>
+</SimpleBug1>------------- ---------------- ---------------
+------------- Standard Error -----------------
+<simpleBug1 id="0">
+   <test1 id="1">
+      <data id="2">
+         <entry>
+            <string id="3">key1</string>
+            <object class="java.lang.String" id="4">value1</object>
+         </entry>
+         <entry>
+            <string id="5">key3</string>
+            <object class="java.lang.String" id="6"></object>
+         </entry>
+         <entry>
+            <string id="7">key2</string>
+            <object class="java.lang.String" ref="4"/>
+         </entry>
+         <entry>
+            <string id="8">key4</string>
+            <object class="java.lang.String" ref="6"/>
+         </entry>
+         <entry>
+            <string ref="6"/>
+            <object class="java.lang.String" ref="6"/>
+         </entry>
+      </data>
+   </test1>
+</simpleBug1>
+------------- ---------------- ---------------
+
+Testcase: testEmptyMapEntry took 0.298 sec
+Testcase: testDirectory took 0 sec

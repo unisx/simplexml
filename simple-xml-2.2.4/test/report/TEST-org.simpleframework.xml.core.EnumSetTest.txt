@@ -1,0 +1,33 @@
+Testsuite: org.simpleframework.xml.core.EnumSetTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.204 sec
+------------- Standard Output ---------------
+<enumSetExample>
+   <set class="java.util.RegularEnumSet">
+      <qualification>BEGINNER</qualification>
+      <qualification>EXPERT</qualification>
+   </set>
+</enumSetExample><enumSetExample>
+   <set class="java.util.RegularEnumSet">
+      <qualification>BEGINNER</qualification>
+      <qualification>EXPERT</qualification>
+   </set>
+</enumSetExample><enumSetExample>
+   <set class="java.util.RegularEnumSet">
+      <qualification>BEGINNER</qualification>
+      <qualification>EXPERT</qualification>
+   </set>
+</enumSetExample>
+<enum-set-example ID="0">
+   <set class="java.util.RegularEnumSet" ID="1">
+      <qualification ID="2">BEGINNER</qualification>
+      <qualification ID="3">EXPERT</qualification>
+   </set>
+</enum-set-example><EnumSetExample ID="0">
+   <Set class="java.util.RegularEnumSet" ID="1">
+      <Qualification ID="2">BEGINNER</Qualification>
+      <Qualification ID="3">EXPERT</Qualification>
+   </Set>
+</EnumSetExample>------------- ---------------- ---------------
+
+Testcase: testEnumSet took 0.199 sec
+Testcase: testDirectory took 0 sec

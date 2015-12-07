@@ -1,0 +1,92 @@
+Testsuite: org.simpleframework.xml.core.AliasTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
+------------- Standard Output ---------------
+<m:multiValueMap xmlns:m="http://simpleframework.org/map">
+   <map type="map">
+      <entry>
+         <string>double</string>
+         <object type="float">0.0</object>
+      </entry>
+      <entry>
+         <string>string</string>
+         <object type="text">test</object>
+      </entry>
+      <entry>
+         <string>integer</string>
+         <object type="int">1</object>
+      </entry>
+      <entry>
+         <string>entry</string>
+         <e:object type="entry" name="example" xmlns:e="http://simpleframework.org/entry">
+            <value>item</value>
+         </e:object>
+      </entry>
+   </map>
+</m:multiValueMap><m:multiValueMap xmlns:m="http://simpleframework.org/map">
+   <map type="map">
+      <entry>
+         <string>double</string>
+         <object type="float">0.0</object>
+      </entry>
+      <entry>
+         <string>string</string>
+         <object type="text">test</object>
+      </entry>
+      <entry>
+         <string>integer</string>
+         <object type="int">1</object>
+      </entry>
+      <entry>
+         <string>entry</string>
+         <e:object type="entry" name="example" xmlns:e="http://simpleframework.org/entry">
+            <value>item</value>
+         </e:object>
+      </entry>
+   </map>
+</m:multiValueMap>
+<m:multi-value-map ID="0" xmlns:m="http://simpleframework.org/map">
+   <map class="java.util.HashMap" ID="1">
+      <entry>
+         <string ID="2">double</string>
+         <object class="java.lang.Double" ID="3">0.0</object>
+      </entry>
+      <entry>
+         <string ID="4">string</string>
+         <object class="java.lang.String" ID="5">test</object>
+      </entry>
+      <entry>
+         <string ID="6">integer</string>
+         <object class="java.lang.Integer" ID="7">1</object>
+      </entry>
+      <entry>
+         <string ID="8">entry</string>
+         <e:object class="org.simpleframework.xml.core.AliasTest$MultiValueEntry" ID="9" name="example" xmlns:e="http://simpleframework.org/entry">
+            <value ID="10">item</value>
+         </e:object>
+      </entry>
+   </map>
+</m:multi-value-map><m:MultiValueMap ID="0" xmlns:m="http://simpleframework.org/map">
+   <Map class="java.util.HashMap" ID="1">
+      <Entry>
+         <String ID="2">double</String>
+         <Object class="java.lang.Double" ID="3">0.0</Object>
+      </Entry>
+      <Entry>
+         <String ID="4">string</String>
+         <Object class="java.lang.String" ID="5">test</Object>
+      </Entry>
+      <Entry>
+         <String ID="6">integer</String>
+         <Object class="java.lang.Integer" ID="7">1</Object>
+      </Entry>
+      <Entry>
+         <String ID="8">entry</String>
+         <e:Object class="org.simpleframework.xml.core.AliasTest$MultiValueEntry" ID="9" name="example" xmlns:e="http://simpleframework.org/entry">
+            <Value ID="10">item</Value>
+         </e:Object>
+      </Entry>
+   </Map>
+</m:MultiValueMap>------------- ---------------- ---------------
+
+Testcase: testMap took 0.298 sec
+Testcase: testDirectory took 0 sec

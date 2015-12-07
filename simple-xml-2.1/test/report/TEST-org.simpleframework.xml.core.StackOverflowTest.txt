@@ -1,0 +1,4 @@
+Testsuite: org.simpleframework.xml.core.StackOverflowTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.759 sec
+
+Testcase: testStackOverflow took 1.756 sec

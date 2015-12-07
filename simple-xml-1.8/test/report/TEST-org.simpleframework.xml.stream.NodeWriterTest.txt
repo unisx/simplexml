@@ -1,0 +1,6 @@
+Testsuite: org.simpleframework.xml.stream.NodeWriterTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.045 sec
+
+Testcase: testBasicWrite took 0.038 sec
+Testcase: testWrite took 0.002 sec
+Testcase: testDirectory took 0.001 sec

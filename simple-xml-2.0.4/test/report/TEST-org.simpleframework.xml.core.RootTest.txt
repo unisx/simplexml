@@ -1,0 +1,52 @@
+Testsuite: org.simpleframework.xml.core.RootTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.253 sec
+------------- Standard Output ---------------
+<rootExample version="1">
+   <text>Some text example</text>
+</rootExample><rootExample version="1">
+   <text>Some text example</text>
+</rootExample>
+<root-example ID="0" version="1">
+   <text ID="1">Some text example</text>
+</root-example><RootExample ID="0" version="1">
+   <Text ID="1">Some text example</Text>
+</RootExample><extendedRootExample version="1">
+   <text>Some text example</text>
+</extendedRootExample><extendedRootExample version="1">
+   <text>Some text example</text>
+</extendedRootExample>
+<extended-root-example ID="0" version="1">
+   <text ID="1">Some text example</text>
+</extended-root-example><ExtendedRootExample ID="0" version="1">
+   <Text ID="1">Some text example</Text>
+</ExtendedRootExample><extendedRootExample version="1">
+   <text>Some text example</text>
+</extendedRootExample><extendedRootExample version="1">
+   <text>Some text example</text>
+</extendedRootExample>
+<extended-root-example ID="0" version="1">
+   <text ID="1">Some text example</text>
+</extended-root-example><ExtendedRootExample ID="0" version="1">
+   <Text ID="1">Some text example</Text>
+</ExtendedRootExample><extendedOverriddenRootExample version="1">
+   <text>Some text example</text>
+</extendedOverriddenRootExample><extendedOverriddenRootExample version="1">
+   <text>Some text example</text>
+</extendedOverriddenRootExample>
+<extended-overridden-root-example ID="0" version="1">
+   <text ID="1">Some text example</text>
+</extended-overridden-root-example><ExtendedOverriddenRootExample ID="0" version="1">
+   <Text ID="1">Some text example</Text>
+</ExtendedOverriddenRootExample><explicitOverride version="1">
+   <text>Some text example</text>
+</explicitOverride><explicitOverride version="1">
+   <text>Some text example</text>
+</explicitOverride>
+<explicit-override ID="0" version="1">
+   <text ID="1">Some text example</text>
+</explicit-override><ExplicitOverride ID="0" version="1">
+   <Text ID="1">Some text example</Text>
+</ExplicitOverride>------------- ---------------- ---------------
+
+Testcase: testRoot took 0.248 sec
+Testcase: testDirectory took 0 sec

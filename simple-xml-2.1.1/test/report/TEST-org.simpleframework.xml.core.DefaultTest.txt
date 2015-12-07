@@ -1,0 +1,57 @@
+Testsuite: org.simpleframework.xml.core.DefaultTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.765 sec
+------------- Standard Output ---------------
+<defaultTextList version="ONE">
+   <list class="java.util.ArrayList">
+      <textEntry name="a" version="ONE">Example 1</textEntry>
+      <textEntry name="b" version="TWO">Example 2</textEntry>
+      <textEntry name="c" version="THREE">Example 3</textEntry>
+   </list>
+</defaultTextList><defaultTextList version="ONE">
+   <list class="java.util.ArrayList">
+      <textEntry name="a" version="ONE">Example 1</textEntry>
+      <textEntry name="b" version="TWO">Example 2</textEntry>
+      <textEntry name="c" version="THREE">Example 3</textEntry>
+   </list>
+</defaultTextList>
+<default-text-list ID="0" version="ONE">
+   <list class="java.util.ArrayList" ID="1">
+      <text-entry ID="2" name="a" version="ONE">Example 1</text-entry>
+      <text-entry ID="3" name="b" version="TWO">Example 2</text-entry>
+      <text-entry ID="4" name="c" version="THREE">Example 3</text-entry>
+   </list>
+</default-text-list><DefaultTextList ID="0" version="ONE">
+   <List class="java.util.ArrayList" ID="1">
+      <TextEntry ID="2" name="a" version="ONE">Example 1</TextEntry>
+      <TextEntry ID="3" name="b" version="TWO">Example 2</TextEntry>
+      <TextEntry ID="4" name="c" version="THREE">Example 3</TextEntry>
+   </List>
+</DefaultTextList><defaultTextList version="ONE">
+   <list class="java.util.ArrayList">
+      <textEntry name="a" version="ONE">Example 1</textEntry>
+      <textEntry name="b" version="TWO">Example 2</textEntry>
+      <textEntry name="c" version="THREE">Example 3</textEntry>
+   </list>
+</defaultTextList><defaultTextList version="ONE">
+   <list class="java.util.ArrayList">
+      <textEntry name="a" version="ONE">Example 1</textEntry>
+      <textEntry name="b" version="TWO">Example 2</textEntry>
+      <textEntry name="c" version="THREE">Example 3</textEntry>
+   </list>
+</defaultTextList>
+<default-text-list ID="0" version="ONE">
+   <list class="java.util.ArrayList" ID="1">
+      <text-entry ID="2" name="a" version="ONE">Example 1</text-entry>
+      <text-entry ID="3" name="b" version="TWO">Example 2</text-entry>
+      <text-entry ID="4" name="c" version="THREE">Example 3</text-entry>
+   </list>
+</default-text-list><DefaultTextList ID="0" version="ONE">
+   <List class="java.util.ArrayList" ID="1">
+      <TextEntry ID="2" name="a" version="ONE">Example 1</TextEntry>
+      <TextEntry ID="3" name="b" version="TWO">Example 2</TextEntry>
+      <TextEntry ID="4" name="c" version="THREE">Example 3</TextEntry>
+   </List>
+</DefaultTextList>------------- ---------------- ---------------
+
+Testcase: testList took 0.76 sec
+Testcase: testDirectory took 0 sec

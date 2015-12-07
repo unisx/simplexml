@@ -1,0 +1,84 @@
+Testsuite: org.simpleframework.xml.core.MultiElementMapTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.231 sec
+------------- Standard Output ---------------
+<properties>
+   <entry>
+      <key>int-value</key>
+      <value>
+         <int>42</int>
+      </value>
+   </entry>
+   <entry>
+      <key>boolean-value</key>
+      <value>
+         <boolean>true</boolean>
+      </value>
+   </entry>
+   <entry>
+      <key>string-value</key>
+      <value>
+         <string>hello world</string>
+      </value>
+   </entry>
+</properties><properties>
+   <entry>
+      <key>int-value</key>
+      <value>
+         <int>42</int>
+      </value>
+   </entry>
+   <entry>
+      <key>boolean-value</key>
+      <value>
+         <boolean>true</boolean>
+      </value>
+   </entry>
+   <entry>
+      <key>string-value</key>
+      <value>
+         <string>hello world</string>
+      </value>
+   </entry>
+</properties>
+<properties ID="0">
+   <entry>
+      <key ID="1">int-value</key>
+      <value ID="2">
+         <int ID="3">42</int>
+      </value>
+   </entry>
+   <entry>
+      <key ID="4">boolean-value</key>
+      <value ID="5">
+         <boolean ID="6">true</boolean>
+      </value>
+   </entry>
+   <entry>
+      <key ID="7">string-value</key>
+      <value ID="8">
+         <string ID="9">hello world</string>
+      </value>
+   </entry>
+</properties><Properties ID="0">
+   <Entry>
+      <Key ID="1">int-value</Key>
+      <Value ID="2">
+         <Int ID="3">42</Int>
+      </Value>
+   </Entry>
+   <Entry>
+      <Key ID="4">boolean-value</Key>
+      <Value ID="5">
+         <Boolean ID="6">true</Boolean>
+      </Value>
+   </Entry>
+   <Entry>
+      <Key ID="7">string-value</Key>
+      <Value ID="8">
+         <String ID="9">hello world</String>
+      </Value>
+   </Entry>
+</Properties>------------- ---------------- ---------------
+
+Testcase: testProperties took 0.227 sec
+Testcase: testDirectory took 0 sec

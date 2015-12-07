@@ -1,0 +1,124 @@
+Testsuite: org.simpleframework.xml.core.InlineMapTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.288 sec
+------------- Standard Output ---------------
+<primitiveInlineMap>
+   <entity>
+      <string>a</string>
+      <bigDecimal>1.100000000000000088817841970012523233890533447265625</bigDecimal>
+   </entity>
+   <entity>
+      <string>b</string>
+      <bigDecimal>2.20000000000000017763568394002504646778106689453125</bigDecimal>
+   </entity>
+</primitiveInlineMap><primitiveInlineMap>
+   <entity>
+      <string>a</string>
+      <bigDecimal>1.100000000000000088817841970012523233890533447265625</bigDecimal>
+   </entity>
+   <entity>
+      <string>b</string>
+      <bigDecimal>2.20000000000000017763568394002504646778106689453125</bigDecimal>
+   </entity>
+</primitiveInlineMap>
+<primitive-inline-map ID="0">
+   <entity>
+      <!-- java.lang.String -->
+      <string ID="1">a</string>
+      <!-- java.math.BigDecimal -->
+      <big-decimal ID="2">1.100000000000000088817841970012523233890533447265625</big-decimal>
+   </entity>
+   <entity>
+      <!-- java.lang.String -->
+      <string ID="3">b</string>
+      <!-- java.math.BigDecimal -->
+      <big-decimal ID="4">2.20000000000000017763568394002504646778106689453125</big-decimal>
+   </entity>
+</primitive-inline-map>>>>>> ELEMENT=[element primitive-inline-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveInlineMap ID="0">
+   <Entity>
+      <!-- java.lang.String -->
+      <String ID="1">a</String>
+      <!-- java.math.BigDecimal -->
+      <bigDecimal ID="2">1.100000000000000088817841970012523233890533447265625</bigDecimal>
+   </Entity>
+   <Entity>
+      <!-- java.lang.String -->
+      <String ID="3">b</String>
+      <!-- java.math.BigDecimal -->
+      <bigDecimal ID="4">2.20000000000000017763568394002504646778106689453125</bigDecimal>
+   </Entity>
+</PrimitiveInlineMap>>>>>> ELEMENT=[element PrimitiveInlineMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveInlineAttributeMap>
+   <entity string="d"/>
+   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity string="c">2.20000000000000017763568394002504646778106689453125</entity>
+   <entity string="b"/>
+</primitiveInlineAttributeMap><primitiveInlineAttributeMap>
+   <entity string="d"/>
+   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity string="c">2.20000000000000017763568394002504646778106689453125</entity>
+   <entity string="b"/>
+</primitiveInlineAttributeMap>
+<primitive-inline-attribute-map ID="0">
+   <entity string="d"/>
+   <!-- java.math.BigDecimal -->
+   <entity string="a" ID="1">1.100000000000000088817841970012523233890533447265625</entity>
+   <!-- java.math.BigDecimal -->
+   <entity string="c" ID="2">2.20000000000000017763568394002504646778106689453125</entity>
+   <entity string="b"/>
+</primitive-inline-attribute-map>>>>>> ELEMENT=[element primitive-inline-attribute-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveInlineAttributeMap ID="0">
+   <Entity string="d"/>
+   <!-- java.math.BigDecimal -->
+   <Entity string="a" ID="1">1.100000000000000088817841970012523233890533447265625</Entity>
+   <!-- java.math.BigDecimal -->
+   <Entity string="c" ID="2">2.20000000000000017763568394002504646778106689453125</Entity>
+   <Entity string="b"/>
+</PrimitiveInlineAttributeMap>>>>>> ELEMENT=[element PrimitiveInlineAttributeMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<primitiveInlineAttributeValueMap>
+   <entity string="d"/>
+   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity>3.29999999999999982236431605997495353221893310546875</entity>
+   <entity string="b">2.20000000000000017763568394002504646778106689453125</entity>
+</primitiveInlineAttributeValueMap><primitiveInlineAttributeValueMap>
+   <entity string="d"/>
+   <entity string="a">1.100000000000000088817841970012523233890533447265625</entity>
+   <entity>3.29999999999999982236431605997495353221893310546875</entity>
+   <entity string="b">2.20000000000000017763568394002504646778106689453125</entity>
+</primitiveInlineAttributeValueMap>
+<primitive-inline-attribute-value-map ID="0">
+   <entity string="d"/>
+   <!-- java.math.BigDecimal -->
+   <entity string="a" ID="1">1.100000000000000088817841970012523233890533447265625</entity>
+   <!-- java.math.BigDecimal -->
+   <entity ID="2">3.29999999999999982236431605997495353221893310546875</entity>
+   <!-- java.math.BigDecimal -->
+   <entity string="b" ID="3">2.20000000000000017763568394002504646778106689453125</entity>
+</primitive-inline-attribute-value-map>>>>>> ELEMENT=[element primitive-inline-attribute-value-map]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeValueMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<PrimitiveInlineAttributeValueMap ID="0">
+   <Entity string="d"/>
+   <!-- java.math.BigDecimal -->
+   <Entity string="a" ID="1">1.100000000000000088817841970012523233890533447265625</Entity>
+   <!-- java.math.BigDecimal -->
+   <Entity ID="2">3.29999999999999982236431605997495353221893310546875</Entity>
+   <!-- java.math.BigDecimal -->
+   <Entity string="b" ID="3">2.20000000000000017763568394002504646778106689453125</Entity>
+</PrimitiveInlineAttributeValueMap>>>>>> ELEMENT=[element PrimitiveInlineAttributeValueMap]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineMapTest$PrimitiveInlineAttributeValueMap]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
+
+Testcase: testPrimitiveMap took 0.212 sec
+Testcase: testPrimitiveAttributeMap took 0.041 sec
+Testcase: testPrimitiveAttributeValueMap took 0.027 sec
+Testcase: testDirectory took 0.001 sec

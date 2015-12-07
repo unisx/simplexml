@@ -1,0 +1,5 @@
+Testsuite: org.simpleframework.xml.convert.HackJobToGrabFloatingTextTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.29 sec
+
+Testcase: testHackJob took 0.278 sec
+Testcase: testDirectory took 0.001 sec

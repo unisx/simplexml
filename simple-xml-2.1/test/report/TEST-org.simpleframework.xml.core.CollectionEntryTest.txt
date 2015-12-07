@@ -1,0 +1,150 @@
+Testsuite: org.simpleframework.xml.core.CollectionEntryTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.288 sec
+------------- Standard Output ---------------
+<exampleCollection>
+   <list class="java.util.ArrayList">
+      <substitute id="1">
+         <text>one</text>
+      </substitute>
+      <substitute id="2">
+         <text>two</text>
+      </substitute>
+      <substitute id="3">
+         <text>three</text>
+      </substitute>
+   </list>
+</exampleCollection><exampleCollection>
+   <list class="java.util.ArrayList">
+      <substitute id="1">
+         <text>one</text>
+      </substitute>
+      <substitute id="2">
+         <text>two</text>
+      </substitute>
+      <substitute id="3">
+         <text>three</text>
+      </substitute>
+   </list>
+</exampleCollection>
+<example-collection ID="0">
+   <list class="java.util.ArrayList" ID="1">
+      <substitute ID="2" id="1">
+         <text ID="3">one</text>
+      </substitute>
+      <substitute ID="4" id="2">
+         <text ID="5">two</text>
+      </substitute>
+      <substitute ID="6" id="3">
+         <text ID="7">three</text>
+      </substitute>
+   </list>
+</example-collection><ExampleCollection ID="0">
+   <List class="java.util.ArrayList" ID="1">
+      <Substitute ID="2" id="1">
+         <Text ID="3">one</Text>
+      </Substitute>
+      <Substitute ID="4" id="2">
+         <Text ID="5">two</Text>
+      </Substitute>
+      <Substitute ID="6" id="3">
+         <Text ID="7">three</Text>
+      </Substitute>
+   </List>
+</ExampleCollection><exampleInlineCollection>
+   <substitute id="1">
+      <text>one</text>
+   </substitute>
+   <substitute id="2">
+      <text>two</text>
+   </substitute>
+   <substitute id="3">
+      <text>three</text>
+   </substitute>
+</exampleInlineCollection><exampleInlineCollection>
+   <substitute id="1">
+      <text>one</text>
+   </substitute>
+   <substitute id="2">
+      <text>two</text>
+   </substitute>
+   <substitute id="3">
+      <text>three</text>
+   </substitute>
+</exampleInlineCollection>
+<example-inline-collection ID="0">
+   <substitute ID="1" id="1">
+      <text ID="2">one</text>
+   </substitute>
+   <substitute ID="3" id="2">
+      <text ID="4">two</text>
+   </substitute>
+   <substitute ID="5" id="3">
+      <text ID="6">three</text>
+   </substitute>
+</example-inline-collection><ExampleInlineCollection ID="0">
+   <Substitute ID="1" id="1">
+      <Text ID="2">one</Text>
+   </Substitute>
+   <Substitute ID="3" id="2">
+      <Text ID="4">two</Text>
+   </Substitute>
+   <Substitute ID="5" id="3">
+      <Text ID="6">three</Text>
+   </Substitute>
+</ExampleInlineCollection><examplePrimitiveInlineCollection>
+   <substitute>a</substitute>
+   <substitute>b</substitute>
+   <substitute>c</substitute>
+   <substitute>d</substitute>
+</examplePrimitiveInlineCollection><examplePrimitiveInlineCollection>
+   <substitute>a</substitute>
+   <substitute>b</substitute>
+   <substitute>c</substitute>
+   <substitute>d</substitute>
+</examplePrimitiveInlineCollection>
+<example-primitive-inline-collection ID="0">
+   <substitute ID="1">a</substitute>
+   <substitute ID="2">b</substitute>
+   <substitute ID="3">c</substitute>
+   <substitute ID="4">d</substitute>
+</example-primitive-inline-collection><ExamplePrimitiveInlineCollection ID="0">
+   <Substitute ID="1">a</Substitute>
+   <Substitute ID="2">b</Substitute>
+   <Substitute ID="3">c</Substitute>
+   <Substitute ID="4">d</Substitute>
+</ExamplePrimitiveInlineCollection><examplePrimitiveCollection>
+   <list class="java.util.ArrayList">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute>c</substitute>
+      <substitute>d</substitute>
+   </list>
+</examplePrimitiveCollection><examplePrimitiveCollection>
+   <list class="java.util.ArrayList">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute>c</substitute>
+      <substitute>d</substitute>
+   </list>
+</examplePrimitiveCollection>
+<example-primitive-collection ID="0">
+   <list class="java.util.ArrayList" ID="1">
+      <substitute ID="2">a</substitute>
+      <substitute ID="3">b</substitute>
+      <substitute ID="4">c</substitute>
+      <substitute ID="5">d</substitute>
+   </list>
+</example-primitive-collection><ExamplePrimitiveCollection ID="0">
+   <List class="java.util.ArrayList" ID="1">
+      <Substitute ID="2">a</Substitute>
+      <Substitute ID="3">b</Substitute>
+      <Substitute ID="4">c</Substitute>
+      <Substitute ID="5">d</Substitute>
+   </List>
+</ExamplePrimitiveCollection>------------- ---------------- ---------------
+
+Testcase: testExampleCollection took 0.212 sec
+Testcase: testExampleInlineCollection took 0.027 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.021 sec
+Testcase: testExamplePrimitiveCollection took 0.019 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,14 @@
+Testsuite: org.simpleframework.xml.load.OverrideTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.796 sec
+------------- Standard Output ---------------
+<root name="change">
+   <list class="java.util.ArrayList">
+      <entry id="1234">
+         <text>replacement</text>
+      </entry>
+   </list>
+</root>------------- ---------------- ---------------
+
+Testcase: testComposite took 0.64 sec
+Testcase: testList took 0.032 sec
+Testcase: testCopy took 0.093 sec

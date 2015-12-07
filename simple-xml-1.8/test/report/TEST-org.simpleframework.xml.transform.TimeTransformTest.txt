@@ -1,0 +1,38 @@
+Testsuite: org.simpleframework.xml.transform.TimeTransformTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
+------------- Standard Output ---------------
+<timeExample attribute="2008-11-29 20:12:00.756 GMT">
+   <element class="java.sql.Time">2008-11-29 20:12:00.756 GMT</element>
+   <time>2008-11-29 20:12:00.756 GMT</time>
+   <list class="java.util.ArrayList">
+      <time>2008-11-29 20:12:00.756 GMT</time>
+      <time>2008-11-29 20:12:00.756 GMT</time>
+   </list>
+   <array length="1">
+      <time>2008-11-29 20:12:00.756 GMT</time>
+   </array>
+</timeExample><time-example id="0" attribute="2008-11-29 20:12:00.756 GMT">
+   <element class="java.sql.Time" id="1">2008-11-29 20:12:00.756 GMT</element>
+   <time id="2">2008-11-29 20:12:00.756 GMT</time>
+   <list class="java.util.ArrayList" id="3">
+      <time id="4">2008-11-29 20:12:00.756 GMT</time>
+      <time id="5">2008-11-29 20:12:00.756 GMT</time>
+   </list>
+   <array length="1" id="6">
+      <time id="7">2008-11-29 20:12:00.756 GMT</time>
+   </array>
+</time-example><TimeExample id="0" attribute="2008-11-29 20:12:00.756 GMT">
+   <Element class="java.sql.Time" id="1">2008-11-29 20:12:00.756 GMT</Element>
+   <Time id="2">2008-11-29 20:12:00.756 GMT</Time>
+   <List class="java.util.ArrayList" id="3">
+      <Time id="4">2008-11-29 20:12:00.756 GMT</Time>
+      <Time id="5">2008-11-29 20:12:00.756 GMT</Time>
+   </List>
+   <Array length="1" id="6">
+      <Time id="7">2008-11-29 20:12:00.756 GMT</Time>
+   </Array>
+</TimeExample>------------- ---------------- ---------------
+
+Testcase: testTime took 0.019 sec
+Testcase: testPersistence took 0.199 sec
+Testcase: testDirectory took 0.001 sec

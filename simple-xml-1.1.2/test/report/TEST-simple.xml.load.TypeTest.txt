@@ -1,0 +1,48 @@
+Testsuite: simple.xml.load.TypeTest
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
+------------- Standard Output ---------------
+<test>
+   <object>
+      <Double>1234567.89</Double>
+      <Byte>16</Byte>
+      <String>text value</String>
+      <Integer>1234</Integer>
+      <Short>120</Short>
+      <Float>1234.56</Float>
+      <Enum>TWO</Enum>
+      <Boolean>true</Boolean>
+      <Long>1234567</Long>
+   </object>
+   <primitive>
+      <double>1234567.89</double>
+      <byte>16</byte>
+      <short>120</short>
+      <float>1234.56</float>
+      <int>1234</int>
+      <boolean>true</boolean>
+      <long>1234567</long>
+   </primitive>
+</test><test>
+   <object>
+      <Double>1234567.89</Double>
+      <Byte>16</Byte>
+      <String>text value</String>
+      <Integer>1234</Integer>
+      <Short>120</Short>
+      <Float>1234.56</Float>
+      <Enum>TWO</Enum>
+      <Boolean>true</Boolean>
+      <Long>1234567</Long>
+   </object>
+   <primitive>
+      <double>1234567.89</double>
+      <byte>16</byte>
+      <short>120</short>
+      <float>1234.56</float>
+      <int>1234</int>
+      <boolean>true</boolean>
+      <long>1234567</long>
+   </primitive>
+</test>------------- ---------------- ---------------
+
+Testcase: testPrimitive took 0.179 sec

@@ -1,0 +1,154 @@
+Testsuite: org.simpleframework.xml.strategy.ListCycleTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.563 sec
+------------- Standard Output ---------------
+<root id="0">
+   <one class="java.util.ArrayList" id="1">
+      <text id="2" value="entry one"/>
+      <text id="3" value="entry two"/>
+      <text id="4" value="entry three"/>
+      <text id="5" value="entry four"/>
+      <text id="6" value="entry five"/>
+   </one>
+   <two class="java.util.ArrayList" ref="1"/>
+   <three class="java.util.ArrayList" id="7">
+      <text id="8" value="tom"/>
+      <text id="9" value="dick"/>
+      <text id="10" value="harry"/>
+   </three>
+   <example ref="0"/>
+</root><root id="0">
+   <one class="java.util.ArrayList" id="1">
+      <text id="2" value="entry one"/>
+      <text id="3" value="entry two"/>
+      <text id="4" value="entry three"/>
+      <text id="5" value="entry four"/>
+      <text id="6" value="entry five"/>
+   </one>
+   <two class="java.util.ArrayList" ref="1"/>
+   <three class="java.util.ArrayList" id="7">
+      <text id="8" value="tom"/>
+      <text id="9" value="dick"/>
+      <text id="10" value="harry"/>
+   </three>
+   <example ref="0"/>
+</root>
+<root ID="0">
+   <one class="java.util.ArrayList" ID="1">
+      <text ID="2" value="entry one"/>
+      <text ID="3" value="entry two"/>
+      <text ID="4" value="entry three"/>
+      <text ID="5" value="entry four"/>
+      <text ID="6" value="entry five"/>
+   </one>
+   <two class="java.util.ArrayList" REFERER="1"/>
+   <three class="java.util.ArrayList" ID="7">
+      <text ID="8" value="tom"/>
+      <text ID="9" value="dick"/>
+      <text ID="10" value="harry"/>
+   </three>
+   <example REFERER="0"/>
+</root><Root ID="0">
+   <One class="java.util.ArrayList" ID="1">
+      <Text ID="2" value="entry one"/>
+      <Text ID="3" value="entry two"/>
+      <Text ID="4" value="entry three"/>
+      <Text ID="5" value="entry four"/>
+      <Text ID="6" value="entry five"/>
+   </One>
+   <Two class="java.util.ArrayList" REFERER="1"/>
+   <Three class="java.util.ArrayList" ID="7">
+      <Text ID="8" value="tom"/>
+      <Text ID="9" value="dick"/>
+      <Text ID="10" value="harry"/>
+   </Three>
+   <Example REFERER="0"/>
+</Root><inlineListExample id="0">
+   <text id="1" value="entry one"/>
+   <text id="2" value="entry two"/>
+   <text id="3" value="entry three"/>
+   <text id="4" value="entry four"/>
+   <text id="5" value="entry five"/>
+   <example ref="0"/>
+</inlineListExample><inlineListExample id="0">
+   <text id="1" value="entry one"/>
+   <text id="2" value="entry two"/>
+   <text id="3" value="entry three"/>
+   <text id="4" value="entry four"/>
+   <text id="5" value="entry five"/>
+   <example ref="0"/>
+</inlineListExample>
+<inline-list-example ID="0">
+   <text ID="1" value="entry one"/>
+   <text ID="2" value="entry two"/>
+   <text ID="3" value="entry three"/>
+   <text ID="4" value="entry four"/>
+   <text ID="5" value="entry five"/>
+   <example REFERER="0"/>
+</inline-list-example><InlineListExample ID="0">
+   <Text ID="1" value="entry one"/>
+   <Text ID="2" value="entry two"/>
+   <Text ID="3" value="entry three"/>
+   <Text ID="4" value="entry four"/>
+   <Text ID="5" value="entry five"/>
+   <Example REFERER="0"/>
+</InlineListExample><inlinePrimitiveListExample id="0">
+   <string id="1"><![CDATA[entry one]]></string>
+   <string id="2"><![CDATA[entry two]]></string>
+   <string id="3"><![CDATA[entry three]]></string>
+   <string id="4"><![CDATA[entry four]]></string>
+   <string id="5"><![CDATA[entry five]]></string>
+   <example ref="0"/>
+</inlinePrimitiveListExample><inlinePrimitiveListExample id="0">
+   <string id="1"><![CDATA[entry one]]></string>
+   <string id="2"><![CDATA[entry two]]></string>
+   <string id="3"><![CDATA[entry three]]></string>
+   <string id="4"><![CDATA[entry four]]></string>
+   <string id="5"><![CDATA[entry five]]></string>
+   <example ref="0"/>
+</inlinePrimitiveListExample>
+<inline-primitive-list-example ID="0">
+   <string ID="1"><![CDATA[entry one]]></string>
+   <string ID="2"><![CDATA[entry two]]></string>
+   <string ID="3"><![CDATA[entry three]]></string>
+   <string ID="4"><![CDATA[entry four]]></string>
+   <string ID="5"><![CDATA[entry five]]></string>
+   <example REFERER="0"/>
+</inline-primitive-list-example><InlinePrimitiveListExample ID="0">
+   <String ID="1"><![CDATA[entry one]]></String>
+   <String ID="2"><![CDATA[entry two]]></String>
+   <String ID="3"><![CDATA[entry three]]></String>
+   <String ID="4"><![CDATA[entry four]]></String>
+   <String ID="5"><![CDATA[entry five]]></String>
+   <Example REFERER="0"/>
+</InlinePrimitiveListExample><root id="0">
+   <list class="java.util.ArrayList" id="1">
+      <value id="2">
+         <list class="java.util.ArrayList" ref="1"/>
+      </value>
+   </list>
+</root><root id="0">
+   <list class="java.util.ArrayList" id="1">
+      <value id="2">
+         <list class="java.util.ArrayList" ref="1"/>
+      </value>
+   </list>
+</root>
+<root ID="0">
+   <list class="java.util.ArrayList" ID="1">
+      <value ID="2">
+         <list class="java.util.ArrayList" REFERER="1"/>
+      </value>
+   </list>
+</root><Root ID="0">
+   <List class="java.util.ArrayList" ID="1">
+      <Value ID="2">
+         <List class="java.util.ArrayList" REFERER="1"/>
+      </Value>
+   </List>
+</Root>------------- ---------------- ---------------
+
+Testcase: testCycle took 0.266 sec
+Testcase: testInlineList took 0.032 sec
+Testcase: testInlinePrimitiveList took 0.047 sec
+Testcase: testNestedExample took 1.203 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,16 @@
+Testsuite: simple.xml.load.OverrideTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.713 sec
+------------- Standard Output ---------------
+<?xml version="1.0" encoding="UTF-8"?>
+<root name="change">
+<list class="java.util.ArrayList">
+<entry id="1234">
+<text>replacement</text>
+</entry>
+</list>
+</root>
+------------- ---------------- ---------------
+
+Testcase: testCopy took 0.675 sec
+Testcase: testList took 0.003 sec
+Testcase: testComposite took 0.001 sec

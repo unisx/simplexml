@@ -1,0 +1,56 @@
+Testsuite: org.simpleframework.xml.util.DictionaryTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
+------------- Standard Output ---------------
+<test name="example">
+   <list>
+      <property name="3">
+         <text>three</text>
+      </property>
+      <property name="2">
+         <text>two</text>
+      </property>
+      <property name="1">
+         <text>one</text>
+      </property>
+   </list>
+</test><test name="example">
+   <list>
+      <property name="3">
+         <text>three</text>
+      </property>
+      <property name="2">
+         <text>two</text>
+      </property>
+      <property name="1">
+         <text>one</text>
+      </property>
+   </list>
+</test>
+<test ID="0" name="example">
+   <list ID="1">
+      <property ID="2" name="3">
+         <text ID="3">three</text>
+      </property>
+      <property ID="4" name="2">
+         <text ID="5">two</text>
+      </property>
+      <property ID="6" name="1">
+         <text ID="7">one</text>
+      </property>
+   </list>
+</test><Test ID="0" name="example">
+   <List ID="1">
+      <Property ID="2" name="3">
+         <Text ID="3">three</Text>
+      </Property>
+      <Property ID="4" name="2">
+         <Text ID="5">two</Text>
+      </Property>
+      <Property ID="6" name="1">
+         <Text ID="7">one</Text>
+      </Property>
+   </List>
+</Test>------------- ---------------- ---------------
+
+Testcase: testDictionary took 0.25 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,107 @@
+Testsuite: org.simpleframework.xml.transform.DateTransformTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.517 sec
+------------- Standard Output ---------------
+<dateExample attribute="2010-02-24 18:44:26.0 GMT">
+   <array length="1">
+      <date>2010-02-24 18:44:26.0 GMT</date>
+   </array>
+   <element>2010-02-24 18:44:26.0 GMT</element>
+   <list class="java.util.ArrayList">
+      <date>2010-02-24 18:44:26.0 GMT</date>
+      <date>2010-02-24 18:44:26.0 GMT</date>
+   </list>
+</dateExample><dateExample attribute="2010-02-24 18:44:26.0 GMT">
+   <array length="1">
+      <date>2010-02-24 18:44:26.0 GMT</date>
+   </array>
+   <element>2010-02-24 18:44:26.0 GMT</element>
+   <list class="java.util.ArrayList">
+      <date>2010-02-24 18:44:26.0 GMT</date>
+      <date>2010-02-24 18:44:26.0 GMT</date>
+   </list>
+</dateExample>
+<date-example ID="0" attribute="2010-02-24 18:44:26.0 GMT">
+   <!-- [Ljava.util.Date; -->
+   <array length="1" ID="1">
+      <!-- java.util.Date -->
+      <date ID="2">2010-02-24 18:44:26.0 GMT</date>
+   </array>
+   <!-- java.util.Date -->
+   <element ID="3">2010-02-24 18:44:26.0 GMT</element>
+   <!-- java.util.List -->
+   <list class="java.util.ArrayList" ID="4">
+      <!-- java.util.Date -->
+      <date ID="5">2010-02-24 18:44:26.0 GMT</date>
+      <!-- java.util.Date -->
+      <date ID="6">2010-02-24 18:44:26.0 GMT</date>
+   </list>
+</date-example><DateExample ID="0" attribute="2010-02-24 18:44:26.0 GMT">
+   <!-- [Ljava.util.Date; -->
+   <Array length="1" ID="1">
+      <!-- java.util.Date -->
+      <Date ID="2">2010-02-24 18:44:26.0 GMT</Date>
+   </Array>
+   <!-- java.util.Date -->
+   <Element ID="3">2010-02-24 18:44:26.0 GMT</Element>
+   <!-- java.util.List -->
+   <List class="java.util.ArrayList" ID="4">
+      <!-- java.util.Date -->
+      <Date ID="5">2010-02-24 18:44:26.0 GMT</Date>
+      <!-- java.util.Date -->
+      <Date ID="6">2010-02-24 18:44:26.0 GMT</Date>
+   </List>
+</DateExample><dateExample id="0" attribute="2010-02-24 18:44:26.242 GMT">
+   <array length="1" id="1">
+      <date id="2">2010-02-24 18:44:26.242 GMT</date>
+   </array>
+   <element reference="2"/>
+   <list class="java.util.ArrayList" id="3">
+      <date reference="2"/>
+      <date reference="2"/>
+   </list>
+</dateExample><dateExample id="0" attribute="2010-02-24 18:44:26.242 GMT">
+   <array length="1" id="1">
+      <date id="2">2010-02-24 18:44:26.242 GMT</date>
+   </array>
+   <element reference="2"/>
+   <list class="java.util.ArrayList" id="3">
+      <date reference="2"/>
+      <date reference="2"/>
+   </list>
+</dateExample>
+<date-example ID="0" attribute="2010-02-24 18:44:26.242 GMT">
+   <!-- [Ljava.util.Date; -->
+   <array length="1" ID="1">
+      <!-- java.util.Date -->
+      <date ID="2">2010-02-24 18:44:26.242 GMT</date>
+   </array>
+   <!-- java.util.Date -->
+   <element REFERER="2"/>
+   <!-- java.util.List -->
+   <list class="java.util.ArrayList" ID="3">
+      <!-- java.util.Date -->
+      <date REFERER="2"/>
+      <!-- java.util.Date -->
+      <date REFERER="2"/>
+   </list>
+</date-example><DateExample ID="0" attribute="2010-02-24 18:44:26.242 GMT">
+   <!-- [Ljava.util.Date; -->
+   <Array length="1" ID="1">
+      <!-- java.util.Date -->
+      <Date ID="2">2010-02-24 18:44:26.242 GMT</Date>
+   </Array>
+   <!-- java.util.Date -->
+   <Element REFERER="2"/>
+   <!-- java.util.List -->
+   <List class="java.util.ArrayList" ID="3">
+      <!-- java.util.Date -->
+      <Date REFERER="2"/>
+      <!-- java.util.Date -->
+      <Date REFERER="2"/>
+   </List>
+</DateExample>------------- ---------------- ---------------
+
+Testcase: testDate took 0.016 sec
+Testcase: testPersistence took 0.243 sec
+Testcase: testCyclicPersistence took 0.253 sec
+Testcase: testDirectory took 0 sec

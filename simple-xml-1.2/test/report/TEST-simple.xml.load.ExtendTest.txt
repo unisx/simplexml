@@ -1,0 +1,7 @@
+Testsuite: simple.xml.load.ExtendTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.292 sec
+
+Testcase: testFirst took 0.274 sec
+Testcase: testSecond took 0.004 sec
+Testcase: testThird took 0.005 sec
+Testcase: testFailure took 0.008 sec

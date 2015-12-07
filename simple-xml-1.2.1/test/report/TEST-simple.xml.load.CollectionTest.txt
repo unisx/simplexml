@@ -1,0 +1,110 @@
+Testsuite: simple.xml.load.CollectionTest
+Tests run: 15, Failures: 0, Errors: 0, Time elapsed: 0.375 sec
+------------- Standard Output ---------------
+<test name="example">
+   <list class="java.util.TreeSet">
+      <entry id="1">
+         <text>one</text>
+      </entry>
+      <entry id="2">
+         <text>two</text>
+      </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.ArrayList">
+      <entry id="1">
+         <text>one</text>
+      </entry>
+      <entry id="2">
+         <text>two</text>
+      </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.HashSet">
+      <entry id="1">
+         <text>one</text>
+      </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+      <entry id="2">
+         <text>two</text>
+      </entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.TreeSet">
+      <entry id="1">
+         <text>one</text>
+      </entry>
+      <entry id="2">
+         <text>two</text>
+      </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.ArrayList">
+      <entry id="1">
+         <text>one</text>
+      </entry>
+      <entry id="2">
+         <text>two</text>
+      </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+   </list>
+</test>------------- ---------------- ---------------
+------------- Standard Error -----------------
+<test name="example">
+   <list class="java.util.HashSet">
+      <extended-entry class="simple.xml.load.CollectionTest$ExtendedEntry" id="2">
+         <description>this is the second one</description>
+         <text>two</text>
+      </extended-entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+      <extended-entry class="simple.xml.load.CollectionTest$ExtendedEntry" id="1">
+         <description>this is an extended entry</description>
+         <text>one</text>
+      </extended-entry>
+   </list>
+</test><test name="example">
+   <list class="java.util.HashSet">
+      <extended-entry class="simple.xml.load.CollectionTest$ExtendedEntry" id="1">
+         <description>this is an extended entry</description>
+         <text>one</text>
+      </extended-entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
+      <extended-entry class="simple.xml.load.CollectionTest$ExtendedEntry" id="2">
+         <description>this is the second one</description>
+         <text>two</text>
+      </extended-entry>
+   </list>
+</test>------------- ---------------- ---------------
+
+Testcase: testSet took 0.125 sec
+Testcase: testSortedSet took 0.094 sec
+Testcase: testList took 0.016 sec
+Testcase: testHashSet took 0.031 sec
+Testcase: testTreeSet took 0.016 sec
+Testcase: testArrayList took 0.016 sec
+Testcase: testSortedSetToSet took 0 sec
+Testcase: testExtendedEntry took 0.031 sec
+Testcase: testSetToSortedSet took 0 sec
+Testcase: testListToSet took 0 sec
+Testcase: testInvalidList took 0 sec
+Testcase: testUnknownCollectionList took 0 sec
+Testcase: testAbstractList took 0 sec
+Testcase: testNotACollection took 0 sec
+Testcase: testMissingCollection took 0 sec

@@ -1,0 +1,14 @@
+Testsuite: org.simpleframework.xml.core.CallbackTest
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.37 sec
+------------- Standard Output ---------------
+<root number="9999" flag="false">
+   <value>default</value>
+</root><root number="9999" flag="false">
+   <value>default</value>
+</root>------------- ---------------- ---------------
+
+Testcase: testReadCallbacks took 0.287 sec
+Testcase: testWriteCallbacks took 0.044 sec
+Testcase: testExtendedReadCallbacks took 0.006 sec
+Testcase: testExtendedWriteCallbacks took 0.008 sec
+Testcase: testOverrideReadCallbacks took 0.003 sec

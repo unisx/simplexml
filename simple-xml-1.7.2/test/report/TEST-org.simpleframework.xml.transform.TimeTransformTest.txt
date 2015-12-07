@@ -1,0 +1,18 @@
+Testsuite: org.simpleframework.xml.transform.TimeTransformTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
+------------- Standard Output ---------------
+<timeExample attribute="2008-03-06 18:39:11.484 GMT">
+   <element class="java.sql.Time">2008-03-06 18:39:11.484 GMT</element>
+   <time>2008-03-06 18:39:11.484 GMT</time>
+   <list class="java.util.ArrayList">
+      <time>2008-03-06 18:39:11.484 GMT</time>
+      <time>2008-03-06 18:39:11.484 GMT</time>
+   </list>
+   <array length="1">
+      <time>2008-03-06 18:39:11.484 GMT</time>
+   </array>
+</timeExample>------------- ---------------- ---------------
+
+Testcase: testTime took 0.031 sec
+Testcase: testPersistence took 0.484 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,24 @@
+Testsuite: org.simpleframework.xml.core.NonFinalConstructorInjectionTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.224 sec
+------------- Standard Output ---------------
+<nonFinalExample>
+   <name>A</name>
+   <value>a</value>
+</nonFinalExample><nonFinalExample>
+   <name>A</name>
+   <value>a</value>
+</nonFinalExample>
+<!-- org.simpleframework.xml.core.NonFinalConstructorInjectionTest$NonFinalExample --><non-final-example ID="0">
+   <!-- java.lang.String -->
+   <name ID="1">A</name>
+   <!-- java.lang.String -->
+   <value ID="2">a</value>
+</non-final-example><!-- org.simpleframework.xml.core.NonFinalConstructorInjectionTest$NonFinalExample --><NonFinalExample ID="0">
+   <!-- java.lang.String -->
+   <Name ID="1">A</Name>
+   <!-- java.lang.String -->
+   <Value ID="2">a</Value>
+</NonFinalExample>------------- ---------------- ---------------
+
+Testcase: testNonFinal took 0.218 sec
+Testcase: testDirectory took 0 sec

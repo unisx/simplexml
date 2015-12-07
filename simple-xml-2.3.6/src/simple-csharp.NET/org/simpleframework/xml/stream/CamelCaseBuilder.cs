@@ -1,0 +1,244 @@
+/*
+* CamelCaseBuilder.java July 2008
+*
+* Copyright (C) 2008, Niall Gallagher <niallg@users.sf.net>
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+* implied. See the License for the specific language governing 
+* permissions and limitations under the License.
+*/
+using System;
+namespace org.simpleframework.xml.stream
+{
+	
+	/// <summary> The <code>CamelCaseBuilder</code> is used to represent an XML style
+	/// that can be applied to a serialized object. A style can be used to
+	/// modify the element and attribute names for the generated document.
+	/// This styles can be used to generate camel case XML.
+	/// <pre>
+	/// 
+	/// &lt;ExampleElement&gt;
+	/// &lt;ChildElement exampleAttribute='example'&gt;
+	/// &lt;InnerElement&gt;example&lt;/InnerElement&gt;
+	/// &lt;/ChildElement&gt;
+	/// &lt;/ExampleElement&gt;
+	/// 
+	/// </pre>
+	/// Above the camel case XML elements and attributes can be generated
+	/// from a style implementation. Styles enable the same objects to be
+	/// serialized in different ways, generating different styles of XML
+	/// without having to modify the class schema for that object.    
+	/// 
+	/// </summary>
+	/// <author>  Niall Gallagher
+	/// </author>
+	class CamelCaseBuilder : Style
+	{
+		
+		/// <summary> If true then the attribute will start with upper case.</summary>
+		//UPGRADE_NOTE: Final was removed from the declaration of 'attribute '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
+		private bool attribute;
+		
+		/// <summary> If true then the element will start with upper case.</summary>
+		//UPGRADE_NOTE: Final was removed from the declaration of 'element '. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1003'"
+		private bool element;
+		
+		/// <summary> Constructor for the <code>CamelCaseBuilder</code> object. This 
+		/// is used to create a style that will create camel case XML 
+		/// attributes and elements allowing a consistent format for 
+		/// generated XML. Both the attribute an elements are configurable.
+		/// 
+		/// </summary>
+		/// <param name="element">if true the element will start as upper case
+		/// </param>
+		/// <param name="attribute">if true the attribute starts as upper case
+		/// </param>
+		public CamelCaseBuilder(bool element, bool attribute)
+		{
+			this.attribute = attribute;
+			this.element = element;
+		}
+		
+		/// <summary> This is used to generate the XML attribute representation of 
+		/// the specified name. Attribute names should ensure to keep the
+		/// uniqueness of the name such that two different names will
+		/// be styled in to two different strings.
+		/// 
+		/// </summary>
+		/// <param name="name">this is the attribute name that is to be styled
+		/// 
+		/// </param>
+		/// <returns> this returns the styled name of the XML attribute
+		/// </returns>
+		public virtual System.String getAttribute(System.String name)
+		{
+			if (name != null)
+			{
+				return new Attribute(this, name).process();
+			}
+			return null;
+		}
+		
+		/// <summary> This is used to generate the XML element representation of 
+		/// the specified name. Element names should ensure to keep the
+		/// uniqueness of the name such that two different names will
+		/// be styled in to two different strings.
+		/// 
+		/// </summary>
+		/// <param name="name">this is the element name that is to be styled
+		/// 
+		/// </param>
+		/// <returns> this returns the styled name of the XML element
+		/// </returns>
+		public virtual System.String getElement(System.String name)
+		{
+			if (name != null)
+			{
+				return new Element(this, name).process();
+			}
+			return null;
+		}
+		
+		//UPGRADE_NOTE: Field 'EnclosingInstance' was added to class 'Attribute' to access its enclosing instance. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1019'"
+		/// <summary> This is used to parse the style for this builder. This takes 
+		/// all of the words split from the original string and builds all
+		/// of the processed tokens for the styles elements and attributes.
+		/// 
+		/// </summary>
+		/// <author>  Niall Gallagher
+		/// </author>
+		private class Attribute:Splitter
+		{
+			private void  InitBlock(CamelCaseBuilder enclosingInstance)
+			{
+				this.enclosingInstance = enclosingInstance;
+			}
+			private CamelCaseBuilder enclosingInstance;
+			public CamelCaseBuilder Enclosing_Instance
+			{
+				get
+				{
+					return enclosingInstance;
+				}
+				
+			}
+			
+			/// <summary> Constructor for the <code>Attribute</code> object. This will
+			/// take the original string and parse it such that all of the
+			/// words are emitted and used to build the styled token.
+			/// 
+			/// </summary>
+			/// <param name="source">this is the original string to be parsed
+			/// </param>
+			internal Attribute(CamelCaseBuilder enclosingInstance, System.String source):base(source)
+			{
+				InitBlock(enclosingInstance);
+			}
+			
+			/// <summary> This is used to parse the provided text in to the style that
+			/// is required. Manipulation of the text before committing it
+			/// ensures that the text adheres to the required style.
+			/// 
+			/// </summary>
+			/// <param name="text">this is the text buffer to acquire the token from
+			/// </param>
+			/// <param name="off">this is the offset in the buffer token starts at
+			/// </param>
+			/// <param name="len">this is the length of the token to be parsed
+			/// </param>
+			//UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+			Override
+			protected internal override void  parse(char[] text, int off, int len)
+			{
+				if (Enclosing_Instance.attribute)
+				{
+					text[off] = toUpper(text[off]);
+				}
+			}
+			
+			/// <summary> This is used to commit the provided text in to the style that
+			/// is required. Committing the text to the buffer assembles the
+			/// tokens resulting in a complete token.
+			/// 
+			/// </summary>
+			/// <param name="text">this is the text buffer to acquire the token from
+			/// </param>
+			/// <param name="off">this is the offset in the buffer token starts at
+			/// </param>
+			/// <param name="len">this is the length of the token to be committed
+			/// </param>
+			//UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+			Override
+			protected internal override void  commit(char[] text, int off, int len)
+			{
+				builder.append(text, off, len);
+			}
+		}
+		
+		//UPGRADE_NOTE: Field 'EnclosingInstance' was added to class 'Element' to access its enclosing instance. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1019'"
+		/// <summary> This is used to parse the style for this builder. This takes 
+		/// all of the words split from the original string and builds all
+		/// of the processed tokens for the styles elements and attributes.
+		/// 
+		/// </summary>
+		/// <author>  Niall Gallagher
+		/// </author>
+		private class Element:Attribute
+		{
+			private void  InitBlock(CamelCaseBuilder enclosingInstance)
+			{
+				this.enclosingInstance = enclosingInstance;
+			}
+			private CamelCaseBuilder enclosingInstance;
+			public new CamelCaseBuilder Enclosing_Instance
+			{
+				get
+				{
+					return enclosingInstance;
+				}
+				
+			}
+			
+			/// <summary> Constructor for the <code>Element</code> object. This will
+			/// take the original string and parse it such that all of the
+			/// words are emitted and used to build the styled token.
+			/// 
+			/// </summary>
+			/// <param name="source">this is the original string to be parsed
+			/// </param>
+			internal Element(CamelCaseBuilder enclosingInstance, System.String source):base(enclosingInstance, source)
+			{
+				InitBlock(enclosingInstance);
+			}
+			
+			/// <summary> This is used to parse the provided text in to the style that
+			/// is required. Manipulation of the text before committing it
+			/// ensures that the text adheres to the required style.
+			/// 
+			/// </summary>
+			/// <param name="text">this is the text buffer to acquire the token from
+			/// </param>
+			/// <param name="off">this is the offset in the buffer token starts at
+			/// </param>
+			/// <param name="len">this is the length of the token to be parsed
+			/// </param>
+			//UPGRADE_ISSUE: The following fragment of code could not be parsed and was not converted. "ms-help://MS.VSCC.v80/dv_commoner/local/redirect.htm?index='!DefaultContextWindowIndex'&keyword='jlca1156'"
+			Override
+			protected internal override void  parse(char[] text, int off, int len)
+			{
+				if (Enclosing_Instance.element)
+				{
+					text[off] = toUpper(text[off]);
+				}
+			}
+		}
+	}
+}

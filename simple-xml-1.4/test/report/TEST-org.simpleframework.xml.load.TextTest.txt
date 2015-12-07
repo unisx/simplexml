@@ -1,0 +1,82 @@
+Testsuite: org.simpleframework.xml.load.TextTest
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.14 sec
+------------- Standard Output ---------------
+<test>
+   <array length="3">
+      <entry>
+         <text name="a" version="ONE"><![CDATA[Example 1]]></text>
+      </entry>
+      <entry>
+         <text name="b" version="TWO"><![CDATA[Example 2]]></text>
+      </entry>
+      <entry>
+         <text name="c" version="THREE"><![CDATA[Example 3]]></text>
+      </entry>
+   </array>
+</test><test>
+   <array length="3">
+      <entry>
+         <text name="a" version="ONE"><![CDATA[Example 1]]></text>
+      </entry>
+      <entry>
+         <text name="b" version="TWO"><![CDATA[Example 2]]></text>
+      </entry>
+      <entry>
+         <text name="c" version="THREE"><![CDATA[Example 3]]></text>
+      </entry>
+   </array>
+</test><text name="a" version="ONE"><![CDATA[
+    
+      <element> 
+         <data>This is hidden</data>
+      </element> 
+   
+]]></text><text name="a" version="ONE"><![CDATA[
+    
+      <element> 
+         <data>This is hidden</data>
+      </element> 
+   
+]]></text><text name="a" version="ONE"/><text name="a" version="ONE"/>------------- ---------------- ---------------
+------------- Standard Error -----------------
+org.simpleframework.xml.transform.TransformRequiredException: Transform org.simpleframework.xml.transform.util.ListTransform is required for interface java.util.List
+	at org.simpleframework.xml.transform.PackageMatcher.getClass(PackageMatcher.java:96)
+	at org.simpleframework.xml.transform.PackageMatcher.getClass(PackageMatcher.java:58)
+	at org.simpleframework.xml.transform.DefaultMatcher.matchType(DefaultMatcher.java:80)
+	at org.simpleframework.xml.transform.DefaultMatcher.match(DefaultMatcher.java:64)
+	at org.simpleframework.xml.transform.Transformer.read(Transformer.java:107)
+	at org.simpleframework.xml.load.PrimitiveFactory.getInstance(PrimitiveFactory.java:104)
+	at org.simpleframework.xml.load.Primitive.readTemplate(Primitive.java:183)
+	at org.simpleframework.xml.load.Primitive.readTemplate(Primitive.java:165)
+	at org.simpleframework.xml.load.Primitive.readElement(Primitive.java:137)
+	at org.simpleframework.xml.load.Primitive.readElement(Primitive.java:120)
+	at org.simpleframework.xml.load.Primitive.read(Primitive.java:100)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:345)
+	at org.simpleframework.xml.load.Composite.readText(Composite.java:266)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:186)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:134)
+	at org.simpleframework.xml.load.Composite.read(Composite.java:110)
+	at org.simpleframework.xml.load.Traverser.read(Traverser.java:72)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:391)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:373)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:354)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:336)
+	at org.simpleframework.xml.load.Persister.read(Persister.java:257)
+	at org.simpleframework.xml.load.TextTest.testNonPrimitive(TextTest.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at junit.framework.TestCase.runTest(TestCase.java:154)
+	at junit.framework.TestCase.runBare(TestCase.java:127)
+	at junit.framework.TestResult$1.protect(TestResult.java:106)
+------------- ---------------- ---------------
+
+Testcase: testText took 0.984 sec
+Testcase: testData took 0.062 sec
+Testcase: testDuplicate took 0 sec
+Testcase: testIllegalElement took 0.016 sec
+Testcase: testEmpty took 0 sec
+Testcase: testOptional took 0.047 sec
+Testcase: testNonPrimitive took 0.015 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,76 @@
+Testsuite: org.simpleframework.xml.core.InlineListWithDataTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.246 sec
+------------- Standard Output ---------------
+<listWithDataExample>
+   <string><![CDATA[A]]></string>
+   <string><![CDATA[B]]></string>
+   <string><![CDATA[C]]></string>
+</listWithDataExample>
+<listWithDataExample>
+   <string><![CDATA[A]]></string>
+   <string><![CDATA[B]]></string>
+   <string><![CDATA[C]]></string>
+</listWithDataExample><listWithDataExample>
+   <string><![CDATA[A]]></string>
+   <string><![CDATA[B]]></string>
+   <string><![CDATA[C]]></string>
+</listWithDataExample>
+<list-with-data-example ID="0">
+   <!-- java.lang.String -->
+   <string ID="1"><![CDATA[A]]></string>
+   <!-- java.lang.String -->
+   <string ID="2"><![CDATA[B]]></string>
+   <!-- java.lang.String -->
+   <string ID="3"><![CDATA[C]]></string>
+</list-with-data-example>>>>>> ELEMENT=[element list-with-data-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$ListWithDataExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<ListWithDataExample ID="0">
+   <!-- java.lang.String -->
+   <String ID="1"><![CDATA[A]]></String>
+   <!-- java.lang.String -->
+   <String ID="2"><![CDATA[B]]></String>
+   <!-- java.lang.String -->
+   <String ID="3"><![CDATA[C]]></String>
+</ListWithDataExample>>>>>> ELEMENT=[element ListWithDataExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$ListWithDataExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<mapWithDataExample>
+   <entry string="A"><![CDATA[1]]></entry>
+   <entry string="B"><![CDATA[2]]></entry>
+   <entry string="C"><![CDATA[3]]></entry>
+</mapWithDataExample>
+<mapWithDataExample>
+   <entry string="A"><![CDATA[1]]></entry>
+   <entry string="B"><![CDATA[2]]></entry>
+   <entry string="C"><![CDATA[3]]></entry>
+</mapWithDataExample><mapWithDataExample>
+   <entry string="A"><![CDATA[1]]></entry>
+   <entry string="B"><![CDATA[2]]></entry>
+   <entry string="C"><![CDATA[3]]></entry>
+</mapWithDataExample>
+<map-with-data-example ID="0">
+   <!-- java.lang.String -->
+   <entry string="A" ID="1"><![CDATA[1]]></entry>
+   <!-- java.lang.String -->
+   <entry string="B" ID="2"><![CDATA[2]]></entry>
+   <!-- java.lang.String -->
+   <entry string="C" ID="3"><![CDATA[3]]></entry>
+</map-with-data-example>>>>>> ELEMENT=[element map-with-data-example]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$MapWithDataExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+<MapWithDataExample ID="0">
+   <!-- java.lang.String -->
+   <Entry string="A" ID="1"><![CDATA[1]]></Entry>
+   <!-- java.lang.String -->
+   <Entry string="B" ID="2"><![CDATA[2]]></Entry>
+   <!-- java.lang.String -->
+   <Entry string="C" ID="3"><![CDATA[3]]></Entry>
+</MapWithDataExample>>>>>> ELEMENT=[element MapWithDataExample]
+>>>>> TYPE=[class org.simpleframework.xml.core.InlineListWithDataTest$MapWithDataExample]
+>>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
+------------- ---------------- ---------------
+
+Testcase: testListWithData took 0.18 sec
+Testcase: testMapWithData took 0.058 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,52 @@
+Testsuite: org.simpleframework.xml.core.InlineListWithDataTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.314 sec
+------------- Standard Output ---------------
+<listWithDataExample>
+   <string><![CDATA[A]]></string>
+   <string><![CDATA[B]]></string>
+   <string><![CDATA[C]]></string>
+</listWithDataExample>
+<listWithDataExample>
+   <string><![CDATA[A]]></string>
+   <string><![CDATA[B]]></string>
+   <string><![CDATA[C]]></string>
+</listWithDataExample><listWithDataExample>
+   <string><![CDATA[A]]></string>
+   <string><![CDATA[B]]></string>
+   <string><![CDATA[C]]></string>
+</listWithDataExample>
+<list-with-data-example ID="0">
+   <string ID="1"><![CDATA[A]]></string>
+   <string ID="2"><![CDATA[B]]></string>
+   <string ID="3"><![CDATA[C]]></string>
+</list-with-data-example><ListWithDataExample ID="0">
+   <String ID="1"><![CDATA[A]]></String>
+   <String ID="2"><![CDATA[B]]></String>
+   <String ID="3"><![CDATA[C]]></String>
+</ListWithDataExample><mapWithDataExample>
+   <entry string="A"><![CDATA[1]]></entry>
+   <entry string="B"><![CDATA[2]]></entry>
+   <entry string="C"><![CDATA[3]]></entry>
+</mapWithDataExample>
+<mapWithDataExample>
+   <entry string="A"><![CDATA[1]]></entry>
+   <entry string="B"><![CDATA[2]]></entry>
+   <entry string="C"><![CDATA[3]]></entry>
+</mapWithDataExample><mapWithDataExample>
+   <entry string="A"><![CDATA[1]]></entry>
+   <entry string="B"><![CDATA[2]]></entry>
+   <entry string="C"><![CDATA[3]]></entry>
+</mapWithDataExample>
+<map-with-data-example ID="0">
+   <entry string="A" ID="1"><![CDATA[1]]></entry>
+   <entry string="B" ID="2"><![CDATA[2]]></entry>
+   <entry string="C" ID="3"><![CDATA[3]]></entry>
+</map-with-data-example><MapWithDataExample ID="0">
+   <Entry string="A" ID="1"><![CDATA[1]]></Entry>
+   <Entry string="B" ID="2"><![CDATA[2]]></Entry>
+   <Entry string="C" ID="3"><![CDATA[3]]></Entry>
+</MapWithDataExample>------------- ---------------- ---------------
+
+Testcase: testListWithData took 0.246 sec
+Testcase: testMapWithData took 0.062 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,161 @@
+Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.016 sec
+------------- Standard Output ---------------
+<test id="0">
+   <primitive id="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object id="2">
+      <Boolean id="3">true</Boolean>
+      <Byte id="4">16</Byte>
+      <Short id="5">120</Short>
+      <Integer id="6">1234</Integer>
+      <Float id="7">1234.56</Float>
+      <Long id="8">1234567</Long>
+      <Double id="9">1234567.89</Double>
+      <String id="10">text value</String>
+      <Enum id="11">TWO</Enum>
+   </object>
+</test><test id="0">
+   <primitive id="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object id="2">
+      <Boolean id="3">true</Boolean>
+      <Byte id="4">16</Byte>
+      <Short id="5">120</Short>
+      <Integer id="6">1234</Integer>
+      <Float id="7">1234.56</Float>
+      <Long id="8">1234567</Long>
+      <Double id="9">1234567.89</Double>
+      <String id="10">text value</String>
+      <Enum id="11">TWO</Enum>
+   </object>
+</test>
+<test ID="0">
+   <primitive ID="1">
+      <boolean>true</boolean>
+      <byte>16</byte>
+      <short>120</short>
+      <int>1234</int>
+      <float>1234.56</float>
+      <long>1234567</long>
+      <double>1234567.89</double>
+   </primitive>
+   <object ID="2">
+      <boolean ID="3">true</boolean>
+      <byte ID="4">16</byte>
+      <short ID="5">120</short>
+      <integer ID="6">1234</integer>
+      <float ID="7">1234.56</float>
+      <long ID="8">1234567</long>
+      <double ID="9">1234567.89</double>
+      <string ID="10">text value</string>
+      <enum ID="11">TWO</enum>
+   </object>
+</test><Test ID="0">
+   <Primitive ID="1">
+      <Boolean>true</Boolean>
+      <Byte>16</Byte>
+      <Short>120</Short>
+      <Int>1234</Int>
+      <Float>1234.56</Float>
+      <Long>1234567</Long>
+      <Double>1234567.89</Double>
+   </Primitive>
+   <Object ID="2">
+      <Boolean ID="3">true</Boolean>
+      <Byte ID="4">16</Byte>
+      <Short ID="5">120</Short>
+      <Integer ID="6">1234</Integer>
+      <Float ID="7">1234.56</Float>
+      <Long ID="8">1234567</Long>
+      <Double ID="9">1234567.89</Double>
+      <String ID="10">text value</String>
+      <Enum ID="11">TWO</Enum>
+   </Object>
+</Test><stringReferenceExample id="0">
+   <a id="1">a</a>
+   <b reference="1"/>
+   <c reference="1"/>
+</stringReferenceExample><stringReferenceExample id="0">
+   <a id="1">a</a>
+   <b reference="1"/>
+   <c reference="1"/>
+</stringReferenceExample>
+<string-reference-example ID="0">
+   <a ID="1">a</a>
+   <b REFERER="1"/>
+   <c REFERER="1"/>
+</string-reference-example><StringReferenceExample ID="0">
+   <A ID="1">a</A>
+   <B REFERER="1"/>
+   <C REFERER="1"/>
+</StringReferenceExample><stringReferenceExample id="0">
+   <a id="1">a</a>
+   <b id="2">b</b>
+   <c reference="1"/>
+</stringReferenceExample><stringReferenceExample id="0">
+   <a id="1">a</a>
+   <b id="2">b</b>
+   <c reference="1"/>
+</stringReferenceExample>
+<string-reference-example ID="0">
+   <a ID="1">a</a>
+   <b ID="2">b</b>
+   <c REFERER="1"/>
+</string-reference-example><StringReferenceExample ID="0">
+   <A ID="1">a</A>
+   <B ID="2">b</B>
+   <C REFERER="1"/>
+</StringReferenceExample><integerReferenceExample id="0">
+   <a id="1">1</a>
+   <b id="2">1</b>
+   <c id="3">1</c>
+</integerReferenceExample><integerReferenceExample id="0">
+   <a id="1">1</a>
+   <b id="2">1</b>
+   <c id="3">1</c>
+</integerReferenceExample>
+<integer-reference-example ID="0">
+   <a ID="1">1</a>
+   <b ID="2">1</b>
+   <c ID="3">1</c>
+</integer-reference-example><IntegerReferenceExample ID="0">
+   <A ID="1">1</A>
+   <B ID="2">1</B>
+   <C ID="3">1</C>
+</IntegerReferenceExample><integerReferenceExample id="0">
+   <a id="1">1</a>
+   <b reference="1"/>
+   <c id="2">1</c>
+</integerReferenceExample><integerReferenceExample id="0">
+   <a id="1">1</a>
+   <b reference="1"/>
+   <c id="2">1</c>
+</integerReferenceExample>
+<integer-reference-example ID="0">
+   <a ID="1">1</a>
+   <b REFERER="1"/>
+   <c ID="2">1</c>
+</integer-reference-example><IntegerReferenceExample ID="0">
+   <A ID="1">1</A>
+   <B REFERER="1"/>
+   <C ID="2">1</C>
+</IntegerReferenceExample>------------- ---------------- ---------------
+
+Testcase: testPrimitive took 0.663 sec
+Testcase: testPrimitiveReference took 0.347 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,202 @@
+Testsuite: org.simpleframework.xml.core.MixTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.335 sec
+------------- Standard Output ---------------
+<mixExample>
+   <list class="java.util.ArrayList">
+      <object class="java.lang.String">text</object>
+      <object class="java.lang.Integer">1</object>
+      <object class="java.lang.Boolean">true</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">example 1</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="2">example 2</object>
+   </list>
+   <map class="java.util.HashMap">
+      <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 3</object>
+         <object class="java.lang.Integer">3</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 4</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 2</object>
+         <object class="java.lang.String">value 2</object>
+      </entry>
+   </map>
+   <calendar class="java.util.GregorianCalendar">2010-02-24 18:43:20.852 GMT</calendar>
+</mixExample><mixExample>
+   <list class="java.util.ArrayList">
+      <object class="java.lang.String">text</object>
+      <object class="java.lang.Integer">1</object>
+      <object class="java.lang.Boolean">true</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">example 1</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="2">example 2</object>
+   </list>
+   <map class="java.util.HashMap">
+      <entry>
+         <object class="java.lang.String">key 3</object>
+         <object class="java.lang.Integer">3</object>
+      </entry>
+      <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 4</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 2</object>
+         <object class="java.lang.String">value 2</object>
+      </entry>
+   </map>
+   <calendar class="java.util.GregorianCalendar">2010-02-24 18:43:20.852 GMT</calendar>
+</mixExample><mixExample>
+   <list class="java.util.ArrayList">
+      <object class="java.lang.String">text</object>
+      <object class="java.lang.Integer">1</object>
+      <object class="java.lang.Boolean">true</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">example 1</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="2">example 2</object>
+   </list>
+   <map class="java.util.HashMap">
+      <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 3</object>
+         <object class="java.lang.Integer">3</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 4</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 2</object>
+         <object class="java.lang.String">value 2</object>
+      </entry>
+   </map>
+   <calendar class="java.util.GregorianCalendar">2010-02-24 18:43:20.852 GMT</calendar>
+</mixExample><mixExample>
+   <list class="java.util.ArrayList">
+      <object class="java.lang.String">text</object>
+      <object class="java.lang.Integer">1</object>
+      <object class="java.lang.Boolean">true</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">example 1</object>
+      <object class="org.simpleframework.xml.core.MixTest$Entry" id="2">example 2</object>
+   </list>
+   <map class="java.util.HashMap">
+      <entry>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">key 1</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="1">value 1</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 3</object>
+         <object class="java.lang.Integer">3</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 4</object>
+         <object class="org.simpleframework.xml.core.MixTest$Entry" id="4">value 4</object>
+      </entry>
+      <entry>
+         <object class="java.lang.String">key 2</object>
+         <object class="java.lang.String">value 2</object>
+      </entry>
+   </map>
+   <calendar class="java.util.GregorianCalendar">2010-02-24 18:43:20.852 GMT</calendar>
+</mixExample>
+<mix-example ID="0">
+   <!-- java.util.List -->
+   <list class="java.util.ArrayList" ID="1">
+      <!-- java.lang.Object -->
+      <object class="java.lang.String" ID="2">text</object>
+      <!-- java.lang.Object -->
+      <object class="java.lang.Integer" ID="3">1</object>
+      <!-- java.lang.Object -->
+      <object class="java.lang.Boolean" ID="4">true</object>
+      <!-- java.lang.Object -->
+      <object class="org.simpleframework.xml.core.MixTest$Entry" ID="5" id="1">example 1</object>
+      <!-- java.lang.Object -->
+      <object class="org.simpleframework.xml.core.MixTest$Entry" ID="6" id="2">example 2</object>
+   </list>
+   <!-- java.util.Map -->
+   <map class="java.util.HashMap" ID="7">
+      <entry>
+         <!-- java.lang.Object -->
+         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="8" id="1">key 1</object>
+         <!-- java.lang.Object -->
+         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="9" id="1">value 1</object>
+      </entry>
+      <entry>
+         <!-- java.lang.Object -->
+         <object class="java.lang.String" ID="10">key 3</object>
+         <!-- java.lang.Object -->
+         <object class="java.lang.Integer" ID="11">3</object>
+      </entry>
+      <entry>
+         <!-- java.lang.Object -->
+         <object class="java.lang.String" ID="12">key 4</object>
+         <!-- java.lang.Object -->
+         <object class="org.simpleframework.xml.core.MixTest$Entry" ID="13" id="4">value 4</object>
+      </entry>
+      <entry>
+         <!-- java.lang.Object -->
+         <object class="java.lang.String" ID="14">key 2</object>
+         <!-- java.lang.Object -->
+         <object class="java.lang.String" ID="15">value 2</object>
+      </entry>
+   </map>
+   <!-- java.util.Calendar -->
+   <calendar class="java.util.GregorianCalendar" ID="16">2010-02-24 18:43:20.852 GMT</calendar>
+</mix-example><MixExample ID="0">
+   <!-- java.util.List -->
+   <List class="java.util.ArrayList" ID="1">
+      <!-- java.lang.Object -->
+      <Object class="java.lang.String" ID="2">text</Object>
+      <!-- java.lang.Object -->
+      <Object class="java.lang.Integer" ID="3">1</Object>
+      <!-- java.lang.Object -->
+      <Object class="java.lang.Boolean" ID="4">true</Object>
+      <!-- java.lang.Object -->
+      <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="5" id="1">example 1</Object>
+      <!-- java.lang.Object -->
+      <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="6" id="2">example 2</Object>
+   </List>
+   <!-- java.util.Map -->
+   <Map class="java.util.HashMap" ID="7">
+      <Entry>
+         <!-- java.lang.Object -->
+         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="8" id="1">key 1</Object>
+         <!-- java.lang.Object -->
+         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="9" id="1">value 1</Object>
+      </Entry>
+      <Entry>
+         <!-- java.lang.Object -->
+         <Object class="java.lang.String" ID="10">key 3</Object>
+         <!-- java.lang.Object -->
+         <Object class="java.lang.Integer" ID="11">3</Object>
+      </Entry>
+      <Entry>
+         <!-- java.lang.Object -->
+         <Object class="java.lang.String" ID="12">key 4</Object>
+         <!-- java.lang.Object -->
+         <Object class="org.simpleframework.xml.core.MixTest$Entry" ID="13" id="4">value 4</Object>
+      </Entry>
+      <Entry>
+         <!-- java.lang.Object -->
+         <Object class="java.lang.String" ID="14">key 2</Object>
+         <!-- java.lang.Object -->
+         <Object class="java.lang.String" ID="15">value 2</Object>
+      </Entry>
+   </Map>
+   <!-- java.util.Calendar -->
+   <Calendar class="java.util.GregorianCalendar" ID="16">2010-02-24 18:43:20.852 GMT</Calendar>
+</MixExample>------------- ---------------- ---------------
+
+Testcase: testMix took 0.325 sec
+Testcase: testDirectory took 0.001 sec

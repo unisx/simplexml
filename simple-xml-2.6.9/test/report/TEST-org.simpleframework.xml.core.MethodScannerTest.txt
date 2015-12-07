@@ -1,0 +1,9 @@
+Testsuite: org.simpleframework.xml.core.MethodScannerTest
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.222 sec
+
+Testcase: testExample took 0.148 sec
+Testcase: testIllegalOverload took 0.012 sec
+Testcase: testNonMatchingMethods took 0.004 sec
+Testcase: testNotBeanMethod took 0.012 sec
+Testcase: testText took 0.014 sec
+Testcase: testCollection took 0.018 sec

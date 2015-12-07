@@ -1,0 +1,112 @@
+Testsuite: org.simpleframework.xml.core.CaseTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.302 sec
+------------- Standard Output ---------------
+<Example Version="1.0" Name="example" URL="http://domain.com/">
+   <List class="java.util.ArrayList">
+      <ListEntry id="1">
+         <Text>one</Text>
+      </ListEntry>
+      <ListEntry id="2">
+         <Text>two</Text>
+      </ListEntry>
+      <ListEntry id="3">
+         <Text>three</Text>
+      </ListEntry>
+   </List>
+   <URLList class="java.util.ArrayList">
+      <URLEntry>http://a.com/</URLEntry>
+      <URLEntry>http://b.com/</URLEntry>
+      <URLEntry>http://c.com/</URLEntry>
+   </URLList>
+   <TextEntry id="4">
+      <Text>example 4</Text>
+   </TextEntry>
+   <TextEntry id="5">
+      <Text>example 5</Text>
+   </TextEntry>
+   <TextEntry id="6">
+      <Text>example 6</Text>
+   </TextEntry>
+</Example><Example Version="1.0" Name="example" URL="http://domain.com/">
+   <List class="java.util.ArrayList">
+      <ListEntry id="1">
+         <Text>one</Text>
+      </ListEntry>
+      <ListEntry id="2">
+         <Text>two</Text>
+      </ListEntry>
+      <ListEntry id="3">
+         <Text>three</Text>
+      </ListEntry>
+   </List>
+   <URLList class="java.util.ArrayList">
+      <URLEntry>http://a.com/</URLEntry>
+      <URLEntry>http://b.com/</URLEntry>
+      <URLEntry>http://c.com/</URLEntry>
+   </URLList>
+   <TextEntry id="4">
+      <Text>example 4</Text>
+   </TextEntry>
+   <TextEntry id="5">
+      <Text>example 5</Text>
+   </TextEntry>
+   <TextEntry id="6">
+      <Text>example 6</Text>
+   </TextEntry>
+</Example>
+<example ID="0" version="1.0" name="example" URL="http://domain.com/">
+   <list class="java.util.ArrayList" ID="1">
+      <list-entry ID="2" id="1">
+         <text ID="3">one</text>
+      </list-entry>
+      <list-entry ID="4" id="2">
+         <text ID="5">two</text>
+      </list-entry>
+      <list-entry ID="6" id="3">
+         <text ID="7">three</text>
+      </list-entry>
+   </list>
+   <URL-list class="java.util.ArrayList" ID="8">
+      <URL-entry ID="9">http://a.com/</URL-entry>
+      <URL-entry ID="10">http://b.com/</URL-entry>
+      <URL-entry ID="11">http://c.com/</URL-entry>
+   </URL-list>
+   <text-entry ID="12" id="4">
+      <text ID="13">example 4</text>
+   </text-entry>
+   <text-entry ID="14" id="5">
+      <text ID="15">example 5</text>
+   </text-entry>
+   <text-entry ID="16" id="6">
+      <text ID="17">example 6</text>
+   </text-entry>
+</example><Example ID="0" Version="1.0" Name="example" URL="http://domain.com/">
+   <List class="java.util.ArrayList" ID="1">
+      <ListEntry ID="2" id="1">
+         <Text ID="3">one</Text>
+      </ListEntry>
+      <ListEntry ID="4" id="2">
+         <Text ID="5">two</Text>
+      </ListEntry>
+      <ListEntry ID="6" id="3">
+         <Text ID="7">three</Text>
+      </ListEntry>
+   </List>
+   <URLList class="java.util.ArrayList" ID="8">
+      <URLEntry ID="9">http://a.com/</URLEntry>
+      <URLEntry ID="10">http://b.com/</URLEntry>
+      <URLEntry ID="11">http://c.com/</URLEntry>
+   </URLList>
+   <TextEntry ID="12" id="4">
+      <Text ID="13">example 4</Text>
+   </TextEntry>
+   <TextEntry ID="14" id="5">
+      <Text ID="15">example 5</Text>
+   </TextEntry>
+   <TextEntry ID="16" id="6">
+      <Text ID="17">example 6</Text>
+   </TextEntry>
+</Example>------------- ---------------- ---------------
+
+Testcase: testCase took 0.297 sec
+Testcase: testDirectory took 0 sec

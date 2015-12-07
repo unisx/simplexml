@@ -1,0 +1,395 @@
+Testsuite: org.simpleframework.xml.load.UnicodeTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.812 sec
+------------- Standard Output ---------------
+<example>
+   <list>
+      <unicode name="Archimedes" origin="Syracuse (Sicily)">
+         <text>Ἀ�?χιμήδης</text>
+      </unicode>
+      <unicode name="Tor Age Bringsvaerd" origin="Norway">
+         <text>Tor Åge Bringsværd</text>
+      </unicode>
+      <unicode name="SHIM Eun-Ha" origin="Rep. of Korea">
+         <text>심�?�하</text>
+      </unicode>
+      <unicode name="Soren Hauch-Fausboll" origin="Denmark">
+         <text>Søren Hauch-Fausbøll</text>
+      </unicode>
+      <unicode name="LEE Sol-Hee" origin="Democratic People&apos;s Rep. of Korea">
+         <text>�?�설�?�</text>
+      </unicode>
+      <unicode name="Madhuri Dixit" origin="India (Hindi)">
+         <text>माध�?री दिछित</text>
+      </unicode>
+      <unicode name="Johann Strauss" origin="Austria">
+         <text>Johann Strauß</text>
+      </unicode>
+      <unicode name="Hsu Chi" origin="Rep. of China">
+         <text>舒淇</text>
+      </unicode>
+      <unicode name="Celine Dion" origin="Canada">
+         <text>Céline Dion</text>
+      </unicode>
+      <unicode name="Mylene Demongeot" origin="France">
+         <text>Mylène Demongeot</text>
+      </unicode>
+      <unicode name="Sinead O&apos;Connor" origin="Ireland">
+         <text>Sinéad O&apos;Connor</text>
+      </unicode>
+      <unicode name="Nusrat Fatah Ali Khan" origin="Pakistan (Urdu)">
+         <text>نصرت �?تح علی خان</text>
+      </unicode>
+      <unicode name="Giorgos Dalaras" origin="Greece">
+         <text>Γιώ�?γος �?ταλά�?ας</text>
+      </unicode>
+      <unicode name="Soren Kierkegaard" origin="Denmark">
+         <text>Søren Kierkegård</text>
+      </unicode>
+      <unicode name="Jean Reno" origin="France">
+         <text>Jean Réno</text>
+      </unicode>
+      <unicode name="Tex Texin" origin="Japan">
+         <text>テクス テクサン</text>
+      </unicode>
+      <unicode name="Haile Gebreselassie" origin="Ethiopia">
+         <text>ኢትዮጵያ</text>
+      </unicode>
+      <unicode name="Yehoram Gaon" origin="Israel">
+         <text>יהור�? ג�?ון</text>
+      </unicode>
+      <unicode name="Olga Tanon" origin="Puerto Rico">
+         <text>Olga Tañón</text>
+      </unicode>
+      <unicode name="KUBOTA Toshinobu" origin="Japan">
+         <text>久�?田    利伸</text>
+      </unicode>
+      <unicode name="Lech Walesa" origin="Poland">
+         <text>Lech Wałęsa</text>
+      </unicode>
+      <unicode name="Thongchai McIntai" origin="Thailand">
+         <text>ธงไชย �?ม็คอินไตย์</text>
+      </unicode>
+      <unicode name="Camille Saint-Saens" origin="France">
+         <text>Camille Saint-Saëns</text>
+      </unicode>
+      <unicode name="Brad Pitt" origin="U.S.A.">
+         <text>Brad Pitt</text>
+      </unicode>
+      <unicode name="Fabrizio DeAndre" origin="Italy">
+         <text>Fabrizio De André</text>
+      </unicode>
+      <unicode name="Walter Schultheiss" origin="Germany">
+         <text>Walter Schultheiß</text>
+      </unicode>
+      <unicode name="Mikhail Gorbachev" origin="Russia">
+         <text>Михаил Горбачёв</text>
+      </unicode>
+      <unicode name="Mori Ogai" origin="Japan">
+         <text>森鷗外</text>
+      </unicode>
+      <unicode name="AHN Sung-Gi" origin="Rep. of Korea">
+         <text>안성기</text>
+      </unicode>
+      <unicode name="WONG Faye" origin="People&apos;s Rep. of China">
+         <text>王�?�</text>
+      </unicode>
+      <unicode name="Boris Grebenshchikov" origin="Russia">
+         <text>Бори�? Гребенщиков</text>
+      </unicode>
+      <unicode name="Nicole Kidman" origin="Australia">
+         <text>Nicole Kidman</text>
+      </unicode>
+      <unicode name="HAYASHIBARA Megumi" origin="Japan">
+         <text>林原 �?�??�?�</text>
+      </unicode>
+      <unicode name="Ang Lee" origin="Rep. of China">
+         <text>�?�安</text>
+      </unicode>
+      <unicode name="Om Kolthoum" origin="Egypt">
+         <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
+      </unicode>
+      <unicode name="Rudi Voeller" origin="Germany">
+         <text>Rudi Völler</text>
+      </unicode>
+      <unicode name="Berhane Zeray" origin="Eritrea">
+         <text>ኤርትራ</text>
+      </unicode>
+      <unicode name="Abdel Halim Hafez" origin="Egypt">
+         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+      </unicode>
+      <unicode name="Francois Truffaut" origin="France">
+         <text>François Truffaut</text>
+      </unicode>
+      <unicode name="ZHANG Ziyi" origin="People&apos;s Rep. of China">
+         <text>章�?怡</text>
+      </unicode>
+      <unicode name="Bjork Gudmundsdottir" origin="Iceland">
+         <text>Björk Guðmundsdóttir</text>
+      </unicode>
+      <unicode name="Gerard Depardieu" origin="France">
+         <text>Gérard Depardieu</text>
+      </unicode>
+   </list>
+</example><example>
+   <list>
+      <unicode name="Archimedes" origin="Syracuse (Sicily)">
+         <text>Ἀ�?χιμήδης</text>
+      </unicode>
+      <unicode name="Tor Age Bringsvaerd" origin="Norway">
+         <text>Tor Åge Bringsværd</text>
+      </unicode>
+      <unicode name="SHIM Eun-Ha" origin="Rep. of Korea">
+         <text>심�?�하</text>
+      </unicode>
+      <unicode name="Soren Hauch-Fausboll" origin="Denmark">
+         <text>Søren Hauch-Fausbøll</text>
+      </unicode>
+      <unicode name="LEE Sol-Hee" origin="Democratic People&apos;s Rep. of Korea">
+         <text>�?�설�?�</text>
+      </unicode>
+      <unicode name="Madhuri Dixit" origin="India (Hindi)">
+         <text>माध�?री दिछित</text>
+      </unicode>
+      <unicode name="Johann Strauss" origin="Austria">
+         <text>Johann Strauß</text>
+      </unicode>
+      <unicode name="Hsu Chi" origin="Rep. of China">
+         <text>舒淇</text>
+      </unicode>
+      <unicode name="Celine Dion" origin="Canada">
+         <text>Céline Dion</text>
+      </unicode>
+      <unicode name="Mylene Demongeot" origin="France">
+         <text>Mylène Demongeot</text>
+      </unicode>
+      <unicode name="Sinead O&apos;Connor" origin="Ireland">
+         <text>Sinéad O&apos;Connor</text>
+      </unicode>
+      <unicode name="Nusrat Fatah Ali Khan" origin="Pakistan (Urdu)">
+         <text>نصرت �?تح علی خان</text>
+      </unicode>
+      <unicode name="Giorgos Dalaras" origin="Greece">
+         <text>Γιώ�?γος �?ταλά�?ας</text>
+      </unicode>
+      <unicode name="Soren Kierkegaard" origin="Denmark">
+         <text>Søren Kierkegård</text>
+      </unicode>
+      <unicode name="Jean Reno" origin="France">
+         <text>Jean Réno</text>
+      </unicode>
+      <unicode name="Tex Texin" origin="Japan">
+         <text>テクス テクサン</text>
+      </unicode>
+      <unicode name="Haile Gebreselassie" origin="Ethiopia">
+         <text>ኢትዮጵያ</text>
+      </unicode>
+      <unicode name="Yehoram Gaon" origin="Israel">
+         <text>יהור�? ג�?ון</text>
+      </unicode>
+      <unicode name="Olga Tanon" origin="Puerto Rico">
+         <text>Olga Tañón</text>
+      </unicode>
+      <unicode name="KUBOTA Toshinobu" origin="Japan">
+         <text>久�?田    利伸</text>
+      </unicode>
+      <unicode name="Lech Walesa" origin="Poland">
+         <text>Lech Wałęsa</text>
+      </unicode>
+      <unicode name="Thongchai McIntai" origin="Thailand">
+         <text>ธงไชย �?ม็คอินไตย์</text>
+      </unicode>
+      <unicode name="Camille Saint-Saens" origin="France">
+         <text>Camille Saint-Saëns</text>
+      </unicode>
+      <unicode name="Brad Pitt" origin="U.S.A.">
+         <text>Brad Pitt</text>
+      </unicode>
+      <unicode name="Fabrizio DeAndre" origin="Italy">
+         <text>Fabrizio De André</text>
+      </unicode>
+      <unicode name="Walter Schultheiss" origin="Germany">
+         <text>Walter Schultheiß</text>
+      </unicode>
+      <unicode name="Mikhail Gorbachev" origin="Russia">
+         <text>Михаил Горбачёв</text>
+      </unicode>
+      <unicode name="Mori Ogai" origin="Japan">
+         <text>森鷗外</text>
+      </unicode>
+      <unicode name="AHN Sung-Gi" origin="Rep. of Korea">
+         <text>안성기</text>
+      </unicode>
+      <unicode name="WONG Faye" origin="People&apos;s Rep. of China">
+         <text>王�?�</text>
+      </unicode>
+      <unicode name="Boris Grebenshchikov" origin="Russia">
+         <text>Бори�? Гребенщиков</text>
+      </unicode>
+      <unicode name="Nicole Kidman" origin="Australia">
+         <text>Nicole Kidman</text>
+      </unicode>
+      <unicode name="HAYASHIBARA Megumi" origin="Japan">
+         <text>林原 �?�??�?�</text>
+      </unicode>
+      <unicode name="Ang Lee" origin="Rep. of China">
+         <text>�?�安</text>
+      </unicode>
+      <unicode name="Om Kolthoum" origin="Egypt">
+         <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
+      </unicode>
+      <unicode name="Rudi Voeller" origin="Germany">
+         <text>Rudi Völler</text>
+      </unicode>
+      <unicode name="Berhane Zeray" origin="Eritrea">
+         <text>ኤርትራ</text>
+      </unicode>
+      <unicode name="Abdel Halim Hafez" origin="Egypt">
+         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+      </unicode>
+      <unicode name="Francois Truffaut" origin="France">
+         <text>François Truffaut</text>
+      </unicode>
+      <unicode name="ZHANG Ziyi" origin="People&apos;s Rep. of China">
+         <text>章�?怡</text>
+      </unicode>
+      <unicode name="Bjork Gudmundsdottir" origin="Iceland">
+         <text>Björk Guðmundsdóttir</text>
+      </unicode>
+      <unicode name="Gerard Depardieu" origin="France">
+         <text>Gérard Depardieu</text>
+      </unicode>
+   </list>
+</example><example>
+   <list>
+      <unicode name="Tor Age Bringsvaerd" origin="Norway">
+         <text>Tor Åge Bringsværd</text>
+      </unicode>
+      <unicode name="Archimedes" origin="Syracuse (Sicily)">
+         <text>Ἀ�?χιμήδης</text>
+      </unicode>
+      <unicode name="SHIM Eun-Ha" origin="Rep. of Korea">
+         <text>심�?�하</text>
+      </unicode>
+      <unicode name="Soren Hauch-Fausboll" origin="Denmark">
+         <text>Søren Hauch-Fausbøll</text>
+      </unicode>
+      <unicode name="Madhuri Dixit" origin="India (Hindi)">
+         <text>माध�?री दिछित</text>
+      </unicode>
+      <unicode name="LEE Sol-Hee" origin="Democratic People&apos;s Rep. of Korea">
+         <text>�?�설�?�</text>
+      </unicode>
+      <unicode name="Johann Strauss" origin="Austria">
+         <text>Johann Strauß</text>
+      </unicode>
+      <unicode name="Celine Dion" origin="Canada">
+         <text>Céline Dion</text>
+      </unicode>
+      <unicode name="Hsu Chi" origin="Rep. of China">
+         <text>舒淇</text>
+      </unicode>
+      <unicode name="Mylene Demongeot" origin="France">
+         <text>Mylène Demongeot</text>
+      </unicode>
+      <unicode name="Sinead O&apos;Connor" origin="Ireland">
+         <text>Sinéad O&apos;Connor</text>
+      </unicode>
+      <unicode name="Nusrat Fatah Ali Khan" origin="Pakistan (Urdu)">
+         <text>نصرت �?تح علی خان</text>
+      </unicode>
+      <unicode name="Giorgos Dalaras" origin="Greece">
+         <text>Γιώ�?γος �?ταλά�?ας</text>
+      </unicode>
+      <unicode name="Soren Kierkegaard" origin="Denmark">
+         <text>Søren Kierkegård</text>
+      </unicode>
+      <unicode name="Jean Reno" origin="France">
+         <text>Jean Réno</text>
+      </unicode>
+      <unicode name="Tex Texin" origin="Japan">
+         <text>テクス テクサン</text>
+      </unicode>
+      <unicode name="Haile Gebreselassie" origin="Ethiopia">
+         <text>ኢትዮጵያ</text>
+      </unicode>
+      <unicode name="Yehoram Gaon" origin="Israel">
+         <text>יהור�? ג�?ון</text>
+      </unicode>
+      <unicode name="Olga Tanon" origin="Puerto Rico">
+         <text>Olga Tañón</text>
+      </unicode>
+      <unicode name="KUBOTA Toshinobu" origin="Japan">
+         <text>久�?田    利伸</text>
+      </unicode>
+      <unicode name="Lech Walesa" origin="Poland">
+         <text>Lech Wałęsa</text>
+      </unicode>
+      <unicode name="Thongchai McIntai" origin="Thailand">
+         <text>ธงไชย �?ม็คอินไตย์</text>
+      </unicode>
+      <unicode name="Camille Saint-Saens" origin="France">
+         <text>Camille Saint-Saëns</text>
+      </unicode>
+      <unicode name="Brad Pitt" origin="U.S.A.">
+         <text>Brad Pitt</text>
+      </unicode>
+      <unicode name="Fabrizio DeAndre" origin="Italy">
+         <text>Fabrizio De André</text>
+      </unicode>
+      <unicode name="Walter Schultheiss" origin="Germany">
+         <text>Walter Schultheiß</text>
+      </unicode>
+      <unicode name="Mori Ogai" origin="Japan">
+         <text>森鷗外</text>
+      </unicode>
+      <unicode name="Mikhail Gorbachev" origin="Russia">
+         <text>Михаил Горбачёв</text>
+      </unicode>
+      <unicode name="WONG Faye" origin="People&apos;s Rep. of China">
+         <text>王�?�</text>
+      </unicode>
+      <unicode name="AHN Sung-Gi" origin="Rep. of Korea">
+         <text>안성기</text>
+      </unicode>
+      <unicode name="HAYASHIBARA Megumi" origin="Japan">
+         <text>林原 �?�??�?�</text>
+      </unicode>
+      <unicode name="Nicole Kidman" origin="Australia">
+         <text>Nicole Kidman</text>
+      </unicode>
+      <unicode name="Boris Grebenshchikov" origin="Russia">
+         <text>Бори�? Гребенщиков</text>
+      </unicode>
+      <unicode name="Ang Lee" origin="Rep. of China">
+         <text>�?�安</text>
+      </unicode>
+      <unicode name="Om Kolthoum" origin="Egypt">
+         <text>ﺃﻡ ﻛﻟﺛﻭﻡ</text>
+      </unicode>
+      <unicode name="Rudi Voeller" origin="Germany">
+         <text>Rudi Völler</text>
+      </unicode>
+      <unicode name="Berhane Zeray" origin="Eritrea">
+         <text>ኤርትራ</text>
+      </unicode>
+      <unicode name="Abdel Halim Hafez" origin="Egypt">
+         <text>ﻋﺑﺪ�?ﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
+      </unicode>
+      <unicode name="Francois Truffaut" origin="France">
+         <text>François Truffaut</text>
+      </unicode>
+      <unicode name="Bjork Gudmundsdottir" origin="Iceland">
+         <text>Björk Guðmundsdóttir</text>
+      </unicode>
+      <unicode name="ZHANG Ziyi" origin="People&apos;s Rep. of China">
+         <text>章�?怡</text>
+      </unicode>
+      <unicode name="Gerard Depardieu" origin="France">
+         <text>Gérard Depardieu</text>
+      </unicode>
+   </list>
+</example>------------- ---------------- ---------------
+
+Testcase: testUnicode took 0.641 sec
+Testcase: testWriteUnicode took 0.141 sec
+Testcase: testDirectory took 0 sec

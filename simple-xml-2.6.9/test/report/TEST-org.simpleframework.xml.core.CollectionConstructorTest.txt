@@ -1,0 +1,6 @@
+Testsuite: org.simpleframework.xml.core.CollectionConstructorTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.61 sec
+
+Testcase: testCollectionConstructor took 0.498 sec
+Testcase: testMapConstructor took 0.062 sec
+Testcase: testCollectionConstructorComposite took 0.031 sec

@@ -1,0 +1,86 @@
+Testsuite: org.simpleframework.xml.core.ArrayEntryTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.258 sec
+------------- Standard Output ---------------
+<exampleArray>
+   <list length="3">
+      <substitute id="1">
+         <text>one</text>
+      </substitute>
+      <substitute id="2">
+         <text>two</text>
+      </substitute>
+      <substitute id="3">
+         <text>three</text>
+      </substitute>
+   </list>
+</exampleArray><exampleArray>
+   <list length="3">
+      <substitute id="1">
+         <text>one</text>
+      </substitute>
+      <substitute id="2">
+         <text>two</text>
+      </substitute>
+      <substitute id="3">
+         <text>three</text>
+      </substitute>
+   </list>
+</exampleArray>
+<example-array ID="0">
+   <list length="3" ID="1">
+      <substitute ID="2" id="1">
+         <text ID="3">one</text>
+      </substitute>
+      <substitute ID="4" id="2">
+         <text ID="5">two</text>
+      </substitute>
+      <substitute ID="6" id="3">
+         <text ID="7">three</text>
+      </substitute>
+   </list>
+</example-array><ExampleArray ID="0">
+   <List length="3" ID="1">
+      <Substitute ID="2" id="1">
+         <Text ID="3">one</Text>
+      </Substitute>
+      <Substitute ID="4" id="2">
+         <Text ID="5">two</Text>
+      </Substitute>
+      <Substitute ID="6" id="3">
+         <Text ID="7">three</Text>
+      </Substitute>
+   </List>
+</ExampleArray><examplePrimitiveArray>
+   <list length="4">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute>c</substitute>
+      <substitute>d</substitute>
+   </list>
+</examplePrimitiveArray><examplePrimitiveArray>
+   <list length="4">
+      <substitute>a</substitute>
+      <substitute>b</substitute>
+      <substitute>c</substitute>
+      <substitute>d</substitute>
+   </list>
+</examplePrimitiveArray>
+<example-primitive-array ID="0">
+   <list length="4" ID="1">
+      <substitute ID="2">a</substitute>
+      <substitute ID="3">b</substitute>
+      <substitute ID="4">c</substitute>
+      <substitute ID="5">d</substitute>
+   </list>
+</example-primitive-array><ExamplePrimitiveArray ID="0">
+   <List length="4" ID="1">
+      <Substitute ID="2">a</Substitute>
+      <Substitute ID="3">b</Substitute>
+      <Substitute ID="4">c</Substitute>
+      <Substitute ID="5">d</Substitute>
+   </List>
+</ExamplePrimitiveArray>------------- ---------------- ---------------
+
+Testcase: testExampleArray took 0.224 sec
+Testcase: testExamplePrimitiveArray took 0.027 sec
+Testcase: testDirectory took 0 sec

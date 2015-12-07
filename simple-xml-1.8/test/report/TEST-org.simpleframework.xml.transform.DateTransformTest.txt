@@ -1,0 +1,63 @@
+Testsuite: org.simpleframework.xml.transform.DateTransformTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.449 sec
+------------- Standard Output ---------------
+<dateExample attribute="2008-11-29 20:11:57.945 GMT">
+   <array length="1">
+      <date>2008-11-29 20:11:57.945 GMT</date>
+   </array>
+   <element>2008-11-29 20:11:57.945 GMT</element>
+   <list class="java.util.ArrayList">
+      <date>2008-11-29 20:11:57.945 GMT</date>
+      <date>2008-11-29 20:11:57.945 GMT</date>
+   </list>
+</dateExample><date-example id="0" attribute="2008-11-29 20:11:57.945 GMT">
+   <array length="1" id="1">
+      <date id="2">2008-11-29 20:11:57.945 GMT</date>
+   </array>
+   <element id="3">2008-11-29 20:11:57.945 GMT</element>
+   <list class="java.util.ArrayList" id="4">
+      <date id="5">2008-11-29 20:11:57.945 GMT</date>
+      <date id="6">2008-11-29 20:11:57.945 GMT</date>
+   </list>
+</date-example><DateExample id="0" attribute="2008-11-29 20:11:57.945 GMT">
+   <Array length="1" id="1">
+      <Date id="2">2008-11-29 20:11:57.945 GMT</Date>
+   </Array>
+   <Element id="3">2008-11-29 20:11:57.945 GMT</Element>
+   <List class="java.util.ArrayList" id="4">
+      <Date id="5">2008-11-29 20:11:57.945 GMT</Date>
+      <Date id="6">2008-11-29 20:11:57.945 GMT</Date>
+   </List>
+</DateExample><dateExample id="0" attribute="2008-11-29 20:11:58.145 GMT">
+   <array length="1" id="1">
+      <date id="2">2008-11-29 20:11:58.145 GMT</date>
+   </array>
+   <element reference="2"/>
+   <list class="java.util.ArrayList" id="3">
+      <date reference="2"/>
+      <date reference="2"/>
+   </list>
+</dateExample><date-example id="0" attribute="2008-11-29 20:11:58.145 GMT">
+   <array length="1" id="1">
+      <date id="2">2008-11-29 20:11:58.145 GMT</date>
+   </array>
+   <element reference="2"/>
+   <list class="java.util.ArrayList" id="3">
+      <date reference="2"/>
+      <date reference="2"/>
+   </list>
+</date-example><DateExample id="0" attribute="2008-11-29 20:11:58.145 GMT">
+   <Array length="1" id="1">
+      <Date id="2">2008-11-29 20:11:58.145 GMT</Date>
+   </Array>
+   <Element reference="2"/>
+   <List class="java.util.ArrayList" id="3">
+      <Date reference="2"/>
+      <Date reference="2"/>
+   </List>
+</DateExample>------------- ---------------- ---------------
+
+Testcase: testDate took 0.018 sec
+Testcase: testPersistence took 0.199 sec
+Testcase: testCyclicPersistence took 0.227 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,6 @@
+Testsuite: simple.xml.load.FilterTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
+
+Testcase: testSystem took 0.119 sec
+Testcase: testMap took 0.001 sec
+Testcase: testEnvironmentFilter took 0.005 sec

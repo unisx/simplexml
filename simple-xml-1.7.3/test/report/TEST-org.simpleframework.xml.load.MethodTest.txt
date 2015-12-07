@@ -1,0 +1,40 @@
+Testsuite: org.simpleframework.xml.load.MethodTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
+------------- Standard Output ---------------
+<test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test><test>
+   <boolean>true</boolean>
+   <byte>16</byte>
+   <double>1234567.89</double>
+   <float>1234.56</float>
+   <int>1234</int>
+   <long>1234567</long>
+   <short>120</short>
+</test><implicitMethodNameExample>
+   <booleanValue>true</booleanValue>
+   <byteValue>16</byteValue>
+   <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
+</implicitMethodNameExample><implicitMethodNameExample>
+   <booleanValue>true</booleanValue>
+   <byteValue>16</byteValue>
+   <doubleValue>1234567.89</doubleValue>
+   <floatValue>1234.56</floatValue>
+   <intValue>1234</intValue>
+   <longValue>1234567</longValue>
+   <shortValue>120</shortValue>
+</implicitMethodNameExample>------------- ---------------- ---------------
+
+Testcase: testExplicitMethodNameExample took 0.17 sec
+Testcase: testImplicitMethodNameExample took 0.019 sec
+Testcase: testDirectory took 0 sec

@@ -1,0 +1,116 @@
+Testsuite: org.simpleframework.xml.core.DataTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.297 sec
+------------- Standard Output ---------------
+<scrape section="one" address="http://localhost:9090/">
+   <query-list>
+      <query type="text" name="title">
+         <data><![CDATA[
+             
+               <title> 
+               { 
+                  for $text in .//TITLE
+                  return $text
+               }
+               </title>
+            
+         ]]></data>
+      </query>
+      <query type="image" name="news">
+         <data><![CDATA[
+               
+               <news>
+               { 
+                  for $text in .//B
+                  return $text
+               }
+               </news>
+            
+         ]]></data>
+      </query>
+   </query-list>
+</scrape><scrape section="one" address="http://localhost:9090/">
+   <query-list>
+      <query type="text" name="title">
+         <data><![CDATA[
+             
+               <title> 
+               { 
+                  for $text in .//TITLE
+                  return $text
+               }
+               </title>
+            
+         ]]></data>
+      </query>
+      <query type="image" name="news">
+         <data><![CDATA[
+               
+               <news>
+               { 
+                  for $text in .//B
+                  return $text
+               }
+               </news>
+            
+         ]]></data>
+      </query>
+   </query-list>
+</scrape>
+<scrape ID="0" section="one" address="http://localhost:9090/">
+   <query-list ID="1">
+      <query ID="2" type="text" name="title">
+         <data ID="3"><![CDATA[
+             
+               <title> 
+               { 
+                  for $text in .//TITLE
+                  return $text
+               }
+               </title>
+            
+         ]]></data>
+      </query>
+      <query ID="4" type="image" name="news">
+         <data ID="5"><![CDATA[
+               
+               <news>
+               { 
+                  for $text in .//B
+                  return $text
+               }
+               </news>
+            
+         ]]></data>
+      </query>
+   </query-list>
+</scrape><Scrape ID="0" section="one" address="http://localhost:9090/">
+   <QueryList ID="1">
+      <Query ID="2" type="text" name="title">
+         <Data ID="3"><![CDATA[
+             
+               <title> 
+               { 
+                  for $text in .//TITLE
+                  return $text
+               }
+               </title>
+            
+         ]]></Data>
+      </Query>
+      <Query ID="4" type="image" name="news">
+         <Data ID="5"><![CDATA[
+               
+               <news>
+               { 
+                  for $text in .//B
+                  return $text
+               }
+               </news>
+            
+         ]]></Data>
+      </Query>
+   </QueryList>
+</Scrape>------------- ---------------- ---------------
+
+Testcase: testDataFromByteStream took 0.282 sec
+Testcase: testDirectory took 0 sec

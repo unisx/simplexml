@@ -1,0 +1,27 @@
+Testsuite: org.simpleframework.xml.transform.DateTransformTest
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.438 sec
+------------- Standard Output ---------------
+<dateExample attribute="2008-10-18 16:18:44.349 BST">
+   <array length="1">
+      <date>2008-10-18 16:18:44.349 BST</date>
+   </array>
+   <element>2008-10-18 16:18:44.349 BST</element>
+   <list class="java.util.ArrayList">
+      <date>2008-10-18 16:18:44.349 BST</date>
+      <date>2008-10-18 16:18:44.349 BST</date>
+   </list>
+</dateExample><dateExample id="0" attribute="2008-10-18 16:18:44.532 BST">
+   <array length="1" id="1">
+      <date id="2">2008-10-18 16:18:44.532 BST</date>
+   </array>
+   <element reference="2"/>
+   <list class="java.util.ArrayList" id="3">
+      <date reference="2"/>
+      <date reference="2"/>
+   </list>
+</dateExample>------------- ---------------- ---------------
+
+Testcase: testDate took 0.018 sec
+Testcase: testPersistence took 0.182 sec
+Testcase: testCyclicPersistence took 0.232 sec
+Testcase: testDirectory took 0 sec
