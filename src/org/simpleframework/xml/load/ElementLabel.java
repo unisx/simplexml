@@ -87,6 +87,20 @@ class ElementLabel implements Label {
    }
    
    /**
+    * This is used to provide a configured empty value used when the
+    * annotated value is null. This ensures that XML can be created
+    * with required details regardless of whether values are null or
+    * not. It also provides a means for sensible default values.
+    * 
+    * @param root this is the source object for the serialization
+    * 
+    * @return this returns the string to use for default values
+    */
+   public Object getEmpty(Source root) {
+      return null;
+   }
+   
+   /**
     * This is used to acquire the name of the element or attribute
     * that is used by the class schema. The name is determined by
     * checking for an override within the annotation. If it contains
@@ -185,18 +199,6 @@ class ElementLabel implements Label {
     */
    public boolean isData() {
       return label.data();
-   }
-   
-   /**
-    * This is used to provide a configured empty value used when the
-    * annotated value is null. This ensures that XML can be created
-    * with required details regardless of whether values are null or
-    * not. It also provides a means for sensible default values.
-    * 
-    * @return this returns the string to use for default values
-    */
-   public String getEmpty() {
-      return null;
    }
    
    /**

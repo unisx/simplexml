@@ -111,7 +111,6 @@ public class ScannerTest extends TestCase {
       for(Label label : scanner.getElements()) {
          assertTrue(label.getName() == intern(label.getName()));
          assertTrue(label.getEntry() == intern(label.getEntry()));
-         assertTrue(label.getEmpty() == intern(label.getEmpty()));
          
          types.add(label.getType());
       }
@@ -120,7 +119,6 @@ public class ScannerTest extends TestCase {
       for(Label label : scanner.getAttributes()) {
          assertTrue(label.getName() == intern(label.getName()));
          assertTrue(label.getEntry() == intern(label.getEntry()));
-         assertTrue(label.getEmpty() == intern(label.getEmpty()));
          
          types.add(label.getType());
       }
@@ -140,7 +138,6 @@ public class ScannerTest extends TestCase {
       for(Label label : scanner.getElements()) {
          assertTrue(label.getName() == intern(label.getName()));
          assertTrue(label.getEntry() == intern(label.getEntry()));
-         assertTrue(label.getEmpty() == intern(label.getEmpty()));
          
          types.add(label.getType());
       }
@@ -151,7 +148,6 @@ public class ScannerTest extends TestCase {
       for(Label label : scanner.getAttributes()) {
          assertTrue(label.getName() == intern(label.getName()));
          assertTrue(label.getEntry() == intern(label.getEntry()));
-         assertTrue(label.getEmpty() == intern(label.getEmpty()));
          
          types.add(label.getType());
       }

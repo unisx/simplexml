@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.672 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.217 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -29,7 +29,7 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.672 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.load.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent interface java.util.List
 	at org.simpleframework.xml.load.TextLabel.getConverter(TextLabel.java:92)
-	at org.simpleframework.xml.load.CacheLabel.getConverter(CacheLabel.java:135)
+	at org.simpleframework.xml.load.CacheLabel.getConverter(CacheLabel.java:129)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:353)
 	at org.simpleframework.xml.load.Composite.readText(Composite.java:272)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:192)
@@ -59,11 +59,11 @@ org.simpleframework.xml.load.TextException: Cannot use @org.simpleframework.xml.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.531 sec
-Testcase: testData took 0.031 sec
-Testcase: testDuplicate took 0 sec
-Testcase: testIllegalElement took 0.015 sec
-Testcase: testEmpty took 0 sec
-Testcase: testOptional took 0.016 sec
-Testcase: testNonPrimitive took 0.016 sec
-Testcase: testDirectory took 0 sec
+Testcase: testText took 0.166 sec
+Testcase: testData took 0.008 sec
+Testcase: testDuplicate took 0.002 sec
+Testcase: testIllegalElement took 0.007 sec
+Testcase: testEmpty took 0.001 sec
+Testcase: testOptional took 0.012 sec
+Testcase: testNonPrimitive took 0.011 sec
+Testcase: testDirectory took 0.001 sec

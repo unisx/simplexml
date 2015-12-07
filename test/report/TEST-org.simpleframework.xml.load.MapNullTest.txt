@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.287 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -72,10 +72,6 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
 </primitiveMap><primitiveMap>
    <table class="java.util.HashMap">
       <entry>
-         <string/>
-         <bigDecimal>4</bigDecimal>
-      </entry>
-      <entry>
          <string>a</string>
          <bigDecimal>1</bigDecimal>
       </entry>
@@ -84,19 +80,16 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
          <bigDecimal/>
       </entry>
       <entry>
+         <string/>
+         <bigDecimal>4</bigDecimal>
+      </entry>
+      <entry>
          <string>b</string>
          <bigDecimal>2</bigDecimal>
       </entry>
    </table>
 </primitiveMap><complexMap>
    <map class="java.util.HashMap">
-      <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
       <entry>
          <compositeKey>
             <name>name.1</name>
@@ -115,6 +108,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
          <mapEntry>
             <name>2</name>
             <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
          </mapEntry>
       </entry>
       <entry>
@@ -138,13 +138,6 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
          </mapEntry>
       </entry>
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.2</name>
             <address>address.2</address>
@@ -152,6 +145,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
          <mapEntry>
             <name>2</name>
             <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
          </mapEntry>
       </entry>
       <entry>
@@ -164,13 +164,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.782 sec
    </map>
 </complexMap>------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.484 sec
-Testcase: testEmptyCompositeBlankValue took 0.016 sec
-Testcase: testEmptyCompositeKey took 0.015 sec
-Testcase: testEmptyCompositeBlankKey took 0.032 sec
-Testcase: testEmptyPrimitiveValue took 0.031 sec
-Testcase: testEmptyPrimitiveBlankValue took 0.016 sec
-Testcase: testEmptyPrimitiveKey took 0.016 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.031 sec
-Testcase: testNullValue took 0.094 sec
-Testcase: testDirectory took 0 sec
+Testcase: testEmptyCompositeValue took 0.174 sec
+Testcase: testEmptyCompositeBlankValue took 0.007 sec
+Testcase: testEmptyCompositeKey took 0.007 sec
+Testcase: testEmptyCompositeBlankKey took 0.006 sec
+Testcase: testEmptyPrimitiveValue took 0.017 sec
+Testcase: testEmptyPrimitiveBlankValue took 0.007 sec
+Testcase: testEmptyPrimitiveKey took 0.006 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.007 sec
+Testcase: testNullValue took 0.042 sec
+Testcase: testDirectory took 0.001 sec

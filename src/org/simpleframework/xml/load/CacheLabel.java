@@ -47,11 +47,6 @@ class CacheLabel implements Label {
    private final Class type;
    
    /**
-    * This is used to represent the empty string for the label.
-    */
-   private final String empty;
-   
-   /**
     * This is used to represent the name of the entry item use.
     */
    private final String entry;
@@ -101,7 +96,6 @@ class CacheLabel implements Label {
       this.override = label.getOverride();
       this.inline = label.isInline();
       this.type = label.getType();
-      this.empty = label.getEmpty();
       this.entry = label.getEntry();
       this.name = label.getName();
       this.data = label.isData();
@@ -136,6 +130,20 @@ class CacheLabel implements Label {
    }
    
    /**
+    * This is used to provide a configured empty value used when the
+    * annotated value is null. This ensures that XML can be created
+    * with required details regardless of whether values are null or
+    * not. It also provides a means for sensible default values.
+    * 
+    * @param root this is the source object for the serialization
+    * 
+    * @return this returns the string to use for default values
+    */
+   public Object getEmpty(Source root) throws Exception {
+      return label.getEmpty(root);
+   }
+   
+   /**
     * This returns the dependent type for the annotation. This type
     * is the type other than the annotated field or method type that
     * the label depends on. For the <code>ElementList</code> and 
@@ -146,18 +154,6 @@ class CacheLabel implements Label {
     */
    public Class getDependant() throws Exception {
       return depend;
-   }
-   
-   /**
-    * This is used to provide a configured empty value used when the
-    * annotated value is null. This ensures that XML can be created
-    * with required details regardless of whether values are null or
-    * not. It also provides a means for sensible default values.
-    * 
-    * @return this returns the string to use for default values
-    */
-   public String getEmpty() {
-      return empty;
    }
    
    /**

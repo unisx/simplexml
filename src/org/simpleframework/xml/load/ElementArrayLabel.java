@@ -115,6 +115,25 @@ class ElementArrayLabel implements Label {
    }
    
    /**
+    * This is used to provide a configured empty value used when the
+    * annotated value is null. This ensures that XML can be created
+    * with required details regardless of whether values are null or
+    * not. It also provides a means for sensible default values.
+    * 
+    * @param root this is the source object for the serialization
+    * 
+    * @return this returns the string to use for default values
+    */
+   public Object getEmpty(Source root) throws Exception {
+      Factory factory = new ArrayFactory(root, type);
+      
+      if(!label.empty()) {
+         return factory.getInstance();
+      }
+      return null;
+   }
+   
+   /**
     * This is used to either provide the entry value provided within
     * the annotation or compute a entry value. If the entry string
     * is not provided the the entry value is calculated as the type
@@ -217,18 +236,6 @@ class ElementArrayLabel implements Label {
     */
    public boolean isData() {
       return label.data();
-   }
-   
-   /**
-    * This is used to provide a configured empty value used when the
-    * annotated value is null. This ensures that XML can be created
-    * with required details regardless of whether values are null or
-    * not. It also provides a means for sensible default values.
-    * 
-    * @return this returns the string to use for default values
-    */
-   public String getEmpty() {
-      return null;
    }
    
    /**

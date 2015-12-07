@@ -1,9 +1,9 @@
 Testsuite: org.simpleframework.xml.load.DataTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.516 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
-      <query name="title" type="text">
+      <query type="text" name="title">
          <data><![CDATA[
              
                <title> 
@@ -15,7 +15,7 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.516 sec
             
          ]]></data>
       </query>
-      <query name="news" type="image">
+      <query type="image" name="news">
          <data><![CDATA[
                
                <news>
@@ -30,5 +30,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.516 sec
    </query-list>
 </scrape>------------- ---------------- ---------------
 
-Testcase: testData took 0.5 sec
+Testcase: testData took 0.175 sec
 Testcase: testDirectory took 0 sec

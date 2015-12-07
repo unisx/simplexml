@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.PerformanceTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 20.672 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 12.501 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -459,14 +459,14 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 20.672 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-Took '5469' ms to process 10000 documents
-Took '6891' ms to process 10000 documents with templates
-Took '5281' ms to process 10000 documents with an empty filter
-Took '2406' ms to write 10000 documents
+Took '3607' ms to process 10000 documents
+Took '3384' ms to process 10000 documents with templates
+Took '3071' ms to process 10000 documents with an empty filter
+Took '2174' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testBasicDocument took 6 sec
-Testcase: testTemplateDocument took 6.922 sec
-Testcase: testEmptyFilter took 5.313 sec
-Testcase: testBasicWrite took 2.437 sec
+Testcase: testBasicDocument took 3.821 sec
+Testcase: testTemplateDocument took 3.399 sec
+Testcase: testEmptyFilter took 3.084 sec
+Testcase: testBasicWrite took 2.189 sec
 Testcase: testDirectory took 0 sec

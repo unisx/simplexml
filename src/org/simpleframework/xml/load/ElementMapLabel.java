@@ -104,6 +104,25 @@ class ElementMapLabel implements Label {
    }  
    
    /**
+    * This is used to provide a configured empty value used when the
+    * annotated value is null. This ensures that XML can be created
+    * with required details regardless of whether values are null or
+    * not. It also provides a means for sensible default values.
+    * 
+    * @param root this is the source object for the serialization
+    * 
+    * @return this returns the string to use for default values
+    */
+   public Object getEmpty(Source root) throws Exception {
+      Factory factory = new MapFactory(root, type);
+      
+      if(!label.empty()) {
+         return factory.getInstance();
+      }
+      return null;
+   }
+   
+   /**
     * This is used to acquire the dependant type for the annotated
     * list. This will simply return the type that the map object is
     * composed to hold. This must be a serializable type, that is,
@@ -228,18 +247,6 @@ class ElementMapLabel implements Label {
     */
    public boolean isInline() {
       return label.inline();
-   }
-   
-   /**
-    * This is used to provide a configured empty value used when the
-    * annotated value is null. This ensures that XML can be created
-    * with required details regardless of whether values are null or
-    * not. It also provides a means for sensible default values.
-    * 
-    * @return this returns the string to use for default values
-    */
-   public String getEmpty() {
-      return null;
    }
    
    /**

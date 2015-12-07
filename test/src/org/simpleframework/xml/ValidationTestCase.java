@@ -61,6 +61,9 @@ public class ValidationTestCase extends XMLTestCase {
       assertTrue(directory.exists());           
    }
 
+   public static synchronized void validate(Serializer out, Object type) throws Exception {
+      validate(type, out);
+   }
     public static synchronized void validate(Object type, Serializer out) throws Exception {
         File destination = new File(directory, type.getClass().getSimpleName() + ".xml");
         OutputStream file = new FileOutputStream(destination);

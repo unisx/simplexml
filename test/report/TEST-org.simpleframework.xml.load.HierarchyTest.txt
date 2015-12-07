@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.HierarchyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.468 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.165 sec
 ------------- Standard Output ---------------
 <specialized>
    <a>a</a>
@@ -10,5 +10,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.468 sec
    <two>2.0</two>
 </specialized>------------- ---------------- ---------------
 
-Testcase: testHierarchy took 0.438 sec
+Testcase: testHierarchy took 0.161 sec
 Testcase: testDirectory took 0 sec

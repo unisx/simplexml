@@ -37,6 +37,18 @@ package org.simpleframework.xml.load;
 interface Label {
 
    /**
+    * This is used to provide a configured empty value used when the
+    * annotated value is null. This ensures that XML can be created
+    * with required details regardless of whether values are null or
+    * not. It also provides a means for sensible default values.
+    * 
+    * @param root this is the source object for the serialization
+    * 
+    * @return this returns the string to use for default values
+    */
+   public Object getEmpty(Source root) throws Exception;
+   
+   /**
     * This method returns a <code>Converter</code> which can be used to
     * convert an XML node into an object value and vice versa. The 
     * converter requires only the source object in order to perform
@@ -78,17 +90,7 @@ interface Label {
     * 
     * @return this returns the name of the XML entry element used 
     */
-   public String getEntry() throws Exception;  
-   
-   /**
-    * This is used to provide a configured empty value used when the
-    * annotated value is null. This ensures that XML can be created
-    * with required details regardless of whether values are null or
-    * not. It also provides a means for sensible default values.
-    * 
-    * @return this returns the string to use for default values
-    */
-   public String getEmpty();
+   public String getEntry() throws Exception; 
    
    /**
     * This is used to acquire the contact object for this label. The 

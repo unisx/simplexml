@@ -361,7 +361,7 @@ class Composite implements Converter {
             throw new ValueRequiredException("Empty value for %s in %s at %s", label, type, line);
          }
       } else {
-         if(object != label.getEmpty()) {      
+         if(object != label.getEmpty(root)) {      
             store.put(label, object);
          }
       }         
@@ -387,6 +387,11 @@ class Composite implements Converter {
       for(Label label : map) {
          if(label.isRequired()) {
             throw new ValueRequiredException("Unable to satisfy %s for %s at %s", label, type, line);
+         }
+         Object value = label.getEmpty(root);
+         
+         if(value != null) {
+            store.put(label, value);
          }
       }      
    }
@@ -689,7 +694,7 @@ class Composite implements Converter {
          Object value = contact.get(source);
          
          if(value == null) {
-            value = label.getEmpty();
+            value = label.getEmpty(root);
          }
          if(value == null && label.isRequired()) {
             throw new AttributeException("Value for %s is null", label);
@@ -774,7 +779,7 @@ class Composite implements Converter {
          Object value = contact.get(source);
           
          if(value == null) {
-            value = label.getEmpty();
+            value = label.getEmpty(root);
          }
          if(value == null && label.isRequired()) {
             throw new TextException("Value for %s is null", label);

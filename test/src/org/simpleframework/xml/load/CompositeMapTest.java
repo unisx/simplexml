@@ -51,6 +51,10 @@ public class CompositeMapTest extends TestCase {
          this.valueType = valueType;
       }
       
+      public boolean empty() {
+         return true;
+      }
+      
       public boolean attribute() {
          return attribute;
       }

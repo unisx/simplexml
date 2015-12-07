@@ -86,7 +86,7 @@ class TextLabel implements Label {
     * @return this returns a converter for serializing XML elements
     */
    public Converter getConverter(Source root) throws Exception {
-      String ignore = getEmpty();
+      String ignore = getEmpty(root);
       
       if(!Factory.isPrimitive(type)) {
          throw new TextException("Cannot use %s to represent %s", label, type);
@@ -100,9 +100,11 @@ class TextLabel implements Label {
     * with required details regardless of whether values are null or
     * not. It also provides a means for sensible default values.
     * 
+    * @param root this is the source object for the serialization
+    * 
     * @return this returns the string to use for default values
     */
-   public String getEmpty() {
+   public String getEmpty(Source root) {
       if(detail.isEmpty(empty)) {
          return null;
       }

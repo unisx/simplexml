@@ -93,6 +93,20 @@ class Pointer implements Label {
    }
    
    /**
+    * This is used to provide a configured empty value used when the
+    * annotated value is null. This ensures that XML can be created
+    * with required details regardless of whether values are null or
+    * not. It also provides a means for sensible default values.
+    *
+    * @param root this is the source object for the serialization
+    * 
+    * @return this returns the string to use for default values
+    */
+   public Object getEmpty(Source root) throws Exception {
+      return label.getEmpty(root);
+   }
+   
+   /**
     * This is used to acquire the contact object for this label. The 
     * contact retrieved can be used to set any object or primitive that
     * has been deserialized, and can also be used to acquire values to
@@ -116,18 +130,6 @@ class Pointer implements Label {
     */
    public Class getDependant() throws Exception {
       return label.getDependant();
-   }
-   
-   /**
-    * This is used to provide a configured empty value used when the
-    * annotated value is null. This ensures that XML can be created
-    * with required details regardless of whether values are null or
-    * not. It also provides a means for sensible default values.
-    * 
-    * @return this returns the string to use for default values
-    */
-   public String getEmpty() {
-      return label.getEmpty();
    }
    
    /**
