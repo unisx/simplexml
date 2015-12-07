@@ -100,7 +100,6 @@ final class Composite implements Converter {
    public Object read(Node node) throws Exception {
       Object source = factory.getInstance(node);      
       read(node, source);
-      process(source);
       return source;
    }
    
@@ -119,8 +118,11 @@ final class Composite implements Converter {
     * @param source the object whose fields are to be deserialized
     */
    private void read(Node node, Object source) throws Exception {
-      Visitor visitor = root.getVisitor(source);           
-      read(node, source, visitor);
+      Schema schema = root.getSchema(source);
+      
+      read(node, source, schema);
+      schema.validate(source);
+      schema.commit(source);
    }
    
    /**
@@ -136,11 +138,11 @@ final class Composite implements Converter {
     * 
     * @param node the DOM element field values are deserialized from
     * @param source ths object whose fields are to be deserialized
-    * @param visitor this object visits the objects fields
+    * @param schema this object visits the objects fields
     */
-   private void read(Node node, Object source, Visitor visitor) throws Exception {
-      readAttributes(node, source, visitor);
-      readElements(node, source, visitor);
+   private void read(Node node, Object source, Schema schema) throws Exception {
+      readAttributes(node, source, schema);
+      readElements(node, source, schema);
    }   
 
    /**
@@ -150,19 +152,19 @@ final class Composite implements Converter {
     * field values within the source object.
     * <p>
     * Once all attributes within the DOM element have been evaluated
-    * the <code>Visitor</code> is checked to ensure that there are no
+    * the <code>Schema</code> is checked to ensure that there are no
     * required fields annotated with the <code>Attribute</code> that
     * remain. If any required attribute remains an exception is thrown. 
     * 
     * @param node this is the DOM element to be evaluated
     * @param source the source object which will be deserialized
-    * @param visitor this is used to visit the attribute fields
+    * @param schema this is used to visit the attribute fields
     * 
     * @throws Exception thrown if any required attributes remain
     */
-   private void readAttributes(Node node, Object source, Visitor visitor) throws Exception {
+   private void readAttributes(Node node, Object source, Schema schema) throws Exception {
       NamedNodeMap list = node.getAttributes();
-      LabelMap map = visitor.getAttributes();
+      LabelMap map = schema.getAttributes();
 
       for(int i = 0; i < list.getLength(); i++) {
          readAttribute(list.item(i), source, map);
@@ -177,19 +179,19 @@ final class Composite implements Converter {
     * composite objects depending on the field annotation.
     * <p>
     * Once all elements within the DOM element have been evaluated
-    * the <code>Visitor</code> is checked to ensure that there are no
+    * the <code>Schema</code> is checked to ensure that there are no
     * required fields annotated with the <code>Element</code> that
     * remain. If any required element remains an exception is thrown. 
     * 
     * @param node this is the DOM element to be evaluated
     * @param source the source object which will be deserialized
-    * @param visitor this is used to visit the element fields
+    * @param schema this is used to visit the element fields
     * 
     * @throws Exception thrown if any required elements remain
     */
-   private void readElements(Node node, Object source, Visitor visitor) throws Exception {
+   private void readElements(Node node, Object source, Schema schema) throws Exception {
       NodeList list = node.getChildNodes();
-      LabelMap map = visitor.getElements();
+      LabelMap map = schema.getElements();
       
       for(int i = 0; i < list.getLength(); i++) {
          Node next = list.item(i);
@@ -295,39 +297,6 @@ final class Composite implements Converter {
    }
    
    /**
-    * This is used to perform post processing of a deserialized object
-    * so that validation can be performed. Callbacks to the object are
-    * performed if the object implements this <code>Persistable</code>
-    * interface. The <code>validate</code> method is invoked first
-    * followed by the <code>commit</code> method. 
-    * 
-    * @param source this is the object that has been deserialized
-    * 
-    * @throws Exception if the deserialized object throws an exception
-    */
-   private void process(Object source) throws Exception {
-      if(source instanceof Persistable) {
-         process((Persistable)source);
-      }
-   }
-   
-   /**
-    * This is used to perform post processing of a deserialized object
-    * so that validation can be performed. Callbacks to the object are
-    * performed if the object implements this <code>Persistable</code>
-    * interface. The <code>validate</code> method is invoked first
-    * followed by the <code>commit</code> method. 
-    * 
-    * @param source this is the object that has been deserialized
-    * 
-    * @throws Exception if the deserialized object throws an exception
-    */
-   private void process(Persistable source) throws Exception {
-      source.validate();
-      source.commit();
-   }
-   
-   /**
     * This <code>write</code> method is used to perform serialization of
     * the given source object. Serialization is performed by appending
     * elements and attributes from the source object to the provided DOM
@@ -341,8 +310,14 @@ final class Composite implements Converter {
     * @throws Exception thrown if there is a serialization problem
     */
    public void write(Object source, Element node) throws Exception {
-      Visitor visitor = root.getVisitor(source);           
-      write(source, node, visitor);
+      Schema schema = root.getSchema(source);
+      
+      try {
+         schema.persist(source); 
+         write(source, node, schema);
+      } finally {
+         schema.complete(source);
+      }
    }
    
    /**
@@ -355,13 +330,13 @@ final class Composite implements Converter {
     * 
     * @param source this is the source object to be serialized
     * @param node the DOM element the object is to be serialized to
-    * @param visitor this is used to track the referenced fields 
+    * @param schema this is used to track the referenced fields 
     * 
     * @throws Exception thrown if there is a serialization problem
     */
-   private void write(Object source, Element node, Visitor visitor) throws Exception {
-      writeAttributes(source, node, visitor);
-      writeElements(source, node, visitor);      
+   private void write(Object source, Element node, Schema schema) throws Exception {
+      writeAttributes(source, node, schema);
+      writeElements(source, node, schema);      
    }
 
    /**
@@ -374,12 +349,12 @@ final class Composite implements Converter {
     * 
     * @param source this is the source object to be serialized
     * @param node this is the DOM element to write attributes to
-    * @param visitor this is used to track the referenced attributes
+    * @param schema this is used to track the referenced attributes
     * 
     * @throws Exception thrown if there is a serialization problem
     */
-   private void writeAttributes(Object source, Element node, Visitor visitor) throws Exception {
-      LabelMap attributes = visitor.getAttributes();
+   private void writeAttributes(Object source, Element node, Schema schema) throws Exception {
+      LabelMap attributes = schema.getAttributes();
 
       for(Label label : attributes) {
          Field field = label.getField();
@@ -402,12 +377,12 @@ final class Composite implements Converter {
     * 
     * @param source this is the source object to be serialized
     * @param node this is the DOM element to write elements to
-    * @param visitor this is used to track the referenced elements
+    * @param schema this is used to track the referenced elements
     * 
     * @throws Exception thrown if there is a serialization problem
     */
-   private void writeElements(Object source, Element node, Visitor visitor) throws Exception {
-      LabelMap elements = visitor.getElements();
+   private void writeElements(Object source, Element node, Schema schema) throws Exception {
+      LabelMap elements = schema.getElements();
       
       for(Label label : elements) {
          Field field = label.getField();

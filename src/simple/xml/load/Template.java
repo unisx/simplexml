@@ -20,8 +20,6 @@
  
 package simple.xml.load;
 
-import java.io.Serializable;
-
 /** 
  * This is primarily used to replace the <code>StringBuffer</code> 
  * class, as a way for the <code>TemplateEngine</code> to store the 

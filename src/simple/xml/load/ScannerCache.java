@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 
  * @author Niall Gallagher
  */
-final class SchemaCache extends ConcurrentHashMap<Class, Schema> {
+final class ScannerCache extends ConcurrentHashMap<Class, Scanner> {
 
    /**
     * Constructor for the <code>SchemaCache</code> object. This is
@@ -38,7 +38,7 @@ final class SchemaCache extends ConcurrentHashMap<Class, Schema> {
     * objects they represent. To ensure the cache can be used by
     * multiple threads this extends the concurrent hash map.
     */
-   public SchemaCache() {
+   public ScannerCache() {
       super();
    }
 }

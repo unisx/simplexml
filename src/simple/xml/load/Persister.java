@@ -34,6 +34,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.io.StringReader;
 import java.io.OutputStream;
 import java.io.InputStream;
 import java.io.Reader;
@@ -120,6 +121,24 @@ public class Persister implements Serializer {
    public Persister(Filter filter) {
       this.filter = filter;           
    }        
+   
+   /**
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and convert it into an object
+    * of the specified type. If the XML source cannot be deserialized
+    * or there is a problem building the object graph an exception
+    * is thrown. The instance deserialized is returned.
+    * 
+    * @param type this is the class type to be deserialized from XML
+    * @param source this provides the source of the XML document
+    * 
+    * @return the object deserialized from the XML document 
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
+   public Object read(Class type, String source) throws Exception {
+      return read(type, new StringReader(source));            
+   }
    
    /**
     * This <code>read</code> method will read the contents of the XML

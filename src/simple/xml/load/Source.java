@@ -36,7 +36,7 @@ import java.util.Map;
  * required as tt acts as a factory for objects used in the process.
  * <p>
  * For serialization the source object is required as a factory for
- * <code>Visitor</code> objects, which are used to visit each field 
+ * <code>Schema</code> objects, which are used to visit each field 
  * in the class that can be serialized. Also, it acts as a contextual
  * factory for <code>Element</code> objects that are used to build a
  * DOM document.
@@ -44,7 +44,7 @@ import java.util.Map;
  * When deserializing the source object provides the contextual data
  * used to replace template variables extracted from the XML source.
  * This is performed using the <code>Filter</code> object. Also, as 
- * in serialization it acts as a factory for the <code>Visitor</code> 
+ * in serialization it acts as a factory for the <code>Schema</code> 
  * objects used to examine the serializable fields of an object.
  * 
  * @author Niall Gallagher
@@ -56,12 +56,12 @@ final class Source {
    /**
     * This is used to cache all schemas built to represent a class.
     * 
-    * @see simple.xml.load.Schema
+    * @see simple.xml.load.Scanner
     */
-   private static SchemaCache cache;
+   private static ScannerCache cache;
 
    static {
-      cache = new SchemaCache();           
+      cache = new ScannerCache();           
    }
    
    /**
@@ -131,39 +131,39 @@ final class Source {
    }
 
    /**
-    * This creates a <code>Visitor</code> object that can be used to
-    * examine the fields within the XML class schema. The visitor
+    * This creates a <code>Schema</code> object that can be used to
+    * examine the fields within the XML class schema. The schema
     * maintains information when a field from within the schema is
     * visited, this allows the serialization and deserialization
     * process to determine if all required XML annotations are used.
     * 
-    * @param source the source object the visitor is created for
+    * @param source the source object the schema is created for
     * 
-    * @return a new visitor that can track visits within the schema
+    * @return a new schema that can track visits within the schema
     */
-   public Visitor getVisitor(Object source) {
-      return getVisitor(source.getClass());           
+   public Schema getSchema(Object source) {
+      return getSchema(source.getClass());           
    }
 
    /**
-    * This creates a <code>Visitor</code> object that can be used to
-    * examine the fields within the XML class schema. The visitor
+    * This creates a <code>Schema</code> object that can be used to
+    * examine the fields within the XML class schema. The schema
     * maintains information when a field from within the schema is
     * visited, this allows the serialization and deserialization
     * process to determine if all required XML annotations are used.
     * 
-    * @param type the schema class the visitor is created for
+    * @param type the schema class the schema is created for
     * 
-    * @return a new visitor that can track visits within the schema
+    * @return a new schema that can track visits within the schema
     */   
-   public Visitor getVisitor(Class type) {
-      Schema schema = cache.get(type);
+   public Schema getSchema(Class type) {
+      Scanner schema = cache.get(type);
       
       if(schema == null) {
-         schema = new Schema(type);
+         schema = new Scanner(type);
          cache.put(type, schema);
       }
-      return new Visitor(schema);
+      return new Schema(schema);
    }
 
    /**

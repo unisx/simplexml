@@ -57,6 +57,22 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
+   public Object read(Class type, String source) throws Exception;
+        
+   /**
+    * This <code>read</code> method will read the contents of the DOM
+    * document provided and convert it to an object of the specified
+    * type. If the DOM document cannot be deserialized or there is a
+    * problem building the object graph an exception is thrown. The
+    * object graph deserialized is returned.
+    * 
+    * @param type this is the XML schema class to be deserialized
+    * @param source the document the object is deserialized from
+    * 
+    * @return the object deserialized from the DOM document given
+    * 
+    * @throws Exception if the object cannot be fully deserialized
+    */
    public Object read(Class type, Document source) throws Exception;
           
    /**
