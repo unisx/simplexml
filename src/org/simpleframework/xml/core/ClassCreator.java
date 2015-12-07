@@ -35,7 +35,7 @@ class ClassCreator implements Creator {
    /**
     * This contains a list of all the builders for the class.
     */
-   private final List<Builder> list;
+   private final List<Builder> list;   
    
    /**
     * This represents the default no argument constructor used.
@@ -145,6 +145,18 @@ class ClassCreator implements Creator {
     */
    public Parameter getParameter(String name) {
       return index.get(name);
+   }
+   
+   /**
+    * This is used to acquire all parameters annotated for the class
+    * schema. Providing all parameters ensures that they can be
+    * validated against the annotated methods and fields to ensure
+    * that each parameter is valid and has a corrosponding match.
+    * 
+    * @return this returns the parameters declared in the schema     
+    */
+   public List<Parameter> getParameters() {
+      return index.getParameters();
    }
    
    /**

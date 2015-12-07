@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 4.234 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 3.89 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -451,16 +451,19 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 4.234 sec
          <text>one</text>
          <description>this is an extended entry</description>
       </entry>
+      <entry id="3">
+         <text>three</text>
+      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
       </entry>
-      <entry id="3">
-         <text>three</text>
-      </entry>
    </list>
 </test><test name="example">
    <list class="java.util.HashSet">
+      <entry id="3">
+         <text>three</text>
+      </entry>
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="1">
          <text>one</text>
          <description>this is an extended entry</description>
@@ -468,9 +471,6 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 4.234 sec
       <entry class="org.simpleframework.xml.core.CollectionTest$ExtendedEntry" id="2">
          <text>two</text>
          <description>this is the second one</description>
-      </entry>
-      <entry id="3">
-         <text>three</text>
       </entry>
    </list>
 </test>org.simpleframework.xml.core.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
@@ -731,24 +731,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:768)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.156 sec
-Testcase: testSortedSet took 0.766 sec
+Testcase: testSet took 0.172 sec
+Testcase: testSortedSet took 0.765 sec
 Testcase: testList took 0.094 sec
-Testcase: testHashSet took 0.062 sec
-Testcase: testTreeSet took 0.407 sec
-Testcase: testArrayList took 0.046 sec
-Testcase: testSortedSetToSet took 0 sec
-Testcase: testExtendedEntry took 0.016 sec
-Testcase: testTypeFromFieldList took 0.031 sec
-Testcase: testTypeFromMethodList took 0.907 sec
-Testcase: testPrimitiveCollection took 1.156 sec
-Testcase: testCompositeCollection took 0.109 sec
-Testcase: testPrimitiveDefaultCollection took 0.453 sec
-Testcase: testSetToSortedSet took 0 sec
+Testcase: testHashSet took 0.047 sec
+Testcase: testTreeSet took 0.047 sec
+Testcase: testArrayList took 0.047 sec
+Testcase: testSortedSetToSet took 0.015 sec
+Testcase: testExtendedEntry took 0 sec
+Testcase: testTypeFromFieldList took 0.219 sec
+Testcase: testTypeFromMethodList took 1.063 sec
+Testcase: testPrimitiveCollection took 1.187 sec
+Testcase: testCompositeCollection took 0.093 sec
+Testcase: testPrimitiveDefaultCollection took 0.094 sec
+Testcase: testSetToSortedSet took 0.016 sec
 Testcase: testListToSet took 0 sec
 Testcase: testInvalidList took 0 sec
 Testcase: testUnknownCollectionList took 0 sec
 Testcase: testAbstractList took 0 sec
-Testcase: testNotACollection took 0 sec
+Testcase: testNotACollection took 0.015 sec
 Testcase: testMissingCollection took 0 sec
-Testcase: testDirectory took 0.015 sec
+Testcase: testDirectory took 0 sec

@@ -43,10 +43,10 @@ public class ConstructorInjectionTest extends ValidationTestCase {
    @Root
    private static class Example {
       
-      @Element(name="integer")
+      @Element
       private int integer;   
       
-      @Element(name="string", required=false) 
+      @Element(required=false) 
       private String string;
       
       @Attribute(name="number", required=false) 

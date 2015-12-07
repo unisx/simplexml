@@ -20,7 +20,9 @@
 
 package org.simpleframework.xml.core;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  * The <code>Index</code> object is used to represent an index
@@ -33,11 +35,6 @@ import java.util.LinkedHashMap;
  * @author Niall Gallagher
  */
 class Index extends LinkedHashMap<String, Parameter> {
-    
-   /**
-    * This represents a blank array of parameter objects.
-    */
-   private final Parameter[] blank;
    
    /**
     * This is the type that the parameters are created for.
@@ -53,7 +50,6 @@ class Index extends LinkedHashMap<String, Parameter> {
     * @param type this is the type the map is created for
     */
    public Index(Class type) {
-      this.blank = new Parameter[]{};
       this.type = type;
    }
    
@@ -67,19 +63,19 @@ class Index extends LinkedHashMap<String, Parameter> {
     * @return this returns the parameter for the position
     */
    public Parameter getParameter(int ordinal) {
-      return getParameters()[ordinal];
+      return getParameters().get(ordinal);
    }
     
    /**
-    * This is used to acquire an array of <code>Parameter</code>
-    * objects in declaration order. This array will help with the
+    * This is used to acquire an list of <code>Parameter</code>
+    * objects in declaration order. This list will help with the
     * resolution of the correct constructor for deserialization
     * of the XML. It also provides a faster method of iteration.
     * 
     * @return this returns the parameters in declaration order
     */
-   public Parameter[] getParameters() {
-      return values().toArray(blank);
+   public List<Parameter> getParameters() {
+      return new ArrayList<Parameter>(values());
    }
  
    /**

@@ -21,6 +21,7 @@
 package org.simpleframework.xml.core;
 
 import java.lang.reflect.Constructor;
+import java.util.List;
 
 /**
  * The <code>Builder</code> object is used to represent an single
@@ -32,17 +33,17 @@ import java.lang.reflect.Constructor;
  * 
  * @author Niall Gallagher
  */
-class Builder {
+class Builder {   
+   
+   /**
+    * This is the list of parameters in the order of declaration. 
+    */
+   private final List<Parameter> list;
 
    /**
     * This is the factory that is used to instantiate the object.
     */
    private final Constructor factory;
-   
-   /**
-    * This is the list of parameters in the order of declaration. 
-    */
-   private final Parameter[] list;
    
    /**
     * This is the map that contains the parameters to be used.
@@ -114,10 +115,10 @@ class Builder {
     * @return this returns the object that has been instantiated
     */
    public Object getInstance(Criteria criteria) throws Exception {
-      Object[] values = new Object[list.length];
+      Object[] values = list.toArray();
       
-      for(int i = 0; i < list.length; i++) {
-         String name = list[i].getName();
+      for(int i = 0; i < list.size(); i++) {
+         String name = list.get(i).getName();
          Variable variable = criteria.remove(name);
          Object value = variable.getValue();
          
@@ -138,8 +139,8 @@ class Builder {
    public int score(Criteria criteria) throws Exception {
       int score = 0;
       
-      for(int i = 0; i < list.length; i++) {
-         String name = list[i].getName();
+      for(int i = 0; i < list.size(); i++) {
+         String name = list.get(i).getName();
          Label label = criteria.get(name);
          
          if(label == null) {

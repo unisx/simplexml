@@ -12,4 +12,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
 </Example>------------- ---------------- ---------------
 
 Testcase: testVersion1 took 0.172 sec
-Testcase: testVersion2 took 0.016 sec
+Testcase: testVersion2 took 0 sec

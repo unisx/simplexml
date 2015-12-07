@@ -451,7 +451,7 @@ public class Persister implements Serializer {
     * @throws Exception if the object cannot be fully deserialized
     */
    public <T> T read(Class<? extends T> type, InputStream source) throws Exception {
-      return (T)read(type, source, "utf-8");           
+      return (T)read(type, NodeBuilder.read(source));           
    }
    
    /**
@@ -767,7 +767,7 @@ public class Persister implements Serializer {
     * @throws Exception if the class XML schema does not fully match
     */
    public boolean validate(Class type, InputStream source) throws Exception {
-      return validate(type, source, "utf-8");           
+      return validate(type, NodeBuilder.read(source));           
    }
    
    /**

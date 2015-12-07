@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ScatterTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 2.14 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 2.157 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -154,9 +154,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 2.14 sec
    <String ID="1">test</String>
 </SimplePrimitiveInlineList>------------- ---------------- ---------------
 
-Testcase: testList took 0.36 sec
-Testcase: testPrimitiveList took 0.25 sec
-Testcase: testInlineNamedList took 0.375 sec
-Testcase: testSimpleList took 0.984 sec
-Testcase: testSimplePrimitiveList took 0.156 sec
+Testcase: testList took 0.391 sec
+Testcase: testPrimitiveList took 0.078 sec
+Testcase: testInlineNamedList took 0.172 sec
+Testcase: testSimpleList took 0.063 sec
+Testcase: testSimplePrimitiveList took 1.453 sec
 Testcase: testDirectory took 0 sec

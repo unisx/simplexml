@@ -75,6 +75,16 @@ interface Creator {
    public Parameter getParameter(String name);
    
    /**
+    * This is used to acquire all parameters annotated for the class
+    * schema. Providing all parameters ensures that they can be
+    * validated against the annotated methods and fields to ensure
+    * that each parameter is valid and has a corrosponding match.
+    * 
+    * @return this returns the parameters declared in the schema     
+    */
+   public List<Parameter> getParameters();
+   
+   /**
     * This is used to acquire all of the <code>Builder</code> objects
     * used to create an instance of the object. Each represents a
     * constructor and contains the parameters to the constructor. 
