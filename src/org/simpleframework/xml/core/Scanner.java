@@ -23,6 +23,7 @@ package org.simpleframework.xml.core;
 import java.beans.Introspector;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
+import java.util.Map;
 
 import org.simpleframework.xml.Attribute;
 import org.simpleframework.xml.Element;
@@ -100,22 +101,6 @@ class Scanner  {
    }      
    
    /**
-    * This is the <code>Version</code> for the scanned class. It 
-    * allows the deserialization process to be configured such that
-    * if the version is different from the schema class none of
-    * the fields and methods are required and unmatched elements
-    * and attributes will be ignored.
-    * 
-    * @return this returns the version of the class that is scanned
-    */
-   public Version getRevision() {
-      if(version != null) {
-         return version.getContact().getAnnotation(Version.class);
-      }
-      return null;
-   }
-   
-   /**
     * This is used to acquire the <code>Decorator</code> for this.
     * A decorator is an object that adds various details to the
     * node without changing the overall structure of the node. For
@@ -126,6 +111,18 @@ class Scanner  {
     */
    public Decorator getDecorator() {
       return scanner.getDecorator();
+   }
+   
+   /**
+    * This method is used to return the <code>Caller</code> for this
+    * class. The caller is a means to deliver invocations to the
+    * object for the persister callback methods. It aggregates all of
+    * the persister callback methods in to a single object.
+    * 
+    * @return this returns a caller used for delivering callbacks
+    */
+   public Caller getCaller(Context context) {
+      return new Caller(this, context);
    }
 
    /**
@@ -156,6 +153,22 @@ class Scanner  {
     */
    public LabelMap getElements(Context context) throws Exception {
       return elements.clone(context);
+   }
+  
+   /**
+    * This is the <code>Version</code> for the scanned class. It 
+    * allows the deserialization process to be configured such that
+    * if the version is different from the schema class none of
+    * the fields and methods are required and unmatched elements
+    * and attributes will be ignored.
+    * 
+    * @return this returns the version of the class that is scanned
+    */
+   public Version getRevision() {
+      if(version != null) {
+         return version.getContact().getAnnotation(Version.class);
+      }
+      return null;
    }
    
    /**
@@ -195,18 +208,6 @@ class Scanner  {
    public String getName() {
       return name;
    }
-    
-   /**
-    * This method is used to return the <code>Conduit</code> for this
-    * class. The conduit is a means to deliver invocations to the
-    * object for the persister callback methods. It aggregates all of
-    * the persister callback methods in to a single object.
-    * 
-    * @return this returns a conduit used for delivering callbacks
-    */
-   public Conduit getConduit() {
-      return new Conduit(this);
-   }
 
    /**
     * This method is used to retrieve the schema class commit method
@@ -217,7 +218,7 @@ class Scanner  {
     * 
     * @return this returns the commit method for the schema class
     */
-   public Method getCommit() {
+   public Function getCommit() {
       return scanner.getCommit();           
    }
 
@@ -230,7 +231,7 @@ class Scanner  {
     * 
     * @return this returns the validate method for the schema class
     */   
-   public Method getValidate() {
+   public Function getValidate() {
       return scanner.getValidate();       
    }
    
@@ -243,7 +244,7 @@ class Scanner  {
     * 
     * @return this returns the persist method for the schema class
     */
-   public Method getPersist() {
+   public Function getPersist() {
       return scanner.getPersist();           
    }
 
@@ -256,7 +257,7 @@ class Scanner  {
     * 
     * @return returns the complete method for the schema class
     */   
-   public Method getComplete() {
+   public Function getComplete() {
       return scanner.getComplete();           
    }
    
@@ -269,7 +270,7 @@ class Scanner  {
     * 
     * @return returns the replace method for the schema class
     */
-   public Method getReplace() {
+   public Function getReplace() {
       return scanner.getReplace();
    }
    
@@ -282,7 +283,7 @@ class Scanner  {
     * 
     * @return returns the replace method for the schema class
     */
-   public Method getResolve() {
+   public Function getResolve() {
       return scanner.getResolve();
    }
 

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MapNullTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.431 sec
 ------------- Standard Output ---------------
 <complexMap>
    <map class="java.util.HashMap">
@@ -284,12 +284,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </PrimitiveMap><primitiveMap>
    <table class="java.util.HashMap">
       <entry>
-         <string/>
-         <bigDecimal>4</bigDecimal>
-      </entry>
-      <entry>
          <string>a</string>
          <bigDecimal>1</bigDecimal>
+      </entry>
+      <entry>
+         <string/>
+         <bigDecimal>4</bigDecimal>
       </entry>
       <entry>
          <string>c</string>
@@ -303,12 +303,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </primitiveMap><primitiveMap>
    <table class="java.util.HashMap">
       <entry>
-         <string/>
-         <bigDecimal>4</bigDecimal>
-      </entry>
-      <entry>
          <string>a</string>
          <bigDecimal>1</bigDecimal>
+      </entry>
+      <entry>
+         <string/>
+         <bigDecimal>4</bigDecimal>
       </entry>
       <entry>
          <string>c</string>
@@ -323,12 +323,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 <primitive-map ID="0">
    <table class="java.util.HashMap" ID="1">
       <entry>
-         <string/>
-         <big-decimal ID="2">4</big-decimal>
+         <string ID="2">a</string>
+         <big-decimal ID="3">1</big-decimal>
       </entry>
       <entry>
-         <string ID="3">a</string>
-         <big-decimal ID="4">1</big-decimal>
+         <string/>
+         <big-decimal ID="4">4</big-decimal>
       </entry>
       <entry>
          <string ID="5">c</string>
@@ -342,12 +342,12 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </primitive-map><PrimitiveMap ID="0">
    <Table class="java.util.HashMap" ID="1">
       <Entry>
-         <String/>
-         <bigDecimal ID="2">4</bigDecimal>
+         <String ID="2">a</String>
+         <bigDecimal ID="3">1</bigDecimal>
       </Entry>
       <Entry>
-         <String ID="3">a</String>
-         <bigDecimal ID="4">1</bigDecimal>
+         <String/>
+         <bigDecimal ID="4">4</bigDecimal>
       </Entry>
       <Entry>
          <String ID="5">c</String>
@@ -361,13 +361,6 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </PrimitiveMap><complexMap>
    <map class="java.util.HashMap">
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.1</name>
             <address>address.1</address>
@@ -385,6 +378,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
          <mapEntry>
             <name>2</name>
             <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
          </mapEntry>
       </entry>
       <entry>
@@ -398,13 +398,6 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </complexMap><complexMap>
    <map class="java.util.HashMap">
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.1</name>
             <address>address.1</address>
@@ -422,6 +415,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
          <mapEntry>
             <name>2</name>
             <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
          </mapEntry>
       </entry>
       <entry>
@@ -436,29 +436,29 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 <complex-map ID="0">
    <map class="java.util.HashMap" ID="1">
       <entry>
+         <composite-key ID="2">
+            <name ID="3">name.1</name>
+            <address ID="4">address.1</address>
+         </composite-key>
+         <map-entry ID="5">
+            <name ID="6">1</name>
+            <value REFERER="6"/>
+         </map-entry>
+      </entry>
+      <entry>
+         <composite-key ID="7">
+            <name ID="8">name.2</name>
+            <address ID="9">address.2</address>
+         </composite-key>
+         <map-entry ID="10">
+            <name ID="11">2</name>
+            <value REFERER="11"/>
+         </map-entry>
+      </entry>
+      <entry>
          <composite-key/>
-         <map-entry ID="2">
-            <name ID="3">3</name>
-            <value REFERER="3"/>
-         </map-entry>
-      </entry>
-      <entry>
-         <composite-key ID="4">
-            <name ID="5">name.1</name>
-            <address ID="6">address.1</address>
-         </composite-key>
-         <map-entry ID="7">
-            <name ID="8">1</name>
-            <value REFERER="8"/>
-         </map-entry>
-      </entry>
-      <entry>
-         <composite-key ID="9">
-            <name ID="10">name.2</name>
-            <address ID="11">address.2</address>
-         </composite-key>
          <map-entry ID="12">
-            <name ID="13">2</name>
+            <name ID="13">3</name>
             <value REFERER="13"/>
          </map-entry>
       </entry>
@@ -473,29 +473,29 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </complex-map><ComplexMap ID="0">
    <Map class="java.util.HashMap" ID="1">
       <Entry>
+         <CompositeKey ID="2">
+            <Name ID="3">name.1</Name>
+            <Address ID="4">address.1</Address>
+         </CompositeKey>
+         <MapEntry ID="5">
+            <Name ID="6">1</Name>
+            <Value REFERER="6"/>
+         </MapEntry>
+      </Entry>
+      <Entry>
+         <CompositeKey ID="7">
+            <Name ID="8">name.2</Name>
+            <Address ID="9">address.2</Address>
+         </CompositeKey>
+         <MapEntry ID="10">
+            <Name ID="11">2</Name>
+            <Value REFERER="11"/>
+         </MapEntry>
+      </Entry>
+      <Entry>
          <CompositeKey/>
-         <MapEntry ID="2">
-            <Name ID="3">3</Name>
-            <Value REFERER="3"/>
-         </MapEntry>
-      </Entry>
-      <Entry>
-         <CompositeKey ID="4">
-            <Name ID="5">name.1</Name>
-            <Address ID="6">address.1</Address>
-         </CompositeKey>
-         <MapEntry ID="7">
-            <Name ID="8">1</Name>
-            <Value REFERER="8"/>
-         </MapEntry>
-      </Entry>
-      <Entry>
-         <CompositeKey ID="9">
-            <Name ID="10">name.2</Name>
-            <Address ID="11">address.2</Address>
-         </CompositeKey>
          <MapEntry ID="12">
-            <Name ID="13">2</Name>
+            <Name ID="13">3</Name>
             <Value REFERER="13"/>
          </MapEntry>
       </Entry>
@@ -510,13 +510,6 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </ComplexMap><complexMap>
    <map class="java.util.HashMap">
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.1</name>
             <address>address.1</address>
@@ -534,6 +527,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
          <mapEntry>
             <name>2</name>
             <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
          </mapEntry>
       </entry>
       <entry>
@@ -547,13 +547,6 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </complexMap><complexMap>
    <map class="java.util.HashMap">
       <entry>
-         <compositeKey/>
-         <mapEntry>
-            <name>3</name>
-            <value>3</value>
-         </mapEntry>
-      </entry>
-      <entry>
          <compositeKey>
             <name>name.1</name>
             <address>address.1</address>
@@ -571,6 +564,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
          <mapEntry>
             <name>2</name>
             <value>2</value>
+         </mapEntry>
+      </entry>
+      <entry>
+         <compositeKey/>
+         <mapEntry>
+            <name>3</name>
+            <value>3</value>
          </mapEntry>
       </entry>
       <entry>
@@ -585,30 +585,30 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 <complex-map ID="0">
    <map class="java.util.HashMap" ID="1">
       <entry>
+         <composite-key ID="2">
+            <name ID="3">name.1</name>
+            <address ID="4">address.1</address>
+         </composite-key>
+         <map-entry ID="5">
+            <name ID="6">1</name>
+            <value ID="7">1</value>
+         </map-entry>
+      </entry>
+      <entry>
+         <composite-key ID="8">
+            <name ID="9">name.2</name>
+            <address ID="10">address.2</address>
+         </composite-key>
+         <map-entry ID="11">
+            <name ID="12">2</name>
+            <value ID="13">2</value>
+         </map-entry>
+      </entry>
+      <entry>
          <composite-key/>
-         <map-entry ID="2">
-            <name ID="3">3</name>
-            <value ID="4">3</value>
-         </map-entry>
-      </entry>
-      <entry>
-         <composite-key ID="5">
-            <name ID="6">name.1</name>
-            <address ID="7">address.1</address>
-         </composite-key>
-         <map-entry ID="8">
-            <name ID="9">1</name>
-            <value ID="10">1</value>
-         </map-entry>
-      </entry>
-      <entry>
-         <composite-key ID="11">
-            <name ID="12">name.2</name>
-            <address ID="13">address.2</address>
-         </composite-key>
          <map-entry ID="14">
-            <name ID="15">2</name>
-            <value ID="16">2</value>
+            <name ID="15">3</name>
+            <value ID="16">3</value>
          </map-entry>
       </entry>
       <entry>
@@ -622,30 +622,30 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
 </complex-map><ComplexMap ID="0">
    <Map class="java.util.HashMap" ID="1">
       <Entry>
+         <CompositeKey ID="2">
+            <Name ID="3">name.1</Name>
+            <Address ID="4">address.1</Address>
+         </CompositeKey>
+         <MapEntry ID="5">
+            <Name ID="6">1</Name>
+            <Value ID="7">1</Value>
+         </MapEntry>
+      </Entry>
+      <Entry>
+         <CompositeKey ID="8">
+            <Name ID="9">name.2</Name>
+            <Address ID="10">address.2</Address>
+         </CompositeKey>
+         <MapEntry ID="11">
+            <Name ID="12">2</Name>
+            <Value ID="13">2</Value>
+         </MapEntry>
+      </Entry>
+      <Entry>
          <CompositeKey/>
-         <MapEntry ID="2">
-            <Name ID="3">3</Name>
-            <Value ID="4">3</Value>
-         </MapEntry>
-      </Entry>
-      <Entry>
-         <CompositeKey ID="5">
-            <Name ID="6">name.1</Name>
-            <Address ID="7">address.1</Address>
-         </CompositeKey>
-         <MapEntry ID="8">
-            <Name ID="9">1</Name>
-            <Value ID="10">1</Value>
-         </MapEntry>
-      </Entry>
-      <Entry>
-         <CompositeKey ID="11">
-            <Name ID="12">name.2</Name>
-            <Address ID="13">address.2</Address>
-         </CompositeKey>
          <MapEntry ID="14">
-            <Name ID="15">2</Name>
-            <Value ID="16">2</Value>
+            <Name ID="15">3</Name>
+            <Value ID="16">3</Value>
          </MapEntry>
       </Entry>
       <Entry>
@@ -658,13 +658,13 @@ Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.429 sec
    </Map>
 </ComplexMap>------------- ---------------- ---------------
 
-Testcase: testEmptyCompositeValue took 0.195 sec
-Testcase: testEmptyCompositeBlankValue took 0.02 sec
+Testcase: testEmptyCompositeValue took 0.198 sec
+Testcase: testEmptyCompositeBlankValue took 0.019 sec
 Testcase: testEmptyCompositeKey took 0.019 sec
-Testcase: testEmptyCompositeBlankKey took 0.018 sec
-Testcase: testEmptyPrimitiveValue took 0.02 sec
+Testcase: testEmptyCompositeBlankKey took 0.019 sec
+Testcase: testEmptyPrimitiveValue took 0.019 sec
 Testcase: testEmptyPrimitiveBlankValue took 0.013 sec
-Testcase: testEmptyPrimitiveKey took 0.016 sec
-Testcase: testEmptyPrimitiveBlankKey took 0.012 sec
+Testcase: testEmptyPrimitiveKey took 0.017 sec
+Testcase: testEmptyPrimitiveBlankKey took 0.01 sec
 Testcase: testNullValue took 0.107 sec
 Testcase: testDirectory took 0 sec

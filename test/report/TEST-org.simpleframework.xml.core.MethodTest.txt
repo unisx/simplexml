@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.25 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -135,6 +135,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.255 sec
    <ShortValue>120</ShortValue>
 </ImplicitMethodNameExample>------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.203 sec
-Testcase: testImplicitMethodNameExample took 0.044 sec
+Testcase: testExplicitMethodNameExample took 0.2 sec
+Testcase: testImplicitMethodNameExample took 0.042 sec
 Testcase: testDirectory took 0 sec

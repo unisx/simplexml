@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.239 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.245 sec
 ------------- Standard Output ---------------
 <primitiveInlineMap>
    <entity>
@@ -82,7 +82,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.239 sec
    <Entity string="b" ID="3">2.20000000000000017763568394002504646778106689453125</Entity>
 </PrimitiveInlineAttributeValueMap>------------- ---------------- ---------------
 
-Testcase: testPrimitiveMap took 0.197 sec
-Testcase: testPrimitiveAttributeMap took 0.016 sec
-Testcase: testPrimitiveAttributeValueMap took 0.021 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPrimitiveMap took 0.2 sec
+Testcase: testPrimitiveAttributeMap took 0.017 sec
+Testcase: testPrimitiveAttributeValueMap took 0.022 sec
+Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.257 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.269 sec
 ------------- Standard Output ---------------
 <test>
    <primitive>
@@ -173,5 +173,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.257 sec
    </Object>
 </Test>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.251 sec
+Testcase: testPrimitive took 0.265 sec
 Testcase: testDirectory took 0 sec

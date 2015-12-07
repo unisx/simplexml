@@ -20,6 +20,8 @@
 
 package org.simpleframework.xml.core;
 
+import org.simpleframework.xml.stream.Style;
+
 /**
  * The <code>CacheLabel</code> object is used to acquire details from an
  * inner label object so that details can be retrieved repeatedly without
@@ -72,6 +74,11 @@ class CacheLabel implements Label {
    private final boolean data;
    
    /**
+    * This is used to determine the styling of the label name.
+    */
+   private final boolean attribute;
+   
+   /**
     * This is used to represent whether the entity is required or not.
     */
    private final boolean required;
@@ -96,6 +103,7 @@ class CacheLabel implements Label {
     */
    public CacheLabel(Label label) throws Exception { 
       this.decorator = label.getDecorator();
+      this.attribute = label.isAttribute();
       this.contact = label.getContact();
       this.depend = label.getDependant();
       this.required = label.isRequired();
@@ -155,10 +163,17 @@ class CacheLabel implements Label {
     * a name then that is used, if however the annotation does not
     * specify a name the the field or method name is used instead.
     * 
+    * @param context this is the context used to style the name
+    * 
     * @return returns the name that is used for the XML property
     */
    public String getName(Context context) throws Exception {
-      return label.getName(context);
+      Style style = context.getStyle();
+      
+      if(attribute) {
+         return style.getAttribute(name);
+      }
+      return style.getElement(name);
    }
    
    /**
@@ -263,6 +278,17 @@ class CacheLabel implements Label {
     */
    public boolean isInline() {
       return inline;
+   }
+   
+   /**
+    * This method is used to determine if the label represents an
+    * attribute. This is used to style the name so that elements
+    * are styled as elements and attributes are styled as required.
+    * 
+    * @return this is used to determine if this is an attribute
+    */
+   public boolean isAttribute() {
+      return attribute;
    }
    
    /**

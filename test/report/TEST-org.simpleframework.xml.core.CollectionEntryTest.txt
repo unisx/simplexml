@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionEntryTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.26 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.345 sec
 ------------- Standard Output ---------------
 <exampleCollection>
    <list class="java.util.ArrayList">
@@ -143,8 +143,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.26 sec
    </List>
 </ExamplePrimitiveCollection>------------- ---------------- ---------------
 
-Testcase: testExampleCollection took 0.201 sec
+Testcase: testExampleCollection took 0.223 sec
 Testcase: testExampleInlineCollection took 0.019 sec
-Testcase: testExamplePrimitiveInlineCollection took 0.014 sec
-Testcase: testExamplePrimitiveCollection took 0.017 sec
+Testcase: testExamplePrimitiveInlineCollection took 0.015 sec
+Testcase: testExamplePrimitiveCollection took 0.019 sec
 Testcase: testDirectory took 0 sec
