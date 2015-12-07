@@ -20,84 +20,70 @@
 
 package simple.xml.load;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
+import simple.xml.stream.InputNode;
 
 /**
  * The <code>ArrayFactory</code> is used to create object array
- * instances that are compatible with the field type. This simply
+ * types that are compatible with the field type. This simply
  * requires the type of the array in order to instantiate that
  * array. However, this also performs a check on the field type 
- * to ensure that it is a valid array class before instantiation.
+ * to ensure that the array component types are compatible.
  * 
  * @author Niall Gallagher
  */ 
-final class ArrayFactory {
-
-   /**
-    * This represents the array component type from the field.
-    */
-   private Class type;
+final class ArrayFactory extends Factory {
         
    /**
     * Constructor for the <code>ArrayFactory</code> object. This is
     * given the array component type as taken from the field type 
     * of the source object. Each request for an array will return 
-    * an array which uses the specified component type.
+    * an array which uses a compatible component type.
     * 
-    * @param type the array component type for the field object
+    * @param root this is the context object for serialization
+    * @param field the array component type for the field object
     */
-   public ArrayFactory(Class type) {
-      this.type = type;           
+   public ArrayFactory(Source root, Class field) {
+      super(root, field);                
    }        
 
    /**
-    * Creates the object array to use. This will use the provided
-    * list of values to form the values within the array. Each of
-    * the values witin the specified <code>List</code> will be
-    * set into a the array, if the type of the values within the
-    * list are not compatible then an exception is thrown.
+    * Creates the array type to use. This will use the provided
+    * XML element to determine the array type and provide a means
+    * for creating an array with the <code>Type</code> object. If
+    * the array size cannot be determined an exception is thrown.
     * 
-    * @param list this is the list of values for the array
+    * @param node this is the input node for the array element
     * 
-    * @return this is the obejct array instantiated for the type
+    * @return the object array type used for the instantiation
     */         
-   public Object getArray(List list) throws Exception {
-      return getArray(list, list.size());
+   public Type getInstance(InputNode node) throws Exception {
+      Type type = getOverride(node);    
+      
+      if(type == null) {
+         throw new ElementException("Array length required for %s", field);         
+      }      
+      Class entry = type.getType();
+      
+      return getInstance(type, entry);
    }
-   
+
    /**
-    * Creates the object array to use. This will use the provided
-    * list of values to form the values within the array. Each of
-    * the values witin the specified <code>List</code> will be
-    * set into a the array, if the type of the values within the
-    * list are not compatible then an exception is thrown.
+    * Creates the array type to use. This will use the provided
+    * XML element to determine the array type and provide a means
+    * for creating an array with the <code>Type</code> object. If
+    * the array types are not compatible an exception is thrown.
     * 
-    * @param list this is the list of values for the array
-    * @param size the number of values to consider for copying
+    * @param type this is the type object with the array details
+    * @param entry this is the entry type for the array instance    
     * 
-    * @return this is the obejct array instantiated for the type
-    */ 
-   public Object getArray(List list, int size) throws Exception {
-      Object array = Array.newInstance(type, size);
-      
-      for(int i = 0; i < size; i++) {
-         Array.set(array, i, list.get(i));
+    * @return this object array type used for the instantiation  
+    */
+   private Type getInstance(Type type, Class entry) throws Exception {
+      Class expect = field.getComponentType();
+
+      if(!expect.isAssignableFrom(entry)) {
+         throw new InstantiationException("Array of type %s cannot hold %s", expect, entry);
       }
-      return array;     
-   }     
-   
-   public List getList(Object source) throws Exception {
-      return getList(source, Array.getLength(source));
-   }
-   
-   public List getList(Object source, int size) throws Exception { 
-      List list = new ArrayList();
-      
-      for(int i = 0; i < size; i++) {
-         list.add(Array.get(source, i));         
-      }
-      return list;
-   }
+      return type;      
+   }   
 }

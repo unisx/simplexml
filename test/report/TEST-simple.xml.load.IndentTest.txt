@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.IndentTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.41 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
 ------------- Standard Output ---------------
 <contact id="some id">
      <details>
@@ -9,5 +9,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.41 sec
      </details>
 </contact><contact id="some id"><details><title>Some Title</title><mail>email@domain.com</mail><name>Name Surname</name></details></contact>------------- ---------------- ---------------
 
-Testcase: testIndent took 0.393 sec
+Testcase: testIndent took 0.187 sec
 Testcase: testNoIndent took 0.016 sec

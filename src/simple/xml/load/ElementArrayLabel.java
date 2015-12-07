@@ -50,6 +50,16 @@ final class ElementArrayLabel implements Label {
     * This is the type of array this label will represent.
     */
    private Class type;
+   
+   /**
+    * This is the name of the XML parent from the annotation.
+    */
+   private String parent;
+   
+   /**
+    * This is the name of the element from the annotation.
+    */
+   private String name;
 	
    /**
     * Constructor for the <code>ElementArrayLabel</code> object. This
@@ -61,6 +71,8 @@ final class ElementArrayLabel implements Label {
     */
    public ElementArrayLabel(Contact contact, ElementArray label) {
       this.type = contact.getType();      
+      this.parent = label.parent();
+      this.name = label.name();
       this.contact = contact;
       this.label = label;
    }
@@ -78,7 +90,7 @@ final class ElementArrayLabel implements Label {
       if(!type.isArray()) {
          throw new InstantiationException("Type is not an array %s for %s", type, label);
       }
-      return getConverter(root, getParent());
+      return getConverter(root, parent);
    }
       
    /**
@@ -95,29 +107,9 @@ final class ElementArrayLabel implements Label {
       Class entry = type.getComponentType();
       
       if(!Factory.isPrimitive(entry)) {
-         return new CompositeArray(root, entry, parent);        
+         return new CompositeArray(root, type, entry, parent);        
       }
-      if(parent == null) {
-         throw new ElementException("Annotation %s requires parent for %s", label, type);        
-      }
-      return new PrimitiveArray(root, entry, parent);            
-   }
-
-   /**
-    * This method is used to acquire the parent element from the array
-    * label. This checks to ensure that the parent value has been 
-    * specified. If a value has not been specified then this method
-    * will return a null value, which represents no parent setting.
-    * 
-    * @return this returns null if not parent has been set
-    */
-   public String getParent() {
-      String parent = label.parent();
-
-      if(parent.length() == 0) {
-         return null;
-      }
-      return parent;
+      return new PrimitiveArray(root, type, entry, parent);            
    }
 
    /**
@@ -156,7 +148,7 @@ final class ElementArrayLabel implements Label {
     * @return returns the name of the annotation for the field
     */    
    public String getName() {
-      return label.name();
+      return name;
    }
    
    /**

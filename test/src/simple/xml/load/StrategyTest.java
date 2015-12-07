@@ -8,6 +8,7 @@ import simple.xml.Attribute;
 import simple.xml.Element;
 import simple.xml.Root;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Constructor;
 import java.util.Map;
 
@@ -78,18 +79,19 @@ public class StrategyTest extends TestCase {
          return new SimpleType(type);
       }         
 
-      public void setRoot(Class field, Object value, NodeMap root, Map map) throws Exception {                       
+      public boolean setRoot(Class field, Object value, NodeMap root, Map map) throws Exception {                       
          writeRootCount++;              
-         setElement(field, value, root, map);              
+         return setElement(field, value, root, map);              
       }              
 
-      public void setElement(Class field, Object value, NodeMap node, Map map) throws Exception {
+      public boolean setElement(Class field, Object value, NodeMap node, Map map) throws Exception {
          if(writeRootCount != 1) {
             test.assertTrue("Root must be written only once", false);                 
          }                 
          if(field != value.getClass()) {                       
             node.put(ELEMENT_NAME, value.getClass().getName());
-         }            
+         }  
+         return false;
       }
    }
    
@@ -105,14 +107,19 @@ public class StrategyTest extends TestCase {
 		   return getInstance(type);
 	   }
 
-       private Object getInstance(Class type) throws Exception {
+      public Object getInstance(Class type) throws Exception {
 		   Constructor method = type.getDeclaredConstructor();
 
 		   if(!method.isAccessible()) {
 		      method.setAccessible(true);              
 		   }
 		   return method.newInstance();   
-	   }   
+	   }
+       
+       public boolean isReference() {
+          return false;
+       }
+       
 
 	   public Class getType() {
 		  return type;

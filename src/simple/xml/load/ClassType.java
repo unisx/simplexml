@@ -1,5 +1,5 @@
 /*
- * DefaultType.java January 2007
+ * ClassType.java January 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -23,7 +23,7 @@ package simple.xml.load;
 import java.lang.reflect.Constructor;
 
 /**
- * The <code>DefaultType</code> is an implementation of the type that
+ * The <code>ClassType</code> is an implementation of the type that
  * is used to instantiate an object using its default no argument
  * constructor. This will simply ensure that the constructor is an
  * accessible method before invoking the types new instance method.
@@ -32,21 +32,32 @@ import java.lang.reflect.Constructor;
  * 
  * @see simple.xml.load.DefaultStrategy
  */
-final class DefaultType implements Type {
+final class ClassType implements Type {
+   
+   /**
+    * Caches the constructors used to convert composite types.
+    * 
+    * @see simple.xml.load.Composite
+    */
+   private static ConstructorCache cache;
 
+   static {
+      cache = new ConstructorCache();           
+   }
+   
    /**
     * This is the type that this object is used to represent.
     */
    private Class type;
 
    /**
-    * Constructor for the <code>DefaultType</code> object. This is
+    * Constructor for the <code>ClassType</code> object. This is
     * used to create a type object that can be used to instantiate
     * and object with that objects default no argument constructor.
     * 
     * @param type this is the type of object that is created
     */
-   public DefaultType(Class type) {
+   public ClassType(Class type) {
       this.type = type;
    }        
    
@@ -62,22 +73,27 @@ final class DefaultType implements Type {
    }
    
    /**
-    * This method is used to acquire an instance of the type that
-    * is defined by this object. If for some reason the type can
-    * not be instantiated an exception is thrown from this.
+    * This method will instantiate an object of the provided type. If
+    * the object or constructor does not have public access then this
+    * will ensure the constructor is accessible and can be used.
     * 
-    * @param type this is the type of the object to construct
-    * 
-    * @return an instance of the type this object represents
-    */
-   private Object getInstance(Class type) throws Exception {
-      Constructor method = type.getDeclaredConstructor();
+    * @param type this is used to ensure the object is accessible
+    *
+    * @return this returns an instance of the specifiec class type
+    */ 
+   public Object getInstance(Class type) throws Exception {
+      Constructor method = cache.get(type);
+      
+      if(method == null) {
+         method = type.getDeclaredConstructor();      
 
-      if(!method.isAccessible()) {
-         method.setAccessible(true);              
+         if(!method.isAccessible()) {
+            method.setAccessible(true);              
+         }
+         cache.cache(type, method);
       }
       return method.newInstance();   
-   }  
+   } 
    
    /**
     * This is the type of the object instance that will be created
@@ -89,4 +105,15 @@ final class DefaultType implements Type {
    public Class getType() {
       return type;
    }   
+   
+   /**
+    * This method always returns false for the default type. This
+    * is because by default all elements encountered within the 
+    * XML are to be deserialized based on there XML annotations.
+    * 
+    * @return this returns false for each type encountered     
+    */
+   public boolean isReference() {
+      return false;
+   }
 }

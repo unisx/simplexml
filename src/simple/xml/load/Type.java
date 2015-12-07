@@ -40,6 +40,16 @@ package simple.xml.load;
 public interface Type {
    
    /**
+    * This is used to determine if the type is a reference type.
+    * A reference type is a type that does not require any XML
+    * deserialization based on its annotations. Types that are
+    * references could be substitutes objects are existing ones. 
+    * 
+    * @return this returns true if the object is a reference
+    */
+   public boolean isReference();
+   
+   /**
     * This method is used to acquire an instance of the type that
     * is defined by this object. If for some reason the type can
     * not be instantiated an exception is thrown from this.
@@ -47,6 +57,17 @@ public interface Type {
     * @return an instance of the type this object represents
     */
    public Object getInstance() throws Exception;
+   
+   /**
+    * This method is used to acquire an instance of the type that
+    * is defined by this object. If for some reason the type can
+    * not be instantiated an exception is thrown from this.
+    * 
+    * @param convert a suggestion to convert the internal value
+    * 
+    * @return an instance of the type this object represents
+    */
+   public Object getInstance(Class convert) throws Exception;
    
    /**
     * This is the type of the object instance that will be created

@@ -1,4 +1,0 @@
-Testsuite: simple.xml.temp.MethodContactTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.083 sec
-
-Testcase: testText took 0.082 sec

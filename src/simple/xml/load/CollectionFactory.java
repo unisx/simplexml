@@ -59,7 +59,7 @@ final class CollectionFactory extends Factory {
     * 
     * @return this is the collection instantiated for the field
     */         
-   public Collection getInstance(InputNode node) throws Exception {
+   public Type getInstance(InputNode node) throws Exception {
       Type type = getOverride(node);
      
       if(type != null) {              
@@ -71,16 +71,14 @@ final class CollectionFactory extends Factory {
       if(!isCollection(field)) {
          throw new InstantiationException("Type is not a collection %s", field);
       }
-      return (Collection)field.newInstance();   
+      return new ClassType(field);         
    }     
 
    /**
     * This creates a <code>Collection</code> instance from the type
     * provided. If the type provided is abstract or an interface then
-    * this throws an exception to indicate that the type can not be 
-    * used to represent the field value. Also, if the type class is 
-    * not a collection this will throw an exception. If however the 
-    * type class is suitable, the type will create an instance.
+    * this can promote the type to a collection type that can be 
+    * instantiated. This is done by asking the type to convert itself.
     * 
     * @param type the type used to instantiate the collection
     * 
@@ -88,16 +86,16 @@ final class CollectionFactory extends Factory {
     * 
     * @throws Exception if the collection cannot be instantiated
     */
-   public Collection getInstance(Type type) throws Exception {
+   public Type getInstance(Type type) throws Exception {
       Class real = type.getType();
 
       if(!isInstantiable(real)) {
-         throw new InstantiationException("Could not instantiate %s", real);
+         real = getConversion(real);
       }
       if(!isCollection(real)) {
          throw new InstantiationException("Type is not a collection %s", real);              
       }
-      return (Collection)type.getInstance();    
+      return new ConversionType(type, real);         
    }  
 
    /**

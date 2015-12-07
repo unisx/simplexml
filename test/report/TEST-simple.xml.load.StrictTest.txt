@@ -1,17 +1,23 @@
 Testsuite: simple.xml.load.StrictTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.775 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.219 sec
 ------------- Standard Output ---------------
 <root>
-   <list>
-      <entry>
-         <value>value 1</value>
-      </entry>
-      <entry>
-         <value>value 2</value>
-      </entry>
-      <entry>
-         <value>value 3</value>
-      </entry>
+   <list length="3">
+      <item>
+         <entry>
+            <value>value 1</value>
+         </entry>
+      </item>
+      <item>
+         <entry>
+            <value>value 2</value>
+         </entry>
+      </item>
+      <item>
+         <entry>
+            <value>value 3</value>
+         </entry>
+      </item>
    </list>
    <object>
       <integer>123</integer>
@@ -20,6 +26,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.775 sec
    <integer>123</integer>
 </object>------------- ---------------- ---------------
 
-Testcase: testStrict took 0.754 sec
-Testcase: testUnnamedStrict took 0.007 sec
-Testcase: testNamedStrict took 0.012 sec
+Testcase: testStrict took 0.204 sec
+Testcase: testUnnamedStrict took 0 sec
+Testcase: testNamedStrict took 0.015 sec

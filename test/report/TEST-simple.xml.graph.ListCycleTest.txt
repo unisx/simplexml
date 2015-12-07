@@ -1,0 +1,28 @@
+Testsuite: simple.xml.graph.ListCycleTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.234 sec
+------------- Standard Output ---------------
+<root id="0">
+   <one class="java.util.ArrayList" id="1">
+      <text value="entry one" id="2"/>
+      <text value="entry two" id="3"/>
+      <text value="entry three" id="4"/>
+      <text value="entry four" id="5"/>
+      <text value="entry five" id="6"/>
+   </one>
+   <two ref="1" class="java.util.ArrayList"/>
+   <three class="java.util.ArrayList" id="7">
+      <text value="tom" id="8"/>
+      <text value="dick" id="9"/>
+      <text value="harry" id="10"/>
+   </three>
+   <example ref="0"/>
+</root><root id="0">
+   <list class="java.util.ArrayList" id="1">
+      <value id="2">
+         <list ref="1" class="java.util.ArrayList"/>
+      </value>
+   </list>
+</root>------------- ---------------- ---------------
+
+Testcase: testCycle took 0.218 sec
+Testcase: testNestedExample took 0.016 sec

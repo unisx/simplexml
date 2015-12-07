@@ -80,7 +80,7 @@ abstract class Factory {
       Type type = getConversion(node);      
 
       if(type != null) { 
-    	 Class real = type.getType();
+         Class real = type.getType();
     	 
          if(!isCompatible(field, real)) {
             throw new InstantiationException("Type %s is not compatible with %s", real, field);              
@@ -100,12 +100,13 @@ abstract class Factory {
     *
     * @throws Exception thrown if an error occurs within the strategy
     */
-   public void setOverride(Class field, Object value, OutputNode node) throws Exception {
+   public boolean setOverride(Class field, Object value, OutputNode node) throws Exception {
       Class type = value.getClass();
       
       if(!isPrimitive(type)) {
-         source.setOverride(field, value, node);
+         return source.setOverride(field, value, node);
       }
+      return false;
    }
 
    /**
@@ -137,6 +138,9 @@ abstract class Factory {
     * @return true if the field type can be assigned the type value
     */
    public static boolean isCompatible(Class field, Class type) {
+      if(field.isArray()) {
+         field = field.getComponentType();
+      }
       return field.isAssignableFrom(type);           
    }
 

@@ -118,7 +118,7 @@ final class NodeReader {
       }
       return null; 
    }
-
+   
    /**
     * This is used to convert the start element to an input node.
     * This will push the created input node on to the stack. The
@@ -166,7 +166,7 @@ final class NodeReader {
       }         
       return null;
    }     
-
+   
    /**
     * This method is used to skip an element within the XML document.
     * This will simply read each element from the document until

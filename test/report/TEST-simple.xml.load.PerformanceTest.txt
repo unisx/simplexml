@@ -1,57 +1,26 @@
 Testsuite: simple.xml.load.PerformanceTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 15.891 sec
 ------------- Standard Output ---------------
 <root flag="true" number="1234">
-   <child name="first">
-      <one>this is the first element</one>
-      <two>the second element</two>
-      <three>the third elment</three>
-      <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
-         <entry-one key="name.1">
-            <value>value.1</value>
-         </entry-one>
-      </grand-child>
-   </child>
-   <list class="java.util.ArrayList">
-      <entry key="name.1">
-         <value>value.1</value>
-      </entry>
-      <entry key="name.2">
-         <value>value.2</value>
-      </entry>
-      <entry key="name.3">
-         <value>value.4</value>
-      </entry>
-      <entry key="name.4">
-         <value>value.4</value>
-      </entry>
-      <entry key="name.5">
-         <value>value.5</value>
-      </entry>
-   </list>
+   <constant>{no.override}</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
    <text>
         Some example text where {example.name} is replaced
         with the system property value and the path is
         replaced with the path {example.path}
    </text>
-   <path>{example.path}</path>
-   <name>{example.name}</name>
-   <constant>{no.override}</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -71,26 +40,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>{no.override}</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
    <text>
         Some example text where {example.name} is replaced
         with the system property value and the path is
         replaced with the path {example.path}
    </text>
-   <path>{example.path}</path>
-   <name>{example.name}</name>
-   <constant>{no.override}</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -110,26 +79,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>{no.override}</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
    <text>
         Some example text where {example.name} is replaced
         with the system property value and the path is
         replaced with the path {example.path}
    </text>
-   <path>{example.path}</path>
-   <name>{example.name}</name>
-   <constant>{no.override}</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -149,26 +118,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>some constant</constant>
+   <name>some name</name>
+   <path>/some/path</path>
    <text>
         Some example text where some name is replaced
         with the system property value and the path is 
         replaced with the path /some/path
    </text>
-   <path>/some/path</path>
-   <name>some name</name>
-   <constant>some constant</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -188,26 +157,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>some constant</constant>
+   <name>some name</name>
+   <path>/some/path</path>
    <text>
         Some example text where some name is replaced
         with the system property value and the path is 
         replaced with the path /some/path
    </text>
-   <path>/some/path</path>
-   <name>some name</name>
-   <constant>some constant</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -227,26 +196,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>some constant</constant>
+   <name>some name</name>
+   <path>/some/path</path>
    <text>
         Some example text where some name is replaced
         with the system property value and the path is 
         replaced with the path /some/path
    </text>
-   <path>/some/path</path>
-   <name>some name</name>
-   <constant>some constant</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -266,26 +235,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>${no.override}</constant>
+   <name>${example.name}</name>
+   <path>${example.path}</path>
    <text>
         Some example text where ${example.name} is replaced
         with the system property value and the path is 
         replaced with the path ${example.path}
    </text>
-   <path>${example.path}</path>
-   <name>${example.name}</name>
-   <constant>${no.override}</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -305,26 +274,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>${no.override}</constant>
+   <name>${example.name}</name>
+   <path>${example.path}</path>
    <text>
         Some example text where ${example.name} is replaced
         with the system property value and the path is 
         replaced with the path ${example.path}
    </text>
-   <path>${example.path}</path>
-   <name>${example.name}</name>
-   <constant>${no.override}</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -344,26 +313,26 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
+</root><root flag="true" number="1234">
+   <constant>${no.override}</constant>
+   <name>${example.name}</name>
+   <path>${example.path}</path>
    <text>
         Some example text where ${example.name} is replaced
         with the system property value and the path is 
         replaced with the path ${example.path}
    </text>
-   <path>${example.path}</path>
-   <name>${example.name}</name>
-   <constant>${no.override}</constant>
-</root><root flag="true" number="1234">
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -383,22 +352,22 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
-   <text>this is text&gt;&gt; some more&lt;&lt;</text>
-   <path>{example.path}</path>
-   <name>{example.name}</name>
-   <constant>&gt;&gt;&lt;&lt;</constant>
 </root><root flag="true" number="1234">
+   <constant>&gt;&gt;&lt;&lt;</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
+   <text>this is text&gt;&gt; some more&lt;&lt;</text>
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -418,22 +387,22 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
-   <text>this is text&gt;&gt; some more&lt;&lt;</text>
-   <path>{example.path}</path>
-   <name>{example.name}</name>
-   <constant>&gt;&gt;&lt;&lt;</constant>
 </root><root flag="true" number="1234">
+   <constant>&gt;&gt;&lt;&lt;</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
+   <text>this is text&gt;&gt; some more&lt;&lt;</text>
    <child name="first">
       <one>this is the first element</one>
       <two>the second element</two>
       <three>the third elment</three>
       <grand-child>
-         <entry-two key="name.2">
-            <value>value.2</value>
-         </entry-two>
          <entry-one key="name.1">
             <value>value.1</value>
          </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
       </grand-child>
    </child>
    <list class="java.util.ArrayList">
@@ -453,19 +422,50 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 40.124 sec
          <value>value.5</value>
       </entry>
    </list>
-   <text>this is text&gt;&gt; some more&lt;&lt;</text>
-   <path>{example.path}</path>
-   <name>{example.name}</name>
+</root><root flag="true" number="1234">
    <constant>&gt;&gt;&lt;&lt;</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
+   <text>this is text&gt;&gt; some more&lt;&lt;</text>
+   <child name="first">
+      <one>this is the first element</one>
+      <two>the second element</two>
+      <three>the third elment</three>
+      <grand-child>
+         <entry-one key="name.1">
+            <value>value.1</value>
+         </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
+      </grand-child>
+   </child>
+   <list class="java.util.ArrayList">
+      <entry key="name.1">
+         <value>value.1</value>
+      </entry>
+      <entry key="name.2">
+         <value>value.2</value>
+      </entry>
+      <entry key="name.3">
+         <value>value.4</value>
+      </entry>
+      <entry key="name.4">
+         <value>value.4</value>
+      </entry>
+      <entry key="name.5">
+         <value>value.5</value>
+      </entry>
+   </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-Took '11922' ms to process 10000 documents
-Took '10347' ms to process 10000 documents with templates
-Took '11310' ms to process 10000 documents with an empty filter
-Took '5457' ms to write 10000 documents
+Took '4859' ms to process 10000 documents
+Took '4579' ms to process 10000 documents with templates
+Took '4937' ms to process 10000 documents with an empty filter
+Took '1219' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testBasicDocument took 12.62 sec
-Testcase: testTemplateDocument took 10.383 sec
-Testcase: testEmptyFilter took 11.637 sec
-Testcase: testBasicWrite took 5.483 sec
+Testcase: testBasicDocument took 5.078 sec
+Testcase: testTemplateDocument took 4.61 sec
+Testcase: testEmptyFilter took 4.953 sec
+Testcase: testBasicWrite took 1.25 sec

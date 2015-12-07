@@ -97,8 +97,12 @@ final class Composite implements Converter {
     * @return this returns the fully deserialized object graph
     */
    public Object read(InputNode node) throws Exception {
-      Object source = factory.getInstance(node);      
-      read(node, source);
+      Type type = factory.getInstance(node);
+      Object source = type.getInstance();
+      
+      if(!type.isReference()) {         
+         read(node, source);
+      }
       return source;
    }
    
@@ -402,7 +406,7 @@ final class Composite implements Converter {
          Contact contact = label.getContact();         
          Object value = contact.get(source);
          
-         if(label.isRequired() && value == null) {
+         if(value == null && label.isRequired()) {
             throw new AttributeException("Value for %s is null", label);
          }
          writeAttribute(node, value, label);              
@@ -430,7 +434,7 @@ final class Composite implements Converter {
          Contact contact = label.getContact();
          Object value = contact.get(source);
                  
-         if(label.isRequired() && value == null) {
+         if(value == null && label.isRequired()) {
             throw new ElementException("Value for %s is null", label);
          }
          writeElement(node, value, label);
@@ -457,7 +461,7 @@ final class Composite implements Converter {
          Contact contact = label.getContact();
          Object value = contact.get(source);
                  
-         if(label.isRequired() && value == null) {
+         if(value == null && label.isRequired()) {
             throw new TextException("Value for %s is null", label);
          }
          writeText(node, value, label); 
@@ -510,8 +514,9 @@ final class Composite implements Converter {
          OutputNode next = node.getChild(name);
          Class type = label.getType();
         
-         factory.setOverride(type, value, next);
-         label.getConverter(root).write(next, value);
+         if(!factory.setOverride(type, value, next)) {           
+            label.getConverter(root).write(next, value);
+         }
       }
    }
    
