@@ -90,12 +90,12 @@ final class Primitive implements Converter {
     * @return this returns the primitive that has been deserialized
     */ 
    public Object read(InputNode node) throws Exception{
-	  Position line = node.getPosition();
-      String name = node.getName();	  
+      Position line = node.getPosition();
+      String name = node.getName();     
       String value = node.getValue();
       
       if(value == null) {
-         throw new ElementException("Element %s is empty at %s", name, line);              
+         throw new ElementException("Element '%s' is empty at %s", name, line);              
       } 
       String text = root.getProperty(value);
       return factory.getInstance(text);

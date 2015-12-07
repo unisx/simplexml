@@ -23,6 +23,7 @@ package simple.xml.load;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import simple.xml.ElementArray;
 import simple.xml.ElementList;
 import simple.xml.Element;
 import simple.xml.Attribute;
@@ -102,6 +103,9 @@ final class LabelFactory {
        }
        if(label instanceof ElementList) {
           return new Entry(ElementListLabel.class, ElementList.class);
+       }
+       if(label instanceof ElementArray) {
+          return new Entry(ElementArrayLabel.class, ElementArray.class);               
        }
        if(label instanceof Attribute) {
           return new Entry(AttributeLabel.class, Attribute.class);
