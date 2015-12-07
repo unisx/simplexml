@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.TemplateTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.714 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
 ------------- Standard Error -----------------
 <?xml version="1.0" encoding="UTF-8"?>
 <test name="test">
@@ -16,4 +16,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.714 sec
 </test>
 ------------- ---------------- ---------------
 
-Testcase: testTemplate took 0.689 sec
+Testcase: testTemplate took 0.691 sec

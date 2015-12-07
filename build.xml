@@ -7,7 +7,7 @@
       <property name="build.path" value="build"/>
       <property name="jar.path" value="jar"/>
       <property name="test.path" value="test"/>
-      <property name="version" value="0.9.5"/>
+      <property name="version" value="0.9.6"/>
    </target>
 
    <target name="clean" depends="layout">
@@ -21,7 +21,7 @@
    </target>
 
    <target name="build" depends="prepare">
-      <javac srcdir="${source.path}" destdir="${build.path}"/>
+      <javac srcdir="${source.path}" destdir="${build.path}" debug="true" debuglevel="lines,vars,source"/>
       <jar jarfile="${jar.path}/simple-xml-${version}.jar" basedir="${build.path}"/>
       <delete dir="${build.path}"/>
    </target>
