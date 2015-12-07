@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnicodeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.839 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.716 sec
 ------------- Standard Output ---------------
 <example>
    <list>
@@ -260,261 +260,431 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.839 sec
       </unicode>
    </list>
 </example>
-<example ID="0">
+<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <text ID="3">Ἀρχιμήδης</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <text ID="5">Tor Åge Bringsværd</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <text ID="7">심은하</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <text ID="11">이설희</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <text ID="13">माधुरी दिछित</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <text ID="15">Johann Strauß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="16" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <text ID="17">舒淇</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="18" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <text ID="19">Céline Dion</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <text ID="21">Mylène Demongeot</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <text ID="25">نصرت فتح علی خان</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <text ID="29">Søren Kierkegård</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <text ID="31">Jean Réno</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <text ID="33">テクス テクサン</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <text ID="37">יהורם גאון</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <text ID="39">Olga Tañón</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <text ID="41">久保田    利伸</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <text ID="43">Lech Wałęsa</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <text ID="47">Camille Saint-Saëns</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <text ID="49">Brad Pitt</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <text ID="51">Fabrizio De André</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <text ID="53">Walter Schultheiß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="54" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <text ID="55">Михаил Горбачёв</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="56" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <text ID="57">森鷗外</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="58" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <text ID="59">안성기</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <text ID="61">王菲</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <text ID="63">Борис Гребенщиков</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <text ID="65">Nicole Kidman</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <text ID="67">林原 めぐみ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <text ID="69">李安</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <text ID="73">Rudi Völler</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <text ID="75">ኤርትራ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <text ID="79">François Truffaut</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <text ID="81">章子怡</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <text ID="83">Björk Guðmundsdóttir</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <Text ID="3">Ἀρχιμήδης</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <Text ID="5">Tor Åge Bringsværd</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <Text ID="7">심은하</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <Text ID="11">이설희</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <Text ID="13">माधुरी दिछित</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <Text ID="15">Johann Strauß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="16" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <Text ID="17">舒淇</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="18" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <Text ID="19">Céline Dion</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <Text ID="21">Mylène Demongeot</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <Text ID="29">Søren Kierkegård</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <Text ID="31">Jean Réno</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <Text ID="33">テクス テクサン</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <Text ID="37">יהורם גאון</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <Text ID="41">久保田    利伸</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <Text ID="47">Camille Saint-Saëns</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <Text ID="49">Brad Pitt</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <Text ID="51">Fabrizio De André</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <Text ID="53">Walter Schultheiß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="54" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <Text ID="55">Михаил Горбачёв</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="56" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <Text ID="57">森鷗外</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="58" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <Text ID="59">안성기</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <Text ID="61">王菲</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <Text ID="63">Борис Гребенщиков</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <Text ID="67">林原 めぐみ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <Text ID="69">李安</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <Text ID="73">Rudi Völler</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <Text ID="79">François Truffaut</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <Text ID="81">章子怡</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <Text ID="83">Björk Guðmundsdóttir</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
@@ -777,261 +947,431 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.839 sec
       </unicode>
    </list>
 </example>
-<example ID="0">
+<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <text ID="3">Ἀρχιμήδης</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <text ID="5">Tor Åge Bringsværd</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <text ID="7">심은하</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <text ID="11">이설희</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <text ID="13">माधुरी दिछित</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <text ID="15">Johann Strauß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="16" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <text ID="17">舒淇</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="18" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <text ID="19">Céline Dion</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <text ID="21">Mylène Demongeot</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <text ID="25">نصرت فتح علی خان</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <text ID="29">Søren Kierkegård</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <text ID="31">Jean Réno</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <text ID="33">テクス テクサン</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <text ID="37">יהורם גאון</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <text ID="39">Olga Tañón</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <text ID="41">久保田    利伸</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <text ID="43">Lech Wałęsa</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <text ID="47">Camille Saint-Saëns</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <text ID="49">Brad Pitt</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <text ID="51">Fabrizio De André</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <text ID="53">Walter Schultheiß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="54" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <text ID="55">Михаил Горбачёв</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="56" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <text ID="57">森鷗外</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="58" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <text ID="59">안성기</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <text ID="61">王菲</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <text ID="63">Борис Гребенщиков</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <text ID="65">Nicole Kidman</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <text ID="67">林原 めぐみ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <text ID="69">李安</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <text ID="73">Rudi Völler</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <text ID="75">ኤርትራ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <text ID="79">François Truffaut</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <text ID="81">章子怡</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <text ID="83">Björk Guðmundsdóttir</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <Text ID="3">Ἀρχιμήδης</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <Text ID="5">Tor Åge Bringsværd</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <Text ID="7">심은하</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <Text ID="11">이설희</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <Text ID="13">माधुरी दिछित</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <Text ID="15">Johann Strauß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="16" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <Text ID="17">舒淇</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="18" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <Text ID="19">Céline Dion</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <Text ID="21">Mylène Demongeot</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <Text ID="29">Søren Kierkegård</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <Text ID="31">Jean Réno</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <Text ID="33">テクス テクサン</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <Text ID="37">יהורם גאון</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <Text ID="41">久保田    利伸</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <Text ID="47">Camille Saint-Saëns</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <Text ID="49">Brad Pitt</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <Text ID="51">Fabrizio De André</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <Text ID="53">Walter Schultheiß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="54" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <Text ID="55">Михаил Горбачёв</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="56" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <Text ID="57">森鷗外</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="58" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <Text ID="59">안성기</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <Text ID="61">王菲</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <Text ID="63">Борис Гребенщиков</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <Text ID="67">林原 めぐみ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <Text ID="69">李安</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <Text ID="73">Rudi Völler</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <Text ID="79">François Truffaut</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <Text ID="81">章子怡</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <Text ID="83">Björk Guðmundsdóttir</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
@@ -1294,261 +1634,431 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.839 sec
       </unicode>
    </list>
 </example>
-<example ID="0">
+<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="2" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <text ID="3">Tor Åge Bringsværd</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="4" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <text ID="5">Ἀρχιμήδης</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <text ID="7">심은하</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="10" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <text ID="11">माधुरी दिछित</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="12" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <text ID="13">이설희</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <text ID="15">Johann Strauß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="16" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <text ID="17">Céline Dion</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="18" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <text ID="19">舒淇</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <text ID="21">Mylène Demongeot</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <text ID="25">نصرت فتح علی خان</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <text ID="29">Søren Kierkegård</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <text ID="31">Jean Réno</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <text ID="33">テクス テクサン</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <text ID="37">יהורם גאון</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <text ID="39">Olga Tañón</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <text ID="41">久保田    利伸</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <text ID="43">Lech Wałęsa</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <text ID="47">Camille Saint-Saëns</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <text ID="49">Brad Pitt</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <text ID="51">Fabrizio De André</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <text ID="53">Walter Schultheiß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="54" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <text ID="55">森鷗外</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="56" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <text ID="57">Михаил Горбачёв</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="58" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <text ID="59">王菲</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="60" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <text ID="61">안성기</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="62" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <text ID="63">林原 めぐみ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <text ID="65">Nicole Kidman</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="66" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <text ID="67">Борис Гребенщиков</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <text ID="69">李安</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <text ID="73">Rudi Völler</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <text ID="75">ኤርትራ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <text ID="79">François Truffaut</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="80" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <text ID="81">Björk Guðmundsdóttir</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="82" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <text ID="83">章子怡</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="2" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <Text ID="3">Tor Åge Bringsværd</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="4" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <Text ID="5">Ἀρχιμήδης</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <Text ID="7">심은하</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="10" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <Text ID="11">माधुरी दिछित</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="12" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <Text ID="13">이설희</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <Text ID="15">Johann Strauß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="16" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <Text ID="17">Céline Dion</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="18" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <Text ID="19">舒淇</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <Text ID="21">Mylène Demongeot</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <Text ID="29">Søren Kierkegård</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <Text ID="31">Jean Réno</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <Text ID="33">テクス テクサン</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <Text ID="37">יהורם גאון</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <Text ID="41">久保田    利伸</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <Text ID="47">Camille Saint-Saëns</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <Text ID="49">Brad Pitt</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <Text ID="51">Fabrizio De André</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <Text ID="53">Walter Schultheiß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="54" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <Text ID="55">森鷗外</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="56" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <Text ID="57">Михаил Горбачёв</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="58" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <Text ID="59">王菲</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="60" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <Text ID="61">안성기</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="62" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <Text ID="63">林原 めぐみ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="66" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <Text ID="67">Борис Гребенщиков</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <Text ID="69">李安</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <Text ID="73">Rudi Völler</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <Text ID="79">François Truffaut</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="80" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <Text ID="81">Björk Guðmundsdóttir</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="82" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <Text ID="83">章子怡</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
@@ -1811,268 +2321,438 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.839 sec
       </unicode>
    </list>
 </example>
-<example ID="0">
+<!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <list ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <text ID="3">Ἀρχιμήδης</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <text ID="5">Tor Åge Bringsværd</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <text ID="7">심은하</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <text ID="9">Søren Hauch-Fausbøll</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <text ID="11">이설희</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <text ID="13">माधुरी दिछित</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <text ID="15">Johann Strauß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="16" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <text ID="17">舒淇</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="18" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <text ID="19">Céline Dion</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <text ID="21">Mylène Demongeot</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <text ID="23">Sinéad O&apos;Connor</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <text ID="25">نصرت فتح علی خان</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <text ID="27">Γιώργος Νταλάρας</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <text ID="29">Søren Kierkegård</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <text ID="31">Jean Réno</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <text ID="33">テクス テクサン</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <text ID="35">ኢትዮጵያ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <text ID="37">יהורם גאון</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <text ID="39">Olga Tañón</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <text ID="41">久保田    利伸</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <text ID="43">Lech Wałęsa</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <text ID="45">ธงไชย แม็คอินไตย์</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <text ID="47">Camille Saint-Saëns</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <text ID="49">Brad Pitt</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <text ID="51">Fabrizio De André</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <text ID="53">Walter Schultheiß</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="54" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <text ID="55">Михаил Горбачёв</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="56" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <text ID="57">森鷗外</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="58" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <text ID="59">안성기</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <text ID="61">王菲</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <text ID="63">Борис Гребенщиков</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <text ID="65">Nicole Kidman</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <text ID="67">林原 めぐみ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <text ID="69">李安</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <text ID="73">Rudi Völler</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <text ID="75">ኤርትራ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <text ID="79">François Truffaut</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <text ID="81">章子怡</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <text ID="83">Björk Guðmundsdóttir</text>
       </unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <text ID="85">Gérard Depardieu</text>
       </unicode>
    </list>
-</example><Example ID="0">
+</example><!-- org.simpleframework.xml.core.UnicodeTest$UnicodeExample --><Example ID="0">
+   <!-- org.simpleframework.xml.util.Dictionary -->
    <List ID="1">
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="2" origin="Syracuse (Sicily)" name="Archimedes">
+         <!-- java.lang.String -->
          <Text ID="3">Ἀρχιμήδης</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="4" origin="Norway" name="Tor Age Bringsvaerd">
+         <!-- java.lang.String -->
          <Text ID="5">Tor Åge Bringsværd</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="6" origin="Rep. of Korea" name="SHIM Eun-Ha">
+         <!-- java.lang.String -->
          <Text ID="7">심은하</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="8" origin="Denmark" name="Soren Hauch-Fausboll">
+         <!-- java.lang.String -->
          <Text ID="9">Søren Hauch-Fausbøll</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="10" origin="Democratic People&apos;s Rep. of Korea" name="LEE Sol-Hee">
+         <!-- java.lang.String -->
          <Text ID="11">이설희</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="12" origin="India (Hindi)" name="Madhuri Dixit">
+         <!-- java.lang.String -->
          <Text ID="13">माधुरी दिछित</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="14" origin="Austria" name="Johann Strauss">
+         <!-- java.lang.String -->
          <Text ID="15">Johann Strauß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="16" origin="Rep. of China" name="Hsu Chi">
+         <!-- java.lang.String -->
          <Text ID="17">舒淇</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="18" origin="Canada" name="Celine Dion">
+         <!-- java.lang.String -->
          <Text ID="19">Céline Dion</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="20" origin="France" name="Mylene Demongeot">
+         <!-- java.lang.String -->
          <Text ID="21">Mylène Demongeot</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="22" origin="Ireland" name="Sinead O&apos;Connor">
+         <!-- java.lang.String -->
          <Text ID="23">Sinéad O&apos;Connor</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="24" origin="Pakistan (Urdu)" name="Nusrat Fatah Ali Khan">
+         <!-- java.lang.String -->
          <Text ID="25">نصرت فتح علی خان</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="26" origin="Greece" name="Giorgos Dalaras">
+         <!-- java.lang.String -->
          <Text ID="27">Γιώργος Νταλάρας</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="28" origin="Denmark" name="Soren Kierkegaard">
+         <!-- java.lang.String -->
          <Text ID="29">Søren Kierkegård</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="30" origin="France" name="Jean Reno">
+         <!-- java.lang.String -->
          <Text ID="31">Jean Réno</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="32" origin="Japan" name="Tex Texin">
+         <!-- java.lang.String -->
          <Text ID="33">テクス テクサン</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="34" origin="Ethiopia" name="Haile Gebreselassie">
+         <!-- java.lang.String -->
          <Text ID="35">ኢትዮጵያ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="36" origin="Israel" name="Yehoram Gaon">
+         <!-- java.lang.String -->
          <Text ID="37">יהורם גאון</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="38" origin="Puerto Rico" name="Olga Tanon">
+         <!-- java.lang.String -->
          <Text ID="39">Olga Tañón</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="40" origin="Japan" name="KUBOTA Toshinobu">
+         <!-- java.lang.String -->
          <Text ID="41">久保田    利伸</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="42" origin="Poland" name="Lech Walesa">
+         <!-- java.lang.String -->
          <Text ID="43">Lech Wałęsa</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="44" origin="Thailand" name="Thongchai McIntai">
+         <!-- java.lang.String -->
          <Text ID="45">ธงไชย แม็คอินไตย์</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="46" origin="France" name="Camille Saint-Saens">
+         <!-- java.lang.String -->
          <Text ID="47">Camille Saint-Saëns</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="48" origin="U.S.A." name="Brad Pitt">
+         <!-- java.lang.String -->
          <Text ID="49">Brad Pitt</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="50" origin="Italy" name="Fabrizio DeAndre">
+         <!-- java.lang.String -->
          <Text ID="51">Fabrizio De André</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="52" origin="Germany" name="Walter Schultheiss">
+         <!-- java.lang.String -->
          <Text ID="53">Walter Schultheiß</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="54" origin="Russia" name="Mikhail Gorbachev">
+         <!-- java.lang.String -->
          <Text ID="55">Михаил Горбачёв</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="56" origin="Japan" name="Mori Ogai">
+         <!-- java.lang.String -->
          <Text ID="57">森鷗外</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="58" origin="Rep. of Korea" name="AHN Sung-Gi">
+         <!-- java.lang.String -->
          <Text ID="59">안성기</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="60" origin="People&apos;s Rep. of China" name="WONG Faye">
+         <!-- java.lang.String -->
          <Text ID="61">王菲</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="62" origin="Russia" name="Boris Grebenshchikov">
+         <!-- java.lang.String -->
          <Text ID="63">Борис Гребенщиков</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="64" origin="Australia" name="Nicole Kidman">
+         <!-- java.lang.String -->
          <Text ID="65">Nicole Kidman</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="66" origin="Japan" name="HAYASHIBARA Megumi">
+         <!-- java.lang.String -->
          <Text ID="67">林原 めぐみ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="68" origin="Rep. of China" name="Ang Lee">
+         <!-- java.lang.String -->
          <Text ID="69">李安</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="70" origin="Egypt" name="Om Kolthoum">
+         <!-- java.lang.String -->
          <Text ID="71">ﺃﻡ ﻛﻟﺛﻭﻡ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="72" origin="Germany" name="Rudi Voeller">
+         <!-- java.lang.String -->
          <Text ID="73">Rudi Völler</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="74" origin="Eritrea" name="Berhane Zeray">
+         <!-- java.lang.String -->
          <Text ID="75">ኤርትራ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="76" origin="Egypt" name="Abdel Halim Hafez">
+         <!-- java.lang.String -->
          <Text ID="77">ﻋﺑﺪﺍﻠﺣﻟﻳﻢ ﺤﺎﻓﻅ</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="78" origin="France" name="Francois Truffaut">
+         <!-- java.lang.String -->
          <Text ID="79">François Truffaut</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="80" origin="People&apos;s Rep. of China" name="ZHANG Ziyi">
+         <!-- java.lang.String -->
          <Text ID="81">章子怡</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="82" origin="Iceland" name="Bjork Gudmundsdottir">
+         <!-- java.lang.String -->
          <Text ID="83">Björk Guðmundsdóttir</Text>
       </Unicode>
+      <!-- org.simpleframework.xml.core.UnicodeTest$Unicode -->
       <Unicode ID="84" origin="France" name="Gerard Depardieu">
+         <!-- java.lang.String -->
          <Text ID="85">Gérard Depardieu</Text>
       </Unicode>
    </List>
 </Example>------------- ---------------- ---------------
 
-Testcase: testUnicode took 0.475 sec
-Testcase: testWriteUnicode took 0.269 sec
-Testcase: testUnicodeFromByteStream took 0.078 sec
+Testcase: testUnicode took 0.395 sec
+Testcase: testWriteUnicode took 0.234 sec
+Testcase: testUnicodeFromByteStream took 0.073 sec
 Testcase: testIncorrectEncoding took 0.006 sec
 Testcase: testDirectory took 0 sec

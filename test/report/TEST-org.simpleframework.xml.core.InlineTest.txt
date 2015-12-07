@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.404 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -12,15 +12,23 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
    <text name="b" version="TWO">Example 2</text>
    <text name="c" version="THREE">Example 3</text>
 </test>
-<test ID="0" version="ONE">
+<!-- org.simpleframework.xml.core.InlineTest$InlineTextList --><test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <message ID="1">Some example message</message>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="2" name="a" version="ONE">Example 1</text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="3" name="b" version="TWO">Example 2</text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="4" name="c" version="THREE">Example 3</text>
-</test><Test ID="0" version="ONE">
+</test><!-- org.simpleframework.xml.core.InlineTest$InlineTextList --><Test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="2" name="a" version="ONE">Example 1</Text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="3" name="b" version="TWO">Example 2</Text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="4" name="c" version="THREE">Example 3</Text>
 </Test><test version="ONE">
    <message>Some example message</message>
@@ -33,15 +41,23 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
    <text name="b" version="TWO">Example 2</text>
    <text name="c" version="THREE">Example 3</text>
 </test>
-<test ID="0" version="ONE">
+<!-- org.simpleframework.xml.core.InlineTest$InlineTextList --><test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <message ID="1">Some example message</message>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="2" name="a" version="ONE">Example 1</text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="3" name="b" version="TWO">Example 2</text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <text ID="4" name="c" version="THREE">Example 3</text>
-</test><Test ID="0" version="ONE">
+</test><!-- org.simpleframework.xml.core.InlineTest$InlineTextList --><Test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="2" name="a" version="ONE">Example 1</Text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="3" name="b" version="TWO">Example 2</Text>
+   <!-- org.simpleframework.xml.core.InlineTest$TextEntry -->
    <Text ID="4" name="c" version="THREE">Example 3</Text>
 </Test><test version="ONE">
    <message>Some example message</message>
@@ -54,15 +70,23 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
    <string>Example 2</string>
    <string>Example 3</string>
 </test>
-<test ID="0" version="ONE">
+<!-- org.simpleframework.xml.core.InlineTest$InlinePrimitiveList --><test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <message ID="1">Some example message</message>
+   <!-- java.lang.String -->
    <string ID="2">Example 1</string>
+   <!-- java.lang.String -->
    <string ID="3">Example 2</string>
+   <!-- java.lang.String -->
    <string ID="4">Example 3</string>
-</test><Test ID="0" version="ONE">
+</test><!-- org.simpleframework.xml.core.InlineTest$InlinePrimitiveList --><Test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
+   <!-- java.lang.String -->
    <String ID="2">Example 1</String>
+   <!-- java.lang.String -->
    <String ID="3">Example 2</String>
+   <!-- java.lang.String -->
    <String ID="4">Example 3</String>
 </Test><test version="ONE">
    <message>Some example message</message>
@@ -75,15 +99,23 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
    <string>Example 2</string>
    <string>Example 3</string>
 </test>
-<test ID="0" version="ONE">
+<!-- org.simpleframework.xml.core.InlineTest$InlinePrimitiveList --><test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <message ID="1">Some example message</message>
+   <!-- java.lang.String -->
    <string ID="2">Example 1</string>
+   <!-- java.lang.String -->
    <string ID="3">Example 2</string>
+   <!-- java.lang.String -->
    <string ID="4">Example 3</string>
-</test><Test ID="0" version="ONE">
+</test><!-- org.simpleframework.xml.core.InlineTest$InlinePrimitiveList --><Test ID="0" version="ONE">
+   <!-- java.lang.String -->
    <Message ID="1">Some example message</Message>
+   <!-- java.lang.String -->
    <String ID="2">Example 1</String>
+   <!-- java.lang.String -->
    <String ID="3">Example 2</String>
+   <!-- java.lang.String -->
    <String ID="4">Example 3</String>
 </Test><simpleInlineList>
    <simpleEntry content="test 0"/>
@@ -108,27 +140,47 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
    <simpleEntry content="test 8"/>
    <simpleEntry content="test 9"/>
 </simpleInlineList>
-<simple-inline-list ID="0">
+<!-- org.simpleframework.xml.core.InlineTest$SimpleInlineList --><simple-inline-list ID="0">
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="1" content="test 0"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="2" content="test 1"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="3" content="test 2"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="4" content="test 3"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="5" content="test 4"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="6" content="test 5"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="7" content="test 6"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="8" content="test 7"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="9" content="test 8"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <simple-entry ID="10" content="test 9"/>
-</simple-inline-list><SimpleInlineList ID="0">
+</simple-inline-list><!-- org.simpleframework.xml.core.InlineTest$SimpleInlineList --><SimpleInlineList ID="0">
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="1" content="test 0"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="2" content="test 1"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="3" content="test 2"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="4" content="test 3"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="5" content="test 4"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="6" content="test 5"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="7" content="test 6"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="8" content="test 7"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="9" content="test 8"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <SimpleEntry ID="10" content="test 9"/>
 </SimpleInlineList><simpleNameInlineList>
    <item content="test 0"/>
@@ -153,42 +205,64 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.416 sec
    <item content="test 8"/>
    <item content="test 9"/>
 </simpleNameInlineList>
-<simple-name-inline-list ID="0">
+<!-- org.simpleframework.xml.core.InlineTest$SimpleNameInlineList --><simple-name-inline-list ID="0">
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="1" content="test 0"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="2" content="test 1"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="3" content="test 2"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="4" content="test 3"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="5" content="test 4"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="6" content="test 5"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="7" content="test 6"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="8" content="test 7"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="9" content="test 8"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <item ID="10" content="test 9"/>
-</simple-name-inline-list><SimpleNameInlineList ID="0">
+</simple-name-inline-list><!-- org.simpleframework.xml.core.InlineTest$SimpleNameInlineList --><SimpleNameInlineList ID="0">
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="1" content="test 0"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="2" content="test 1"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="3" content="test 2"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="4" content="test 3"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="5" content="test 4"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="6" content="test 5"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="7" content="test 6"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="8" content="test 7"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="9" content="test 8"/>
+   <!-- org.simpleframework.xml.core.InlineTest$SimpleEntry -->
    <Item ID="10" content="test 9"/>
 </SimpleNameInlineList><simplePrimitiveInlineList>
    <string>test</string>
 </simplePrimitiveInlineList><simplePrimitiveInlineList>
    <string>test</string>
 </simplePrimitiveInlineList>
-<simple-primitive-inline-list ID="0">
+<!-- org.simpleframework.xml.core.InlineTest$SimplePrimitiveInlineList --><simple-primitive-inline-list ID="0">
+   <!-- java.lang.String -->
    <string ID="1">test</string>
-</simple-primitive-inline-list><SimplePrimitiveInlineList ID="0">
+</simple-primitive-inline-list><!-- org.simpleframework.xml.core.InlineTest$SimplePrimitiveInlineList --><SimplePrimitiveInlineList ID="0">
+   <!-- java.lang.String -->
    <String ID="1">test</String>
 </SimplePrimitiveInlineList>------------- ---------------- ---------------
 
 Testcase: testList took 0.266 sec
-Testcase: testPrimitiveList took 0.04 sec
-Testcase: testSimpleList took 0.055 sec
-Testcase: testSimpleNameList took 0.036 sec
-Testcase: testSimplePrimitiveList took 0.011 sec
-Testcase: testDirectory took 0 sec
+Testcase: testPrimitiveList took 0.045 sec
+Testcase: testSimpleList took 0.036 sec
+Testcase: testSimpleNameList took 0.037 sec
+Testcase: testSimplePrimitiveList took 0.013 sec
+Testcase: testDirectory took 0.001 sec

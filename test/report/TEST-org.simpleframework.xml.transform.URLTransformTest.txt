@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.transform.URLTransformTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.189 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.101 sec
 
-Testcase: testURL took 0.185 sec
+Testcase: testURL took 0.097 sec

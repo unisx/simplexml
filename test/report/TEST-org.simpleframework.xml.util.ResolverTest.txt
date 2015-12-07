@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.ResolverTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.309 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -22,24 +22,40 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
       <match value="text/html" pattern="/html/*"/>
    </list>
 </test>
-<test ID="0" name="example">
+<!-- org.simpleframework.xml.util.ResolverTest$ContentResolver --><test ID="0" name="example">
+   <!-- org.simpleframework.xml.util.Resolver -->
    <list ID="1">
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="2" value="text/html" pattern="*.html"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="3" value="image/jpeg" pattern="*.jpg"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="4" value="image/jpeg" pattern="/images/*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="5" value="text/plain" pattern="/log/**"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="6" value="application/octetstream" pattern="*.exe"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="7" value="text/plain" pattern="**.txt"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="8" value="text/html" pattern="/html/*"/>
    </list>
-</test><Test ID="0" name="example">
+</test><!-- org.simpleframework.xml.util.ResolverTest$ContentResolver --><Test ID="0" name="example">
+   <!-- org.simpleframework.xml.util.Resolver -->
    <List ID="1">
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="2" value="text/html" pattern="*.html"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="3" value="image/jpeg" pattern="*.jpg"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="4" value="image/jpeg" pattern="/images/*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="5" value="text/plain" pattern="/log/**"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="6" value="application/octetstream" pattern="*.exe"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="7" value="text/plain" pattern="**.txt"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="8" value="text/html" pattern="/html/*"/>
    </List>
 </Test><test name="example">
@@ -67,35 +83,55 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
       <match value="text/plain" pattern="README.txt"/>
    </list>
 </test>
-<test ID="0" name="example">
+<!-- org.simpleframework.xml.util.ResolverTest$ContentResolver --><test ID="0" name="example">
+   <!-- org.simpleframework.xml.util.Resolver -->
    <list ID="1">
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="2" value="text/html" pattern="*.html"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="3" value="image/jpeg" pattern="*.jpg"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="4" value="image/jpeg" pattern="/images/*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="5" value="application/octetstream" pattern="*.exe"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="6" value="text/plain" pattern="**.txt"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="7" value="text/html" pattern="/html/*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="8" value="application/octetstream" pattern="*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="9" value="text/html" pattern="README.*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <match ID="10" value="text/plain" pattern="README.txt"/>
    </list>
-</test><Test ID="0" name="example">
+</test><!-- org.simpleframework.xml.util.ResolverTest$ContentResolver --><Test ID="0" name="example">
+   <!-- org.simpleframework.xml.util.Resolver -->
    <List ID="1">
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="2" value="text/html" pattern="*.html"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="3" value="image/jpeg" pattern="*.jpg"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="4" value="image/jpeg" pattern="/images/*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="5" value="application/octetstream" pattern="*.exe"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="6" value="text/plain" pattern="**.txt"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="7" value="text/html" pattern="/html/*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="8" value="application/octetstream" pattern="*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="9" value="text/html" pattern="README.*"/>
+      <!-- org.simpleframework.xml.util.ResolverTest$ContentType -->
       <Match ID="10" value="text/plain" pattern="README.txt"/>
    </List>
 </Test>------------- ---------------- ---------------
 
-Testcase: testResolver took 0.303 sec
-Testcase: testCache took 0.058 sec
-Testcase: testNoResolution took 0.009 sec
-Testcase: testNonGreedyMatch took 0.005 sec
-Testcase: testResolverCache took 0.022 sec
+Testcase: testResolver took 0.23 sec
+Testcase: testCache took 0.044 sec
+Testcase: testNoResolution took 0.008 sec
+Testcase: testNonGreedyMatch took 0.004 sec
+Testcase: testResolverCache took 0.017 sec
 Testcase: testDirectory took 0 sec

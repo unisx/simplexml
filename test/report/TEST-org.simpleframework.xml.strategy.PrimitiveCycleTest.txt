@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.PrimitiveCycleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.216 sec
 ------------- Standard Output ---------------
 <test id="0">
    <primitive id="1">
@@ -44,7 +44,8 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
       <Enum id="11">TWO</Enum>
    </object>
 </test>
-<test ID="0">
+<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveCycleEntry --><test ID="0">
+   <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveEntry -->
    <primitive ID="1">
       <boolean>true</boolean>
       <byte>16</byte>
@@ -54,18 +55,29 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
       <long>1234567</long>
       <double>1234567.89</double>
    </primitive>
+   <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$ObjectEntry -->
    <object ID="2">
+      <!-- java.lang.Boolean -->
       <boolean ID="3">true</boolean>
+      <!-- java.lang.Byte -->
       <byte ID="4">16</byte>
+      <!-- java.lang.Short -->
       <short ID="5">120</short>
+      <!-- java.lang.Integer -->
       <integer ID="6">1234</integer>
+      <!-- java.lang.Float -->
       <float ID="7">1234.56</float>
+      <!-- java.lang.Long -->
       <long ID="8">1234567</long>
+      <!-- java.lang.Double -->
       <double ID="9">1234567.89</double>
+      <!-- java.lang.String -->
       <string ID="10">text value</string>
+      <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$TestEnum -->
       <enum ID="11">TWO</enum>
    </object>
-</test><Test ID="0">
+</test><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveCycleEntry --><Test ID="0">
+   <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$PrimitiveEntry -->
    <Primitive ID="1">
       <Boolean>true</Boolean>
       <Byte>16</Byte>
@@ -75,15 +87,25 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
       <Long>1234567</Long>
       <Double>1234567.89</Double>
    </Primitive>
+   <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$ObjectEntry -->
    <Object ID="2">
+      <!-- java.lang.Boolean -->
       <Boolean ID="3">true</Boolean>
+      <!-- java.lang.Byte -->
       <Byte ID="4">16</Byte>
+      <!-- java.lang.Short -->
       <Short ID="5">120</Short>
+      <!-- java.lang.Integer -->
       <Integer ID="6">1234</Integer>
+      <!-- java.lang.Float -->
       <Float ID="7">1234.56</Float>
+      <!-- java.lang.Long -->
       <Long ID="8">1234567</Long>
+      <!-- java.lang.Double -->
       <Double ID="9">1234567.89</Double>
+      <!-- java.lang.String -->
       <String ID="10">text value</String>
+      <!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$TestEnum -->
       <Enum ID="11">TWO</Enum>
    </Object>
 </Test><stringReferenceExample id="0">
@@ -95,13 +117,19 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
    <b reference="1"/>
    <c reference="1"/>
 </stringReferenceExample>
-<string-reference-example ID="0">
+<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><string-reference-example ID="0">
+   <!-- java.lang.String -->
    <a ID="1">a</a>
+   <!-- java.lang.String -->
    <b REFERER="1"/>
+   <!-- java.lang.String -->
    <c REFERER="1"/>
-</string-reference-example><StringReferenceExample ID="0">
+</string-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><StringReferenceExample ID="0">
+   <!-- java.lang.String -->
    <A ID="1">a</A>
+   <!-- java.lang.String -->
    <B REFERER="1"/>
+   <!-- java.lang.String -->
    <C REFERER="1"/>
 </StringReferenceExample><stringReferenceExample id="0">
    <a id="1">a</a>
@@ -112,13 +140,19 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
    <b id="2">b</b>
    <c reference="1"/>
 </stringReferenceExample>
-<string-reference-example ID="0">
+<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><string-reference-example ID="0">
+   <!-- java.lang.String -->
    <a ID="1">a</a>
+   <!-- java.lang.String -->
    <b ID="2">b</b>
+   <!-- java.lang.String -->
    <c REFERER="1"/>
-</string-reference-example><StringReferenceExample ID="0">
+</string-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$StringReferenceExample --><StringReferenceExample ID="0">
+   <!-- java.lang.String -->
    <A ID="1">a</A>
+   <!-- java.lang.String -->
    <B ID="2">b</B>
+   <!-- java.lang.String -->
    <C REFERER="1"/>
 </StringReferenceExample><integerReferenceExample id="0">
    <a id="1">1</a>
@@ -129,13 +163,19 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
    <b id="2">1</b>
    <c id="3">1</c>
 </integerReferenceExample>
-<integer-reference-example ID="0">
+<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><integer-reference-example ID="0">
+   <!-- java.lang.Integer -->
    <a ID="1">1</a>
+   <!-- java.lang.Integer -->
    <b ID="2">1</b>
+   <!-- java.lang.Integer -->
    <c ID="3">1</c>
-</integer-reference-example><IntegerReferenceExample ID="0">
+</integer-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><IntegerReferenceExample ID="0">
+   <!-- java.lang.Integer -->
    <A ID="1">1</A>
+   <!-- java.lang.Integer -->
    <B ID="2">1</B>
+   <!-- java.lang.Integer -->
    <C ID="3">1</C>
 </IntegerReferenceExample><integerReferenceExample id="0">
    <a id="1">1</a>
@@ -146,16 +186,22 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 1.175 sec
    <b reference="1"/>
    <c id="2">1</c>
 </integerReferenceExample>
-<integer-reference-example ID="0">
+<!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><integer-reference-example ID="0">
+   <!-- java.lang.Integer -->
    <a ID="1">1</a>
+   <!-- java.lang.Integer -->
    <b REFERER="1"/>
+   <!-- java.lang.Integer -->
    <c ID="2">1</c>
-</integer-reference-example><IntegerReferenceExample ID="0">
+</integer-reference-example><!-- org.simpleframework.xml.strategy.PrimitiveCycleTest$IntegerReferenceExample --><IntegerReferenceExample ID="0">
+   <!-- java.lang.Integer -->
    <A ID="1">1</A>
+   <!-- java.lang.Integer -->
    <B REFERER="1"/>
+   <!-- java.lang.Integer -->
    <C ID="2">1</C>
 </IntegerReferenceExample>------------- ---------------- ---------------
 
-Testcase: testPrimitive took 0.776 sec
-Testcase: testPrimitiveReference took 0.392 sec
+Testcase: testPrimitive took 0.748 sec
+Testcase: testPrimitiveReference took 0.459 sec
 Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.289 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -32,33 +32,49 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
       <integer>123</integer>
    </object>
 </root>
-<root ID="0">
+<!-- org.simpleframework.xml.core.StrictTest$StrictExample --><root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.StrictTest$StrictEntry; -->
    <list length="3" ID="1">
+      <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
       <item ID="2">
+         <!-- java.lang.String -->
          <value ID="3">value 1</value>
       </item>
+      <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
       <item ID="4">
+         <!-- java.lang.String -->
          <value ID="5">value 2</value>
       </item>
+      <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
       <item ID="6">
+         <!-- java.lang.String -->
          <value ID="7">value 3</value>
       </item>
    </list>
+   <!-- org.simpleframework.xml.core.StrictTest$StrictObject -->
    <object ID="8">
       <integer>123</integer>
    </object>
-</root><Root ID="0">
+</root><!-- org.simpleframework.xml.core.StrictTest$StrictExample --><Root ID="0">
+   <!-- [Lorg.simpleframework.xml.core.StrictTest$StrictEntry; -->
    <List length="3" ID="1">
+      <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
       <Item ID="2">
+         <!-- java.lang.String -->
          <Value ID="3">value 1</Value>
       </Item>
+      <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
       <Item ID="4">
+         <!-- java.lang.String -->
          <Value ID="5">value 2</Value>
       </Item>
+      <!-- org.simpleframework.xml.core.StrictTest$StrictEntry -->
       <Item ID="6">
+         <!-- java.lang.String -->
          <Value ID="7">value 3</Value>
       </Item>
    </List>
+   <!-- org.simpleframework.xml.core.StrictTest$StrictObject -->
    <Object ID="8">
       <Integer>123</Integer>
    </Object>
@@ -69,11 +85,13 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.285 sec
    <integer>123</integer>
    <name>test</name>
 </object>
-<object ID="0">
+<!-- org.simpleframework.xml.core.StrictTest$NamedStrictObject --><object ID="0">
    <integer>123</integer>
+   <!-- java.lang.String -->
    <name ID="1">test</name>
-</object><Object ID="0">
+</object><!-- org.simpleframework.xml.core.StrictTest$NamedStrictObject --><Object ID="0">
    <Integer>123</Integer>
+   <!-- java.lang.String -->
    <Name ID="1">test</Name>
 </Object>------------- ---------------- ---------------
 ------------- Standard Error -----------------
@@ -109,7 +127,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testStrict took 0.245 sec
-Testcase: testNamedStrict took 0.018 sec
-Testcase: testNamedStrictMissingName took 0.013 sec
+Testcase: testStrict took 0.252 sec
+Testcase: testNamedStrict took 0.017 sec
+Testcase: testNamedStrictMissingName took 0.012 sec
 Testcase: testDirectory took 0.001 sec

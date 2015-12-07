@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.core.ClassScannerTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.095 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.051 sec
 
-Testcase: testClassScanner took 0.089 sec
+Testcase: testClassScanner took 0.048 sec

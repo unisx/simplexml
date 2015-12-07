@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.655 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.686 sec
 ------------- Standard Output ---------------
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
@@ -14,16 +14,24 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.655 sec
       <textEntry name="c" version="THREE">Example 3</textEntry>
    </list>
 </defaultTextList>
-<default-text-list ID="0" version="ONE">
+<!-- org.simpleframework.xml.core.DefaultTest$DefaultTextList --><default-text-list ID="0" version="ONE">
+   <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <text-entry ID="2" name="a" version="ONE">Example 1</text-entry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <text-entry ID="3" name="b" version="TWO">Example 2</text-entry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <text-entry ID="4" name="c" version="THREE">Example 3</text-entry>
    </list>
-</default-text-list><DefaultTextList ID="0" version="ONE">
+</default-text-list><!-- org.simpleframework.xml.core.DefaultTest$DefaultTextList --><DefaultTextList ID="0" version="ONE">
+   <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <TextEntry ID="2" name="a" version="ONE">Example 1</TextEntry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <TextEntry ID="3" name="b" version="TWO">Example 2</TextEntry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <TextEntry ID="4" name="c" version="THREE">Example 3</TextEntry>
    </List>
 </DefaultTextList><defaultTextList version="ONE">
@@ -39,19 +47,27 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.655 sec
       <textEntry name="c" version="THREE">Example 3</textEntry>
    </list>
 </defaultTextList>
-<default-text-list ID="0" version="ONE">
+<!-- org.simpleframework.xml.core.DefaultTest$DefaultTextList --><default-text-list ID="0" version="ONE">
+   <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="1">
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <text-entry ID="2" name="a" version="ONE">Example 1</text-entry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <text-entry ID="3" name="b" version="TWO">Example 2</text-entry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <text-entry ID="4" name="c" version="THREE">Example 3</text-entry>
    </list>
-</default-text-list><DefaultTextList ID="0" version="ONE">
+</default-text-list><!-- org.simpleframework.xml.core.DefaultTest$DefaultTextList --><DefaultTextList ID="0" version="ONE">
+   <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="1">
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <TextEntry ID="2" name="a" version="ONE">Example 1</TextEntry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <TextEntry ID="3" name="b" version="TWO">Example 2</TextEntry>
+      <!-- org.simpleframework.xml.core.DefaultTest$TextEntry -->
       <TextEntry ID="4" name="c" version="THREE">Example 3</TextEntry>
    </List>
 </DefaultTextList>------------- ---------------- ---------------
 
-Testcase: testList took 0.649 sec
-Testcase: testDirectory took 0 sec
+Testcase: testList took 0.679 sec
+Testcase: testDirectory took 0.001 sec

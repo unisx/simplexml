@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.strategy.MapCycleTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.45 sec
 ------------- Standard Output ---------------
 <entryMap id="0">
    <map class="java.util.HashMap" id="1">
@@ -44,44 +44,62 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
       </entry>
    </map>
 </entryMap>
-<entry-map ID="0">
+<!-- org.simpleframework.xml.strategy.MapCycleTest$EntryMap --><entry-map ID="0">
+   <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry key="d">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry ID="2">
+            <!-- java.lang.String -->
             <name ID="3">a</name>
+            <!-- java.lang.String -->
             <value ID="4">example 1</value>
          </map-entry>
       </entry>
       <entry key="a">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry REFERER="2"/>
       </entry>
       <entry key="c">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry REFERER="2"/>
       </entry>
       <entry key="b">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry ID="5">
+            <!-- java.lang.String -->
             <name ID="6">b</name>
+            <!-- java.lang.String -->
             <value ID="7">example 2</value>
          </map-entry>
       </entry>
    </map>
-</entry-map><EntryMap ID="0">
+</entry-map><!-- org.simpleframework.xml.strategy.MapCycleTest$EntryMap --><EntryMap ID="0">
+   <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry key="d">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry ID="2">
+            <!-- java.lang.String -->
             <Name ID="3">a</Name>
+            <!-- java.lang.String -->
             <Value ID="4">example 1</Value>
          </MapEntry>
       </Entry>
       <Entry key="a">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry REFERER="2"/>
       </Entry>
       <Entry key="c">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry REFERER="2"/>
       </Entry>
       <Entry key="b">
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry ID="5">
+            <!-- java.lang.String -->
             <Name ID="6">b</Name>
+            <!-- java.lang.String -->
             <Value ID="7">example 2</Value>
          </MapEntry>
       </Entry>
@@ -147,62 +165,96 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
       </entry>
    </map>
 </complexMap>
-<complex-map ID="0">
+<!-- org.simpleframework.xml.strategy.MapCycleTest$ComplexMap --><complex-map ID="0">
+   <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <composite-key ID="2">
+            <!-- java.lang.String -->
             <name ID="3">name 3</name>
+            <!-- java.lang.String -->
             <address ID="4">address 3</address>
          </composite-key>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry ID="5">
+            <!-- java.lang.String -->
             <name ID="6">b</name>
+            <!-- java.lang.String -->
             <value ID="7">example 2</value>
          </map-entry>
       </entry>
       <entry>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <composite-key ID="8">
+            <!-- java.lang.String -->
             <name ID="9">name 1</name>
+            <!-- java.lang.String -->
             <address ID="10">address 1</address>
          </composite-key>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry REFERER="5"/>
       </entry>
       <entry>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <composite-key ID="11">
+            <!-- java.lang.String -->
             <name ID="12">name 4</name>
+            <!-- java.lang.String -->
             <address ID="13">address 4</address>
          </composite-key>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <map-entry ID="14">
+            <!-- java.lang.String -->
             <name ID="15">d</name>
+            <!-- java.lang.String -->
             <value ID="16">example 4</value>
          </map-entry>
       </entry>
    </map>
-</complex-map><ComplexMap ID="0">
+</complex-map><!-- org.simpleframework.xml.strategy.MapCycleTest$ComplexMap --><ComplexMap ID="0">
+   <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <CompositeKey ID="2">
+            <!-- java.lang.String -->
             <Name ID="3">name 3</Name>
+            <!-- java.lang.String -->
             <Address ID="4">address 3</Address>
          </CompositeKey>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry ID="5">
+            <!-- java.lang.String -->
             <Name ID="6">b</Name>
+            <!-- java.lang.String -->
             <Value ID="7">example 2</Value>
          </MapEntry>
       </Entry>
       <Entry>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <CompositeKey ID="8">
+            <!-- java.lang.String -->
             <Name ID="9">name 1</Name>
+            <!-- java.lang.String -->
             <Address ID="10">address 1</Address>
          </CompositeKey>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry REFERER="5"/>
       </Entry>
       <Entry>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$CompositeKey -->
          <CompositeKey ID="11">
+            <!-- java.lang.String -->
             <Name ID="12">name 4</Name>
+            <!-- java.lang.String -->
             <Address ID="13">address 4</Address>
          </CompositeKey>
+         <!-- org.simpleframework.xml.strategy.MapCycleTest$MapEntry -->
          <MapEntry ID="14">
+            <!-- java.lang.String -->
             <Name ID="15">d</Name>
+            <!-- java.lang.String -->
             <Value ID="16">example 4</Value>
          </MapEntry>
       </Entry>
@@ -238,39 +290,53 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.394 sec
       </entry>
    </map>
 </primitiveMap>
-<primitive-map ID="0">
+<!-- org.simpleframework.xml.strategy.MapCycleTest$PrimitiveMap --><primitive-map ID="0">
+   <!-- java.util.Map -->
    <map class="java.util.HashMap" ID="1">
       <entry>
+         <!-- java.lang.String -->
          <string ID="2">one</string>
+         <!-- java.lang.Double -->
          <double ID="3">1.0</double>
       </entry>
       <entry>
+         <!-- java.lang.String -->
          <string ID="4">two</string>
+         <!-- java.lang.Double -->
          <double REFERER="3"/>
       </entry>
       <entry>
+         <!-- java.lang.String -->
          <string ID="5">three</string>
+         <!-- java.lang.Double -->
          <double ID="6">4.0</double>
       </entry>
    </map>
-</primitive-map><PrimitiveMap ID="0">
+</primitive-map><!-- org.simpleframework.xml.strategy.MapCycleTest$PrimitiveMap --><PrimitiveMap ID="0">
+   <!-- java.util.Map -->
    <Map class="java.util.HashMap" ID="1">
       <Entry>
+         <!-- java.lang.String -->
          <String ID="2">one</String>
+         <!-- java.lang.Double -->
          <double ID="3">1.0</double>
       </Entry>
       <Entry>
+         <!-- java.lang.String -->
          <String ID="4">two</String>
+         <!-- java.lang.Double -->
          <double REFERER="3"/>
       </Entry>
       <Entry>
+         <!-- java.lang.String -->
          <String ID="5">three</String>
+         <!-- java.lang.Double -->
          <double ID="6">4.0</double>
       </Entry>
    </Map>
 </PrimitiveMap>------------- ---------------- ---------------
 
-Testcase: testEntryMap took 0.261 sec
-Testcase: testComplexMap took 0.08 sec
-Testcase: testPrimitiveMap took 0.044 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testEntryMap took 0.252 sec
+Testcase: testComplexMap took 0.149 sec
+Testcase: testPrimitiveMap took 0.04 sec
+Testcase: testDirectory took 0.002 sec
