@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictModeTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.131 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.578 sec
 ------------- Standard Output ---------------
 <exampleObjectWithAddress version="1.0">
    <integer>123</integer>
@@ -195,8 +195,8 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testStrictMode took 0.075 sec
-Testcase: testNonStrictMode took 0.044 sec
-Testcase: testNonStrictModeMissingName took 0.004 sec
-Testcase: testValidation took 0.007 sec
+Testcase: testStrictMode took 0.325 sec
+Testcase: testNonStrictMode took 0.194 sec
+Testcase: testNonStrictModeMissingName took 0.016 sec
+Testcase: testValidation took 0.03 sec
 Testcase: testDirectory took 0 sec

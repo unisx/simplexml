@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionComplicatedPathMixTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 4.064 sec
 ------------- Standard Output ---------------
 <complicatedExample xmlns:x="http://www.x.com/x">
    <x:path>
@@ -369,6 +369,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testComplicatedMap took 0.281 sec
-Testcase: testStyledComplicatedMap took 0.123 sec
+Testcase: testComplicatedMap took 3.41 sec
+Testcase: testStyledComplicatedMap took 0.643 sec
 Testcase: testDirectory took 0 sec

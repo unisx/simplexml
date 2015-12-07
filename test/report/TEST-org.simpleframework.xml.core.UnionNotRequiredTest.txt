@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionNotRequiredTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.154 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.539 sec
 ------------- Standard Output ---------------
 <animalFarm>
    <dog>
@@ -37,6 +37,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.154 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testOptionalEntry took 0.136 sec
-Testcase: testOptionalMissingEntry took 0.015 sec
-Testcase: testDirectory took 0 sec
+Testcase: testOptionalEntry took 0.482 sec
+Testcase: testOptionalMissingEntry took 0.045 sec
+Testcase: testDirectory took 0.001 sec

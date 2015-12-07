@@ -139,6 +139,11 @@ class CacheLabel implements Label {
    private final boolean inline;
    
    /**
+    * This is used to determine if the label represents a text list.
+    */
+   private final boolean list;
+   
+   /**
     * Constructor for the <code>CacheLabel</code> object. This is used
     * to create a <code>Label</code> that acquires details from another
     * label in such a way that any logic involved in acquiring details
@@ -156,6 +161,7 @@ class CacheLabel implements Label {
       this.depend = label.getDependent();
       this.required = label.isRequired();
       this.override = label.getOverride();
+      this.list = label.isTextList();
       this.inline = label.isInline();
       this.union = label.isUnion();
       this.names = label.getNames();
@@ -410,6 +416,18 @@ class CacheLabel implements Label {
     */
    public boolean isText() {
       return text;
+   }
+   
+   /**
+    * This is used to determine if an annotated list is a text 
+    * list. A text list is a list of elements that also accepts
+    * free text. Typically this will be an element list union that
+    * will allow unstructured XML such as XHTML to be parsed.
+    * 
+    * @return returns true if the label represents a text list
+    */
+   public boolean isTextList() {
+      return list;
    }
    
    /**

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ReplaceThisTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.104 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.441 sec
 ------------- Standard Output ---------------
 <realParent>
    <inner/>
@@ -23,5 +23,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.104 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testReplaceParent took 0.101 sec
+Testcase: testReplaceParent took 0.43 sec
 Testcase: testDirectory took 0 sec

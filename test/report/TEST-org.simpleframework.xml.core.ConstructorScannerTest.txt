@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorScannerTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.099 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 1.439 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Annotations do not match for 'a[1]/b[1]/c[1]' in class org.simpleframework.xml.core.ConstructorScannerTest$ClashBetweenElementAndText
 	at org.simpleframework.xml.core.SignatureScanner.validate(SignatureScanner.java:308)
@@ -106,13 +106,13 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'path[1]/a[1]' is a
 public org.simpleframework.xml.core.ScannerCreatorTest$Example1(java.lang.String,java.lang.String)
 ------------- ---------------- ---------------
 
-Testcase: testElementWithPath took 0.04 sec
-Testcase: testClashOnElementByPath took 0.004 sec
-Testcase: testClashOnElementUnionByPath took 0.011 sec
-Testcase: testClashInText took 0.004 sec
-Testcase: testSameNameWithPath took 0.005 sec
-Testcase: testSameNameAndAnnotationWithPath took 0.003 sec
-Testcase: testSameNameWithDifferentPath took 0.002 sec
-Testcase: testUnion took 0.003 sec
-Testcase: testUnionBigPermutation took 0.008 sec
-Testcase: testScanner took 0.015 sec
+Testcase: testElementWithPath took 0.206 sec
+Testcase: testClashOnElementByPath took 0.024 sec
+Testcase: testClashOnElementUnionByPath took 0.068 sec
+Testcase: testClashInText took 0.022 sec
+Testcase: testSameNameWithPath took 0.025 sec
+Testcase: testSameNameAndAnnotationWithPath took 0.013 sec
+Testcase: testSameNameWithDifferentPath took 0.008 sec
+Testcase: testUnion took 0.011 sec
+Testcase: testUnionBigPermutation took 0.038 sec
+Testcase: testScanner took 0.085 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultWithParametersInGetterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.114 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.472 sec
 ------------- Standard Output ---------------
 <defaultTestClass>
    <foo>100</foo>
@@ -33,7 +33,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.simpleframework.xml.core.MethodPartFactory.getRead(MethodPartFactory.java:263)
 	at org.simpleframework.xml.core.MethodPartFactory.getName(MethodPartFactory.java:124)
 	at org.simpleframework.xml.core.MethodPartFactory.getInstance(MethodPartFactory.java:98)
-	at org.simpleframework.xml.core.MethodScanner.remove(MethodScanner.java:339)
+	at org.simpleframework.xml.core.MethodScanner.remove(MethodScanner.java:377)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:234)
 	at org.simpleframework.xml.core.MethodScanner.extract(MethodScanner.java:162)
 	at org.simpleframework.xml.core.MethodScanner.scan(MethodScanner.java:125)
@@ -119,7 +119,7 @@ org.simpleframework.xml.core.MethodException: Get method public java.lang.String
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testDefaultWithParameters took 0.1 sec
-Testcase: testDefaultWithTransientErrors took 0.005 sec
-Testcase: testDefaultWithElementErrors took 0.005 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDefaultWithParameters took 0.418 sec
+Testcase: testDefaultWithTransientErrors took 0.023 sec
+Testcase: testDefaultWithElementErrors took 0.02 sec
+Testcase: testDirectory took 0.002 sec

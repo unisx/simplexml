@@ -441,7 +441,7 @@ class Composite implements Converter {
          
          if(block != null) {
             readSection(child, source, block);
-         } else {         
+         } else { 
             readElement(child, source, section, map);
          }
          child = node.getNext();
@@ -1287,7 +1287,7 @@ class Composite implements Converter {
     * @param label the label that contains the contact details
     */
    private void writeText(OutputNode node, Object value, Label label) throws Exception {
-      if(value != null) {         
+      if(value != null && !label.isTextList()) {         
          String text = factory.getText(value); 
          boolean data = label.isData();
          

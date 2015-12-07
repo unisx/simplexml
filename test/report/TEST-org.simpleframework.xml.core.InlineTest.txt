@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.213 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 1.051 sec
 ------------- Standard Output ---------------
 <test version="ONE">
    <message>Some example message</message>
@@ -302,9 +302,9 @@ Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.213 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.139 sec
-Testcase: testPrimitiveList took 0.026 sec
-Testcase: testSimpleList took 0.019 sec
-Testcase: testSimpleNameList took 0.019 sec
-Testcase: testSimplePrimitiveList took 0.006 sec
-Testcase: testDirectory took 0 sec
+Testcase: testList took 0.709 sec
+Testcase: testPrimitiveList took 0.123 sec
+Testcase: testSimpleList took 0.081 sec
+Testcase: testSimpleNameList took 0.088 sec
+Testcase: testSimplePrimitiveList took 0.035 sec
+Testcase: testDirectory took 0.002 sec

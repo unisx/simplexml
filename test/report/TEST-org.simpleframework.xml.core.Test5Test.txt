@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.Test5Test
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.521 sec
 ------------- Standard Output ---------------
 <test5>
    <elementA/>
@@ -19,4 +19,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
 
 ------------- ---------------- ---------------
 
-Testcase: testSerialize took 0.108 sec
+Testcase: testSerialize took 0.509 sec

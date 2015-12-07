@@ -1,15 +1,15 @@
 Testsuite: org.simpleframework.xml.core.PathWithTextInAPathTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.077 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.327 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework.xml.Text(data=false, empty=, required=true) on field 'a' private java.lang.String org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithElement.a used with elements in class org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithElement
-	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:366)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:352)
-	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:448)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:351)
-	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:448)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:351)
-	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:519)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:505)
+	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:376)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:362)
+	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:458)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:361)
+	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:458)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:361)
+	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:515)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:500)
 	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -43,14 +43,14 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1052)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework.xml.Text(data=false, empty=, required=true) on field 'a' private java.lang.String org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithCrossingPath.a can not be used with paths in class org.simpleframework.xml.core.PathWithTextInAPathTest$InvalidTextWithCrossingPath
-	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:369)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:352)
-	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:448)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:351)
-	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:448)
-	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:351)
-	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:519)
-	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:505)
+	at org.simpleframework.xml.core.TreeModel.validateText(TreeModel.java:379)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:362)
+	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:458)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:361)
+	at org.simpleframework.xml.core.TreeModel.validateModels(TreeModel.java:458)
+	at org.simpleframework.xml.core.TreeModel.validate(TreeModel.java:361)
+	at org.simpleframework.xml.core.StructureBuilder.validateModel(StructureBuilder.java:515)
+	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:500)
 	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:418)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -85,6 +85,6 @@ org.simpleframework.xml.core.TextException: Text annotation @org.simpleframework
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testInvalidText took 0.069 sec
-Testcase: testInvalidTextWithCrossingPath took 0.004 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testInvalidText took 0.296 sec
+Testcase: testInvalidTextWithCrossingPath took 0.02 sec
+Testcase: testDirectory took 0.002 sec

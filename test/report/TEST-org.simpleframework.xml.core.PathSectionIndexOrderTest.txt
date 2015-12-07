@@ -1,12 +1,12 @@
 Testsuite: org.simpleframework.xml.core.PathSectionIndexOrderTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.064 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.333 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.PathException: Ordered element 'path' in path 'path[3]/third' is out of sequence for class org.simpleframework.xml.core.PathSectionIndexOrderTest$ElementPathSectionOutOfOrder
 	at org.simpleframework.xml.core.ModelAssembler.registerElement(ModelAssembler.java:236)
 	at org.simpleframework.xml.core.ModelAssembler.registerElements(ModelAssembler.java:204)
 	at org.simpleframework.xml.core.ModelAssembler.assembleElements(ModelAssembler.java:109)
 	at org.simpleframework.xml.core.ModelAssembler.assemble(ModelAssembler.java:89)
-	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:161)
+	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:156)
 	at org.simpleframework.xml.core.ObjectScanner.order(ObjectScanner.java:387)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:369)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -42,7 +42,7 @@ org.simpleframework.xml.core.PathException: Ordered element 'path' in path 'path
 org.simpleframework.xml.core.PathException: Ordered element 'path[1]/first/@value' references an attribute in class org.simpleframework.xml.core.PathSectionIndexOrderTest$AttributeReferenceInElementOrder
 	at org.simpleframework.xml.core.ModelAssembler.assembleElements(ModelAssembler.java:107)
 	at org.simpleframework.xml.core.ModelAssembler.assemble(ModelAssembler.java:89)
-	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:161)
+	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:156)
 	at org.simpleframework.xml.core.ObjectScanner.order(ObjectScanner.java:387)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:369)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -78,7 +78,7 @@ org.simpleframework.xml.core.PathException: Ordered element 'path[1]/first/@valu
 org.simpleframework.xml.core.PathException: Ordered attribute 'path[1]/first/value' references an element in class org.simpleframework.xml.core.PathSectionIndexOrderTest$ElementReferenceInAttributeOrder
 	at org.simpleframework.xml.core.ModelAssembler.assembleAttributes(ModelAssembler.java:127)
 	at org.simpleframework.xml.core.ModelAssembler.assemble(ModelAssembler.java:90)
-	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:161)
+	at org.simpleframework.xml.core.StructureBuilder.assemble(StructureBuilder.java:156)
 	at org.simpleframework.xml.core.ObjectScanner.order(ObjectScanner.java:387)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:369)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -113,7 +113,7 @@ org.simpleframework.xml.core.PathException: Ordered attribute 'path[1]/first/val
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testOutOfOrderElement took 0.054 sec
-Testcase: testAttributeInElement took 0.002 sec
-Testcase: testElementInAttribute took 0.002 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testOutOfOrderElement took 0.292 sec
+Testcase: testAttributeInElement took 0.01 sec
+Testcase: testElementInAttribute took 0.01 sec
+Testcase: testDirectory took 0.009 sec

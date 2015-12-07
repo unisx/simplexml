@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.SuperTypeTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.107 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.455 sec
 ------------- Standard Output ---------------
 <objects>
    <object key="two">
@@ -16,4 +16,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.107 sec
    </object>
 </objects>------------- ---------------- ---------------
 
-Testcase: testSuperType took 0.106 sec
+Testcase: testSuperType took 0.446 sec

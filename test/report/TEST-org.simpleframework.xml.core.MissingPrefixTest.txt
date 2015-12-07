@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MissingPrefixTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.084 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.371 sec
 ------------- Standard Error -----------------
 java.lang.NoSuchFieldException: provider
 	at java.lang.Class.getDeclaredField(Class.java:1882)
@@ -27,7 +27,7 @@ Message: http://www.w3.org/TR/1999/REC-xml-names-19990114#ElementPrefixUnbound?d
 	at com.sun.xml.internal.stream.XMLEventReaderImpl.nextEvent(XMLEventReaderImpl.java:85)
 	at org.simpleframework.xml.stream.StreamReader.read(StreamReader.java:110)
 	at org.simpleframework.xml.stream.StreamReader.next(StreamReader.java:94)
-	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:115)
+	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:121)
 	at org.simpleframework.xml.stream.InputElement.getNext(InputElement.java:216)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:436)
 	at org.simpleframework.xml.core.Composite.access$400(Composite.java:59)
@@ -78,4 +78,4 @@ java.lang.NoSuchFieldException: provider
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testMissingPrefix took 0.082 sec
+Testcase: testMissingPrefix took 0.362 sec

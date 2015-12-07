@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionDependencyDoesNotMatchTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.532 sec
 ------------- Standard Output ---------------
 <example>
    <x/>
@@ -43,5 +43,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.128 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testTypeMatch took 0.126 sec
+Testcase: testTypeMatch took 0.52 sec
 Testcase: testDirectory took 0.001 sec

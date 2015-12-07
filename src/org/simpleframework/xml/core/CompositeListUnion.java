@@ -101,18 +101,55 @@ class CompositeListUnion implements Repeater {
     * @return this is the instance that has been read by this
     */
    public Object read(InputNode node) throws Exception {
+      Label text = group.getText();
+      
+      if(text == null) {
+         return readElement(node);
+      } 
+      return readText(node);
+   }
+   
+   /**
+    * The <code>readElement</code> method uses the name of the element 
+    * to select a converter to be used to read the instance. Selection 
+    * of the converter is done by looking up the associated label from
+    * the union group using the element name. Once the converter has
+    * been selected it is used to read the instance.
+    * 
+    * @param node this is the XML element used to read the instance
+    * 
+    * @return this is the instance that has been read by this
+    */
+   private Object readElement(InputNode node) throws Exception {
       String name = node.getName();
       String element = path.getElement(name);
       Label label = elements.get(element);
       Converter converter = label.getConverter(context);
+   
+      return converter.read(node);
+   }
+   
+   /**
+    * The <code>readText</code> method is used to read free text from
+    * between the declared elements and add them to a list. Consuming
+    * free text in this manner enables an element list union to parse
+    * unstructured XML such as XHTML.
+    * 
+    * @param node this is the node to consume the free text from
+    * 
+    * @return this returns the list with the text added to it
+    */
+   private Object readText(InputNode node) throws Exception {
+      Label text = group.getText();
+      Converter converter = text.getConverter(context);
       
       return converter.read(node);
    }
 
    /**
     * The <code>read</code> method uses the name of the XML element to
-    * select a converter to be used to read the instance. Selection of
-    * the converter is done by looking up the associated label from
+    * select a converter to be used to read the instance. Selection 
+    * of the converter is done by looking up the associated label from
     * the union group using the element name. Once the converter has
     * been selected it is used to read the instance.
     * 
@@ -122,12 +159,53 @@ class CompositeListUnion implements Repeater {
     * @return this is the instance that has been read by this
     */
    public Object read(InputNode node, Object value) throws Exception {
+      Object result = readElement(node, value);
+      Label text = group.getText();
+     
+      if(text != null) {
+         return readText(node, value);
+      }
+      return result;
+   }
+   
+   /**
+    * The <code>readElement</code> method uses the name of the element 
+    * to select a converter to be used to read the instance. Selection 
+    * of the converter is done by looking up the associated label from
+    * the union group using the element name. Once the converter has
+    * been selected it is used to read the instance.
+    * 
+    * @param node this is the XML element used to read the instance
+    * @param value this is the value that is to be repeated
+    * 
+    * @return this is the instance that has been read by this
+    */
+   private Object readElement(InputNode node, Object value) throws Exception {
       String name = node.getName();
       String element = path.getElement(name);
       Label label = elements.get(element);
       Converter converter = label.getConverter(context);
       
       return converter.read(node, value);
+   }
+   
+   /**
+    * The <code>readText</code> method is used to read free text from
+    * between the declared elements and add them to a list. Consuming
+    * free text in this manner enables an element list union to parse
+    * unstructured XML such as XHTML.
+    * 
+    * @param node this is the node to consume the free text from
+    * @param value this is the value that is to be repeated
+    * 
+    * @return this returns the list with the text added to it
+    */
+   private Object readText(InputNode node, Object value) throws Exception {
+      Label label = group.getText();
+      Converter converter = label.getConverter(context);
+      InputNode parent = node.getParent();
+      
+      return converter.read(parent, value);
    }
    
    /**
@@ -190,7 +268,7 @@ class CompositeListUnion implements Repeater {
             Class real = item.getClass();
             Label label = group.getLabel(real);
             
-            if(label == null) {               
+            if(label == null) {          
                throw new UnionException("Entry of %s not declared in %s with annotation %s", real, type, group);
             }
             write(node, item, label);

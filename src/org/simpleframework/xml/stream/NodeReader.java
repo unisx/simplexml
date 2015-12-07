@@ -35,6 +35,11 @@ package org.simpleframework.xml.stream;
 class NodeReader {
 
    /**
+    * This is used to collect the text between the element tags.
+    */
+   private final StringBuilder text;
+   
+   /**
     * Represents the XML event reader used to read all elements.
     */ 
    private final EventReader reader;     
@@ -51,6 +56,7 @@ class NodeReader {
     * @param reader this is the event reader for the XML document
     */ 
    public NodeReader(EventReader reader) {
+      this.text = new StringBuilder();
       this.stack = new InputStack();
       this.reader = reader;            
    }        
@@ -136,7 +142,9 @@ class NodeReader {
      EventNode event = reader.peek();
           
      while(event != null) {
-        if(event.isEnd()) { 
+        if(event.isText()) {
+           fillText(from);
+        } else if(event.isEnd()) { 
            if(stack.top() == from) {
               return null;
            } else {
@@ -167,7 +175,10 @@ class NodeReader {
     */    
    private InputNode readStart(InputNode from, EventNode event) throws Exception {
       InputElement input = new InputElement(from, this, event);
-               
+       
+      if(text.length() > 0) {
+         text.setLength(0);
+      }
       if(event.isStart()) {
          return stack.push(input);
       }
@@ -207,23 +218,21 @@ class NodeReader {
       if(!stack.isRelevant(from)) { 
          return null;
       }
-      EventNode event = reader.peek();
+      int length = text.length();
       
-      if(event.isEnd()) { 
-         if(stack.top() == from) {
-            return null;
-         } else {
-            stack.pop();
-         }
-         event = reader.next();
-         event = reader.peek();
-      }
-      if(event.isText()) {
-         if(stack.top() == from) {
-            return readText(from);
+      if(length <= 0) {
+         EventNode event = reader.peek();
+         
+         if(event.isEnd()) { 
+            if(stack.top() == from) {
+               return null;
+            } else {
+               stack.pop();
+            }
+            event = reader.next();
          }
       }
-      return null;
+      return readText(from);
    } 
    
    /**
@@ -237,23 +246,60 @@ class NodeReader {
     * @return this returns the characters from the specified node
     */ 
    private String readText(InputNode from) throws Exception {
-      StringBuilder value = new StringBuilder();
+      EventNode event = reader.peek();
       
-      while(stack.top() == from) {         
-         EventNode event = reader.peek();
+      while(stack.top() == from) {   
+         if(event.isText()) {
+            fillText(from);
+         } else {
+            break;
+         }
+         event = reader.next();
+         event = reader.peek();
+      }
+      return readBuffer(from);
+   }
+   
+   /**
+    * This is used to read the text between element tags. If there
+    * is any text held in the buffer then this will return that
+    * text and clear the buffer. Clearing the buffer in this
+    * way means that the text can only ever be read once.
+    * 
+    * @param from this is the node to read the text from
+    * 
+    * @return this returns the string within the buffer if any
+    */
+   private String readBuffer(InputNode from) throws Exception {
+      int length = text.length();
+      
+      if(length > 0) {
+         String value = text.toString();
          
-         if(!event.isText()) {
-            if(value.length() == 0) {
-               return null;
-            }
-            return value.toString();                    
-         } 
+         text.setLength(0);
+         return value;
+      }
+      return null;
+   }
+   
+   /**
+    * Read the contents of the characters between the specified XML
+    * element tags, if the read is currently at that element. This 
+    * allows characters associated with the element to be used. If
+    * the specified node is not the current node, null is returned.
+    *
+    * @param from this is the input node to read the value from
+    *
+    * @return this returns the characters from the specified node
+    */ 
+   private void fillText(InputNode from) throws Exception {      
+      EventNode event = reader.peek();
+      
+      if(event.isText()) {
          String data = event.getValue();
          
-         value.append(data);
-         reader.next();         
-      }         
-      return null;
+         text.append(data); 
+      }
    }  
    
    /**

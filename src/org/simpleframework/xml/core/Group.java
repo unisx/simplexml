@@ -41,6 +41,16 @@ interface Group {
    boolean isInline();
    
    /**
+    * This is used to determine if an annotated list is a text 
+    * list. A text list is a list of elements that also accepts
+    * free text. Typically this will be an element list union that
+    * will allow unstructured XML such as XHTML to be parsed.
+    * 
+    * @return returns true if the label represents a text list
+    */
+   boolean isTextList();
+   
+   /**
     * This is used to acquire a <code>Label</code> based on the type
     * of an object. Selecting a label based on the type ensures that
     * the serialization process can dynamically convert an object
@@ -60,7 +70,17 @@ interface Group {
     * 
     * @return this returns a label map containing the labels 
     */
-   LabelMap getElements() throws Exception ;
+   LabelMap getElements() throws Exception;
+   
+   /**
+    * This is used to get a <code>Label</code> that represents the
+    * text between elements on an element union. Providing a label
+    * here ensures that the free text found between elements can
+    * be converted in to strings and added to the list.
+    * 
+    * @return a label if a text annotation has been declared
+    */
+   Label getText() throws Exception;
    
    /**
     * This returns a string representation of the union group.

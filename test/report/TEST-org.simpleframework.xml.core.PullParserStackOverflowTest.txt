@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PullParserStackOverflowTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.087 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.409 sec
 ------------- Standard Error -----------------
 javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,39]
 Message: Content is not allowed in prolog.
@@ -8,8 +8,8 @@ Message: Content is not allowed in prolog.
 	at org.simpleframework.xml.stream.StreamReader.read(StreamReader.java:110)
 	at org.simpleframework.xml.stream.StreamReader.read(StreamReader.java:122)
 	at org.simpleframework.xml.stream.StreamReader.next(StreamReader.java:94)
-	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:105)
-	at org.simpleframework.xml.stream.NodeReader.readRoot(NodeReader.java:79)
+	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:111)
+	at org.simpleframework.xml.stream.NodeReader.readRoot(NodeReader.java:85)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:84)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:58)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:543)
@@ -37,8 +37,8 @@ Message: Content is not allowed in prolog.
 	at org.simpleframework.xml.stream.StreamReader.read(StreamReader.java:110)
 	at org.simpleframework.xml.stream.StreamReader.read(StreamReader.java:122)
 	at org.simpleframework.xml.stream.StreamReader.next(StreamReader.java:94)
-	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:105)
-	at org.simpleframework.xml.stream.NodeReader.readRoot(NodeReader.java:79)
+	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:111)
+	at org.simpleframework.xml.stream.NodeReader.readRoot(NodeReader.java:85)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:84)
 	at org.simpleframework.xml.stream.NodeBuilder.read(NodeBuilder.java:58)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:543)
@@ -65,7 +65,7 @@ Message: The element type "level" must be terminated by the matching end-tag "</
 	at com.sun.xml.internal.stream.XMLEventReaderImpl.nextEvent(XMLEventReaderImpl.java:85)
 	at org.simpleframework.xml.stream.StreamReader.read(StreamReader.java:110)
 	at org.simpleframework.xml.stream.StreamReader.next(StreamReader.java:94)
-	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:115)
+	at org.simpleframework.xml.stream.NodeReader.readElement(NodeReader.java:121)
 	at org.simpleframework.xml.stream.InputElement.getNext(InputElement.java:216)
 	at org.simpleframework.xml.core.Composite.readElements(Composite.java:436)
 	at org.simpleframework.xml.core.Composite.access$400(Composite.java:59)
@@ -96,7 +96,7 @@ Message: The element type "level" must be terminated by the matching end-tag "</
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testBrokenStart took 0.026 sec
-Testcase: testBrokenStartButComplete took 0.001 sec
-Testcase: testBrokenElementButComplete took 0.053 sec
-Testcase: testDirectory took 0.003 sec
+Testcase: testBrokenStart took 0.14 sec
+Testcase: testBrokenStartButComplete took 0.006 sec
+Testcase: testBrokenElementButComplete took 0.241 sec
+Testcase: testDirectory took 0.009 sec

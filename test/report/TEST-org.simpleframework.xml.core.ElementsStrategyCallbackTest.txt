@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ElementsStrategyCallbackTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.094 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.396 sec
 ------------- Standard Output ---------------
 null
 attribute type='double'
@@ -16,5 +16,5 @@ attribute type='byte'
 </example>
 ------------- ---------------- ---------------
 
-Testcase: testTypeCallback took 0.09 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testTypeCallback took 0.384 sec
+Testcase: testDirectory took 0.002 sec

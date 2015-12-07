@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NestedElementTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.137 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.622 sec
 ------------- Standard Output ---------------
 <nestedElementExample>
    <contact-info>
@@ -74,5 +74,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.137 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testNestedExample took 0.135 sec
+Testcase: testNestedExample took 0.612 sec
 Testcase: testDirectory took 0 sec

@@ -32,6 +32,7 @@ import org.simpleframework.xml.ElementUnion;
 import org.simpleframework.xml.Order;
 import org.simpleframework.xml.Text;
 import org.simpleframework.xml.Version;
+import org.simpleframework.xml.strategy.Type;
 
 /**
  * The <code>StructureBuilder</code> object is used to build the XML
@@ -113,11 +114,6 @@ class StructureBuilder {
    private Model root;
    
    /**
-    * This is the type that the XML structure is being built for.
-    */
-   private Class type;
-   
-   /**
     * This is used to determine if the scanned class is primitive.
     */
    private boolean primitive;
@@ -137,13 +133,12 @@ class StructureBuilder {
       this.builder = new ExpressionBuilder(detail, support);
       this.assembler = new ModelAssembler(builder, detail, support);
       this.resolver = new InstantiatorBuilder(scanner, detail);
-      this.root = new TreeModel(scanner, type);
+      this.root = new TreeModel(scanner, detail);
       this.attributes = new LabelMap(scanner);
       this.elements = new LabelMap(scanner);
       this.texts = new LabelMap(scanner);
       this.scanner = scanner;
       this.support = support;
-      this.type = type;
    }   
    
    /**
@@ -504,6 +499,7 @@ class StructureBuilder {
       validateAttributes(type, order);
       validateModel(type);
       validateText(type);  
+      validateTextList(type);
    }
    
    /**
@@ -528,18 +524,58 @@ class StructureBuilder {
     * @param type this is the object type that is being scanned
     */
    private void validateText(Class type) throws Exception {
-      if(root.getText() != null) {
-         if(!elements.isEmpty()) {
-            throw new TextException("Elements used with %s in %s", text, type);
-         }
-         if(root.isComposite()) {
-            throw new TextException("Paths used with %s in %s", text, type);
+   	Label label = root.getText();
+   	
+      if(label != null) {
+         if(!label.isTextList()) {
+            if(!elements.isEmpty()) {
+               throw new TextException("Elements used with %s in %s", label, type);
+            }
+            if(root.isComposite()) {
+               throw new TextException("Paths used with %s in %s", label, type);
+            }
          }
       }  else {
          if(scanner.isEmpty()) {
             primitive = isEmpty();
          }
       }
+   }
+   
+   /**
+    * This is used to validate the configuration of the scanned class.
+    * If an <code>ElementListUnion</code> annotation has been used with 
+    * a <code>Text</code> annotation this validates to ensure there are
+    * no other elements declared and no <code>Path</code> annotations 
+    * have been used, which ensures free text can be processed.
+    * 
+    * @param type this is the object type that is being scanned
+    */
+   private void validateTextList(Class type) throws Exception {
+      Label label = root.getText();
+      
+      if(label != null) {
+         if(label.isTextList()) {
+            Object key = label.getKey();
+            
+            for(Label element : elements) {
+               Object identity = element.getKey();
+               
+               if(!identity.equals(key)) {
+                  throw new TextException("Elements used with %s in %s", label, type);
+               }
+               Type dependent = element.getDependent();
+               Class actual = dependent.getType();
+               
+               if(actual == String.class) {
+                  throw new TextException("Illegal entry of %s with text annotations on %s in %s", actual, label, type);
+               }
+            }
+            if(root.isComposite()) {
+               throw new TextException("Paths used with %s in %s", label, type);
+            }
+         }
+      } 
    }
    
    /**

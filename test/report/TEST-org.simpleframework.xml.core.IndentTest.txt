@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.IndentTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.66 sec
 ------------- Standard Output ---------------
 <contact id="some id">
      <details>
@@ -69,6 +69,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.127 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testIndent took 0.11 sec
-Testcase: testNoIndent took 0.014 sec
-Testcase: testDirectory took 0 sec
+Testcase: testIndent took 0.467 sec
+Testcase: testNoIndent took 0.181 sec
+Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionConstructorInjectionTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.143 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.675 sec
 ------------- Standard Output ---------------
 <example age="20">
    <login>john.doe</login>
@@ -30,7 +30,7 @@ org.simpleframework.xml.core.ConstructorException: Type is not compatible with @
 	at org.simpleframework.xml.core.InstantiatorBuilder.validateParameter(InstantiatorBuilder.java:271)
 	at org.simpleframework.xml.core.InstantiatorBuilder.validate(InstantiatorBuilder.java:251)
 	at org.simpleframework.xml.core.InstantiatorBuilder.build(InstantiatorBuilder.java:114)
-	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:488)
+	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:483)
 	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:417)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -64,7 +64,7 @@ org.simpleframework.xml.core.ConstructorException: Type is not compatible with @
 org.simpleframework.xml.core.ConstructorException: Parameter 'id' does not have a match in class org.simpleframework.xml.core.UnionConstructorInjectionTest$InvalidAnnotationExample
 	at org.simpleframework.xml.core.InstantiatorBuilder.validate(InstantiatorBuilder.java:249)
 	at org.simpleframework.xml.core.InstantiatorBuilder.build(InstantiatorBuilder.java:114)
-	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:488)
+	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:483)
 	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:417)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -97,7 +97,7 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'id' does not have 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testConstructorInjection took 0.131 sec
-Testcase: testInvalidConstructorInjection took 0.005 sec
-Testcase: testInvalidAnnotationConstructorInjection took 0.004 sec
-Testcase: testDirectory took 0 sec
+Testcase: testConstructorInjection took 0.617 sec
+Testcase: testInvalidConstructorInjection took 0.023 sec
+Testcase: testInvalidAnnotationConstructorInjection took 0.021 sec
+Testcase: testDirectory took 0.002 sec

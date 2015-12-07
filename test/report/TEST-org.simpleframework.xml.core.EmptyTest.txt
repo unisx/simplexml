@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EmptyTest
-Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.154 sec
+Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.684 sec
 ------------- Standard Output ---------------
 <test>
    <empty class="java.util.ArrayList"/>
@@ -191,13 +191,13 @@ org.simpleframework.xml.core.ValueRequiredException: Empty value for @org.simple
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testRequiredEmpty took 0.072 sec
-Testcase: testRequiredEmptyMethod took 0.006 sec
-Testcase: testRequiredBlank took 0.003 sec
-Testcase: testOptionalEmpty took 0.004 sec
-Testcase: testOptionalBlank took 0.001 sec
-Testcase: testEmptyCollection took 0.036 sec
-Testcase: testRequiredEmptyAttribute took 0.004 sec
-Testcase: testOptionalEmptyAttribute took 0.001 sec
-Testcase: testDefaultedAttribute took 0.025 sec
-Testcase: testDirectory took 0 sec
+Testcase: testRequiredEmpty took 0.311 sec
+Testcase: testRequiredEmptyMethod took 0.028 sec
+Testcase: testRequiredBlank took 0.011 sec
+Testcase: testOptionalEmpty took 0.018 sec
+Testcase: testOptionalBlank took 0.004 sec
+Testcase: testEmptyCollection took 0.161 sec
+Testcase: testRequiredEmptyAttribute took 0.015 sec
+Testcase: testOptionalEmptyAttribute took 0.004 sec
+Testcase: testDefaultedAttribute took 0.114 sec
+Testcase: testDirectory took 0.001 sec

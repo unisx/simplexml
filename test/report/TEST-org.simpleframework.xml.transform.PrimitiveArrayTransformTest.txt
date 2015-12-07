@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.PrimitiveArrayTransformTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.21 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 8.327 sec
 ------------- Standard Output ---------------
 <integerArrayExample attribute="1, 2, 3, 4">
    <element length="4">1, 2, 3, 4</element>
@@ -294,8 +294,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.21 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testRead took 0.001 sec
-Testcase: testWrite took 0 sec
-Testcase: testPersistence took 0.145 sec
-Testcase: testCyclicPersistence took 0.061 sec
-Testcase: testDirectory took 0 sec
+Testcase: testRead took 0.007 sec
+Testcase: testWrite took 0.001 sec
+Testcase: testPersistence took 8.044 sec
+Testcase: testCyclicPersistence took 0.262 sec
+Testcase: testDirectory took 0.001 sec

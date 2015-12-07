@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.stream.NodeWriterTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.024 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.098 sec
 ------------- Standard Output ---------------
 <root id="test" name="testRoot">
    <child-of-root name="child of root">
@@ -10,8 +10,9 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.024 sec
 </root>
 <root version="1.0">
    <first-child key="1">some value for first child</first-child>
-   <second-child key="2">
-      <test>test value</test>some value for second child</second-child>
+   <second-child key="2">some value for second child
+      <test>test value</test>
+   </second-child>
    <third-child key="3" name="three"/>
    <fourth-child key="4" name="four">
       <fourth-child-child name="foobar">some text for grand-child</fourth-child-child>
@@ -39,7 +40,7 @@ org.simpleframework.xml.stream.NodeException: No root node
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testEarlyCommit took 0.008 sec
-Testcase: testBasicWrite took 0.009 sec
-Testcase: testWrite took 0.002 sec
-Testcase: testDirectory took 0.002 sec
+Testcase: testEarlyCommit took 0.035 sec
+Testcase: testBasicWrite took 0.037 sec
+Testcase: testWrite took 0.005 sec
+Testcase: testDirectory took 0.01 sec

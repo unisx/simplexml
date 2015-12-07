@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.AttributeNameSameAsElementNameTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.075 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.328 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.AttributeException: Value for @org.simpleframework.xml.Attribute(name=a, empty=, required=true) on field 'attr' private java.lang.String org.simpleframework.xml.core.AttributeNameSameAsElementNameTest$AttributeSameAsElement.attr is null in class org.simpleframework.xml.core.AttributeNameSameAsElementNameTest$AttributeSameAsElement
 	at org.simpleframework.xml.core.Composite.writeAttributes(Composite.java:1062)
@@ -33,4 +33,4 @@ org.simpleframework.xml.core.AttributeException: Value for @org.simpleframework.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testSame took 0.073 sec
+Testcase: testSame took 0.319 sec

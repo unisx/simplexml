@@ -316,12 +316,50 @@ class MethodScanner extends ContactList {
    private void process(MethodContact contact) {
       MethodPart get = contact.getRead();
       MethodPart set = contact.getWrite();
-      String name = get.getName();
       
       if(set != null) {
-         write.put(name, set);
+         insert(set, write);
       }
-      read.put(name,  get);
+      insert(get, read);
+   }
+   
+   /**
+    * This is used to insert a contact to this contact list. Here if
+    * a <code>Text</code> annotation is declared on a method that
+    * already has an annotation then the other annotation is given
+    * the priority, this is to so text can be processes separately.
+    * 
+    * @param method this is the part that is to be inserted
+    * @param map this is the map that the part is to be inserted in
+    */
+   private void insert(MethodPart method, PartMap map) {
+      String name = method.getName();
+      MethodPart existing = map.remove(name);
+      
+      if(existing != null) {
+         if(isText(method)) {
+            method = existing;
+         }
+      }
+      map.put(name, method);
+   }
+      
+   /**
+    * This is used to determine if the <code>Text</code> annotation
+    * has been declared on the method. If this annotation is used
+    * then this will return true, otherwise this returns false.
+    * 
+    * @param contact the contact to check for the text annotation
+    * 
+    * @return true if the text annotation was declared on the method
+    */
+   private boolean isText(MethodPart method) {
+      Annotation label = method.getAnnotation();
+      
+      if(label instanceof Text) {
+         return true;
+      }
+      return false;
    }
    
    /**

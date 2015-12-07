@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMapTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.777 sec
 ------------- Standard Output ---------------
 <inlineMapExample>
    <yEntry yKey="3">
@@ -272,7 +272,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.194 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.144 sec
-Testcase: testXList took 0.027 sec
-Testcase: testYList took 0.02 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testInlineList took 0.586 sec
+Testcase: testXList took 0.098 sec
+Testcase: testYList took 0.079 sec
+Testcase: testDirectory took 0.002 sec

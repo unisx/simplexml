@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.EnumMapTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.12 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.512 sec
 ------------- Standard Output ---------------
 <enumMapExample>
    <numbers>
@@ -114,5 +114,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.12 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testEnumMap took 0.119 sec
+Testcase: testEnumMap took 0.502 sec
 Testcase: testDirectory took 0 sec

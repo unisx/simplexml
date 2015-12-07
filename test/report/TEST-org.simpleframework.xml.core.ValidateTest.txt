@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.11 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(name=version, empty=, required=true) on field 'version' private org.simpleframework.xml.core.ValidateTest$Version org.simpleframework.xml.core.ValidateTest$TextEntry.version for class org.simpleframework.xml.core.ValidateTest$TextEntry at line 5
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:926)
@@ -80,7 +80,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1052)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 org.simpleframework.xml.core.PersistenceException: Element 'array' declared twice at line 8
-	at org.simpleframework.xml.core.Variable$Adapter.validate(Variable.java:494)
+	at org.simpleframework.xml.core.Variable$Adapter.validate(Variable.java:506)
 	at org.simpleframework.xml.core.Composite.validate(Composite.java:900)
 	at org.simpleframework.xml.core.Composite.validateUnion(Composite.java:883)
 	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:859)
@@ -113,8 +113,8 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testVersionMissing took 0.087 sec
-Testcase: testNameMissing took 0.005 sec
-Testcase: testTextMissing took 0.003 sec
-Testcase: testExtraElement took 0.01 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testVersionMissing took 0.347 sec
+Testcase: testNameMissing took 0.014 sec
+Testcase: testTextMissing took 0.008 sec
+Testcase: testExtraElement took 0.023 sec
+Testcase: testDirectory took 0.002 sec

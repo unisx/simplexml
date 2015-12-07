@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathWithOrderedAttributesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.133 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.575 sec
 ------------- Standard Output ---------------
 <serverDeployment>
    <group processor="INTEL" os="LINUX">
@@ -80,5 +80,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.133 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testAttributeOrder took 0.132 sec
-Testcase: testDirectory took 0 sec
+Testcase: testAttributeOrder took 0.564 sec
+Testcase: testDirectory took 0.001 sec

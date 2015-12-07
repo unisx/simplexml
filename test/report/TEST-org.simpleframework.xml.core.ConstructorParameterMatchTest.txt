@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorParameterMatchTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.092 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.379 sec
 
-Testcase: testParameterMatch took 0.09 sec
-Testcase: testDirectory took 0 sec
+Testcase: testParameterMatch took 0.369 sec
+Testcase: testDirectory took 0.002 sec

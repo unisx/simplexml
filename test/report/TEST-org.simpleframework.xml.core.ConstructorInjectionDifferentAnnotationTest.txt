@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.139 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.685 sec
 ------------- Standard Output ---------------
 <example>
    <k><![CDATA[a]]></k>
@@ -64,7 +64,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.139 sec
 org.simpleframework.xml.core.ConstructorException: Parameter 'v' does not have a match in class org.simpleframework.xml.core.ConstructorInjectionDifferentAnnotationTest$InvalidExample
 	at org.simpleframework.xml.core.InstantiatorBuilder.validate(InstantiatorBuilder.java:249)
 	at org.simpleframework.xml.core.InstantiatorBuilder.build(InstantiatorBuilder.java:114)
-	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:488)
+	at org.simpleframework.xml.core.StructureBuilder.commit(StructureBuilder.java:483)
 	at org.simpleframework.xml.core.ObjectScanner.validate(ObjectScanner.java:417)
 	at org.simpleframework.xml.core.ObjectScanner.scan(ObjectScanner.java:372)
 	at org.simpleframework.xml.core.ObjectScanner.<init>(ObjectScanner.java:81)
@@ -97,7 +97,7 @@ org.simpleframework.xml.core.ConstructorException: Parameter 'v' does not have a
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testDifferentAnnotations took 0.108 sec
-Testcase: testDifferentListAnnotations took 0.023 sec
-Testcase: testInvalidExample took 0.003 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDifferentAnnotations took 0.547 sec
+Testcase: testDifferentListAnnotations took 0.109 sec
+Testcase: testInvalidExample took 0.016 sec
+Testcase: testDirectory took 0.002 sec

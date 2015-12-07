@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.083 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.363 sec
 ------------- Standard Output ---------------
 <nonMatchingUnionList>
    <a/>
@@ -8,8 +8,8 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.083 sec
    <d/>------------- ---------------- ---------------
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: Entry of class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$E not declared in field 'list' private java.util.List org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$NonMatchingUnionList.list with annotation @org.simpleframework.xml.ElementListUnion(value=[@org.simpleframework.xml.ElementList(inline=true, entry=a, name=, data=false, empty=true, required=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$A), @org.simpleframework.xml.ElementList(inline=true, entry=b, name=, data=false, empty=true, required=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$B), @org.simpleframework.xml.ElementList(inline=true, entry=c, name=, data=false, empty=true, required=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$C), @org.simpleframework.xml.ElementList(inline=true, entry=d, name=, data=false, empty=true, required=true, type=class org.simpleframework.xml.core.UnionWithNonMatchingListEntriesTest$D)])
-	at org.simpleframework.xml.core.CompositeListUnion.write(CompositeListUnion.java:194)
-	at org.simpleframework.xml.core.CompositeListUnion.write(CompositeListUnion.java:168)
+	at org.simpleframework.xml.core.CompositeListUnion.write(CompositeListUnion.java:272)
+	at org.simpleframework.xml.core.CompositeListUnion.write(CompositeListUnion.java:246)
 	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1256)
 	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1239)
 	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1127)
@@ -44,5 +44,5 @@ org.simpleframework.xml.core.UnionException: Entry of class org.simpleframework.
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testNonMatching took 0.08 sec
-Testcase: testDirectory took 0 sec
+Testcase: testNonMatching took 0.351 sec
+Testcase: testDirectory took 0.001 sec

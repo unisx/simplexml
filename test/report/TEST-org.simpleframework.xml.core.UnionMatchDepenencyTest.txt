@@ -1,9 +1,9 @@
 Testsuite: org.simpleframework.xml.core.UnionMatchDepenencyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.083 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.348 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.UnionException: No type matches class java.lang.String in @org.simpleframework.xml.ElementUnion(value=[@org.simpleframework.xml.Element(name=x, data=false, required=true, type=class java.lang.Integer), @org.simpleframework.xml.Element(name=y, data=false, required=true, type=class java.lang.Integer), @org.simpleframework.xml.Element(name=z, data=false, required=true, type=class java.lang.Integer)]) for field 'value' private java.lang.String org.simpleframework.xml.core.UnionMatchDepenencyTest$Example.value
 	at org.simpleframework.xml.core.ElementUnionLabel.getLabel(ElementUnionLabel.java:139)
-	at org.simpleframework.xml.core.CacheLabel.getLabel(CacheLabel.java:198)
+	at org.simpleframework.xml.core.CacheLabel.getLabel(CacheLabel.java:204)
 	at org.simpleframework.xml.core.Composite.writeElement(Composite.java:1226)
 	at org.simpleframework.xml.core.Composite.writeUnion(Composite.java:1127)
 	at org.simpleframework.xml.core.Composite.writeElements(Composite.java:1098)
@@ -37,5 +37,5 @@ org.simpleframework.xml.core.UnionException: No type matches class java.lang.Str
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:906)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMatch took 0.081 sec
-Testcase: testDirectory took 0 sec
+Testcase: testTypeMatch took 0.335 sec
+Testcase: testDirectory took 0.002 sec

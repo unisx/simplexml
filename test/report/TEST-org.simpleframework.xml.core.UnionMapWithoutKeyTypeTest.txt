@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionMapWithoutKeyTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.147 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.552 sec
 ------------- Standard Output ---------------
 <mapExample>
    <y-node key="3">
@@ -70,5 +70,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.147 sec
 >>>>> SOURCE=[class com.sun.xml.internal.stream.events.StartElementEvent]
 ------------- ---------------- ---------------
 
-Testcase: testInlineList took 0.144 sec
+Testcase: testInlineList took 0.542 sec
 Testcase: testDirectory took 0 sec

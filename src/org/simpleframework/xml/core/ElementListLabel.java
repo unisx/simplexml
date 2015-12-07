@@ -41,12 +41,7 @@ class ElementListLabel extends TemplateLabel {
    /**
     * This is the decorator that is associated with the element.
     */
-   private Decorator decorator;
-
-   /**
-    * This references the annotation that the field uses.
-    */
-   private ElementList label;
+   private Decorator decorator; 
    
    /**
     * This contains the details of the annotated contact object.
@@ -54,14 +49,39 @@ class ElementListLabel extends TemplateLabel {
    private Introspector detail;
    
    /**
-    * This is the path that is used to represent this elements list.
+    * This references the annotation that the field uses.
     */
-   private Expression path;
+   private ElementList label;
+   
+   /**
+    * This is a cache of the expression for this element list.
+    */
+   private Expression cache;
    
    /**
     * This is the format used to style the elements in the list.
     */  
    private Format format;
+   
+   /**
+    * This is the name of the element for this label instance.
+    */
+   private String override;  
+   
+   /**
+    * This is the name of the XML entry from the annotation.
+    */
+   private String entry;
+   
+   /**
+    * This is the name of the XML element from the annotation.
+    */
+   private String name;
+   
+   /**
+    * This is the path of the XML entry from the annotation.
+    */
+   private String path;
    
    /**
     * This is the type of collection this list will instantiate.
@@ -72,16 +92,6 @@ class ElementListLabel extends TemplateLabel {
     * Represents the type of objects this list will hold.
     */
    private Class item;
-   
-   /**
-    * This is the name of the XML entry from the annotation.
-    */
-   private String entry;
-   
-   /**
-    * This is the name of the element for this label instance.
-    */
-   private String name;  
    
    /**
     * This is used to determine if the attribute is required.
@@ -112,11 +122,11 @@ class ElementListLabel extends TemplateLabel {
       this.decorator = new Qualifier(contact);
       this.required = label.required();
       this.type = contact.getType();
+      this.override = label.name();  
       this.inline = label.inline();
       this.entry = label.entry();
       this.data = label.data();
       this.item = label.type();
-      this.name = label.name();      
       this.format = format;
       this.label = label;
    }
@@ -261,10 +271,13 @@ class ElementListLabel extends TemplateLabel {
     * @return returns the name that is used for the XML property
     */
    public String getName() throws Exception{
-      Style style = format.getStyle();
-      String name = detail.getName();
-      
-      return style.getElement(name);
+      if(name == null) {
+         Style style = format.getStyle();
+         String value = detail.getName();
+         
+         name = style.getElement(value);
+      }
+      return name;
    }
    
    /**
@@ -276,10 +289,13 @@ class ElementListLabel extends TemplateLabel {
     * @return returns the path that is used for the XML property
     */
    public String getPath() throws Exception {
-      Expression path = getExpression();
-      String name = getName();
-      
-      return path.getElement(name);  
+      if(path == null) {
+         Expression expression = getExpression();
+         String name = getName();
+         
+         path = expression.getElement(name);  
+      }
+      return path;
    }
    
    /**
@@ -291,10 +307,10 @@ class ElementListLabel extends TemplateLabel {
     * @return the XPath expression identifying the location
     */
    public Expression getExpression() throws Exception {
-      if(path == null) {
-         path = detail.getExpression();
+      if(cache == null) {
+         cache = detail.getExpression();
       }
-      return path;
+      return cache;
    }
    
    /**
@@ -346,7 +362,7 @@ class ElementListLabel extends TemplateLabel {
     * @return returns the name of the annotation for the contact
     */
    public String getOverride() {
-      return name;
+      return override;
    }
    
    /**

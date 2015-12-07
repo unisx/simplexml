@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathErrorTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.086 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.514 sec
 ------------- Standard Output ---------------
 <header>
    <tradeIdentifier>
@@ -26,4 +26,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.086 sec
 </header>
 ------------- ---------------- ---------------
 
-Testcase: testRepeat took 0.083 sec
+Testcase: testRepeat took 0.505 sec
