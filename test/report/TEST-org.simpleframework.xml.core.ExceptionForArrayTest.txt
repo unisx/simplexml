@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ExceptionForArrayTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.263 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.221 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Array length missing or incorrect for field 'b' private int[] org.simpleframework.xml.core.ExceptionForArrayTest$A.b at line 1
 	at org.simpleframework.xml.core.PrimitiveArray.read(PrimitiveArray.java:143)
@@ -77,6 +77,6 @@ org.simpleframework.xml.core.ElementException: Array length missing or incorrect
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testArrayLength took 0.246 sec
+Testcase: testArrayLength took 0.207 sec
 Testcase: testCompositeArrayLength took 0.005 sec
 Testcase: testDirectory took 0.001 sec

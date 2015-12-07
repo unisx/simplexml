@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.228 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.175 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ConstructorException: Type does not match @org.simpleframework.xml.Element(type=void, required=true, data=true, name=k) on field 'key' private final java.lang.String org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest$Example.key for 'k' in parameter 0 of constructor public org.simpleframework.xml.core.ConstructorInjectionDifferentTypeTest$Example(int,java.lang.String)
 	at org.simpleframework.xml.core.StructureBuilder.validate(StructureBuilder.java:733)
@@ -40,5 +40,5 @@ org.simpleframework.xml.core.ConstructorException: Type does not match @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testDifferentTypes took 0.221 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDifferentTypes took 0.168 sec
+Testcase: testDirectory took 0.001 sec

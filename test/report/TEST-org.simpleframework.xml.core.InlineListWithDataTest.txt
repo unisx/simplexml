@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.InlineListWithDataTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.479 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.401 sec
 ------------- Standard Output ---------------
 <listWithDataExample>
    <string><![CDATA[A]]></string>
@@ -65,6 +65,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.479 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testListWithData took 0.373 sec
-Testcase: testMapWithData took 0.082 sec
+Testcase: testListWithData took 0.317 sec
+Testcase: testMapWithData took 0.076 sec
 Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DataTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.607 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.431 sec
 ------------- Standard Output ---------------
 <scrape section="one" address="http://localhost:9090/">
    <query-list>
@@ -253,6 +253,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.607 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testData took 0.428 sec
-Testcase: testDataFromByteStream took 0.107 sec
+Testcase: testData took 0.361 sec
+Testcase: testDataFromByteStream took 0.06 sec
 Testcase: testDirectory took 0 sec

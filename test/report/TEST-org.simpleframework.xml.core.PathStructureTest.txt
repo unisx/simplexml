@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PathStructureTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.458 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.442 sec
 ------------- Standard Output ---------------
 some
 fifth
@@ -184,5 +184,5 @@ tenth
 </ExampleAssembledType>------------- ---------------- ---------------
 
 Testcase: testOrder took 0.159 sec
-Testcase: testSerialization took 0.289 sec
+Testcase: testSerialization took 0.271 sec
 Testcase: testDirectory took 0 sec

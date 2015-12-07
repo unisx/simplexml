@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StrictTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.408 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.406 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -141,7 +141,7 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testStrict took 0.357 sec
-Testcase: testNamedStrict took 0.025 sec
-Testcase: testNamedStrictMissingName took 0.011 sec
+Testcase: testStrict took 0.356 sec
+Testcase: testNamedStrict took 0.024 sec
+Testcase: testNamedStrictMissingName took 0.009 sec
 Testcase: testDirectory took 0.001 sec

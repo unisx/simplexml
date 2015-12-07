@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.661 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.495 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -217,11 +217,11 @@ org.simpleframework.xml.core.TextException: Cannot use field 'list' private java
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.523 sec
-Testcase: testData took 0.048 sec
-Testcase: testDuplicate took 0.005 sec
+Testcase: testText took 0.385 sec
+Testcase: testData took 0.038 sec
+Testcase: testDuplicate took 0.004 sec
 Testcase: testIllegalElement took 0.008 sec
 Testcase: testEmpty took 0.003 sec
-Testcase: testOptional took 0.043 sec
-Testcase: testNonPrimitive took 0.005 sec
+Testcase: testOptional took 0.034 sec
+Testcase: testNonPrimitive took 0.004 sec
 Testcase: testDirectory took 0 sec

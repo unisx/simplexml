@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MethodTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.632 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.59 sec
 ------------- Standard Output ---------------
 <test>
    <boolean>true</boolean>
@@ -159,6 +159,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.632 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.463 sec
-Testcase: testImplicitMethodNameExample took 0.142 sec
+Testcase: testExplicitMethodNameExample took 0.459 sec
+Testcase: testImplicitMethodNameExample took 0.116 sec
 Testcase: testDirectory took 0 sec

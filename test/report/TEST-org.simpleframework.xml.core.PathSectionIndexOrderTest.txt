@@ -116,4 +116,4 @@ org.simpleframework.xml.core.PathException: Ordered attribute 'path[1]/first/val
 Testcase: testOutOfOrderElement took 0.15 sec
 Testcase: testAttributeInElement took 0.003 sec
 Testcase: testElementInAttribute took 0.002 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDirectory took 0.002 sec

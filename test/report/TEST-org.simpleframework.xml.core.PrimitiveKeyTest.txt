@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PrimitiveKeyTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.191 sec
 ------------- Standard Output ---------------
 <inlineString key="example"/><notInlineString>
    <key>example</key>
@@ -7,7 +7,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.254 sec
    <string>example</string>
 </noAttributeString><attributeNoKeyString string="example"/>------------- ---------------- ---------------
 
-Testcase: testInlineString took 0.151 sec
+Testcase: testInlineString took 0.101 sec
 Testcase: testNotInlineString took 0 sec
-Testcase: testNoAttributeString took 0.086 sec
-Testcase: testAttributeNoKeyString took 0.004 sec
+Testcase: testNoAttributeString took 0.078 sec
+Testcase: testAttributeNoKeyString took 0.003 sec

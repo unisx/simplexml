@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.transform.TransformerTest
-Tests run: 24, Failures: 0, Errors: 0, Time elapsed: 0.478 sec
+Tests run: 24, Failures: 0, Errors: 0, Time elapsed: 0.498 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.transform.InvalidFormatException: Cannot convert 'too long' to a character
 	at org.simpleframework.xml.transform.CharacterTransform.read(CharacterTransform.java:56)
@@ -23,23 +23,23 @@ org.simpleframework.xml.transform.InvalidFormatException: Cannot convert 'too lo
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testInteger took 0.014 sec
-Testcase: testString took 0.001 sec
+Testcase: testInteger took 0.015 sec
+Testcase: testString took 0.002 sec
 Testcase: testCharacter took 0.004 sec
-Testcase: testInvalidCharacter took 0.049 sec
+Testcase: testInvalidCharacter took 0.069 sec
 Testcase: testFloat took 0.003 sec
 Testcase: testDouble took 0.002 sec
 Testcase: testBoolean took 0.002 sec
-Testcase: testLong took 0.002 sec
-Testcase: testShort took 0.085 sec
+Testcase: testLong took 0.003 sec
+Testcase: testShort took 0.084 sec
 Testcase: testPrimitiveIntegerArray took 0.005 sec
-Testcase: testPrimitiveLongArray took 0.001 sec
+Testcase: testPrimitiveLongArray took 0 sec
 Testcase: testPrimitiveShortArray took 0.001 sec
-Testcase: testPrimitiveByteArray took 0.089 sec
+Testcase: testPrimitiveByteArray took 0.088 sec
 Testcase: testPrimitiveFloatArray took 0.001 sec
 Testcase: testPrimitiveDoubleArray took 0.001 sec
-Testcase: testPrimitiveCharacterArray took 0.002 sec
-Testcase: testIntegerArray took 0.092 sec
+Testcase: testPrimitiveCharacterArray took 0.003 sec
+Testcase: testIntegerArray took 0.091 sec
 Testcase: testBooleanArray took 0.001 sec
 Testcase: testLongArray took 0.001 sec
 Testcase: testShortArray took 0.001 sec

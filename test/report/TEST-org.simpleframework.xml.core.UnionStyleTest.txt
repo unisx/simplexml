@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.UnionStyleTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.513 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.528 sec
 ------------- Standard Output ---------------
 <UnionListExample>
    <IntegerField>
@@ -217,6 +217,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.513 sec
 >>>>> SOURCE=[class org.xmlpull.mxp1.MXParserCachingStrings]
 ------------- ---------------- ---------------
 
-Testcase: testCamelCaseStyle took 0.412 sec
-Testcase: testHyphenStyle took 0.094 sec
+Testcase: testCamelCaseStyle took 0.424 sec
+Testcase: testHyphenStyle took 0.096 sec
 Testcase: testDirectory took 0 sec
