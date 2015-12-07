@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.14 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.328 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -39,12 +39,12 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 1.14 sec
    
 ]]></text><text name="a" version="ONE"/><text name="a" version="ONE"/>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-org.simpleframework.xml.transform.TransformRequiredException: Transform org.simpleframework.xml.transform.util.ListTransform is required for interface java.util.List
-	at org.simpleframework.xml.transform.PackageMatcher.getClass(PackageMatcher.java:96)
-	at org.simpleframework.xml.transform.PackageMatcher.getClass(PackageMatcher.java:58)
-	at org.simpleframework.xml.transform.DefaultMatcher.matchType(DefaultMatcher.java:80)
-	at org.simpleframework.xml.transform.DefaultMatcher.match(DefaultMatcher.java:64)
-	at org.simpleframework.xml.transform.Transformer.read(Transformer.java:107)
+org.simpleframework.xml.transform.TransformException: Transform of interface java.util.List not supported
+	at org.simpleframework.xml.transform.PackageMatcher.matchUtility(PackageMatcher.java:181)
+	at org.simpleframework.xml.transform.PackageMatcher.match(PackageMatcher.java:77)
+	at org.simpleframework.xml.transform.DefaultMatcher.matchType(DefaultMatcher.java:111)
+	at org.simpleframework.xml.transform.DefaultMatcher.match(DefaultMatcher.java:90)
+	at org.simpleframework.xml.transform.Transformer.read(Transformer.java:108)
 	at org.simpleframework.xml.load.PrimitiveFactory.getInstance(PrimitiveFactory.java:104)
 	at org.simpleframework.xml.load.Primitive.readTemplate(Primitive.java:183)
 	at org.simpleframework.xml.load.Primitive.readTemplate(Primitive.java:165)
@@ -72,11 +72,11 @@ org.simpleframework.xml.transform.TransformRequiredException: Transform org.simp
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.984 sec
-Testcase: testData took 0.062 sec
-Testcase: testDuplicate took 0 sec
-Testcase: testIllegalElement took 0.016 sec
-Testcase: testEmpty took 0 sec
+Testcase: testText took 1.141 sec
+Testcase: testData took 0.047 sec
+Testcase: testDuplicate took 0.032 sec
+Testcase: testIllegalElement took 0.015 sec
+Testcase: testEmpty took 0.016 sec
 Testcase: testOptional took 0.047 sec
 Testcase: testNonPrimitive took 0.015 sec
 Testcase: testDirectory took 0 sec

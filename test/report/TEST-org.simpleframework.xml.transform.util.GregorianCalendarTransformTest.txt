@@ -1,4 +1,0 @@
-Testsuite: org.simpleframework.xml.transform.util.GregorianCalendarTransformTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1 sec
-
-Testcase: testGregorianCalendar took 0.968 sec

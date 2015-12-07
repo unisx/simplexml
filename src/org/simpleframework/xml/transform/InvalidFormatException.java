@@ -20,8 +20,6 @@
 
 package org.simpleframework.xml.transform;
 
-import org.simpleframework.xml.load.PersistenceException;
-
 /**
  * The <code>InvalidFormatException</code> is thrown when there is 
  * a format exception. This exception this will be thrown from the
@@ -31,7 +29,7 @@ import org.simpleframework.xml.load.PersistenceException;
  * 
  * @author Niall Gallagher
  */
-public class InvalidFormatException extends PersistenceException {
+public class InvalidFormatException extends TransformException {
    
    /**
     * Constructor for the <code>InvalidFormatException</code> object. 

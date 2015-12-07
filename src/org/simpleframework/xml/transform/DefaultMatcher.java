@@ -21,102 +21,94 @@
 package org.simpleframework.xml.transform;
 
 /**
- * The <code>DefaultMatcher</code> object is used to match types to
- * their transform types. This makes use of a convention in order to
- * map the specified type to its transform. The convention used is
- * to append "Transform" to the fully qualified name of the type to
- * be transformed, or "ArrayType" if the type is an array.
+ * The <code>DefaultMatcher</code> is a delegation object that uses
+ * several matcher implementations to correctly resolve both the
+ * stock <code>Transform</code> implementations and implementations
+ * that have been overridden by the user with a custom matcher. This
+ * will perform the resolution of the transform using the specified 
+ * matcher, if this results in no transform then this will look for
+ * a transform within the collection of implementations.
  * 
  * @author Niall Gallagher
+ *
+ * @see org.simpleframework.xml.transform.Transformer
  */
-class DefaultMatcher extends PackageMatcher {
+class DefaultMatcher implements Matcher {
    
    /**
-    * This is a matcher used to resolve the transforms for arrays.
+    * Matcher used to resolve stock transforms for primitive types.
     */
-   private final Matcher array;
+   private Matcher primitive;   
    
    /**
-    * Constructor for the <code>DefaultMatcher</code> object. This 
-    * is used to create matcher instance that matches transforms for
-    * types using conventions where the fully qualified class name
-    * for the type to be matched is appended with a known suffix.
+    * Matcher used to resolve user specified transform overrides.
     */
-   public DefaultMatcher() {
+   private Matcher matcher;
+   
+   /**
+    * Matcher used to resolve all the core Java object transforms.
+    */
+   private Matcher stock;
+   
+   /**
+    * Matcher used to resolve transforms for array type objects.
+    */
+   private Matcher array; 
+   
+   /**
+    * Constructor for the <code>DefaultMatcher</code> object. This
+    * performs resolution of <code>Transform</code> implementations 
+    * using the specified matcher. If that matcher fails to resolve
+    * a suitable transform then the stock implementations are used.
+    * 
+    * @param matcher this is the user specified matcher object
+    */
+   public DefaultMatcher(Matcher matcher) {
+      this.primitive = new PrimitiveMatcher();
+      this.stock = new PackageMatcher();
       this.array = new ArrayMatcher(this);
+      this.matcher = matcher;
    }
    
    /**
-    * This is used to match a <code>Transform</code> using the type
-    * specified. If no transform can be acquired then an exception
-    * is thrown indicating that no transform could be found.
+    * This is used to match a <code>Transform</code> for the given
+    * type. If a transform cannot be resolved this this will throw an
+    * exception to indicate that resolution of a transform failed. A
+    * transform is resolved by first searching for a transform within
+    * the user specified matcher then searching the stock transforms.
     * 
-    * @param type this is the type to acquire the transform for
+    * @param type this is the type to resolve a transform object for
     * 
-    * @return returns a transform for processing the type given
-    * 
-    * @throws Exception thrown if a transform could not be found
-    */    
+    * @return this returns a transform used to transform the type
+    */
    public Transform match(Class type) throws Exception {
-      if(type.isArray()) {
-         return array.match(type);
+      Transform value = matcher.match(type);
+      
+      if(value != null) {
+         return value;
       }
       return matchType(type);
    }
    
    /**
-    * This is used to match a <code>Transform</code> using the type
-    * specified. If no transform can be acquired then an exception
-    * is thrown indicating that no transform could be found.
+    * This is used to match a <code>Transform</code> for the given
+    * type. If a transform cannot be resolved this this will throw an
+    * exception to indicate that resolution of a transform failed. A
+    * transform is resolved by first searching for a transform within
+    * the user specified matcher then searching the stock transforms.
     * 
-    * @param type this is the type to acquire the transform for
+    * @param type this is the type to resolve a transform object for
     * 
-    * @return returns a transform for processing the type given
-    * 
-    * @throws Exception thrown if a transform could not be found
-    */   
-   private Transform matchType(Class type) throws Exception {
-      Class real = getConversion(type);
-      Class match = getClass(real);
-      
-      return (Transform)match.newInstance();      
-   }
-   
-   /**
-    * Primitive types are transformed using their respective Java 
-    * language types. So in order to figure out the transform that
-    * is required for the type it needs to be converted so that it
-    * can be resolved using the name convention scheme. 
-    * 
-    * @param type this is the primitive type to be converted 
-    * 
-    * @return returns the Java language type for the primitive
+    * @return this returns a transform used to transform the type
     */
-   private Class getConversion(Class type) {
-      if(type == int.class) {
-         return Integer.class;              
-      }           
-      if(type == boolean.class) {
-         return Boolean.class;               
+   private Transform matchType(Class type) throws Exception {
+      if(type.isArray()) {
+         return array.match(type);
       }
-      if(type == float.class) {
-         return Float.class;                       
+      if(type.isPrimitive()) {
+         return primitive.match(type);
       }
-      if(type == long.class) {
-         return Long.class;                   
-      }
-      if(type == double.class) {
-         return Double.class;              
-      }
-      if(type == byte.class) {
-         return Byte.class;              
-      }        
-      if(type == short.class) {
-         return Short.class;              
-      }
-      if(type == char.class) {
-         return Character.class;
-      }
-      return type;
+      return stock.match(type); 
    }
 }
+ 

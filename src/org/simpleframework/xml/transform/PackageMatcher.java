@@ -20,106 +20,224 @@
 
 package org.simpleframework.xml.transform;
 
+import java.util.GregorianCalendar;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.TimeZone;
+import java.util.Locale;
+import java.sql.Timestamp;
+import java.util.Currency;
+import java.util.Date;
+import java.sql.Time;
+import java.io.File;
+import java.net.URL;
+
 /**
- * The <code>PackageMatcher</code> object is used to perform matches
- * based on the package type of the object to be transformed. This
- * acts as a convention over configuration means of mapping a type
- * to a transform without statically mapping the types to respective
- * transform implementations. 
- * <p>
- * There are two forms of transformation matching peformed by this
- * object. Matching can be done for array types and for object types.
- * For an array the transform will have "ArrayTransform" appended to
- * the end of the fully qualified class name, for a normal type the
- * "Transform" string is appended.  
- * 
+ * The <code>PackageMatcher</code> object is used to match the stock
+ * transforms to Java packages. This is used to match useful types 
+ * from the <code>java.lang</code> and <code>java.util</code> packages
+ * as well as other Java packages. This matcher groups types by their
+ * package names and attempts to search the stock transforms for a
+ * suitable match. If no match can be found this throws an exception.
+ *  
  * @author Niall Gallagher
+ *
+ * @see org.simpleframework.xml.transform.DefaultMatcher
  */
-abstract class PackageMatcher implements Matcher {
+class PackageMatcher implements Matcher {
    
    /**
-    * This is the package that forms the base of all Java transforms.
+    * Constructor for the <code>PackageMatcher</code> object. The
+    * package matcher is used to resolve a transform instance to
+    * convert object types to an from strings. If a match cannot
+    * be found with this matcher then an exception is thrown.
     */
-   private static final String PACKAGE = "org.simpleframework.xml.transform";
-      
-   /**
-    * This is used to acquire the fully qualified class name for the
-    * transform representing the specified type. As with all types
-    * matched with this matcher, the fully qualified class name for
-    * the type is appended with "Transform" to match the transform. 
-    * 
-    * @param type this is the type to acquire the transform class
-    *  
-    * @return this returns the class for the required transform  
-    * 
-    * @throws Exception thrown if a transform could not be loaded
-    */
-   protected Class getClass(Class type) throws Exception {      
-      return getClass("%sTransform", type);
+   public PackageMatcher() {
+      super();
    }
    
    /**
-    * This is used to acquire the fully qualified class name for the
-    * transform representing the specified type. As with all types
-    * matched with this matcher, the fully qualified class name for
-    * the type is appended with "ArrayTransform" for the transform. 
+    * This method attempts to perform a resolution of the transform
+    * based on its package prefix. This allows this matcher to create
+    * a logical group of transforms within a single method based on
+    * the types package prefix. If no transform can be found then
+    * this will throw an exception.
     * 
-    * @param entry this is the type to acquire the transform class
-    *  
-    * @return this returns the class for the required transform  
+    * @param type this is the type to resolve a transform for
     * 
-    * @throws Exception thrown if a transform could not be loaded
+    * @return the transform that is used to transform that type
     */
-   protected Class getArrayClass(Class entry) throws Exception {
-      return getClass("%sArrayTransform", entry);       
-   }
-   
-   /**
-    * This is used to acquire the fully qualified class name for the
-    * transform representing the specified type. As with all types
-    * matched with this matcher, the fully qualified class name for
-    * the type is appended with specified suffix for the transform. 
-    * 
-    * @param type this is the type to acquire the transform class
-    * @param suffix this is appended to the name of the class
-    *  
-    * @return this returns the class for the required transform  
-    * 
-    * @throws Exception thrown if a transform could not be loaded
-    */
-   protected Class getClass(String suffix, Class type) throws Exception {
-      String name = getConversion(suffix, type);      
-    
-      try {  
-         return Class.forName(name);
-      } catch(Exception e) {
-         throw new TransformRequiredException(e, "Transform %s is required for %s", name, type);
-      }
-      
-   }
-   /**
-    * This is used to acquire the fully qualified class name for the
-    * transform representing the specified type. As with all types
-    * matched with this matcher, the fully qualified class name for
-    * the type is appended with specified suffix for the transform.
-    * Also for Java types the package is replaced for the class. 
-    * 
-    * @param suffix this is appended to the name of the class 
-    * @param type this is the type to acquire the transform class
-    *  
-    * @return this returns the class for the required transform  
-    * 
-    * @throws Exception thrown if a transform could not be loaded
-    */
-   protected String getConversion(String suffix, Class type) {
+   public Transform match(Class type) throws Exception {  
       String name = type.getName();
       
-      if(name.startsWith("javax")) {
-         name = name.replace("javax", PACKAGE);
-      } 
-      if(name.startsWith("java")) {
-         name = name.replace("java", PACKAGE);
+      if(name.startsWith("java.lang")) {
+         return matchLanguage(type);
       }
-      return String.format(suffix, name); 
+      if(name.startsWith("java.util")) {
+         return matchUtility(type);         
+      }
+      if(name.startsWith("java.net")) {
+         return matchURL(type);         
+      }
+      if(name.startsWith("java.io")) {
+         return matchFile(type);         
+      }
+      if(name.startsWith("java.sql")) {
+         return matchSQL(type);   
+      }     
+      throw new TransformException("Transform of %s not supported", type);
+   }
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that relate to the <code>java.lang</code> package. If the type
+    * does not resolve to a valid transform then this method will 
+    * throw an exception to indicate that no stock transform exists
+    * for the specified type.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */
+   private Transform matchLanguage(Class type) throws Exception {      
+      if(type == Boolean.class) {
+         return new BooleanTransform();
+      }
+      if(type == Integer.class) {
+         return new IntegerTransform();
+      }
+      if(type == Long.class) {
+         return new LongTransform();
+      }
+      if(type == Double.class) {
+         return new DoubleTransform();
+      }
+      if(type == Float.class) {
+         return new FloatTransform();
+      }
+      if(type == Short.class) {
+         return new ShortTransform();
+      }
+      if(type == Byte.class) {
+         return new ByteTransform();
+      }
+      if(type == Character.class) {
+         return new CharacterTransform();
+      }
+      if(type == String.class) {
+         return new StringTransform();
+      }      
+      throw new TransformException("Transform of %s not supported", type);
+   }
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that relate to the <code>java.math</code> package. If the type
+    * does not resolve to a valid transform then this method will 
+    * throw an exception to indicate that no stock transform exists
+    * for the specified type.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */ 
+   private Transform matchMath(Class type) throws Exception {
+      if(type == BigDecimal.class) {
+         return new BigDecimalTransform();
+      }
+      if(type == BigInteger.class) {
+         return new BigIntegerTransform();
+      }      
+      throw new TransformException("Transform of %s not supported", type);
+   }
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that relate to the <code>java.util</code> package. If the type
+    * does not resolve to a valid transform then this method will 
+    * throw an exception to indicate that no stock transform exists
+    * for the specified type.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */
+   private Transform matchUtility(Class type) throws Exception {
+      if(type == Date.class) {
+         return new DateTransform(type);
+      }
+      if(type == Locale.class) {
+         return new LocaleTransform();
+      }
+      if(type == Currency.class) {
+         return new CurrencyTransform();
+      }
+      if(type == GregorianCalendar.class) {
+         return new GregorianCalendarTransform();
+      }
+      if(type == TimeZone.class) {
+         return new TimeZoneTransform();
+      }      
+      throw new TransformException("Transform of %s not supported", type);
+   }  
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that relate to the <code>java.sql</code> package. If the type
+    * does not resolve to a valid transform then this method will 
+    * throw an exception to indicate that no stock transform exists
+    * for the specified type.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */
+   private Transform matchSQL(Class type) throws Exception {
+      if(type == Time.class) {
+         return new DateTransform(type);
+      }
+      if(type == java.sql.Date.class) {
+         return new DateTransform(type);
+      }
+      if(type == Timestamp.class) {
+         return new DateTransform(type);
+      }      
+      throw new TransformException("Transform of %s not supported", type);
+   }   
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that relate to the <code>java.io</code> package. If the type
+    * does not resolve to a valid transform then this method will 
+    * throw an exception to indicate that no stock transform exists
+    * for the specified type.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */
+   private Transform matchFile(Class type) throws Exception {
+      if(type == File.class) {
+         return new FileTransform();
+      }       
+      throw new TransformException("Transform of %s not supported", type);     
+   }   
+   
+   /**
+    * This is used to resolve <code>Transform</code> implementations
+    * that relate to the <code>java.net</code> package. If the type
+    * does not resolve to a valid transform then this method will 
+    * throw an exception to indicate that no stock transform exists
+    * for the specified type.
+    * 
+    * @param type this is the type to resolve a stock transform for
+    * 
+    * @return this will return a transform for the specified type
+    */
+   private Transform matchURL(Class type) throws Exception {
+      if(type == URL.class) {
+         return new URLTransform();
+      }      
+      throw new TransformException("Transform of %s not supported", type);    
    }
 }

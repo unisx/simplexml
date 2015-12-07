@@ -20,6 +20,8 @@
 
 package org.simpleframework.xml.transform;
 
+import java.lang.reflect.Array;
+
 /**
  * The <code>CharacterArrayTransform</code> is used to transform text
  * values to and from string representations, which will be inserted
@@ -41,7 +43,25 @@ package org.simpleframework.xml.transform;
  * 
  * @author Niall Gallagher
  */
-class CharacterArrayTransform implements Transform<char[]> {
+class CharacterArrayTransform implements Transform {     
+
+   /**
+    * This is the entry type for the primitive array to be created.
+    */
+   private final Class entry;
+
+   /**
+    * Constructor for the <code>PrimitiveArrayTransform</code> object.
+    * This is used to create a transform that will create primitive
+    * arrays and populate the values of the array with values from a
+    * comma separated list of individula values for the entry type.
+    * 
+    * @param delegate this is used to perform individual transforms
+    * @param entry this is the entry component type for the array
+    */
+   public CharacterArrayTransform(Class entry) {
+      this.entry = entry;
+   }       
    
    /**
     * This method is used to convert the string value given to an
@@ -53,9 +73,32 @@ class CharacterArrayTransform implements Transform<char[]> {
     * 
     * @return this returns an appropriate instanced to be used
     */
-   public char[] read(String value) throws Exception {
-      return value.toCharArray();           
-   }      
+   public Object read(String value) throws Exception {
+      char[] list = value.toCharArray();      
+      int length = list.length;
+
+      return read(list, length);
+   }
+   
+   /**
+    * This method is used to convert the string value given to an
+    * appropriate representation. This is used when an object is
+    * being deserialized from the XML document and the value for
+    * the string representation is required.
+    * 
+    * @param list this is the string representation of the value
+    * @param length this is the number of string values to use
+    * 
+    * @return this returns an appropriate instanced to be used
+    */
+   private Object read(char[] list, int length) throws Exception {
+      Object array = Array.newInstance(entry, length);
+
+      for(int i = 0; i < length; i++) {
+         Array.set(array, i, list[i]);                
+      }
+      return array;
+   }
    
    /**
     * This method is used to convert the provided value into an XML
@@ -67,7 +110,32 @@ class CharacterArrayTransform implements Transform<char[]> {
     * 
     * @return this is the string representation of the given value
     */
-   public String write(char[] value) throws Exception {
-      return new String(value);           
+   public String write(Object value) throws Exception {
+      int length = Array.getLength(value);
+
+      return write(value, length);      
+   }
+   
+   /**
+    * This method is used to convert the provided value into an XML
+    * usable format. This is used in the serialization process when
+    * there is a need to convert a field value in to a string so 
+    * that that value can be written as a valid XML entity.
+    * 
+    * @param value this is the value to be converted to a string
+    * 
+    * @return this is the string representation of the given value
+    */
+   private String write(Object value, int length) throws Exception {
+      StringBuilder text = new StringBuilder(length);
+
+      for(int i = 0; i < length; i++) {
+         Object entry = Array.get(value, i);         
+
+         if(entry != null) {
+            text.append(entry);                             
+         }         
+      }      
+      return text.toString();
    }
 }

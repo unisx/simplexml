@@ -23,15 +23,17 @@ package org.simpleframework.xml.transform;
 /**
  * The <code>ArrayMatcher</code> object performs matching of array
  * types to array transforms. This uses the array component type to
- * determine the transform to be used by appending the class name
- * of the array component type with "ArrayTransform". If a class
- * can be loaded for the generated array transform class name then
- * an instance of that type is used to perform the transformation.
- * If no then this will thrown an exception. 
+ * determine the transform to be used. All array transforms created
+ * by this will be <code>ArrayTransform</code> object instances. 
+ * These will use a type transform for the array component to add
+ * values to the individual array indexes. Also such transforms are
+ * typically treated as a comma separated list of individual values.
  * 
  * @author Niall Gallagher
+ * 
+ * @see org.simpleframework.xml.transform.ArrayTransform
  */
-class ArrayMatcher extends PackageMatcher {
+class ArrayMatcher implements Matcher {
 
    /**
     * This is the primary matcher that can resolve transforms.
@@ -41,8 +43,8 @@ class ArrayMatcher extends PackageMatcher {
    /**
     * Constructor for the <code>ArrayTransform</code> object. This
     * is used to match array types to their respective transform
-    * using a convention where the fully qualified class name of 
-    * the array component type is appended with "ArrayTransform".
+    * using the <code>ArrayTransform</code> object. This will use
+    * a comma separated list of tokens to populate the array.
     * 
     * @param primary this is the primary matcher to be used 
     */
@@ -54,7 +56,7 @@ class ArrayMatcher extends PackageMatcher {
     * This is used to match a <code>Transform</code> based on the
     * array component type of an object to be transformed. This will
     * attempt to match the transform using the fully qualified class
-    * name of the array component type. If a trasform can not be
+    * name of the array component type. If a transform can not be
     * found then this method will throw an exception.
     * 
     * @param type this is the array to find the transform for
@@ -64,8 +66,14 @@ class ArrayMatcher extends PackageMatcher {
    public Transform match(Class type) throws Exception {
       Class entry = type.getComponentType();
       
-      if(entry.isPrimitive()) {
-         return matchPrimitive(entry);
+      if(entry == char.class) {
+         return new CharacterArrayTransform(entry);
+      } 
+      if(entry == Character.class) {
+         return new CharacterArrayTransform(entry);
+      }
+      if(entry == String.class) {
+         return new StringArrayTransform();
       }
       return matchArray(entry);
    }
@@ -74,39 +82,19 @@ class ArrayMatcher extends PackageMatcher {
     * This is used to match a <code>Transform</code> based on the
     * array component type of an object to be transformed. This will
     * attempt to match the transform using the fully qualified class
-    * name of the array component type. If a trasform can not be
+    * name of the array component type. If a transform can not be
     * found then this method will throw an exception.
     * 
     * @param entry this is the array component type to be matched
     * 
     * @throws Exception thrown if a transform can not be matched
     */
-   private Transform matchPrimitive(Class entry) throws Exception {            
+   private Transform matchArray(Class entry) throws Exception {            
       Transform transform = primary.match(entry);
-
-      if(entry == char.class) {
-         return new CharacterArrayTransform();
-      }      
+     
       if(transform == null) {
-         throw new TransformRequiredException("Transform for %s not found", entry);
+         throw new TransformException("Transform for '%s' not found", entry);
       }
-      return new PrimitiveArrayTransform(transform, entry);
-   }
-   
-   /**
-    * This is used to match a <code>Transform</code> based on the
-    * array component type of an object to be transformed. This will
-    * attempt to match the transform using the fully qualified class
-    * name of the array component type. If a trasform can not be
-    * found then this method will throw an exception.
-    * 
-    * @param entry this is the array component type to be matched
-    * 
-    * @throws Exception thrown if a transform can not be matched
-    */
-   private Transform matchArray(Class entry) throws Exception {
-      Class type = getArrayClass(entry);      
-      
-      return (Transform)type.newInstance();
+      return new ArrayTransform(transform, entry);
    }
 }

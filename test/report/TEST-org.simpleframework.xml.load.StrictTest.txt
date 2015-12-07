@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.StrictTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.109 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.187 sec
 ------------- Standard Output ---------------
 <root>
    <list length="3">
@@ -26,7 +26,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 1.109 sec
    <integer>123</integer>
 </object>------------- ---------------- ---------------
 
-Testcase: testStrict took 1.047 sec
-Testcase: testUnnamedStrict took 0 sec
-Testcase: testNamedStrict took 0.032 sec
+Testcase: testStrict took 1.078 sec
+Testcase: testUnnamedStrict took 0.047 sec
+Testcase: testNamedStrict took 0.031 sec
 Testcase: testDirectory took 0 sec

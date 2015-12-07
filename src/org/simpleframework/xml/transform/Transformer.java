@@ -47,7 +47,7 @@ package org.simpleframework.xml.transform;
  * above array could be annotated with <code>ElementList</code> just
  * as easily, in which case each entry would have its own element.
  * The choice of which annotation to use is up to the developer. A
- * more obvious benifit to transformations like this can be seen for
+ * more obvious benefit to transformations like this can be seen for
  * values annotated with the <code>Attribute</code> annotation.
  * 
  * @author Niall Gallagher
@@ -73,7 +73,7 @@ public class Transformer {
     * this will match transforms by convention.
     */
    public Transformer() {
-      this(new DefaultMatcher());
+      this(new EmptyMatcher());
    }
    
    /**
@@ -84,9 +84,10 @@ public class Transformer {
     * 
     * @param matcher this is used to match types to transforms
     */
-   private Transformer(Matcher matcher) {      
+   private Transformer(Matcher matcher) {  
+      this.matcher = new DefaultMatcher(matcher);
       this.cache = new TransformCache();
-      this.matcher = matcher;
+
    }
    
    /**
