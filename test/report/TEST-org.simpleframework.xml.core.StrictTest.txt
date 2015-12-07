@@ -1,0 +1,78 @@
+Testsuite: org.simpleframework.xml.core.StrictTest
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.22 sec
+------------- Standard Output ---------------
+<root>
+   <list length="3">
+      <item>
+         <value>value 1</value>
+      </item>
+      <item>
+         <value>value 2</value>
+      </item>
+      <item>
+         <value>value 3</value>
+      </item>
+   </list>
+   <object>
+      <integer>123</integer>
+   </object>
+</root><root>
+   <list length="3">
+      <item>
+         <value>value 1</value>
+      </item>
+      <item>
+         <value>value 2</value>
+      </item>
+      <item>
+         <value>value 3</value>
+      </item>
+   </list>
+   <object>
+      <integer>123</integer>
+   </object>
+</root>
+<root ID="0">
+   <list length="3" ID="1">
+      <item ID="2">
+         <value ID="3">value 1</value>
+      </item>
+      <item ID="4">
+         <value ID="5">value 2</value>
+      </item>
+      <item ID="6">
+         <value ID="7">value 3</value>
+      </item>
+   </list>
+   <object ID="8">
+      <integer>123</integer>
+   </object>
+</root><Root ID="0">
+   <List length="3" ID="1">
+      <Item ID="2">
+         <Value ID="3">value 1</Value>
+      </Item>
+      <Item ID="4">
+         <Value ID="5">value 2</Value>
+      </Item>
+      <Item ID="6">
+         <Value ID="7">value 3</Value>
+      </Item>
+   </List>
+   <Object ID="8">
+      <Integer>123</Integer>
+   </Object>
+</Root><object>
+   <integer>123</integer>
+</object><object>
+   <integer>123</integer>
+</object>
+<object ID="0">
+   <integer>123</integer>
+</object><Object ID="0">
+   <Integer>123</Integer>
+</Object>------------- ---------------- ---------------
+
+Testcase: testStrict took 0.205 sec
+Testcase: testNamedStrict took 0.01 sec
+Testcase: testDirectory took 0 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.util.DictionaryTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.198 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list>
@@ -13,31 +13,44 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
          <text>one</text>
       </property>
    </list>
-</test><test id="0" name="example">
-   <list id="1">
-      <property id="2" name="3">
-         <text id="3">three</text>
+</test><test name="example">
+   <list>
+      <property name="3">
+         <text>three</text>
       </property>
-      <property id="4" name="2">
-         <text id="5">two</text>
+      <property name="2">
+         <text>two</text>
       </property>
-      <property id="6" name="1">
-         <text id="7">one</text>
+      <property name="1">
+         <text>one</text>
       </property>
    </list>
-</test><Test id="0" name="example">
-   <List id="1">
-      <Property id="2" name="3">
-         <Text id="3">three</Text>
+</test>
+<test ID="0" name="example">
+   <list ID="1">
+      <property ID="2" name="3">
+         <text ID="3">three</text>
+      </property>
+      <property ID="4" name="2">
+         <text ID="5">two</text>
+      </property>
+      <property ID="6" name="1">
+         <text ID="7">one</text>
+      </property>
+   </list>
+</test><Test ID="0" name="example">
+   <List ID="1">
+      <Property ID="2" name="3">
+         <Text ID="3">three</Text>
       </Property>
-      <Property id="4" name="2">
-         <Text id="5">two</Text>
+      <Property ID="4" name="2">
+         <Text ID="5">two</Text>
       </Property>
-      <Property id="6" name="1">
-         <Text id="7">one</Text>
+      <Property ID="6" name="1">
+         <Text ID="7">one</Text>
       </Property>
    </List>
 </Test>------------- ---------------- ---------------
 
-Testcase: testDictionary took 0.184 sec
+Testcase: testDictionary took 0.193 sec
 Testcase: testDirectory took 0 sec
