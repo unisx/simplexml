@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TextTest
-Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
+Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.53 sec
 ------------- Standard Output ---------------
 <test>
    <array length="3">
@@ -184,8 +184,8 @@ Tests run: 8, Failures: 0, Errors: 0, Time elapsed: 0.306 sec
 org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.Text(required=true, data=false, empty=) to represent field 'list' private java.util.List org.simpleframework.xml.core.TextTest$NonPrimitiveTextEntry.list
 	at org.simpleframework.xml.core.TextLabel.getConverter(TextLabel.java:105)
 	at org.simpleframework.xml.core.CacheLabel.getConverter(CacheLabel.java:161)
-	at org.simpleframework.xml.core.Composite.readObject(Composite.java:605)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:569)
+	at org.simpleframework.xml.core.Composite.readObject(Composite.java:608)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:572)
 	at org.simpleframework.xml.core.Composite.readText(Composite.java:488)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:348)
 	at org.simpleframework.xml.core.Composite.readDefault(Composite.java:245)
@@ -193,16 +193,16 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at org.simpleframework.xml.core.Composite.read(Composite.java:185)
 	at org.simpleframework.xml.core.Composite.read(Composite.java:133)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:92)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:602)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:583)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:564)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:501)
-	at org.simpleframework.xml.core.Persister.read(Persister.java:410)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:601)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:582)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:563)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:500)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:409)
 	at org.simpleframework.xml.core.TextTest.testNonPrimitive(TextTest.java:228)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	at java.lang.reflect.Method.invoke(Method.java:585)
+	at java.lang.reflect.Method.invoke(Method.java:592)
 	at junit.framework.TestCase.runTest(TestCase.java:154)
 	at junit.framework.TestCase.runBare(TestCase.java:127)
 	at junit.framework.TestResult$1.protect(TestResult.java:106)
@@ -211,16 +211,16 @@ org.simpleframework.xml.core.TextException: Cannot use @org.simpleframework.xml.
 	at junit.framework.TestCase.run(TestCase.java:118)
 	at junit.framework.TestSuite.runTest(TestSuite.java:208)
 	at junit.framework.TestSuite.run(TestSuite.java:203)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:421)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
-	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:422)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:931)
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:785)
 ------------- ---------------- ---------------
 
-Testcase: testText took 0.212 sec
-Testcase: testData took 0.038 sec
-Testcase: testDuplicate took 0.003 sec
-Testcase: testIllegalElement took 0.006 sec
-Testcase: testEmpty took 0.004 sec
-Testcase: testOptional took 0.032 sec
-Testcase: testNonPrimitive took 0.004 sec
-Testcase: testDirectory took 0 sec
+Testcase: testText took 0.352 sec
+Testcase: testData took 0.066 sec
+Testcase: testDuplicate took 0.006 sec
+Testcase: testIllegalElement took 0.012 sec
+Testcase: testEmpty took 0.008 sec
+Testcase: testOptional took 0.063 sec
+Testcase: testNonPrimitive took 0.005 sec
+Testcase: testDirectory took 0.001 sec

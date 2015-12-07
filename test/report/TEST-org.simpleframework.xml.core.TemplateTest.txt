@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.TemplateTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.213 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.367 sec
 ------------- Standard Output ---------------
 <test name="test">
    <config class="java.util.ArrayList">
@@ -70,5 +70,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.213 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testTemplate took 0.207 sec
+Testcase: testTemplate took 0.36 sec
 Testcase: testDirectory took 0 sec

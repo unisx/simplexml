@@ -1,0 +1,5 @@
+Testsuite: org.simpleframework.xml.core.NotRequiredConstructorInjectionTest
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.211 sec
+
+Testcase: testInheritance took 0.205 sec
+Testcase: testDirectory took 0 sec

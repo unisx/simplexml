@@ -50,22 +50,22 @@ public class WrapperTest extends TestCase {
    } 
    
    @Root
-   @Default
+   @Default(required=false)
    private static class Entry {
       private String name;
       private String value;
-      public Entry(@Element(name="name") String name, @Element(name="value") String value){
+      public Entry(@Element(name="name", required=false) String name, @Element(name="value", required=false) String value){
          this.name = name;
          this.value = value;
       }
    }
    
    @Root
-   @Default
+   @Default(required=false)
    private static class WrapperExample {
       @Convert(WrapperConverter.class)
       private Wrapper wrapper;
-      public WrapperExample(@Element(name="wrapper") Wrapper wrapper) {
+      public WrapperExample(@Element(name="wrapper", required=false) Wrapper wrapper) {
          this.wrapper = wrapper;
       }
    }

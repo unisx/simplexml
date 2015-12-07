@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ArrayEntryTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.227 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.365 sec
 ------------- Standard Output ---------------
 <exampleArray>
    <list length="3">
@@ -117,6 +117,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.227 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testExampleArray took 0.193 sec
-Testcase: testExamplePrimitiveArray took 0.027 sec
+Testcase: testExampleArray took 0.311 sec
+Testcase: testExamplePrimitiveArray took 0.047 sec
 Testcase: testDirectory took 0 sec
