@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project name="Simple" default="build" basedir=".">
+
+   <target name="layout">
+      <property name="source" value="src"/>
+      <property name="javadoc" value="doc/javadoc"/>
+      <property name="build" value="build"/>
+      <property name="jar" value="jar"/>
+      <property file="build.properties"/>
+   </target>
+
+   <target name="clean" depends="layout">
+      <delete dir="${build}"/>
+      <delete dir="${jar}"/>
+   </target>
+
+   <target name="prepare" depends="clean">
+      <mkdir dir="${build}"/>
+      <mkdir dir="${jar}"/>
+   </target>
+
+   <target name="build" depends="prepare">
+      <javac srcdir="${source}" destdir="${build}"/>
+      <jar jarfile="${jar}/simple-xml-${version}.jar" basedir="${build}"/>
+      <delete dir="${build}"/>
+   </target>
+
+   <target name="javadoc" depends="layout">
+      <mkdir dir="${javadoc}"/>
+      <javadoc sourcepath="${source}" packagenames="simple.*" destdir="${javadoc}" private="false"/>
+      <delete dir="${build}"/>
+   </target>
+</project>
