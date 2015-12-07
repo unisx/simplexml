@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.OverrideTest
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.739 sec
+Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.668 sec
 ------------- Standard Output ---------------
 <?xml version="1.0" encoding="UTF-8"?>
 <root name="change">
@@ -11,6 +11,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.739 sec
 </root>
 ------------- ---------------- ---------------
 
-Testcase: testCopy took 0.7 sec
+Testcase: testCopy took 0.643 sec
 Testcase: testList took 0.002 sec
-Testcase: testComposite took 0.001 sec
+Testcase: testComposite took 0 sec

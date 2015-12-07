@@ -1,4 +1,4 @@
-package simple.xml.load;
+package simple.xml.util;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -8,8 +8,7 @@ import java.util.Set;
 
 import org.w3c.dom.Document;
 import junit.framework.TestCase;
-import simple.xml.util.Dictionary;
-import simple.xml.util.Entry;
+import simple.xml.load.Persister;
 import simple.xml.Attribute;
 import simple.xml.Element;
 import simple.xml.ElementList;

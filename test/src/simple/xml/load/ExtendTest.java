@@ -63,14 +63,14 @@ public class ExtendTest extends TestCase {
 	}
 	
    public void testFirst() throws Exception {    
-      First first = (First) serializer.read(First.class, new StringReader(FIRST));
+      First first = serializer.read(First.class, new StringReader(FIRST));
       
       assertEquals(first.id, 12);
       assertEquals(first.text, "entry text");
    }
    
    public void testSecond() throws Exception {
-      Second second = (Second) serializer.read(Second.class, new StringReader(SECOND));
+      Second second = serializer.read(Second.class, new StringReader(SECOND));
       
       assertEquals(second.id, 12);
       assertEquals(second.text, "entry text");
@@ -78,7 +78,7 @@ public class ExtendTest extends TestCase {
    }
 
    public void testThird() throws Exception {
-      Third third = (Third) serializer.read(Third.class, new StringReader(THIRD));
+      Third third = serializer.read(Third.class, new StringReader(THIRD));
 
       assertEquals(third.id, 12);
       assertEquals(third.text, "entry text");
@@ -91,7 +91,7 @@ public class ExtendTest extends TestCase {
       boolean fail = false;
 
       try {
-         Third third = (Third) serializer.read(Third.class, new StringReader(SECOND));
+         Third third = serializer.read(Third.class, new StringReader(SECOND));
       }catch(Exception e) {
          fail = true;              
       }

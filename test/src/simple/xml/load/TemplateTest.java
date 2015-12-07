@@ -75,7 +75,7 @@ public class TemplateTest extends TestCase {
 	}
 	
    public void testTemplate() throws Exception {    
-      Example example = (Example) serializer.read(Example.class, EXAMPLE);
+      Example example = serializer.read(Example.class, EXAMPLE);
       
       assertEquals(example.name, "test");
       assertEquals(example.details.title, "Mr");

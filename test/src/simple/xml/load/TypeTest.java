@@ -111,7 +111,7 @@ public class TypeTest extends TestCase {
    }
 	
    public void testPrimitive() throws Exception {    
-      Entry entry = (Entry) persister.read(Entry.class, SOURCE);
+      Entry entry = persister.read(Entry.class, SOURCE);
 
       assertEquals(entry.primitive.booleanValue, true);
       assertEquals(entry.primitive.byteValue, 16);
@@ -133,7 +133,7 @@ public class TypeTest extends TestCase {
       
       StringWriter buffer = new StringWriter();
       persister.write(entry, buffer);
-      entry = (Entry) persister.read(Entry.class, buffer.toString());
+      entry = persister.read(Entry.class, buffer.toString());
 
       assertEquals(entry.primitive.booleanValue, true);
       assertEquals(entry.primitive.byteValue, 16);

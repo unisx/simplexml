@@ -31,7 +31,7 @@ import java.lang.annotation.Retention;
  * <pre>
  * 
  *    &lt;example class="demo.Example"&gt;
- *       &lt;data/&gt
+ *       &lt;data/&gt;
  *    &lt;example&gt;
  * 
  * </pre>

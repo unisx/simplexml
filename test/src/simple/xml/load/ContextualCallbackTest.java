@@ -95,7 +95,7 @@ public class ContextualCallbackTest extends TestCase {
    }
 	
    public void testReadCallbacks() throws Exception {    
-      Entry entry = (Entry) persister.read(Entry.class, SOURCE);
+      Entry entry = persister.read(Entry.class, SOURCE);
 
       assertEquals("complete", entry.getValue());
       assertEquals(1234, entry.getNumber());

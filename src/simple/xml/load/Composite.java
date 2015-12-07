@@ -218,7 +218,7 @@ final class Composite implements Converter {
     */
    private void readAttribute(Node node, Object source, LabelMap map) throws Exception {
       String name = node.getNodeName();
-      Label label = map.remove(name);
+      Label label = map.take(name);
       
       if(label == null) {
          throw new AttributeException("Attribute '%s' does not exist", name);
@@ -242,7 +242,7 @@ final class Composite implements Converter {
     */
    private void readElement(Node node, Object source, LabelMap map) throws Exception {
       String name = node.getNodeName();
-      Label label = map.remove(name);
+      Label label = map.take(name);
       
       if(label == null) {
          throw new ElementException("Element '%s' does not exist", name);

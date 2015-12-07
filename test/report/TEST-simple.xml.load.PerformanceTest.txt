@@ -1,4 +1,4 @@
 Testsuite: simple.xml.load.PerformanceTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 3.245 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 3.283 sec
 
-Testcase: testSystem took 3.222 sec
+Testcase: testSystem took 3.26 sec

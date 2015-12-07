@@ -55,7 +55,7 @@ public class RequiredTest extends TestCase {
    }
 	
    public void testComplete() throws Exception {    
-      Entry entry = (Entry) persister.read(Entry.class, new StringReader(COMPLETE));
+      Entry entry = persister.read(Entry.class, new StringReader(COMPLETE));
 
       assertEquals("complete", entry.getValue());
       assertEquals(1234, entry.getNumber());
@@ -63,7 +63,7 @@ public class RequiredTest extends TestCase {
    }
 
    public void testOptional() throws Exception {
-      Entry entry = (Entry) persister.read(Entry.class, new StringReader(OPTIONAL));
+      Entry entry = persister.read(Entry.class, new StringReader(OPTIONAL));
 
       assertEquals("default", entry.getValue());
       assertEquals(9999, entry.getNumber());

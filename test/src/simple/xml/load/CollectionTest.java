@@ -222,7 +222,7 @@ public class CollectionTest extends TestCase {
 	}
 	
    public void testSet() throws Exception {    
-      EntrySet set = (EntrySet) serializer.read(EntrySet.class, LIST);
+      EntrySet set = serializer.read(EntrySet.class, LIST);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -244,7 +244,7 @@ public class CollectionTest extends TestCase {
    }
    
    public void testSortedSet() throws Exception {    
-      EntrySortedSet set = (EntrySortedSet) serializer.read(EntrySortedSet.class, LIST);
+      EntrySortedSet set = serializer.read(EntrySortedSet.class, LIST);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -266,7 +266,7 @@ public class CollectionTest extends TestCase {
    }
 
    public void testList() throws Exception {    
-      EntryList set = (EntryList) serializer.read(EntryList.class, LIST);
+      EntryList set = serializer.read(EntryList.class, LIST);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -288,7 +288,7 @@ public class CollectionTest extends TestCase {
    }
 
    public void testHashSet() throws Exception {    
-      EntrySet set = (EntrySet) serializer.read(EntrySet.class, HASH_SET);
+      EntrySet set = serializer.read(EntrySet.class, HASH_SET);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -310,7 +310,7 @@ public class CollectionTest extends TestCase {
    }  
 
    public void testTreeSet() throws Exception {    
-      EntrySortedSet set = (EntrySortedSet) serializer.read(EntrySortedSet.class, TREE_SET);
+      EntrySortedSet set = serializer.read(EntrySortedSet.class, TREE_SET);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -332,7 +332,7 @@ public class CollectionTest extends TestCase {
    }  
    
    public void testArrayList() throws Exception {    
-      EntryList list = (EntryList) serializer.read(EntryList.class, ARRAY_LIST);
+      EntryList list = serializer.read(EntryList.class, ARRAY_LIST);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -354,7 +354,7 @@ public class CollectionTest extends TestCase {
    } 
 
    public void testSortedSetToSet() throws Exception {    
-      EntrySet set = (EntrySet) serializer.read(EntrySet.class, TREE_SET);
+      EntrySet set = serializer.read(EntrySet.class, TREE_SET);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -376,7 +376,7 @@ public class CollectionTest extends TestCase {
    }  
 
    public void testExtendedEntry() throws Exception {    
-      EntrySet set = (EntrySet) serializer.read(EntrySet.class, EXTENDED_ENTRY_LIST);
+      EntrySet set = serializer.read(EntrySet.class, EXTENDED_ENTRY_LIST);
       int one = 0;
       int two = 0;
       int three = 0;
@@ -397,7 +397,7 @@ public class CollectionTest extends TestCase {
       assertEquals(three, 1);
 
       Document doc = serializer.write(set, System.err);
-      EntrySet other = (EntrySet) serializer.read(EntrySet.class, doc);
+      EntrySet other = serializer.read(EntrySet.class, doc);
 
       for(Entry entry : set) {
          if(entry.id == 1 && entry.text.equals("one")) {              
@@ -421,7 +421,7 @@ public class CollectionTest extends TestCase {
       boolean success = false;
 
       try {      
-         EntrySortedSet set = (EntrySortedSet) serializer.read(EntrySortedSet.class, HASH_SET);
+         EntrySortedSet set = serializer.read(EntrySortedSet.class, HASH_SET);
       } catch(InstantiationException e) {
          success = true;              
       }         
@@ -432,7 +432,7 @@ public class CollectionTest extends TestCase {
       boolean success = false;
 
       try {      
-         EntrySet set = (EntrySet) serializer.read(EntrySet.class, ARRAY_LIST);
+         EntrySet set = serializer.read(EntrySet.class, ARRAY_LIST);
       } catch(InstantiationException e) {
          success = true;              
       }         
@@ -444,7 +444,7 @@ public class CollectionTest extends TestCase {
       boolean success = false;
 
       try {      
-         EntryList set = (EntryList) serializer.read(EntryList.class, ABSTRACT_LIST);
+         EntryList set = serializer.read(EntryList.class, ABSTRACT_LIST);
       } catch(InstantiationException e) {
          success = true;              
       }         
@@ -455,7 +455,7 @@ public class CollectionTest extends TestCase {
       boolean success = false;
 
       try {      
-         EntryList set = (EntryList) serializer.read(EntryList.class, NOT_A_COLLECTION);
+         EntryList set = serializer.read(EntryList.class, NOT_A_COLLECTION);
       } catch(InstantiationException e) {
          success = true;              
       }         
@@ -466,7 +466,7 @@ public class CollectionTest extends TestCase {
       boolean success = false;
 
       try {      
-         EntrySet set = (EntrySet) serializer.read(EntrySet.class, MISSING_COLLECTION);
+         EntrySet set = serializer.read(EntrySet.class, MISSING_COLLECTION);
       } catch(ClassNotFoundException e) {
          success = true;              
       }         

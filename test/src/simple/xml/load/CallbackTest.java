@@ -159,7 +159,7 @@ public class CallbackTest extends TestCase {
    }
 	
    public void testReadCallbacks() throws Exception {    
-      Entry entry = (Entry) persister.read(Entry.class, SOURCE);
+      Entry entry = persister.read(Entry.class, SOURCE);
 
       assertEquals("complete", entry.getValue());
       assertEquals(1234, entry.getNumber());
@@ -183,7 +183,7 @@ public class CallbackTest extends TestCase {
    }
 
    public void testExtendedReadCallbacks() throws Exception {    
-      ExtendedEntry entry = (ExtendedEntry) persister.read(ExtendedEntry.class, SOURCE);
+      ExtendedEntry entry = persister.read(ExtendedEntry.class, SOURCE);
 
       assertEquals("complete", entry.getValue());
       assertEquals(1234, entry.getNumber());
@@ -213,7 +213,7 @@ public class CallbackTest extends TestCase {
    }
 
    public void testOverrideReadCallbacks() throws Exception {    
-      OverrideEntry entry = (OverrideEntry) persister.read(OverrideEntry.class, SOURCE);
+      OverrideEntry entry = persister.read(OverrideEntry.class, SOURCE);
 
       assertEquals("complete", entry.getValue());
       assertEquals(1234, entry.getNumber());

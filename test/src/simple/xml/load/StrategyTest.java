@@ -181,7 +181,7 @@ public class StrategyTest extends TestCase {
    public void testAttributeStrategy() throws Exception {    
       AttributeStrategy strategy = new AttributeStrategy(this);           
       Serializer persister = new Persister(strategy);
-      Example example = (Example) persister.read(Example.class, ATTRIBUTE);
+      Example example = persister.read(Example.class, ATTRIBUTE);
       
       assertTrue(example instanceof AttributeExample);
       assertEquals(example.getValue(), "attribute-example-text");
@@ -198,7 +198,7 @@ public class StrategyTest extends TestCase {
    public void testElementStrategy() throws Exception {    
       ElementStrategy strategy = new ElementStrategy(this);           
       Serializer persister = new Persister(strategy);
-      Example example = (Example) persister.read(Example.class, ELEMENT);      
+      Example example = persister.read(Example.class, ELEMENT);      
       
       assertTrue(example instanceof ElementExample);
       assertEquals(example.getValue(), "element-example-value");

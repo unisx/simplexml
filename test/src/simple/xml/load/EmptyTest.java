@@ -104,13 +104,13 @@ public class EmptyTest extends TestCase {
    }     
 
    public void testRequiredEmptyAttribute() throws Exception {
-      RequiredAttribute entry = (RequiredAttribute) persister.read(RequiredAttribute.class, EMPTY_ATTRIBUTE);
+      RequiredAttribute entry = persister.read(RequiredAttribute.class, EMPTY_ATTRIBUTE);
 
       assertEquals(entry.attribute, "");      
    }
 
    public void testOptionalEmptyAttribute() throws Exception {
-      OptionalAttribute entry = (OptionalAttribute) persister.read(OptionalAttribute.class, EMPTY_ATTRIBUTE);
+      OptionalAttribute entry = persister.read(OptionalAttribute.class, EMPTY_ATTRIBUTE);
 
       assertEquals(entry.attribute, "");      
    }   

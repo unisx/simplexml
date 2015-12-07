@@ -67,14 +67,14 @@ public class OverrideTest extends TestCase {
 	}
 	
    public void testComposite() throws Exception {    
-      Entry entry = (Entry) serializer.read(Entry.class, new StringReader(ENTRY));
+      Entry entry = serializer.read(Entry.class, new StringReader(ENTRY));
       
       assertEquals(entry.id, 12);
       assertEquals(entry.text, "entry text");
    }
    
    public void testList() throws Exception {
-      EntryList list = (EntryList) serializer.read(EntryList.class, new StringReader(LIST));
+      EntryList list = serializer.read(EntryList.class, new StringReader(LIST));
 
       assertEquals(list.name, "example");
       assertTrue(list.list instanceof Vector);
@@ -96,7 +96,7 @@ public class OverrideTest extends TestCase {
    }
 
    public void testCopy() throws Exception {
-      EntryList list = (EntryList) serializer.read(EntryList.class, new StringReader(LIST));
+      EntryList list = serializer.read(EntryList.class, new StringReader(LIST));
 
       assertEquals(list.name, "example");
       assertTrue(list.list instanceof Vector);
@@ -116,7 +116,7 @@ public class OverrideTest extends TestCase {
       assertTrue(writer.toString().indexOf("java.util.ArrayList") > 0);
       assertTrue(writer.toString().indexOf("change") > 0);
 
-      list = (EntryList) serializer.read(EntryList.class, new StringReader(writer.toString()));
+      list = serializer.read(EntryList.class, new StringReader(writer.toString()));
 
       assertEquals(list.name, "change");
       assertTrue(list.list instanceof ArrayList);

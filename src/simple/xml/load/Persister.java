@@ -190,8 +190,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, String source) throws Exception {
-      return read(type, new StringReader(source));            
+   public <T> T read(Class<? extends T> type, String source) throws Exception {
+      return (T)read(type, new StringReader(source));            
    }
    
    /**
@@ -208,8 +208,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, File source) throws Exception {
-      return read(type, new FileInputStream(source));           
+   public <T> T read(Class<? extends T> type, File source) throws Exception {
+      return (T)read(type, new FileInputStream(source));           
    }
    
    /**
@@ -226,8 +226,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, InputStream source) throws Exception {
-      return read(type, source, "utf-8");           
+   public <T> T read(Class<? extends T> type, InputStream source) throws Exception {
+      return (T)read(type, source, "utf-8");           
    }
    
    /**
@@ -245,8 +245,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */   
-   public Object read(Class type, InputStream source, String charset) throws Exception {
-      return read(type, new InputStreamReader(source, charset));           
+   public <T> T read(Class<? extends T> type, InputStream source, String charset) throws Exception {
+      return (T)read(type, new InputStreamReader(source, charset));           
    }
    
    /**
@@ -263,8 +263,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, Reader source) throws Exception {
-      return read(type, new InputSource(source));           
+   public <T> T read(Class<? extends T> type, Reader source) throws Exception {
+      return (T)read(type, new InputSource(source));           
    }
    
    /**
@@ -281,11 +281,11 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, InputSource source) throws Exception {
+   public <T> T read(Class<? extends T> type, InputSource source) throws Exception {
       if(builder == null) {           
          builder = factory.newDocumentBuilder();
       }         
-      return read(type, builder.parse(source));    
+      return (T)read(type, builder.parse(source));    
    }
    
    /**
@@ -302,8 +302,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, Document source) throws Exception {
-      return read(type, source, filter);
+   public <T> T read(Class<? extends T> type, Document source) throws Exception {
+      return (T)read(type, source, filter);
    }
 
    /**
@@ -321,8 +321,8 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   private Object read(Class type, Document source, Filter filter) throws Exception {
-      return read(type, new Source(source, strategy, filter));
+   private <T> T read(Class<? extends T> type, Document source, Filter filter) throws Exception {
+      return (T)read(type, new Source(source, strategy, filter));
    }                      
            
    /**
@@ -339,11 +339,11 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   private Object read(Class type, Source source) throws Exception {
+   private <T> T read(Class<? extends T> type, Source source) throws Exception {
       Traverser traverser = new Traverser(source);
       Element node = source.getRootElement();
       
-      return traverser.read(node, type);
+      return (T)traverser.read(node, type);
    }
    
    /**

@@ -64,7 +64,7 @@ public class FilterTest extends TestCase {
    }
 	
    public void testSystem() throws Exception {    
-      Entry entry = (Entry) systemSerializer.read(Entry.class, new StringReader(ENTRY));
+      Entry entry = systemSerializer.read(Entry.class, new StringReader(ENTRY));
       
       assertEquals(entry.number, 1234);
       assertEquals(entry.bool, true);
@@ -76,7 +76,7 @@ public class FilterTest extends TestCase {
    }
 
    public void testMap() throws Exception {
-      Entry entry = (Entry) mapSerializer.read(Entry.class, new StringReader(ENTRY));
+      Entry entry = mapSerializer.read(Entry.class, new StringReader(ENTRY));
       
       assertEquals(entry.number, 1234);
       assertEquals(entry.bool, true);

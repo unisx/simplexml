@@ -1,5 +1,5 @@
 Testsuite: simple.xml.util.ResolverTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.691 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.676 sec
 ------------- Standard Error -----------------
 <?xml version="1.0" encoding="UTF-8"?>
 <test name="example">
@@ -27,7 +27,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.691 sec
 </test>
 ------------- ---------------- ---------------
 
-Testcase: testNonGreedyMatch took 0.493 sec
+Testcase: testNonGreedyMatch took 0.483 sec
 Testcase: testNoResolution took 0.001 sec
-Testcase: testCache took 0.162 sec
-Testcase: testResolver took 0.002 sec
+Testcase: testCache took 0.158 sec
+Testcase: testResolver took 0.001 sec

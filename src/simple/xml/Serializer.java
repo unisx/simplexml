@@ -57,7 +57,7 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, String source) throws Exception;
+   public <T> T read(Class<? extends T> type, String source) throws Exception;
         
    /**
     * This <code>read</code> method will read the contents of the DOM
@@ -73,7 +73,7 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, Document source) throws Exception;
+   public <T> T read(Class<? extends T> type, Document source) throws Exception;
           
    /**
     * This <code>read</code> method will read the contents of the XML
@@ -89,7 +89,7 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, File source) throws Exception;
+   public <T> T read(Class<? extends T> type, File source) throws Exception;
 
    /**
     * This <code>read</code> method will read the contents of the XML
@@ -105,7 +105,7 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public Object read(Class type, InputStream source) throws Exception;
+   public <T> T read(Class<? extends T> type, InputStream source) throws Exception;
    
    /**
     * This <code>read</code> method will read the contents of the XML
@@ -122,7 +122,7 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */   
-   public Object read(Class type, InputStream source, String charset) throws Exception;
+   public <T> T read(Class<? extends T> type, InputStream source, String charset) throws Exception;
 
    /**
     * This <code>read</code> method will read the contents of the XML
@@ -138,7 +138,7 @@ public interface Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */   
-   public Object read(Class type, Reader source) throws Exception;
+   public <T> T read(Class<? extends T> type, Reader source) throws Exception;
    
    /**
     * This <code>write</code> method will traverse the provided object

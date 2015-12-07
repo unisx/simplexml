@@ -125,7 +125,7 @@ public class VersionTest extends TestCase {
    public void testVersion1() throws Exception {    
       Strategy strategy = new VersionStrategy();           
       Serializer persister = new Persister(strategy);
-      Example example = (Example) persister.read(Example.class, VERSION_1);
+      Example example = persister.read(Example.class, VERSION_1);
       
       assertTrue(example instanceof Example1);
       assertEquals(example.getValue(), "text value");
@@ -134,7 +134,7 @@ public class VersionTest extends TestCase {
    public void testVersion2() throws Exception {    
       Strategy strategy = new VersionStrategy();           
       Serializer persister = new Persister(strategy);
-      Example example = (Example) persister.read(Example.class, VERSION_2);      
+      Example example = persister.read(Example.class, VERSION_2);      
       
       assertTrue(example instanceof Example2);
       assertEquals(example.getValue(), "text value");

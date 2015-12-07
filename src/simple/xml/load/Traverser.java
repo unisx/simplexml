@@ -99,8 +99,9 @@ final class Traverser {
          throw new RootException("No root annotation defined for %s", type.getName());              
       }      
       String name = node.getNodeName();
+      String root = label.name();
       
-      if(!label.name().equals(name)) {
+      if(!root.equalsIgnoreCase(name)) {
          throw new RootException("Annotation %s does not match XML element %s", label, name);              
       } 
       return value;
