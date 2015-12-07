@@ -35,6 +35,6 @@ Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
    <doubleValue>1234567.89</doubleValue>
 </implicitMethodNameExample>------------- ---------------- ---------------
 
-Testcase: testExplicitMethodNameExample took 0.438 sec
-Testcase: testImplicitMethodNameExample took 0.032 sec
+Testcase: testExplicitMethodNameExample took 0.453 sec
+Testcase: testImplicitMethodNameExample took 0.047 sec
 Testcase: testDirectory took 0 sec

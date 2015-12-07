@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.RootTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.5 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.531 sec
 ------------- Standard Output ---------------
 <rootExample version="1">
    <text>Some text example</text>
