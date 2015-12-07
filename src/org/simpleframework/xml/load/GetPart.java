@@ -1,5 +1,5 @@
 /*
- * ReadPart.java April 2007
+ * GetPart.java April 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -24,9 +24,9 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 /**
- * The <code>ReadPart</code> object represents the getter method for
+ * The <code>GetPart</code> object represents the getter method for
  * a Java Bean property. This composes the get part of the method
- * contact for an object. The read part contains the method that is
+ * contact for an object. The get part contains the method that is
  * used to get the value in an object and the annotation that tells
  * the serialization process how to serialize the value.
  * 
@@ -34,37 +34,37 @@ import java.lang.reflect.Method;
  * 
  * @see org.simpleframework.xml.load.MethodContact
  */
-class ReadPart implements MethodPart {
+class GetPart implements MethodPart {
    
    /**
     * This is the annotation for the get method provided.
     */
-   private Annotation label;
+   private final Annotation label;
    
    /**
-    * This represents the method type for the read part method.
+    * This represents the method type for the get part method.
     */
-   private MethodType type;
+   private final MethodType type;
    
    /**
     * This method is used to get the value during serialization. 
     */
-   private Method method;
+   private final Method method;
    
    /**
     * This is the Java Bean name representation of the method.
     */
-   private String name;
+   private final String name;
    
    /**
-    * Constructor for the <code>ReadPart</code> object. This is
+    * Constructor for the <code>GetPart</code> object. This is
     * used to create a method part that will provide a means for 
     * the serialization process to set a value to a object.
     * 
     * @param method the method that is used to get the value
     * @param label this describes how to serialize the value
     */   
-   public ReadPart(MethodName method, Annotation label) {      
+   public GetPart(MethodName method, Annotation label) {      
       this.method = method.getMethod();      
       this.name = method.getName();
       this.type = method.getType();

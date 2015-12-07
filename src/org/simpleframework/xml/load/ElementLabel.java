@@ -81,7 +81,7 @@ class ElementLabel implements Label {
     */
    public Converter getConverter(Source root) throws Exception {
       if(Factory.isPrimitive(type)) {
-         return new Primitive(root, type, null);
+         return new Primitive(root, type);
       }
       return new Composite(root, type);
    }

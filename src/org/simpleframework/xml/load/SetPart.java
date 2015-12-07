@@ -1,5 +1,5 @@
 /*
- * WritePart.java April 2007
+ * SetPart.java April 2007
  *
  * Copyright (C) 2007, Niall Gallagher <niallg@users.sf.net>
  *
@@ -24,9 +24,9 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 /**
- * The <code>WritePart</code> object represents the setter method for
+ * The <code>SetPart</code> object represents the setter method for
  * a Java Bean property. This composes the set part of the method
- * contact for an object. The write part contains the method that is
+ * contact for an object. The set part contains the method that is
  * used to set the value on an object and the annotation that tells
  * the deserialization process how to deserialize the value.
  * 
@@ -34,37 +34,37 @@ import java.lang.reflect.Method;
  * 
  * @see org.simpleframework.xml.load.MethodContact
  */
-class WritePart implements MethodPart {
+class SetPart implements MethodPart {
    
    /**
     * This is the annotation for the set method provided.
     */
-   private Annotation label;
+   private final Annotation label;
    
    /**
-    * This represents the method type for the read part method.
+    * This represents the method type for the set part method.
     */
-   private MethodType type;
+   private final MethodType type;
    
    /**
     * This method is used to set the value during deserialization. 
     */
-   private Method method;
+   private final Method method;
    
    /**
-    * This represents the name of this write part instance.
+    * This represents the name of this set part instance.
     */
-   private String name;
+   private final String name;
    
    /**
-    * Constructor for the <code>WritePart</code> object. This is
+    * Constructor for the <code>SetPart</code> object. This is
     * used to create a method part that will provide a means for 
     * the deserialization process to set a value to a object.
     * 
     * @param method the method that is used to set the value
     * @param label this describes how to deserialize the value
     */
-   public WritePart(MethodName method, Annotation label) {
+   public SetPart(MethodName method, Annotation label) {
       this.method = method.getMethod();
       this.name = method.getName();
       this.type = method.getType();

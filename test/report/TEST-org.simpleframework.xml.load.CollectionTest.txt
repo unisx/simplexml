@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.load.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.906 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.016 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -140,7 +140,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.906 sec
       </entry>
    </list>
 </test>org.simpleframework.xml.load.InstantiationException: Type class java.util.HashSet is not compatible with interface java.util.SortedSet
-	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:87)
+	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:99)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:83)
 	at org.simpleframework.xml.load.CompositeList.read(CompositeList.java:110)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:354)
@@ -172,7 +172,7 @@ Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 1.906 sec
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Type class java.util.ArrayList is not compatible with interface java.util.Set
-	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:87)
+	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:99)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:83)
 	at org.simpleframework.xml.load.CompositeList.read(CompositeList.java:110)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:354)
@@ -300,7 +300,7 @@ org.simpleframework.xml.load.InstantiationException: Cannot instantiate class or
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.load.InstantiationException: Type class java.util.Hashtable is not compatible with interface java.util.List
-	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:87)
+	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:99)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:83)
 	at org.simpleframework.xml.load.CompositeList.read(CompositeList.java:110)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:354)
@@ -342,8 +342,8 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.simpleframework.xml.load.DefaultStrategy.getType(DefaultStrategy.java:180)
 	at org.simpleframework.xml.load.DefaultStrategy.getElement(DefaultStrategy.java:120)
 	at org.simpleframework.xml.load.Source.getOverride(Source.java:181)
-	at org.simpleframework.xml.load.Factory.getConversion(Factory.java:125)
-	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:81)
+	at org.simpleframework.xml.load.Factory.getConversion(Factory.java:137)
+	at org.simpleframework.xml.load.Factory.getOverride(Factory.java:93)
 	at org.simpleframework.xml.load.CollectionFactory.getInstance(CollectionFactory.java:83)
 	at org.simpleframework.xml.load.CompositeList.read(CompositeList.java:110)
 	at org.simpleframework.xml.load.Composite.read(Composite.java:354)
@@ -376,24 +376,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.906 sec
-Testcase: testSortedSet took 0.219 sec
-Testcase: testList took 0.047 sec
-Testcase: testHashSet took 0.047 sec
-Testcase: testTreeSet took 0.063 sec
-Testcase: testArrayList took 0.047 sec
-Testcase: testSortedSetToSet took 0.015 sec
+Testcase: testSet took 0.516 sec
+Testcase: testSortedSet took 0.109 sec
+Testcase: testList took 0.015 sec
+Testcase: testHashSet took 0.016 sec
+Testcase: testTreeSet took 0.016 sec
+Testcase: testArrayList took 0.016 sec
+Testcase: testSortedSetToSet took 0 sec
 Testcase: testExtendedEntry took 0.031 sec
-Testcase: testTypeFromFieldList took 0.047 sec
-Testcase: testTypeFromMethodList took 0.094 sec
-Testcase: testPrimitiveCollection took 0.046 sec
-Testcase: testCompositeCollection took 0.047 sec
-Testcase: testPrimitiveDefaultCollection took 0.031 sec
+Testcase: testTypeFromFieldList took 0.016 sec
+Testcase: testTypeFromMethodList took 0.063 sec
+Testcase: testPrimitiveCollection took 0.031 sec
+Testcase: testCompositeCollection took 0.016 sec
+Testcase: testPrimitiveDefaultCollection took 0.016 sec
 Testcase: testSetToSortedSet took 0 sec
 Testcase: testListToSet took 0.016 sec
 Testcase: testInvalidList took 0 sec
-Testcase: testUnknownCollectionList took 0 sec
+Testcase: testUnknownCollectionList took 0.015 sec
 Testcase: testAbstractList took 0 sec
 Testcase: testNotACollection took 0 sec
 Testcase: testMissingCollection took 0 sec
-Testcase: testDirectory took 0.015 sec
+Testcase: testDirectory took 0 sec

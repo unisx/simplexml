@@ -88,7 +88,7 @@ class PackageMatcher implements Matcher {
       if(name.startsWith("java.math")) {
          return matchMath(type);
       }
-      throw new TransformException("Transform of %s not supported", type);
+      return null;
    }
    
    /**
@@ -130,7 +130,10 @@ class PackageMatcher implements Matcher {
       if(type == String.class) {
          return new StringTransform();
       }      
-      throw new TransformException("Transform of %s not supported", type);
+      if(type == Class.class) {
+         return new ClassTransform();
+      }
+      return null;
    }
    
    /**
@@ -151,7 +154,7 @@ class PackageMatcher implements Matcher {
       if(type == BigInteger.class) {
          return new BigIntegerTransform();
       }      
-      throw new TransformException("Transform of %s not supported", type);
+      return null;
    }
    
    /**
@@ -181,7 +184,7 @@ class PackageMatcher implements Matcher {
       if(type == TimeZone.class) {
          return new TimeZoneTransform();
       }      
-      throw new TransformException("Transform of %s not supported", type);
+      return null;
    }  
    
    /**
@@ -205,7 +208,7 @@ class PackageMatcher implements Matcher {
       if(type == Timestamp.class) {
          return new DateTransform(type);
       }      
-      throw new TransformException("Transform of %s not supported", type);
+      return null;
    }   
    
    /**
@@ -223,7 +226,7 @@ class PackageMatcher implements Matcher {
       if(type == File.class) {
          return new FileTransform();
       }       
-      throw new TransformException("Transform of %s not supported", type);     
+      return null;
    }   
    
    /**
@@ -241,6 +244,6 @@ class PackageMatcher implements Matcher {
       if(type == URL.class) {
          return new URLTransform();
       }      
-      throw new TransformException("Transform of %s not supported", type);    
+      return null;
    }
 }

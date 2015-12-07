@@ -20,6 +20,7 @@
 
 package org.simpleframework.xml.load;
 
+import org.simpleframework.xml.transform.Transformer;
 import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.stream.OutputNode;
 import java.lang.reflect.Modifier;
@@ -38,6 +39,17 @@ import java.beans.Introspector;
  * @author Niall Gallagher
  */
 abstract class Factory {
+   
+   /**
+    * Caches the constructors used to transform primitive types.
+    * 
+    * @see org.simpleframework.xml.load.Primitive
+    */
+   protected static Transformer transform;
+
+   static {
+      transform = new Transformer();           
+   } 
    
    /**
     * This is the source object used for the serialization process.
@@ -198,7 +210,10 @@ abstract class Factory {
     * @return this returns true if no XML annotations were found
     */
    public static boolean isPrimitive(Class type) throws Exception {
-      return getScanner(type).isPrimitive();
+      if(type.isEnum()) {
+         return true;
+      }
+      return transform.valid(type);
    }
    
    /**
@@ -236,5 +251,5 @@ abstract class Factory {
          return false;              
       }              
       return !Modifier.isInterface(modifiers);
-   }      
+   } 
 }           
