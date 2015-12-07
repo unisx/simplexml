@@ -30,7 +30,7 @@ import java.lang.reflect.Field;
  * accessing the field annotation details and the field properties.
  * <p>
  * This also exposes a <code>Converter</code> object, which is used to
- * convert a DOM node into a property that can be assigned to the 
+ * convert an XML node into a property that can be assigned to the 
  * annotated field. Each converter returned is specific to the label
  * and knows, based on the annotation, how to serialize the field.
  * 
@@ -40,14 +40,14 @@ interface Label {
 
    /**
     * This method returns a <code>Converter</code> which can be used to
-    * convert a DOM node into an object value and vice versa. The 
+    * convert an XML node into an object value and vice versa. The 
     * converter requires only the source object in order to perform
-    * serialization or deserialization of the provided DOM node.
+    * serialization or deserialization of the provided XML node.
     * 
     * @param root this is the source object for the serialization
     * 
     * @return this returns an object that can be used to convert
-    *         DOM elements to objects and vice versa
+    *         XML elements to objects and vice versa
     */
    public Converter getConverter(Source root);
 
@@ -65,7 +65,7 @@ interface Label {
    /**
     * This acts as a convinience method used to determine the type of
     * the field this represents. This is used when an object is written
-    * to a DOM. It determines whether a <code>class</code> attribute
+    * to XML. It determines whether a <code>class</code> attribute
     * is required within the serialized XML element, that is, if the
     * class returned by this is different from the actual value of the
     * object to be serialized then that type needs to be remembered.
@@ -89,7 +89,7 @@ interface Label {
     * This ensures that if an XML element is missing from a document
     * that deserialization can continue. Also, in the process of
     * serialization, if a value is null it does not need to be 
-    * written to the resulting DOM document.
+    * written to the resulting XML document.
     * 
     * @return true if the label represents a some required data
     */

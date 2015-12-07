@@ -20,15 +20,15 @@
 
 package simple.xml.load;
 
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
+import simple.xml.stream.InputNode;
+import simple.xml.stream.OutputNode;
 
 /**
- * The <code>Converter</code> object serializes and deserializes DOM
+ * The <code>Converter</code> object serializes and deserializes XML
  * elements. Serialization of lists, primitives, and compound types 
  * are performed using a converter. Any object read from a converter
  * will produce a fully deserialized object will all its fields. 
- * The objects written to a DOM element populate that element with 
+ * The objects written to an XML element populate that element with 
  * attributes an elements according to the objects annotations.
  * 
  * @author Niall Gallagher
@@ -47,11 +47,11 @@ interface Converter {
     * 
     * @throws Exception if a deserialized type cannot be instantiated
     */
-   public Object read(Node node) throws Exception;
+   public Object read(InputNode node) throws Exception;
 
    /**
     * The <code>write</code> method writes the fields from the given 
-    * object to the DOM element. After this has finished the element
+    * object to the XML element. After this has finished the element
     * contains all attributes and sub-elements from the object.
     * 
     * @param object this is the object to be written to the element
@@ -59,6 +59,6 @@ interface Converter {
     * 
     * @throws Exception throw if the object cannot be serialized
     */
-   public void write(Object object, Element node) throws Exception;
+   public void write(OutputNode node, Object object) throws Exception;
    
 }

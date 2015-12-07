@@ -1,20 +1,18 @@
 Testsuite: simple.xml.util.DictionaryTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.706 sec
-------------- Standard Error -----------------
-<?xml version="1.0" encoding="UTF-8"?>
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.159 sec
+------------- Standard Output ---------------
 <test name="example">
-<list>
-<property name="3">
-<text>three</text>
-</property>
-<property name="2">
-<text>two</text>
-</property>
-<property name="1">
-<text>one</text>
-</property>
-</list>
-</test>
-------------- ---------------- ---------------
+   <list>
+      <property name="3">
+         <text>three</text>
+      </property>
+      <property name="2">
+         <text>two</text>
+      </property>
+      <property name="1">
+         <text>one</text>
+      </property>
+   </list>
+</test>------------- ---------------- ---------------
 
-Testcase: testDictionary took 0.682 sec
+Testcase: testDictionary took 0.159 sec

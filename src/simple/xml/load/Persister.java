@@ -20,28 +20,26 @@
 
 package simple.xml.load;
 
-import simple.xml.Serializer;
-import simple.xml.filter.Filter;
-import simple.xml.filter.PlatformFilter;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.Result;
-import org.xml.sax.InputSource;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.StringReader;
-import java.io.OutputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.Reader;
+import java.io.StringReader;
 import java.io.Writer;
 import java.util.HashMap;
 import java.util.Map;
-import java.io.File;
+
+import simple.xml.Serializer;
+import simple.xml.filter.Filter;
+import simple.xml.filter.PlatformFilter;
+import simple.xml.stream.NodeBuilder;
+import simple.xml.stream.InputNode;
+import simple.xml.stream.OutputNode;
+import simple.xml.stream.Format;
 
 /**
  * The <code>Persister</code> object is used to provide an implementation
@@ -65,22 +63,6 @@ import java.io.File;
  * @see simple.xml.Serializer
  */ 
 public class Persister implements Serializer {
-           
-   /**
-    * This is used to create a document builder for this persister.
-    * 
-    * @see javax.xml.parsers.DocumentBuilder
-    */
-   private static DocumentBuilderFactory factory;
-
-   static {
-      factory = DocumentBuilderFactory.newInstance();
-   }
-
-   /**
-    * This is used to create documents and parse XML sources.
-    */
-   private DocumentBuilder builder;
 
    /**
     * This is the strategy object used to load and resolve classes.
@@ -93,10 +75,15 @@ public class Persister implements Serializer {
    private Filter filter;
 
    /**
+    * This object is used to format the the generated XML document.
+    */ 
+   private Format format;
+
+   /**
     * Constructor for the <code>Persister</code> object. This is used
     * to create a serializer object that will use an empty filter.
     * This means that template variables will remain unchanged within
-    * the DOM document parsed when an object is deserialized.
+    * the XML document parsed when an object is deserialized.
     */
    public Persister() {
       this(new HashMap());           
@@ -127,7 +114,7 @@ public class Persister implements Serializer {
       this(new DefaultStrategy(), filter);
    }      
 
-    /**
+   /**
     * Constructor for the <code>Persister</code> object. This is used
     * to create a serializer object that will use a strategy object. 
     * This persister will use the provided <code>Strategy</code> to
@@ -139,6 +126,46 @@ public class Persister implements Serializer {
    public Persister(Strategy strategy) {
       this(strategy, new HashMap());
    }     
+   
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use the provided format
+    * instructions. The persister uses the <code>Format</code> object
+    * to structure the generated XML. It determines the indent size
+    * of the document and whether it should contain a prolog.
+    * 
+    * @param format this is used to structure the generated XML
+    */
+   public Persister(Format format) {
+      this(new DefaultStrategy(), format);
+   }  
+
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use the provided filter.
+    * This persister will replace all variables encountered when
+    * deserializing an object with mappings found in the filter.
+    * 
+    * @param filter the filter used to replace template variables
+    * @param format this is used to structure the generated XML
+    */
+   public Persister(Filter filter, Format format) {
+      this(new DefaultStrategy(), filter, format);
+   }
+
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use a strategy object. 
+    * This persister will use the provided <code>Strategy</code> to
+    * intercept the XML elements in order to read and write persisent
+    * data, such as the class name or version of the document.
+    * 
+    * @param strategy this is the strategy used to resolve classes
+    * @param format this is used to structure the generated XML
+    */
+   public Persister(Strategy strategy, Format format) {
+      this(strategy, new HashMap(), format);           
+   }
 
    /**
     * Constructor for the <code>Persister</code> object. This is used
@@ -172,9 +199,46 @@ public class Persister implements Serializer {
     * @param filter the filter used to replace template variables
     */
    public Persister(Strategy strategy, Filter filter) {
+      this(strategy, filter, new Format());
+   }     
+   
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use the provided filter.
+    * This persister will replace all variables encountered when
+    * deserializing an object with mappings found in the filter.
+    * <p>
+    * This persister will use the provided <code>Strategy</code> to
+    * intercept the XML elements in order to read and write persisent
+    * data, such as the class name or version of the document.
+    * 
+    * @param strategy this is the strategy used to resolve classes 
+    * @param data the filter data used to replace template variables
+    * @param format this is used to format the generated XML document
+    */
+   public Persister(Strategy strategy, Map data, Format format) {
+      this(strategy, new PlatformFilter(data), format);
+   }  
+   
+   /**
+    * Constructor for the <code>Persister</code> object. This is used
+    * to create a serializer object that will use the provided filter.
+    * This persister will replace all variables encountered when
+    * deserializing an object with mappings found in the filter.
+    * <p>
+    * This persister will use the provided <code>Strategy</code> to
+    * intercept the XML elements in order to read and write persisent
+    * data, such as the class name or version of the document.
+    * 
+    * @param strategy this is the strategy used to resolve classes 
+    * @param filter the filter used to replace template variables
+    * @param format this is used to format the generated XML document
+    */
+   public Persister(Strategy strategy, Filter filter, Format format) {
       this.strategy = strategy;           
       this.filter = filter;           
-   }     
+      this.format = format;
+   }    
    
    /**
     * This <code>read</code> method will read the contents of the XML
@@ -264,7 +328,7 @@ public class Persister implements Serializer {
     * @throws Exception if the object cannot be fully deserialized
     */
    public <T> T read(Class<? extends T> type, Reader source) throws Exception {
-      return (T)read(type, new InputSource(source));           
+      return (T)read(type, NodeBuilder.read(source));
    }
    
    /**
@@ -281,35 +345,14 @@ public class Persister implements Serializer {
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   public <T> T read(Class<? extends T> type, InputSource source) throws Exception {
-      if(builder == null) {           
-         builder = factory.newDocumentBuilder();
-      }         
-      return (T)read(type, builder.parse(source));    
-   }
-   
-   /**
-    * This <code>read</code> method will read the contents of the DOM
-    * document provided and convert it to an object of the specified
-    * type. If the DOM document cannot be deserialized or there is a
-    * problem building the object graph an exception is thrown. The
-    * object graph deserialized is returned.
-    * 
-    * @param type this is the XML schema class to be deserialized
-    * @param source the document the object is deserialized from
-    * 
-    * @return the object deserialized from the DOM document given
-    * 
-    * @throws Exception if the object cannot be fully deserialized
-    */
-   public <T> T read(Class<? extends T> type, Document source) throws Exception {
+   public <T> T read(Class<? extends T> type, InputNode source) throws Exception {
       return (T)read(type, source, filter);
    }
 
    /**
-    * This <code>read</code> method will read the contents of the DOM
+    * This <code>read</code> method will read the contents of the XML
     * document provided and convert it to an object of the specified
-    * type. If the DOM document cannot be deserialized or there is a
+    * type. If the XML document cannot be deserialized or there is a
     * problem building the object graph an exception is thrown. The
     * object graph deserialized is returned.
     * 
@@ -317,55 +360,30 @@ public class Persister implements Serializer {
     * @param source the document the object is deserialized from
     * @param filter this is the filter used by the templating engine
     * 
-    * @return the object deserialized from the DOM document given
+    * @return the object deserialized from the XML document given
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   private <T> T read(Class<? extends T> type, Document source, Filter filter) throws Exception {
-      return (T)read(type, new Source(source, strategy, filter));
+   private <T> T read(Class<? extends T> type, InputNode node, Filter filter) throws Exception {
+      return (T)read(type, node, new Source(strategy, filter));
    }                      
            
    /**
-    * This <code>read</code> method will read the contents of the DOM
+    * This <code>read</code> method will read the contents of the XML
     * document provided and convert it to an object of the specified
-    * type. If the DOM document cannot be deserialized or there is a
+    * type. If the XML document cannot be deserialized or there is a
     * problem building the object graph an exception is thrown. The
     * object graph deserialized is returned.
     * 
     * @param type this is the XML schema class to be deserialized
     * @param source the contextual object used for derserialization 
     * 
-    * @return the object deserialized from the DOM document given
+    * @return the object deserialized from the XML document given
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
-   private <T> T read(Class<? extends T> type, Source source) throws Exception {
-      Traverser traverser = new Traverser(source);
-      Element node = source.getRootElement();
-      
-      return (T)traverser.read(node, type);
-   }
-   
-   /**
-    * This <code>write</code> method will traverse the provided object
-    * checking for field annotations in order to compose the XML data.
-    * This uses the <code>getClass</code> method on the object to
-    * determine the class file that will be used to compose the schema.
-    * If there is no <code>Root</code> annotation for the class then
-    * this will throw an exception. The root annotation is the only
-    * annotation required for an object to be serialized.  
-    * 
-    * @param source this is the object that is to be serialized
-    * 
-    * @return this returns the DOM containing the serialized XML
-    * 
-    * @throws Exception if the schema for the object is not valid
-    */  
-   public Document write(Object source) throws Exception {
-      if(builder == null) {
-         builder = factory.newDocumentBuilder();
-      }         
-      return write(source, builder.newDocument());          
+   private <T> T read(Class<? extends T> type, InputNode node, Source source) throws Exception {
+      return (T)new Traverser(source).read(node, type);
    }
    
    /**
@@ -380,12 +398,10 @@ public class Persister implements Serializer {
     * @param source this is the object that is to be serialized
     * @param root this is where the serialized XML is written to
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */
-   public Document write(Object source, Document root) throws Exception {
-      return write(source, root, filter);
+   public void write(Object source, OutputNode root) throws Exception {
+      write(source, root, filter);
    }
 
    /**
@@ -401,12 +417,10 @@ public class Persister implements Serializer {
     * @param root this is where the serialized XML is written to
     * @param filter this is the filter object used for templating
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */   
-   private Document write(Object source, Document root, Filter filter) throws Exception {   
-      return write(source, new Source(root, strategy, filter));
+   private void write(Object source, OutputNode root, Filter filter) throws Exception {   
+      write(source, root, new Source(strategy, filter));
    }
 
    /**
@@ -421,18 +435,10 @@ public class Persister implements Serializer {
     * @param source this is the object that is to be serialized
     * @param root this is a contextual object used for serialization
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */     
-   private Document write(Object source, Source root) throws Exception {   
-      Traverser traverser = new Traverser(root);
-      Element node = traverser.write(source);
-      
-      if(node != null) {
-         root.getDocument().appendChild(node);
-      }
-      return root.getDocument();
+   private void write(Object source, OutputNode node, Source root) throws Exception {
+      new Traverser(root).write(node, source);
    }
    
    /**
@@ -446,13 +452,11 @@ public class Persister implements Serializer {
     * 
     * @param source this is the object that is to be serialized
     * @param out this is where the serialized XML is written to
-    * 
-    * @return this returns the DOM containing the serialized XML
     * 
     * @throws Exception if the schema for the object is not valid
     */  
-   public Document write(Object source, File out) throws Exception {
-      return write(source, new FileOutputStream(out));
+   public void write(Object source, File out) throws Exception {
+      write(source, new FileOutputStream(out));
    }
    
    /**
@@ -467,12 +471,10 @@ public class Persister implements Serializer {
     * @param source this is the object that is to be serialized
     * @param out this is where the serialized XML is written to
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */   
-   public Document write(Object source, OutputStream out) throws Exception {
-	   return write(source, out, "utf-8");
+   public void write(Object source, OutputStream out) throws Exception {
+	   write(source, out, "utf-8");
    }
    
    /**
@@ -488,12 +490,10 @@ public class Persister implements Serializer {
     * @param out this is where the serialized XML is written to
     * @param charset this is the character encoding to be used
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */  
-   public Document write(Object source, OutputStream out, String charset) throws Exception {
-	   return write(source, new OutputStreamWriter(out, charset));
+   public void write(Object source, OutputStream out, String charset) throws Exception {
+	   write(source, new OutputStreamWriter(out, charset));
    }
    
    /**
@@ -507,57 +507,10 @@ public class Persister implements Serializer {
     * 
     * @param source this is the object that is to be serialized
     * @param out this is where the serialized XML is written to
-    * 
-    * @return this returns the DOM containing the serialized XML
     * 
     * @throws Exception if the schema for the object is not valid
     */   
-   public Document write(Object source, Writer out) throws Exception {
-	   return write(source, new StreamResult(out));
-   }
-   
-   /**
-    * This <code>write</code> method will traverse the provided object
-    * checking for field annotations in order to compose the XML data.
-    * This uses the <code>getClass</code> method on the object to
-    * determine the class file that will be used to compose the schema.
-    * If there is no <code>Root</code> annotation for the class then
-    * this will throw an exception. The root annotation is the only
-    * annotation required for an object to be serialized.  
-    * 
-    * @param source this is the object that is to be serialized
-    * @param out this is where the serialized XML is written to
-    * 
-    * @return this returns the DOM containing the serialized XML
-    * 
-    * @throws Exception if the schema for the object is not valid
-    */   
-   public Document write(Object source, Result out) throws Exception {
-      return write(source, new Formatter(out));           
-   }
-   
-   /**
-    * This <code>write</code> method will traverse the provided object
-    * checking for field annotations in order to compose the XML data.
-    * This uses the <code>getClass</code> method on the object to
-    * determine the class file that will be used to compose the schema.
-    * If there is no <code>Root</code> annotation for the class then
-    * this will throw an exception. The root annotation is the only
-    * annotation required for an object to be serialized.  
-    * 
-    * @param source this is the object that is to be serialized
-    * @param out this is where the serialized XML is written to
-    * 
-    * @return this returns the DOM containing the serialized XML
-    * 
-    * @throws Exception if the schema for the object is not valid
-    */  
-   private Document write(Object source, Formatter out) throws Exception {
-      Document data = write(source);
-      
-      if(data != null) {
-         out.write(data);
-      }
-      return data;
+   public void write(Object source, Writer out) throws Exception {
+	   write(source, NodeBuilder.write(out, format));
    }
 }

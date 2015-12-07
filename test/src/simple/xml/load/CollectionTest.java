@@ -1,12 +1,12 @@
 package simple.xml.load;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.Set;
 
-import org.w3c.dom.Document;
 import junit.framework.TestCase;
 import simple.xml.Attribute;
 import simple.xml.Element;
@@ -15,7 +15,7 @@ import simple.xml.Root;
 
 public class CollectionTest extends TestCase {
         
-   public static final String LIST = 
+   private static final String LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list>\n"+   
@@ -31,7 +31,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";  
 
-   public static final String ARRAY_LIST = 
+   private static final String ARRAY_LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list class='java.util.ArrayList'>\n"+   
@@ -47,7 +47,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";     
    
-   public static final String HASH_SET = 
+   private static final String HASH_SET = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list class='java.util.HashSet'>\n"+   
@@ -63,7 +63,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";    
 
-   public static final String TREE_SET = 
+   private static final String TREE_SET = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list class='java.util.TreeSet'>\n"+   
@@ -79,7 +79,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";       
   
-   public static final String ABSTRACT_LIST = 
+   private static final String ABSTRACT_LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list class='simple.xml.load.CollectionTest$AbstractList'>\n"+   
@@ -95,7 +95,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";  
   
-   public static final String NOT_A_COLLECTION = 
+   private static final String NOT_A_COLLECTION = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list class='java.util.Hashtable'>\n"+   
@@ -111,7 +111,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";  
    
-   public static final String MISSING_COLLECTION = 
+   private static final String MISSING_COLLECTION = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list class='example.MyCollection'>\n"+   
@@ -127,7 +127,7 @@ public class CollectionTest extends TestCase {
    "   </list>\n"+
    "</test>";  
 
-   public static final String EXTENDED_ENTRY_LIST = 
+   private static final String EXTENDED_ENTRY_LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list>\n"+   
@@ -146,7 +146,7 @@ public class CollectionTest extends TestCase {
    "</test>";     
    
    @Root(name="entry")
-   public static class Entry implements Comparable {
+   private static class Entry implements Comparable {
 
       @Attribute(name="id")           
       private int id;           
@@ -160,14 +160,14 @@ public class CollectionTest extends TestCase {
    }
 
    @Root(name="extended-entry")
-   public static class ExtendedEntry extends Entry {
+   private static class ExtendedEntry extends Entry {
 
       @Element(name="description")
       private String description;           
    }
 
    @Root(name="test")
-   public static class EntrySet implements Iterable<Entry> {
+   private static class EntrySet implements Iterable<Entry> {
 
       @ElementList(name="list", type=Entry.class)
       private Set<Entry> list;           
@@ -181,7 +181,7 @@ public class CollectionTest extends TestCase {
    }
    
    @Root(name="test")
-   public static class EntrySortedSet implements Iterable<Entry> {
+   private static class EntrySortedSet implements Iterable<Entry> {
 
       @ElementList(name="list", type=Entry.class)
       private SortedSet<Entry> list;           
@@ -195,7 +195,7 @@ public class CollectionTest extends TestCase {
    }
 
    @Root(name="test")
-   public static class EntryList implements Iterable<Entry> {
+   private static class EntryList implements Iterable<Entry> {
 
       @ElementList(name="list", type=Entry.class)
       private List<Entry> list;           
@@ -208,7 +208,7 @@ public class CollectionTest extends TestCase {
       }
    } 
 
-   public abstract class AbstractList extends ArrayList {
+   private abstract class AbstractList extends ArrayList {
 
       public AbstractList() {
          super();              
@@ -396,8 +396,10 @@ public class CollectionTest extends TestCase {
       assertEquals(two, 1);
       assertEquals(three, 1);
 
-      Document doc = serializer.write(set, System.err);
-      EntrySet other = serializer.read(EntrySet.class, doc);
+      StringWriter out = new StringWriter();
+      serializer.write(set, out);
+      serializer.write(set, System.err);
+      EntrySet other = serializer.read(EntrySet.class, out.toString());
 
       for(Entry entry : set) {
          if(entry.id == 1 && entry.text.equals("one")) {              

@@ -20,10 +20,9 @@
 
 package simple.xml.load;
 
+import simple.xml.stream.OutputNode;
+import simple.xml.stream.InputNode;
 import java.util.Collection;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 
 /**
  * The <code>CompositeList</code> object is used to convert an element
@@ -97,36 +96,36 @@ final class CompositeList implements Converter {
     * is, its <code>Root</code> annotation must be present and the
     * name of the entry element must match that root element name.
     * 
-    * @param node this is the DOM element that is to be deserialized
+    * @param node this is the XML element that is to be deserialized
     * 
     * @return this returns the item to attach to the object field
     */ 
-   public Object read(Node node) throws Exception{
+   public Object read(InputNode node) throws Exception{
       Collection list = factory.getInstance(node);
-      NodeList nodes = node.getChildNodes();
       
-      for(int i = 0; i < nodes.getLength(); i++) {
-         Node next = nodes.item(i);
-         
-         if(next instanceof Element) {
-            list.add(root.read(next, entry));
-         }        
+      while(true) {
+         InputNode next = node.getNext();
+        
+         if(next == null) {
+            break;
+         }
+         list.add(root.read(next, entry));
       }
       return list;
    }      
 
    /**
     * This <code>write</code> method will write the specified object
-    * to the given DOM element as as list entries. Each entry within
+    * to the given XML element as as list entries. Each entry within
     * the given collection must be assignable from the annotated 
     * type specified within the <code>ElementList</code> annotation.
     * Each entry is serialized as a root element, that is, its
     * <code>Root</code> annotation is used to extract the name. 
     * 
     * @param source this is the source collection to be serialized 
-    * @param node this is the DOM element container to be populated
+    * @param node this is the XML element container to be populated
     */ 
-   public void write(Object source, Element node) throws Exception {
+   public void write(OutputNode node, Object source) throws Exception {
       Collection list = (Collection) source;                
       
       for(Object item : list) {
@@ -135,8 +134,8 @@ final class CompositeList implements Converter {
          if(!entry.isAssignableFrom(type)) {
             throw new RuntimeException("Type does not match list entry");                     
          }
-         Element next = root.write(item, entry);
-         node.appendChild(next);
+         // Will the traversr create a child node for the list parent node???
+         root.write(node, item, entry);
       }
    }
 }

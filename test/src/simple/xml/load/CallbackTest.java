@@ -15,7 +15,7 @@ public class CallbackTest extends TestCase {
    "</root>";
    
    @Root(name="root")
-   public static class Entry {
+   private static class Entry {
 
       @Attribute(name="number", required=false)
       private int number = 9999;     
@@ -87,7 +87,7 @@ public class CallbackTest extends TestCase {
       }
    }
 
-   public static class ExtendedEntry extends Entry {
+   private static class ExtendedEntry extends Entry {
 
       public boolean completed;           
 
@@ -138,7 +138,7 @@ public class CallbackTest extends TestCase {
       }
    }
 
-   public static class OverrideEntry extends Entry {
+   private static class OverrideEntry extends Entry {
 
       public boolean validated;
 

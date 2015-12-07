@@ -20,7 +20,8 @@
 
 package simple.xml.load;
 
-import org.w3c.dom.Element;
+import simple.xml.stream.NodeMap;
+import simple.xml.stream.Node;
 import java.util.Map;
 
 /**
@@ -71,11 +72,11 @@ final class DefaultStrategy implements Strategy {
    /**
     * This is used to resolve and load a class for the given element.
     * Resolution of the class to used is done by inspecting the
-    * DOM element provided. If there is a "class" attribute on the
+    * XML element provided. If there is a "class" attribute on the
     * element then its value is used to resolve the class to use.
     * If no such attribute exists on the element this returns null.
     * 
-    * @param field this is the type of the DOM element expected
+    * @param field this is the type of the XML element expected
     * @param root this is the element used to resolve an override
     * @param map this is used to maintain contextual information
     * 
@@ -83,18 +84,18 @@ final class DefaultStrategy implements Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Class readRoot(Class field, Element root, Map map) throws Exception {
-      return readElement(field, root, map);
+   public Class readRoot(Class field, NodeMap node, Map map) throws Exception {
+      return readElement(field, node, map);
    }  
    
    /**
     * This is used to resolve and load a class for the given element.
     * Resolution of the class to used is done by inspecting the
-    * DOM element provided. If there is a "class" attribute on the
+    * XML element provided. If there is a "class" attribute on the
     * element then its value is used to resolve the class to use.
     * If no such attribute exists on the element this returns null.
     * 
-    * @param field this is the type of the DOM element expected
+    * @param field this is the type of the XML element expected
     * @param node this is the element used to resolve an override
     * @param map this is used to maintain contextual information
     * 
@@ -102,12 +103,11 @@ final class DefaultStrategy implements Strategy {
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Class readElement(Class field, Element node, Map map) throws Exception {
-      String name = node.getAttribute(label);
+   public Class readElement(Class field, NodeMap node, Map map) throws Exception {
+      Node entry = node.remove(label);
       
-      if(name != null && name.length() > 0) {
-         node.removeAttribute(label);              
-         return Class.forName(name);              
+      if(entry != null) {
+         return Class.forName(entry.getValue());              
       }      
       return null;             
    }
@@ -126,8 +126,8 @@ final class DefaultStrategy implements Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public void writeRoot(Class field, Object value, Element root, Map map) throws Exception {
-      writeElement(field, value, root, map);
+   public void writeRoot(Class field, Object value, NodeMap node, Map map) throws Exception {
+      writeElement(field, value, node, map);
    }   
    
    /**
@@ -144,11 +144,11 @@ final class DefaultStrategy implements Strategy {
     * 
     * @throws Exception thrown if the details cannot be set
     */   
-   public void writeElement(Class field, Object value, Element node, Map map) throws Exception {
+   public void writeElement(Class field, Object value, NodeMap node, Map map) throws Exception {
       Class type = value.getClass();
       
       if(type != field) {
-         node.setAttribute(label, type.getName());
+         node.put(label, type.getName());
       }             
    }
 }

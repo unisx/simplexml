@@ -20,10 +20,7 @@
 
 package simple.xml.load;
 
-import simple.xml.filter.PlatformFilter;
 import simple.xml.filter.Filter;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * The <code>TemplateEngine</code> object is used to create strings
@@ -43,7 +40,12 @@ import java.util.Map;
  * 
  * @author Niall Gallagher
  */ 
-final class TemplateEngine extends Template {
+final class TemplateEngine {
+  
+   /**
+    * This is used to store the text that are to be processed.
+    */
+   private Template source;
    
    /**
     * This is used to accumulate the bytes for the variable name.
@@ -59,7 +61,7 @@ final class TemplateEngine extends Template {
     * This is the filter used to replace templated variables.
     */
    private Filter filter;
-
+   
    /**
     * This is used to keep track of the buffer seek offset.
     */ 
@@ -70,42 +72,13 @@ final class TemplateEngine extends Template {
     * used to create a parsing buffer, which can be used to replace
     * filter variable names with their corrosponding values.
     * 
-    * @param map this is the filter used to provide replacements 
-    */ 
-   public TemplateEngine(Map map) {
-      this(new PlatformFilter(map));           
-   }
-   
-   /**
-    * Constructor for the <code>TemplateEngine</code> object. This is 
-    * used to create a parsing buffer, which can be used to replace
-    * filter variable names with their corrosponding values.
-    * 
     * @param filter this is the filter used to provide replacements 
     */ 
    public TemplateEngine(Filter filter) {
+      this.source = new Template();
       this.name = new Template();            
       this.text = new Template();
       this.filter = filter;
-   }
-
-   /**
-    * This method is used to parse the value of the buffered text 
-    * and return the corrosponding string. The contents of this
-    * buffer remain unmodified when this method is invoked. The
-    * transformed value is stored in a seperate text buffer.
-    *
-    * @return this returns the value of the converted string
-    */ 
-   public String process() {
-      if(text.length() <=0){
-         parse();              
-      }          
-      try {
-         return text.toString();
-      } finally {
-         clear();
-      }
    }
    
    /**
@@ -119,10 +92,16 @@ final class TemplateEngine extends Template {
     * @return returns the value of the buffer after the append
     */
    public String process(String value) {
-      if(value != null) {
-         append(value);
+      if(value.indexOf('$') < 0) {
+         return value;
       }
-      return process();
+      try {
+         source.append(value);         
+         parse();
+         return text.toString();
+      }finally {
+         clear();
+      }
    }
    
    /**
@@ -132,12 +111,12 @@ final class TemplateEngine extends Template {
     * this returns without adding the terminal to the value.
     */
    private void parse(){
-      while(off < count){
-         char next = buf[off++];
+      while(off < source.count){
+         char next = source.buf[off++];
          
          if(next == '$') {
-            if(off < count)
-               if(buf[off++] == '{') {
+            if(off < source.count)
+               if(source.buf[off++] == '{') {
                   name();         
                   continue;
                } else {
@@ -157,8 +136,8 @@ final class TemplateEngine extends Template {
     * variable does not exist the value remains unmodified.
     */ 
    private void name() {
-      while(off < count) {
-         char next = buf[off++];              
+      while(off < source.count) {
+         char next = source.buf[off++];              
 
          if(next == '}') {
             replace();                 
@@ -168,7 +147,8 @@ final class TemplateEngine extends Template {
          }            
       }      
       if(name.length() >0){
-         text.append("${"+name);              
+         text.append("${");
+         text.append(name);              
       }     
    }
 
@@ -209,7 +189,9 @@ final class TemplateEngine extends Template {
       String value = filter.replace(name);
    
       if(value == null) {
-         text.append("${"+name+"}");
+         text.append("${");
+         text.append(name);
+         text.append("}");
       }else {
          text.append(value);              
       }
@@ -224,19 +206,7 @@ final class TemplateEngine extends Template {
    public void clear() {
       name.clear();
       text.clear();    
-      super.clear();
+      source.clear();
       off = 0;  
    }
-
-   /**
-    * This method is used to parse the value of the buffered text 
-    * and return the corrosponding string. The contents of this
-    * buffer remain unmodified when this method is invoked. The
-    * transformed value is stored in a seperate text buffer.
-    *
-    * @return this returns the value of the converted string
-    */   
-   public String toString() {
-      return process();
-   }  
 }

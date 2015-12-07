@@ -26,9 +26,9 @@ import simple.xml.Element;
 /**
  * The <code>ElementLabel</code> represents a label that is used to
  * represent an XML element in a class schema. This element can be
- * used to convert a DOM node into either a primitive value such as
+ * used to convert an XML node into either a primitive value such as
  * a string or composite object value, which is itself a schema for
- * a section of XML within the DOM document. 
+ * a section of XML within the XML document. 
  * 
  * @author Niall Gallagher
  * 
@@ -53,7 +53,7 @@ final class ElementLabel implements Label {
    
    /**
     * Constructor for the <code>ElementLabel</code> object. This is
-    * used to create a label that can convert a DOM node into a 
+    * used to create a label that can convert a XML node into a 
     * composite object or a primitive type from an XML element. 
     * 
     * @param field this is the field that this label represents
@@ -66,7 +66,7 @@ final class ElementLabel implements Label {
    }
    
    /**
-    * Creates a converter that can be used to transform a DOM node to
+    * Creates a converter that can be used to transform an XML node to
     * an object and vice versa. The converter created will handles
     * only XML elements and requires the source object to be provided. 
     * 
@@ -109,7 +109,7 @@ final class ElementLabel implements Label {
    /**
     * This acts as a convinience method used to determine the type of
     * the field this represents. This is used when an object is written
-    * to a DOM. It determines whether a <code>class</code> attribute
+    * to XML. It determines whether a <code>class</code> attribute
     * is required within the serialized XML element, that is, if the
     * class returned by this is different from the actual value of the
     * object to be serialized then that type needs to be remembered.
@@ -125,7 +125,7 @@ final class ElementLabel implements Label {
     * This ensures that if an XML element is missing from a document
     * that deserialization can continue. Also, in the process of
     * serialization, if a value is null it does not need to be 
-    * written to the resulting DOM document.
+    * written to the resulting XML document.
     * 
     * @return true if the label represents a some required data
     */   

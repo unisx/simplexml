@@ -1,22 +1,22 @@
 package simple.xml.util;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.Set;
 
-import org.w3c.dom.Document;
-import junit.framework.TestCase;
+import simple.xml.ValidationTestCase;
 import simple.xml.load.Persister;
 import simple.xml.Attribute;
 import simple.xml.Element;
 import simple.xml.ElementList;
 import simple.xml.Root;
 
-public class ResolverTest extends TestCase {
+public class ResolverTest extends ValidationTestCase {
         
-   public static final String LIST = 
+   private static final String LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list>\n"+  
@@ -30,7 +30,7 @@ public class ResolverTest extends TestCase {
    "</test>";  
    
    @Root(name="match")
-   public static class ContentType extends Match {
+   private static class ContentType extends Match {
 
       @Attribute(name="value")
       private String value;        
@@ -46,7 +46,7 @@ public class ResolverTest extends TestCase {
    }
    
    @Root(name="test")
-   public static class ContentResolver implements Iterable<ContentType> {
+   private static class ContentResolver implements Iterable<ContentType> {
 
       @ElementList(name="list", type=ContentType.class)
       private Resolver<ContentType> list;           
@@ -88,7 +88,7 @@ public class ResolverTest extends TestCase {
       assertEquals("text/plain", resolver.resolve("/images/README.txt").value);
       assertEquals("image/jpeg", resolver.resolve("/images/image.JPEG").value);
       
-      serializer.write(resolver, System.err);
+      validate(resolver, serializer);
    }
    
    public void testCache() throws Exception {    
@@ -119,7 +119,7 @@ public class ResolverTest extends TestCase {
       assertEquals("text/plain", resolver.resolve("README.txt").value);
       assertEquals("text/html", resolver.resolve("README.jsp").value);
 
-      serializer.write(resolver, System.err);
+      validate(resolver, serializer);
    }
 
    public void testNoResolution() throws Exception {

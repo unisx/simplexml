@@ -1,19 +1,17 @@
 Testsuite: simple.xml.load.TemplateTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.699 sec
-------------- Standard Error -----------------
-<?xml version="1.0" encoding="UTF-8"?>
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.164 sec
+------------- Standard Output ---------------
 <test name="test">
-<config class="java.util.ArrayList">
-<var name="name" value="Niall Gallagher"/>
-<var name="mail" value="niallg@users.sf.net"/>
-<var name="title" value="Mr"/>
-</config>
-<details>
-<title>Mr</title>
-<mail>niallg@users.sf.net</mail>
-<name>Niall Gallagher</name>
-</details>
-</test>
-------------- ---------------- ---------------
+   <config class="java.util.ArrayList">
+      <var value="Niall Gallagher" name="name"/>
+      <var value="niallg@users.sf.net" name="mail"/>
+      <var value="Mr" name="title"/>
+   </config>
+   <details>
+      <title>Mr</title>
+      <mail>niallg@users.sf.net</mail>
+      <name>Niall Gallagher</name>
+   </details>
+</test>------------- ---------------- ---------------
 
-Testcase: testTemplate took 0.676 sec
+Testcase: testTemplate took 0.163 sec

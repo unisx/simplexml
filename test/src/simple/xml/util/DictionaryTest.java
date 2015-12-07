@@ -1,22 +1,22 @@
 package simple.xml.util;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.Set;
 
-import org.w3c.dom.Document;
-import junit.framework.TestCase;
+import simple.xml.ValidationTestCase;
 import simple.xml.load.Persister;
 import simple.xml.Attribute;
 import simple.xml.Element;
 import simple.xml.ElementList;
 import simple.xml.Root;
 
-public class DictionaryTest extends TestCase {
+public class DictionaryTest extends ValidationTestCase {
         
-   public static final String LIST = 
+   private static final String LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<test name='example'>\n"+
    "   <list>\n"+   
@@ -33,14 +33,14 @@ public class DictionaryTest extends TestCase {
    "</test>";  
    
    @Root(name="property")
-   public static class Property extends Entry {
+   private static class Property extends Entry {
 
       @Element(name="text")
       private String text;        
    }
    
    @Root(name="test")
-   public static class PropertySet implements Iterable<Property> {
+   private static class PropertySet implements Iterable<Property> {
 
       @ElementList(name="list", type=Property.class)
       private Dictionary<Property> list;           
@@ -75,6 +75,6 @@ public class DictionaryTest extends TestCase {
       assertEquals("two", set.get("2").text);
       assertEquals("three", set.get("3").text);
 
-      serializer.write(set, System.err);
+      validate(set, serializer);
    }
 }

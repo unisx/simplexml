@@ -21,12 +21,13 @@
 package simple.xml.load;
 
 import java.lang.reflect.Modifier;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
+
+import simple.xml.stream.InputNode;
+import simple.xml.stream.OutputNode;
 
 /**
  * The <code>Factory</code> object provides a base class for factories 
- * used to produce field values from DOM elements. The goal of this 
+ * used to produce field values from XML elements. The goal of this 
  * type of factory is to make use of the <code>Strategy</code> object
  * to determine the type of the field value. The strategy class must be 
  * assignable to the field class type, that is, it must extend it or
@@ -75,25 +76,7 @@ abstract class Factory {
     * 
     * @throws Exception if the override type is not compatible
     */
-   public Class getOverride(Node node) throws Exception {
-      return getOverride((Element)node);           
-   }
-
-   /**
-    * This is used to get a possible override from the provided node.
-    * If the node provided is an element then this checks for a  
-    * specific class override using the <code>Strategy</code> object.
-    * If the strategy cannot resolve a class then this will return 
-    * null. If the resolved class is not assignable to the field 
-    * then this will thrown an exception.
-    * 
-    * @param node this is the element used to extract the override
-    * 
-    * @return this returns null if no override type can be found
-    * 
-    * @throws Exception if the override type is not compatible
-    */ 
-   public Class getOverride(Element node) throws Exception {
+   public Class getOverride(InputNode node) throws Exception {
       Class type = getConversion(node);
 
       if(type != null) { 
@@ -111,11 +94,11 @@ abstract class Factory {
     * element to describe the type of the object provided to this.
     * 
     * @param field this is the class of the field type being serialized
-    * @param node the DOM element that is to be given the details
+    * @param node the XML element that is to be given the details
     *
     * @throws Exception thrown if an error occurs within the strategy
     */
-   public void setOverride(Class field, Object value, Element node) throws Exception {
+   public void setOverride(Class field, Object value, OutputNode node) throws Exception {
       Class type = value.getClass();
       
       if(!isPrimitive(type)) {
@@ -126,7 +109,7 @@ abstract class Factory {
    /**
     * This performs the conversion from the element node to a type. This
     * is where the <code>Strategy</code> object is consulted and asked
-    * for a class that will represent the provided DOM element. This will,
+    * for a class that will represent the provided XML element. This will,
     * depending on the strategy implementation, make use of attributes
     * and/or elements to determine the type for the field.
     * 
@@ -136,7 +119,7 @@ abstract class Factory {
     * 
     * @throws Exception thrown if the override class cannot be loaded    
     */ 
-   public Class getConversion(Element node) throws Exception {
+   public Class getConversion(InputNode node) throws Exception {
       return source.getOverride(field, node);
    }
 

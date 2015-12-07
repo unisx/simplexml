@@ -20,11 +20,12 @@
 
 package simple.xml.load;
 
-import org.w3c.dom.Node;
+import java.lang.reflect.Constructor;
+import simple.xml.stream.InputNode;
 
 /**
  * The <code>ObjectFactory</code> is the most basic factory. This will
- * basically check to see if there is an override type within the DOM
+ * basically check to see if there is an override type within the XML
  * node provided, if there is then that is instantiated, otherwise the
  * field type is instantiated. Any type created must have a default
  * no argument constructor. If the override type is an abstract class
@@ -37,7 +38,7 @@ final class ObjectFactory extends Factory {
    /**
     * Constructor for the <code>ObjectFactory</code> class. This is
     * given the field class that this should create object instances
-    * of. If the field type is abstract then the DOM node must have
+    * of. If the field type is abstract then the XML node must have
     * sufficient information for the <code>Strategy</code> object to
     * resolve the implementation class to be instantiated.
     *
@@ -51,14 +52,14 @@ final class ObjectFactory extends Factory {
    /**
     * This method will instantiate an object of the field type, or if
     * the <code>Strategy</code> object can resolve a class from the
-    * DOM element then this is used instead. If the resulting type is
+    * XML element then this is used instead. If the resulting type is
     * abstract or an interface then this method throws an exception.
     * 
     * @param node this is the node to check for the override
     * 
     * @return this returns an instance of the resulting type
     */         
-   public Object getInstance(Node node) throws Exception {
+   public Object getInstance(InputNode node) throws Exception {
       Class type = getOverride(node);
     
       if(type == null) { 
@@ -67,6 +68,24 @@ final class ObjectFactory extends Factory {
       if(!isInstantiable(type)) {
          throw new InstantiationException("Cannot instantiate %s", field);              
       }
-      return type.newInstance();
-   }        
+      return getInstance(type);
+   }
+
+   /**
+    * This method will instantiate an object of the provided type. If
+    * the object or constructor does not have public access then this
+    * will ensure the constructor is accessible and can be used.
+    * 
+    * @param type this is used to ensure the object is accessible
+    *
+    * @return this returns an instance of the specifiec class type
+    */ 
+   protected Object getInstance(Class type) throws Exception {
+      Constructor method = type.getDeclaredConstructor();
+
+      if(!method.isAccessible()) {
+         method.setAccessible(true);              
+      }
+      return method.newInstance();   
+   }      
 }

@@ -24,7 +24,7 @@ public class FilterTest extends TestCase {
    "</root>";
    
    @Root(name="root")
-   public static class Entry {
+   private static class Entry {
 
       @Attribute(name="number")
       private int number;     

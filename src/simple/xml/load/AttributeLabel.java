@@ -50,8 +50,8 @@ final class AttributeLabel implements Label {
    
    /**
     * Constructor for the <code>AttributeLabel</code> object. This 
-    * is used to create a label that can convert from an object to a
-    * DOM attribute and vice versa. This requires the annotation and
+    * is used to create a label that can convert from an object to an
+    * XML attribute and vice versa. This requires the annotation and
     * field extracted from the XML schema class.
     * 
     * @param field this is the field from the XML schema class
@@ -115,7 +115,7 @@ final class AttributeLabel implements Label {
     * This ensures that if an attribute is missing from a document
     * that deserialization can continue. Also, in the process of
     * serialization, if a value is null it does not need to be 
-    * written to the resulting DOM document.
+    * written to the resulting XML document.
     * 
     * @return true if the label represents a some required data
     */  

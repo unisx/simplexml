@@ -29,7 +29,7 @@ import simple.xml.Attribute;
 
 /**
  * The <code>LabelFactory</code> object is used to create instances of
- * the <code>Label</code> object that can be used to convert a DOM
+ * the <code>Label</code> object that can be used to convert an XML
  * node into a Java object. Each label created requires the field it
  * represents and the XML annotation it is marked with.  
  * <p>
@@ -47,7 +47,7 @@ final class LabelFactory {
     * annotation. The label produced contains all information related
     * to an object member. It knows the name of the XML entity, as
     * well as whether it is required. Once created the converter can
-    * transform a DOM node into Java object and vice versa.
+    * transform an XML node into Java object and vice versa.
     * 
     * @param field this is the field that the label is produced for
     * @param label represents the XML annotation for the field

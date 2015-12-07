@@ -26,28 +26,28 @@ public class EmptyTest extends TestCase {
    "<test attribute=''/>\n";
 
    @Root(name="test")
-   public static class RequiredElement {
+   private static class RequiredElement {
 
       @Element(name="empty")
       private String empty;            
    }  
 
    @Root(name="test")
-   public static class OptionalElement {
+   private static class OptionalElement {
 
       @Element(name="empty", required=false)
       private String empty;
    }    
 
    @Root(name="test")
-   public static class RequiredAttribute {
+   private static class RequiredAttribute {
 
       @Attribute(name="attribute")            
       private String attribute;
    }
 
    @Root(name="test")
-   public static class OptionalAttribute {
+   private static class OptionalAttribute {
 
       @Attribute(name="attribute", required=false)            
       private String attribute;

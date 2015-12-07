@@ -14,7 +14,7 @@ import simple.xml.Root;
 
 public class ExceptionTest extends TestCase {
         
-   public static final String VALID = 
+   private static final String VALID = 
    "<?xml version=\"1.0\"?>\n"+
    "<root name='example'>\n"+
    "   <text>some text element</text>\n"+
@@ -31,7 +31,7 @@ public class ExceptionTest extends TestCase {
    "   </list>\n"+
    "</root>";  
    
-   public static final String NO_NAME_ATTRIBUTE = 
+   private static final String NO_NAME_ATTRIBUTE = 
    "<?xml version=\"1.0\"?>\n"+
    "<root>\n"+
    "   <text>some text element</text>\n"+
@@ -48,7 +48,7 @@ public class ExceptionTest extends TestCase {
    "   </list>\n"+
    "</root>";  
 
-   public static final String NO_TEXT_ELEMENT = 
+   private static final String NO_TEXT_ELEMENT = 
    "<?xml version=\"1.0\"?>\n"+   
    "<root>\n"+
    "   <list class='java.util.Vector'>\n"+   
@@ -64,7 +64,7 @@ public class ExceptionTest extends TestCase {
    "   </list>\n"+
    "</root>"; 
    
-   public static final String EXTRA_ELEMENT = 
+   private static final String EXTRA_ELEMENT = 
    "<?xml version=\"1.0\"?>\n"+
    "<root name='example'>\n"+
    "   <error>this is an extra element</error>\n"+
@@ -82,7 +82,7 @@ public class ExceptionTest extends TestCase {
    "   </list>\n"+
    "</root>";            
   
-   public static final String EXTRA_ATTRIBUTE = 
+   private static final String EXTRA_ATTRIBUTE = 
    "<?xml version=\"1.0\"?>\n"+
    "<root error='some extra attribute' name='example'>\n"+
    "   <text>some text element</text>\n"+
@@ -99,7 +99,7 @@ public class ExceptionTest extends TestCase {
    "   </list>\n"+
    "</root>"; 
 
-   public static final String MISSING_ROOT = 
+   private static final String MISSING_ROOT = 
    "<?xml version=\"1.0\"?>\n"+
    "<root name='example'>\n"+
    "   <text>some text element</text>\n"+
@@ -121,7 +121,7 @@ public class ExceptionTest extends TestCase {
    "   </error-list>\n"+
    "</root>"; 
 
-   public static final String LIST_ENTRY_WITH_NO_ROOT = 
+   private static final String LIST_ENTRY_WITH_NO_ROOT = 
    "<?xml version=\"1.0\"?>\n"+
    "<root>\n"+
    "   <list class='java.util.Vector'>\n"+   
@@ -140,7 +140,7 @@ public class ExceptionTest extends TestCase {
    "</root>"; 
    
    @Root(name="entry")
-   public static class Entry {
+   private static class Entry {
 
       @Attribute(name="id", required=false)           
       private int id;           
@@ -149,7 +149,7 @@ public class ExceptionTest extends TestCase {
       private String text;           
    }
 
-   public static class NoRootEntry {
+   private static class NoRootEntry {
 
       @Attribute(name="id", required=false)           
       private int id;           
@@ -159,7 +159,7 @@ public class ExceptionTest extends TestCase {
    }
 
    @Root(name="root")
-   public static class EntryList {
+   private static class EntryList {
 
       @ElementList(name="list", type=Entry.class, required=false)
       private List list;           
@@ -171,13 +171,13 @@ public class ExceptionTest extends TestCase {
       private String text;
    }
 
-   public static class ExtendedEntryList extends EntryList {
+   private static class ExtendedEntryList extends EntryList {
 
       @ElementList(name="error-list", type=NoRootEntry.class, required=true)
       private List list;              
    }
    
-   public static class ListEntry {
+   private static class ListEntry {
 
       @Attribute(name="id", required=false)
       private int id;
@@ -187,20 +187,20 @@ public class ExceptionTest extends TestCase {
    }
 
    @Root(name="entry")
-   public static class RootListEntry extends ListEntry {
+   private static class RootListEntry extends ListEntry {
 
       @Attribute(name="value", required=true)
       private String value;      
    }
 
-   public static class NoRootListEntry extends ListEntry {
+   private static class NoRootListEntry extends ListEntry {
 
       @Element(name="value", required=true)  
       private String value;         
    }
 
    @Root(name="root")
-   public static class ListEntryList {
+   private static class ListEntryList {
 
       @ElementList(name="list", type=ListEntry.class, required=true)
       private List list;

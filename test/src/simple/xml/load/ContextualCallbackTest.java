@@ -16,7 +16,7 @@ public class ContextualCallbackTest extends TestCase {
    "</root>";
    
    @Root(name="root")
-   public static class Entry {
+   private static class Entry {
 
       @Attribute(name="number", required=false)
       private int number = 9999;     

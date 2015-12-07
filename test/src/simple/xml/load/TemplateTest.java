@@ -2,15 +2,16 @@ package simple.xml.load;
 
 import java.io.StringReader;
 
-import junit.framework.TestCase;
+import simple.xml.ValidationTestCase;
 import simple.xml.Attribute;
 import simple.xml.ElementList;
 import simple.xml.Element;
 import simple.xml.Root;
+import java.io.StringWriter;
 import java.util.List;
 import java.util.Map;
 
-public class TemplateTest extends TestCase {
+public class TemplateTest extends ValidationTestCase {
 
    private static final String EXAMPLE =
    "<?xml version=\"1.0\"?>\n"+
@@ -28,7 +29,7 @@ public class TemplateTest extends TestCase {
    "</test>";
 
    @Root(name="var")
-   public static class Variable {
+   private static class Variable {
 
       @Attribute(name="name")           
       private String name;           
@@ -43,7 +44,7 @@ public class TemplateTest extends TestCase {
    }
 
    @Root(name="test")
-   public static class Example {
+   private static class Example {
 
       @Attribute(name="name")
       private String name;
@@ -55,7 +56,7 @@ public class TemplateTest extends TestCase {
       private Details details;
    }
         
-   public static class Details {
+   private static class Details {
 
       @Element(name="title")
       private String title;
@@ -82,6 +83,6 @@ public class TemplateTest extends TestCase {
       assertEquals(example.details.mail, "niallg@users.sf.net");
       assertEquals(example.details.name, "Niall Gallagher");
 
-      serializer.write(example, System.err);
+      validate(example, serializer);
    }
 }

@@ -20,8 +20,8 @@
 
 package simple.xml.load;
 
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
+import simple.xml.stream.InputNode;
+import simple.xml.stream.OutputNode;
 
 /**
  * The <code>Primitive</code> object is used to provide serialization
@@ -65,7 +65,7 @@ final class Primitive implements Converter {
 
    /**
     * Constructor for the <code>Primitive</code> object. This is used
-    * to convert a DOM node to a primitive object and vice versa. To
+    * to convert an XML node to a primitive object and vice versa. To
     * perform deserialization the primitive object requires the source
     * object used for the instance of serialization to peformed.
     *
@@ -88,40 +88,38 @@ final class Primitive implements Converter {
     *
     * @return this returns the primitive that has been deserialized
     */ 
-   public Object read(Node node) throws Exception{
-      Node child = node.getFirstChild();
-      String name = node.getNodeName();
-
-      if(child == null) {
-         throw new ElementException("Element %s is empty", name);              
-      }         
-      String value = child.getNodeValue();
-      String text = root.getProperty(value);
+   public Object read(InputNode node) throws Exception{
+      String value = node.getValue();
+      String name = node.getName();
       
+      if(value == null) {
+         throw new ElementException("Element %s is empty", name);              
+      } 
+      String text = root.getProperty(value);
       return factory.getInstance(text);
    }      
  
    /**
     * This <code>write</code> method will serialize the contents of
-    * the provided object to the given DOM element. This will use
+    * the provided object to the given XML element. This will use
     * the <code>String.valueOf</code> method to convert the object to
     * a string if the object represents a primitive, if however the
     * object represents an enumerated type then the text value is
     * created using <code>Enum.name</code>.
     *
     * @param source this is the object to be serialized
-    * @param node this is the DOM element to have its text set
+    * @param node this is the XML element to have its text set
     */  
-   public void write(Object source, Element node) throws Exception {
+   public void write(OutputNode node, Object source) throws Exception {
       Class type = source.getClass();
       String text = getText(source, type);
       
-      node.setTextContent(text);      
+      node.setValue(text);      
    }
 
    /**
     * This method is used to convert the provided object to a text
-    * value so that it can be written to a DOM element. This will
+    * value so that it can be written to an XML element. This will
     * check the object type to convert enumerations using the
     * <code>Enum.name</code> and primitives to their string values.
     * 

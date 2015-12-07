@@ -34,7 +34,18 @@ import java.lang.reflect.Constructor;
  * @author Niall Gallagher
  */ 
 final class PrimitiveFactory extends Factory {
+   
+   /**
+    * Caches the constructors used to convert primitive types.
+    * 
+    * @see simple.xml.load.Primitive
+    */
+   private static ConstructorCache cache;
 
+   static {
+      cache = new ConstructorCache();           
+   }   
+        
    /**
     * Constructor for the <code>PrimitiveFactory</code> object. This
     * is provided the field type that is to be instantiated. This
@@ -61,6 +72,9 @@ final class PrimitiveFactory extends Factory {
     * @return this returns an instance of the field type
     */         
    public Object getInstance(String text) throws Exception {
+      if(field == String.class) {
+         return text;              
+      }           
       if(field.isEnum()) {
          return getEnumeration(text);              
       }           
@@ -96,7 +110,17 @@ final class PrimitiveFactory extends Factory {
     * @throws Exception if the text value is not parsable
     */
    private Object getPrimitive(String text) throws Exception {
-      return getConstructor(field).newInstance(text);
+      Constructor method = cache.get(field);
+      
+      if(method != null) {
+         return method.newInstance(text);              
+      }
+      method = getConstructor(field);
+
+      if(method != null) {
+         cache.cache(field, method);              
+      }
+      return method.newInstance(text);
    }
 
    /**

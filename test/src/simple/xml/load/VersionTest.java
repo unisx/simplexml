@@ -1,9 +1,8 @@
 package simple.xml.load;
 
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.w3c.dom.Document;
 import junit.framework.TestCase;
+import simple.xml.stream.Node;
+import simple.xml.stream.NodeMap;
 import simple.xml.Serializer;
 import simple.xml.Attribute;
 import simple.xml.Element;
@@ -37,7 +36,7 @@ public class VersionTest extends TestCase {
    }
 
    @Root(name="Example")
-   public static abstract class Example implements Versionable {
+   private static abstract class Example implements Versionable {
 
       @Attribute(name="version")
       private int version;
@@ -49,7 +48,7 @@ public class VersionTest extends TestCase {
       public abstract String getValue();   
    }
    
-   public static class Example1 extends Example {
+   private static class Example1 extends Example {
 
       @Element(name="text")
       private String text;           
@@ -59,7 +58,7 @@ public class VersionTest extends TestCase {
       }
    }
 
-   public static class Example2 extends Example {          
+   private static class Example2 extends Example {          
 
       @Element(name="name")
       private String name;
@@ -75,7 +74,7 @@ public class VersionTest extends TestCase {
       }
    }
 
-   public static class Entry {
+   private static class Entry {
 
       @Attribute(name="name")
       private String name;           
@@ -88,16 +87,16 @@ public class VersionTest extends TestCase {
 
       private String version;           
 
-      public Class readRoot(Class type, org.w3c.dom.Element root, Map map) throws Exception {
-         String version = root.getAttribute(VERSION_ATTRIBUTE);                       
+      public Class readRoot(Class type, NodeMap root, Map map) throws Exception {
+         Node version = root.get(VERSION_ATTRIBUTE);                       
 
          if(version != null){
-            map.put(VERSION_ATTRIBUTE, version);
+            map.put(VERSION_ATTRIBUTE, version.getValue());
          }
          return readElement(type, root, map);
       }
 
-      public Class readElement(Class type, org.w3c.dom.Element node, Map map) throws Exception {
+      public Class readElement(Class type, NodeMap node, Map map) throws Exception {
          String value = type.getName() + map.get(VERSION_ATTRIBUTE);
      
          try {    
@@ -107,7 +106,7 @@ public class VersionTest extends TestCase {
          }            
       }         
 
-      public void writeRoot(Class field, Object value, org.w3c.dom.Element root, Map map) throws Exception {
+      public void writeRoot(Class field, Object value, NodeMap root, Map map) throws Exception {
          Class type = value.getClass();
          
          if(Versionable.class.isAssignableFrom(type)) {
@@ -117,8 +116,8 @@ public class VersionTest extends TestCase {
          writeElement(field, value, root, map);
       }              
 
-      public void writeElement(Class field, Object value, org.w3c.dom.Element node, Map map) throws Exception {
-         node.setAttribute(VERSION_ATTRIBUTE, (String)map.get(VERSION_ATTRIBUTE));
+      public void writeElement(Class field, Object value, NodeMap node, Map map) throws Exception {
+         node.put(VERSION_ATTRIBUTE, (String)map.get(VERSION_ATTRIBUTE));
       }
    }
 

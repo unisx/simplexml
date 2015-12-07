@@ -20,11 +20,12 @@
 
 package simple.xml.load;
 
-import java.util.Collection;
-import java.util.TreeSet;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
-import org.w3c.dom.Node;
+import java.util.TreeSet;
+
+import simple.xml.stream.InputNode;
 
 /**
  * The <code>CollectionFactory</code> is used to create collection
@@ -55,11 +56,11 @@ final class CollectionFactory extends Factory {
     * by the strategy implementation or if the collection resolved is
     * abstract then the Java Collections framework is consulted.
     * 
-    * @param node this is the DOM node representing the list
+    * @param node this is the input node representing the list
     * 
     * @return this is the collection instantiated for the field
     */         
-   public Collection getInstance(Node node) throws Exception {
+   public Collection getInstance(InputNode node) throws Exception {
       Class type = getOverride(node);
      
       if(type != null) {              

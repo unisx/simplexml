@@ -31,7 +31,7 @@ public class ExtendTest extends TestCase {
    "</override>";
 
    @Root(name="root")
-   public static class First {
+   private static class First {
 
       @Attribute(name="id")           
       public int id;           
@@ -40,14 +40,14 @@ public class ExtendTest extends TestCase {
       public String text;           
    }
 
-   public static class Second extends First {
+   private static class Second extends First {
 
       @Element(name="name")
       public String name;
    }
 
    @Root(name="override")
-   public static class Third extends Second {
+   private static class Third extends Second {
 
       @Attribute(name="flag")
       public boolean bool;              

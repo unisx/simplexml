@@ -14,7 +14,7 @@ import simple.xml.Root;
 
 public class OverrideTest extends TestCase {
         
-   public static final String LIST = 
+   private static final String LIST = 
    "<?xml version=\"1.0\"?>\n"+
    "<root name='example'>\n"+
    "   <list class='java.util.Vector'>\n"+   
@@ -37,7 +37,7 @@ public class OverrideTest extends TestCase {
    "</entry>";
    
    @Root(name="entry")
-   public static class Entry {
+   private static class Entry {
 
       @Attribute(name="id")           
       private int id;           
@@ -47,7 +47,7 @@ public class OverrideTest extends TestCase {
    }
 
    @Root(name="root")
-   public static class EntryList {
+   private static class EntryList {
 
       @ElementList(name="list", type=Entry.class)
       private List list;           

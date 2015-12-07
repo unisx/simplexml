@@ -20,7 +20,6 @@
 
 package simple.xml;
 
-import org.w3c.dom.Document;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Reader;
@@ -35,46 +34,32 @@ import java.io.File;
  * object will be read from an XML file and written to some other 
  * file or stream. 
  * <p>
- * For convinience the DOM <code>Document</code> used to serialize an
- * object is returned from each write method. This allows other XML
- * based tools to make use of the serialized format of the object.
+ * An implementation of the <code>Serializer</code> interface is free
+ * to use any desired XML parsing framework. If a framework other 
+ * than the Java streaming API for XML is required then it should be
+ * wrapped within the classes of the <code>simple.xml.stream</code>
+ * framework, which offers a framework neutral facade.
  * 
  * @author Niall Gallagher
  */
 public interface Serializer {
    
    /**
-    * This <code>read</code> method will read the contents of the DOM
-    * document provided and convert it to an object of the specified
-    * type. If the DOM document cannot be deserialized or there is a
-    * problem building the object graph an exception is thrown. The
-    * object graph deserialized is returned.
+    * This <code>read</code> method will read the contents of the XML
+    * document from the provided source and convert it into an object
+    * of the specified type. If the XML source cannot be deserialized
+    * or there is a problem building the object graph an exception
+    * is thrown. The instance deserialized is returned.
     * 
-    * @param type this is the XML schema class to be deserialized
-    * @param source the document the object is deserialized from
+    * @param type this is the class type to be deserialized from XML
+    * @param source this provides the source of the XML document
     * 
-    * @return the object deserialized from the DOM document given
+    * @return the object deserialized from the XML document 
     * 
     * @throws Exception if the object cannot be fully deserialized
     */
    public <T> T read(Class<? extends T> type, String source) throws Exception;
         
-   /**
-    * This <code>read</code> method will read the contents of the DOM
-    * document provided and convert it to an object of the specified
-    * type. If the DOM document cannot be deserialized or there is a
-    * problem building the object graph an exception is thrown. The
-    * object graph deserialized is returned.
-    * 
-    * @param type this is the XML schema class to be deserialized
-    * @param source the document the object is deserialized from
-    * 
-    * @return the object deserialized from the DOM document given
-    * 
-    * @throws Exception if the object cannot be fully deserialized
-    */
-   public <T> T read(Class<? extends T> type, Document source) throws Exception;
-          
    /**
     * This <code>read</code> method will read the contents of the XML
     * document from the provided source and convert it into an object
@@ -150,30 +135,11 @@ public interface Serializer {
     * annotation required for an object to be serialized.  
     * 
     * @param source this is the object that is to be serialized
-    * 
-    * @return this returns the DOM containing the serialized XML
-    * 
-    * @throws Exception if the schema for the object is not valid
-    */
-   public Document write(Object source) throws Exception;
-   
-   /**
-    * This <code>write</code> method will traverse the provided object
-    * checking for field annotations in order to compose the XML data.
-    * This uses the <code>getClass</code> method on the object to
-    * determine the class file that will be used to compose the schema.
-    * If there is no <code>Root</code> annotation for the class then
-    * this will throw an exception. The root annotation is the only
-    * annotation required for an object to be serialized.  
-    * 
-    * @param source this is the object that is to be serialized
     * @param out this is where the serialized XML is written to
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */
-   public Document write(Object source, File out) throws Exception;
+   public void write(Object source, File out) throws Exception;
 
    /**
     * This <code>write</code> method will traverse the provided object
@@ -187,11 +153,9 @@ public interface Serializer {
     * @param source this is the object that is to be serialized
     * @param out this is where the serialized XML is written to
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */   
-   public Document write(Object source, OutputStream out) throws Exception;
+   public void write(Object source, OutputStream out) throws Exception;
    
    /**
     * This <code>write</code> method will traverse the provided object
@@ -206,11 +170,9 @@ public interface Serializer {
     * @param out this is where the serialized XML is written to
     * @param charset this is the character encoding to be used
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */   
-   public Document write(Object source, OutputStream out, String charset) throws Exception;
+   public void write(Object source, OutputStream out, String charset) throws Exception;
    
    /**
     * This <code>write</code> method will traverse the provided object
@@ -224,9 +186,7 @@ public interface Serializer {
     * @param source this is the object that is to be serialized
     * @param out this is where the serialized XML is written to
     * 
-    * @return this returns the DOM containing the serialized XML
-    * 
     * @throws Exception if the schema for the object is not valid
     */   
-   public Document write(Object source, Writer out) throws Exception;
+   public void write(Object source, Writer out) throws Exception;
 }

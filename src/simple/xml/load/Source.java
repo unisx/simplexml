@@ -20,26 +20,25 @@
 
 package simple.xml.load;
 
-import simple.xml.filter.PlatformFilter;
+import simple.xml.stream.OutputNode;
+import simple.xml.stream.InputNode;
+import simple.xml.stream.NodeMap;
 import simple.xml.filter.Filter;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * The <code>Source</code> object acts as a contextual object that is
  * used to store all information regarding an instance of serialization
- * or deserialization. This maintains the DOM <code>Document</code> as
+ * or deserialization. This maintains the <code>Strategy</code> as
  * well as the <code>Filter</code> used to replace template variables.
  * When serialization and deserialization are performed the source is
  * required as tt acts as a factory for objects used in the process.
  * <p>
  * For serialization the source object is required as a factory for
  * <code>Schema</code> objects, which are used to visit each field 
- * in the class that can be serialized. Also, it acts as a contextual
- * factory for <code>Element</code> objects that are used to build a
- * DOM document.
+ * in the class that can be serialized. Also this can be used to get
+ * any data entered into the session <code>Map</code> object.
  * <p>
  * When deserializing the source object provides the contextual data
  * used to replace template variables extracted from the XML source.
@@ -70,11 +69,6 @@ final class Source {
    private TemplateEngine engine;
   
    /**
-    * This is used as a factory for creating DOM element objects.
-    */
-   private Document source;
-   
-   /**
     * This is the strategy used to resolve the element classes.
     */
    private Strategy strategy;
@@ -85,32 +79,35 @@ final class Source {
    private Filter filter;
 
    /**
-    * This is the root element for the specified source document.
-    */
-   private Element root;
-
-   /**
     * This is used to store the source context attribute values.
     */ 
    private Map table;
+
+   /**
+    * This counts the number of elements that have been read.
+    */ 
+   private int read;
+
+   /**
+    * This counts the number of elements that have been written.
+    */
+   private int write;
    
    /**
     * Constructor for the <code>Source</code> object. This is used to
     * maintain a context during the serialization process. It holds 
-    * the <code>Document</code> and <code>Filter</code> used in the
+    * the <code>Strategy</code> and <code>Filter</code> used in the
     * serialization process. The same source instance is used for 
     * each XML element evaluated in a the serialization process. 
     * 
-    * @param source this is the document object used in serialization
     * @param strategy this is used to resolve the classes used   
     * @param data this is used for replacing the template variables
     */       
-   public Source(Document source, Strategy strategy, Filter data) {
+   public Source(Strategy strategy, Filter data) {
       this.filter = new TemplateFilter(this, data);           
       this.engine = new TemplateEngine(filter);           
       this.table = new HashMap();
       this.strategy = strategy;
-      this.source = source;
    }   
 
    /**
@@ -127,55 +124,10 @@ final class Source {
    }
    
    /**
-    * This method is used to acquire the <code>Document</code> used as
-    * the source of the deserialization process. This is used so that
-    * the elements created can be appended to the document when the
-    * serialization process has completed.
-    * 
-    * @return this returns the source document used by this source
-    */
-   public Document getDocument() {
-      return source;           
-   }
-
-   /**
-    * This is used to return the root element for the source object
-    * during the deserialization process. This will return the root
-    * element for the document used by this source context object.
-    *
-    * @return this returns the root element for the source document
-    */
-   public Element getRootElement() {
-      if(root == null) {
-         root = source.getDocumentElement();              
-      }
-      return root;           
-   }
-   
-   /**
-    * This is used to create <code>Element</code> objects that can
-    * be used to build a document when serializing an object. The
-    * elements created with this object are linked together as each
-    * field within the schema object is traversed and completed.
-    * 
-    * @param name this is the name of the element to be created
-    * 
-    * @return returns an element from the document being created
-    */
-   public Element getElement(String name) {
-      Element node = source.createElement(name);
-      
-      if(root == null) {
-         root = node;
-      }
-      return node;
-   }
-   
-   /**
     * This is used to resolve and load a class for the given element.
     * The class should be of the same type or a subclass of the class
     * specified. It can be resolved using the details within the
-    * provided DOM element, if the details used do not represent any
+    * provided XML element, if the details used do not represent any
     * serializable values they should be removed so as not to disrupt
     * the deserialization process. For example the default strategy
     * removes all "class" attributes from the given elements.
@@ -187,11 +139,13 @@ final class Source {
     * 
     * @throws Exception thrown if the class cannot be resolved  
     */
-   public Class getOverride(Class type, Element node) throws Exception {
-      if(node == root) {
-         return strategy.readRoot(type, node, table);
+   public Class getOverride(Class type, InputNode node) throws Exception {
+      NodeMap map = node.getAttributes();
+      
+      if(read++ == 0) {
+         return strategy.readRoot(type, map, table);
       }           
-      return strategy.readElement(type, node, table);
+      return strategy.readElement(type, map, table);
    } 
 
    /**    
@@ -207,11 +161,13 @@ final class Source {
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public void setOverride(Class type, Object value, Element node) throws Exception {
-      if(node == root) {
-         strategy.writeRoot(type, value, node, table);              
+   public void setOverride(Class type, Object value, OutputNode node) throws Exception {
+      NodeMap map = node.getAttributes();
+      
+      if(write++ == 0) {
+         strategy.writeRoot(type, value, map, table);              
       }           
-      strategy.writeElement(type, value, node, table);
+      strategy.writeElement(type, value, map, table);
    }
    
    /**

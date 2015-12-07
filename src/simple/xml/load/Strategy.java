@@ -20,15 +20,15 @@
 
 package simple.xml.load;
 
-import org.w3c.dom.Element;
+import simple.xml.stream.NodeMap;
 import java.util.Map;
 
 /**
  * The <code>Strategy</code> interface represents a strategy that can be 
  * used to resolve and load the <code>Class</code> objects that compose 
  * a serializable object. A strategy implementation will make use of the
- * provided DOM element to extract child elements or attributes that
- * are used to determine what type is to be used. 
+ * provided attribute node map to extract details that can be used to
+ * determine what type of object must be used. 
  * <pre>
  * 
  *    &lt;xml version="1.0"&gt;
@@ -57,74 +57,74 @@ public interface Strategy {
 
    /**
     * This is used to resolve and load the root class type. To perform
-    * the resolution this method is given the root element for the
-    * XML document. This is separate to the <code>getElement</code>
+    * the resolution this method is given the root node map for the
+    * XML document. This is separate to the <code>readElement</code>
     * because the root element may contain details like the location
     * of the byte codes, much like the RMI codebase annotation, or
     * the version of the package for example "some.package.v2". This 
     * must return null if a class cannot be resolved.  
     *  
     * @param field this is the type of the root element expected
-    * @param root this is the element used to resolve an override
+    * @param node this is the node map used to resolve an override
     * @param map this is used to maintain contextual information
     * 
     * @return returns the class that should be used for the object
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Class readRoot(Class field, Element root, Map map) throws Exception;
+   public Class readRoot(Class field, NodeMap node, Map map) throws Exception;
 
    /**
     * This is used to resolve and load a class for the given element.
     * The class should be of the same type or a subclass of the class
     * specificed. It can be resolved using the details within the
-    * provided DOM element, if the details used do not represent any
+    * provided XML node map, if the details used do not represent any
     * serializable values they should be removed so as not to disrupt
     * the deserialization process. For example the default strategy
-    * removes all "class" attributes from the given elements.
+    * removes all "class" attributes from the given node map.
     * 
     * @param field this is the type of the root element expected
-    * @param node this is the element used to resolve an override
+    * @param node this is the node map used to resolve an override
     * @param map this is used to maintain contextual information
     * 
     * @return returns the class that should be used for the object
     * 
     * @throws Exception thrown if the class cannot be resolved
     */
-   public Class readElement(Class field, Element node, Map map) throws Exception;
+   public Class readElement(Class field, NodeMap node, Map map) throws Exception;
 
    /**
-    * This is used to attach elements or attributes to the given 
-    * element during the serialization process. This method allows
+    * This is used to attach attributes values to the given node
+    * map during the serialization process. This method allows
     * the strategy to augment the XML document so that it can be
     * deserialized using a similar strategy. For example the 
-    * default strategy adds a "class" attribute to the element.
+    * default strategy adds a "class" attribute to the node map.
     * The root element is a special element in that it can add
     * details regarding the code base location or version to use. 
     *  
     * @param field this is the declared class for the field used
     * @param value this is the instance variable being serialized
-    * @param root this is the element used to represent the value
+    * @param node this is the node map used to represent the value
     * @param map this is used to maintain contextual information
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public void writeRoot(Class field, Object value, Element root, Map map) throws Exception;
+   public void writeRoot(Class field, Object value, NodeMap node, Map map) throws Exception;
 
    /**
-    * This is used to attach elements or attributes to the given 
-    * element during the serialization process. This method allows
+    * This is used to attach attribute values to the given node
+    * map during the serialization process. This method allows
     * the strategy to augment the XML document so that it can be
     * deserialized using a similar strategy. For example the 
-    * default strategy adds a "class" attribute to the element.
+    * default strategy adds a "class" attribute to the node map.
     *  
     * @param field this is the declared class for the field used
     * @param value this is the instance variable being serialized
-    * @param node this is the element used to represent the value
+    * @param node this is the node map used to represent the value
     * @param map this is used to maintain contextual information
     * 
     * @throws Exception thrown if the details cannot be set
     */
-   public void writeElement(Class field, Object value, Element node, Map map) throws Exception;
+   public void writeElement(Class field, Object value, NodeMap node, Map map) throws Exception;
 
 }

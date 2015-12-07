@@ -1,12 +1,13 @@
 package simple.xml.load;
 
+import java.io.FileOutputStream;
 import java.io.StringWriter;
 
-import junit.framework.TestCase;
+import simple.xml.ValidationTestCase;
 import simple.xml.Element;
 import simple.xml.Root;
 
-public class TypeTest extends TestCase {
+public class TypeTest extends ValidationTestCase {
         
    private static final String SOURCE =
    "<?xml version=\"1.0\"?>\n"+
@@ -34,7 +35,7 @@ public class TypeTest extends TestCase {
    "</test>";
    
    @Root(name="test")
-   public static class Entry {
+   private static class Entry {
 
       @Element(name="primitive")
       private PrimitiveEntry primitive;
@@ -43,7 +44,7 @@ public class TypeTest extends TestCase {
       private ObjectEntry object;
    }
 
-   public static class PrimitiveEntry {
+   private static class PrimitiveEntry {
 
       @Element(name="boolean")
       private boolean booleanValue;            
@@ -67,7 +68,7 @@ public class TypeTest extends TestCase {
       private double doubleValue;
    }
 
-   public static class ObjectEntry {
+   private static class ObjectEntry {
 
       @Element(name="Boolean")
       private Boolean booleanValue;              
@@ -97,7 +98,7 @@ public class TypeTest extends TestCase {
       private TestEnum enumValue;              
    }  
 
-   public static enum TestEnum { 
+   private static enum TestEnum { 
 
       ONE,
       TWO,
@@ -130,9 +131,11 @@ public class TypeTest extends TestCase {
       assertEquals(entry.object.doubleValue, new Double(1234567.89));
       assertEquals(entry.object.stringValue, "text value");
       assertEquals(entry.object.enumValue, TestEnum.TWO);
-      
+     
       StringWriter buffer = new StringWriter();
       persister.write(entry, buffer);
+      validate(entry, persister);
+
       entry = persister.read(Entry.class, buffer.toString());
 
       assertEquals(entry.primitive.booleanValue, true);
@@ -153,6 +156,6 @@ public class TypeTest extends TestCase {
       assertEquals(entry.object.stringValue, "text value");
       assertEquals(entry.object.enumValue, TestEnum.TWO);         
       
-      persister.write(entry, System.out);     
+      validate(entry, persister);
    }
 }
