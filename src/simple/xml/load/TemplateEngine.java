@@ -28,9 +28,9 @@ import java.util.Map;
 /**
  * The <code>TemplateEngine</code> object is used to create strings
  * which have system variable names replaced with their values.
- * This is used by the <code>FileProperties</code> object to ensure
- * that values taken from a Java properties file, or an XML file
- * will have values augmented with system variable values.
+ * This is used by the <code>Source</code> context object to ensure
+ * that values taken from an XML element or attribute can be values
+ * values augmented with system or environment variable values.
  * <pre>
  *
  *    tools=${java.home}/lib/tools.jar
@@ -39,7 +39,7 @@ import java.util.Map;
  * Above is an example of the use of an system variable that
  * has been inserted into a plain Java properties file. This will
  * be converted to the full path to tools.jar when the system
- * variable JAVA_HOME is replaced with the matching value.
+ * variable "java.home" is replaced with the matching value.
  * 
  * @author Niall Gallagher
  */ 
@@ -108,11 +108,15 @@ final class TemplateEngine extends Template {
     *
     * @return this returns the value of the converted string
     */ 
-   public String getValue() {
+   public String process() {
       if(text.length() <=0){
          parse();              
-      }           
-      return text.toString();           
+      }          
+      try {
+         return text.toString();
+      } finally {
+         clear();
+      }
    }
    
    /**
@@ -125,11 +129,11 @@ final class TemplateEngine extends Template {
     * 
     * @return returns the value of the buffer after the append
     */
-   public String getValue(String value) {
+   public String process(String value) {
       if(value != null) {
          append(value);
       }
-      return getValue();
+      return process();
    }
    
    /**
@@ -244,6 +248,6 @@ final class TemplateEngine extends Template {
     * @return this returns the value of the converted string
     */   
    public String toString() {
-      return getValue();
+      return process();
    }  
 }

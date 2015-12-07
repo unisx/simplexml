@@ -6,7 +6,7 @@
       <property name="javadoc" value="javadoc"/>
       <property name="build" value="build"/>
       <property name="jar" value="jar"/>
-      <property name="version" value="0.9.1"/>
+      <property name="version" value="0.9.2"/>
    </target>
 
    <target name="clean" depends="layout">

@@ -73,7 +73,7 @@ final class Formatter {
     * @throws Exception thrown if a transformer could not be created
     */
    public Formatter(Result result) throws Exception {
-      this(result, false);
+      this(result, true);
    }
    
    /**
@@ -90,7 +90,7 @@ final class Formatter {
    public Formatter(Result result, boolean format) throws Exception {
       this.transformer = factory.newTransformer();
       this.result = result;
-           
+      this.format = format;
    }
    
    /**

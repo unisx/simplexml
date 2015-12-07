@@ -109,7 +109,9 @@ abstract class Factory {
     * @param node the DOM element that is to be given the details
     */
    public void setOverride(Class type, Element node) throws Exception {
-      node.setAttribute(TYPE, type.getName());
+      if(!isPrimitive(type)) {           
+         node.setAttribute(TYPE, type.getName());
+      }         
    }
 
    /**
@@ -176,4 +178,40 @@ abstract class Factory {
       }              
       return !Modifier.isInterface(modifiers);
    }      
-}
+
+   /**
+    * This method is used to determine whether the field type is a
+    * primitive type. This check is required to ensure that this does
+    * not add a "class" attribute to the element. Addition of this
+    * is done if the field type is different from the object type
+    * which can happen to primitives as they are wrapped in objects.
+    * 
+    * @param type the type checked to determine if it is primitive
+    * 
+    * @return true if the type is primitive, false otherwise
+    */   
+   protected boolean isPrimitive(Class type) {
+      if(type.equals(Boolean.class)) {
+         return true;              
+      }
+      if(type.equals(Integer.class)) {
+         return true;              
+      }      
+      if(type.equals(Float.class)) {
+         return true;               
+      }
+      if(type.equals(Long.class)) {
+         return true;              
+      }
+      if(type.equals(Double.class)) {
+         return true;              
+      }
+      if(type.equals(Byte.class)) {
+         return true;              
+      }
+      if(type.equals(Short.class)) {
+         return true;              
+      }
+      return type.isPrimitive();
+   } 
+}           

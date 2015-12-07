@@ -67,7 +67,7 @@ final class Source {
    /**
     * This is used to replace variables within the XML source.
     */
-   private TemplateEngine data;
+   private TemplateEngine engine;
    
    /**
     * This is used as a factory for creating DOM element objects.
@@ -112,7 +112,7 @@ final class Source {
     * @param data this is used for replacing template variables
     */       
    public Source(Document root, Filter data) {
-      this.data = new TemplateEngine(data);           
+      this.engine = new TemplateEngine(data);           
       this.root = root;
    }        
 
@@ -179,9 +179,6 @@ final class Source {
     * @return this returns the text will all variables replaced
     */
    public String getProperty(String text) {
-      if(data.length() > 0) {
-         data.clear();
-      }
-      return data.getValue(text);
+      return engine.process(text);
    }
 }

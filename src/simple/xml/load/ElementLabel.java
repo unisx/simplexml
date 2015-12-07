@@ -35,22 +35,22 @@ import simple.xml.Element;
  *  @see simple.xml.Element
  */
 final class ElementLabel implements Label {
-	
+   
    /**
     * References the annotation that was used by the field.
     */
-	private Element label;
-	
+   private Element label;
+   
    /**
     * The field that this element label represents.
     */
-	private Field field;
-	
+   private Field field;
+   
    /**
     * This is the type of the class that the field references.
     */
-	private Class type;
-	
+   private Class type;
+   
    /**
     * Constructor for the <code>ElementLabel</code> object. This is
     * used to create a label that can convert a DOM node into a 
@@ -59,12 +59,12 @@ final class ElementLabel implements Label {
     * @param field this is the field that this label represents
     * @param label this is the annotation for the field 
     */
-	public ElementLabel(Field field, Element label) {
-	   this.type = field.getType();
-	   this.label = label;
-	   this.field = field;
-	}
-	
+   public ElementLabel(Field field, Element label) {
+      this.type = field.getType();
+      this.label = label;
+      this.field = field;
+   }
+   
    /**
     * Creates a converter that can be used to transform a DOM node to
     * an object and vice versa. The converter created will handles
@@ -145,24 +145,33 @@ final class ElementLabel implements Label {
     */
    private boolean isPrimitive(Class type) {
       if(type.equals(Boolean.class)) {
-	      return true;              
-	   }
-	   if(type.equals(Integer.class)) {
-	      return true;              
-	   }      
-	   if(type.equals(Float.class)) {
-	      return true;               
-	   }
-	   if(type.equals(Long.class)) {
-	      return true;              
-	   }
-	   if(type.equals(String.class)) {
-	      return true;              
-	   }
+         return true;              
+      }
+      if(type.equals(Integer.class)) {
+         return true;              
+      }      
+      if(type.equals(Float.class)) {
+         return true;               
+      }
+      if(type.equals(Long.class)) {
+         return true;              
+      }
+      if(type.equals(String.class)) {
+         return true;              
+      }
+      if(type.equals(Double.class)) {
+         return true;              
+      }
+      if(type.equals(Byte.class)) {
+         return true;              
+      }
+      if(type.equals(Short.class)) {
+         return true;              
+      }
       if(type.isPrimitive()) {
          return true;                 
       }
-	   return type.isEnum();
+      return type.isEnum();
    }
    
    /**

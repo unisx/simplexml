@@ -141,6 +141,9 @@ final class PrimitiveFactory extends Factory {
       if(type.equals(double.class)) {
          return Double.class;              
       }
+      if(type.equals(byte.class)) {
+         return Byte.class;              
+      }        
       if(type.equals(short.class)) {
          return Short.class;              
       }

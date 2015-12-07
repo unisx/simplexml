@@ -63,7 +63,6 @@ final class LabelFactory {
          }         
          return (Label)factory.newInstance(field, label);
       }catch(Exception e) {
-         e.printStackTrace();
          return null;
       }
     } 
