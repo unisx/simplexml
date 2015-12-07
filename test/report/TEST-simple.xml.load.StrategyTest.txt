@@ -1,5 +1,5 @@
 Testsuite: simple.xml.load.StrategyTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.823 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.682 sec
 ------------- Standard Error -----------------
 <?xml version="1.0" encoding="UTF-8"?>
 <root version="1.2">
@@ -12,5 +12,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.823 sec
 </root>
 ------------- ---------------- ---------------
 
-Testcase: testElementStrategy took 0.791 sec
+Testcase: testElementStrategy took 0.649 sec
 Testcase: testAttributeStrategy took 0.009 sec
