@@ -1,19 +1,19 @@
 Testsuite: org.simpleframework.xml.core.ValidateTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.141 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.15 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=version) on field 'version' at line -1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:735)
-	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:583)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:554)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:531)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:781)
+	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:629)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:600)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:577)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:153)
 	at org.simpleframework.xml.core.CompositeArray.validate(CompositeArray.java:204)
 	at org.simpleframework.xml.core.CompositeArray.validate(CompositeArray.java:179)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:709)
-	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:690)
-	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:611)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:555)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:531)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:755)
+	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:736)
+	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:657)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:601)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:577)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:153)
 	at org.simpleframework.xml.core.Persister.validate(Persister.java:866)
 	at org.simpleframework.xml.core.Persister.validate(Persister.java:846)
@@ -37,18 +37,18 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=name) on field 'name' at line -1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:735)
-	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:583)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:554)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:531)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:781)
+	at org.simpleframework.xml.core.Composite.validateAttributes(Composite.java:629)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:600)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:577)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:153)
 	at org.simpleframework.xml.core.CompositeArray.validate(CompositeArray.java:204)
 	at org.simpleframework.xml.core.CompositeArray.validate(CompositeArray.java:179)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:709)
-	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:690)
-	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:611)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:555)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:531)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:755)
+	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:736)
+	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:657)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:601)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:577)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:153)
 	at org.simpleframework.xml.core.Persister.validate(Persister.java:866)
 	at org.simpleframework.xml.core.Persister.validate(Persister.java:846)
@@ -73,11 +73,11 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.PersistenceException: Element 'array' declared twice at line -1
 	at org.simpleframework.xml.core.Pointer$Adapter.validate(Pointer.java:384)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:709)
-	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:690)
-	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:611)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:555)
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:531)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:755)
+	at org.simpleframework.xml.core.Composite.validateElement(Composite.java:736)
+	at org.simpleframework.xml.core.Composite.validateElements(Composite.java:657)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:601)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:577)
 	at org.simpleframework.xml.core.Traverser.validate(Traverser.java:153)
 	at org.simpleframework.xml.core.Persister.validate(Persister.java:866)
 	at org.simpleframework.xml.core.Persister.validate(Persister.java:846)
@@ -102,7 +102,7 @@ org.simpleframework.xml.core.PersistenceException: Element 'array' declared twic
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testVersionMissing took 0.123 sec
+Testcase: testVersionMissing took 0.131 sec
 Testcase: testNameMissing took 0.003 sec
 Testcase: testTextMissing took 0.004 sec
 Testcase: testExtraElement took 0.004 sec

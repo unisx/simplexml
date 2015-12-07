@@ -1,12 +1,13 @@
 Testsuite: org.simpleframework.xml.core.CompatibilityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.164 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'address' does not exist at line -1
-	at org.simpleframework.xml.core.Composite.readElement(Composite.java:410)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:331)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:161)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:137)
+	at org.simpleframework.xml.core.Composite.readElement(Composite.java:456)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:377)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
@@ -30,11 +31,12 @@ org.simpleframework.xml.core.ElementException: Element 'address' does not exist 
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.ElementList(inline=false, type=void, required=true, data=false, entry=, empty=true, name=) on field 'list' for class org.simpleframework.xml.core.CompatibilityTest$Example_v1 at line -1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:499)
-	at org.simpleframework.xml.core.Composite.readElements(Composite.java:333)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:216)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:161)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:137)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:545)
+	at org.simpleframework.xml.core.Composite.readElements(Composite.java:379)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:262)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
@@ -58,11 +60,12 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:912)
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simpleframework.xml.Attribute(required=true, empty=, name=) on field 'key' for class org.simpleframework.xml.core.CompatibilityTest$Example_v2 at line -1
-	at org.simpleframework.xml.core.Composite.validate(Composite.java:499)
-	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:302)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:215)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:161)
-	at org.simpleframework.xml.core.Composite.read(Composite.java:137)
+	at org.simpleframework.xml.core.Composite.validate(Composite.java:545)
+	at org.simpleframework.xml.core.Composite.readAttributes(Composite.java:348)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:261)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:207)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:158)
+	at org.simpleframework.xml.core.Composite.read(Composite.java:135)
 	at org.simpleframework.xml.core.Traverser.read(Traverser.java:78)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:544)
 	at org.simpleframework.xml.core.Persister.read(Persister.java:526)
@@ -87,4 +90,4 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testCompatibility took 0.162 sec
+Testcase: testCompatibility took 0.167 sec

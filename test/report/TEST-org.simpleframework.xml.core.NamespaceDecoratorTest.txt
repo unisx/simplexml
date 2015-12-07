@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.NamespaceDecoratorTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.043 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.044 sec
 ------------- Standard Output ---------------
 <a:root version="1.0" xmlns:global="http://www.domain.com/global" xmlns:first="http://www.domain.com/ignore" xmlns:a="http://www.domain.com/a" xmlns:b="http://www.domain.com/b" xmlns:c="http://www.domain.com/c">
    <a:child b:name="John Doe" xmlns:d="http://www.domain.com/d">

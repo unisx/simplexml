@@ -1,7 +1,7 @@
 Testsuite: org.simpleframework.xml.core.OriginalTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
 ------------- Standard Output ---------------
-<exampleWithOriginals>
+<exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
       <string>original from constructor</string>
       <string>a</string>
@@ -27,28 +27,28 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
          <double>1.0</double>
       </entry>
    </map>
-   <entry:listEntry name="original name" value="original value" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="a" value="1" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="b" value="2" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="c" value="3" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="d" value="4" xmlns:entry="http://domain/entry"/>
+   <root:listEntry name="original name" value="original value"/>
+   <root:listEntry name="a" value="1"/>
+   <root:listEntry name="b" value="2"/>
+   <root:listEntry name="c" value="3"/>
+   <root:listEntry name="d" value="4"/>
    <mapEntry>
       <double>7.0</double>
-      <entry:entry name="an original name" value="an original value" xmlns:entry="http://domain/entry"/>
+      <root:entry name="an original name" value="an original value"/>
    </mapEntry>
    <mapEntry>
       <double>1.0</double>
-      <entry:entry name="a" value="1" xmlns:entry="http://domain/entry"/>
+      <root:entry name="a" value="1"/>
    </mapEntry>
    <mapEntry>
       <double>3.0</double>
-      <entry:entry name="c" value="3" xmlns:entry="http://domain/entry"/>
+      <root:entry name="c" value="3"/>
    </mapEntry>
    <mapEntry>
       <double>2.0</double>
-      <entry:entry name="b" value="2" xmlns:entry="http://domain/entry"/>
+      <root:entry name="b" value="2"/>
    </mapEntry>
-</exampleWithOriginals><exampleWithOriginals>
+</exampleWithOriginals><exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
       <string>original from constructor</string>
       <string>a</string>
@@ -74,28 +74,28 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
          <double>1.0</double>
       </entry>
    </map>
-   <entry:listEntry name="original name" value="original value" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="a" value="1" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="b" value="2" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="c" value="3" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="d" value="4" xmlns:entry="http://domain/entry"/>
+   <root:listEntry name="original name" value="original value"/>
+   <root:listEntry name="a" value="1"/>
+   <root:listEntry name="b" value="2"/>
+   <root:listEntry name="c" value="3"/>
+   <root:listEntry name="d" value="4"/>
    <mapEntry>
       <double>7.0</double>
-      <entry:entry name="an original name" value="an original value" xmlns:entry="http://domain/entry"/>
+      <root:entry name="an original name" value="an original value"/>
    </mapEntry>
    <mapEntry>
       <double>1.0</double>
-      <entry:entry name="a" value="1" xmlns:entry="http://domain/entry"/>
+      <root:entry name="a" value="1"/>
    </mapEntry>
    <mapEntry>
       <double>3.0</double>
-      <entry:entry name="c" value="3" xmlns:entry="http://domain/entry"/>
+      <root:entry name="c" value="3"/>
    </mapEntry>
    <mapEntry>
       <double>2.0</double>
-      <entry:entry name="b" value="2" xmlns:entry="http://domain/entry"/>
+      <root:entry name="b" value="2"/>
    </mapEntry>
-</exampleWithOriginals><exampleWithOriginals>
+</exampleWithOriginals><exampleWithOriginals xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList">
       <string>original from constructor</string>
       <string>a</string>
@@ -121,29 +121,29 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
          <double>1.0</double>
       </entry>
    </map>
-   <entry:listEntry name="original name" value="original value" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="a" value="1" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="b" value="2" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="c" value="3" xmlns:entry="http://domain/entry"/>
-   <entry:listEntry name="d" value="4" xmlns:entry="http://domain/entry"/>
+   <root:listEntry name="original name" value="original value"/>
+   <root:listEntry name="a" value="1"/>
+   <root:listEntry name="b" value="2"/>
+   <root:listEntry name="c" value="3"/>
+   <root:listEntry name="d" value="4"/>
    <mapEntry>
       <double>7.0</double>
-      <entry:entry name="an original name" value="an original value" xmlns:entry="http://domain/entry"/>
+      <root:entry name="an original name" value="an original value"/>
    </mapEntry>
    <mapEntry>
       <double>1.0</double>
-      <entry:entry name="a" value="1" xmlns:entry="http://domain/entry"/>
+      <root:entry name="a" value="1"/>
    </mapEntry>
    <mapEntry>
       <double>3.0</double>
-      <entry:entry name="c" value="3" xmlns:entry="http://domain/entry"/>
+      <root:entry name="c" value="3"/>
    </mapEntry>
    <mapEntry>
       <double>2.0</double>
-      <entry:entry name="b" value="2" xmlns:entry="http://domain/entry"/>
+      <root:entry name="b" value="2"/>
    </mapEntry>
 </exampleWithOriginals>
-<example-with-originals ID="0">
+<example-with-originals ID="0" xmlns:root="http://domain/entry">
    <list class="java.util.concurrent.CopyOnWriteArrayList" ID="1">
       <string ID="2">original from constructor</string>
       <string ID="3">a</string>
@@ -169,28 +169,28 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
          <double ID="15">1.0</double>
       </entry>
    </map>
-   <entry:list-entry ID="16" name="original name" value="original value" xmlns:entry="http://domain/entry"/>
-   <entry:list-entry ID="17" name="a" value="1" xmlns:entry="http://domain/entry"/>
-   <entry:list-entry ID="18" name="b" value="2" xmlns:entry="http://domain/entry"/>
-   <entry:list-entry ID="19" name="c" value="3" xmlns:entry="http://domain/entry"/>
-   <entry:list-entry ID="20" name="d" value="4" xmlns:entry="http://domain/entry"/>
+   <root:list-entry ID="16" name="original name" value="original value"/>
+   <root:list-entry ID="17" name="a" value="1"/>
+   <root:list-entry ID="18" name="b" value="2"/>
+   <root:list-entry ID="19" name="c" value="3"/>
+   <root:list-entry ID="20" name="d" value="4"/>
    <map-entry>
       <double ID="21">7.0</double>
-      <entry:entry ID="22" name="an original name" value="an original value" xmlns:entry="http://domain/entry"/>
+      <root:entry ID="22" name="an original name" value="an original value"/>
    </map-entry>
    <map-entry>
       <double ID="23">1.0</double>
-      <entry:entry ID="24" name="a" value="1" xmlns:entry="http://domain/entry"/>
+      <root:entry ID="24" name="a" value="1"/>
    </map-entry>
    <map-entry>
       <double ID="25">3.0</double>
-      <entry:entry ID="26" name="c" value="3" xmlns:entry="http://domain/entry"/>
+      <root:entry ID="26" name="c" value="3"/>
    </map-entry>
    <map-entry>
       <double ID="27">2.0</double>
-      <entry:entry ID="28" name="b" value="2" xmlns:entry="http://domain/entry"/>
+      <root:entry ID="28" name="b" value="2"/>
    </map-entry>
-</example-with-originals><ExampleWithOriginals ID="0">
+</example-with-originals><ExampleWithOriginals ID="0" xmlns:root="http://domain/entry">
    <List class="java.util.concurrent.CopyOnWriteArrayList" ID="1">
       <String ID="2">original from constructor</String>
       <String ID="3">a</String>
@@ -216,28 +216,28 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.284 sec
          <double ID="15">1.0</double>
       </Entry>
    </Map>
-   <entry:ListEntry ID="16" name="original name" value="original value" xmlns:entry="http://domain/entry"/>
-   <entry:ListEntry ID="17" name="a" value="1" xmlns:entry="http://domain/entry"/>
-   <entry:ListEntry ID="18" name="b" value="2" xmlns:entry="http://domain/entry"/>
-   <entry:ListEntry ID="19" name="c" value="3" xmlns:entry="http://domain/entry"/>
-   <entry:ListEntry ID="20" name="d" value="4" xmlns:entry="http://domain/entry"/>
+   <root:ListEntry ID="16" name="original name" value="original value"/>
+   <root:ListEntry ID="17" name="a" value="1"/>
+   <root:ListEntry ID="18" name="b" value="2"/>
+   <root:ListEntry ID="19" name="c" value="3"/>
+   <root:ListEntry ID="20" name="d" value="4"/>
    <MapEntry>
       <Double ID="21">7.0</Double>
-      <entry:Entry ID="22" name="an original name" value="an original value" xmlns:entry="http://domain/entry"/>
+      <root:Entry ID="22" name="an original name" value="an original value"/>
    </MapEntry>
    <MapEntry>
       <Double ID="23">1.0</Double>
-      <entry:Entry ID="24" name="a" value="1" xmlns:entry="http://domain/entry"/>
+      <root:Entry ID="24" name="a" value="1"/>
    </MapEntry>
    <MapEntry>
       <Double ID="25">3.0</Double>
-      <entry:Entry ID="26" name="c" value="3" xmlns:entry="http://domain/entry"/>
+      <root:Entry ID="26" name="c" value="3"/>
    </MapEntry>
    <MapEntry>
       <Double ID="27">2.0</Double>
-      <entry:Entry ID="28" name="b" value="2" xmlns:entry="http://domain/entry"/>
+      <root:Entry ID="28" name="b" value="2"/>
    </MapEntry>
 </ExampleWithOriginals>------------- ---------------- ---------------
 
-Testcase: testOriginals took 0.28 sec
+Testcase: testOriginals took 0.278 sec
 Testcase: testDirectory took 0 sec
