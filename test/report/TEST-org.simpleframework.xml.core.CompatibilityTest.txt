@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CompatibilityTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.203 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.192 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.ElementException: Element 'address' does not have a match at line -1
 	at org.simpleframework.xml.core.Composite.readElement(Composite.java:545)
@@ -93,4 +93,4 @@ org.simpleframework.xml.core.ValueRequiredException: Unable to satisfy @org.simp
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testCompatibility took 0.199 sec
+Testcase: testCompatibility took 0.19 sec

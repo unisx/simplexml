@@ -1,73 +1,73 @@
 Testsuite: org.simpleframework.xml.transform.DateTransformTest
-Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.544 sec
+Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.512 sec
 ------------- Standard Output ---------------
-<dateExample attribute="2010-02-28 18:17:06.380 GMT">
+<dateExample attribute="2010-03-05 20:22:48.403 GMT">
    <array length="1">
-      <date>2010-02-28 18:17:06.380 GMT</date>
+      <date>2010-03-05 20:22:48.403 GMT</date>
    </array>
-   <element>2010-02-28 18:17:06.380 GMT</element>
+   <element>2010-03-05 20:22:48.403 GMT</element>
    <list class="java.util.ArrayList">
-      <date>2010-02-28 18:17:06.380 GMT</date>
-      <date>2010-02-28 18:17:06.380 GMT</date>
+      <date>2010-03-05 20:22:48.403 GMT</date>
+      <date>2010-03-05 20:22:48.403 GMT</date>
    </list>
-</dateExample><dateExample attribute="2010-02-28 18:17:06.380 GMT">
+</dateExample><dateExample attribute="2010-03-05 20:22:48.403 GMT">
    <array length="1">
-      <date>2010-02-28 18:17:06.380 GMT</date>
+      <date>2010-03-05 20:22:48.403 GMT</date>
    </array>
-   <element>2010-02-28 18:17:06.380 GMT</element>
+   <element>2010-03-05 20:22:48.403 GMT</element>
    <list class="java.util.ArrayList">
-      <date>2010-02-28 18:17:06.380 GMT</date>
-      <date>2010-02-28 18:17:06.380 GMT</date>
+      <date>2010-03-05 20:22:48.403 GMT</date>
+      <date>2010-03-05 20:22:48.403 GMT</date>
    </list>
 </dateExample>
-<date-example ID="0" attribute="2010-02-28 18:17:06.380 GMT">
+<date-example ID="0" attribute="2010-03-05 20:22:48.403 GMT">
    <!-- [Ljava.util.Date; -->
    <array length="1" ID="1">
       <!-- java.util.Date -->
-      <date ID="2">2010-02-28 18:17:06.380 GMT</date>
+      <date ID="2">2010-03-05 20:22:48.403 GMT</date>
    </array>
    <!-- java.util.Date -->
-   <element ID="3">2010-02-28 18:17:06.380 GMT</element>
+   <element ID="3">2010-03-05 20:22:48.403 GMT</element>
    <!-- java.util.List -->
    <list class="java.util.ArrayList" ID="4">
       <!-- java.util.Date -->
-      <date ID="5">2010-02-28 18:17:06.380 GMT</date>
+      <date ID="5">2010-03-05 20:22:48.403 GMT</date>
       <!-- java.util.Date -->
-      <date ID="6">2010-02-28 18:17:06.380 GMT</date>
+      <date ID="6">2010-03-05 20:22:48.403 GMT</date>
    </list>
 </date-example>>>>>> ELEMENT=[element date-example]
 >>>>> TYPE=[class org.simpleframework.xml.transform.DateTransformTest$DateExample]
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
-<DateExample ID="0" attribute="2010-02-28 18:17:06.380 GMT">
+<DateExample ID="0" attribute="2010-03-05 20:22:48.403 GMT">
    <!-- [Ljava.util.Date; -->
    <Array length="1" ID="1">
       <!-- java.util.Date -->
-      <Date ID="2">2010-02-28 18:17:06.380 GMT</Date>
+      <Date ID="2">2010-03-05 20:22:48.403 GMT</Date>
    </Array>
    <!-- java.util.Date -->
-   <Element ID="3">2010-02-28 18:17:06.380 GMT</Element>
+   <Element ID="3">2010-03-05 20:22:48.403 GMT</Element>
    <!-- java.util.List -->
    <List class="java.util.ArrayList" ID="4">
       <!-- java.util.Date -->
-      <Date ID="5">2010-02-28 18:17:06.380 GMT</Date>
+      <Date ID="5">2010-03-05 20:22:48.403 GMT</Date>
       <!-- java.util.Date -->
-      <Date ID="6">2010-02-28 18:17:06.380 GMT</Date>
+      <Date ID="6">2010-03-05 20:22:48.403 GMT</Date>
    </List>
 </DateExample>>>>>> ELEMENT=[element DateExample]
 >>>>> TYPE=[class org.simpleframework.xml.transform.DateTransformTest$DateExample]
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
-<dateExample id="0" attribute="2010-02-28 18:17:06.613 GMT">
+<dateExample id="0" attribute="2010-03-05 20:22:48.623 GMT">
    <array length="1" id="1">
-      <date id="2">2010-02-28 18:17:06.613 GMT</date>
+      <date id="2">2010-03-05 20:22:48.623 GMT</date>
    </array>
    <element reference="2"/>
    <list class="java.util.ArrayList" id="3">
       <date reference="2"/>
       <date reference="2"/>
    </list>
-</dateExample><dateExample id="0" attribute="2010-02-28 18:17:06.613 GMT">
+</dateExample><dateExample id="0" attribute="2010-03-05 20:22:48.623 GMT">
    <array length="1" id="1">
-      <date id="2">2010-02-28 18:17:06.613 GMT</date>
+      <date id="2">2010-03-05 20:22:48.623 GMT</date>
    </array>
    <element reference="2"/>
    <list class="java.util.ArrayList" id="3">
@@ -75,11 +75,11 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.544 sec
       <date reference="2"/>
    </list>
 </dateExample>
-<date-example ID="0" attribute="2010-02-28 18:17:06.613 GMT">
+<date-example ID="0" attribute="2010-03-05 20:22:48.623 GMT">
    <!-- [Ljava.util.Date; -->
    <array length="1" ID="1">
       <!-- java.util.Date -->
-      <date ID="2">2010-02-28 18:17:06.613 GMT</date>
+      <date ID="2">2010-03-05 20:22:48.623 GMT</date>
    </array>
    <!-- java.util.Date -->
    <element REFERER="2"/>
@@ -93,11 +93,11 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.544 sec
 </date-example>>>>>> ELEMENT=[element date-example]
 >>>>> TYPE=[class org.simpleframework.xml.transform.DateTransformTest$DateExample]
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
-<DateExample ID="0" attribute="2010-02-28 18:17:06.613 GMT">
+<DateExample ID="0" attribute="2010-03-05 20:22:48.623 GMT">
    <!-- [Ljava.util.Date; -->
    <Array length="1" ID="1">
       <!-- java.util.Date -->
-      <Date ID="2">2010-02-28 18:17:06.613 GMT</Date>
+      <Date ID="2">2010-03-05 20:22:48.623 GMT</Date>
    </Array>
    <!-- java.util.Date -->
    <Element REFERER="2"/>
@@ -113,7 +113,7 @@ Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.544 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testDate took 0.018 sec
-Testcase: testPersistence took 0.232 sec
-Testcase: testCyclicPersistence took 0.285 sec
-Testcase: testDirectory took 0.001 sec
+Testcase: testDate took 0.016 sec
+Testcase: testPersistence took 0.22 sec
+Testcase: testCyclicPersistence took 0.27 sec
+Testcase: testDirectory took 0 sec

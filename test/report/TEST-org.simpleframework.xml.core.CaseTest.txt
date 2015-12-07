@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CaseTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.256 sec
 ------------- Standard Output ---------------
 <Example Version="1.0" Name="example" URL="http://domain.com/">
    <List class="java.util.ArrayList">
@@ -148,5 +148,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.264 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testCase took 0.253 sec
+Testcase: testCase took 0.243 sec
 Testcase: testDirectory took 0.004 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ConstructorInjectionTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.292 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.27 sec
 ------------- Standard Output ---------------
 <example number="32">
    <integer>12</integer>
@@ -111,8 +111,8 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.292 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testConstructor took 0.198 sec
-Testcase: testPartialConstructor took 0.024 sec
-Testcase: testBareConstructor took 0.023 sec
-Testcase: testArrayExample took 0.035 sec
+Testcase: testConstructor took 0.183 sec
+Testcase: testPartialConstructor took 0.022 sec
+Testcase: testBareConstructor took 0.022 sec
+Testcase: testArrayExample took 0.031 sec
 Testcase: testDirectory took 0 sec

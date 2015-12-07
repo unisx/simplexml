@@ -555,7 +555,7 @@ class Scanner {
          text = root.name();
 
          if(isEmpty(text)) {
-            text = Support.getName(real);
+            text = Reflector.getName(real);
          }      
          name = text.intern();      
       }

@@ -205,6 +205,9 @@ class MethodPartFactory {
       if(type == MethodType.GET) {
          return getReturnType(method);
       }
+      if(type == MethodType.IS) {
+         return getReturnType(method);
+      }
       return null;
    }
    
@@ -326,6 +329,6 @@ class MethodPartFactory {
       if(size > prefix) {
          name = name.substring(prefix, size);
       }
-      return Support.getName(name);          
+      return Reflector.getName(name);          
    }
 }

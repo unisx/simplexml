@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.PerformanceTest
-Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 22.145 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 38.862 sec
 ------------- Standard Output ---------------
 <root number="1234" flag="true">
    <constant>{no.override}</constant>
@@ -1135,14 +1135,109 @@ Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 22.145 sec
    </list>
 </root>------------- ---------------- ---------------
 ------------- Standard Error -----------------
-Took '7607' ms to process 10000 documents
-Took '5852' ms to process 10000 documents with templates
-Took '5832' ms to process 10000 documents with an empty filter
-Took '2466' ms to write 10000 documents
+class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl
+SIMPLE TOOK 9359ms
+JAVA TOOK 1409ms
+XSTREAM TOOK 5216ms
+XSTREAM --->><org.simpleframework.xml.core.PerformanceTest_-RootEntry>
+  <number>1234</number>
+  <bool>true</bool>
+  <constant>{no.override}</constant>
+  <name>{example.name}</name>
+  <path>{example.path}</path>
+  <text>
+        Some example text where {example.name} is replaced
+        with the system property value and the path is
+        replaced with the path {example.path}
+   </text>
+  <entry>
+    <name>first</name>
+    <one>this is the first element</one>
+    <two>the second element</two>
+    <three>the third elment</three>
+    <grandChild>
+      <entryOne>
+        <name>name.1</name>
+        <value>value.1</value>
+      </entryOne>
+      <entryTwo>
+        <name>name.2</name>
+        <value>value.2</value>
+      </entryTwo>
+    </grandChild>
+  </entry>
+  <list class="list">
+    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+      <name>name.1</name>
+      <value>value.1</value>
+    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+      <name>name.2</name>
+      <value>value.2</value>
+    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+      <name>name.3</name>
+      <value>value.4</value>
+    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+      <name>name.4</name>
+      <value>value.4</value>
+    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+    <org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+      <name>name.5</name>
+      <value>value.5</value>
+    </org.simpleframework.xml.core.PerformanceTest_-ElementEntry>
+  </list>
+</org.simpleframework.xml.core.PerformanceTest_-RootEntry>
+SIMPLE --->><root number="1234" flag="true">
+   <constant>{no.override}</constant>
+   <name>{example.name}</name>
+   <path>{example.path}</path>
+   <text>
+        Some example text where {example.name} is replaced
+        with the system property value and the path is
+        replaced with the path {example.path}
+   </text>
+   <child name="first">
+      <one>this is the first element</one>
+      <two>the second element</two>
+      <three>the third elment</three>
+      <grand-child>
+         <entry-one key="name.1">
+            <value>value.1</value>
+         </entry-one>
+         <entry-two key="name.2">
+            <value>value.2</value>
+         </entry-two>
+      </grand-child>
+   </child>
+   <list class="java.util.ArrayList">
+      <entry key="name.1">
+         <value>value.1</value>
+      </entry>
+      <entry key="name.2">
+         <value>value.2</value>
+      </entry>
+      <entry key="name.3">
+         <value>value.4</value>
+      </entry>
+      <entry key="name.4">
+         <value>value.4</value>
+      </entry>
+      <entry key="name.5">
+         <value>value.5</value>
+      </entry>
+   </list>
+</root>
+Took '7750' ms to process 10000 documents
+Took '5928' ms to process 10000 documents with templates
+Took '6018' ms to process 10000 documents with an empty filter
+Took '2539' ms to write 10000 documents
 ------------- ---------------- ---------------
 
-Testcase: testBasicDocument took 7.851 sec
-Testcase: testTemplateDocument took 5.892 sec
-Testcase: testEmptyFilter took 5.895 sec
-Testcase: testBasicWrite took 2.497 sec
+Testcase: testCompareToOtherSerializers took 16.406 sec
+Testcase: testBasicDocument took 7.833 sec
+Testcase: testTemplateDocument took 5.964 sec
+Testcase: testEmptyFilter took 6.058 sec
+Testcase: testBasicWrite took 2.592 sec
 Testcase: testDirectory took 0 sec

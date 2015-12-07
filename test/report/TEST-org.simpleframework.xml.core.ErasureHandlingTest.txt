@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.ErasureHandlingTest
-Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.498 sec
+Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.491 sec
 ------------- Standard Output ---------------
 <erasureExample>
    <!-- java.util.LinkedHashMap -->
@@ -991,9 +991,9 @@ org.simpleframework.xml.core.ElementException: Can not have class java.lang.Obje
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testErasure took 0.3 sec
-Testcase: testPrimitiveErasure took 0.054 sec
-Testcase: testEnumErasure took 0.054 sec
-Testcase: testErasureWithMapAttributeIllegalExample took 0.004 sec
-Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.08 sec
+Testcase: testErasure took 0.295 sec
+Testcase: testPrimitiveErasure took 0.053 sec
+Testcase: testEnumErasure took 0.051 sec
+Testcase: testErasureWithMapAttributeIllegalExample took 0.003 sec
+Testcase: testErasureWithMapInlineValueIsIgnoredExample took 0.079 sec
 Testcase: testDirectory took 0 sec

@@ -1,4 +1,4 @@
 Testsuite: org.simpleframework.xml.util.WeakCacheTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.423 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.436 sec
 
-Testcase: testCache took 0.419 sec
+Testcase: testCache took 0.434 sec

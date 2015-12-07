@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.MatcherTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.173 sec
 ------------- Standard Output ---------------
 <foo:example attr="12345" xmlns:foo="http://www.domain.com/value">
    <value>12345</value>
@@ -22,5 +22,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.188 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testMatcher took 0.179 sec
+Testcase: testMatcher took 0.167 sec
 Testcase: testDirectory took 0 sec

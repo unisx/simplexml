@@ -131,7 +131,7 @@ class Signature {
       } else {
          name = type.getSimpleName();
       }
-      return Support.getName(name);
+      return Reflector.getName(name);
    }
    
    /**
@@ -179,7 +179,7 @@ class Signature {
          if(!isEmpty(text)) {
             return text;
          }
-         return Support.getName(name);
+         return Reflector.getName(name);
       }
       return null;
    }

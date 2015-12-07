@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.StackOverflowTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.59 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.591 sec
 ------------- Standard Output ---------------
 <delivery>
    <newBenefit>
@@ -31015,4 +31015,4 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 1.59 sec
 ------------- ---------------- ---------------
 
 Testcase: testStackOverflow took 1.584 sec
-Testcase: testDirectory took 0 sec
+Testcase: testDirectory took 0.001 sec

@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultAnnotationTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.206 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.187 sec
 ------------- Standard Error -----------------
 org.simpleframework.xml.core.MethodException: Annotations do not match for 'name' in class org.simpleframework.xml.core.DefaultAnnotationTest$TypeMisMatch
 	at org.simpleframework.xml.core.MethodScanner.build(MethodScanner.java:428)
@@ -40,5 +40,5 @@ org.simpleframework.xml.core.MethodException: Annotations do not match for 'name
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testTypeMisMatch took 0.148 sec
-Testcase: testDefault took 0.053 sec
+Testcase: testTypeMisMatch took 0.14 sec
+Testcase: testDefault took 0.043 sec

@@ -12,6 +12,7 @@ public class DefaultWithParametersInGetterTest extends ValidationTestCase {
    @Root
    @Default(DefaultType.PROPERTY)
    static class DefaultTestClass {
+      private boolean flag;
       private int foo;
       public int getFoo() {
          return foo;
@@ -21,6 +22,12 @@ public class DefaultWithParametersInGetterTest extends ValidationTestCase {
       }
       public String getWithParams(int foo) {
          return "foo";
+      }
+      public boolean isFlag(){
+         return flag;
+      }
+      public void setFlag(boolean flag) {
+         this.flag = flag;
       }
    }
    

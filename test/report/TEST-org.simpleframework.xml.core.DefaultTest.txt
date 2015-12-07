@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.DefaultTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.652 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.64 sec
 ------------- Standard Output ---------------
 <defaultTextList version="ONE">
    <list class="java.util.ArrayList">
@@ -81,5 +81,5 @@ Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.652 sec
 >>>>> SOURCE=[class com.sun.org.apache.xerces.internal.dom.DeferredElementNSImpl]
 ------------- ---------------- ---------------
 
-Testcase: testList took 0.644 sec
-Testcase: testDirectory took 0 sec
+Testcase: testList took 0.633 sec
+Testcase: testDirectory took 0.001 sec

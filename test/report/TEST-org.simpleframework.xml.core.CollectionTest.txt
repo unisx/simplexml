@@ -1,5 +1,5 @@
 Testsuite: org.simpleframework.xml.core.CollectionTest
-Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.656 sec
+Tests run: 21, Failures: 0, Errors: 0, Time elapsed: 0.58 sec
 ------------- Standard Output ---------------
 <test name="example">
    <list class="java.util.TreeSet">
@@ -919,24 +919,24 @@ java.lang.ClassNotFoundException: example.MyCollection
 	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:766)
 ------------- ---------------- ---------------
 
-Testcase: testSet took 0.128 sec
-Testcase: testSortedSet took 0.098 sec
-Testcase: testList took 0.044 sec
-Testcase: testHashSet took 0.048 sec
-Testcase: testTreeSet took 0.04 sec
-Testcase: testArrayList took 0.045 sec
-Testcase: testSortedSetToSet took 0.003 sec
+Testcase: testSet took 0.116 sec
+Testcase: testSortedSet took 0.086 sec
+Testcase: testList took 0.04 sec
+Testcase: testHashSet took 0.035 sec
+Testcase: testTreeSet took 0.036 sec
+Testcase: testArrayList took 0.034 sec
+Testcase: testSortedSetToSet took 0.002 sec
 Testcase: testExtendedEntry took 0.011 sec
-Testcase: testTypeFromFieldList took 0.065 sec
-Testcase: testTypeFromMethodList took 0.037 sec
-Testcase: testPrimitiveCollection took 0.026 sec
-Testcase: testCompositeCollection took 0.032 sec
-Testcase: testPrimitiveDefaultCollection took 0.023 sec
-Testcase: testSetToSortedSet took 0.006 sec
-Testcase: testListToSet took 0.002 sec
-Testcase: testInvalidList took 0.002 sec
+Testcase: testTypeFromFieldList took 0.062 sec
+Testcase: testTypeFromMethodList took 0.033 sec
+Testcase: testPrimitiveCollection took 0.023 sec
+Testcase: testCompositeCollection took 0.029 sec
+Testcase: testPrimitiveDefaultCollection took 0.019 sec
+Testcase: testSetToSortedSet took 0.003 sec
+Testcase: testListToSet took 0.003 sec
+Testcase: testInvalidList took 0.003 sec
 Testcase: testUnknownCollectionList took 0.002 sec
-Testcase: testAbstractList took 0.002 sec
+Testcase: testAbstractList took 0.022 sec
 Testcase: testNotACollection took 0.004 sec
 Testcase: testMissingCollection took 0.004 sec
 Testcase: testDirectory took 0 sec
