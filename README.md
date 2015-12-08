@@ -1,2 +1,2 @@
 # simple-xml
-unofficial simple-xml repository
+unofficial simple-xml public release archives.
